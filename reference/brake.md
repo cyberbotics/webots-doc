@@ -17,7 +17,9 @@ The [Brake](#brake) node can be inserted in the `device` field of a [HingeJoint]
 #### `wb_brake_set_damping_constant`
 #### `wb_brake_get_type`
 
-[C++](cpp-api.md#cpp_brake) [Java](java-api.md#java_brake) [Python](python-api.md#python_brake) [MATLAB](matlab-api.md#matlab_brake) [ROS](ros-api.md)
+%tab-component
+
+%tab "C"
 
 ```c
 #include <webots/brake.h>
@@ -25,6 +27,70 @@ The [Brake](#brake) node can be inserted in the `device` field of a [HingeJoint]
 void wb_brake_set_damping_constant(WbDeviceTag tag, double damping_constant);
 int wb_brake_get_type(WbDeviceTag tag);
 ```
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include "<webots/Brake.hpp>"
+
+namespace webots {
+  class Brake : public Device {
+    void setDampingConstant(double dampingConstant) const;
+    int getType() const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Brake
+
+class Brake (Device):
+    def setDampingConstant(self, dampingConstant)
+    def getType(self)
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Brake;
+
+public class Brake extends Device {
+  public void setDampingConstant(double dampingConstant);
+  public int getType();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+wb_brake_set_damping_constant(tag, dampingConstant)
+type = wb_brake_get_type(tag)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/set_damping_constant` | `service` | [`webots_ros::set_float`](ros-api.md#common-services) |
+| `/<device_name>/get_type` | `service` | [`webots_ros::get_int`](ros-api.md#common-services) |
+
+%tab-end
+
+%end
 
 ##### Description
 

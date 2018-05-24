@@ -19,10 +19,10 @@ $1
 %tab "C++"
 
 ```cpp
-#include "<webots/TODO.hpp>"
+#include "<webots/CLASS_NAME.hpp>"
 
 namespace webots {
-  class TODO : public Device {
+  class CLASS_NAME : public Device {
     // ...
   }
 }
@@ -33,9 +33,9 @@ namespace webots {
 %tab "Python"
 
 ```python
-from controller import TODO
+from controller import CLASS_NAME
 
-class TODO (Device):
+class CLASS_NAME (Device):
     # ...
 ```
 
@@ -44,9 +44,9 @@ class TODO (Device):
 %tab "Java"
 
 ```java
-import com.cyberbotics.webots.controller.TODO;
+import com.cyberbotics.webots.controller.CLASS_NAME;
 
-public class TODO extends Device {
+public class CLASS_NAME extends Device {
   // ...
 }
 ```

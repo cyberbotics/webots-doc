@@ -148,7 +148,7 @@ body {
   padding: 10px;
 }
 .webots-doc #accordion li a.active {
-  background: #333;
+  background: #444;
   color: white;
 }
 .webots-doc #accordion li a:hover {
@@ -666,18 +666,20 @@ body {
   margin: 5px 5px;
   transition: 0.2s;
   color: white;
-  background: #222;
+  background: #777;
   border-radius: 2px;
-  border-top: 2px solid lightblue;
   transition: 0.3s;
 }
 .tab-component button:hover {
-  background-color: #888;
+  background-color: #999;
 }
 .tab-component button.active {
   background-color: lightblue;
   border-color: transparent;
   color: black;
+}
+.tab-component:nth-child(1) {
+  margin-left: 10px;
 }
 .tab-content {
   display: none;

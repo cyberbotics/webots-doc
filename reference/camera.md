@@ -1008,6 +1008,8 @@ The `wb_camera_recognition_get_number_of_objects` and `wb_camera_recognition_get
 A camera recognition object is defined by the following structure:
 
 ```c
+#include <webots/camera_recognition_object.h>
+
 typedef struct {
  int      id;
  double   position[3];

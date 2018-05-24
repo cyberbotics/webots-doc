@@ -19,7 +19,7 @@ $1
 %tab "C++"
 
 ```cpp
-#include "<webots/TODO.hpp>`"
+#include "<webots/TODO.hpp>"
 
 namespace webots {
   class TODO : public Device {

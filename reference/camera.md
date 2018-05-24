@@ -209,7 +209,7 @@ int wb_camera_get_sampling_period(WbDeviceTag tag);
 %tab "C++"
 
 ```cpp
-#include "<webots/Camera.hpp>`"
+#include "<webots/Camera.hpp>"
 
 namespace webots {
   class Camera : public Device {
@@ -267,8 +267,8 @@ period = wb_camera_get_sampling_period(tag)
 | name | service/topic | data type | data type definition |
 | --- | --- | --- | --- |
 | `/<device_name>/image` | `topic` | [`sensor_msgs::Image`](http://docs.ros.org/api/sensor_msgs/html/msg/Image.html) | [`Header`](http://docs.ros.org/api/std_msgs/html/msg/Header.html) `header`<br/>`uint32 height`<br/>`uint32 width`<br/>`string encoding`<br/>`uint8 is_bigendian`<br/>`uint32 step`<br/>`uint8[] data` |
-| `/<device_name>/enable` | `service` | [`webots_ros::set_int`](ros-api.md#common-services) | `N/A` |
-| `/<device_name>/get_sampling_period` | `service` | [`webots_ros::get_int`](ros-api.md#common-services) | `N/A` |
+| `/<device_name>/enable` | `service` | [`webots_ros::set_int`](ros-api.md#common-services) | |
+| `/<device_name>/get_sampling_period` | `service` | [`webots_ros::get_int`](ros-api.md#common-services) | |
 
 %tab-end
 
@@ -311,7 +311,7 @@ void wb_camera_set_fov(WbDeviceTag tag, double fov);
 %tab "C++"
 
 ```cpp
-#include "<webots/Camera.hpp>`"
+#include "<webots/Camera.hpp>"
 
 namespace webots {
   class Camera : public Device {
@@ -373,7 +373,7 @@ wb_camera_set_fov(tag, fov)
 | name | service/topic | data type | data type definition |
 | --- | --- | --- | --- |
 | `/<device_name>/get_info` | `service` | `webots_ros::camera_get_info` | `uint8 ask`<br/>`---`<br/>`uint32 width`<br/>`uint32 height`<br/>`float64 Fov`<br/>`float64 nearRange` |
-| `/<device_name>/set_fov` | `service` | [`webots_ros::set_float`](ros-api.md#common-services) | `N/A` |
+| `/<device_name>/set_fov` | `service` | [`webots_ros::set_float`](ros-api.md#common-services) | |
 
 %tab-end
 
@@ -415,7 +415,7 @@ void wb_camera_set_focal_distance(WbDeviceTag tag, double focal_distance);
 %tab "C++"
 
 ```cpp
-#include "<webots/Camera.hpp>`"
+#include "<webots/Camera.hpp>"
 
 namespace webots {
   class Camera : public Device {
@@ -481,7 +481,7 @@ wb_camera_set_focal_distance(tag, focal_distance)
 | name | service/topic | data type | data type definition |
 | --- | --- | --- | --- |
 | `/<device_name>/get_focus_info` | `service` | `webots_ros::camera_get_focus_info` | `uint8 ask`<br/>---<br/>`float64 focalLength`<br/>`float64 focalDistance`<br/>`float64 maxFocalDistance`<br/>`float64 minFocalDistance` |
-| `/<device_name>/set_focal_distance` | `service` | `webots_ros::set_float` | `N/A` |
+| `/<device_name>/set_focal_distance` | `service` | `webots_ros::set_float` | |
 
 %tab-end
 
@@ -515,7 +515,7 @@ int wb_camera_get_height(WbDeviceTag tag);
 %tab "C++"
 
 ```cpp
-#include "<webots/TODO.hpp>`"
+#include "<webots/TODO.hpp>"
 
 namespace webots {
   class Camera : public Device {
@@ -599,7 +599,7 @@ double wb_camera_get_near(WbDeviceTag tag);
 %tab "C++"
 
 ```cpp
-#include "<webots/TODO.hpp>`"
+#include "<webots/TODO.hpp>"
 
 namespace webots {
   class Camera : public Device {
@@ -684,7 +684,7 @@ unsigned char wb_camera_image_get_gray(const unsigned char *image, int width, in
 %tab "C++"
 
 ```cpp
-#include "<webots/TODO.hpp>`"
+#include "<webots/TODO.hpp>"
 
 namespace webots {
   class Camera : public Device {
@@ -863,7 +863,7 @@ int wb_camera_save_image(WbDeviceTag tag, const char *filename, int quality);
 %tab "C++"
 
 ```cpp
-#include "<webots/TODO.hpp>`"
+#include "<webots/TODO.hpp>"
 
 namespace webots {
   class Camera : public Device {
@@ -963,7 +963,7 @@ const WbCameraRecognitionObject *wb_camera_recognition_get_objects(WbDeviceTag t
 %tab "C++"
 
 ```cpp
-#include "<webots/TODO.hpp>`"
+#include "<webots/TODO.hpp>"
 
 namespace webots {
   class Camera : public Device {

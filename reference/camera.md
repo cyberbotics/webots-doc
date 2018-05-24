@@ -894,6 +894,7 @@ int wb_camera_save_image(WbDeviceTag tag, const char *filename, int quality);
 
 namespace webots {
   class Camera : public Device {
+    int saveImage(const std::string &filename, int quality) const;
     // ...
   }
 }
@@ -907,6 +908,7 @@ namespace webots {
 from controller import Camera
 
 class Camera (Device):
+    def saveImage(self, filename, quality)
     # ...
 ```
 
@@ -918,6 +920,7 @@ class Camera (Device):
 import com.cyberbotics.webots.controller.Camera;
 
 public class Camera extends Device {
+  public int saveImage(String filename, int quality);
   // ...
 }
 ```
@@ -927,7 +930,7 @@ public class Camera extends Device {
 %tab "MATLAB"
 
 ```matlab
-% TODO
+wb_camera_save_image(tag, 'filename', quality)
 ```
 
 %tab-end
@@ -936,7 +939,7 @@ public class Camera extends Device {
 
 | name | service/topic | data type | data type definition |
 | --- | --- | --- | --- |
-| TODO | TODO | TODO | TODO |
+| `/<device_name>/save_image` | `service` | `webots_ros::save_image` | `string filename`<br/>`int32 quality`<br/>`---`<br/>`int8 success` |
 
 %tab-end
 

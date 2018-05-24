@@ -372,8 +372,8 @@ wb_camera_set_fov(tag, fov)
 
 | name | service/topic | data type | data type definition |
 | --- | --- | --- | --- |
-| `/<device_name>/set_fov` | `service` | [`webots_ros::set_float`](ros-api.md#common-services) | `N/A` |
 | `/<device_name>/get_info` | `service` | `webots_ros::camera_get_info` | `uint8 ask`<br/>`---`<br/>`uint32 width`<br/>`uint32 height`<br/>`float64 Fov`<br/>`float64 nearRange` |
+| `/<device_name>/set_fov` | `service` | [`webots_ros::set_float`](ros-api.md#common-services) | `N/A` |
 
 %tab-end
 
@@ -419,6 +419,11 @@ void wb_camera_set_focal_distance(WbDeviceTag tag, double focal_distance);
 
 namespace webots {
   class Camera : public Device {
+    double getFocalLength() const;
+    double getFocalDistance() const;
+    double getMaxFocalDistance() const;
+    double getMinFocalDistance() const;
+    virtual void setFocalDistance(double focalDistance);
     // ...
   }
 }
@@ -432,6 +437,11 @@ namespace webots {
 from controller import Camera
 
 class Camera (Device):
+    def getFocalLength(self):
+    def getFocalDistance(self):
+    def getMaxFocalDistance(self):
+    def getMinFocalDistance(self):
+    def setFocalDistance(self, focalDistance):
     # ...
 ```
 
@@ -443,6 +453,11 @@ class Camera (Device):
 import com.cyberbotics.webots.controller.Camera;
 
 public class Camera extends Device {
+  public double getFocalLength();
+  public double getFocalDistance();
+  public double getMaxFocalDistance();
+  public double getMinFocalDistance();
+  public void setFocalDistance(double focalDistance);
   // ...
 }
 ```
@@ -452,7 +467,11 @@ public class Camera extends Device {
 %tab "MATLAB"
 
 ```matlab
-% TODO
+fov = wb_camera_get_focal_length(tag)
+fov = wb_camera_get_focal_distance(tag)
+fov = wb_camera_get_max_focal_distance(tag)
+fov = wb_camera_get_min_focal_distance(tag)
+wb_camera_set_focal_distance(tag, focal_distance)
 ```
 
 %tab-end
@@ -461,7 +480,8 @@ public class Camera extends Device {
 
 | name | service/topic | data type | data type definition |
 | --- | --- | --- | --- |
-| TODO | TODO | TODO | TODO |
+| `/<device_name>/get_focus_info` | `service` | `webots_ros::camera_get_focus_info` | `uint8 ask`<br/>---<br/>`float64 focalLength`<br/>`float64 focalDistance`<br/>`float64 maxFocalDistance`<br/>`float64 minFocalDistance` |
+| `/<device_name>/set_focal_distance` | `service` | `webots_ros::set_float` | `N/A` |
 
 %tab-end
 

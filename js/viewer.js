@@ -7,6 +7,7 @@
 /* exported resetRobotComponent */
 /* exported toggleDeviceComponent */
 /* exported highlightX3DElement */
+/* exported openTab */
 
 var handle;
 
@@ -786,6 +787,26 @@ function createRobotComponent(view) {
       }
     });
   }
+}
+
+// Open a tab component tab
+function openTab(evt, name) {
+  var tabcomponent = evt.target.parentNode;
+  var tabID = tabcomponent.getAttribute('tabid');
+
+  var tabcontents = tabcomponent.parentNode.querySelectorAll('.tab-content[tabid="' + tabID + '"]');
+  for (var i = 0; i < tabcontents.length; i++)
+    tabcontents[i].style.display = 'none';
+
+  var tablinks = tabcomponent.querySelectorAll('.tab-links');
+  for (var j = 0; j < tablinks.length; j++)
+    tablinks[j].classList.remove('active');
+
+  var tabcontent = tabcomponent.parentNode.querySelectorAll('.tab-content[tabid="' + tabID + '"][name="' + name + '"]')[0];
+  tabcontent.style.display = 'block';
+
+  var tablink = tabcomponent.querySelectorAll('.tab-links[name="' + name + '"]')[0];
+  tablink.classList.add('active');
 }
 
 function renderGraphs() {

@@ -782,21 +782,32 @@ Attempting to read outside the bounds of this chunk will cause an error.
 
 The `wb_camera_image_get_red`, `wb_camera_image_get_green` and `wb_camera_image_get_blue` macros can be used for directly accessing the pixel RGB levels from the pixel coordinates.
 The `wb_camera_image_get_gray` macro works in a similar way but returns the gray level of the specified pixel by averaging the three RGB components.
-In the C version, these four macros return an `unsigned char` in the range [0..255].
+
+##### Code snippet
+
+%tab-component
+
+%tab "C"
+
+> In the C version, these four macros return an `unsigned char` in the range [0..255].
 Here is a C usage example:
 
-```c
-const unsigned char *image = wb_camera_get_image(camera);
-for (int x = 0; x < image_width; x++)
-  for (int y = 0; y < image_height; y++) {
-    int r = wb_camera_image_get_red(image, image_width, x, y);
-    int g = wb_camera_image_get_green(image, image_width, x, y);
-    int b = wb_camera_image_get_blue(image, image_width, x, y);
-    printf("red=%d, green=%d, blue=%d", r, g, b);
-  }
-```
+> ```c
+> const unsigned char *image = wb_camera_get_image(camera);
+> for (int x = 0; x < image_width; x++)
+>   for (int y = 0; y < image_height; y++) {
+>     int r = wb_camera_image_get_red(image, image_width, x, y);
+>     int g = wb_camera_image_get_green(image, image_width, x, y);
+>     int b = wb_camera_image_get_blue(image, image_width, x, y);
+>     printf("red=%d, green=%d, blue=%d", r, g, b);
+>   }
+> ```
 
-> **Note** [Java]: The `Camera.getImage` function returns an array of int (`int[]`).
+%tab-end
+
+%tab "Java"
+
+> The `Camera.getImage` function returns an array of int (`int[]`).
 The length of this array corresponds to the number of pixels in the image, that is the width multiplied by the height of the image.
 Each `int` element of the array represents one pixel coded in BGRA (32 bits).
 For example red is `0x0000ff00`, green is `0x00ff0000`, etc. The `Camera.pixelGetRed`, `Camera.pixelGetGreen` and `Camera.pixelGetBlue` functions can be used to decode a pixel value for the red, green and blue components.
@@ -815,9 +826,11 @@ Here is an example:
 > }
 > ```
 
-<!-- -->
+%tab-end
 
-> **Note** [Python]: The `getImage` function returns a `string`.
+%tab "Python"
+
+> The `getImage` function returns a `string`.
 This `string` is closely related to the `const char *` of the C API.
 `imageGet*`-like functions can be used to get the channels of the camera Here is an example:
 
@@ -845,9 +858,11 @@ Here is an example:
 >     print 'r='+str(red)+' g='+str(green)+' b='+str(blue)
 > ```
 
-<!-- -->
+%tab-end
 
-> **Note** [MATLAB]: The `wb_camera_get_image` function returns a 3-dimensional array of `uint(8)`.
+%tab "MATLAB"
+
+> The `wb_camera_get_image` function returns a 3-dimensional array of `uint(8)`.
 The first two dimensions of the array are the width and the height of camera's image, the third being the RGB code: 1 for red, 2 for blue and 3 for green.
 The `wb_camera_get_range_image` function returns a 2-dimensional array of `float('single')`.
 The dimensions of the array are the width and the length of camera's image and the float values are the metric distance values deduced from the OpenGL z-buffer.
@@ -870,6 +885,10 @@ The dimensions of the array are the width and the length of camera's image and t
 > drawnow;
 > distance = min(min(image))% distance to the closest point seen by the camera
 > ```
+
+%tab-end
+
+%end
 
 ---
 

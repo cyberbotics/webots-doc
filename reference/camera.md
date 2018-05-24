@@ -374,6 +374,7 @@ wb_camera_set_fov(tag, fov)
 | --- | --- | --- | --- |
 | `/<device_name>/get_info` | `service` | `webots_ros::camera_get_info` | `uint8 ask`<br/>`---`<br/>`uint32 width`<br/>`uint32 height`<br/>`float64 Fov`<br/>`float64 nearRange` |
 | `/<device_name>/set_fov` | `service` | [`webots_ros::set_float`](ros-api.md#common-services) | |
+| `/<device_name>/get_zoom_info` | `service` | `webots_ros::camera_get_zoom_info` | `uint8 ask`<br/>`---`<br/>`float64 minFov`<br/>`float64 maxFov` |
 
 %tab-end
 

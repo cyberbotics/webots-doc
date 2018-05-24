@@ -849,13 +849,13 @@ Here is an example:
 > ```python
 > image = camera.getImageArray()
 > # display the components of each pixel
-> for x in range(0,camera.getWidth()):
->   for y in range(0,camera.getHeight()):
->     red   = image[x][y][0]
->     green = image[x][y][1]
->     blue  = image[x][y][2]
->     gray  = (red + green + blue) / 3
->     print 'r='+str(red)+' g='+str(green)+' b='+str(blue)
+> for x in range(0, camera.getWidth()):
+>     for y in range(0, camera.getHeight()):
+>         red = image[x][y][0]
+>         green = image[x][y][1]
+>         blue = image[x][y][2]
+>         gray = (red + green + blue) / 3
+>         print ('r=%d, g=%d, b=%d, gray=%d' % (red, green, blue, gray))
 > ```
 
 %tab-end

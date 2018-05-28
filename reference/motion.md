@@ -5,7 +5,9 @@
 #### `wbu_motion_new`
 #### `wbu_motion_delete`
 
-[C++](cpp-api.md#cpp_motion) [Java](java-api.md#java_motion) [Python](python-api.md#python_motion) [MATLAB](matlab-api.md#matlab_motion)
+%tab-component
+
+%tab "C"
 
 ```c
 #include <webots/utils/motion.h>
@@ -13,6 +15,65 @@
 WbMotionRef wbu_motion_new(const char *filename);
 void wbu_motion_delete(WbMotionRef motion);
 ```
+
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/utils/Motion.hpp>
+
+namespace webots {
+  class Motion {
+    Motion(const std::string &fileName);
+    virtual ~Motion();
+    bool isValid() const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Motion
+
+class Motion:
+    def __init__(self, fileName):
+    def __del__(self):
+    def isValid(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Motion;
+
+public class Motion {
+  public Motion(String fileName);
+  protected void finalize();
+  public boolean isValid();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+motion = wbu_motion_new('filename')
+wbu_motion_delete(motion)
+```
+
+%tab-end
+
+%end
 
 ##### Description
 
@@ -40,10 +101,6 @@ if (! walk->isValid()) {
 }
 ```
 
-##### See Also
-
-[wbu\_motion\_play](#wbu_motion_play)
-
 ---
 
 #### `wbu_motion_play`
@@ -51,7 +108,9 @@ if (! walk->isValid()) {
 #### `wbu_motion_set_loop`
 #### `wbu_motion_set_reverse`
 
-[C++](cpp-api.md#cpp_motion) [Java](java-api.md#java_motion) [Python](python-api.md#python_motion) [MATLAB](matlab-api.md#matlab_motion)
+%tab-component
+
+%tab "C"
 
 ```c
 #include <webots/utils/motion.h>
@@ -61,6 +120,70 @@ void wbu_motion_stop(WbMotionRefmotion);
 void wbu_motion_set_loop(WbMotionRef motion, bool loop);
 void wbu_motion_set_reverse(WbMotionRefmotion, bool reverse);
 ```
+
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/utils/Motion.hpp>
+
+namespace webots {
+  class Motion {
+    virtual void play();
+    virtual void stop();
+    virtual void setLoop(bool loop);
+    virtual void setReverse(bool reverse);
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Motion
+
+class Motion:
+    def play(self):
+    def stop(self):
+    def setLoop(self, loop):
+    def setReverse(self, reverse):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Motion;
+
+public class Motion {
+  public void play();
+  public void stop();
+  public void setLoop(boolean loop);
+  public void setReverse(boolean reverse);
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+wbu_motion_play(motion)
+wbu_motion_stop(motion)
+wbu_motion_set_loop(motion, loop)
+wbu_motion_set_reverse(motion, reverse)
+```
+
+%tab-end
+
+%end
 
 ##### Description
 
@@ -101,10 +224,6 @@ The *reverse mode* can be changed while the motion is playing, in this case, the
 
 By default, the *loop mode* and *reverse mode* of motions are `false`.
 
-##### See Also
-
-[wbu\_motion\_new](#wbu_motion_new)
-
 ---
 
 #### `wbu_motion_is_over`
@@ -112,7 +231,9 @@ By default, the *loop mode* and *reverse mode* of motions are `false`.
 #### `wbu_motion_get_time`
 #### `wbu_motion_set_time`
 
-[C++](cpp-api.md#cpp_motion) [Java](java-api.md#java_motion) [Python](python-api.md#python_motion) [MATLAB](matlab-api.md#matlab_motion)
+%tab-component
+
+%tab "C"
 
 ```c
 #include <webots/utils/motion.h>
@@ -122,6 +243,70 @@ int wbu_motion_get_duration(WbMotionRefmotion);
 int wbu_motion_get_time(WbMotionRef motion, bool loop);
 void wbu_motion_set_time(WbMotionRefmotion, int t);
 ```
+
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/utils/Motion.hpp>
+
+namespace webots {
+  class Motion {
+    bool isOver() const;
+    int getDuration() const;
+    int getTime() const;
+    virtual void setTime(int time);
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Motion
+
+class Motion:
+    def isOver(self):
+    def getDuration(self):
+    def getTime(self):
+    def setTime(self, time):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Motion;
+
+public class Motion {
+  public boolean isOver();
+  public int getDuration();
+  public int getTime();
+  public void setTime(int time);
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+over = wbu_motion_is_over(motion)
+duration = wbu_motion_get_duration(motion)
+time = wbu_motion_get_time(motion)
+wbu_motion_set_time(motion, time)
+```
+
+%tab-end
+
+%end
 
 ##### Description
 
@@ -143,7 +328,3 @@ This allows the user to skip forwards or backwards.
 Note that, the time position can be changed whether the motion is playing or stopped.
 The minimum value is 0 (beginning of the motion), and the maximum value is the value returned by the `wbu_motion_get_duration` function (end of the motion).
 The time position is expressed in milliseconds.
-
-##### See Also
-
-[wbu\_motion\_play](#wbu_motion_play)

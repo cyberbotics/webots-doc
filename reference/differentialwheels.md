@@ -254,7 +254,6 @@ public double getRightSpeed();
 
 | name | service/topic | data type | data type definition |
 | --- | --- | --- | --- |
-[`Header`](http://docs.ros.org/api/std_msgs/html/msg/Header.html) `header`<br/>`float64 data` |
 | `/differential_wheels/set_speed` | `service` | [`webots_ros::set_float_array`](ros-api.md#common-services) | |
 | `/differential_wheels/subscribe_twist_commands` | `service` | `webots_ros::differential_wheels_subscribe_twist_commands` | `uint8 subscribe`<br/>`---`<br/>`int8 success`<br/><br/>Note: this `service` is used to subscribe to a `topic` called '/differential_wheels/twist_commands' which should send [`geometry_msgs::Twist`](http://docs.ros.org/api/geometry_msgs/html/msg/Twist.html) commands. |
 
@@ -460,7 +459,7 @@ wb_differential_wheels_set_encoders(left, right)
 
 | name | service/topic | data type | data type definition |
 | --- | --- | --- | --- |
-| `/differential_wheels/lwheel` and `/differential_wheels/rwheel` | `topic` | `webots_ros::Float64Stamped` | 
+| `/differential_wheels/lwheel` and `/differential_wheels/rwheel` | `topic` | `webots_ros::Float64Stamped` | [`Header`](http://docs.ros.org/api/std_msgs/html/msg/Header.html) `header`<br/>`float64 data` |
 | `/differential_wheels/set_encoders` | `service` | [`webots_ros::set_float_array`](ros-api.md#common-services) | |
 
 %tab-end

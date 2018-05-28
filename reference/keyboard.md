@@ -13,16 +13,125 @@ In order to get the `Keyboard` instance, you should call the `getKeyboard` funct
 #### `wb_keyboard_get_sampling_period`
 #### `wb_keyboard_get_key`
 
-[C++](cpp-api.md#cpp_keyboard) [Java](java-api.md#java_keyboard) [Python](python-api.md#python_keyboard) [MATLAB](matlab-api.md#matlab_keyboard) [ROS](ros-api.md)
+%tab-component
+
+%tab "C"
 
 ```c
 #include <webots/keyboard.h>
+
+#define WB_KEYBOARD_KEY
+#define WB_KEYBOARD_SHIFT
+#define WB_KEYBOARD_CONTROL
+#define WB_KEYBOARD_ALT
+#define WB_KEYBOARD_LEFT
+#define WB_KEYBOARD_UP
+#define WB_KEYBOARD_RIGHT
+#define WB_KEYBOARD_DOWN
+#define WB_KEYBOARD_PAGEUP
+#define WB_KEYBOARD_PAGEDOWN
+#define WB_KEYBOARD_HOME
+#define WB_KEYBOARD_END
 
 void wb_keyboard_enable(int sampling_period);
 void wb_keyboard_disable();
 int wb_keyboard_get_sampling_period();
 int wb_keyboard_get_key();
 ```
+
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Keyboard.hpp>
+
+namespace webots {
+  class Keyboard : public Device {
+    enum {
+      END, HOME, LEFT, UP, RIGHT, DOWN,
+      PAGEUP, PAGEDOWN, NUMPAD_HOME, NUMPAD_LEFT,
+      NUMPAD_UP, NUMPAD_RIGHT, NUMPAD_DOWN, NUMPAD_END,
+      KEY, SHIFT, CONTROL, ALT
+    };
+
+    virtual void enable(int sampling_period);
+    virtual void disable();
+    int getSamplingPeriod();
+    int getKey() const;
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Keyboard
+
+class Keyboard (Device):
+    END, HOME, LEFT, UP, RIGHT, DOWN, PAGEUP,
+    PAGEDOWN, NUMPAD_HOME, NUMPAD_LEFT, NUMPAD_UP,
+    NUMPAD_RIGHT, NUMPAD_DOWN, NUMPAD_END, KEY, SHIFT,
+    CONTROL, ALT
+
+    def enable(self, sampling_period):
+    def disable(self):
+    def getKey(self):
+    def getSamplingPeriod(self):
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Keyboard;
+
+public class Keyboard extends Device {
+  public final static int END, HOME, LEFT, UP, RIGHT,
+    DOWN, PAGEUP, PAGEDOWN, NUMPAD_HOME, NUMPAD_LEFT,
+    NUMPAD_UP, NUMPAD_RIGHT, NUMPAD_DOWN, NUMPAD_END,
+    KEY, SHIFT, CONTROL, ALT;
+
+  public void enable(int sampling_period);
+  public void disable();
+  public int getSamplingPeriod();
+  public int getKey();
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+WB_KEYBOARD_END, WB_KEYBOARD_HOME, WB_KEYBOARD_LEFT, WB_KEYBOARD_UP,
+WB_KEYBOARD_RIGHT, WB_KEYBOARD_DOWN, WB_KEYBOARD_PAGEUP, WB_KEYBOARD_PAGEDOWN,
+WB_KEYBOARD_NUMPAD_HOME, WB_KEYBOARD_NUMPAD_LEFT, WB_KEYBOARD_NUMPAD_UP,
+WB_KEYBOARD_NUMPAD_RIGHT, WB_KEYBOARD_NUMPAD_DOWN, WB_KEYBOARD_NUMPAD_END,
+WB_KEYBOARD_KEY, WB_KEYBOARD_SHIFT, WB_KEYBOARD_CONTROL, WB_KEYBOARD_ALT
+
+wb_keyboard_enable(sampling_period)
+wb_keyboard_disable()
+period = wb_keyboard_get_sampling_period()
+key = wb_keyboard_get_key()
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/keyboard/key` | `topic` | webots_ros::Int32Stamped | [`Header`](http://docs.ros.org/api/std_msgs/html/msg/Header.html) `header`<br/>`int32 data` |
+| `/keyboard/enable` | `service` | [`webots_ros::set_int`](ros-api.md#common-services) | |
+| `/keyboard/get_sampling_period` | `service` | [`webots_ros::get_int`](ros-api.md#common-services) | |
+
+%tab-end
+
+%end
 
 ##### Description
 

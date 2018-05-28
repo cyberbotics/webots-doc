@@ -477,6 +477,10 @@ void wb_joystick_set_resistance_gain(double gain);
 
 namespace webots {
   class Joystick : public Device {
+    void setConstantForce(int level);
+    void setConstantForceDuration(double duration);
+    void setAutoCenteringGain(double gain);
+    void setResistanceGain(double gain);
     // ...
   }
 }
@@ -490,6 +494,10 @@ namespace webots {
 from controller import Joystick
 
 class Joystick (Device):
+    def setConstantForce(self, level):
+    def setConstantForceDuration(self, duration):
+    def setAutoCenteringGain(self, gain):
+    def setResistanceGain(self, gain):
     # ...
 ```
 
@@ -501,6 +509,10 @@ class Joystick (Device):
 import com.cyberbotics.webots.controller.Joystick;
 
 public class Joystick extends Device {
+  public void setConstantForce(int level);
+  public void setConstantForceDuration(double duration);
+  public void setAutoCenteringGain(double gain);
+  public void setResistanceGain(double gain);
   // ...
 }
 ```
@@ -510,7 +522,10 @@ public class Joystick extends Device {
 %tab "MATLAB"
 
 ```matlab
-% TODO
+wb_joystick_set_constant_force(level)
+wb_joystick_set_constant_force_duration(duration)
+wb_joystick_set_auto_centering_gain(gain)
+wb_joystick_set_resistance_gain(gain)
 ```
 
 %tab-end
@@ -519,7 +534,10 @@ public class Joystick extends Device {
 
 | name | service/topic | data type | data type definition |
 | --- | --- | --- | --- |
-| TODO | TODO | TODO | TODO |
+| `/joystick/set_constant_force` | `service` | [`webots_ros::set_int`](ros-api.md#common-services) | |
+| `/joystick/set_constant_force_duration` | `service` | [`webots_ros::set_float`](ros-api.md#common-services) | |
+| `/joystick/set_auto_centering_gain` | `service` | [`webots_ros::set_float`](ros-api.md#common-services) | |
+| `/joystick/set_resistance_gain` | `service` | [`webots_ros::set_float`](ros-api.md#common-services) | |
 
 %tab-end
 

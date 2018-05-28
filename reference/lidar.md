@@ -107,7 +107,6 @@ public class LidarPoint {
   public float getX();
   public float getY();
   public float getZ();
-  public int getLayer_id();
   public float getTime();
   public double getLayerId();
 }

@@ -239,7 +239,9 @@ If a more specific or accurate model is needed, it can be implemented in the rob
 #### `wb_motor_get_available_torque`
 #### `wb_motor_get_max_torque`
 
-[C++](cpp-api.md#cpp_motor) [Java](java-api.md#java_motor) [Python](python-api.md#python_motor) [MATLAB](matlab-api.md#matlab_motor) [ROS](ros-api.md)
+%tab-component
+
+%tab "C"
 
 ```c
 #include <webots/motor.h>
@@ -261,6 +263,141 @@ double wb_motor_get_max_force(WbDeviceTag tag);
 double wb_motor_get_available_torque(WbDeviceTag tag);
 double wb_motor_get_max_torque(WbDeviceTag tag);
 ```
+
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Motor.hpp>
+
+namespace webots {
+  class Motor : public Device {
+    virtual void setPosition(double position);
+    virtual void setVelocity(double vel);
+    virtual void setAcceleration(double force);
+    virtual void setAvailableForce(double motor_force);
+    virtual void setAvailableTorque(double motor_torque);
+    virtual void setControlPID(double p, double i, double d);
+    double getTargetPosition(double position) const;
+    double getMinPosition() const;
+    double getMaxPosition() const;
+    double getVelocity() const;
+    double getMaxVelocity() const;
+    double getAcceleration() const;
+    double getAvailableForce() const;
+    double getMaxForce() const;
+    double getMaxTorque() const;
+    double getAvailableTorque() const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Motor
+
+class Motor (Device):
+    def setPosition(self, position):
+    def setVelocity(self, vel):
+    def setAcceleration(self, force):
+    def setAvailableForce(self, motor_force):
+    def setAvailableTorque(self, motor_torque):
+    def setControlPID(self, p, i, d):
+    def getTargetPosition(self):
+    def getMinPosition(self):
+    def getMaxPosition(self):
+    def getVelocity(self):
+    def getMaxVelocity(self):
+    def getAcceleration(self):
+    def getAvailableForce(self):
+    def getMaxForce(self):
+    def getAvailableTorque(self):
+    def getMaxTorque(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Motor;
+
+public class Motor extends Device {
+  public void setPosition(double position);
+  public void setVelocity(double vel);
+  public void setAcceleration(double force);
+  public void setAvailableForce(double motor_force);
+  public void setAvailableTorque(double motor_torque);
+  public void setControlPID(double p, double i, double d);
+  public double getTargetPosition();
+  public double getMinPosition();
+  public double getMaxPosition();
+  public double getVelocity();
+  public double getMaxVelocity();
+  public double getAcceleration();
+  public double getAvailableForce();
+  public double getMaxForce();
+  public double getAvailableTorque();
+  public double getMaxTorque();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+wb_motor_set_position(tag, position)
+wb_motor_set_velocity(tag, vel)
+wb_motor_set_acceleration(tag, acc)
+wb_motor_set_available_force(tag, force)
+wb_motor_set_available_torque(tag, torque)
+wb_motor_set_control_pid(tag, p, i, d)
+target = wb_motor_get_target_position(tag)
+min = wb_motor_get_min_position(tag)
+max = wb_motor_get_max_position(tag)
+vel = wb_motor_get_velocity(tag)
+vel = wb_motor_get_max_velocity(tag)
+acc = wb_motor_get_acceleration(tag)
+force = wb_motor_get_available_force(tag)
+force = wb_motor_get_max_force(tag)
+torque = wb_motor_get_available_torque(tag)
+torque = wb_motor_get_max_torque(tag)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/set_acceleration` | `service` | [`webots_ros::set_float`](ros-api.md#common-services) | |
+| `/<device_name>/set_velocity` | `service` | [`webots_ros::set_float`](ros-api.md#common-services) | |
+| `/<device_name>/set_available_torque` | `service` | [`webots_ros::set_float`](ros-api.md#common-services) | |
+| `/<device_name>/set_available_force` | `service` | [`webots_ros::set_float`](ros-api.md#common-services) | |
+| `/<device_name>/set_control_pid` | `service` | `webots_ros::motor_set_control_pid` | `float64 controlp`<br/>`float64 controli`<br/>`float64 controld`<br/>`---`<br/>`int8 success` |
+| `/<device_name>/set_position` | `service` | [`webots_ros::set_float`](ros-api.md#common-services) | |
+| `/<device_name>/get_target_position` | `service` | [`webots_ros::get_float`](ros-api.md#common-services) | |
+| `/<device_name>/get_min_position` | `service` | [`webots_ros::get_float`](ros-api.md#common-services) | |
+| `/<device_name>/get_max_position` | `service` | [`webots_ros::get_float`](ros-api.md#common-services) | |
+| `/<device_name>/get_velocity` | `service` | [`webots_ros::get_float`](ros-api.md#common-services) | |
+| `/<device_name>/get_max_velocity` | `service` | [`webots_ros::get_float`](ros-api.md#common-services) | |
+| `/<device_name>/get_acceleration` | `service` | [`webots_ros::get_float`](ros-api.md#common-services) | |
+| `/<device_name>/get_available_torque` | `service` | [`webots_ros::get_float`](ros-api.md#common-services) | |
+| `/<device_name>/get_available_force` | `service` | [`webots_ros::get_float`](ros-api.md#common-services) | |
+| `/<device_name>/get_max_torque` | `service` | [`webots_ros::get_float`](ros-api.md#common-services) | |
+| `/<device_name>/get_max_force` | `service` | [`webots_ros::get_float`](ros-api.md#common-services) | |
+
+%tab-end
+
+%end
 
 ##### Description
 
@@ -343,6 +480,7 @@ The default value of *P, I* and *D* are specified by the `controlPID` field of t
 
 The `wb_motor_get_[min|max]_position` functions allow to get the values of respectively the `minPosition` and the `maxPosition` fields.
 Positions are expressed in *radian* (rad) for rotational motors and in *meter* (m) for linear motors.
+
 ---
 
 #### `wb_motor_enable_force_feedback`
@@ -354,7 +492,9 @@ Positions are expressed in *radian* (rad) for rotational motors and in *meter* (
 #### `wb_motor_get_torque_feedback_sampling_period`
 #### `wb_motor_disable_torque_feedback`
 
-[C++](cpp-api.md#cpp_motor) [Java](java-api.md#java_motor) [Python](python-api.md#python_motor) [MATLAB](matlab-api.md#matlab_motor) [ROS](ros-api.md)
+%tab-component
+
+%tab "C"
 
 ```c
 #include <webots/motor.h>
@@ -368,6 +508,97 @@ void wb_motor_disable_torque_feedback(WbDeviceTag tag);
 int wb_motor_get_torque_feedback_sampling_period(WbDeviceTag tag);
 double wb_motor_get_torque_feedback(WbDeviceTag tag);
 ```
+
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Motor.hpp>
+
+namespace webots {
+  class Motor : public Device {
+    virtual void enableForceFeedback(int sampling_period);
+    virtual void disableForceFeedback();
+    int getForceFeedbackSamplingPeriod();
+    double getForceFeedback() const;
+    virtual void enableTorqueFeedback(int sampling_period);
+    virtual void disableTorqueFeedback();
+    int getTorqueFeedbackSamplingPeriod();
+    double getTorqueFeedback() const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Motor
+
+class Motor (Device):
+    def enableForceFeedback(self, sampling_period):
+    def disableForceFeedback(self):
+    def getForceFeedbackSamplingPeriod(self):
+    def getForceFeedback(self):
+    def enableTorqueFeedback(self, sampling_period):
+    def disableTorqueFeedback(self):
+    def getTorqueFeedbackSamplingPeriod(self):
+    def getTorqueFeedback(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Motor;
+
+public class Motor extends Device {
+  public void enableForceFeedback(int sampling_period);
+  public void disableForceFeedback();
+  public int getForceFeedbackSamplingPeriod();
+  public double getForceFeedback();
+  public void enableTorqueFeedback(int sampling_period);
+  public void disableTorqueFeedback();
+  public int getTorqueFeedbackSamplingPeriod();
+  public double getTorqueFeedback();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+wb_motor_enable_force_feedback(tag, sampling_period)
+wb_motor_disable_force_feedback(tag)
+period = wb_motor_get_force_feedback_sampling_period(tag)
+force = wb_motor_get_force_feedback(tag)
+wb_motor_enable_torque_feedback(tag, sampling_period)
+wb_motor_disable_torque_feedback(tag)
+period = wb_motor_get_torque_feedback_sampling_period(tag)
+force = wb_motor_get_torque_feedback(tag)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/torque_feedback` | `topic` | webots_ros::Float64Stamped | [`Header`](http://docs.ros.org/api/std_msgs/html/msg/Header.html) `header`<br/>`float64 data` |
+| `/<device_name>/force_feedback` | `topic` | webots_ros::Float64Stamped | [`Header`](http://docs.ros.org/api/std_msgs/html/msg/Header.html) `header`<br/>`float64 data` |
+| `/<device_name>/force_feedback_sensor/enable` | `service` | [`webots_ros::set_int`](ros-api.md#common-services) | |
+| `/<device_name>/force_feedback_sensor/get_sampling_period` | `service` | [`webots_ros::get_int`](ros-api.md#common-services) | |
+
+%tab-end
+
+%end
 
 ##### Description
 
@@ -410,7 +641,9 @@ The `wb_motor_get_force_feedback_sampling_period` (resp. `wb_motor_get_torque_fe
 #### `wb_motor_set_force`
 #### `wb_motor_set_torque`
 
-[C++](cpp-api.md#cpp_motor) [Java](java-api.md#java_motor) [Python](python-api.md#python_motor) [MATLAB](matlab-api.md#matlab_motor) [ROS](ros-api.md)
+%tab-component
+
+%tab "C"
 
 ```c
 #include <webots/motor.h>
@@ -418,6 +651,71 @@ The `wb_motor_get_force_feedback_sampling_period` (resp. `wb_motor_get_torque_fe
 void wb_motor_set_force(WbDeviceTag tag, double force);
 void wb_motor_set_torque(WbDeviceTag tag, double torque);
 ```
+
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Motor.hpp>
+
+namespace webots {
+  class Motor : public Device {
+    virtual void setForce(double force);
+    virtual void setTorque(double torque);
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Motor
+
+class Motor (Device):
+    def setForce(self, force):
+    def setTorque(self, torque):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Motor;
+
+public class Motor extends Device {
+  public void setForce(double force);
+  public void setTorque(double torque);
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+wb_motor_set_force(tag, force)
+wb_motor_set_torque(tag, torque)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/set_force` | `service` | [`webots_ros::set_float`](ros-api.md#common-services) | |
+| `/<device_name>/set_torque` | `service` | [`webots_ros::set_float`](ros-api.md#common-services) | |
+
+%tab-end
+
+%end
 
 ##### Description
 
@@ -444,13 +742,80 @@ The example in "projects/samples/howto/worlds/force\_control.wbt" demonstrates t
 
 #### `wb_motor_get_type`
 
-[C++](cpp-api.md#cpp_motor) [Java](java-api.md#java_motor) [Python](python-api.md#python_motor) [MATLAB](matlab-api.md#matlab_motor) [ROS](ros-api.md)
+%tab-component
+
+%tab "C"
 
 ```c
 #include <webots/motor.h>
 
 int wb_motor_get_type(WbDeviceTag tag);
 ```
+
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Motor.hpp>
+
+namespace webots {
+  enum {ROTATIONAL, LINEAR};
+
+  class Motor : public Device {
+    int getType() const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Motor
+
+class Motor (Device):
+    ROTATIONAL, LINEAR
+    def getType(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Motor;
+
+public class Motor extends Device {
+  public final static int ROTATIONAL, LINEAR;
+  public int getType();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+WB_MOTOR_ROTATIONAL, WB_MOTOR_LINEAR
+type = wb_motor_get_type(tag)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/get_type` | `service` | [`webots_ros::get_int`](ros-api.md#common-services) | |
+
+%tab-end
+
+%end
 
 ##### Description
 

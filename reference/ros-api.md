@@ -85,7 +85,7 @@ The `<device_name>` should be replaced by the actual name of the device and each
 | `/differential_wheels_encoders/enable` | `service` | [`webots_ros::set_int`](ros-api.md#common-services) | |
 | `/differential_wheels_encoders/get_sampling_period` | `service` | [`webots_ros::get_int`](ros-api.md#common-services) | |
 | `/differential_wheels/set_speed` | `service` | [`webots_ros::set_float_array`](ros-api.md#common-services) | |
-| /differential_wheels/subscribe_twist_commands | `service` | `webots_ros::differential_wheels_subscribe_twist_commands` | `uint8 subscribe`<br/>`---`<br/>`int8 success`<br/><br/>Note: this `service` is used to subscribe to a `topic` called '/differential_wheels/twist_commands' which should send [`geometry_msgs::Twist`](http://docs.ros.org/api/geometry_msgs/html/msg/Twist.html) commands. |
+| `/differential_wheels/subscribe_twist_commands` | `service` | `webots_ros::differential_wheels_subscribe_twist_commands` | `uint8 subscribe`<br/>`---`<br/>`int8 success`<br/><br/>Note: this `service` is used to subscribe to a `topic` called '/differential_wheels/twist_commands' which should send [`geometry_msgs::Twist`](http://docs.ros.org/api/geometry_msgs/html/msg/Twist.html) commands. |
 | `/differential_wheels/get_max_speed` | `service` | [`webots_ros::get_float`](ros-api.md#common-services) | |
 | `/differential_wheels/get_speed` | `service` | `webots_ros::differential_wheels_get_speed` | `uint8 ask`<br/>`---`<br/>`float64 speed` |
 | `/differential_wheels/get_speed_unit` | `service` | [`webots_ros::get_float`](ros-api.md#common-services) | |
@@ -334,7 +334,7 @@ The `<device_name>` should be replaced by the actual name of the device and each
 | `/robot/get_number_of_devices` | `service` | [`webots_ros::get_int`](ros-api.md#common-services) | |
 | `/robot/get_type` | `service` | [`webots_ros::get_int`](ros-api.md#common-services) | |
 | `/robot/set_mode` | `service` | `webots_ros::robot_set_mode` | `char[] arg`<br/>`int32 mode`<br/>`---`<br/>`int8 success` |
-| /robot/get_device_list | `service` | `webots_ros::robot_get_device_list` | `uint8 ask`<br/>`---`<br/>`string[] list` |
+| `/robot/get_device_list` | `service` | `webots_ros::robot_get_device_list` | `uint8 ask`<br/>`---`<br/>`string[] list` |
 | `/robot/wwi_receive_text` | `service` | [`webots_ros::get_string`](ros-api.md#common-services) | |
 | `/robot/wwi_send_text` | `service` | [`webots_ros::set_string`](ros-api.md#common-services) | |
 

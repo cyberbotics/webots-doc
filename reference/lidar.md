@@ -42,7 +42,11 @@ Be aware that the point cloud mode is computationally expensive and can therefor
 
 #### WbLidarPoint
 
-A point of the lidar point cloud is defined by the following structure:
+A point of the lidar point cloud is defined like this:
+
+%tab-component
+
+%tab "C"
 
 ```c
 typedef struct {
@@ -54,13 +58,68 @@ typedef struct {
 } WbLidarPoint;
 ```
 
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Lidar.hpp>
+
+namespace webots {
+  typedef struct {
+    float x;
+    float y;
+    float z;
+    int layer_id;
+    float time;
+  } LidarPoint;
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import LidarPoint
+
+class LidarPoint:
+    @property
+    def x(self):
+    @property
+    def y(self):
+    @property
+    def z(self):
+    @property
+    def layer_id(self):
+    @property
+    def time(self):
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.LidarPoint;
+
+public class LidarPoint {
+  public float getX();
+  public float getY();
+  public float getZ();
+  public int getLayer_id();
+  public float getTime();
+  public double getLayerId();
+}
+```
+
+%tab-end
+
+%end
+
 The X, Y and Z coordinates are relative to the [Lidar](#lidar) node origin.
 The `layer_id` field specifies to which layer this point belongs to (from 0 to `numberOfLayers` - 1) and the `time` field specifies the exact time at which the point was acquired.
 With lidar devices, all the points are not acquired at the exact same time but rather sequentially.
-
-> **Note** [C++]: In C++ the name of the structure is `LidarPoint`.
-
-> **Note** [Java/Python]: In Java and Python, the structure is replaced by a class called `LidarPoint`.
 
 ### Field Summary
 
@@ -139,7 +198,9 @@ The same comment applies to the horizontal resolution, the internal depth camera
 #### `wb_lidar_disable`
 #### `wb_lidar_get_sampling_period`
 
-[C++](cpp-api.md#cpp_lidar) [Java](java-api.md#java_lidar) [Python](python-api.md#python_lidar) [MATLAB](matlab-api.md#matlab_lidar) [ROS](ros-api.md)
+%tab-component
+
+%tab "C"
 
 ```c
 #include <webots/lidar.h>
@@ -148,6 +209,75 @@ void wb_lidar_enable(WbDeviceTag tag, int sampling_period);
 void wb_lidar_disable(WbDeviceTag tag);
 int wb_lidar_get_sampling_period(WbDeviceTag tag);
 ```
+
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Lidar.hpp>
+
+namespace webots {
+  class Lidar : public Device {
+    virtual void enable(int sampling_period);
+    virtual void disable();
+    int getSamplingPeriod() const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Lidar
+
+class Lidar (Device):
+    def enable(self, sampling_period):
+    def disable(self):
+    def getSamplingPeriod(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Lidar;
+
+public class Lidar extends Device {
+  public void enable(int sampling_period);
+  public void disable();
+  public int getSamplingPeriod();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+wb_lidar_enable(tag, sampling_period)
+wb_lidar_disable(tag)
+period = wb_lidar_get_sampling_period(tag)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/enable` | `service` | [`webots_ros::set_int`](ros-api.md#common-services) | |
+| `/<device_name>/get_sampling_period` | `service` | [`webots_ros::get_int`](ros-api.md#common-services) | |
+
+%tab-end
+
+%end
 
 ##### Description
 
@@ -167,7 +297,9 @@ The `wb_lidar_get_sampling_period` function returns the period given into the `w
 #### `wb_lidar_disable_point_cloud`
 #### `wb_lidar_is_point_cloud_enabled`
 
-[C++](cpp-api.md#cpp_lidar) [Java](java-api.md#java_lidar) [Python](python-api.md#python_lidar) [MATLAB](matlab-api.md#matlab_lidar) [ROS](ros-api.md)
+%tab-component
+
+%tab "C"
 
 ```c
 #include <webots/lidar.h>
@@ -176,6 +308,75 @@ void wb_lidar_enable_point_cloud(WbDeviceTag tag);
 void wb_lidar_disable_point_cloud(WbDeviceTag tag);
 bool wb_lidar_is_point_cloud_enabled(WbDeviceTag tag);
 ```
+
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Lidar.hpp>
+
+namespace webots {
+  class Lidar : public Device {
+    void enablePointCloud();
+    void disablePointCloud();
+    bool isPointCloudEnabled();
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Lidar
+
+class Lidar (Device):
+    def enablePointCloud(self):
+    def disablePointCloud(self):
+    def isPointCloudEnabled(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Lidar;
+
+public class Lidar extends Device {
+  public void enablePointCloud();
+  public void disablePointCloud();
+  public boolean isPointCloudEnabled();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+wb_lidar_enable_point_cloud(tag)
+wb_lidar_disable_point_cloud(tag)
+state = wb_lidar_is_point_cloud_enabled(tag)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/enable_point_cloud` | `service` | [`webots_ros::set_bool`](ros-api.md#common-services) | |
+| `/<device_name>/is_point_cloud_enabled` | `service` | `webots_ros::node_get_status` | `uint8 ask`<br/>`---`<br/>`uint8 status` |
+
+%tab-end
+
+%end
 
 ##### Description
 
@@ -195,7 +396,9 @@ First the lidar should be enabled using the `wb_lidar_enable` function.
 #### `wb_lidar_get_range_image`
 #### `wb_lidar_get_layer_range_image`
 
-[C++](cpp-api.md#cpp_lidar) [Java](java-api.md#java_lidar) [Python](python-api.md#python_lidar) [MATLAB](matlab-api.md#matlab_lidar) [ROS](ros-api.md)
+%tab-component
+
+%tab "C"
 
 ```c
 #include <webots/lidar.h>
@@ -203,6 +406,70 @@ First the lidar should be enabled using the `wb_lidar_enable` function.
 const float *wb_lidar_get_range_image(WbDeviceTag tag);
 const float *wb_lidar_get_layer_range_image(WbDeviceTag tag, int layer);
 ```
+
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Lidar.hpp>
+
+namespace webots {
+  class Lidar : public Device {
+    const float * getRangeImage() const;
+    const float * getLayerRangeImage(int layer) const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Lidar
+
+class Lidar (Device):
+    def getRangeImage(self):
+    def getLayerRangeImage(self, layer):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Lidar;
+
+public class Lidar extends Device {
+  public float[] getRangeImage();
+  public float[] getLayerRangeImage(int layer);
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+range = wb_lidar_get_range_image(tag)
+range = wb_lidar_get_layer_range_image(tag, layer)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/range_image` | `topic` | [`sensor_msgs::Image`](http://docs.ros.org/api/sensor_msgs/html/msg/Image.html) | [`Header`](http://docs.ros.org/api/std_msgs/html/msg/Header.html) `header`<br/>`uint32 height`<br/>`uint32 width`<br/>`string encoding`<br/>`uint8 is_bigendian`<br/>`uint32 step`<br/>`uint8[] data` |
+
+%tab-end
+
+%end
 
 ##### Description
 
@@ -234,7 +501,9 @@ Their content are identical but their handling is of course different.
 #### `wb_lidar_get_layer_point_cloud`
 #### `wb_lidar_get_number_of_points`
 
-[C++](cpp-api.md#cpp_lidar) [Java](java-api.md#java_lidar) [Python](python-api.md#python_lidar) [MATLAB](matlab-api.md#matlab_lidar) [ROS](ros-api.md)
+%tab-component
+
+%tab "C"
 
 ```c
 #include <webots/lidar.h>
@@ -243,6 +512,76 @@ const WbLidarPoint *wb_lidar_get_point_cloud(WbDeviceTag tag);
 const WbLidarPoint *wb_lidar_get_layer_point_cloud(WbDeviceTag tag, int layer);
 int wb_lidar_get_number_of_points(WbDeviceTag tag);
 ```
+
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Lidar.hpp>
+
+namespace webots {
+  class Lidar : public Device {
+    const LidarPoint * getPointCloud() const;
+    const LidarPoint * getLayerPointCloud(int layer) const;
+    int getNumberOfPoints() const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Lidar
+
+class Lidar (Device):
+    def getPointCloud(self):
+    def getLayerPointCloud(self, layer):
+    def getNumberOfPoints(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Lidar;
+
+public class Lidar extends Device {
+  public LidarPoint[] getPointCloud();
+  public LidarPoint[] getLayerPointCloud(int layer);
+  public int getNumberOfPoints();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+points = wb_lidar_get_point_cloud(tag)
+points = wb_lidar_get_layer_point_cloud(tag, layer)
+number_of_points = wb_lidar_get_number_of_points(tag)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/point_cloud` | `topic` | [`sensor_msgs::PointCloud`](http://docs.ros.org/api/sensor_msgs/html/msg/PointCloud.html) | [`Header`](http://docs.ros.org/api/std_msgs/html/msg/Header.html) `header`<br/>[`geometry_msgs/Point32[]`](http://docs.ros.org/api/geometry_msgs/html/msg/Point32.html) `points`<br/>[`sensor_msgs/ChannelFloat32[]`](http://docs.ros.org/api/sensor_msgs/html/msg/ChannelFloat32.html) `channels`<br/>Note: the first channel is filled with the corresponding layer id. |
+| `/<device_name>/laser_scan/layer<X>` | `topic` | [`sensor_msgs::LaserScan`](http://docs.ros.org/api/sensor_msgs/html/msg/LaserScan.html) | [`Header`](http://docs.ros.org/api/std_msgs/html/msg/Header.html) `header`<br/>`float32 angle_min`<br/>`float32 angle_max`<br/>`float32 angle_increment`<br/>`float32 time_increment`<br/>`float32 scan_time`<br/>`float32 range_min`<br/>`float32 range_max`<br/>`float32[] ranges`<br/>`float32[] intensities` |
+| `/<device_name>/get_layer_point_cloud` | `service` | `webots_ros::lidar_get_layer_point_cloud` | `int32 layer`<br/>`---`<br/>[`sensor_msgs::PointCloud`](http://docs.ros.org/api/sensor_msgs/html/msg/PointCloud.html) pointCloud |
+
+%tab-end
+
+%end
 
 ##### Description
 
@@ -267,7 +606,9 @@ The `wb_lidar_get_number_of_points` function returns the total number of points 
 #### `wb_lidar_get_frequency`
 #### `wb_lidar_set_frequency`
 
-[C++](cpp-api.md#cpp_lidar) [Java](java-api.md#java_lidar) [Python](python-api.md#python_lidar) [MATLAB](matlab-api.md#matlab_lidar) [ROS](ros-api.md)
+%tab-component
+
+%tab "C"
 
 ```c
 #include <webots/lidar.h>
@@ -275,6 +616,71 @@ The `wb_lidar_get_number_of_points` function returns the total number of points 
 double wb_lidar_get_frequency(WbDeviceTag tag);
 void wb_lidar_set_frequency(WbDeviceTag tag, double frequency);
 ```
+
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Lidar.hpp>
+
+namespace webots {
+  class Lidar : public Device {
+    double getFrequency() const;
+    void setFrequency(double frequency);
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Lidar
+
+class Lidar (Device):
+    def getFrequency(self):
+    def setFrequency(self, frequency):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Lidar;
+
+public class Lidar extends Device {
+  public double getFrequency();
+  public void setFrequency(double frequency);
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+frequency = wb_lidar_get_frequency(tag)
+wb_lidar_set_frequency(tag, frequency)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/get_frequency_info` | `service` | `webots_ros::lidar_get_frequency_info` | `uint8 ask`<br/>`---`<br/>`float64 frequency`<br/>`float64 minFrequency`<br/>`float64 maxFrequency` |
+| `/<device_name>/set_frequency` | `service` | [`webots_ros::set_float`](ros-api.md#common-services) | |
+
+%tab-end
+
+%end
 
 ##### Description
 
@@ -290,7 +696,9 @@ The `frequency` argument should be in the range [minFrequency; maxFrequency].
 #### `wb_lidar_get_horizontal_resolution`
 #### `wb_lidar_get_number_of_layers`
 
-[C++](cpp-api.md#cpp_lidar) [Java](java-api.md#java_lidar) [Python](python-api.md#python_lidar) [MATLAB](matlab-api.md#matlab_lidar) [ROS](ros-api.md)
+%tab-component
+
+%tab "C"
 
 ```c
 #include <webots/lidar.h>
@@ -298,6 +706,70 @@ The `frequency` argument should be in the range [minFrequency; maxFrequency].
 int wb_lidar_get_horizontal_resolution(WbDeviceTag tag);
 int wb_lidar_get_number_of_layers(WbDeviceTag tag);
 ```
+
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Lidar.hpp>
+
+namespace webots {
+  class Lidar : public Device {
+    int getHorizontalResolution() const;
+    int getNumberOfLayers() const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Lidar
+
+class Lidar (Device):
+    def getHorizontalResolution(self):
+    def getNumberOfLayers(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Lidar;
+
+public class Lidar extends Device {
+  public int getHorizontalResolution();
+  public int getNumberOfLayers();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+horizontal_resolution = wb_lidar_get_horizontal_resolution(tag)
+number_of_layers = wb_lidar_get_number_of_layers(tag)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/get_info` | `service` | `webots_ros::lidar_get_info` | `uint8 ask`<br/>`---`<br/>`uint32 horizontalResolution`<br/>`uint32 numberOfLayers`<br/>`float64 fov`<br/>`float64 verticalFov`<br/>`float64 minRange`<br/>`float64 maxRange` |
+
+%tab-end
+
+%end
 
 ##### Description
 
@@ -312,7 +784,9 @@ The `wb_lidar_get_number_of_layers` function returns the number of layers of the
 #### `wb_lidar_get_min_frequency`
 #### `wb_lidar_get_max_frequency`
 
-[C++](cpp-api.md#cpp_lidar) [Java](java-api.md#java_lidar) [Python](python-api.md#python_lidar) [MATLAB](matlab-api.md#matlab_lidar) [ROS](ros-api.md)
+%tab-component
+
+%tab "C"
 
 ```c
 #include <webots/lidar.h>
@@ -320,6 +794,70 @@ The `wb_lidar_get_number_of_layers` function returns the number of layers of the
 double wb_lidar_get_min_frequency(WbDeviceTag tag);
 double wb_lidar_get_max_frequency(WbDeviceTag tag);
 ```
+
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Lidar.hpp>
+
+namespace webots {
+  class Lidar : public Device {
+    double getMinFrequency() const;
+    double getMaxFrequency() const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Lidar
+
+class Lidar (Device):
+    def getMinFrequency(self):
+    def getMaxFrequency(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Lidar;
+
+public class Lidar extends Device {
+  public double getMinFrequency();
+  public double getMaxFrequency();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+min_frequency = wb_lidar_get_min_frequency(tag)
+max_frequency = wb_lidar_get_max_frequency(tag)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/get_frequency_info` | `service` | `webots_ros::lidar_get_frequency_info` | `uint8 ask`<br/>`---`<br/>`float64 frequency`<br/>`float64 minFrequency`<br/>`float64 maxFrequency` |
+
+%tab-end
+
+%end
 
 ##### Description
 
@@ -332,7 +870,9 @@ The `wb_lidar_get_min_frequency` and `wb_lidar_get_max_frequency` functions retu
 #### `wb_lidar_get_fov`
 #### `wb_lidar_get_vertical_fov`
 
-[C++](cpp-api.md#cpp_lidar) [Java](java-api.md#java_lidar) [Python](python-api.md#python_lidar) [MATLAB](matlab-api.md#matlab_lidar) [ROS](ros-api.md)
+%tab-component
+
+%tab "C"
 
 ```c
 #include <webots/lidar.h>
@@ -340,6 +880,70 @@ The `wb_lidar_get_min_frequency` and `wb_lidar_get_max_frequency` functions retu
 double wb_lidar_get_fov(WbDeviceTag tag);
 int wb_lidar_get_vertical_fov(WbDeviceTag tag);
 ```
+
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Lidar.hpp>
+
+namespace webots {
+  class Lidar : public Device {
+    double getFov() const;
+    double getVerticalFov() const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Lidar
+
+class Lidar (Device):
+    def getFov(self):
+    def getVerticalFov(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Lidar;
+
+public class Lidar extends Device {
+  public double getFov();
+  public double getVerticalFov();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+fov = wb_lidar_get_fov(tag)
+vertical_fov = wb_lidar_get_vertical_fov(tag)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/get_info` | `service` | `webots_ros::lidar_get_info` | `uint8 ask`<br/>`---`<br/>`uint32 horizontalResolution`<br/>`uint32 numberOfLayers`<br/>`float64 fov`<br/>`float64 verticalFov`<br/>`float64 minRange`<br/>`float64 maxRange` |
+
+%tab-end
+
+%end
 
 ##### Description
 
@@ -354,7 +958,9 @@ The `wb_lidar_get_vertical_fov` function returns the vertical field of view of t
 #### `wb_lidar_get_min_range`
 #### `wb_lidar_get_max_range`
 
-[C++](cpp-api.md#cpp_lidar) [Java](java-api.md#java_lidar) [Python](python-api.md#python_lidar) [MATLAB](matlab-api.md#matlab_lidar) [ROS](ros-api.md)
+%tab-component
+
+%tab "C"
 
 ```c
 #include <webots/lidar.h>
@@ -362,6 +968,70 @@ The `wb_lidar_get_vertical_fov` function returns the vertical field of view of t
 double wb_lidar_get_min_range(WbDeviceTag tag);
 double wb_lidar_get_max_range(WbDeviceTag tag);
 ```
+
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Lidar.hpp>
+
+namespace webots {
+  class Lidar : public Device {
+    double getMinRange() const;
+    double getMaxRange() const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Lidar
+
+class Lidar (Device):
+    def getMinRange(self):
+    def getMaxRange(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Lidar;
+
+public class Lidar extends Device {
+  public double getMinRange();
+  public double getMaxRange();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+min_range = wb_lidar_get_min_range(tag)
+max_range = wb_lidar_get_max_range(tag)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/get_info` | `service` | `webots_ros::lidar_get_info` | `uint8 ask`<br/>`---`<br/>`uint32 horizontalResolution`<br/>`uint32 numberOfLayers`<br/>`float64 fov`<br/>`float64 verticalFov`<br/>`float64 minRange`<br/>`float64 maxRange` |
+
+%tab-end
+
+%end
 
 ##### Description
 

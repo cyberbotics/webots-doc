@@ -134,7 +134,7 @@ The `DifferentialWheels` class is supposed to be instantiated only once in the c
 %tab "C++"
 
 ```cpp
-#include "<webots/DifferentialWheels.hpp>"
+#include <webots/DifferentialWheels.hpp>
 
 namespace webots {
   class DifferentialWheels : public Robot {
@@ -197,7 +197,7 @@ double wb_differential_wheels_get_right_speed();
 %tab "C++"
 
 ```cpp
-#include "<webots/DifferentialWheels.hpp>"
+#include <webots/DifferentialWheels.hpp>
 
 namespace webots {
   class DifferentialWheels : public Robot {
@@ -299,7 +299,7 @@ int wb_differential_wheels_get_encoders_sampling_period(WbDeviceTag tag);
 %tab "C++"
 
 ```cpp
-#include "<webots/DifferentialWheels.hpp>"
+#include <webots/DifferentialWheels.hpp>
 
 namespace webots {
   class DifferentialWheels : public Robot {
@@ -403,7 +403,7 @@ void wb_differential_wheels_set_encoders(double left, double right);
 %tab "C++"
 
 ```cpp
-#include "<webots/DifferentialWheels.hpp>"
+#include <webots/DifferentialWheels.hpp>
 
 namespace webots {
   class DifferentialWheels : public Robot {
@@ -495,7 +495,7 @@ double wb_differential_wheels_get_max_speed();
 %tab "C++"
 
 ```cpp
-#include "<webots/DifferentialWheels.hpp>"
+#include <webots/DifferentialWheels.hpp>
 
 namespace webots {
   class DifferentialWheels : public Robot {
@@ -575,7 +575,7 @@ double wb_differential_wheels_get_speed_unit();
 %tab "C++"
 
 ```cpp
-#include "<webots/DifferentialWheels.hpp>"
+#include <webots/DifferentialWheels.hpp>
 
 namespace webots {
   class DifferentialWheels : public Robot {

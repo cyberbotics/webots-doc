@@ -30,7 +30,7 @@ const char *wb_device_get_model(WbDeviceTag tag);
 %tab "C++"
 
 ```cpp
-#include "<webots/Device.hpp>"
+#include <webots/Device.hpp>
 
 namespace webots {
   class Device {
@@ -112,7 +112,7 @@ const char *wb_device_get_name(WbDeviceTag tag);
 %tab "C++"
 
 ```cpp
-#include "<webots/Device.hpp>"
+#include <webots/Device.hpp>
 
 namespace webots {
   class Device {
@@ -194,7 +194,7 @@ WbNodeType wb_device_get_node_type(WbDeviceTag tag);
 %tab "C++"
 
 ```cpp
-#include "<webots/Device.hpp>"
+#include <webots/Device.hpp>
 
 namespace webots {
   class Device {

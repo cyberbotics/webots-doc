@@ -78,7 +78,7 @@ int wb_display_get_height(WbDeviceTag tag);
 %tab "C++"
 
 ```cpp
-#include "<webots/Display.hpp>"
+#include <webots/Display.hpp>
 
 namespace webots {
   class Display : public Device {
@@ -168,7 +168,7 @@ void wb_display_set_font(WbDeviceTag tag, const char *font, int size, bool anti_
 %tab "C++"
 
 ```cpp
-#include "<webots/Display.hpp>"
+#include <webots/Display.hpp>
 
 namespace webots {
   class Display : public Device {
@@ -311,7 +311,7 @@ void wb_display_detach_camera(WbDeviceTag tag);
 %tab "C++"
 
 ```cpp
-#include "<webots/Display.hpp>"
+#include <webots/Display.hpp>
 
 namespace webots {
   class Display : public Device {
@@ -416,7 +416,7 @@ void wb_display_fill_polygon(WbDeviceTag tag, const int *x, const int *y, int si
 %tab "C++"
 
 ```cpp
-#include "<webots/Display.hpp>"
+#include <webots/Display.hpp>
 
 namespace webots {
   class Display : public Device {
@@ -573,6 +573,8 @@ The `wb_display_fill_polygon` function draws a polygon having the same propertie
 #define WB_IMAGE_ARGB 5
 #define WB_IMAGE_BGRA 6
 
+typedef struct WbImageStructPrivate *WbImageRef;
+
 WbImageRef wb_display_image_new(WbDeviceTag tag, int width, int height, const void *data, int format);
 WbImageRef wb_display_image_load(WbDeviceTag tag, const char *filename);
 WbImageRef wb_display_image_copy(WbDeviceTag tag, int x, int y, int width, int height);
@@ -586,9 +588,14 @@ void wb_display_image_delete(WbDeviceTag tag, WbImageRef ir);
 %tab "C++"
 
 ```cpp
-#include "<webots/Display.hpp>"
+#include <webots/Display.hpp>
+#include <webots/ImageRef.hpp>
 
 namespace webots {
+  class ImageRef {
+    // ...
+  };
+
   class Display : public Device 
     enum {RGB, RGBA, ARGB, BGRA};
     ImageRef *imageCopy(int x, int y, int width, int height) const;
@@ -607,7 +614,10 @@ namespace webots {
 %tab "Python"
 
 ```python
-from controller import Display
+from controller import Display, ImageRef
+
+class ImageRef:
+    # ...
 
 class Display (Device):
     RGB, RGBA, ARGB, BGRA
@@ -626,6 +636,11 @@ class Display (Device):
 
 ```java
 import com.cyberbotics.webots.controller.Display;
+import com.cyberbotics.webots.controller.ImageRef;
+
+public class ImageRef {
+  // ...
+}
 
 public class Display extends Device {
   public final static int RGB, RGBA, ARGB, BGRA;

@@ -59,7 +59,7 @@ int wb_compass_get_sampling_period(WbDeviceTag tag);
 %tab "C++"
 
 ```cpp
-#include "<webots/Compass.hpp>"
+#include <webots/Compass.hpp>
 
 namespace webots {
   class Compass : public Device {

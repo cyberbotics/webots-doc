@@ -17,7 +17,7 @@ $1
 %tab "C++"
 
 ```cpp
-#include "<webots/CLASS_NAME.hpp>"
+#include <webots/CLASS_NAME.hpp>
 
 namespace webots {
   class CLASS_NAME : public Device {

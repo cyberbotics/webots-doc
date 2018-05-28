@@ -59,7 +59,7 @@ const double *wb_accelerometer_get_values(WbDeviceTag tag)
 %tab "C++"
 
 ```cpp
-#include "<webots/Accelerometer.hpp>"
+#include <webots/Accelerometer.hpp>
 
 namespace webots {
   class Accelerometer : public Device {

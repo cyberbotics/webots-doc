@@ -209,7 +209,7 @@ int wb_camera_get_sampling_period(WbDeviceTag tag);
 %tab "C++"
 
 ```cpp
-#include "<webots/Camera.hpp>"
+#include <webots/Camera.hpp>
 
 namespace webots {
   class Camera : public Device {
@@ -311,7 +311,7 @@ void wb_camera_set_fov(WbDeviceTag tag, double fov);
 %tab "C++"
 
 ```cpp
-#include "<webots/Camera.hpp>"
+#include <webots/Camera.hpp>
 
 namespace webots {
   class Camera : public Device {
@@ -416,7 +416,7 @@ void wb_camera_set_focal_distance(WbDeviceTag tag, double focal_distance);
 %tab "C++"
 
 ```cpp
-#include "<webots/Camera.hpp>"
+#include <webots/Camera.hpp>
 
 namespace webots {
   class Camera : public Device {
@@ -516,7 +516,7 @@ int wb_camera_get_height(WbDeviceTag tag);
 %tab "C++"
 
 ```cpp
-#include "<webots/Camera.hpp>"
+#include <webots/Camera.hpp>
 
 namespace webots {
   class Camera : public Device {
@@ -600,7 +600,7 @@ double wb_camera_get_near(WbDeviceTag tag);
 %tab "C++"
 
 ```cpp
-#include "<webots/Camera.hpp>"
+#include <webots/Camera.hpp>
 
 namespace webots {
   class Camera : public Device {
@@ -688,7 +688,7 @@ unsigned char wb_camera_image_get_gray(const unsigned char *image, int width, in
 %tab "C++"
 
 ```cpp
-#include "<webots/Camera.hpp>"
+#include <webots/Camera.hpp>
 
 namespace webots {
   class Camera : public Device {
@@ -912,7 +912,7 @@ int wb_camera_save_image(WbDeviceTag tag, const char *filename, int quality);
 %tab "C++"
 
 ```cpp
-#include "<webots/Camera.hpp>"
+#include <webots/Camera.hpp>
 
 namespace webots {
   class Camera : public Device {
@@ -1015,7 +1015,7 @@ const WbCameraRecognitionObject *wb_camera_recognition_get_objects(WbDeviceTag t
 %tab "C++"
 
 ```cpp
-#include "<webots/Camera.hpp>"
+#include <webots/Camera.hpp>
 
 namespace webots {
   class Camera : public Device {
@@ -1139,7 +1139,7 @@ typedef struct {
 %tab "C++"
 
 ```cpp
-#include "<webots/Camera.hpp>"
+#include <webots/Camera.hpp>
 
 namespace webots {
   typedef struct {

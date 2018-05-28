@@ -162,7 +162,7 @@ int wb_connector_get_presence(WbDeviceTag tag);
 %tab "C++"
 
 ```cpp
-#include "<webots/Connector.hpp>"
+#include <webots/Connector.hpp>
 
 namespace webots {
   class Connector : public Device {
@@ -293,7 +293,7 @@ void wb_connector_unlock(WbDeviceTag tag);
 %tab "C++"
 
 ```cpp
-#include "<webots/Connector.hpp>"
+#include <webots/Connector.hpp>
 
 namespace webots {
   class Connector : public Device {

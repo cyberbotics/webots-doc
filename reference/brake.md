@@ -32,7 +32,7 @@ int wb_brake_get_type(WbDeviceTag tag);
 %tab "C++"
 
 ```cpp
-#include "<webots/Brake.hpp>"
+#include <webots/Brake.hpp>
 
 namespace webots {
   class Brake : public Device {

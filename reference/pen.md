@@ -61,13 +61,75 @@ It is also switchable from the pen API, using the `wb_pen_write` function.
 
 #### `wb_pen_write`
 
-[C++](cpp-api.md#cpp_pen) [Java](java-api.md#java_pen) [Python](python-api.md#python_pen) [MATLAB](matlab-api.md#matlab_pen) [ROS](ros-api.md)
+%tab-component
+
+%tab "C"
 
 ```c
 #include <webots/pen.h>
 
 void wb_pen_write(WbDeviceTag tag, bool write);
 ```
+
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Pen.hpp>
+
+namespace webots {
+  class Pen : public Device {
+    virtual void write(bool write);
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Pen
+
+class Pen (Device):
+    def write(self, write):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Pen;
+
+public class Pen extends Device {
+  public void write(boolean write);
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+wb_pen_write(tag, write)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/write` | `service` | [`webots_ros::set_bool`](ros-api.md#common-services) | |
+
+%tab-end
+
+%end
 
 ##### Description
 
@@ -80,13 +142,75 @@ If the `write` parameter is *true*, the specified `tag` device will write; if `w
 
 #### `wb_pen_set_ink_color`
 
-[C++](cpp-api.md#cpp_pen) [Java](java-api.md#java_pen) [Python](python-api.md#python_pen) [MATLAB](matlab-api.md#matlab_pen) [ROS](ros-api.md)
+%tab-component
+
+%tab "C"
 
 ```c
 #include <webots/pen.h>
 
 void wb_pen_set_ink_color(WbDeviceTag tag, int color, double density);
 ```
+
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Pen.hpp>
+
+namespace webots {
+  class Pen : public Device {
+    virtual void setInkColor(int color, double density);
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Pen
+
+class Pen (Device):
+    def setInkColor(self, color, density):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Pen;
+
+public class Pen extends Device {
+  public void setInkColor(int color, double density);
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+wb_pen_set_ink_color(tag, [r g b], density)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/set_ink_color` | `service` | `webots_ros::pen_set_ink_color` | `int32 color`<br/>`float64 density`<br/>`---`<br/>`int8 success` |
+
+%tab-end
+
+%end
 
 ##### Description
 

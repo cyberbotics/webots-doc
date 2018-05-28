@@ -28,7 +28,9 @@ This field accepts any value in the interval (0.0, inf).
 #### `wb_position_sensor_get_value`
 #### `wb_position_sensor_get_type`
 
-[C++](cpp-api.md#cpp_position_sensor) [Java](java-api.md#java_position_sensor) [Python](python-api.md#python_position_sensor) [MATLAB](matlab-api.md#matlab_position_sensor) [ROS](ros-api.md)
+%tab-component
+
+%tab "C"
 
 ```c
 #include <webots/position_sensor.h>
@@ -39,6 +41,86 @@ int wb_position_sensor_get_sampling_period(WbDeviceTag tag);
 double wb_position_sensor_get_value(WbDeviceTag tag);
 int wb_position_sensor_get_type(WbDeviceTag tag);
 ```
+
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/PositionSensor.hpp>
+
+namespace webots {
+  class PositionSensor : public Device {
+    enum {ANGULAR, LINEAR};
+    virtual void enable(int sampling_period);
+    virtual void disable();
+    int getSamplingPeriod();
+    double getValue() const;
+    int getType() const;
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import PositionSensor
+
+class PositionSensor (Device):
+    ANGULAR, LINEAR
+    def enable(self, sampling_period):
+    def disable(self):
+    def getSamplingPeriod(self):
+    def getValue(self):
+    def getType(self):
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.PositionSensor;
+
+public class PositionSensor extends Device {
+  public final static int ANGULAR, LINEAR;
+  public void enable(int sampling_period);
+  public void disable();
+  public int getSamplingPeriod();
+  public double getValue();
+  public int getType();
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+WB_ANGULAR, WB_LINEAR
+wb_position_sensor_enable(tag, sampling_period)
+wb_position_sensor_disable(tag)
+period = wb_position_sensor_get_sampling_period(tag)
+value = wb_position_sensor_get_value(tag)
+type = wb_position_sensor_get_type(tag)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/value` | `topic` | webots_ros::Float64Stamped | [`Header`](http://docs.ros.org/api/std_msgs/html/msg/Header.html) `header`<br/>`float64 data` |
+| `/<device_name>/enable` | `service` | [`webots_ros::set_int`](ros-api.md#common-services) | |
+| `/<device_name>/get_sampling_period` | `service` | [`webots_ros::get_int`](ros-api.md#common-services) | |
+| `/<device_name>/get_type` | `service` | [`webots_ros::get_int`](ros-api.md#common-services) | |
+
+%tab-end
+
+%end
 
 ##### Description
 

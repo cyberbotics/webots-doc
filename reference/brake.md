@@ -51,8 +51,8 @@ namespace webots {
 from controller import Brake
 
 class Brake (Device):
-    def setDampingConstant(self, dampingConstant)
-    def getType(self)
+    def setDampingConstant(self, dampingConstant):
+    def getType(self):
     # ...
 ```
 

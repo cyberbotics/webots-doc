@@ -618,7 +618,7 @@ namespace webots {
 from controller import Camera
 
 class Camera (Device):
-    def getNear(self)
+    def getNear(self):
     # ...
 ```
 
@@ -928,7 +928,7 @@ namespace webots {
 from controller import Camera
 
 class Camera (Device):
-    def saveImage(self, filename, quality)
+    def saveImage(self, filename, quality):
     # ...
 ```
 
@@ -1036,12 +1036,12 @@ namespace webots {
 from controller import Camera
 
 class Camera (Device):
-    def hasRecognition(self)
-    def recognitionEnable(self, samplingPeriod)
-    def recognitionDisable(self)
-    def getRecognitionSamplingPeriod(self)
-    def getRecognitionNumberOfObjects(self)
-    def getRecognitionObjects(self)
+    def hasRecognition(self):
+    def recognitionEnable(self, samplingPeriod):
+    def recognitionDisable(self):
+    def getRecognitionSamplingPeriod(self):
+    def getRecognitionNumberOfObjects(self):
+    def getRecognitionObjects(self):
     # ...
 ```
 

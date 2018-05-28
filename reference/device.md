@@ -48,7 +48,7 @@ namespace webots {
 from controller import Device
 
 class Device:
-    def getModel(self)
+    def getModel(self):
     # ...
 ```
 
@@ -130,7 +130,7 @@ namespace webots {
 from controller import Device
 
 class Device:
-    def getName(self)
+    def getName(self):
     # ...
 ```
 
@@ -212,7 +212,7 @@ namespace webots {
 from controller import Device
 
 class Device:
-   def getNodeType(self)
+    def getNodeType(self):
     # ...
 ```
 

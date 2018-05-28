@@ -312,8 +312,8 @@ namespace webots {
 from controller import Connector
 
 class Connector (Device):
-    def lock(self)
-    def unlock(self)
+    def lock(self):
+    def unlock(self):
     # ...
 ```
 

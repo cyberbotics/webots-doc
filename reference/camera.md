@@ -786,6 +786,8 @@ The `wb_camera_image_get_gray` macro works in a similar way but returns the gray
 
 ##### Code Snippet
 
+The following code snippet shows how to get a Camera image, and to parse each channel of each pixels.
+
 %tab-component
 
 %tab "C"

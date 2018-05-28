@@ -568,6 +568,11 @@ The `wb_display_fill_polygon` function draws a polygon having the same propertie
 ```c
 #include <webots/display.h>
 
+#define WB_IMAGE_RGB  3
+#define WB_IMAGE_RGBA 4
+#define WB_IMAGE_ARGB 5
+#define WB_IMAGE_BGRA 6
+
 WbImageRef wb_display_image_new(WbDeviceTag tag, int width, int height, const void *data, int format);
 WbImageRef wb_display_image_load(WbDeviceTag tag, const char *filename);
 WbImageRef wb_display_image_copy(WbDeviceTag tag, int x, int y, int width, int height);

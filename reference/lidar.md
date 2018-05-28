@@ -85,15 +85,7 @@ from controller import LidarPoint
 
 class LidarPoint:
     @property
-    def x(self):
-    @property
-    def y(self):
-    @property
-    def z(self):
-    @property
-    def layer_id(self):
-    @property
-    def time(self):
+    x, y, z, layer_id, time
 ```
 
 %tab-end

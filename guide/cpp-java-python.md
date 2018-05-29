@@ -13,11 +13,11 @@ Therefore the class and method names, as well as the number of parameters and th
 %figure "Webots APIs Overview"
 %chart
 graph BT
-  Java[[SWIG generated Java API](../reference/java-api.md)] --> CPP[[C++ API](../reference/cpp-api.md)]
-  Python[[SWIG generated Python API](../reference/python-api.md)] --> CPP
-  Ros[[ROS API](../reference/ros-api.md)] --> CPP
+  Java[SWIG generated Java API] --> CPP[C++ API]
+  Python[SWIG generated Python API] --> CPP
+  Ros[ROS API] --> CPP
     CPP --> C["C API (implemented in libcontroller)"]
-    MATLAB[[MATLAB API](../reference/matlab-api.md)] --> C
+    MATLAB[MATLAB API] --> C
       C --> Webots["Webots (binary interface)"]
 %end
 %end

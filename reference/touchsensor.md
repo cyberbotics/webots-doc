@@ -114,7 +114,9 @@ This approximation usually improves as the `basicTimeStep` ([WorldInfo](worldinf
 #### `wb_touch_sensor_get_value`
 #### `wb_touch_sensor_get_values`
 
-[C++](cpp-api.md#cpp_touch_sensor) [Java](java-api.md#java_touch_sensor) [Python](python-api.md#python_touch_sensor) [MATLAB](matlab-api.md#matlab_touch_sensor) [ROS](ros-api.md)
+%tab-component
+
+%tab "C"
 
 ```c
 #include <webots/touch_sensor.h>
@@ -125,6 +127,86 @@ int wb_touch_sensor_get_sampling_period(WbDeviceTag tag);
 double wb_touch_sensor_get_value(WbDeviceTag tag);
 const double *wb_touch_sensor_get_values(WbDeviceTag tag);
 ```
+
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/TouchSensor.hpp>
+
+namespace webots {
+  class TouchSensor : public Device {
+    virtual void enable(int sampling_period);
+    virtual void disable();
+    int getSamplingPeriod();
+    double getValue() const;
+    const double *getValues() const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import TouchSensor
+
+class TouchSensor (Device):
+    def enable(self, sampling_period):
+    def disable(self):
+    def getSamplingPeriod(self):
+    def getValue(self):
+    def getValues(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.TouchSensor;
+
+public class TouchSensor extends Device 
+  public void enable(int sampling_period);
+  public void disable();
+  public int getSamplingPeriod();
+  public double getValue();
+  public double[] getValues();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+wb_touch_sensor_enable(tag, sampling_period)
+wb_touch_sensor_disable(tag)
+period = wb_touch_sensor_get_sampling_period(tag)
+value = wb_touch_sensor_get_value(tag)
+[x y z] = wb_touch_sensor_get_values(tag)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/value` | `topic` | webots_ros::Float64Stamped | [`Header`](http://docs.ros.org/api/std_msgs/html/msg/Header.html) `header`<br/>`float64 data` |
+| `/<device_name>/values` | `topic` | [`geometry_msgs::WrenchStamped`](http://docs.ros.org/api/geometry_msgs/html/msg/WrenchStamped.html) | [`Header`](http://docs.ros.org/api/std_msgs/html/msg/Header.html) `header`<br/>[`Wrench`](http://docs.ros.org/api/geometry_msgs/html/msg/Wrench.html) wrench |
+| `/<device_name>/value` | `topic` | `webots_ros::BoolStamped` | [`Header`](http://docs.ros.org/api/std_msgs/html/msg/Header.html) `header`<br/>`bool data` |
+| `/<device_name>/enable` | `service` | [`webots_ros::set_int`](ros-api.md#common-services) | |
+| `/<device_name>/get_sampling_period` | `service` | [`webots_ros::get_int`](ros-api.md#common-services) | |
+
+%tab-end
+
+%end
 
 ##### Description
 
@@ -150,27 +232,97 @@ This function can be used with a sensor of type "force-3d" exclusively.
 
 #### `wb_touch_sensor_get_type`
 
-[C++](cpp-api.md#cpp_touch_sensor) [Java](java-api.md#java_touch_sensor) [Python](python-api.md#python_touch_sensor) [MATLAB](matlab-api.md#matlab_touch_sensor) [ROS](ros-api.md)
+%tab-component
+
+%tab "C"
 
 ```c
 #include <webots/touch_sensor.h>
 
+#define WB_TOUCH_SENSOR_BUMPER
+#define WB_TOUCH_SENSOR_FORCE
+#define WB_TOUCH_SENSOR_FORCE3D
+
 int wb_touch_sensor_get_type(WbDeviceTag tag);
 ```
+
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/TouchSensor.hpp>
+
+namespace webots {
+  class TouchSensor : public Device {
+    enum {BUMPER, FORCE, FORCE3D};
+    int getType() const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import TouchSensor
+
+class TouchSensor (Device):
+    BUMPER, FORCE, FORCE3D
+    def getType(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.TouchSensor;
+
+public class TouchSensor extends Device {
+  public final static int BUMPER, FORCE, FORCE3D;
+  public int getType();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+WB_TOUCH_SENSOR_BUMPER, WB_TOUCH_SENSOR_FORCE, WB_TOUCH_SENSOR_FORCE3D
+type = wb_touch_sensor_get_type(tag)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/get_type` | `service` | [`webots_ros::get_int`](ros-api.md#common-services) | |
+
+%tab-end
+
+%end
 
 ##### Description
 
 *get the touch sensor type*
 
 This function allows the user to retrieve the touch sensor type defined by the `type` field.
-If the value of the `type` field is "force" then this function returns WB\_TOUCH\_SENSOR\_FORCE, if it is "force-3d" then it returns WB\_TOUCH\_SENSOR\_FORCE3D and otherwise it returns WB\_TOUCH\_SENSOR\_BUMPER.
+If the value of the `type` field is "force" then this function returns `WB_TOUCH_SENSOR_FORCE`, if it is "force-3d" then it returns `WB_TOUCH_SENSOR_FORCE3D` and otherwise it returns `WB_TOUCH_SENSOR_BUMPER`.
 
 %figure "Return values for the `wb_touch_sensor_get_type` function"
 
 | TouchSensor.type | return value               |
 | ---------------- | -------------------------- |
-| "bumper"         | WB\_TOUCH\_SENSOR\_BUMPER  |
-| "force"          | WB\_TOUCH\_SENSOR\_FORCE   |
-| "force-3d"       | WB\_TOUCH\_SENSOR\_FORCE3D |
+| "bumper"         | `WB_TOUCH_SENSOR_BUMPER`   |
+| "force"          | `WB_TOUCH_SENSOR_FORCE`    |
+| "force-3d"       | `WB_TOUCH_SENSOR_FORCE3D`  |
 
 %end

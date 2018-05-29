@@ -487,7 +487,7 @@ from controller import RangeFinder
 class RangeFinder (Device):
     def getRangeImage(self):
     def getRangeImageArray(self):
-    @static_method
+    @staticmethod
     def rangeImageGetDepth(image, width, x, y):
     # ...
 ```

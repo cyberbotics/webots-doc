@@ -1162,15 +1162,15 @@ class CameraRecognitionObject:
 import com.cyberbotics.webots.controller.CameraRecognitionObject;
 
 public class CameraRecognitionObject {
-   public int getId();
-   public double[] getPosition();
-   public double[] getOrientation();
-   public double[] getSize();
-   public int[] getPositionOnImage();
-   public int[] getSizeOnImage();
-   public int getNumberOfColors();
-   public double[] getColors();
-   public String getModel();
+  public int getId();
+  public double[] getPosition();
+  public double[] getOrientation();
+  public double[] getSize();
+  public int[] getPositionOnImage();
+  public int[] getSizeOnImage();
+  public int getNumberOfColors();
+  public double[] getColors();
+  public String getModel();
 }
 ```
 
@@ -1179,7 +1179,17 @@ public class CameraRecognitionObject {
 %tab "MATLAB"
 
 ```matlab
-TODO
+structs.WbCameraRecognitionObject.members = struct(
+  'id', 'int32',
+  'position', 'double#3',
+  'orientation', 'double#4',
+  'size', 'double#2',
+  'position_on_image', 'int32#2',
+  'size_on_image', 'int32#2',
+  'number_of_colors', 'int32',
+  'colors', 'doublePtr',
+  'model', 'cstring'
+);
 ```
 
 %tab-end

@@ -109,7 +109,13 @@ public class LidarPoint {
 %tab "MATLAB"
 
 ```matlab
-TODO
+structs.WbLidarPoint.members = struct(
+  'x', 'single',
+  'y', 'single',
+  'z', 'single',
+  'layer_id', 'int32',
+  'time', 'single'
+);
 ```
 
 %tab-end

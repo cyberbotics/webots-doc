@@ -83,7 +83,14 @@ public class MouseState {
 %tab "MATLAB"
 
 ```matlab
-TODO
+structs.WbMouseState.members = struct(
+  'left', 'int8',
+  'middle', 'int8',
+  'right', 'int8',
+  'x', 'double',
+  'y', 'double',
+  'z', 'double'
+);
 ```
 
 %tab-end

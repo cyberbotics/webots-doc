@@ -97,7 +97,12 @@ public class RadarTarget {
 %tab "MATLAB"
 
 ```matlab
-TODO
+structs.WbRadarTarget.members = struct(
+  'distance', 'double',
+  'received_power', 'double',
+  'speed', 'double',
+  'azimuth', 'double'
+);
 ```
 
 %tab-end

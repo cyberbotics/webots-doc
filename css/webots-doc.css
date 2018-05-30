@@ -260,6 +260,9 @@ body {
 .webots-doc code > a {
   font-family: "Roboto Mono", monospace;
 }
+.webots-doc a > code {
+  white-space: normal;
+}
 .webots-doc b, .webots-doc strong {
   color: #333;
 }

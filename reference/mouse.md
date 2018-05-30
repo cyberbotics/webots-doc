@@ -80,6 +80,20 @@ public class MouseState {
 
 %tab-end
 
+%tab "MATLAB"
+
+```matlab
+TODO
+```
+
+%tab-end
+
+%tab "ROS"
+
+%tab-end
+
+> `MouseState` data is directly accessible from the related [`/mouse/get_state` service](#wb_mouse_enable).
+
 %end
 
 The `left`, `middle` and `right` fields are matching respectively with the left, middle and right buttons of the computer mouse.

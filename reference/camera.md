@@ -1176,6 +1176,20 @@ public class CameraRecognitionObject {
 
 %tab-end
 
+%tab "MATLAB"
+
+```matlab
+TODO
+```
+
+%tab-end
+
+%tab "ROS"
+
+> `CameraRecognitionObject` data is directly accessible from the related [`/<device_name>/recognition_objects` topic](#wb_camera_recognition_get_objects).
+
+%tab-end
+
 %end
 
 The `id` represents the node id corresponding to the object, and it is possible to use this id directly in the [`wb_supervisor_node_get_from_id`](supervisor.md#wb_supervisor_node_get_from_def) supervisor function.

@@ -94,6 +94,20 @@ public class RadarTarget {
 
 %tab-end
 
+%tab "MATLAB"
+
+```matlab
+TODO
+```
+
+%tab-end
+
+%tab "ROS"
+
+> `RadarTarget` data is directly accessible from the related [`/<device_name>/targets` topic](#wb_radar_get_targets).
+
+%tab-end
+
 %end
 
 The `distance` is the radial distance between the radar and the target.

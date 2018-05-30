@@ -697,6 +697,10 @@ body {
 .tab-content > table br {
   line-height: 28px;
 }
+.tab-content > blockquote {
+  margin: 0;
+  border: 0;
+}
 .tab-content > pre {
   margin: 0;
 }

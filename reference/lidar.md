@@ -106,6 +106,20 @@ public class LidarPoint {
 
 %tab-end
 
+%tab "MATLAB"
+
+```matlab
+TODO
+```
+
+%tab-end
+
+%tab "ROS"
+
+> `LidarPoint` data is directly accessible from the related [topics](#wb_lidar_get_point_cloud).
+
+%tab-end
+
 %end
 
 The X, Y and Z coordinates are relative to the [Lidar](#lidar) node origin.

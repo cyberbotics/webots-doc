@@ -242,6 +242,7 @@ body {
   font-family: "Roboto Mono", monospace;
   white-space: pre;
   word-wrap: break-word;
+  color: inherit; /* to bypass the main.css rule. */
 }
 .webots-doc pre > code {
   word-wrap: normal;

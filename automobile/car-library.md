@@ -73,6 +73,9 @@ public class Car extends Driver {
 
 %end
 
+> **Note** [ROS]: To enable synchronous simulation you will have to call the `/robot/time_step` service with a positive `step` argument.
+Then each time this service is called a car step will be executed (set the `step` argument to 0 to disable synchronization).
+
 ##### Description
 
 *Initialise and clean*

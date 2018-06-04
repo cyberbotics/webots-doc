@@ -254,7 +254,7 @@ import com.cyberbotics.webots.controller.Radar;
 public class Radar extends Device {
   public void enable(int samplingPeriod);
   public void disable();
-  public int getSamplingPeriod() const;
+  public int getSamplingPeriod();
   // ...
 }
 ```

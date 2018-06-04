@@ -120,7 +120,7 @@ import com.cyberbotics.webots.controller.Receiver;
 public class Receiver extends Device {
   public void enable(int samplingPeriod);
   public void disable();
-  public int getSamplingPeriod() const;
+  public int getSamplingPeriod();
   // ...
 }
 ```

@@ -88,7 +88,7 @@ public class PositionSensor extends Device {
   public final static int ANGULAR, LINEAR;
   public void enable(int samplingPeriod);
   public void disable();
-  public int getSamplingPeriod() const;
+  public int getSamplingPeriod();
   public double getValue();
   public int getType();
 }

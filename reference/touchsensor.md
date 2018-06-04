@@ -170,10 +170,10 @@ class TouchSensor (Device):
 ```java
 import com.cyberbotics.webots.controller.TouchSensor;
 
-public class TouchSensor extends Device 
+public class TouchSensor extends Device
   public void enable(int samplingPeriod);
   public void disable();
-  public int getSamplingPeriod() const;
+  public int getSamplingPeriod();
   public double getValue();
   public double[] getValues();
   // ...

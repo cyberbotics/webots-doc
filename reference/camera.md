@@ -245,7 +245,7 @@ import com.cyberbotics.webots.controller.Camera;
 public class Camera extends Device {
   public void enable(int samplingPeriod);
   public void disable();
-  public int getSamplingPeriod() const;
+  public int getSamplingPeriod();
   // ...
 }
 ```
@@ -1063,9 +1063,9 @@ wb_camera_recognition_get_sampling_period(tag)
 
 | name | service/topic | data type | data type definition |
 | --- | --- | --- | --- |
-| `/<device_name>/has_recognition` | `service`| `webots_ros::get_bool` | |	
-| `/<device_name>/recognition_enable` | `service`| `webots_ros::set_int` | |	
-| `/<device_name>/recognition_get_sampling_period` | `service`| `webots_ros::get_int` | |	
+| `/<device_name>/has_recognition` | `service`| `webots_ros::get_bool` | |
+| `/<device_name>/recognition_enable` | `service`| `webots_ros::set_int` | |
+| `/<device_name>/recognition_get_sampling_period` | `service`| `webots_ros::get_int` | |
 | `/<device_name>/recognition_objects` | `topic`| `webots_ros::RecognitionObject` | [`Header`](http://docs.ros.org/api/std_msgs/html/msg/Header.html) `header`<br/>[`geometry_msgs/Vector3`](http://docs.ros.org/api/geometry_msgs/html/msg/Vector3.html) `relative_position`<br/>[`geometry_msgs/Quaternion`](http://docs.ros.org/api/geometry_msgs/html/msg/Quaternion.html) `relative_orientation`<br/>[`geometry_msgs/Vector3`](http://docs.ros.org/api/geometry_msgs/html/msg/Vector3.html) `position_on_image`<br/>[`geometry_msgs/Vector3`](http://docs.ros.org/api/geometry_msgs/html/msg/Vector3.html) `size_on_image`<br/>`int32 numberofcolors`<br/>`int32[] test`<br/>[`geometry_msgs/Vector3`](http://docs.ros.org/api/geometry_msgs/html/msg/Vector3.html)`[]` `colors`<br/>`String model`<br/><br/>Note: the z value of `position_on_image` and `size_on_image` should be ignored |
 
 %tab-end

@@ -97,7 +97,7 @@ import com.cyberbotics.webots.controller.Accelerometer;
 public class Accelerometer extends Device {
   public void enable(int samplingPeriod);
   public void disable();
-  int getSamplingPeriod() const;
+  public int getSamplingPeriod();
   public double[] getValues();
   // ...
 }

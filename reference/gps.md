@@ -111,7 +111,7 @@ import com.cyberbotics.webots.controller.GPS;
 public class GPS extends Device {
   public void enable(int samplingPeriod);
   public void disable();
-  public int getSamplingPeriod() const;
+  public int getSamplingPeriod();
   public double[] getValues();
   public double getSpeed();
   // ...

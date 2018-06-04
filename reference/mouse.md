@@ -170,7 +170,7 @@ import com.cyberbotics.webots.controller.Mouse;
 public class Mouse {
   public void enable(int samplingPeriod);
   public void disable();
-  public int getSamplingPeriod() const;
+  public int getSamplingPeriod();
   public MouseState getState();
 }
 ```

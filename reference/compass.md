@@ -97,7 +97,7 @@ import com.cyberbotics.webots.controller.Compass;
 public class Compass extends Device {
   public void enable(int samplingPeriod);
   public void disable();
-  public int getSamplingPeriod() const;
+  public int getSamplingPeriod();
   public double[] getValues();
   // ...
 }

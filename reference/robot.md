@@ -1055,7 +1055,7 @@ The string returned should not be deallocated, as it was allocated by the "libCo
 ```c
 #include <webots/robot.h>
 
-const char * wb_robot_get_custom_data();
+const char *wb_robot_get_custom_data();
 void wb_robot_set_custom_data(const char *data);
 ```
 

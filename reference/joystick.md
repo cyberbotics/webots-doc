@@ -16,7 +16,9 @@ In order to get the `Joystick` instance, you should call the `getJoystick` funct
 #### `wb_joystick_disable`
 #### `wb_joystick_get_sampling_period`
 
-[C++](cpp-api.md#cpp_joystick) [Java](java-api.md#java_joystick) [Python](python-api.md#python_joystick) [MATLAB](matlab-api.md#matlab_joystick) [ROS](ros-api.md)
+%tab-component
+
+%tab "C"
 
 ```c
 #include <webots/joystick.h>
@@ -25,6 +27,75 @@ void wb_joystick_enable(int sampling_period);
 void wb_joystick_disable();
 int wb_joystick_get_sampling_period();
 ```
+
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Joystick.hpp>
+
+namespace webots {
+  class Joystick : public Device {
+    virtual void enable(int samplingPeriod);
+    virtual void disable();
+    int getSamplingPeriod();
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Joystick
+
+class Joystick (Device):
+    def enable(self, samplingPeriod):
+    def disable(self):
+    def getSamplingPeriod(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Joystick;
+
+public class Joystick extends Device {
+  public void enable(int samplingPeriod);
+  public void disable();
+  public int getSamplingPeriod();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+wb_joystick_enable(sampling_period)
+wb_joystick_disable()
+period = wb_joystick_get_sampling_period()
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/joystick/enable` | `service` | [`webots_ros::set_int`](ros-api.md#common-services) | |
+| `/joystick/get_sampling_period` | `service` | [`webots_ros::get_int`](ros-api.md#common-services) | |
+
+%tab-end
+
+%end
 
 ##### Description
 
@@ -44,13 +115,75 @@ The `wb_joystick_get_sampling_period` function returns the value previously pass
 
 #### `wb_joystick_is_connected`
 
-[C++](cpp-api.md#cpp_joystick) [Java](java-api.md#java_joystick) [Python](python-api.md#python_joystick) [MATLAB](matlab-api.md#matlab_joystick) [ROS](ros-api.md)
+%tab-component
+
+%tab "C"
 
 ```c
 #include <webots/joystick.h>
 
 bool wb_joystick_is_connected(int ms);
 ```
+
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Joystick.hpp>
+
+namespace webots {
+  class Joystick : public Device {
+    bool isConnected() const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Joystick
+
+class Joystick (Device):
+    def isConnected(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Joystick;
+
+public class Joystick extends Device {
+  public boolean isConnected();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+connected = wb_joystick_is_connected()
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/joystick/is_connected` | `service` | [`webots_ros::get_bool`](ros-api.md#common-services) | |
+
+%tab-end
+
+%end
 
 ##### Description
 
@@ -62,13 +195,75 @@ Once the joystick is enabled, this function can be used to check if a free joyst
 
 #### `wb_joystick_get_model`
 
-[C++](cpp-api.md#cpp_joystick) [Java](java-api.md#java_joystick) [Python](python-api.md#python_joystick) [MATLAB](matlab-api.md#matlab_joystick) [ROS](ros-api.md)
+%tab-component
+
+%tab "C"
 
 ```c
 #include <webots/joystick.h>
 
 const char *wb_joystick_get_model();
 ```
+
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Joystick.hpp>
+
+namespace webots {
+  class Joystick : public Device {
+    std::string getModel() const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Joystick
+
+class Joystick (Device):
+    def getModel(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Joystick;
+
+public class Joystick extends Device {
+  public String getModel();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+model = wb_joystick_get_model()
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/joystick/get_model` | `service` | [`webots_ros::get_string`](ros-api.md#common-services) | |
+
+%tab-end
+
+%end
 
 ##### Description
 
@@ -83,14 +278,81 @@ The returned model of the joystick may looks like: `Logitech G29 Driving Force R
 #### `wb_joystick_get_number_of_axes`
 #### `wb_joystick_get_axis_value`
 
-[C++](cpp-api.md#cpp_joystick) [Java](java-api.md#java_joystick) [Python](python-api.md#python_joystick) [MATLAB](matlab-api.md#matlab_joystick) [ROS](ros-api.md)
+%tab-component
+
+%tab "C"
 
 ```c
 #include <webots/joystick.h>
 
-int  wb_joystick_get_number_of_axes();
-int  wb_joystick_get_axis_value(int axis);
+int wb_joystick_get_number_of_axes();
+int wb_joystick_get_axis_value(int axis);
 ```
+
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Joystick.hpp>
+
+namespace webots {
+  class Joystick : public Device {
+    int getNumberOfAxes() const;
+    int getAxisValue(int axis) const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Joystick
+
+class Joystick (Device):
+    def getNumberOfAxes(self):
+    def getAxisValue(self, axis):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Joystick;
+
+public class Joystick extends Device {
+  public int getNumberOfAxes();
+  public int getAxisValue(int axis);
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+axes_number = wb_joystick_get_number_of_axes()
+axis_value = wb_joystick_get_axis_value(axis)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/joystick/get_number_of_axes` | `service` | [`webots_ros::get_int`](ros-api.md#common-services) | |
+| `/joystick/axis<X>` | `topic` | webots_ros::Int8Stamped | [`Header`](http://docs.ros.org/api/std_msgs/html/msg/Header.html) `header`<br/>`int8 data` |
+
+%tab-end
+
+%end
 
 ##### Description
 
@@ -104,13 +366,75 @@ The `wb_joystick_get_axis_value` function returns the current value of the axis 
 
 #### `wb_joystick_get_pressed_button`
 
-[C++](cpp-api.md#cpp_joystick) [Java](java-api.md#java_joystick) [Python](python-api.md#python_joystick) [MATLAB](matlab-api.md#matlab_joystick) [ROS](ros-api.md)
+%tab-component
+
+%tab "C"
 
 ```c
 #include <webots/joystick.h>
 
 int wb_joystick_get_pressed_button();
 ```
+
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Joystick.hpp>
+
+namespace webots {
+  class Joystick : public Device {
+    int getPressedButton() const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Joystick
+
+class Joystick (Device):
+    def getPressedButton(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Joystick;
+
+public class Joystick extends Device {
+  public int getPressedButton();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+button = wb_joystick_get_pressed_button()
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/joystick/pressed_button` | `topic` | webots_ros::Int8Stamped | [`Header`](http://docs.ros.org/api/std_msgs/html/msg/Header.html) `header`<br/>`int8 data` |
+
+%tab-end
+
+%end
 
 ##### Description
 
@@ -131,7 +455,9 @@ On macOS, only the first 12 buttons and first 2 axes of the joystick are taken i
 #### `wb_joystick_set_auto_centering_gain`
 #### `wb_joystick_set_resistance_gain`
 
-[C++](cpp-api.md#cpp_joystick) [Java](java-api.md#java_joystick) [Python](python-api.md#python_joystick) [MATLAB](matlab-api.md#matlab_joystick) [ROS](ros-api.md)
+%tab-component
+
+%tab "C"
 
 ```c
 #include <webots/joystick.h>
@@ -141,6 +467,81 @@ void wb_joystick_set_constant_force_duration(double duration);
 void wb_joystick_set_auto_centering_gain(double gain);
 void wb_joystick_set_resistance_gain(double gain);
 ```
+
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Joystick.hpp>
+
+namespace webots {
+  class Joystick : public Device {
+    void setConstantForce(int level);
+    void setConstantForceDuration(double duration);
+    void setAutoCenteringGain(double gain);
+    void setResistanceGain(double gain);
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Joystick
+
+class Joystick (Device):
+    def setConstantForce(self, level):
+    def setConstantForceDuration(self, duration):
+    def setAutoCenteringGain(self, gain):
+    def setResistanceGain(self, gain):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Joystick;
+
+public class Joystick extends Device {
+  public void setConstantForce(int level);
+  public void setConstantForceDuration(double duration);
+  public void setAutoCenteringGain(double gain);
+  public void setResistanceGain(double gain);
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+wb_joystick_set_constant_force(level)
+wb_joystick_set_constant_force_duration(duration)
+wb_joystick_set_auto_centering_gain(gain)
+wb_joystick_set_resistance_gain(gain)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/joystick/set_constant_force` | `service` | [`webots_ros::set_int`](ros-api.md#common-services) | |
+| `/joystick/set_constant_force_duration` | `service` | [`webots_ros::set_float`](ros-api.md#common-services) | |
+| `/joystick/set_auto_centering_gain` | `service` | [`webots_ros::set_float`](ros-api.md#common-services) | |
+| `/joystick/set_resistance_gain` | `service` | [`webots_ros::set_float`](ros-api.md#common-services) | |
+
+%tab-end
+
+%end
 
 ##### Description
 

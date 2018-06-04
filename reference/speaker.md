@@ -16,13 +16,76 @@ It can be used to play sounds and perform text-to-speech from the controller API
 
 #### `wb_speaker_play_sound`
 
-[C++](cpp-api.md#cpp_speaker) [Java](java-api.md#java_speaker) [Python](python-api.md#python_speaker) [MATLAB](matlab-api.md#matlab_speaker) [ROS](ros-api.md)
+%tab-component
+
+%tab "C"
 
 ```c
 #include <webots/speaker.h>
 
 void wb_speaker_play_sound(WbDeviceTag left, WbDeviceTag right, const char *sound, double volume, double pitch, double balance, bool loop);
 ```
+
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Speaker.hpp>
+
+namespace webots {
+  class Speaker : public Device {
+    static void playSound(Speaker *left, Speaker *right, const std::string &sound, double volume, double pitch, double balance, bool loop);
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Speaker
+
+class Speaker (Device):
+    @staticmethod
+    def playSound(left, right, sound, volume, pitch, balance, loop):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Speaker;
+
+public class Speaker extends Device {
+  public static void playSound(Speaker left, Speaker right, String sound, double volume, double pitch, double balance, boolean loop);
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+wb_speaker_play_sound(left, right, sound, volume, pitch, balance, loop)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/play_sound` | `service` | `webots_ros::speaker_play_sound` | `string sound`<br/>`float64 volume`<br/>`float64 pitch`<br/>`float64 balance`<br/>`int8 loop`<br/>`---`<br/>`int8 success` |
+
+%tab-end
+
+%end
 
 ##### Description
 
@@ -56,13 +119,75 @@ If not found there and if the robot is a PROTO, it will be searched relatively t
 
 #### `wb_speaker_stop`
 
-[C++](cpp-api.md#cpp_speaker) [Java](java-api.md#java_speaker) [Python](python-api.md#python_speaker) [MATLAB](matlab-api.md#matlab_speaker) [ROS](ros-api.md)
+%tab-component
+
+%tab "C"
 
 ```c
 #include <webots/speaker.h>
 
 void wb_speaker_stop(WbDeviceTag tag, const char *sound);
 ```
+
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Speaker.hpp>
+
+namespace webots {
+  class Speaker : public Device {
+    void stop(const std::string &sound);
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Speaker
+
+class Speaker (Device):
+    def stop(self, sound):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Speaker;
+
+public class Speaker extends Device {
+  public void stop(const std::string &sound);
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+wb_speaker_stop(tag, sound)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/stop` | `service` | [`webots_ros::set_string`](ros-api.md#common-services) | |
+
+%tab-end
+
+%end
 
 ##### Description
 
@@ -82,7 +207,9 @@ It is possible to stop all the sounds currently playing in a speaker by setting 
 #### `wb_speaker_get_language`
 #### `wb_speaker_speak`
 
-[C++](cpp-api.md#cpp_speaker) [Java](java-api.md#java_speaker) [Python](python-api.md#python_speaker) [MATLAB](matlab-api.md#matlab_speaker) [ROS](ros-api.md)
+%tab-component
+
+%tab "C"
 
 ```c
 #include <webots/speaker.h>
@@ -93,6 +220,86 @@ const char *wb_speaker_get_engine(WbDeviceTag tag);
 const char *wb_speaker_get_language(WbDeviceTag tag);
 void wb_speaker_speak(WbDeviceTag tag, const char *text, double volume);
 ```
+
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Speaker.hpp>
+
+namespace webots {
+  class Speaker : public Device {
+    std::string getEngine();
+    std::string getLanguage();
+    bool setEngine(const std::string &engine);
+    bool setLanguage(const std::string &language);
+    void speak(const std::string &text, double volume);
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Speaker
+
+class Speaker (Device):
+    def getEngine(self):
+    def getLanguage(self):
+    def setEngine(self, engine):
+    def setLanguage(self, language):
+    def speak(self, text, volume):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Speaker;
+
+public class Speaker extends Device {
+  public std::string getLanguage();
+  public std::string getEngine();
+  public boolean setEngine(const std::string &engine);
+  public boolean setLanguage(const std::string &language);
+  public void speak(const std::string &text, double volume);
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+engine = wb_speaker_get_engine(tag)
+language = wb_speaker_get_language(tag)
+success = wb_speaker_set_engine(tag, engine)
+success = wb_speaker_set_language(tag, language)
+wb_speaker_speak(tag, text, volume)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/get_engine` | `service` | [`webots_ros::get_string`](ros-api.md#common-services) | |
+| `/<device_name>/get_language` | `service` | [`webots_ros::get_string`](ros-api.md#common-services) | |
+| `/<device_name>/set_engine` | `service` | [`webots_ros::set_string`](ros-api.md#common-services) | |
+| `/<device_name>/set_language` | `service` | [`webots_ros::set_string`](ros-api.md#common-services) | |
+| `/<device_name>/speak` | `service` | `webots_ros::speaker\speak` | `string text`<br/>`float64 volume`<br/>`---`<br/>`int8 success`<br/> |
+
+%tab-end
+
+%end
 
 ##### Description
 

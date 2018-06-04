@@ -240,3 +240,46 @@ showdown.extension('wbRobotComponent', function() {
     }
   ];
 });
+
+// This extension allows to add a tab component with custom tab labels.
+// Example:
+//
+//     %tab-component
+//     %tab "Title 1"
+//     |                        |
+//     |------------------------|
+//     | It could be a table... |
+//     %tab-end
+//     %tab "Title 2"
+//     ```java
+//     // It could be code...
+//     ```
+//     %tab-end
+//     %tab "Title 3"
+//     > It could be notes...
+//     %tab-end
+//     %end
+//
+showdown.extension('wbTabComponent', function() {
+  var tabComponentCounter = 0;
+  return [
+    {
+      type: 'lang',
+      filter: function(text, converter, options) {
+        text = text.replace(/%tab-component([^]+?)%end/gi, function(match, content) {
+          tabComponentCounter++;
+          var buttons = '';
+          var first = true;
+          var subText = content.replace(/%tab\s+"([^]+?)"([^]+?)%tab-end/gi, function(subMatch, title, subContent) {
+            buttons += '<button name="' + title + '" class="tab-links' + (first ? ' active' : '') + '" onclick="openTab(event, \'' + title + '\')">' + title + '</button>';
+            var result = '<div class="tab-content" name="' + title + '"' + (first ? ' style="display:block"' : '') + ' tabid="' + tabComponentCounter + '">' + converter.makeHtml(subContent) + '</div>';
+            first = false;
+            return result;
+          });
+          return '<div class="tab-component" tabid="' + tabComponentCounter + '">' + buttons + '</div>' + subText;
+        });
+        return text;
+      }
+    }
+  ];
+});

@@ -148,7 +148,7 @@ body {
   padding: 10px;
 }
 .webots-doc #accordion li a.active {
-  background: #333;
+  background: #444;
   color: white;
 }
 .webots-doc #accordion li a:hover {
@@ -242,6 +242,7 @@ body {
   font-family: "Roboto Mono", monospace;
   white-space: pre;
   word-wrap: break-word;
+  color: inherit; /* to bypass the main.css rule. */
 }
 .webots-doc pre > code {
   word-wrap: normal;
@@ -258,6 +259,9 @@ body {
 }
 .webots-doc code > a {
   font-family: "Roboto Mono", monospace;
+}
+.webots-doc a > code {
+  white-space: normal;
 }
 .webots-doc b, .webots-doc strong {
   color: #333;
@@ -325,23 +329,6 @@ body {
   color: black;
   font-size: 15px;
   font-family: "Roboto Mono", monospace;
-}
-.webots-doc .tag-container {
-  text-align: right;
-  margin-bottom: -3px
-}
-.webots-doc .tag {
-  padding: 4px;
-  color: #ffffff;
-  padding: 6px 18px;
-  background-color: #2f93c1;
-  margin: 2px;
-}
-.webots-doc .tag:hover {
-  color: white;
-  text-decoration: none;
-  outline: 0;
-  background: #70b6f5;
 }
 .webots-doc figcaption:hover .anchor-link,
 .webots-doc h1:hover .anchor-link,
@@ -649,6 +636,64 @@ body {
 }
 .robot-component .motor-slider:focus::-ms-fill-upper {
   background: #ddd;
+}
+
+.tab-component {
+  overflow: hidden;
+  margin-top: 19px;
+  background-color: #444;
+}
+.tab-component button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 6px 18px;
+  margin: 5px 5px;
+  transition: 0.2s;
+  color: white;
+  background: #777;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+.tab-component button:hover {
+  background-color: #999;
+}
+.tab-component button.active {
+  background-color: lightblue;
+  border-color: transparent;
+  color: black;
+}
+.tab-content {
+  display: none;
+  padding: 0;
+  border-top: none;
+  -webkit-animation: fadeEffect 1s;
+  animation: fadeEffect 1s;
+}
+.tab-content > table {
+  width: 100% !important;
+  margin: 0 !important;
+  background-color: #f1f1f1;
+}
+.tab-content > table br {
+  line-height: 28px;
+}
+.tab-content > blockquote {
+  margin: 0;
+  border: 0;
+}
+.tab-content > pre {
+  margin: 0;
+}
+@-webkit-keyframes fadeEffect {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes fadeEffect {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 /*---------------------*

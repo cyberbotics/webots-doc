@@ -40,7 +40,9 @@ If the `color` list contains a single color, then the LED is monochromatic, and 
 #### `wb_led_set`
 #### `wb_led_get`
 
-[C++](cpp-api.md#cpp_led) [Java](java-api.md#java_led) [Python](python-api.md#python_led) [MATLAB](matlab-api.md#matlab_led) [ROS](ros-api.md)
+%tab-component
+
+%tab "C"
 
 ```c
 #include <webots/led.h>
@@ -48,6 +50,68 @@ If the `color` list contains a single color, then the LED is monochromatic, and 
 void wb_led_set(WbDeviceTag tag, int value);
 int wb_led_get(WbDeviceTag tag);
 ```
+
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/LED.hpp>
+
+namespace webots {
+  class LED : public Device {
+    virtual void set(int value);
+    int get() const;
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import LED
+
+class LED (Device):
+    def set(self, state):
+    def get(self):
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.LED;
+
+public class LED extends Device {
+  public void set(int state);
+  public int get();
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+wb_led_set(tag, state)
+state = wb_led_get(tag)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/set_led` | `service` | [`webots_ros::set_int`](ros-api.md#common-services) |
+| `/<device_name>/get_led` | `service` | [`webots_ros::get_int`](ros-api.md#common-services) |
+
+%tab-end
+
+%end
 
 ##### Description
 

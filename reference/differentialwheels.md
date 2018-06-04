@@ -124,9 +124,65 @@ Unlike the "physics" mode, in the "kinematics" mode the gravity and other forces
 
 ### DifferentialWheels Functions
 
+#### Constructor
+
+In `C++`, `Java` and `Python`, the `DifferentialWheels` class inherits from the [Robot](robot.md) class.
+The `DifferentialWheels` class is supposed to be instantiated only once in the controller life-cycle.
+
+%tab-component
+
+%tab "C++"
+
+```cpp
+#include <webots/DifferentialWheels.hpp>
+
+namespace webots {
+  class DifferentialWheels : public Robot {
+    DifferentialWheels();
+    virtual ~DifferentialWheels();
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import DifferentialWheels
+
+class DifferentialWheels (Robot):
+    def __init__(self):
+    def __del__(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.DifferentialWheels;
+
+public class DifferentialWheels extends Robot {
+  public DifferentialWheels();
+  protected void finalize();
+  // ...
+}
+```
+
+%tab-end
+
+%end
+
+---
+
 #### `wb_differential_wheels_set_speed`
 
-[C++](cpp-api.md#cpp_differential_wheels) [Java](java-api.md#java_differential_wheels) [Python](python-api.md#python_differential_wheels) [MATLAB](matlab-api.md#matlab_differential_wheels) [ROS](ros-api.md)
+%tab-component
+
+%tab "C"
 
 ```c
 #include <webots/differential_wheels.h>
@@ -135,6 +191,75 @@ void wb_differential_wheels_set_speed(double left, double right);
 double wb_differential_wheels_get_left_speed();
 double wb_differential_wheels_get_right_speed();
 ```
+
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/DifferentialWheels.hpp>
+
+namespace webots {
+  class DifferentialWheels : public Robot {
+    virtual void setSpeed(double left, double right);
+    double getLeftSpeed() const;
+    double getRightSpeed() const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import DifferentialWheels
+
+class DifferentialWheels (Robot):
+    def setSpeed(self, left, right):
+    def getLeftSpeed(self):
+    def getRightSpeed(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.DifferentialWheels;
+
+public class DifferentialWheels extends Robot {
+  public void setSpeed(double left, double right);
+  public double getLeftSpeed();
+  public double getRightSpeed();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+public void setSpeed(double left, double right);
+public double getLeftSpeed();
+public double getRightSpeed();
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/differential_wheels/set_speed` | `service` | [`webots_ros::set_float_array`](ros-api.md#common-services) | |
+| `/differential_wheels/subscribe_twist_commands` | `service` | `webots_ros::differential_wheels_subscribe_twist_commands` | `uint8 subscribe`<br/>`---`<br/>`int8 success`<br/><br/>Note: this `service` is used to subscribe to a `topic` called '/differential_wheels/twist_commands' which should send [`geometry_msgs::Twist`](http://docs.ros.org/api/geometry_msgs/html/msg/Twist.html) commands. |
+
+%tab-end
+
+%end
 
 ##### Description
 
@@ -156,7 +281,9 @@ The `wb_differential_wheels_get_left_speed` and `wb_differential_wheels_get_righ
 #### `wb_differential_wheels_disable_encoders`
 #### `wb_differential_wheels_get_encoders_sampling_period`
 
-[C++](cpp-api.md#cpp_differential_wheels) [Java](java-api.md#java_differential_wheels) [Python](python-api.md#python_differential_wheels) [MATLAB](matlab-api.md#matlab_differential_wheels) [ROS](ros-api.md)
+%tab-component
+
+%tab "C"
 
 ```c
 #include <webots/differential_wheels.h>
@@ -165,6 +292,75 @@ void wb_differential_wheels_enable_encoders(int sampling_period);
 void wb_differential_wheels_disable_encoders();
 int wb_differential_wheels_get_encoders_sampling_period(WbDeviceTag tag);
 ```
+
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/DifferentialWheels.hpp>
+
+namespace webots {
+  class DifferentialWheels : public Robot {
+    virtual void enableEncoders(int samplingPeriod);
+    virtual void disableEncoders();
+    int getEncodersSamplingPeriod();
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import DifferentialWheels
+
+class DifferentialWheels (Robot):
+    def enableEncoders(self, samplingPeriod):
+    def disableEncoders(self):
+    def getEncodersSamplingPeriod(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.DifferentialWheels;
+
+public class DifferentialWheels extends Robot {
+  public void enableEncoders(int samplingPeriod);
+  public void disableEncoders();
+  public int getEncodersSamplingPeriod();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+wb_differential_wheels_enable_encoders(sampling_period)
+wb_differential_wheels_disable_encoders()
+period = wb_differential_wheels_get_encoders_sampling_period()
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/differential_wheels_encoders/enable` | `service` | [`webots_ros::set_int`](ros-api.md#common-services) | |
+| `/differential_wheels_encoders/get_sampling_period` | `service` | [`webots_ros::get_int`](ros-api.md#common-services) | |
+
+%tab-end
+
+%end
 
 ##### Description
 
@@ -189,7 +385,9 @@ Note that the first encoders values will be available only after the first sampl
 #### `wb_differential_wheels_get_right_encoder`
 #### `wb_differential_wheels_set_encoders`
 
-[C++](cpp-api.md#cpp_differential_wheels) [Java](java-api.md#java_differential_wheels) [Python](python-api.md#python_differential_wheels) [MATLAB](matlab-api.md#matlab_differential_wheels) [ROS](ros-api.md)
+%tab-component
+
+%tab "C"
 
 ```c
 #include <webots/differential_wheels.h>
@@ -198,6 +396,75 @@ double wb_differential_wheels_get_left_encoder();
 double wb_differential_wheels_get_right_encoder();
 void wb_differential_wheels_set_encoders(double left, double right);
 ```
+
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/DifferentialWheels.hpp>
+
+namespace webots {
+  class DifferentialWheels : public Robot {
+    double getLeftEncoder() const;
+    double getRightEncoder() const;
+    virtual void setEncoders(double left, double right);
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import DifferentialWheels
+
+class DifferentialWheels (Robot):
+    def getLeftEncoder(self):
+    def getRightEncoder(self):
+    def setEncoders(self, left, right):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.DifferentialWheels;
+
+public class DifferentialWheels extends Robot {
+  public double getLeftEncoder();
+  public double getRightEncoder();
+  public void setEncoders(double left, double right);
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+left = wb_differential_wheels_get_left_encoder()
+right = wb_differential_wheels_get_right_encoder()
+wb_differential_wheels_set_encoders(left, right)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/differential_wheels/lwheel` and `/differential_wheels/rwheel` | `topic` | `webots_ros::Float64Stamped` | [`Header`](http://docs.ros.org/api/std_msgs/html/msg/Header.html) `header`<br/>`float64 data` |
+| `/differential_wheels/set_encoders` | `service` | [`webots_ros::set_float_array`](ros-api.md#common-services) | |
+
+%tab-end
+
+%end
 
 ##### Description
 
@@ -212,13 +479,75 @@ Setting the encoders' values will not make the wheels rotate to reach the specif
 
 #### `wb_differential_wheels_get_max_speed`
 
-[C++](cpp-api.md#cpp_differential_wheels) [Java](java-api.md#java_differential_wheels) [Python](python-api.md#python_differential_wheels) [MATLAB](matlab-api.md#matlab_differential_wheels) [ROS](ros-api.md)
+%tab-component
+
+%tab "C"
 
 ```c
 #include <webots/differential_wheels.h>
 
 double wb_differential_wheels_get_max_speed();
 ```
+
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/DifferentialWheels.hpp>
+
+namespace webots {
+  class DifferentialWheels : public Robot {
+    double getMaxSpeed() const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import DifferentialWheels
+
+class DifferentialWheels (Robot):
+    def getMaxSpeed(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.DifferentialWheels;
+
+public class DifferentialWheels extends Robot {
+  public double getMaxSpeed();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+max = wb_differential_wheels_get_max_speed()
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/differential_wheels/get_max_speed` | `service` | [`webots_ros::get_float`](ros-api.md#common-services) | |
+
+%tab-end
+
+%end
 
 ##### Description
 
@@ -230,13 +559,75 @@ The `wb_differential_wheels_get_max_speed` function allows the user to get the v
 
 #### `wb_differential_wheels_get_speed_unit`
 
-[C++](cpp-api.md#cpp_differential_wheels) [Java](java-api.md#java_differential_wheels) [Python](python-api.md#python_differential_wheels) [MATLAB](matlab-api.md#matlab_differential_wheels) [ROS](ros-api.md)
+%tab-component
+
+%tab "C"
 
 ```c
 #include <webots/differential_wheels.h>
 
 double wb_differential_wheels_get_speed_unit();
 ```
+
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/DifferentialWheels.hpp>
+
+namespace webots {
+  class DifferentialWheels : public Robot {
+    double getSpeedUnit() const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import DifferentialWheels
+
+class DifferentialWheels (Robot):
+    def getSpeedUnit(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.DifferentialWheels;
+
+public class DifferentialWheels extends Robot {
+  public double getSpeedUnit();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+unit = wb_differential_wheels_get_speed_unit()
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/differential_wheels/get_speed_unit` | `service` | [`webots_ros::get_float`](ros-api.md#common-services) | |
+
+%tab-end
+
+%end
 
 ##### Description
 

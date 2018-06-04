@@ -6,9 +6,13 @@ It doesn't have any corresponding Node.
 > **Note** [C++, Python, Java]: In C++, Python and Java, the mouse functions are in a dedicated class called `Mouse`.
 In order to get the `Mouse` instance, you should call the `Robot.getMouse` function.
 
-#### WbMouseState
+### WbMouseState
 
-The state of a mouse is defined by the following structure:
+The state of a mouse is defined like this:
+
+%tab-component
+
+%tab "C"
 
 ```c
 typedef struct {
@@ -22,16 +26,88 @@ typedef struct {
   double z;
 } WbMouseState;
 ```
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Mouse.hpp>
+
+namespace webots {
+  typedef struct {
+    // mouse buttons state
+    bool left;
+    bool middle;
+    bool right;
+    // mouse 3D position
+    double x;
+    double y;
+    double z;
+  } MouseState;
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import MouseState
+
+class MouseState:
+    @property
+    left, middle, right  # mouse button state
+    @property
+    x, y, z  # mouse 3D position
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.MouseState;
+
+public class MouseState {
+  public double getLeft();
+  public double getMiddle();
+  public double getRight();
+  public double getX();
+  public double getY();
+  public double getZ();
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+structs.WbMouseState.members = struct(
+  'left', 'int8',
+  'middle', 'int8',
+  'right', 'int8',
+  'x', 'double',
+  'y', 'double',
+  'z', 'double'
+);
+```
+
+%tab-end
+
+%tab "ROS"
+
+%tab-end
+
+> `MouseState` data is directly accessible from the related [`/mouse/get_state` service](#wb_mouse_enable).
+
+%end
 
 The `left`, `middle` and `right` fields are matching respectively with the left, middle and right buttons of the computer mouse.
 A `true` state means the button is pressed while a `false` state means the button is released.
 
 The `x`, `y` and `z` fields are indicating the 3D coordinate where the mouse is pointing in the 3D window.
 These values may be `NaN` if not applicable, for example when the mouse is pointing to the scene background.
-
-> **Note** [C++]: In C++ the name of the structure is `MouseState`.
-
-> **Note** [Java/Python]: In Java and Python, the structure is replaced by a class called `MouseState`.
 
 ### Mouse Functions
 
@@ -40,7 +116,9 @@ These values may be `NaN` if not applicable, for example when the mouse is point
 #### `wb_mouse_get_sampling_period`
 #### `wb_mouse_get_key`
 
-[C++](cpp-api.md#cpp_mouse) [Java](java-api.md#java_mouse) [Python](python-api.md#python_mouse) [MATLAB](matlab-api.md#matlab_mouse) [ROS](ros-api.md)
+%tab-component
+
+%tab "C"
 
 ```c
 #include <webots/mouse.h>
@@ -50,6 +128,78 @@ void wb_mouse_disable();
 int wb_mouse_get_sampling_period();
 WbMouseState wb_mouse_get_state();
 ```
+
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Mouse.hpp>
+
+namespace webots {
+  class Mouse {
+    virtual void enable(int samplingPeriod);
+    virtual void disable();
+    int getSamplingPeriod();
+    MouseState getState() const;
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Mouse
+
+class Mouse:
+    def enable(self, samplingPeriod):
+    def disable(self):
+    def getSamplingPeriod(self):
+    def getState(self):
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Mouse;
+
+public class Mouse {
+  public void enable(int samplingPeriod);
+  public void disable();
+  public int getSamplingPeriod();
+  public MouseState getState();
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+wb_mouse_enable(sampling_period)
+wb_mouse_disable()
+period = wb_mouse_get_sampling_period()
+state = wb_mouse_get_state()
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/mouse/key` | `topic` | webots_ros::Int32Stamped | [`Header`](http://docs.ros.org/api/std_msgs/html/msg/Header.html) `header`<br/>`int32 data` |
+| `/mouse/enable` | `service` | [`webots_ros::set_int`](ros-api.md#common-services) | |
+| `/mouse/get_sampling_period` | `service` | [`webots_ros::get_int`](ros-api.md#common-services) | |
+| `/mouse/get_state` | `service` | `webots_ros::sensor_get_state` | `uint8 ask`<br/>`---`<br/>`uint8 x`<br/>`uint8 y`<br/>`uint8 z`<br/>`float64 x`<br/>`float64 y`<br/>`float64 z` |
+
+%tab-end
+
+%end
 
 ##### Description
 

@@ -7,6 +7,7 @@
 /* exported resetRobotComponent */
 /* exported toggleDeviceComponent */
 /* exported highlightX3DElement */
+/* exported openTab */
 
 var handle;
 
@@ -446,7 +447,7 @@ function populateViewDiv(mdContent) {
   // markdown to html
   window.mermaidGraphCounter = 0;
   window.mermaidGraphs = {};
-  var converter = new showdown.Converter({tables: 'True', extensions: ['wbRobotComponent', 'wbChart', 'wbVariables', 'wbAPI', 'wbFigure', 'wbAnchors', 'wbIllustratedSection', 'youtube']});
+  var converter = new showdown.Converter({tables: 'True', extensions: ['wbTabComponent', 'wbRobotComponent', 'wbChart', 'wbVariables', 'wbAPI', 'wbFigure', 'wbAnchors', 'wbIllustratedSection', 'youtube']});
   var html = converter.makeHtml(mdContent);
 
   // console.log('HTML content: \n\n')
@@ -461,7 +462,6 @@ function populateViewDiv(mdContent) {
   collapseMovies(view);
 
   applyAnchorIcons(view);
-  applyOOTags(view);
   highlightCode(view);
 
   updateSelection();
@@ -788,6 +788,26 @@ function createRobotComponent(view) {
   }
 }
 
+// Open a tab component tab
+function openTab(evt, name) {
+  var tabcomponent = evt.target.parentNode;
+  var tabID = tabcomponent.getAttribute('tabid');
+
+  var tabcontents = tabcomponent.parentNode.querySelectorAll('.tab-content[tabid="' + tabID + '"]');
+  for (var i = 0; i < tabcontents.length; i++)
+    tabcontents[i].style.display = 'none';
+
+  var tablinks = tabcomponent.querySelectorAll('.tab-links');
+  for (var j = 0; j < tablinks.length; j++)
+    tablinks[j].classList.remove('active');
+
+  var tabcontent = tabcomponent.parentNode.querySelectorAll('.tab-content[tabid="' + tabID + '"][name="' + name + '"]')[0];
+  tabcontent.style.display = 'block';
+
+  var tablink = tabcomponent.querySelectorAll('.tab-links[name="' + name + '"]')[0];
+  tablink.classList.add('active');
+}
+
 function renderGraphs() {
   for (var id in window.mermaidGraphs) {
     window.mermaidAPI.render(id, window.mermaidGraphs[id], function(svgCode, bindFunctions) {
@@ -824,18 +844,6 @@ function applyAnchorIcons(view) {
       a.classList.add('anchor-link');
       a.appendChild(span);
       el.insertBefore(a, el.firstChild);
-    }
-  }
-}
-
-function applyOOTags(view) {
-  var as = view.querySelectorAll('a');
-  for (var i = 0; i < as.length; i++) {
-    var a = as[i];
-    if (['C++', 'Java', 'Python', 'ROS', 'MATLAB'].includes(a.innerText)) {
-      a.classList.add('tag');
-      if (a.parentNode.tagName.toLowerCase() === 'p' && a.parentNode.classList.length === 0)
-        a.parentNode.classList.add('tag-container');
     }
   }
 }

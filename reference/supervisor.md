@@ -3039,7 +3039,7 @@ class Field:
 import com.cyberbotics.webots.controller.Field;
 
 public class Field {
-  public void insertMFBool(int index, bool value);
+  public void insertMFBool(int index, boolean value);
   public void insertMFInt32(int index, int value);
   public void insertMFFloat(int index, double value);
   public void insertMFVec2f(int index, double values[2]);

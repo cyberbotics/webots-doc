@@ -762,7 +762,7 @@ class Car (Driver):
 import com.cyberbotics.webots.controller.Car;
 
 public class Car extends Driver {
-  public void enableIndicatorAutoDisabling(bool enable);
+  public void enableIndicatorAutoDisabling(boolean enable);
   // ...
 }
 ```

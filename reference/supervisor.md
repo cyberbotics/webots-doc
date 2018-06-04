@@ -968,7 +968,7 @@ public class Node {
 
 ```matlab
 contact_point = wb_supervisor_node_get_contact_point(node, index)
-number_of_contacts = wb_supervisor_node_get_number_of_contact_points(index)
+number_of_contacts = wb_supervisor_node_get_number_of_contact_points(node)
 ```
 
 %tab-end

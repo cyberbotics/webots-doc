@@ -90,7 +90,7 @@ namespace webots {
   class Receiver : public Device {
     virtual void enable(int sampling_period);
     virtual void disable();
-    int getSamplingPeriod();
+    int getSamplingPeriod() const;
     // ...
   }
 }

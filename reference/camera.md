@@ -931,7 +931,7 @@ public class Camera extends Device {
 %tab "MATLAB"
 
 ```matlab
-wb_camera_save_image(tag, 'filename', quality)
+success = wb_camera_save_image(tag, 'filename', quality)
 ```
 
 %tab-end
@@ -1039,7 +1039,7 @@ public class Camera extends Device {
   public void recognitionDisable();
   public int getRecognitionSamplingPeriod();
   public int getRecognitionNumberOfObjects();
-  public CameraRecognitionObject getRecognitionObjects();
+  public CameraRecognitionObject[] getRecognitionObjects();
   // ...
 }
 ```
@@ -1049,12 +1049,12 @@ public class Camera extends Device {
 %tab "MATLAB"
 
 ```matlab
-wb_camera_has_recognition(tag)
+value = wb_camera_has_recognition(tag)
 wb_camera_recognition_disable(tag)
 wb_camera_recognition_enable(tag, sampling_period)
-wb_camera_recognition_get_number_of_objects(tag)
-wb_camera_recognition_get_objects(tag)
-wb_camera_recognition_get_sampling_period(tag)
+number = wb_camera_recognition_get_number_of_objects(tag)
+objects = wb_camera_recognition_get_objects(tag)
+period = wb_camera_recognition_get_sampling_period(tag)
 ```
 
 %tab-end

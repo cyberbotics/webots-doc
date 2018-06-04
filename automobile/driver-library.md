@@ -565,8 +565,8 @@ public class Driver {
 
   public void setIndicator(int state);
   public int getIndicator();
-  public void setHazardFlashers(bool state);
-  public bool getHazardFlashers();
+  public void setHazardFlashers(boolean state);
+  public boolean getHazardFlashers();
   // ...
 }
 ```
@@ -667,10 +667,10 @@ class Driver:
 import com.cyberbotics.webots.controller.Driver;
 
 public class Driver {
-  public void setDippedBeams(bool state);
-  public void setAntifogLights(bool state);
-  public bool getDippedBeams();
-  public bool getAntifogLights();
+  public void setDippedBeams(boolean state);
+  public void setAntifogLights(boolean state);
+  public boolean getDippedBeams();
+  public boolean getAntifogLights();
   // ...
 }
 ```

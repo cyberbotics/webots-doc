@@ -63,7 +63,7 @@ namespace webots {
   class Gyro : public Device {
     virtual void enable(int samplingPeriod);
     virtual void disable();
-    int getSamplingPeriod();
+    int getSamplingPeriod() const;
     const double *getValues() const;
     // ...
   }
@@ -95,7 +95,7 @@ import com.cyberbotics.webots.controller.Gyro;
 public class Gyro extends Device {
   public void enable(int samplingPeriod);
   public void disable();
-  public int getSamplingPeriod();
+  public int getSamplingPeriod() const;
   public double[] getValues();
   // ...
 }

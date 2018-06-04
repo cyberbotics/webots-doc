@@ -149,7 +149,7 @@ namespace webots {
   class LightSensor : public Device {
     virtual void enable(int samplingPeriod);
     virtual void disable();
-    int getSamplingPeriod();
+    int getSamplingPeriod() const;
     double getValue() const;
   }
 }
@@ -179,7 +179,7 @@ import com.cyberbotics.webots.controller.LightSensor;
 public class LightSensor extends Device {
   public void enable(int samplingPeriod);
   public void disable();
-  public int getSamplingPeriod();
+  public int getSamplingPeriod() const;
   public double getValue();
 }
 ```

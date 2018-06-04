@@ -197,7 +197,7 @@ namespace webots {
   class DistanceSensor : public Device {
     virtual void enable(int samplingPeriod);
     virtual void disable();
-    int getSamplingPeriod();
+    int getSamplingPeriod() const;
     double getValue() const;
     // ...
   }
@@ -229,7 +229,7 @@ import com.cyberbotics.webots.controller.DistanceSensor;
 public class DistanceSensor extends Device {
   public void enable(int samplingPeriod);
   public void disable();
-  public int getSamplingPeriod();
+  public int getSamplingPeriod() const;
   public double getValue();
   // ...
 }

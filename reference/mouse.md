@@ -140,7 +140,7 @@ namespace webots {
   class Mouse {
     virtual void enable(int samplingPeriod);
     virtual void disable();
-    int getSamplingPeriod();
+    int getSamplingPeriod() const;
     MouseState getState() const;
   }
 }
@@ -170,7 +170,7 @@ import com.cyberbotics.webots.controller.Mouse;
 public class Mouse {
   public void enable(int samplingPeriod);
   public void disable();
-  public int getSamplingPeriod();
+  public int getSamplingPeriod() const;
   public MouseState getState();
 }
 ```

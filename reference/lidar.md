@@ -262,7 +262,7 @@ import com.cyberbotics.webots.controller.Lidar;
 public class Lidar extends Device {
   public void enable(int samplingPeriod);
   public void disable();
-  public int getSamplingPeriod();
+  public int getSamplingPeriod() const;
   // ...
 }
 ```

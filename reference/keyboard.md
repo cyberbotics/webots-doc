@@ -57,7 +57,7 @@ namespace webots {
 
     virtual void enable(int samplingPeriod);
     virtual void disable();
-    int getSamplingPeriod();
+    int getSamplingPeriod() const;
     int getKey() const;
   }
 }
@@ -97,7 +97,7 @@ public class Keyboard extends Device {
 
   public void enable(int samplingPeriod);
   public void disable();
-  public int getSamplingPeriod();
+  public int getSamplingPeriod() const;
   public int getKey();
 }
 ```

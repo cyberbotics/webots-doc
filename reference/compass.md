@@ -65,7 +65,7 @@ namespace webots {
   class Compass : public Device {
     virtual void enable(int samplingPeriod);
     virtual void disable();
-    int getSamplingPeriod();
+    int getSamplingPeriod() const;
     const double *getValues() const;
     // ...
   }
@@ -97,7 +97,7 @@ import com.cyberbotics.webots.controller.Compass;
 public class Compass extends Device {
   public void enable(int samplingPeriod);
   public void disable();
-  public int getSamplingPeriod();
+  public int getSamplingPeriod() const;
   public double[] getValues();
   // ...
 }

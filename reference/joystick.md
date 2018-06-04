@@ -39,7 +39,7 @@ namespace webots {
   class Joystick : public Device {
     virtual void enable(int samplingPeriod);
     virtual void disable();
-    int getSamplingPeriod();
+    int getSamplingPeriod() const;
     // ...
   }
 }
@@ -69,7 +69,7 @@ import com.cyberbotics.webots.controller.Joystick;
 public class Joystick extends Device {
   public void enable(int samplingPeriod);
   public void disable();
-  public int getSamplingPeriod();
+  public int getSamplingPeriod() const;
   // ...
 }
 ```

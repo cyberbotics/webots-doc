@@ -224,7 +224,7 @@ namespace webots {
   class Radar : public Device {
     virtual void enable(int samplingPeriod);
     virtual void disable();
-    int getSamplingPeriod();
+    int getSamplingPeriod() const;
     // ...
   }
 }
@@ -254,7 +254,7 @@ import com.cyberbotics.webots.controller.Radar;
 public class Radar extends Device {
   public void enable(int samplingPeriod);
   public void disable();
-  public int getSamplingPeriod();
+  public int getSamplingPeriod() const;
   // ...
 }
 ```

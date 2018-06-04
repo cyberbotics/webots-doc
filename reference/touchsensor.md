@@ -139,7 +139,7 @@ namespace webots {
   class TouchSensor : public Device {
     virtual void enable(int samplingPeriod);
     virtual void disable();
-    int getSamplingPeriod();
+    int getSamplingPeriod() const;
     double getValue() const;
     const double *getValues() const;
     // ...
@@ -173,7 +173,7 @@ import com.cyberbotics.webots.controller.TouchSensor;
 public class TouchSensor extends Device 
   public void enable(int samplingPeriod);
   public void disable();
-  public int getSamplingPeriod();
+  public int getSamplingPeriod() const;
   public double getValue();
   public double[] getValues();
   // ...

@@ -77,7 +77,7 @@ namespace webots {
   class GPS : public Device {
     virtual void enable(int samplingPeriod);
     virtual void disable();
-    int getSamplingPeriod();
+    int getSamplingPeriod() const;
     const double *getValues() const;
     const double getSpeed() const;
     // ...
@@ -111,7 +111,7 @@ import com.cyberbotics.webots.controller.GPS;
 public class GPS extends Device {
   public void enable(int samplingPeriod);
   public void disable();
-  public int getSamplingPeriod();
+  public int getSamplingPeriod() const;
   public double[] getValues();
   public double getSpeed();
   // ...

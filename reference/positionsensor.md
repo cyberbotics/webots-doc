@@ -54,7 +54,7 @@ namespace webots {
     enum {ANGULAR, LINEAR};
     virtual void enable(int samplingPeriod);
     virtual void disable();
-    int getSamplingPeriod();
+    int getSamplingPeriod() const;
     double getValue() const;
     int getType() const;
   }
@@ -88,7 +88,7 @@ public class PositionSensor extends Device {
   public final static int ANGULAR, LINEAR;
   public void enable(int samplingPeriod);
   public void disable();
-  public int getSamplingPeriod();
+  public int getSamplingPeriod() const;
   public double getValue();
   public int getType();
 }

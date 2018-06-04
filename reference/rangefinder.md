@@ -123,7 +123,7 @@ namespace webots {
   class RangeFinder : public Device {
     virtual void enable(int samplingPeriod);
     virtual void disable();
-    int getSamplingPeriod();
+    int getSamplingPeriod() const;
     // ...
   }
 }
@@ -153,7 +153,7 @@ import com.cyberbotics.webots.controller.RangeFinder;
 public class RangeFinder extends Device {
   public void enable(int samplingPeriod);
   public void disable();
-  public int getSamplingPeriod();
+  public int getSamplingPeriod() const;
   // ...
 }
 ```

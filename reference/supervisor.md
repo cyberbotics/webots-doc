@@ -2800,7 +2800,7 @@ void wb_supervisor_field_set_mf_string(WbFieldRef field, int index, const char *
 %tab "C++"
 
 ```cpp
-#include <webots/Supervisor.hpp>
+#include <webots/Field.hpp>
 
 namespace webots {
   class Field {

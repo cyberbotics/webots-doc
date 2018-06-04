@@ -482,7 +482,7 @@ wb_camera_set_focal_distance(tag, focal_distance)
 | name | service/topic | data type | data type definition |
 | --- | --- | --- | --- |
 | `/<device_name>/get_focus_info` | `service` | `webots_ros::camera_get_focus_info` | `uint8 ask`<br/>---<br/>`float64 focalLength`<br/>`float64 focalDistance`<br/>`float64 maxFocalDistance`<br/>`float64 minFocalDistance` |
-| `/<device_name>/set_focal_distance` | `service` | `webots_ros::set_float` | |
+| `/<device_name>/set_focal_distance` | `service` | [`webots_ros::set_float`](ros-api.md#common-services) | |
 
 %tab-end
 
@@ -1196,7 +1196,7 @@ structs.WbCameraRecognitionObject.members = struct(
 
 %tab "ROS"
 
-> `CameraRecognitionObject` data is directly accessible from the related [`/<device_name>/recognition_objects` topic](#wb_camera_recognition_get_objects).
+> `CameraRecognitionObject` data is directly accessible from the related [`/<device_name>/recognition_objects`](#wb_camera_recognition_get_objects) topic.
 
 %tab-end
 

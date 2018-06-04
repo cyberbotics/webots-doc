@@ -332,8 +332,8 @@ class Car (Driver):
 import com.cyberbotics.webots.controller.Car;
 
 public class Car extends Driver {
-  public bool getBackwardsLights();
-  public bool getBrakeLights();
+  public boolean getBackwardsLights();
+  public boolean getBrakeLights();
   // ...
 }
 ```
@@ -649,7 +649,7 @@ void wbu_car_enable_limited_slip_differential(bool enable);
 
 namespace webots {
   class Car : public Driver {
-    void enableLimitedSlipDifferential(bool enable);
+    void enableLimitedSlipDifferential(boolean enable);
     // ...
   }
 }
@@ -675,7 +675,7 @@ class Car (Driver):
 import com.cyberbotics.webots.controller.Car;
 
 public class Car extends Driver {
-  public void enableLimitedSlipDifferential(bool enable);
+  public void enableLimitedSlipDifferential(boolean enable);
   // ...
 }
 ```

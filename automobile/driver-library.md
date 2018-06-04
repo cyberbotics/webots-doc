@@ -890,7 +890,7 @@ wbu_control_mode wbu_driver_get_control_mode();
 
 namespace webots {
   class Driver {
-    enum { SPEED, TORQUE };
+    enum {SPEED, TORQUE};
 
     int getControlMode();
     // ...

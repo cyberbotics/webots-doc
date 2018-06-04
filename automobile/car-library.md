@@ -9,12 +9,69 @@ All the functions included in this library are explained below.
 #### `wbu_car_init`
 #### `wbu_car_cleanup`
 
+%tab-component
+
+%tab "C"
+
 ```c
 #include <webots/car.h>
 
 void wbu_car_init();
 void wbu_car_cleanup();
 ```
+
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Car.hpp>
+
+namespace webots {
+  class Car : public Driver {
+    Car();
+    virtual ~Car();
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Car
+
+class Car (Driver):
+    def __init__(self):
+    def __del__(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Car;
+
+public class Car extends Driver {
+  public Car();
+  protected void finalize();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "ROS"
+
+> In ROS, car library initialization and cleanup are implicit.
+
+%tab-end
+
+%end
 
 ##### Description
 
@@ -28,12 +85,87 @@ If you use the [driver](driver-library.md) library it is not needed to call thes
 #### `wbu_car_get_type`
 #### `wbu_car_get_engine_type`
 
+%tab-component
+
+%tab "C"
+
 ```c
 #include <webots/car.h>
 
+typedef enum {
+  WBU_CAR_TRACTION,
+  WBU_CAR_PROPULSION,
+  WBU_CAR_FOUR_BY_FOUR
+} wbu_car_type;
+
 wbu_car_type wbu_car_get_type();
-wbu_car_engine_type wbu_car_get_type();
+wbu_car_engine_type wbu_car_get_engine_type();
 ```
+
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Car.hpp>
+
+namespace webots {
+  class Car : public Driver {
+    enum { TRACTION, PROPULSION, FOUR_BY_FOUR};
+    enum { COMBUTSION_ENGINE, ELECTRIC_ENGINE, PARALLEL_HYBRID_ENGINE, POWER_SPLIT_HYBRID_ENGINE };
+
+    int getType();
+    int getEngineType();
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Car
+
+class Car (Driver):
+    TRACTION, PROPULSION, FOUR_BY_FOUR
+    COMBUTSION_ENGINE, ELECTRIC_ENGINE, PARALLEL_HYBRID_ENGINE, POWER_SPLIT_HYBRID_ENGINE
+
+    def getType(self):
+    def getEngineType(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Car;
+
+public class Car extends Driver {
+  public final static int TRACTION, PROPULSION, FOUR_BY_FOUR;
+  public final static int COMBUTSION_ENGINE, ELECTRIC_ENGINE, PARALLEL_HYBRID_ENGINE, POWER_SPLIT_HYBRID_ENGINE;
+
+  public int getType();
+  public int getEngineType();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| [`/automobile/get_type`](car-library.md#wbu_car_get_type) | `service` | `webots_ros::get_int` | |
+| [`/automobile/get_engine_type`](car-library.md#wbu_car_get_type) | `service` | `webots_ros::get_int` | |
+
+%tab-end
+
+%end
 
 ##### Description
 
@@ -45,9 +177,9 @@ These two functions return respectively the type of transmission and of engine o
 
 | ENUM                     | Value |
 | ------------------------ | ----- |
-| WBU\_CAR\_TRACTION       | 0     |
-| WBU\_CAR\_PROPULSION     | 1     |
-| WBU\_CAR\_FOUR\_BY\_FOUR | 2     |
+| `WBU_CAR_TRACTION`       | 0     |
+| `WBU_CAR_PROPULSION`     | 1     |
+| `WBU_CAR_FOUR_BY_FOUR`   | 2     |
 
 %end
 
@@ -55,10 +187,10 @@ These two functions return respectively the type of transmission and of engine o
 
 | ENUM                                   | Value |
 | -------------------------------------- | ----- |
-| WBU\_CAR\_COMBUTSION\_ENGINE           | 0     |
-| WBU\_CAR\_ELECTRIC\_ENGINE             | 1     |
-| WBU\_CAR\_PARALLEL\_HYBRID\_ENGINE     | 2     |
-| WBU\_CAR\_POWER\_SPLIT\_HYBRID\_ENGINE | 3     |
+| `WBU_CAR_COMBUTSION_ENGINE`            | 0     |
+| `WBU_CAR_ELECTRIC_ENGINE`              | 1     |
+| `WBU_CAR_PARALLEL_HYBRID_ENGINE`       | 2     |
+| `WBU_CAR_POWER_SPLIT_HYBRID_ENGINE`    | 3     |
 
 %end
 
@@ -67,12 +199,72 @@ These two functions return respectively the type of transmission and of engine o
 #### `wbu_car_set_indicator_period`
 #### `wbu_car_get_indicator_period`
 
+%tab-component
+
+%tab "C"
+
 ```c
 #include <webots/car.h>
 
 void wbu_car_set_indicator_period(double period);
 double wbu_car_get_indicator_period();
 ```
+
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Car.hpp>
+
+namespace webots {
+  class Car : public Driver {
+    void setIndicatorPeriod(double period);
+    double getIndicatorPeriod();
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Car
+
+class Car (Driver):
+    def setIndicatorPeriod(self, period):
+    def getIndicatorPeriod(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Car;
+
+public class Car extends Driver {
+  public void setIndicatorPeriod(double period);
+  public double getIndicatorPeriod();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/automobile/set_indicator_period` | `service` | `webots_ros::set_float` | |
+| `/automobile/get_indicator_period` | `service` | `webots_ros::get_float` | |
+
+%tab-end
+
+%end
 
 ##### Description
 
@@ -88,12 +280,72 @@ The `wbu_car_get_indicator_period` function returns the current blinking period 
 #### `wbu_car_get_backwards_lights`
 #### `wbu_car_get_brake_lights`
 
+%tab-component
+
+%tab "C"
+
 ```c
 #include <webots/car.h>
 
 bool wbu_car_get_backwards_lights();
 bool wbu_car_get_brake_lights();
 ```
+
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Car.hpp>
+
+namespace webots {
+  class Car : public Driver {
+    bool getBackwardsLights();
+    bool getBrakeLights();
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Car
+
+class Car (Driver):
+    def getBackwardsLights(self):
+    def getBrakeLights(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Car;
+
+public class Car extends Driver {
+  public bool getBackwardsLights();
+  public bool getBrakeLights();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/automobile/get_backwards_light` | `service` | `webots_ros::get_bool` | |
+| `/automobile/get_brake_light` | `service` | `webots_ros::get_bool` | |
+
+%tab-end
+
+%end
 
 ##### Description
 
@@ -109,6 +361,10 @@ These two functions return respectively the state of the backwards and brake lig
 #### `wbu_car_get_front_wheel_radius`
 #### `wbu_car_get_rear_wheel_radius`
 
+%tab-component
+
+%tab "C"
+
 ```c
 #include <webots/car.h>
 
@@ -118,6 +374,70 @@ double wbu_car_get_wheelbase();
 double wbu_car_get_front_wheel_radius();
 double wbu_car_get_rear_wheel_radius();
 ```
+
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Car.hpp>
+
+namespace webots {
+  class Car : public Driver {
+    double getTrackFront();
+    double getTrackRear();
+    double getWheelbase();
+    double getFrontWheelRadius();
+    double getRearWheelRadius();
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Car
+
+class Car (Driver):
+    def getTrackFront(self):
+    def getTrackRear(self):
+    def getWheelbase(self):
+    def getFrontWheelRadius(self):
+    def getRearWheelRadius(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Car;
+
+public class Car extends Driver {
+  public double getTrackFront();
+  public double getTrackRear();
+  public double getWheelbase();
+  public double getFrontWheelRadius();
+  public double getRearWheelRadius();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/automobile/get_dimensions` | `service` | `webots_ros::automobile_get_dimensions` | `uint8 ask`<br/>---<br/>`float64 trackFront`<br/>`float64 trackRear`<br/>`float64 wheelBase`<br/>`float64 frontWheelRadius`<br/>`float64 rearWheelRadius` |
+
+%tab-end
+
+%end
 
 ##### Description
 
@@ -130,12 +450,80 @@ All these functions provide important physical characteristics from the car.
 #### `wbu_car_get_wheel_encoder`
 #### `wbu_car_get_wheel_speed`
 
+%tab-component
+
+%tab "C"
+
 ```c
 #include <webots/car.h>
+
+typedef enum {
+  WBU_CAR_WHEEL_FRONT_RIGHT,
+  WBU_CAR_WHEEL_FRONT_LEFT,
+  WBU_CAR_WHEEL_REAR_RIGHT,
+  WBU_CAR_WHEEL_REAR_LEFT,
+  WBU_CAR_WHEEL_NB
+} wbu_car_wheel_index;
 
 double wbu_car_get_wheel_encoder(int wheel_index);
 double wbu_car_get_wheel_speed(int wheel_index);
 ```
+
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Car.hpp>
+
+namespace webots {
+  class Car : public Driver {
+    double getWheelEncoder(int wheel_index);
+    double getWheelSpeed(int wheel_index);
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Car
+
+class Car (Driver):
+    def getWheelEncoder(self, wheel_index):
+    def getWheelSpeed(self, wheel_index):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Car;
+
+public class Car extends Driver {
+  public double getWheelEncoder(int wheel);
+  public double getWheelSpeed(int wheel);
+  // ...
+}
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/automobile/front_right_wheel_encoder`<br/>`/automobile/front_left_wheel_encoder`<br/>`/automobile/rear_right_wheel_encoder`<br/>`/automobile/rear_left_wheel_encoder`<br/> | `topic` | `webots_ros::Float64Stamped` | [`Header`](http://docs.ros.org/api/std_msgs/html/msg/Header.html) `header`<br/>`float64 data` |
+| `/automobile/front_right_wheel_speed`<br/>`/automobile/front_left_wheel_speed`<br/>`/automobile/rear_right_wheel_speed`<br/>`/automobile/rear_left_wheel_speed`<br/> | `topic` | `webots_ros::Float64Stamped` | [`Header`](http://docs.ros.org/api/std_msgs/html/msg/Header.html) `header`<br/>`float64 data` |
+
+%tab-end
+
+%end
 
 ##### Description
 
@@ -148,11 +536,11 @@ The `wheel_index` argument should match a value of the `wbu_car_wheel_index` enu
 
 | ENUM                          | Value |
 | ----------------------------- | ----- |
-| WBU\_CAR\_WHEEL\_FRONT\_RIGHT | 0     |
-| WBU\_CAR\_WHEEL\_FRONT\_LEFT  | 1     |
-| WBU\_CAR\_WHEEL\_REAR\_RIGHT  | 2     |
-| WBU\_CAR\_WHEEL\_REAR\_LEFT   | 3     |
-| WBU\_CAR\_WHEEL\_NB           | 4     |
+| `WBU_CAR_WHEEL_FRONT_RIGHT`   | 0     |
+| `WBU_CAR_WHEEL_FRONT_LEFT`    | 1     |
+| `WBU_CAR_WHEEL_REAR_RIGHT`    | 2     |
+| `WBU_CAR_WHEEL_REAR_LEFT`     | 3     |
+| `WBU_CAR_WHEEL_NB`            | 4     |
 
 %end
 
@@ -161,12 +549,72 @@ The `wheel_index` argument should match a value of the `wbu_car_wheel_index` enu
 #### `wbu_car_get_right_steering_angle`
 #### `wbu_car_get_left_steering_angle`
 
+%tab-component
+
+%tab "C"
+
 ```c
 #include <webots/car.h>
 
 double wbu_car_get_right_steering_angle();
 double wbu_car_get_left_steering_angle();
 ```
+
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Car.hpp>
+
+namespace webots {
+  class Car : public Driver {
+    double getRightSteeringAngle();
+    double getLeftSteeringAngle();
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Car
+
+class Car (Driver):
+    def getRightSteeringAngle(self):
+    def getLeftSteeringAngle(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Car;
+
+public class Car extends Driver {
+  public double getRightSteeringAngle();
+  public double getLeftSteeringAngle();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/automobile/right_steering_angle` | `topic` | `webots_ros::Float64Stamped` | [`Header`](http://docs.ros.org/api/std_msgs/html/msg/Header.html) `header`<br/>`float64 data` |
+| `/automobile/left_steering_angle` | `topic` | `webots_ros::Float64Stamped` | [`Header`](http://docs.ros.org/api/std_msgs/html/msg/Header.html) `header`<br/>`float64 data` |
+
+%tab-end
+
+%end
 
 ##### Description
 
@@ -178,11 +626,67 @@ These two functions return respectively the right and left steering angles (beca
 
 #### `wbu_car_enable_limited_slip_differential`
 
+%tab-component
+
+%tab "C"
+
 ```c
 #include <webots/car.h>
 
 void wbu_car_enable_limited_slip_differential(bool enable);
 ```
+
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Car.hpp>
+
+namespace webots {
+  class Car : public Driver {
+    void enableLimitedSlipDifferential(bool enable);
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Car
+
+class Car (Driver):
+    def enableLimitedSlipDifferential(self, enable):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Car;
+
+public class Car extends Driver {
+  public void enableLimitedSlipDifferential(bool enable);
+  // ...
+}
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/automobile/enable_limited_slip_differential` | `service` | `webots_ros::set_bool` | |
+
+%tab-end
+
+%end
 
 ##### Description
 
@@ -196,11 +700,67 @@ If the limited differential slip is disabled, when a wheel starts to slip, it wi
 
 #### `wbu_car_enable_indicator_auto_disabling`
 
+%tab-component
+
+%tab "C"
+
 ```c
 #include <webots/car.h>
 
 void wbu_car_enable_indicator_auto_disabling(bool enable);
 ```
+
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Car.hpp>
+
+namespace webots {
+  class Car : public Driver {
+    void enableIndicatorAutoDisabling(bool enable);
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Car
+
+class Car (Driver):
+    def enableIndicatorAutoDisabling(self, enable):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Car;
+
+public class Car extends Driver {
+  public void enableIndicatorAutoDisabling(bool enable);
+  // ...
+}
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/automobile/enable_indicator_auto_disabling` | `service` | `webots_ros::set_bool` | |
+
+%tab-end
+
+%end
 
 ##### Description
 

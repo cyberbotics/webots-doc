@@ -122,8 +122,8 @@ wbu_car_engine_type wbu_car_get_engine_type();
 
 namespace webots {
   class Car : public Driver {
-    enum { TRACTION, PROPULSION, FOUR_BY_FOUR};
-    enum { COMBUTSION_ENGINE, ELECTRIC_ENGINE, PARALLEL_HYBRID_ENGINE, POWER_SPLIT_HYBRID_ENGINE };
+    enum {TRACTION, PROPULSION, FOUR_BY_FOUR};
+    enum {COMBUTSION_ENGINE, ELECTRIC_ENGINE, PARALLEL_HYBRID_ENGINE, POWER_SPLIT_HYBRID_ENGINE};
 
     int getType();
     int getEngineType();
@@ -489,7 +489,7 @@ double wbu_car_get_wheel_speed(int wheel_index);
 
 namespace webots {
   class Car : public Driver {
-    enum { WHEEL_FRONT_RIGHT, WHEEL_FRONT_LEFT, WHEEL_REAR_RIGHT, WHEEL_REAR_LEFT, WHEEL_NB };
+    enum {WHEEL_FRONT_RIGHT, WHEEL_FRONT_LEFT, WHEEL_REAR_RIGHT, WHEEL_REAR_LEFT, WHEEL_NB};
 
     double getWheelEncoder(int wheel_index);
     double getWheelSpeed(int wheel_index);
@@ -662,7 +662,7 @@ void wbu_car_enable_limited_slip_differential(bool enable);
 
 namespace webots {
   class Car : public Driver {
-    void enableLimitedSlipDifferential(boolean enable);
+    void enableLimitedSlipDifferential(bool enable);
     // ...
   }
 }

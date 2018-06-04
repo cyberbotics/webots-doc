@@ -295,6 +295,7 @@ public class TouchSensor extends Device {
 
 ```matlab
 WB_TOUCH_SENSOR_BUMPER, WB_TOUCH_SENSOR_FORCE, WB_TOUCH_SENSOR_FORCE3D
+
 type = wb_touch_sensor_get_type(tag)
 ```
 

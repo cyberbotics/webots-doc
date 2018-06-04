@@ -137,10 +137,10 @@ void wb_robot_cleanup();
 #include <webots/Robot.hpp>
 
 namespace webots {
-  class Robot : public Device {
+  class Robot {
     Robot();
     virtual ~Robot();
-    virtual int step(int sampling_period);
+    virtual int step(int duration);
     // ...
   }
 }
@@ -153,10 +153,10 @@ namespace webots {
 ```python
 from controller import Robot
 
-class Robot (Device):
+class Robot:
     def __init__(self):
     def __del__(self):
-    def step(self, sampling_period):
+    def step(self, duration):
     # ...
 ```
 
@@ -167,10 +167,10 @@ class Robot (Device):
 ```java
 import com.cyberbotics.webots.controller.Robot;
 
-public class Robot extends Device {
+public class Robot {
   public Robot();
   protected void finalize();
-  public int step(int sampling_period);
+  public int step(int duration);
   // ...
 }
 ```
@@ -180,7 +180,7 @@ public class Robot extends Device {
 %tab "MATLAB"
 
 ```matlab
-period = wb_robot_step(sampling_period)
+period = wb_robot_step(duration)
 ```
 
 %tab-end
@@ -327,7 +327,7 @@ WbDeviceTag wb_robot_get_device(const char *name);
 #include <webots/Robot.hpp>
 
 namespace webots {
-  class Robot : public Device {
+  class Robot {
     Accelerometer *getAccelerometer(const std::string &name);
     Brake *getBrake(const std::string &name);
     Camera *getCamera(const std::string &name);
@@ -365,7 +365,7 @@ namespace webots {
 ```python
 from controller import Robot
 
-class Robot (Device):
+class Robot:
     def getAccelerometer(self, name):
     def getBrake(self, name):
     def getCamera(self, name):
@@ -401,7 +401,7 @@ class Robot (Device):
 ```java
 import com.cyberbotics.webots.controller.Robot;
 
-public class Robot extends Device {
+public class Robot {
   public Accelerometer getAccelerometer(String name);
   public Brake getBrake(String name);
   public Camera getCamera(String name);
@@ -443,9 +443,8 @@ tag = wb_robot_get_device('name')
 
 %tab "ROS"
 
-| name | service/topic | data type | data type definition |
-| --- | --- | --- | --- |
-| `/robot/time_step` | `service` | [`webots_ros::set_int`](ros-api.md#common-services) | |
+> Note: this function has no equivalent for ROS.
+Devices are available through their services.
 
 %tab-end
 
@@ -489,8 +488,8 @@ int wb_robot_get_number_of_devices();
 #include <webots/Robot.hpp>
 
 namespace webots {
-  class Robot : public Device {
-    int getNumberOfDevices();
+  class Robot {
+    int getNumberOfDevices() const;
     Device *getDeviceByIndex(int index);
     // ...
   }
@@ -504,7 +503,7 @@ namespace webots {
 ```python
 from controller import Robot
 
-class Robot (Device):
+class Robot:
     def getNumberOfDevices(self):
     def getDeviceByIndex(self, index):
     # ...
@@ -517,7 +516,7 @@ class Robot (Device):
 ```java
 import com.cyberbotics.webots.controller.Robot;
 
-public class Robot extends Device {
+public class Robot {
   public int getNumberOfDevices();
   public Device getDeviceByIndex(int index);
   // ...
@@ -607,10 +606,10 @@ int wb_robot_get_battery_sampling_period(WbDeviceTag tag);
 #include <webots/Robot.hpp>
 
 namespace webots {
-  class Robot : public Device {
+  class Robot {
     virtual void batterySensorEnable(int sampling_period);
     virtual void batterySensorDisable();
-    int batterySensorGetSamplingPeriod();
+    int batterySensorGetSamplingPeriod() const;
     double batterySensorGetValue() const;
     // ...
   }
@@ -624,7 +623,7 @@ namespace webots {
 ```python
 from controller import Robot
 
-class Robot (Device):
+class Robot:
     def batterySensorEnable(self, sampling_period):
     def batterySensorDisable(self):
     def batterySensorGetSamplingPeriod(self):
@@ -639,7 +638,7 @@ class Robot (Device):
 ```java
 import com.cyberbotics.webots.controller.Robot;
 
-public class Robot extends Device {
+public class Robot {
   public void batterySensorEnable(int sampling_period);
   public void batterySensorDisable();
   public int batterySensorGetSamplingPeriod();
@@ -666,6 +665,8 @@ value = wb_robot_battery_sensor_get_value()
 | name | service/topic | data type | data type definition |
 | --- | --- | --- | --- |
 | `/battery_sensor/value` | `topic` | webots_ros::Float64Stamped | [`Header`](http://docs.ros.org/api/std_msgs/html/msg/Header.html) `header`<br/>`float64 data` |
+| `/battery_sensor/enable` | `service` | [`webots_ros::set_int`](ros-api.md#common-services) | |
+| `/battery_sensor/get_sampling_period` | `service` | [`webots_ros::get_int`](ros-api.md#common-services) | |
 
 %tab-end
 
@@ -707,7 +708,7 @@ double wb_robot_get_basic_time_step();
 #include <webots/Robot.hpp>
 
 namespace webots {
-  class Robot : public Device {
+  class Robot {
     double getBasicTimeStep() const;
     // ...
   }
@@ -721,7 +722,7 @@ namespace webots {
 ```python
 from controller import Robot
 
-class Robot (Device):
+class Robot:
     def getBasicTimeStep(self):
     # ...
 ```
@@ -733,7 +734,7 @@ class Robot (Device):
 ```java
 import com.cyberbotics.webots.controller.Robot;
 
-public class Robot extends Device {
+public class Robot {
   public double getBasicTimeStep();
   // ...
 }
@@ -794,7 +795,7 @@ void wb_robot_set_mode(int mode, void *arg);
 #include <webots/Robot.hpp>
 
 namespace webots {
-  class Robot : public Device {
+  class Robot {
     enum {
       MODE_SIMULATION,
       MODE_CROSS_COMPILATION,
@@ -815,7 +816,7 @@ namespace webots {
 ```python
 from controller import Robot
 
-class Robot (Device):
+class Robot:
     MODE_SIMULATION, MODE_CROSS_COMPILATION, MODE_REMOTE_CONTROL
 
     def getMode(self):
@@ -829,7 +830,7 @@ class Robot (Device):
 ```java
 import com.cyberbotics.webots.controller.Robot;
 
-public class Robot extends Device {
+public class Robot {
   public final static int MODE_SIMULATION, MODE_CROSS_COMPILATION, MODE_REMOTE_CONTROL;
 
   public int getMode();
@@ -904,7 +905,7 @@ const char *wb_robot_get_name();
 #include <webots/Robot.hpp>
 
 namespace webots {
-  class Robot : public Device {
+  class Robot {
     std::string getName() const;
     // ...
   }
@@ -918,7 +919,7 @@ namespace webots {
 ```python
 from controller import Robot
 
-class Robot (Device):
+class Robot:
     def getName(self):
     # ...
 ```
@@ -930,7 +931,7 @@ class Robot (Device):
 ```java
 import com.cyberbotics.webots.controller.Robot;
 
-public class Robot extends Device {
+public class Robot {
   public String getName();
   // ...
 }
@@ -981,7 +982,7 @@ const char *wb_robot_get_model();
 #include <webots/Robot.hpp>
 
 namespace webots {
-  class Robot : public Device {
+  class Robot {
     std::string getModel() const;
     // ...
   }
@@ -995,7 +996,7 @@ namespace webots {
 ```python
 from controller import Robot
 
-class Robot (Device):
+class Robot:
     def getModel(self):
     # ...
 ```
@@ -1007,7 +1008,7 @@ class Robot (Device):
 ```java
 import com.cyberbotics.webots.controller.Robot;
 
-public class Robot extends Device {
+public class Robot {
   public String getModel();
   // ...
 }
@@ -1066,7 +1067,7 @@ void wb_robot_set_custom_data(const char *data);
 #include <webots/Robot.hpp>
 
 namespace webots {
-  class Robot : public Device {
+  class Robot {
     std::string getCustomData() const;
     void setCustomData(const std::string &data);
     // ...
@@ -1081,7 +1082,7 @@ namespace webots {
 ```python
 from controller import Robot
 
-class Robot (Device):
+class Robot:
     def getCustomData(self):
     def setCustomData(self, data):
     # ...
@@ -1094,7 +1095,7 @@ class Robot (Device):
 ```java
 import com.cyberbotics.webots.controller.Robot;
 
-public class Robot extends Device {
+public class Robot {
   public String getCustomData();
   public setCustomData(String data);
   // ...
@@ -1154,7 +1155,7 @@ WbNodeType wb_robot_get_type();
 #include <webots/Robot.hpp>
 
 namespace webots {
-  class Robot : public Device {
+  class Robot {
     int getType() const;
     // ...
   }
@@ -1168,7 +1169,7 @@ namespace webots {
 ```python
 from controller import Robot
 
-class Robot (Device):
+class Robot:
     def getType(self):
     # ...
 ```
@@ -1180,7 +1181,7 @@ class Robot (Device):
 ```java
 import com.cyberbotics.webots.controller.Robot;
 
-public class Robot extends Device {
+public class Robot {
   public int getType();
   // ...
 }
@@ -1234,7 +1235,7 @@ const char *wb_robot_get_project_path();
 #include <webots/Robot.hpp>
 
 namespace webots {
-  class Robot : public Device {
+  class Robot {
     std::string getProjectPath() const;
     // ...
   }
@@ -1248,7 +1249,7 @@ namespace webots {
 ```python
 from controller import Robot
 
-class Robot (Device):
+class Robot:
     def getProjectPath(self):
     # ...
 ```
@@ -1260,7 +1261,7 @@ class Robot (Device):
 ```java
 import com.cyberbotics.webots.controller.Robot;
 
-public class Robot extends Device {
+public class Robot {
   public String getProjectPath();
   // ...
 }
@@ -1317,7 +1318,7 @@ const char *wb_robot_get_world_path();
 #include <webots/Robot.hpp>
 
 namespace webots {
-  class Robot : public Device {
+  class Robot {
     std::string getWorldPath() const;
     // ...
   }
@@ -1331,7 +1332,7 @@ namespace webots {
 ```python
 from controller import Robot
 
-class Robot (Device):
+class Robot:
     def getWorldPath(self):
     # ...
 ```
@@ -1343,7 +1344,7 @@ class Robot (Device):
 ```java
 import com.cyberbotics.webots.controller.Robot;
 
-public class Robot extends Device {
+public class Robot {
   public String getWorldPath();
   // ...
 }
@@ -1401,7 +1402,7 @@ const char *wb_robot_get_controller_arguments();
 #include <webots/Robot.hpp>
 
 namespace webots {
-  class Robot : public Device {
+  class Robot {
     std::string getControllerName() const;
     std::string getControllerArguments() const;
     // ...
@@ -1416,7 +1417,7 @@ namespace webots {
 ```python
 from controller import Robot
 
-class Robot (Device):
+class Robot:
     def getControllerName(self):
     def getControllerArguments(self):
     # ...
@@ -1429,7 +1430,7 @@ class Robot (Device):
 ```java
 import com.cyberbotics.webots.controller.Robot;
 
-public class Robot extends Device {
+public class Robot {
   public String getControllerName();
   public String getControllerArguments();
   // ...
@@ -1486,7 +1487,7 @@ bool wb_robot_get_synchronization();
 #include <webots/Robot.hpp>
 
 namespace webots {
-  class Robot : public Device {
+  class Robot {
     bool getSynchronization() const;
     // ...
   }
@@ -1500,7 +1501,7 @@ namespace webots {
 ```python
 from controller import Robot
 
-class Robot (Device):
+class Robot:
     def getSynchronization(self):
     # ...
 ```
@@ -1512,7 +1513,7 @@ class Robot (Device):
 ```java
 import com.cyberbotics.webots.controller.Robot;
 
-public class Robot extends Device {
+public class Robot {
   public boolean getSynchronization();
   // ...
 }
@@ -1566,7 +1567,7 @@ double wb_robot_get_time();
 #include <webots/Robot.hpp>
 
 namespace webots {
-  class Robot : public Device {
+  class Robot {
     double getTime() const;
     // ...
   }
@@ -1580,7 +1581,7 @@ namespace webots {
 ```python
 from controller import Robot
 
-class Robot (Device):
+class Robot:
     def getTime(self):
     # ...
 ```
@@ -1592,7 +1593,7 @@ class Robot (Device):
 ```java
 import com.cyberbotics.webots.controller.Robot;
 
-public class Robot extends Device {
+public class Robot {
   public double getTime();
   // ...
 }
@@ -1725,7 +1726,7 @@ void wb_robot_wwi_send_text(const char *text);
 #include <webots/Robot.hpp>
 
 namespace webots {
-  class Robot : public Device {
+  class Robot {
     const char *wwiReceive();
     std::string wwiReceiveText();
     void wwiSend(const char *data, int size);
@@ -1742,7 +1743,7 @@ namespace webots {
 ```python
 from controller import Robot
 
-class Robot (Device):
+class Robot:
     def wwiSendText(self, text):
     def wwiReceiveText(self):
     # ...
@@ -1755,7 +1756,7 @@ class Robot (Device):
 ```java
 import com.cyberbotics.webots.controller.Robot;
 
-public class Robot extends Device {
+public class Robot {
   public void wwiSendText(String text);
   public String wwiReceiveText();
   // ...
@@ -1822,7 +1823,7 @@ void *wb_robot_window_custom_function(void *arg);
 #include <webots/Robot.hpp>
 
 namespace webots {
-  class Robot : public Device {
+  class Robot {
     void *windowCustomFunction(void *arg);
     // ...
   }

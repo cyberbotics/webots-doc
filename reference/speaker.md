@@ -50,7 +50,7 @@ from controller import Speaker
 
 class Speaker (Device):
     @staticmethod
-    def playSound(left, right, sound, volume, pitch balance, loop):
+    def playSound(left, right, sound, volume, pitch, balance, loop):
     # ...
 ```
 
@@ -265,7 +265,7 @@ import com.cyberbotics.webots.controller.Speaker;
 
 public class Speaker extends Device {
   public std::string getLanguage();
-  public std::string getLanguage();
+  public std::string getEngine();
   public boolean setEngine(const std::string &engine);
   public boolean setLanguage(const std::string &language);
   public void speak(const std::string &text, double volume);
@@ -295,7 +295,7 @@ wb_speaker_speak(tag, text, volume)
 | `/<device_name>/get_language` | `service` | [`webots_ros::get_string`](ros-api.md#common-services) | |
 | `/<device_name>/set_engine` | `service` | [`webots_ros::set_string`](ros-api.md#common-services) | |
 | `/<device_name>/set_language` | `service` | [`webots_ros::set_string`](ros-api.md#common-services) | |
-| `/<device_name>/speak` | `service` | webots_ros::speaker\speak | `string text`<br/>`float64 volume`<br/>`---`<br/>`int8 success`<br/> |
+| `/<device_name>/speak` | `service` | `webots_ros::speaker\speak` | `string text`<br/>`float64 volume`<br/>`---`<br/>`int8 success`<br/> |
 
 %tab-end
 

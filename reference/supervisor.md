@@ -108,7 +108,7 @@ public class Supervisor extends Robot {
 node = wb_supervisor_node_get_root()
 node = wb_supervisor_node_get_self()
 node = wb_supervisor_node_get_from_def('def')
-node = wb_supervisor_node_get_from_id('id')
+node = wb_supervisor_node_get_from_id(id)
 node = wb_supervisor_node_get_selected()
 ```
 
@@ -465,6 +465,34 @@ public class Node {
 %tab "MATLAB"
 
 ```matlab
+WB_NODE_NO_NODE
+% VRML97 nodes
+WB_NODE_APPEARANCE, WB_NODE_BACKGROUND, WB_NODE_BOX, WB_NODE_COLOR, WB_NODE_COMPOSED_CUBE_MAP_TEXTURE,
+WB_NODE_COMPOSED_SHADER, WB_NODE_CONE, WB_NODE_COORDINATE, WB_NODE_CYLINDER, WB_NODE_DIRECTIONAL_LIGHT,
+WB_NODE_ELEVATION_GRID, WB_NODE_EXTRUSION, WB_NODE_FOG, WB_NODE_GROUP, WB_NODE_IMAGE_TEXTURE,
+WB_NODE_INDEXED_FACE_SET, WB_NODE_INDEXED_LINE_SET, WB_NODE_LIDAR, WB_NODE_MATERIAL,
+WB_NODE_MULTI_TEXTURE, WB_NODE_MUSCLE, WB_NODE_POINT_LIGHT, WB_NODE_SHADER_PART,
+WB_NODE_SHAPE, WB_NODE_SPHERE, WB_NODE_SPOT_LIGHT, WB_NODE_SWITCH, WB_NODE_TEXTURE_COORDINATE,
+WB_NODE_TEXTURE_TRANSFORM, WB_NODE_TRACK, WB_NODE_TRACK_WHEEL, WB_NODE_TRANSFORM,
+WB_NODE_UNIFORM, WB_NODE_VIEWPOINT, WB_NODE_WORLD_INFO
+% non-vrml geometry
+WB_NODE_CAPSULE, WB_NODE_PLANE
+% robots
+WB_NODE_ROBOT, WB_NODE_SUPERVISOR, WB_NODE_DIFFERENTIAL_WHEELS
+% misc
+WB_NODE_BALL_JOINT, WB_NODE_BALL_JOINT_PARAMETERS, WB_NODE_CHARGER, WB_NODE_CONTACT_PROPERTIES,
+WB_NODE_DAMPING, WB_NODE_FLUID, WB_NODE_FOCUS, WB_NODE_HINGE_JOINT, WB_NODE_HINGE_JOINT_PARAMETERS,
+WB_NODE_HINGE_2_JOINT, WB_NODE_HINGE_2_JOINT_PARAMETERS, WB_NODE_IMMERSION_PROPERTIES,
+WB_NODE_JOINT_PARAMETERS, WB_NODE_LENS, WB_NODE_LENS_FLARE, WB_NODE_PHYSICS, WB_NODE_RECOGNITION,
+WB_NODE_SLIDER_JOINT, WB_NODE_SOLID, WB_NODE_SOLID_REFERENCE, WB_NODE_SLOT, WB_NODE_ZOOM
+% devices
+WB_NODE_ACCELEROMETER, WB_NODE_BRAKE, WB_NODE_CAMERA, WB_NODE_COMPASS, WB_NODE_CONNECTOR,
+WB_NODE_DISPLAY, WB_NODE_DISTANCE_SENSOR, WB_NODE_EMITTER, WB_NODE_GPS, WB_NODE_GYRO,
+WB_NODE_INERTIAL_UNIT, WB_NODE_LED, WB_NODE_LIGHT_SENSOR, WB_NODE_LINEAR_MOTOR,
+WB_NODE_MICROPHONE, WB_NODE_PEN, WB_NODE_POSITION_SENSOR, WB_NODE_PROPELLER, WB_NODE_RADAR,
+WB_NODE_RADIO, WB_NODE_RANGE_FINDER, WB_NODE_ROTATIONAL_MOTOR, WB_NODE_RECEIVER,
+WB_NODE_SKIN, WB_NODE_SPEAKER, WB_NODE_TOUCH_SENSOR
+
 type = wb_supervisor_node_get_type(node)
 name = wb_supervisor_node_get_type_name(node)
 name = wb_supervisor_node_get_base_type_name(node)
@@ -1083,7 +1111,7 @@ void wb_supervisor_node_set_velocity(WbNodeRef node, const double velocity[6]);
 
 namespace webots {
   class Node {
-    const double * getVelocity() const;
+    const double *getVelocity() const;
     void setVelocity(const double velocity[6]);
     // ...
   }
@@ -2962,22 +2990,22 @@ void wb_supervisor_field_remove_mf(WbFieldRef field, int index);
 
 namespace webots {
   class Field {
-    void setSFBool(bool value);
-    void setSFInt32(int value);
-    void setSFFloat(double value);
-    void setSFVec2f(const double values[2]);
-    void setSFVec3f(const double values[3]);
-    void setSFRotation(const double values[4]);
-    void setSFColor(const double values[3]);
-    void setSFString(const std::string &value);
-    void setMFBool(int index, bool value);
-    void setMFInt32(int index, int value);
-    void setMFFloat(int index, double value);
-    void setMFVec2f(int index, const double values[2]);
-    void setMFVec3f(int index, const double values[3]);
-    void setMFRotation(int index, const double values[4]);
-    void setMFColor(int index, const double values[3]);
-    void setMFString(int index, const std::string &value);
+    void insertSFBool(bool value);
+    void insertSFInt32(int value);
+    void insertSFFloat(double value);
+    void insertSFVec2f(const double values[2]);
+    void insertSFVec3f(const double values[3]);
+    void insertSFRotation(const double values[4]);
+    void insertSFColor(const double values[3]);
+    void insertSFString(const std::string &value);
+    void insertMFBool(int index, bool value);
+    void insertMFInt32(int index, int value);
+    void insertMFFloat(int index, double value);
+    void insertMFVec2f(int index, const double values[2]);
+    void insertMFVec3f(int index, const double values[3]);
+    void insertMFRotation(int index, const double values[4]);
+    void insertMFColor(int index, const double values[3]);
+    void insertMFString(int index, const std::string &value);
     // ...
   }
 }
@@ -3047,10 +3075,10 @@ wb_supervisor_field_remove_mf(field, index)
 | name | service/topic | data type | data type definition |
 | --- | --- | --- | --- |
 | `/supervisor/field/insert_bool` | `service` | `webots_ros::field_set_bool` | `uint64 field`<br/>`int32 index`<br/>`uint8 value`<br/>`---`<br/>`int32 success` |
-| `/supervisor/field/insert_int32` | `service` | webots_ros::field_set_`int32 `| `uint64 field`<br/>`int32 index`<br/>`int32 value`<br/>`---`<br/>`int32 success` |
+| `/supervisor/field/insert_int32` | `service` | `webots_ros::field_set_int32` | `uint64 field`<br/>`int32 index`<br/>`int32 value`<br/>`---`<br/>`int32 success` |
 | `/supervisor/field/insert_float` | `service` | `webots_ros::field_set_float` | `uint64 field`<br/>`int32 index`<br/>`float64 value`<br/>`---`<br/>`int32 success` |
-| `/supervisor/field/insert_vec2f` | `service` | webots_ros::field_set_vec2f | `uint64 field`<br/>`int32 index`<br/>[`geometry_msgs/Vector3`](http://docs.ros.org/api/geometry_msgs/html/msg/Vector3.html) `value`<br/>`---`<br/>`int32 success`<br/><br/>Note: the 'z' coordinate is ignored. |
-| `/supervisor/field/insert_vec3f` | `service` | webots_ros::field_set_vec3f | `uint64 field`<br/>`int32 index`<br/>[`geometry_msgs/Vector3`](http://docs.ros.org/api/geometry_msgs/html/msg/Vector3.html) `value`<br/>`---`<br/>`int32 success` |
+| `/supervisor/field/insert_vec2f` | `service` | `webots_ros::field_set_vec2f` | `uint64 field`<br/>`int32 index`<br/>[`geometry_msgs/Vector3`](http://docs.ros.org/api/geometry_msgs/html/msg/Vector3.html) `value`<br/>`---`<br/>`int32 success`<br/><br/>Note: the 'z' coordinate is ignored. |
+| `/supervisor/field/insert_vec3f` | `service` | `webots_ros::field_set_vec3f` | `uint64 field`<br/>`int32 index`<br/>[`geometry_msgs/Vector3`](http://docs.ros.org/api/geometry_msgs/html/msg/Vector3.html) `value`<br/>`---`<br/>`int32 success` |
 | `/supervisor/field/insert_rotation` | `service` | `webots_ros::field_set_rotation` | `uint64 field`<br/>`int32 index`<br/>[`geometry_msgs/Quaternion`](http://docs.ros.org/api/geometry_msgs/html/msg/Quaternion.html) `value`<br/>`---`<br/>`int32 success` |
 | `/supervisor/field/insert_color` | `service` | `webots_ros::field_set_color` | `uint64 field`<br/>`int32 index`<br/>[`std_msgs/ColorRGBA`](http://docs.ros.org/api/std_msgs/html/msg/ColorRGBA.html) `value`<br/>`---`<br/>`int32 success`<br/><br/>Note: the 'a' component is ignored. |
 | `/supervisor/field/insert_string` | `service` | `webots_ros::field_set_string` | `uint64 field`<br/>`int32 index`<br/>`string value`<br/>`---`<br/>`int32 success`<br/> |

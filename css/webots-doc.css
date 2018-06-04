@@ -330,23 +330,6 @@ body {
   font-size: 15px;
   font-family: "Roboto Mono", monospace;
 }
-.webots-doc .tag-container {
-  text-align: right;
-  margin-bottom: -3px
-}
-.webots-doc .tag {
-  padding: 4px;
-  color: #ffffff;
-  padding: 6px 18px;
-  background-color: #2f93c1;
-  margin: 2px;
-}
-.webots-doc .tag:hover {
-  color: white;
-  text-decoration: none;
-  outline: 0;
-  background: #70b6f5;
-}
 .webots-doc figcaption:hover .anchor-link,
 .webots-doc h1:hover .anchor-link,
 .webots-doc h2:hover .anchor-link,

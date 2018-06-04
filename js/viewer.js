@@ -462,7 +462,6 @@ function populateViewDiv(mdContent) {
   collapseMovies(view);
 
   applyAnchorIcons(view);
-  applyOOTags(view);
   highlightCode(view);
 
   updateSelection();
@@ -845,18 +844,6 @@ function applyAnchorIcons(view) {
       a.classList.add('anchor-link');
       a.appendChild(span);
       el.insertBefore(a, el.firstChild);
-    }
-  }
-}
-
-function applyOOTags(view) {
-  var as = view.querySelectorAll('a');
-  for (var i = 0; i < as.length; i++) {
-    var a = as[i];
-    if (['C++', 'Java', 'Python', 'ROS', 'MATLAB'].includes(a.innerText)) {
-      a.classList.add('tag');
-      if (a.parentNode.tagName.toLowerCase() === 'p' && a.parentNode.classList.length === 0)
-        a.parentNode.classList.add('tag-container');
     }
   }
 }

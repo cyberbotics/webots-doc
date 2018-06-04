@@ -6,6 +6,7 @@ All the functions included in this library are explained below.
 
 ### Car Library Functions
 
+#### `Constructor`
 #### `wbu_car_init`
 #### `wbu_car_cleanup`
 

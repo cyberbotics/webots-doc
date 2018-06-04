@@ -61,7 +61,7 @@ const double *wb_gyro_get_values(WbDeviceTag tag);
 
 namespace webots {
   class Gyro : public Device {
-    virtual void enable(int sampling_period);
+    virtual void enable(int samplingPeriod);
     virtual void disable();
     int getSamplingPeriod();
     const double *getValues() const;
@@ -78,7 +78,7 @@ namespace webots {
 from controller import Gyro
 
 class Gyro (Device):
-    def enable(self, sampling_period):
+    def enable(self, samplingPeriod):
     def disable(self):
     def getSamplingPeriod(self):
     def getValues(self):
@@ -93,7 +93,7 @@ class Gyro (Device):
 import com.cyberbotics.webots.controller.Gyro;
 
 public class Gyro extends Device {
-  public void enable(int sampling_period);
+  public void enable(int samplingPeriod);
   public void disable();
   public int getSamplingPeriod();
   public double[] getValues();

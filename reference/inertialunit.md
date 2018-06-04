@@ -80,7 +80,7 @@ const double *wb_inertial_unit_get_roll_pitch_yaw(WbDeviceTag tag);
 
 namespace webots {
   class InertialUnit : public Device {
-    virtual void enable(int sampling_period);
+    virtual void enable(int samplingPeriod);
     virtual void disable();
     int getSamplingPeriod();
     const double *getRollPitchYaw() const;
@@ -97,7 +97,7 @@ namespace webots {
 from controller import InertialUnit
 
 class InertialUnit (Device):
-    def enable(self, sampling_period):
+    def enable(self, samplingPeriod):
     def disable(self):
     def getSamplingPeriod(self):
     def getRollPitchYaw(self):
@@ -112,7 +112,7 @@ class InertialUnit (Device):
 import com.cyberbotics.webots.controller.InertialUnit;
 
 public class InertialUnit extends Device {
-  public void enable(int sampling_period);
+  public void enable(int samplingPeriod);
   public void disable();
   public int getSamplingPeriod();
   public double[] getRollPitchYaw();

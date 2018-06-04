@@ -75,7 +75,7 @@ const double wb_gps_get_speed(WbDeviceTag tag);
 
 namespace webots {
   class GPS : public Device {
-    virtual void enable(int sampling_period);
+    virtual void enable(int samplingPeriod);
     virtual void disable();
     int getSamplingPeriod();
     const double *getValues() const;
@@ -93,7 +93,7 @@ namespace webots {
 from controller import GPS
 
 class GPS (Device):
-    def enable(self, sampling_period):
+    def enable(self, samplingPeriod):
     def disable(self):
     def getSamplingPeriod(self):
     def getValues(self):
@@ -109,7 +109,7 @@ class GPS (Device):
 import com.cyberbotics.webots.controller.GPS;
 
 public class GPS extends Device {
-  public void enable(int sampling_period);
+  public void enable(int samplingPeriod);
   public void disable();
   public int getSamplingPeriod();
   public double[] getValues();

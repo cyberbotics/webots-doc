@@ -166,7 +166,7 @@ int wb_connector_get_presence(WbDeviceTag tag);
 
 namespace webots {
   class Connector : public Device {
-    virtual void enablePresence(int sampling_period);
+    virtual void enablePresence(int samplingPeriod);
     virtual void disablePresence();
     int getPresenceSamplingPeriod() const;
     int getPresence() const;
@@ -183,7 +183,7 @@ namespace webots {
 from controller import Connector
 
 class Connector (Device):
-    def enablePresence(self, sampling_period):
+    def enablePresence(self, samplingPeriod):
     def disablePresence(self):
     def getPresenceSamplingPeriod(self):
     def getPresence(self):
@@ -198,7 +198,7 @@ class Connector (Device):
 import com.cyberbotics.webots.controller.Connector;
 
 public class Connector extends Device {
-  public void enablePresence(int sampling_period);
+  public void enablePresence(int samplingPeriod);
   public void disablePresence();
   public int getPresenceSamplingPeriod();
   public int getPresence();

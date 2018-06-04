@@ -518,11 +518,11 @@ double wb_motor_get_torque_feedback(WbDeviceTag tag);
 
 namespace webots {
   class Motor : public Device {
-    virtual void enableForceFeedback(int sampling_period);
+    virtual void enableForceFeedback(int samplingPeriod);
     virtual void disableForceFeedback();
     int getForceFeedbackSamplingPeriod();
     double getForceFeedback() const;
-    virtual void enableTorqueFeedback(int sampling_period);
+    virtual void enableTorqueFeedback(int samplingPeriod);
     virtual void disableTorqueFeedback();
     int getTorqueFeedbackSamplingPeriod();
     double getTorqueFeedback() const;
@@ -539,11 +539,11 @@ namespace webots {
 from controller import Motor
 
 class Motor (Device):
-    def enableForceFeedback(self, sampling_period):
+    def enableForceFeedback(self, samplingPeriod):
     def disableForceFeedback(self):
     def getForceFeedbackSamplingPeriod(self):
     def getForceFeedback(self):
-    def enableTorqueFeedback(self, sampling_period):
+    def enableTorqueFeedback(self, samplingPeriod):
     def disableTorqueFeedback(self):
     def getTorqueFeedbackSamplingPeriod(self):
     def getTorqueFeedback(self):
@@ -558,11 +558,11 @@ class Motor (Device):
 import com.cyberbotics.webots.controller.Motor;
 
 public class Motor extends Device {
-  public void enableForceFeedback(int sampling_period);
+  public void enableForceFeedback(int samplingPeriod);
   public void disableForceFeedback();
   public int getForceFeedbackSamplingPeriod();
   public double getForceFeedback();
-  public void enableTorqueFeedback(int sampling_period);
+  public void enableTorqueFeedback(int samplingPeriod);
   public void disableTorqueFeedback();
   public int getTorqueFeedbackSamplingPeriod();
   public double getTorqueFeedback();

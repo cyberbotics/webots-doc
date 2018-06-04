@@ -55,7 +55,7 @@ namespace webots {
       KEY, SHIFT, CONTROL, ALT
     };
 
-    virtual void enable(int sampling_period);
+    virtual void enable(int samplingPeriod);
     virtual void disable();
     int getSamplingPeriod();
     int getKey() const;
@@ -76,7 +76,7 @@ class Keyboard (Device):
     NUMPAD_RIGHT, NUMPAD_DOWN, NUMPAD_END, KEY, SHIFT,
     CONTROL, ALT
 
-    def enable(self, sampling_period):
+    def enable(self, samplingPeriod):
     def disable(self):
     def getKey(self):
     def getSamplingPeriod(self):
@@ -95,7 +95,7 @@ public class Keyboard extends Device {
     NUMPAD_UP, NUMPAD_RIGHT, NUMPAD_DOWN, NUMPAD_END,
     KEY, SHIFT, CONTROL, ALT;
 
-  public void enable(int sampling_period);
+  public void enable(int samplingPeriod);
   public void disable();
   public int getSamplingPeriod();
   public int getKey();

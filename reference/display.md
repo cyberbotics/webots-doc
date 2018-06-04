@@ -666,7 +666,7 @@ BGRA
 image = wb_display_image_copy(tag, x, y, width, height)
 wb_display_image_paste(tag, image, x, y, blend)
 image = wb_display_image_load(tag, 'filename')
-image = wb_display_image_new(tag, width, height, data ,format)
+image = wb_display_image_new(tag, width, height, data, format)
 wb_display_image_save(tag, image, 'filename')
 wb_display_image_delete(tag, image)
 ```

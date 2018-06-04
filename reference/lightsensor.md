@@ -147,7 +147,7 @@ double wb_light_sensor_get_value(WbDeviceTag tag);
 
 namespace webots {
   class LightSensor : public Device {
-    virtual void enable(int sampling_period);
+    virtual void enable(int samplingPeriod);
     virtual void disable();
     int getSamplingPeriod();
     double getValue() const;
@@ -163,7 +163,7 @@ namespace webots {
 from controller import LightSensor
 
 class LightSensor (Device):
-  def enable(self, sampling_period):
+  def enable(self, samplingPeriod):
   def disable(self):
   def getSamplingPeriod(self):
   def getValue(self):
@@ -177,7 +177,7 @@ class LightSensor (Device):
 import com.cyberbotics.webots.controller.LightSensor;
 
 public class LightSensor extends Device {
-  public void enable(int sampling_period);
+  public void enable(int samplingPeriod);
   public void disable();
   public int getSamplingPeriod();
   public double getValue();

@@ -121,7 +121,7 @@ int wb_range_finder_get_sampling_period(WbDeviceTag tag);
 
 namespace webots {
   class RangeFinder : public Device {
-    virtual void enable(int sampling_period);
+    virtual void enable(int samplingPeriod);
     virtual void disable();
     int getSamplingPeriod();
     // ...
@@ -137,7 +137,7 @@ namespace webots {
 from controller import RangeFinder
 
 class RangeFinder (Device):
-    def enable(self, sampling_period):
+    def enable(self, samplingPeriod):
     def disable(self):
     def getSamplingPeriod(self):
     # ...
@@ -151,7 +151,7 @@ class RangeFinder (Device):
 import com.cyberbotics.webots.controller.RangeFinder;
 
 public class RangeFinder extends Device {
-  public void enable(int sampling_period);
+  public void enable(int samplingPeriod);
   public void disable();
   public int getSamplingPeriod();
   // ...
@@ -458,7 +458,7 @@ These functions return the minRange and maxRange parameters of a range-finder de
 #include <webots/range_finder.h>
 
 const float *wb_range_finder_get_range_image(WbDeviceTag tag);
-float wb_range_finder_image_get_depth(const float *range_image, int width, int x, int y);
+float wb_range_finder_image_get_depth(const float *image, int width, int x, int y);
 ```
 
 %tab-end

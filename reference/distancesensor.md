@@ -195,7 +195,7 @@ double wb_distance_sensor_get_value(WbDeviceTag tag);
 
 namespace webots {
   class DistanceSensor : public Device {
-    virtual void enable(int sampling_period);
+    virtual void enable(int samplingPeriod);
     virtual void disable();
     int getSamplingPeriod();
     double getValue() const;
@@ -212,7 +212,7 @@ namespace webots {
 from controller import DistanceSensor
 
 class DistanceSensor (Device):
-    def enable(self, sampling_period):
+    def enable(self, samplingPeriod):
     def disable(self):
     def getSamplingPeriod(self):
     def getValue(self):
@@ -227,7 +227,7 @@ class DistanceSensor (Device):
 import com.cyberbotics.webots.controller.DistanceSensor;
 
 public class DistanceSensor extends Device {
-  public void enable(int sampling_period);
+  public void enable(int samplingPeriod);
   public void disable();
   public int getSamplingPeriod();
   public double getValue();

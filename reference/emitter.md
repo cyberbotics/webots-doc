@@ -233,8 +233,9 @@ int wb_emitter_get_channel(WbDeviceTag tag);
 namespace webots {
   class Emitter : public Device {
     enum {CHANNEL_BROADCAST};
-    int getChannel() const;
+
     virtual void setChannel(int channel);
+    int getChannel() const;
     // ...
   }
 }
@@ -249,8 +250,9 @@ from controller import Emitter
 
 class Emitter (Device):
     CHANNEL_BROADCAST
-    def getChannel(self):
+
     def setChannel(self, channel):
+    def getChannel(self):
     # ...
 ```
 
@@ -263,8 +265,9 @@ import com.cyberbotics.webots.controller.Emitter;
 
 public class Emitter extends Device {
   public final static int CHANNEL_BROADCAST;
-  public int getChannel();
+
   public void setChannel(int channel);
+  public int getChannel();
   // ...
 }
 ```
@@ -285,8 +288,8 @@ channel = wb_emitter_get_channel(tag)
 
 | name | service/topic | data type | data type definition |
 | --- | --- | --- | --- |
-| `/<device_name>/get_channel` | `service` | [`webots_ros::get_int`](ros-api.md#common-services) |
 | `/<device_name>/set_channel` | `service` | [`webots_ros::set_int`](ros-api.md#common-services) |
+| `/<device_name>/get_channel` | `service` | [`webots_ros::get_int`](ros-api.md#common-services) |
 
 %tab-end
 
@@ -330,8 +333,8 @@ double wb_emitter_get_range(WbDeviceTag tag);
 
 namespace webots {
   class Emitter : public Device {
-    double getRange() const;
     virtual void setRange(double range);
+    double getRange() const;
     // ...
   }
 }
@@ -345,8 +348,8 @@ namespace webots {
 from controller import Emitter
 
 class Emitter (Device):
-    def getRange(self):
     def setRange(self, range):
+    def getRange(self):
     # ...
 ```
 
@@ -358,8 +361,8 @@ class Emitter (Device):
 import com.cyberbotics.webots.controller.Emitter;
 
 public class Emitter extends Device {
-  public double getRange();
   public void setRange(double range);
+  public double getRange();
   // ...
 }
 ```
@@ -369,8 +372,8 @@ public class Emitter extends Device {
 %tab "MATLAB"
 
 ```matlab
-range = wb_emitter_get_range(tag)
 wb_emitter_set_range(tag, range)
+range = wb_emitter_get_range(tag)
 ```
 
 %tab-end
@@ -379,8 +382,8 @@ wb_emitter_set_range(tag, range)
 
 | name | service/topic | data type | data type definition |
 | --- | --- | --- | --- |
-| `/<device_name>/get_range` | `service` | [`webots_ros::get_float`](ros-api.md#common-services) |
 | `/<device_name>/set_range` | `service` | [`webots_ros::set_float`](ros-api.md#common-services) |
+| `/<device_name>/get_range` | `service` | [`webots_ros::get_float`](ros-api.md#common-services) |
 
 %tab-end
 

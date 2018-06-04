@@ -302,7 +302,7 @@ int wb_differential_wheels_get_encoders_sampling_period(WbDeviceTag tag);
 
 namespace webots {
   class DifferentialWheels : public Robot {
-    virtual void enableEncoders(int sampling_period);
+    virtual void enableEncoders(int samplingPeriod);
     virtual void disableEncoders();
     int getEncodersSamplingPeriod();
     // ...
@@ -318,7 +318,7 @@ namespace webots {
 from controller import DifferentialWheels
 
 class DifferentialWheels (Robot):
-    def enableEncoders(self, sampling_period):
+    def enableEncoders(self, samplingPeriod):
     def disableEncoders(self):
     def getEncodersSamplingPeriod(self):
     # ...
@@ -332,7 +332,7 @@ class DifferentialWheels (Robot):
 import com.cyberbotics.webots.controller.DifferentialWheels;
 
 public class DifferentialWheels extends Robot {
-  public void enableEncoders(int sampling_period);
+  public void enableEncoders(int samplingPeriod);
   public void disableEncoders();
   public int getEncodersSamplingPeriod();
   // ...

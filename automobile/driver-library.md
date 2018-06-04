@@ -5,6 +5,7 @@ All the functions included in this library are explained below.
 
 ### Driver Library Functions
 
+#### `Constructor`
 #### `wbu_driver_init`
 #### `wbu_driver_cleanup`
 #### `wbu_driver_step`
@@ -798,8 +799,8 @@ int wbu_driver_get_gear_number();
 
 namespace webots {
   class Driver {
-    int getGear();
     void setGear(int gear);
+    int getGear();
     int getGearNumber();
     // ...
   }
@@ -814,8 +815,8 @@ namespace webots {
 from controller import Driver
 
 class Driver:
-    def getGear(self):
     def setGear(self, gear):
+    def getGear(self):
     def getGearNumber(self):
     # ...
 ```
@@ -828,8 +829,8 @@ class Driver:
 import com.cyberbotics.webots.controller.Driver;
 
 public class Driver {
-  public int getGear();
   public void setGear(int gear);
+  public int getGear();
   public int getGearNumber();
   // ...
 }
@@ -1031,8 +1032,8 @@ public class Driver {
 
 | name | service/topic | data type | data type definition |
 | --- | --- | --- | --- |
-| `/automobile/get_wipers_mode` | `service` | `webots_ros::get_int` | |
 | `/automobile/set_wipers_mode` | `service` | `webots_ros::set_int` | |
+| `/automobile/get_wipers_mode` | `service` | `webots_ros::get_int` | |
 
 %tab-end
 

@@ -75,7 +75,7 @@ public class Brake extends Device {
 %tab "MATLAB"
 
 ```matlab
-wb_brake_set_damping_constant(tag, dampingConstant)
+wb_brake_set_damping_constant(tag, damping_constant)
 type = wb_brake_get_type(tag)
 ```
 

@@ -63,7 +63,7 @@ const double *wb_accelerometer_get_values(WbDeviceTag tag)
 
 namespace webots {
   class Accelerometer : public Device {
-    virtual void enable(int sampling_period);
+    virtual void enable(int samplingPeriod);
     virtual void disable();
     int getSamplingPeriod();
     const double *getValues() const;
@@ -80,7 +80,7 @@ namespace webots {
 from controller import Accelerometer
 
 class Accelerometer (Device):
-    def enable(self, sampling_period):
+    def enable(self, samplingPeriod):
     def disable(self):
     def getSamplingPeriod(self):
     def getValues(self):
@@ -95,7 +95,7 @@ class Accelerometer (Device):
 import com.cyberbotics.webots.controller.Accelerometer;
 
 public class Accelerometer extends Device {
-  public void enable(int sampling_period);
+  public void enable(int samplingPeriod);
   public void disable();
   int getSamplingPeriod();
   public double[] getValues();

@@ -63,7 +63,7 @@ int wb_compass_get_sampling_period(WbDeviceTag tag);
 
 namespace webots {
   class Compass : public Device {
-    virtual void enable(int sampling_period);
+    virtual void enable(int samplingPeriod);
     virtual void disable();
     int getSamplingPeriod();
     const double *getValues() const;
@@ -80,7 +80,7 @@ namespace webots {
 from controller import Compass
 
 class Compass (Device):
-    def enable(self, sampling_period):
+    def enable(self, samplingPeriod):
     def disable(self):
     def getSamplingPeriod(self):
     def getValues(self):
@@ -95,7 +95,7 @@ class Compass (Device):
 import com.cyberbotics.webots.controller.Compass;
 
 public class Compass extends Device {
-  public void enable(int sampling_period);
+  public void enable(int samplingPeriod);
   public void disable();
   public int getSamplingPeriod();
   public double[] getValues();

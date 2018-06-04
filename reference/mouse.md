@@ -138,7 +138,7 @@ WbMouseState wb_mouse_get_state();
 
 namespace webots {
   class Mouse {
-    virtual void enable(int sampling_period);
+    virtual void enable(int samplingPeriod);
     virtual void disable();
     int getSamplingPeriod();
     MouseState getState() const;
@@ -154,7 +154,7 @@ namespace webots {
 from controller import Mouse
 
 class Mouse:
-    def enable(self, sampling_period):
+    def enable(self, samplingPeriod):
     def disable(self):
     def getSamplingPeriod(self):
     def getState(self):
@@ -168,7 +168,7 @@ class Mouse:
 import com.cyberbotics.webots.controller.Mouse;
 
 public class Mouse {
-  public void enable(int sampling_period);
+  public void enable(int samplingPeriod);
   public void disable();
   public int getSamplingPeriod();
   public MouseState getState();

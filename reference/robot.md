@@ -112,7 +112,7 @@ Asynchronous controllers may also be recommended for networked simulations invol
 
 ### Robot Functions
 
-#### Constructor
+#### `Constructor`
 #### `wb_robot_step`
 #### `wb_robot_init`
 #### `wb_robot_cleanup`

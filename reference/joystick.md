@@ -37,7 +37,7 @@ int wb_joystick_get_sampling_period();
 
 namespace webots {
   class Joystick : public Device {
-    virtual void enable(int sampling_period);
+    virtual void enable(int samplingPeriod);
     virtual void disable();
     int getSamplingPeriod();
     // ...
@@ -53,7 +53,7 @@ namespace webots {
 from controller import Joystick
 
 class Joystick (Device):
-    def enable(self, sampling_period):
+    def enable(self, samplingPeriod):
     def disable(self):
     def getSamplingPeriod(self):
     # ...
@@ -67,7 +67,7 @@ class Joystick (Device):
 import com.cyberbotics.webots.controller.Joystick;
 
 public class Joystick extends Device {
-  public void enable(int sampling_period);
+  public void enable(int samplingPeriod);
   public void disable();
   public int getSamplingPeriod();
   // ...

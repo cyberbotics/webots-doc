@@ -427,8 +427,8 @@ const float *wb_lidar_get_layer_range_image(WbDeviceTag tag, int layer);
 
 namespace webots {
   class Lidar : public Device {
-    const float * getRangeImage() const;
-    const float * getLayerRangeImage(int layer) const;
+    const float *getRangeImage() const;
+    const float *getLayerRangeImage(int layer) const;
     // ...
   }
 }
@@ -533,8 +533,8 @@ int wb_lidar_get_number_of_points(WbDeviceTag tag);
 
 namespace webots {
   class Lidar : public Device {
-    const LidarPoint * getPointCloud() const;
-    const LidarPoint * getLayerPointCloud(int layer) const;
+    const LidarPoint *getPointCloud() const;
+    const LidarPoint *getLayerPointCloud(int layer) const;
     int getNumberOfPoints() const;
     // ...
   }

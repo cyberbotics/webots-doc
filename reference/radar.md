@@ -559,7 +559,7 @@ This function allows the controller to get the number of targets currently seen 
 ```c
 #include <webots/radar.h>
 
-const WbRadarTarget * wb_radar_get_targets(WbDeviceTag tag);
+const WbRadarTarget *wb_radar_get_targets(WbDeviceTag tag);
 ```
 
 %tab-end

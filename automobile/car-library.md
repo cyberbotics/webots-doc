@@ -102,6 +102,13 @@ typedef enum {
   WBU_CAR_FOUR_BY_FOUR
 } wbu_car_type;
 
+typedef enum {
+  WBU_CAR_COMBUTSION_ENGINE,
+  WBU_CAR_ELECTRIC_ENGINE,
+  WBU_CAR_PARALLEL_HYBRID_ENGINE,
+  WBU_CAR_POWER_SPLIT_HYBRID_ENGINE
+} wbu_car_engine_type;
+
 wbu_car_type wbu_car_get_type();
 wbu_car_engine_type wbu_car_get_engine_type();
 ```
@@ -482,6 +489,8 @@ double wbu_car_get_wheel_speed(int wheel_index);
 
 namespace webots {
   class Car : public Driver {
+    enum { WHEEL_FRONT_RIGHT, WHEEL_FRONT_LEFT, WHEEL_REAR_RIGHT, WHEEL_REAR_LEFT, WHEEL_NB };
+
     double getWheelEncoder(int wheel_index);
     double getWheelSpeed(int wheel_index);
     // ...
@@ -497,6 +506,8 @@ namespace webots {
 from controller import Car
 
 class Car (Driver):
+    WHEEL_FRONT_RIGHT, WHEEL_FRONT_LEFT, WHEEL_REAR_RIGHT, WHEEL_REAR_LEFT, WHEEL_NB
+
     def getWheelEncoder(self, wheel_index):
     def getWheelSpeed(self, wheel_index):
     # ...
@@ -510,6 +521,8 @@ class Car (Driver):
 import com.cyberbotics.webots.controller.Car;
 
 public class Car extends Driver {
+  public final static int WHEEL_FRONT_RIGHT, WHEEL_FRONT_LEFT, WHEEL_REAR_RIGHT, WHEEL_REAR_LEFT, WHEEL_NB;
+
   public double getWheelEncoder(int wheel);
   public double getWheelSpeed(int wheel);
   // ...

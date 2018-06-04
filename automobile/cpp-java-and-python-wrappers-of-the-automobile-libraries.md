@@ -6,37 +6,48 @@ The [Driver](driver-library.md) and [Car](car-library.md) classes are containing
 Camel case is used to define the method names.
 The `init` and `cleanup` functions are called automatically from the constructor/destructor of the [Driver](driver-library.md) and [Car](car-library.md) classes.
 
-> **Note** [Java]: The following program shows how to set the cruising speed and the steering angle in Java:
+%tab-component
 
-> ```java
-> import com.cyberbotics.webots.controller.Robot;
-> import com.cyberbotics.webots.controller.vehicle.Driver;
->
-> public class VehicleDriver {
->   public static void main(String[] args) {
->     Driver driver = new Driver();
->     driver.setCruisingSpeed(20.0);
->
->     while (driver.step() != -1) {
->       double angle = 0.3 * Math.cos(driver.getTime());
->       driver.setSteeringAngle(angle);
->     };
->   }
-> }
-> ```
+%tab "Python"
 
-> **Note** [Python]: The following program shows how to set the cruising speed and the steering angle in Python:
+> The following program shows how to set the cruising speed and the steering angle in Python:
+```python
+import math
 
-> ```python
-> import math
->
-> from vehicle import Driver
->
-> driver = Driver()
-> driver.setSteeringAngle(0.2)
-> driver.setCruisingSpeed(20)
->
-> while driver.step() != -1:
->   angle = 0.3 * math.cos(driver.getTime())
->   driver.setSteeringAngle(angle)
-> ```
+from vehicle import Driver
+
+driver = Driver()
+driver.setSteeringAngle(0.2)
+driver.setCruisingSpeed(20)
+
+while driver.step() != -1:
+    angle = 0.3 * math.cos(driver.getTime())
+    driver.setSteeringAngle(angle)
+```
+ 
++%tab-end
+
+%tab "Java"
+
+> The following program shows how to set the cruising speed and the steering angle in Java:
+
+```java
+import com.cyberbotics.webots.controller.Robot;
+import com.cyberbotics.webots.controller.vehicle.Driver;
+
+public class VehicleDriver {
+  public static void main(String[] args) {
+    Driver driver = new Driver();
+    driver.setCruisingSpeed(20.0);
+
+    while (driver.step() != -1) {
+      double angle = 0.3 * Math.cos(driver.getTime());
+      driver.setSteeringAngle(angle);
+    };
+  }
+}
+```
+ 
++%tab-end
+
+%end

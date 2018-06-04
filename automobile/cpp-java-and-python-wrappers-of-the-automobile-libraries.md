@@ -30,7 +30,6 @@ while driver.step() != -1:
 %tab "Java"
 
 > The following program shows how to set the cruising speed and the steering angle in Java:
-
 ```java
 import com.cyberbotics.webots.controller.Robot;
 import com.cyberbotics.webots.controller.vehicle.Driver;

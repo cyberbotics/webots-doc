@@ -2,9 +2,9 @@
 
 The [driver](driver-library.md) and [car](car-library.md) libraries are also available as oriented-object wrappers for the C++, the Java and the Python languages.
 
-The [Driver](cpp-libraries.md#cppdriver) and [Car](cpp-libraries.md#cppcar) classes are containing all the methods described in the C API.
+The [Driver](driver-library.md) and [Car](car-library.md) classes are containing all the methods described in the C API.
 Camel case is used to define the method names.
-The `init` and `cleanup` functions are called automatically from the constructor/destructor of the [Driver](cpp-libraries.md#cppdriver) and [Car](cpp-libraries.md#cppcar) classes.
+The `init` and `cleanup` functions are called automatically from the constructor/destructor of the [Driver](driver-library.md) and [Car](car-library.md) classes.
 
 > **Note** [Java]: The following program shows how to set the cruising speed and the steering angle in Java:
 

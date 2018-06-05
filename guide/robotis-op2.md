@@ -212,9 +212,7 @@ The other parameters are set to default values that are known to works fine.
 It is however possible to change them if needed, by changing the default values that are stored in a ".ini" configuration file.
 In the [appendix](#walking-parameters), all the parameters of the gait are explained.
 
-**Name**
-
-**RobotisOp2GaitManager(webots::Robot \*robot, const std::string &iniFilename)** - *Gait Manager constructor*
+##### `RobotisOp2GaitManager(webots::Robot *robot, const std::string &iniFilename)`
 
 ```cpp
 #include <RobotisOp2GaitManager.hpp>
@@ -222,7 +220,9 @@ In the [appendix](#walking-parameters), all the parameters of the gait are expla
 RobotisOp2GaitManager(webots::Robot *robot, const std::string &iniFilename);
 ```
 
-**Description**
+###### Description
+
+*Gait Manager constructor*
 
 The first parameter is the robot on which the algorithm applies and the second is the file name in which the default parameters are stored.
 
@@ -230,9 +230,11 @@ The following methods are available in order to modify the main parameters in yo
 
 ---
 
-**Name**
-
-**void setXAmplitude(double x)**, **void setYAmplitude(double y)**, **void setAAmplitude(double a)**, **void setMoveAimOn(bool q)**, **void setBalanceEnable(bool q)** - *Change the gait parameters*
+##### `void setXAmplitude(double x)`
+##### `void setYAmplitude(double y)`
+##### `void setAAmplitude(double a)`
+##### `void setMoveAimOn(bool q)`
+##### `void setBalanceEnable(bool q)`
 
 ```cpp
 #include <RobotisOp2GaitManager.hpp>
@@ -244,7 +246,9 @@ void setMoveAimOn(bool q);
 void setBalanceEnable(bool q);
 ```
 
-**Description**
+###### Description
+
+*Change the gait parameters*
 
 These are the open parameters, they have the following impact on the gait:
 
@@ -258,9 +262,9 @@ Finally the following methods can be used in order to run the algorithm:
 
 ---
 
-**Name**
-
-**void start()**, **void step(int duration)**, **void stop()** - *Start, stop and run the gait.*
+##### `void start()`
+##### `void step(int duration)`
+##### `void stop()`
 
 ```cpp
 #include <RobotisOp2GaitManager.hpp>
@@ -270,7 +274,9 @@ void step(int duration);
 int  stop();
 ```
 
-**Description**
+###### Description
+
+*Start, stop and run the gait.*
 
 The *start* and *stop* functions are used to start and stop the algorithm.
 The *step* function is used to run the algorithm for a specified *duration*, expressed in milliseconds.
@@ -279,7 +285,7 @@ The *step* function is used to run the algorithm for a specified *duration*, exp
 It is therefore essential to enable the `Gyro` device and the `PositionSensor` device of each motor before using it.
 If it is not the case, a warning will appear and they will automatically be enabled.
 
-### Motion Manager
+#### Motion Manager
 
 The `RobotisOp2MotionManager` class allows you to play a predefined motion stored in the "motion\_4096.bin" file.
 The main motions and their corresponding ids are listed in [appendix](#motions-files).
@@ -289,9 +295,7 @@ It is also possible to add custom motions to this file by using the `Action Edit
 > **Note**: The `Action Editor` tool is provided by ROBOTIS.
 More information about are available on the [website](http://support.robotis.com/en/product/darwin-op/development/tools/action_editor.htm).
 
-**Name**
-
-**RobotisOp2MotionManager(webots::Robot \*robot)** - *Motion Manager constructor*
+##### `RobotisOp2MotionManager(webots::Robot *robot)`
 
 ```cpp
 #include <RobotisOp2MotionManager.hpp>
@@ -299,15 +303,15 @@ More information about are available on the [website](http://support.robotis.com
 RobotisOp2MotionManager(webots::Robot *robot);
 ```
 
-**Description**
+###### Description
+
+*Motion Manager constructor*
 
 The first parameter is the robot on which the algorithm applies.
 
 ---
 
-**Name**
-
-**void playPage(int id)** - *Plays a motion*
+##### `void playPage(int id)`
 
 ```cpp
 #include <RobotisOp2MotionManager.hpp>
@@ -315,20 +319,22 @@ The first parameter is the robot on which the algorithm applies.
 void playPage(int id);
 ```
 
-**Description**
+###### Description
+
+*Plays a motion*
 
 Plays the motion associated with page `id`.
 
-#### Motion Manager in Step-by-Step
+##### Motion Manager in Step-by-Step
 
 By default when starting a motion, the motion is run synchronously.
 It means that the controller execution is stopped until the motion is finished.
 But it is also possible to run a motion asynchronously, in that case, the motion is started but the execution flow of the controller is not stopped.
 This can be done by calling the method `playPage` with the second parameter set to false:
 
-**Name**
-
-**void playPage(int id, bool sync = true)**, **void step(int duration)**, **bool isMotionPlaying()** - *Starts the motion in Step-by-Step mode.*
+##### `void playPage(int id, bool sync = true)`
+##### `void step(int duration)`
+##### `bool isMotionPlaying()`
 
 ```cpp
 #include <RobotisOp2MotionManager.hpp>
@@ -338,7 +344,9 @@ void step(int duration);
 bool isMotionPlaying();
 ```
 
-**Description**
+###### Description
+
+*Starts the motion in Step-by-Step mode.*
 
 The *playPage* function initializes the motion, but does not run it.
 The *step* method has to be called to run it (before calling the robot *step* function).
@@ -357,13 +365,11 @@ while (mMotionManager->isMotionPlaying()) {
 }
 ```
 
-### Vision Manager
+#### Vision Manager
 
 The `RobotisOp2VisionManager` class allows you to use some image processing tools.
 
-**Name**
-
-**RobotisOp2VisionManager(int width, int height, int hue, int hueTolerance, int minSaturation, int minValue, int minPercent, int maxPercent)** - *Vision Manager constructor*
+##### `RobotisOp2VisionManager(int width, int height, int hue, int hueTolerance, int minSaturation, int minValue, int minPercent, int maxPercent)`
 
 ```cpp
 #include <RobotisOp2VisionManager.hpp>
@@ -378,7 +384,9 @@ RobotisOp2VisionManager(int width,
                         int maxPercent);
 ```
 
-**Description**
+###### Description
+
+*Vision Manager constructor*
 
 The Vision Manager constructor.
 The arguments are the following:
@@ -403,9 +411,7 @@ To find the color hue of the target object and to understand the impact of the s
 
 ---
 
-**Name**
-
-**bool getBallCenter(double &x, double &y, const unsigned char \*image)** - *Get the position of the target object*
+##### `bool getBallCenter(double &x, double &y, const unsigned char \*image)`
 
 ```cpp
 #include <RobotisOp2VisionManager.hpp>
@@ -413,7 +419,9 @@ To find the color hue of the target object and to understand the impact of the s
 void getBallCenter(double &x, double &y, const unsigned char *image);
 ```
 
-**Description**
+###### Description
+
+*Get the position of the target object*
 
 Get the center of the target object.
 This method returns true if the target was found, and false otherwise.
@@ -429,9 +437,7 @@ This method proceeds with the following steps:
 
 ---
 
-**Name**
-
-**bool isDetected(int x, int y);** - *Determine if a pixel of the image is part of the target*
+##### `bool isDetected(int x, int y);`
 
 ```cpp
 #include <RobotisOp2VisionManager.hpp>
@@ -439,7 +445,9 @@ This method proceeds with the following steps:
 void isDetected(int x, int y);
 ```
 
-**Description**
+###### Description
+
+*Determine if a pixel of the image is part of the target*
 
 Once the method `getBallCenter` was called it is possible to know which pixels of the image are part of the target object by using the method `isDetected`.
 This method returns true if the pixel (x,y) is part of the target object and false otherwise.

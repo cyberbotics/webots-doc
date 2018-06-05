@@ -46,11 +46,15 @@ This field accepts any value in the interval (0.0, inf).
 
 ### GPS Functions
 
-**Name**
+#### `wb_gps_enable`
+#### `wb_gps_disable`
+#### `wb_gps_get_sampling_period`
+#### `wb_gps_get_values`
+#### `wb_gps_get_speed`
 
-**wb\_gps\_enable**, **wb\_gps\_disable**, **wb\_gps\_get\_sampling\_period**, **wb\_gps\_get\_values**, **wb\_gps\_get\_speed** - *enable, disable and read the GPS measurements*
+%tab-component
 
-{[C++](cpp-api.md#cpp_gps)}, {[Java](java-api.md#java_gps)}, {[Python](python-api.md#python_gps)}, {[Matlab](matlab-api.md#matlab_gps)}, {[ROS](ros-api.md)}
+%tab "C"
 
 ```c
 #include <webots/gps.h>
@@ -62,7 +66,88 @@ const double *wb_gps_get_values(WbDeviceTag tag);
 const double wb_gps_get_speed(WbDeviceTag tag);
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include "<webots/GPS.hpp>"
+
+namespace webots {
+  class GPS : public Device {
+    virtual void enable(int samplingPeriod);
+    virtual void disable();
+    int getSamplingPeriod() const;
+    const double *getValues() const;
+    const double getSpeed() const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import GPS
+
+class GPS (Device):
+    def enable(self, samplingPeriod):
+    def disable(self):
+    def getSamplingPeriod(self):
+    def getValues(self):
+    def getSpeed(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.GPS;
+
+public class GPS extends Device {
+  public void enable(int samplingPeriod);
+  public void disable();
+  public int getSamplingPeriod();
+  public double[] getValues();
+  public double getSpeed();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+wb_gps_enable(tag, sampling_period)
+wb_gps_disable(tag)
+period = wb_gps_get_sampling_period(tag)
+[x y z] = wb_gps_get_values(tag)
+speed = wb_gps_get_speed(tag)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/values` | `topic` | [`sensor_msgs::NavSatFix`](http://docs.ros.org/api/sensor_msgs/html/msg/NavSatFix.html) | [`Header`](http://docs.ros.org/api/std_msgs/html/msg/Header.html) `header`<br/>[`sensor_msgs/NavSatStatus`](http://docs.ros.org/api/sensor_msgs/html/msg/NavSatStatus.html) `status`<br/>`float64 latitude`<br/>`float64 longitude`<br/>`float64 altitude`<br/>`float64[9] position_covariance`<br/>`uint8 COVARIANCE_TYPE_UNKNOWN=0`<br/>`uint8 COVARIANCE_TYPE_APPROXIMATED=1`<br/>`uint8 COVARIANCE_TYPE_DIAGONAL_KNOWN=2`<br/>`uint8 COVARIANCE_TYPE_KNOWN=3`<br/>`uint8 position_covariance_type`<br/><br/>Note: coordinates may be set locally (X-Y-Z) instead of globally (lat-long-alt) depending on the GPS coordinate system used. |
+| `/<device_name>/speed` | `topic` | webots_ros::Float64Stamped | [`Header`](http://docs.ros.org/api/std_msgs/html/msg/Header.html) `header`<br/>`float64 data` |
+| `/<device_name>/enable` | `service` | [`webots_ros::set_int`](ros-api.md#common-services) | |
+| `/<device_name>/get_sampling_period` | `service` | [`webots_ros::get_int`](ros-api.md#common-services) | |
+
+%tab-end
+
+%end
+
+##### Description
+
+*enable, disable and read the GPS measurements*
 
 The `wb_gps_enable` function allows the user to enable GPS measurements.
 The `sampling_period` argument specifies the sampling period of the sensor and is expressed in milliseconds.
@@ -90,11 +175,11 @@ If these values are needed for a longer period they must be copied.
 
 ---
 
-**Name**
+#### `wb_gps_get_coordinate_system`
 
-**wb\_gps\_get\_coordinate\_system** - *get the gps coordinate system*
+%tab-component
 
-{[C++](cpp-api.md#cpp_gps)}, {[Java](java-api.md#java_gps)}, {[Python](python-api.md#python_gps)}, {[Matlab](matlab-api.md#matlab_gps)}, {[ROS](ros-api.md)}
+%tab "C"
 
 ```c
 #include <webots/gps.h>
@@ -102,18 +187,80 @@ If these values are needed for a longer period they must be copied.
 int wb_gps_get_coordinate_system(WbDeviceTag tag);
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include "<webots/GPS.hpp>"
+
+namespace webots {
+  class GPS : public Device {
+    const int getCoordinateSystem() const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import GPS
+
+class GPS (Device):
+    def getCoordinateSystem(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.GPS;
+
+public class GPS extends Device {
+  public int getCoordinateSystem();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+coordinate_system = wb_gps_get_coordinate_system(tag)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/get_coordinate_system` | `service` | [`webots_ros::get_int`](ros-api.md#common-services) | |
+
+%tab-end
+
+%end
+
+##### Description
+
+*get the gps coordinate system*
 
 This function allows the user to retrieve the coordinate system type defined by the `gpsCoordinateSystem` field of the [WorldInfo](worldinfo.md) node.
 If the value of the `gpsCoordinateSystem` field is "local" then this function returns WB\_GPS\_LOCAL\_COORDINATE, and otherwise it returns WB\_GPS\_WGS84\_COORDINATE.
 
 ---
 
-**Name**
+#### `wb_gps_convert_to_degrees_minutes_seconds`
 
-**wb\_gps\_convert\_to\_degrees\_minutes\_seconds** - *convert decimal degrees to degrees minutes seconds*
+%tab-component
 
-{[C++](cpp-api.md#cpp_gps)}, {[Java](java-api.md#java_gps)}, {[Python](python-api.md#python_gps)}, {[Matlab](matlab-api.md#matlab_gps)}, {[ROS](ros-api.md)}
+%tab "C"
 
 ```c
 #include <webots/gps.h>
@@ -121,7 +268,70 @@ If the value of the `gpsCoordinateSystem` field is "local" then this function re
 const char * wb_gps_convert_to_degrees_minutes_seconds(double decimal_degrees);
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include "<webots/GPS.hpp>"
+
+namespace webots {
+  class GPS : public Device {
+    static std::string convertToDegreesMinutesSeconds(double decimalDegree);
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import GPS
+
+class GPS (Device):
+    @staticmethod
+    def convertToDegreesMinutesSeconds(decimalDegree):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.GPS;
+
+public class GPS extends Device {
+  public static String convertToDegreesMinutesSeconds(double decimalDegree);
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+coordinate = wb_gps_convert_to_degrees_minutes_seconds(decimal_degrees)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/decimal_degrees_to_degrees_minutes_seconds` | `service` | `webots_ros::gps_decimal_degrees_to_degrees_minutes_seconds` | `float32 decimalDegrees`<br/>`---`<br/>`string degreesMinutesSeconds` |
+
+%tab-end
+
+%end
+
+##### Description
+
+*convert decimal degrees to degrees minutes seconds*
 
 This function converts a decimal degrees coordinate into a string representing the coordinate in the degrees minutes seconds format.
 

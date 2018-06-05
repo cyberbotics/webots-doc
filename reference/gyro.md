@@ -34,11 +34,14 @@ This field accepts any value in the interval (0.0, inf).
 
 ### Gyro Functions
 
-**Name**
+#### `wb_gyro_enable`
+#### `wb_gyro_disable`
+#### `wb_gyro_get_sampling_period`
+#### `wb_gyro_get_values`
 
-**wb\_gyro\_enable**, **wb\_gyro\_disable**, **wb\_gyro\_get\_sampling\_period**, **wb\_gyro\_get\_values** - *enable, disable and read the output values of the gyro device*
+%tab-component
 
-{[C++](cpp-api.md#cpp_gyro)}, {[Java](java-api.md#java_gyro)}, {[Python](python-api.md#python_gyro)}, {[Matlab](matlab-api.md#matlab_gyro)}, {[ROS](ros-api.md)}
+%tab "C"
 
 ```c
 #include <webots/gyro.h>
@@ -49,7 +52,83 @@ int wb_gyro_get_sampling_period(WbDeviceTag tag);
 const double *wb_gyro_get_values(WbDeviceTag tag);
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include "<webots/Gyro.hpp>"
+
+namespace webots {
+  class Gyro : public Device {
+    virtual void enable(int samplingPeriod);
+    virtual void disable();
+    int getSamplingPeriod() const;
+    const double *getValues() const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Gyro
+
+class Gyro (Device):
+    def enable(self, samplingPeriod):
+    def disable(self):
+    def getSamplingPeriod(self):
+    def getValues(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Gyro;
+
+public class Gyro extends Device {
+  public void enable(int samplingPeriod);
+  public void disable();
+  public int getSamplingPeriod();
+  public double[] getValues();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+wb_gyro_enable(tag, sampling_period)
+wb_gyro_disable(tag)
+period = wb_gyro_get_sampling_period(tag)
+[x y z] = wb_gyro_get_values(tag)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/values` | `topic` | [`sensor_msgs::Imu`](http://docs.ros.org/api/sensor_msgs/html/msg/Imu.html) | [`Header`](http://docs.ros.org/api/std_msgs/html/msg/Header.html) `header`<br/>[`geometry_msgs/Quaternion`](http://docs.ros.org/api/geometry_msgs/html/msg/Quaternion.html) `orientation`<br/>`float64[9] orientation_covariance`<br/>[`geometry_msgs/Vector3`](http://docs.ros.org/api/geometry_msgs/html/msg/Vector3.html) `angular_velocity`<br/>`float64[9] angular_velocity_covariance`<br/>[`geometry_msgs/Vector3`](http://docs.ros.org/api/geometry_msgs/html/msg/Vector3.html) `linear_acceleration`<br/>`float64[9] linear_acceleration_covariance`<br/><br/>Note: only the angular_velocity is filled in |
+| `/<device_name>/enable` | `service` | [`webots_ros::set_int`](ros-api.md#common-services) | |
+| `/<device_name>/get_sampling_period` | `service` | [`webots_ros::get_int`](ros-api.md#common-services) | |
+
+%tab-end
+
+%end
+
+##### Description
+
+*enable, disable and read the output values of the gyro device*
 
 The `wb_gyro_enable` function turns on the angular velocity measurements.
 The `sampling_period` argument specifies the sampling period of the sensor and is expressed in milliseconds.

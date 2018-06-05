@@ -53,11 +53,14 @@ This field accepts any value in the interval (0.0, inf).
 
 ### InertialUnit Functions
 
-**Name**
+#### `wb_inertial_unit_enable`
+#### `wb_inertial_unit_disable`
+#### `wb_inertial_unit_get_sampling_period`
+#### `wb_inertial_unit_get_roll_pitch_yaw`
 
-**wb\_inertial\_unit\_enable**, **wb\_inertial\_unit\_disable**, **wb\_inertial\_unit\_get\_sampling\_period**, **wb\_inertial\_unit\_get\_roll\_pitch\_yaw** - *enable, disable and read the output values of the inertial unit*
+%tab-component
 
-{[C++](cpp-api.md#cpp_inertial_unit)}, {[Java](java-api.md#java_inertial_unit)}, {[Python](python-api.md#python_inertial_unit)}, {[Matlab](matlab-api.md#matlab_inertial_unit)}, {[ROS](ros-api.md)}
+%tab "C"
 
 ```c
 #include <webots/inertial_unit.h>
@@ -68,7 +71,83 @@ int wb_inertial_unit_get_sampling_period(WbDeviceTag tag);
 const double *wb_inertial_unit_get_roll_pitch_yaw(WbDeviceTag tag);
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/InertialUnit.hpp>
+
+namespace webots {
+  class InertialUnit : public Device {
+    virtual void enable(int samplingPeriod);
+    virtual void disable();
+    int getSamplingPeriod() const;
+    const double *getRollPitchYaw() const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import InertialUnit
+
+class InertialUnit (Device):
+    def enable(self, samplingPeriod):
+    def disable(self):
+    def getSamplingPeriod(self):
+    def getRollPitchYaw(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.InertialUnit;
+
+public class InertialUnit extends Device {
+  public void enable(int samplingPeriod);
+  public void disable();
+  public int getSamplingPeriod();
+  public double[] getRollPitchYaw();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+wb_inertial_unit_enable(tag, sampling_period)
+wb_inertial_unit_disable(tag)
+period = wb_inertial_unit_get_sampling_period(tag)
+[roll pitch yaw] = wb_inertial_unit_get_roll_pitch_yaw(tag)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/roll_pitch_yaw` | `topic` | [`sensor_msgs::Imu`](http://docs.ros.org/api/sensor_msgs/html/msg/Imu.html) | [`Header`](http://docs.ros.org/api/std_msgs/html/msg/Header.html) `header`<br/>[`geometry_msgs/Quaternion`](http://docs.ros.org/api/geometry_msgs/html/msg/Quaternion.html) `orientation`<br/>`float64[9] orientation_covariance`<br/>[`geometry_msgs/Vector3`](http://docs.ros.org/api/geometry_msgs/html/msg/Vector3.html) `angular_velocity`<br/>`float64[9] angular_velocity_covariance`<br/>[`geometry_msgs/Vector3`](http://docs.ros.org/api/geometry_msgs/html/msg/Vector3.html) `linear_acceleration`<br/>`float64[9] linear_acceleration_covariance`<br/><br/>Note: only the orientation is filled in |
+| `/<device_name>/enable` | `service` | [`webots_ros::set_int`](ros-api.md#common-services) | |
+| `/<device_name>/get_sampling_period` | `service` | [`webots_ros::get_int`](ros-api.md#common-services) | |
+
+%tab-end
+
+%end
+
+##### Description
+
+*enable, disable and read the output values of the inertial unit*
 
 The `wb_inertial_unit_enable` function turns on the angle measurements.
 The `sampling_period` argument specifies the sampling period of the sensor and is expressed in milliseconds.

@@ -52,6 +52,7 @@ int wb_position_sensor_get_type(WbDeviceTag tag);
 namespace webots {
   class PositionSensor : public Device {
     enum {ANGULAR, LINEAR};
+
     virtual void enable(int samplingPeriod);
     virtual void disable();
     int getSamplingPeriod() const;
@@ -70,6 +71,7 @@ from controller import PositionSensor
 
 class PositionSensor (Device):
     ANGULAR, LINEAR
+
     def enable(self, samplingPeriod):
     def disable(self):
     def getSamplingPeriod(self):
@@ -86,6 +88,7 @@ import com.cyberbotics.webots.controller.PositionSensor;
 
 public class PositionSensor extends Device {
   public final static int ANGULAR, LINEAR;
+
   public void enable(int samplingPeriod);
   public void disable();
   public int getSamplingPeriod();
@@ -100,6 +103,7 @@ public class PositionSensor extends Device {
 
 ```matlab
 WB_ANGULAR, WB_LINEAR
+
 wb_position_sensor_enable(tag, sampling_period)
 wb_position_sensor_disable(tag)
 period = wb_position_sensor_get_sampling_period(tag)

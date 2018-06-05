@@ -74,7 +74,7 @@ namespace webots {
 from controller import LED
 
 class LED (Device):
-    def set(self, state):
+    def set(self, value):
     def get(self):
 ```
 
@@ -86,7 +86,7 @@ class LED (Device):
 import com.cyberbotics.webots.controller.LED;
 
 public class LED extends Device {
-  public void set(int state);
+  public void set(int value);
   public int get();
 }
 ```
@@ -96,8 +96,8 @@ public class LED extends Device {
 %tab "MATLAB"
 
 ```matlab
-wb_led_set(tag, state)
-state = wb_led_get(tag)
+wb_led_set(tag, value)
+value = wb_led_get(tag)
 ```
 
 %tab-end

@@ -69,9 +69,9 @@ class MouseState:
 import com.cyberbotics.webots.controller.MouseState;
 
 public class MouseState {
-  public double getLeft();
-  public double getMiddle();
-  public double getRight();
+  public boolean getLeft();
+  public boolean getMiddle();
+  public boolean getRight();
   public double getX();
   public double getY();
   public double getZ();
@@ -99,7 +99,7 @@ structs.WbMouseState.members = struct(
 
 %tab-end
 
-> `MouseState` data is directly accessible from the related [`/mouse/get_state` service](#wb_mouse_enable).
+> `MouseState` data is directly accessible from the related [`/mouse/mouse_get_state` service](#wb_mouse_enable).
 
 %end
 
@@ -114,7 +114,7 @@ These values may be `NaN` if not applicable, for example when the mouse is point
 #### `wb_mouse_enable`
 #### `wb_mouse_disable`
 #### `wb_mouse_get_sampling_period`
-#### `wb_mouse_get_key`
+#### `wb_mouse_get_state`
 
 %tab-component
 
@@ -192,10 +192,9 @@ state = wb_mouse_get_state()
 
 | name | service/topic | data type | data type definition |
 | --- | --- | --- | --- |
-| `/mouse/key` | `topic` | webots_ros::Int32Stamped | [`Header`](http://docs.ros.org/api/std_msgs/html/msg/Header.html) `header`<br/>`int32 data` |
 | `/mouse/enable` | `service` | [`webots_ros::set_int`](ros-api.md#common-services) | |
 | `/mouse/get_sampling_period` | `service` | [`webots_ros::get_int`](ros-api.md#common-services) | |
-| `/mouse/get_state` | `service` | `webots_ros::sensor_get_state` | `uint8 ask`<br/>`---`<br/>`uint8 x`<br/>`uint8 y`<br/>`uint8 z`<br/>`float64 x`<br/>`float64 y`<br/>`float64 z` |
+| `/mouse/mouse_get_state` | `service` | `webots_ros::mouse_get_state` | `uint8 ask`<br/>`---`<br/>`uint8 x`<br/>`uint8 y`<br/>`uint8 z`<br/>`float64 x`<br/>`float64 y`<br/>`float64 z` |
 
 %tab-end
 

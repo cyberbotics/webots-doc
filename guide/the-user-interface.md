@@ -176,7 +176,7 @@ This mode can be useful to debug your meshes.
 If the *wireframe rendering* mode and the `View / Optional Rendering / Show All Bounding Objects` toggle button are both activated, then only bounding objects are drawn (not the renderable primitives).
 This can be used to debug a problem with the collision detection.
 
-- Finally, the **Optional Rendering** submenu allows you to display, or to hide, supplementary information.
+- The **Optional Rendering** submenu allows you to display, or to hide, supplementary information.
 These renderings are displayed only in the main rendering and hide in the robot camera.
 They are used to understand better the behavior of the simulation.
 

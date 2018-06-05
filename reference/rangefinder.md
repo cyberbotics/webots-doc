@@ -470,8 +470,8 @@ float wb_range_finder_image_get_depth(const float *image, int width, int x, int 
 
 namespace webots {
   class RangeFinder : public Device {
-    const unsigned char *getRangeImage() const;
-    static unsigned char rangeImageGetDepth(const float *image, int width, int x, int y);
+    const float *getRangeImage() const;
+    static float rangeImageGetDepth(const float *image, int width, int x, int y);
     // ...
   }
 }
@@ -500,7 +500,8 @@ class RangeFinder (Device):
 import com.cyberbotics.webots.controller.RangeFinder;
 
 public class RangeFinder extends Device {
-  public double[] getRangeImage();
+  public float[] getRangeImage();
+  public static float rangeImageGetDepth(float[] image, int width, int x, int y);
   // ...
 }
 ```
@@ -613,7 +614,7 @@ public class RangeFinder extends Device {
 %tab "MATLAB"
 
 ```matlab
-wb_range_finder_save_image(tag, 'filename', quality)
+success = wb_range_finder_save_image(tag, 'filename', quality)
 ```
 
 %tab-end

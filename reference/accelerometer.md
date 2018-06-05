@@ -65,7 +65,7 @@ namespace webots {
   class Accelerometer : public Device {
     virtual void enable(int samplingPeriod);
     virtual void disable();
-    int getSamplingPeriod();
+    int getSamplingPeriod() const;
     const double *getValues() const;
     // ...
   }
@@ -97,7 +97,7 @@ import com.cyberbotics.webots.controller.Accelerometer;
 public class Accelerometer extends Device {
   public void enable(int samplingPeriod);
   public void disable();
-  int getSamplingPeriod();
+  public int getSamplingPeriod();
   public double[] getValues();
   // ...
 }

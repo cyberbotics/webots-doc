@@ -57,7 +57,7 @@ namespace webots {
 
     virtual void enable(int samplingPeriod);
     virtual void disable();
-    int getSamplingPeriod();
+    int getSamplingPeriod() const;
     int getKey() const;
   }
 }
@@ -78,8 +78,8 @@ class Keyboard (Device):
 
     def enable(self, samplingPeriod):
     def disable(self):
-    def getKey(self):
     def getSamplingPeriod(self):
+    def getKey(self):
 ```
 
 %tab-end

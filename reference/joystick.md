@@ -39,7 +39,7 @@ namespace webots {
   class Joystick : public Device {
     virtual void enable(int samplingPeriod);
     virtual void disable();
-    int getSamplingPeriod();
+    int getSamplingPeriod() const;
     // ...
   }
 }
@@ -122,7 +122,7 @@ The `wb_joystick_get_sampling_period` function returns the value previously pass
 ```c
 #include <webots/joystick.h>
 
-bool wb_joystick_is_connected(int ms);
+bool wb_joystick_is_connected();
 ```
 
 %tab-end

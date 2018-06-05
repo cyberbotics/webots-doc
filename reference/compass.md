@@ -50,8 +50,8 @@ This field accepts any value in the interval (0.0, inf).
 
 void wb_compass_enable(WbDeviceTag tag, int sampling_period);
 void wb_compass_disable(WbDeviceTag tag);
-const double *wb_compass_get_values(WbDeviceTag tag);
 int wb_compass_get_sampling_period(WbDeviceTag tag);
+const double *wb_compass_get_values(WbDeviceTag tag);
 ```
 
 %tab-end
@@ -65,7 +65,7 @@ namespace webots {
   class Compass : public Device {
     virtual void enable(int samplingPeriod);
     virtual void disable();
-    int getSamplingPeriod();
+    int getSamplingPeriod() const;
     const double *getValues() const;
     // ...
   }

@@ -82,7 +82,7 @@ namespace webots {
   class InertialUnit : public Device {
     virtual void enable(int samplingPeriod);
     virtual void disable();
-    int getSamplingPeriod();
+    int getSamplingPeriod() const;
     const double *getRollPitchYaw() const;
     // ...
   }

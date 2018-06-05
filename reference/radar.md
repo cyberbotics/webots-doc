@@ -74,7 +74,7 @@ from controller import RadarTarget
 
 class RadarTarget:
     @property
-    distance, receivedPower, speed, azimuth
+    distance, received_power, speed, azimuth
 ```
 
 %tab-end
@@ -109,7 +109,7 @@ structs.WbRadarTarget.members = struct(
 
 %tab "ROS"
 
-> `RadarTarget` data is directly accessible from the related [`/<device_name>/targets` topic](#wb_radar_get_targets).
+> `RadarTarget` data is directly accessible from the related [`/<device_name>/targets`](#wb_radar_get_targets) topic.
 
 %tab-end
 
@@ -224,7 +224,7 @@ namespace webots {
   class Radar : public Device {
     virtual void enable(int samplingPeriod);
     virtual void disable();
-    int getSamplingPeriod();
+    int getSamplingPeriod() const;
     // ...
   }
 }
@@ -368,8 +368,8 @@ max_range = wb_radar_get_max_range(tag)
 
 | name | service/topic | data type | data type definition |
 | --- | --- | --- | --- |
-| `/<device_name>/get_max_range` | `service` | [`webots_ros::get_float`](ros-api.md#common-services) | |
 | `/<device_name>/get_min_range` | `service` | [`webots_ros::get_float`](ros-api.md#common-services) | |
+| `/<device_name>/get_max_range` | `service` | [`webots_ros::get_float`](ros-api.md#common-services) | |
 
 %tab-end
 

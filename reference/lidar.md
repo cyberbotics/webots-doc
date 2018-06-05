@@ -99,8 +99,8 @@ public class LidarPoint {
   public float getX();
   public float getY();
   public float getZ();
+  public int getLayerId();
   public float getTime();
-  public double getLayerId();
 }
 ```
 
@@ -331,7 +331,7 @@ namespace webots {
   class Lidar : public Device {
     void enablePointCloud();
     void disablePointCloud();
-    bool isPointCloudEnabled();
+    bool isPointCloudEnabled() const;
     // ...
   }
 }

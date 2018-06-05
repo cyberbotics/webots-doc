@@ -178,7 +178,7 @@ This can be used to debug a problem with the collision detection.
 
 - The **Optional Rendering** submenu allows you to display, or to hide, supplementary information.
 These renderings are displayed only in the main rendering and hide in the robot camera.
-They are used to understand better the behavior of the simulation.
+They are used to understand better the behavior of the simulation:
 
   - The **Show Coordinate System** allows you to display, or to hide, the global coordinate system at the bottom right corner of the 3D window as red, green and blue arrows representing the x, y and z axes respectively.
 
@@ -251,6 +251,9 @@ This rendering option can be activated only for solids with no other solid at th
 
 - If the **Disable selection** option is enabled, it prevents you from changing the selected solid node when clicking on the 3D window.
 This is particularly useful during the modeling phase, when you want to change the viewpoint without modifying the visible and selected fields in the scene tree.
+
+> **Note**:
+The *Follow Object*, *Follow Object and Rotate*, *Projection*, *Rendering*, *Optional Renderings* and *Disable Selection* options are saved per world whereas the other options are global.
 
 ### Simulation Menu
 

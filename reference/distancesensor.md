@@ -356,9 +356,9 @@ aperture = wb_distance_sensor_get_aperture(tag)
 
 | name | service/topic | data type | data type definition |
 | --- | --- | --- | --- |
-| `/<device_name>/get_aperture` | `service` | [`webots_ros::get_float`](ros-api.md#common-services) | |
 | `/<device_name>/get_max_value` | `service` | [`webots_ros::get_float`](ros-api.md#common-services) | |
 | `/<device_name>/get_min_value` | `service` | [`webots_ros::get_float`](ros-api.md#common-services) | |
+| `/<device_name>/get_aperture` | `service` | [`webots_ros::get_float`](ros-api.md#common-services) | |
 
 %tab-end
 
@@ -405,6 +405,7 @@ int wb_distance_sensor_get_type(WbDeviceTag tag);
 namespace webots {
   class DistanceSensor : public Device {
     enum {GENERIC, INFRA_RED, SONAR, LASER};
+
     int getType() const;
     // ...
   }
@@ -420,6 +421,7 @@ from controller import DistanceSensor
 
 class DistanceSensor (Device):
     GENERIC, INFRA_RED, SONAR, LASER
+
     def getType(self):
     # ...
 ```
@@ -444,6 +446,7 @@ public class DistanceSensor extends Device {
 
 ```matlab
 WB_DISTANCE_SENSOR_GENERIC, WB_DISTANCE_SENSOR_INFRA_RED, WB_DISTANCE_SENSOR_SONAR, WB_DISTANCE_SENSOR_LASER
+
 type = wb_distance_sensor_get_type(tag)
 ```
 

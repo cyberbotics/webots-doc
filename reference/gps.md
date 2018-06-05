@@ -291,7 +291,8 @@ namespace webots {
 from controller import GPS
 
 class GPS (Device):
-    def convertToDegreesMinutesSeconds(self, decimalDegree):
+    @staticmethod
+    def convertToDegreesMinutesSeconds(decimalDegree):
     # ...
 ```
 
@@ -303,7 +304,7 @@ class GPS (Device):
 import com.cyberbotics.webots.controller.GPS;
 
 public class GPS extends Device {
-  public String convertToDegreesMinutesSeconds(double decimalDegree);
+  public static String convertToDegreesMinutesSeconds(double decimalDegree);
   // ...
 }
 ```
@@ -313,7 +314,7 @@ public class GPS extends Device {
 %tab "MATLAB"
 
 ```matlab
-coordinate = wb_gps_convert_to_degrees_minutes_seconds(tag, decimal_degrees)
+coordinate = wb_gps_convert_to_degrees_minutes_seconds(decimal_degrees)
 ```
 
 %tab-end

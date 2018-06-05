@@ -134,7 +134,7 @@ public class Emitter extends Device {
 %tab "MATLAB"
 
 ```matlab
-wb_emitter_send(tag, data)
+success = wb_emitter_send(tag, data)
 ```
 
 %tab-end
@@ -278,6 +278,7 @@ public class Emitter extends Device {
 
 ```matlab
 WB_CHANNEL_BROADCAST
+
 wb_emitter_set_channel(tag, channel)
 channel = wb_emitter_get_channel(tag)
 ```

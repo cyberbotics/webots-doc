@@ -78,8 +78,8 @@ class Keyboard (Device):
 
     def enable(self, samplingPeriod):
     def disable(self):
-    def getKey(self):
     def getSamplingPeriod(self):
+    def getKey(self):
 ```
 
 %tab-end

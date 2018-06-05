@@ -96,11 +96,13 @@ Then, after closing the window, the overlay will be automatically restored.
 
 ### RangeFinder Functions
 
-**Name**
+#### `wb_range_finder_enable`
+#### `wb_range_finder_disable`
+#### `wb_range_finder_get_sampling_period`
 
-**wb\_range\_finder\_enable**, **wb\_range\_finder\_disable**, **wb\_range\_finder\_get\_sampling\_period** - *enable and disable range-finder updates*
+%tab-component
 
-{[C++](cpp-api.md#cpp_range_finder)}, {[Java](java-api.md#java_range_finder)}, {[Python](python-api.md#python_range_finder)}, {[Matlab](matlab-api.md#matlab_range_finder)}, {[ROS](ros-api.md)}
+%tab "C"
 
 ```c
 #include <webots/range_finder.h>
@@ -110,7 +112,78 @@ void wb_range_finder_disable(WbDeviceTag tag);
 int wb_range_finder_get_sampling_period(WbDeviceTag tag);
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/RangeFinder.hpp>
+
+namespace webots {
+  class RangeFinder : public Device {
+    virtual void enable(int samplingPeriod);
+    virtual void disable();
+    int getSamplingPeriod() const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import RangeFinder
+
+class RangeFinder (Device):
+    def enable(self, samplingPeriod):
+    def disable(self):
+    def getSamplingPeriod(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.RangeFinder;
+
+public class RangeFinder extends Device {
+  public void enable(int samplingPeriod);
+  public void disable();
+  public int getSamplingPeriod();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+wb_range_finder_enable(tag, sampling_period)
+wb_range_finder_disable(tag)
+period = wb_range_finder_get_sampling_period(tag)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/enable` | `service` | [`webots_ros::set_int`](ros-api.md#common-services) | |
+| `/<device_name>/get_sampling_period` | `service` | [`webots_ros::get_int`](ros-api.md#common-services) | |
+
+%tab-end
+
+%end
+
+##### Description
+
+*enable and disable range-finder updates*
 
 The `wb_range_finder_enable` function allows the user to enable range-finder updates.
 The `sampling_period` argument specifies the sampling period of the sensor and is expressed in milliseconds.
@@ -122,11 +195,11 @@ The `wb_range_finder_get_sampling_period` function returns the period given into
 
 ---
 
-**Name**
+#### `wb_range_finder_get_fov`
 
-**wb\_range\_finder\_get\_fov** - *get field of view for a range-finder*
+%tab-component
 
-{[C++](cpp-api.md#cpp_range_finder)}, {[Java](java-api.md#java_range_finder)}, {[Python](python-api.md#python_range_finder)}, {[Matlab](matlab-api.md#matlab_range_finder)}, {[ROS](ros-api.md)}
+%tab "C"
 
 ```c
 #include <webots/range_finder.h>
@@ -134,17 +207,80 @@ The `wb_range_finder_get_sampling_period` function returns the period given into
 double wb_range_finder_get_fov(WbDeviceTag tag);
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/RangeFinder.hpp>
+
+namespace webots {
+  class RangeFinder : public Device {
+    double getFov() const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import RangeFinder
+
+class RangeFinder (Device):
+    def getFov(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.RangeFinder;
+
+public class RangeFinder extends Device {
+  public double getFov();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+fov = wb_range_finder_get_fov(tag)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/get_info` | `service` | `webots_ros::range_finder_get_info` | `uint8 ask`<br/>`---`<br/>`uint32 width`<br/>`uint32 height`<br/>`float64 Fov`<br/>`float64 minRange`<br/>`float64 maxRange` |
+
+%tab-end
+
+%end
+
+##### Description
+
+*get field of view for a range-finder*
 
 These functions allow the controller to get the value of the field of view (fov) of a range-finder.
 
 ---
 
-**Name**
+#### `wb_range_finder_get_width`
+#### `wb_range_finder_get_height`
 
-**wb\_range\_finder\_get\_width**, **wb\_range\_finder\_get\_height** - *get the size of the range-finder image*
+%tab-component
 
-{[C++](cpp-api.md#cpp_range_finder)}, {[Java](java-api.md#java_range_finder)}, {[Python](python-api.md#python_range_finder)}, {[Matlab](matlab-api.md#matlab_range_finder)}, {[ROS](ros-api.md)}
+%tab "C"
 
 ```c
 #include <webots/range_finder.h>
@@ -153,17 +289,84 @@ int wb_range_finder_get_width(WbDeviceTag tag);
 int wb_range_finder_get_height(WbDeviceTag tag);
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/RangeFinder.hpp>
+
+namespace webots {
+  class RangeFinder : public Device {
+    int getWidth() const;
+    int getHeight() const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import RangeFinder
+
+class RangeFinder (Device):
+    def getWidth(self):
+    def getHeight(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.RangeFinder;
+
+public class RangeFinder extends Device {
+  public int getWidth();
+  public int getHeight();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+width = wb_range_finder_get_width(tag)
+height = wb_range_finder_get_height(tag)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/get_info` | `service` | `webots_ros::range_finder_get_info` | `uint8 ask`<br/>`---`<br/>`uint32 width`<br/>`uint32 height`<br/>`float64 Fov`<br/>`float64 minRange`<br/>`float64 maxRange` |
+
+%tab-end
+
+%end
+
+##### Description
+
+*get the size of the range-finder image*
 
 These functions return the width and height of a range-finder image as defined in the corresponding [RangeFinder](#rangefinder) node.
 
 ---
 
-**Name**
+#### `wb_range_finder_get_min_range`
+#### `wb_range_finder_get_max_range`
 
-**wb\_range\_finder\_get\_min\_range**, **wb\_range\_finder\_get\_max\_range** - *get the minimum and maximum range of the range-finder device*
+%tab-component
 
-{[C++](cpp-api.md#cpp_range_finder)}, {[Java](java-api.md#java_range_finder)}, {[Python](python-api.md#python_range_finder)}, {[Matlab](matlab-api.md#matlab_range_finder)}, {[ROS](ros-api.md)}
+%tab "C"
 
 ```c
 #include <webots/range_finder.h>
@@ -172,26 +375,161 @@ double wb_range_finder_get_min_range(WbDeviceTag tag);
 double wb_range_finder_get_max_range(WbDeviceTag tag);
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/RangeFinder.hpp>
+
+namespace webots {
+  class RangeFinder : public Device {
+    double getMinRange() const;
+    double getMaxRange() const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import RangeFinder
+
+class RangeFinder (Device):
+    def getMinRange(self):
+    def getMaxRange(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.RangeFinder;
+
+public class RangeFinder extends Device {
+  public double getMinRange();
+  public double getMaxRange();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+min_range = wb_range_finder_get_min_range(tag)
+max_range = wb_range_finder_get_max_range(tag)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/get_info` | `service` | `webots_ros::range_finder_get_info` | `uint8 ask`<br/>`---`<br/>`uint32 width`<br/>`uint32 height`<br/>`float64 Fov`<br/>`float64 minRange`<br/>`float64 maxRange` |
+
+%tab-end
+
+%end
+
+##### Description
+
+*get the minimum and maximum range of the range-finder device*
 
 These functions return the minRange and maxRange parameters of a range-finder device as defined in the corresponding [RangeFinder](#rangefinder) node.
 
 ---
 
-**Name**
+#### `wb_range_finder_get_range_image`
+#### `wb_range_finder_image_get_depth`
 
-**wb\_range\_finder\_get\_range\_image**, **wb\_range\_finder\_image\_get\_depth** - *get the range image and range data from a range-finder*
+%tab-component
 
-{[C++](cpp-api.md#cpp_range_finder)}, {[Java](java-api.md#java_range_finder)}, {[Python](python-api.md#python_range_finder)}, {[Matlab](matlab-api.md#matlab_range_finder)}, {[ROS](ros-api.md)}
+%tab "C"
 
 ```c
 #include <webots/range_finder.h>
 
 const float *wb_range_finder_get_range_image(WbDeviceTag tag);
-float wb_range_finder_image_get_depth(const float *range_image, int width, int x, int y);
+float wb_range_finder_image_get_depth(const float *image, int width, int x, int y);
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/RangeFinder.hpp>
+
+namespace webots {
+  class RangeFinder : public Device {
+    const float *getRangeImage() const;
+    static float rangeImageGetDepth(const float *image, int width, int x, int y);
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import RangeFinder
+
+class RangeFinder (Device):
+    def getRangeImage(self):
+    def getRangeImageArray(self):
+    @staticmethod
+    def rangeImageGetDepth(image, width, x, y):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.RangeFinder;
+
+public class RangeFinder extends Device {
+  public float[] getRangeImage();
+  public static float rangeImageGetDepth(float[] image, int width, int x, int y);
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+image = wb_range_finder_get_range_image(tag)
+depth = wb_range_finder_image_get_depth(image, width, x, y)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/range_image` | `topic` | [`sensor_msgs::Image`](http://docs.ros.org/api/sensor_msgs/html/msg/Image.html) | [`Header`](http://docs.ros.org/api/std_msgs/html/msg/Header.html) `header`<br/>`uint32 height`<br/>`uint32 width`<br/>`string encoding`<br/>`uint8 is_bigendian`<br/>`uint32 step`<br/>`uint8[] data` |
+
+%tab-end
+
+%end
+
+##### Description
+
+*get the range image and range data from a range-finder*
 
 The `wb_range_finder_get_range_image` macro allows the user to read the contents of the last range image grabbed by a range-finder.
 The range image is computed using the depth buffer produced by the OpenGL rendering.
@@ -219,11 +557,11 @@ Their content are identical but their handling is of course different.
 
 ---
 
-**Name**
+#### `wb_range_finder_save_image`
 
-**wb\_range\_finder\_save\_image** - *save a range-finder image in PNG, JPEG or TIFF format*
+%tab-component
 
-{[C++](cpp-api.md#cpp_range_finder)}, {[Java](java-api.md#java_range_finder)}, {[Python](python-api.md#python_range_finder)}, {[Matlab](matlab-api.md#matlab_range_finder)}, {[ROS](ros-api.md)}
+%tab "C"
 
 ```c
 #include <webots/range_finder.h>
@@ -231,7 +569,69 @@ Their content are identical but their handling is of course different.
 int wb_range_finder_save_image(WbDeviceTag tag, const char *filename, int quality);
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/RangeFinder.hpp>
+
+namespace webots {
+  class RangeFinder : public Device {
+    int saveImage(const std::string &filename, int quality) const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import RangeFinder
+
+class RangeFinder (Device):
+    def saveImage(self, filename, quality):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.RangeFinder;
+
+public class RangeFinder extends Device {
+  public int saveImage(String filename, int quality);
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+success = wb_range_finder_save_image(tag, 'filename', quality)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/save_image` | `service` | `webots_ros::save_image` | `string filename`<br/>`int32 quality`<br/>`---`<br/>`int8 success` |
+
+%tab-end
+
+%end
+
+##### Description
+
+*save a range-finder image in PNG, JPEG or TIFF format*
 
 The `wb_range_finder_save_image` function allows the user to save a `tag` image which was previously obtained with the `wb_range_finder_get_image` function.
 The image can be saved in a file using the PNG, JPEG, or TIFF format.

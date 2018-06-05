@@ -34,7 +34,7 @@ const char *wb_device_get_model(WbDeviceTag tag);
 
 namespace webots {
   class Device {
-    const std::string &getModel() const;
+    std::string getModel() const;
     // ...
   }
 }

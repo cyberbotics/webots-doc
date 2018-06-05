@@ -364,8 +364,8 @@ wb_display_detach_camera(tag)
 
 | name | service/topic | data type | data type definition |
 | --- | --- | --- | --- |
-| `/<device_name>/set_attach_camera` | `service` | [`webots_ros::set_string`](ros-api.md#common-services) | |
-| `/<device_name>/set_detach_camera` | `service` | [`webots_ros::get_bool`](ros-api.md#common-services) | |
+| `/<device_name>/attach_camera` | `service` | [`webots_ros::set_string`](ros-api.md#common-services) | |
+| `/<device_name>/detach_camera` | `service` | [`webots_ros::get_bool`](ros-api.md#common-services) | |
 
 %tab-end
 
@@ -405,7 +405,7 @@ void wb_display_draw_line(WbDeviceTag tag, int x1, int y1, int x2, int y2);
 void wb_display_draw_rectangle(WbDeviceTag tag, int x, int y, int width, int height);
 void wb_display_draw_oval(WbDeviceTag tag, int cx, int cy, int a, int b);
 void wb_display_draw_polygon(WbDeviceTag tag, const int *x, const int *y, int size);
-void wb_display_draw_text(WbDeviceTag tag, const char *txt, int x, int y);
+void wb_display_draw_text(WbDeviceTag tag, const char *text, int x, int y);
 void wb_display_fill_rectangle(WbDeviceTag tag, int x, int y, int width, int height);
 void wb_display_fill_oval(WbDeviceTag tag, int cx, int cy, int a, int b);
 void wb_display_fill_polygon(WbDeviceTag tag, const int *x, const int *y, int size);
@@ -420,12 +420,12 @@ void wb_display_fill_polygon(WbDeviceTag tag, const int *x, const int *y, int si
 
 namespace webots {
   class Display : public Device {
-    virtual void drawPixel(int x1, int y1);
+    virtual void drawPixel(int x, int y);
     virtual void drawLine(int x1, int y1, int x2, int y2);
     virtual void drawRectangle(int x, int y, int width, int height);
     virtual void drawOval(int cx, int cy, int a, int b);
     virtual void drawPolygon(const int *x, const int *y, int size);
-    virtual void drawText(const std::string &txt, int x, int y);
+    virtual void drawText(const std::string &text, int x, int y);
     virtual void fillRectangle(int x, int y, int width, int height);
     virtual void fillOval(int cx, int cy, int a, int b);
     virtual void fillPolygon(const int *x, const int *y, int size);
@@ -442,12 +442,12 @@ namespace webots {
 from controller import Display
 
 class Display (Device):
-    def drawPixel(self, x1, y1):
+    def drawPixel(self, x, y):
     def drawLine(self, x1, y1, x2, y2):
     def drawRectangle(self, x, y, width, height):
     def drawOval(self, cx, cy, a, b):
     def drawPolygon(self, x, y):
-    def drawText(self, txt, x, y):
+    def drawText(self, text, x, y):
     def fillRectangle(self, x, y, width, height):
     def fillOval(self, cx, cy, a, b):
     def fillPolygon(self, x, y):
@@ -462,15 +462,15 @@ class Display (Device):
 import com.cyberbotics.webots.controller.Display;
 
 public class Display extends Device {
-  public void drawPixel(int x1, int y1);
+  public void drawPixel(int x, int y);
   public void drawLine(int x1, int y1, int x2, int y2);
   public void drawRectangle(int x, int y, int width, int height);
   public void drawOval(int cx, int cy, int a, int b);
-  public void drawPolygon(int[] x, int[] y);
-  public void drawText(String txt, int x, int y);
+  public void drawPolygon(int[] x, int[] y, int size);
+  public void drawText(String text, int x, int y);
   public void fillRectangle(int x, int y, int width, int height);
   public void fillOval(int cx, int cy, int a, int b);
-  public void fillPolygon(int[] x, int[] y);
+  public void fillPolygon(int[] x, int[] y, int size);
   // ...
 }
 ```
@@ -485,7 +485,7 @@ wb_display_draw_line(tag, x1, y1, x2, y2)
 wb_display_draw_rectangle(tag, x, y, width, height)
 wb_display_draw_oval(tag, cx, cy, a, b)
 wb_display_draw_polygon(tag, [x1 x2 ... xn], [y1 y2 ... yn])
-wb_display_draw_text(tag, 'txt', x, y)
+wb_display_draw_text(tag, 'text', x, y)
 wb_display_fill_rectangle(tag, x, y, width, height)
 wb_display_fill_oval(tag, cx, cy, a, b)
 wb_display_fill_polygon(tag, [x1 x2 ... xn], [y1 y2 ... yn])
@@ -497,7 +497,7 @@ wb_display_fill_polygon(tag, [x1 x2 ... xn], [y1 y2 ... yn])
 
 | name | service/topic | data type | data type definition |
 | --- | --- | --- | --- |
-| `/<device_name>/draw_pixel` | `service` | `webots_ros::display_draw_pixel` | `int32 x1`<br/>`int32 y1`<br/>`---`<br/>`int8 success` |
+| `/<device_name>/draw_pixel` | `service` | `webots_ros::display_draw_pixel` | `int32 x`<br/>`int32 y`<br/>`---`<br/>`int8 success` |
 | `/<device_name>/draw_line` | `service` | `webots_ros::display_draw_line` | `int32 x1`<br/>`int32 y1`<br/>`int32 x2`<br/>`int32 y2`<br/>`---`<br/>`int8 success` |
 | `/<device_name>/draw_rectangle` | `service` | `webots_ros::display_draw_rectangle` | `int32 x`<br/>`int32 y`<br/>`int32 width`<br/>`int32 height`<br/>`---`<br/>`int8 success` |
 | `/<device_name>/draw_oval` | `service` | `webots_ros::display_draw_oval` | `int32 cx`<br/>`int32 cy`<br/>`int32 a`<br/>`int32 b`<br/>`---`<br/>`int8 success` |
@@ -596,12 +596,13 @@ namespace webots {
     // ...
   };
 
-  class Display : public Device 
+  class Display : public Device
     enum {RGB, RGBA, ARGB, BGRA};
+
+    ImageRef *imageNew(int width, int height, const void *data, int format) const;
+    ImageRef *imageLoad(const std::string &filename) const;
     ImageRef *imageCopy(int x, int y, int width, int height) const;
     virtual void imagePaste(ImageRef *ir, int x, int y, blend=false);
-    ImageRef *imageLoad(const std::string &filename) const;
-    ImageRef *imageNew(int width, int height, const void *data, int format) const;
     void imageSave(ImageRef *ir, const std::string &filename) const;
     void imageDelete(ImageRef *ir) const;
     // ...
@@ -621,10 +622,11 @@ class ImageRef:
 
 class Display (Device):
     RGB, RGBA, ARGB, BGRA
+
+    def imageNew(self, data, format, width=None, height=None):
+    def imageLoad(self, filename):
     def imageCopy(self, x, y, width, height):
     def imagePaste(self, ir, x, y, blend=False):
-    def imageLoad(self, filename):
-    def imageNew(self, data, format):
     def imageSave(self, ir, filename):
     def imageDelete(self, ir):
     # ...
@@ -644,10 +646,11 @@ public class ImageRef {
 
 public class Display extends Device {
   public final static int RGB, RGBA, ARGB, BGRA;
+
+  public ImageRef imageNew(int width, int height, int[] data, int format);
+  public ImageRef imageLoad(String filename);
   public ImageRef imageCopy(int x, int y, int width, int height);
   public void imagePaste(ImageRef ir, int x, int y, boolean blend);
-  public ImageRef imageLoad(String filename);
-  public ImageRef imageNew(int width, int height, int[] data, int format);
   public void imageSave(ImageRef ir, String filename);
   public void imageDelete(ImageRef ir);
   // ...
@@ -659,14 +662,12 @@ public class Display extends Device {
 %tab "MATLAB"
 
 ```matlab
-RGB
-RGBA
-ARGB
-BGRA
+RGB, RGBA, ARGB, BGRA
+
+image = wb_display_image_new(tag, data, format)
+image = wb_display_image_load(tag, 'filename')
 image = wb_display_image_copy(tag, x, y, width, height)
 wb_display_image_paste(tag, image, x, y, blend)
-image = wb_display_image_load(tag, 'filename')
-image = wb_display_image_new(tag, width, height, data, format)
 wb_display_image_save(tag, image, 'filename')
 wb_display_image_delete(tag, image)
 ```
@@ -678,9 +679,9 @@ wb_display_image_delete(tag, image)
 | name | service/topic | data type | data type definition |
 | --- | --- | --- | --- |
 | `/<device_name>/image_new` | `service` | `webots_ros::display_image_new` | `int32 width`<br/>`int32 height`<br/>`char[] data`<br/>`int32 format`<br/>`---`<br/>`uint64 ir` |
+| `/<device_name>/image_load` | `service` | `webots_ros::display_image_load` | `string filename`<br/>`---`<br/>`uint64 ir` |
 | `/<device_name>/image_copy` | `service` | `webots_ros::display_image_copy` | `int32 x`<br/>`int32 y`<br/>`int32 width`<br/>`int32 height`<br/>`---`<br/>`uint64 ir` |
 | `/<device_name>/image_paste` | `service` | `webots_ros::display_image_paste` | `uint64 ir`<br/>`int32 x`<br/>`int32 y`<br/>`uint8 blend`<br/>`---`<br/>`int8 success` |
-| `/<device_name>/image_load` | `service` | `webots_ros::display_image_load` | `string filename`<br/>`---`<br/>`uint64 ir` |
 | `/<device_name>/image_save` | `service` | `webots_ros::display_image_save` | `string filename`<br/>`uint64 ir`<br/>`---`<br/>`int8 success` |
 | `/<device_name>/image_delete` | `service` | `webots_ros::display_image_delete` | `uint64 ir`<br/>`---`<br/>`int8 success` |
 

@@ -302,7 +302,7 @@ The `wb_supervisor_node_get_parent_node` function retrieves the reference to the
 #define WB_NODE_SHAPE
 #define WB_NODE_SPHERE
 #define WB_NODE_SPOT_LIGHT
-#define WB_NODE_SWITCH 
+#define WB_NODE_SWITCH
 #define WB_NODE_TEXTURE_COORDINATE
 #define WB_NODE_TEXTURE_TRANSFORM
 #define WB_NODE_TRACK

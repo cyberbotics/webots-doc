@@ -903,19 +903,14 @@ This function returns the value of the `basicTimeStep` field of the [WorldInfo](
 ```c
 #include <webots/robot.h>
 
-<<<<<<< HEAD
-WbRobotMode wb_robot_get_mode();
-void wb_robot_set_mode(WbRobotMode mode, void *arg);
-=======
 typedef enum {
   WB_MODE_SIMULATION,
   WB_MODE_CROSS_COMPILATION,
   WB_MODE_REMOTE_CONTROL
 } WbRobotMode;
 
-int wb_robot_get_mode();
-void wb_robot_set_mode(int mode, void *arg);
->>>>>>> origin/webots-r2018a-revision-3
+WbRobotMode wb_robot_get_mode();
+void wb_robot_set_mode(WbRobotMode mode, void *arg);
 ```
 
 %tab-end

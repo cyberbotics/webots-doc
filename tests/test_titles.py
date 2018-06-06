@@ -67,7 +67,8 @@ class TestTitles(unittest.TestCase):
     def test_underscores_are_protected(self):
         """Test that titles doesn't contain any unprotected underscore."""
         for t in self.titles:
-            self.assertTrue(re.search(r'[^\\]_', t['title']) is None, msg='%s: Title "%s" contains unprotected underscore(s).' % (t['md'], t['title']))
+            title = re.sub(r'`.+?(?=`)`', '', t['title'])  # Remove code-quoted statements.
+            self.assertTrue(re.search(r'[^\\]_', title) is None, msg='%s: Title "%s" contains unprotected underscore(s).' % (t['md'], t['title']))
 
     def test_words_are_capitalized(self):
         """Test that title words are capitalized."""
@@ -79,6 +80,7 @@ class TestTitles(unittest.TestCase):
         for t in self.titles:
             title = re.sub(r'^#+\s*', '', t['title'])  # Remove the '#'+ suffix.
             title = re.sub(r'".+?(?=")"', '', title)  # Remove double-quoted statements.
+            title = re.sub(r'`.+?(?=`)`', '', title)  # Remove code-quoted statements.
             words = re.split(r'[ :\(\),/\?\']', title)
             for w in range(len(words)):
                 word = words[w]

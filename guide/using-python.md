@@ -44,6 +44,7 @@ Using Python *pip*, the *NumPy* package is automatically installed with *opencv-
 #### Linux Libraries
 
 Use the `pip` command to install OpenCV:
+
 ```sh
 sudo apt-get install python-pip
 sudo pip install opencv-python
@@ -80,4 +81,8 @@ The general idea is to walk through the following steps:
 You may check the above Makefile in `$WEBOTS_HOME/resources/languages/Makefile` to understand how to call the Python Makefile with different options.
 
 On Windows you will need to install [MSYS2 for x86\_64](http://www.msys2.org/) and run it in administrator mode to be able to modify files in `$WEBOTS_HOME`.
-From the MSYS2 console, you will need to install at least the following packages with the `pacman` command: `mingw-w65-x86_64_gcc` `make` and `swig`.
+From the MSYS2 console, you will need to install at least `gcc` `make` and `swig` with the `pacman` command: 
+```bash
+pacman -S gcc make swig
+```
+From here you can now continue with step 3.

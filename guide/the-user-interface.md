@@ -249,8 +249,11 @@ This rendering option can be activated only for solids with no other solid at th
 If the radar device is enabled the frustum is drawn in blue, otherwise if the radar is disabled or the first measurement is not available yet, the frustum is drawn in gray.
 The radar frustum represents the volume in which a target can be detected by the radar.
 
-- If the **Disable selection** option is enabled, it prevents you from changing the selected solid node when clicking on the 3D window.
+- If the **Disable Selection** option is enabled, it prevents you from changing the selected solid node when clicking on the 3D window.
 This is particularly useful during the modeling phase, when you want to change the viewpoint without modifying the visible and selected fields in the scene tree.
+
+- If the **Lock Viewpoint** option is enabled, it prevents you from changing the position and orientation of the [Viewpoint](../reference/viewpoint.md) node when dragging the mouse or moving the mouse wheel on the 3D window.
+This is particularly useful when you don't want to change accidently the position and orientation of the viewpoint.
 
 ### Simulation Menu
 

@@ -746,7 +746,6 @@ body {
 
 .blog #view img {
   max-width: 90%;
-  min-width: 90%;
   border-radius: 2px;
   cursor: pointer;
   transition: 0.05s;
@@ -783,8 +782,6 @@ body {
 .blog #view .modal-content {
   margin: 0 auto;
   display: block;
-  max-width: 600px;
-  min-width: 50%;
   border-radius: 2px;
   cursor: pointer;
   transition: 0.05s;

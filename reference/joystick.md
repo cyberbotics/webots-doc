@@ -572,6 +572,7 @@ namespace webots {
     void setConstantForceDuration(double duration);
     void setAutoCenteringGain(double gain);
     void setResistanceGain(double gain);
+    void setForceAxis(int axis);
     // ...
   }
 }
@@ -589,6 +590,7 @@ class Joystick:
     def setConstantForceDuration(self, duration):
     def setAutoCenteringGain(self, gain):
     def setResistanceGain(self, gain):
+    def setForceAxis(self, axis):
     # ...
 ```
 
@@ -604,6 +606,7 @@ public class Joystick {
   public void setConstantForceDuration(double duration);
   public void setAutoCenteringGain(double gain);
   public void setResistanceGain(double gain);
+  public void setForceAxis(int axis);
   // ...
 }
 ```
@@ -617,6 +620,7 @@ wb_joystick_set_constant_force(level)
 wb_joystick_set_constant_force_duration(duration)
 wb_joystick_set_auto_centering_gain(gain)
 wb_joystick_set_resistance_gain(gain)
+wb_joystick_set_force_axis(axis)
 ```
 
 %tab-end
@@ -629,6 +633,7 @@ wb_joystick_set_resistance_gain(gain)
 | `/joystick/set_constant_force_duration` | `service` | [`webots_ros::set_float`](ros-api.md#common-services) | |
 | `/joystick/set_auto_centering_gain` | `service` | [`webots_ros::set_float`](ros-api.md#common-services) | |
 | `/joystick/set_resistance_gain` | `service` | [`webots_ros::set_float`](ros-api.md#common-services) | |
+| `/joystick/set_force_axis` | `service` | [`webots_ros::set_int`](ros-api.md#common-services) | |
 
 %tab-end
 

@@ -29,8 +29,8 @@ Please find instructions in [this section](verifying-your-graphics-driver-instal
 
 <!-- -->
 
-> **Note**: Webots needs the *avconv* program to create MPEG-4 movies, that can be installed with *libav-tools*, *libavcodec-extra*, and *libfdk-aac0* packages.
-The package names are specific to Ubuntu 16.04 and they could slightly change on different releases and distributions.
+> **Note**: Webots needs the *ffmpeg* program to create MPEG-4 movies that can be installed with *ffmpeg* and *libfdk-aac1* packages.
+The package names are specific to Ubuntu 18.04 and they could slightly change on different releases and distributions.
 
 #### Using Advanced Packaging Tool (APT)
 
@@ -105,7 +105,7 @@ In this case an error message will be printed in the Webots console mentioning t
 
 This procedure explains how to install Webots from the DEB package (having the `.deb` extension).
 
-On Ubuntu, double-click on the DEB package file to open it with the Ubuntu Software App on Ubuntu 16.04 or Software Center on earlier versions and click on the `Install` button.
+On Ubuntu, double-click on the DEB package file to open it with the Ubuntu Software App and click on the `Install` button.
 If a previous version of Webots is already installed, then the text on the button could be different, like `Upgrade` or `Reinstall`.
 Note that GNOME Software App distributed in the first release of Ubuntu 16.04 contains a bug preventing the installation of third-party packages.
 

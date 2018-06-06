@@ -926,10 +926,10 @@ namespace webots {
       MODE_SIMULATION,
       MODE_CROSS_COMPILATION,
       MODE_REMOTE_CONTROL
-    };
+    } RobotMode;
 
-    int getMode() const;
-    void setMode(int, void *);
+    RobotMode getMode() const;
+    void setMode(RobotMode mode, void *arg);
     // ...
   }
 }

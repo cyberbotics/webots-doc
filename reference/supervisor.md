@@ -1220,7 +1220,7 @@ namespace webots {
 from controller import Supervisor
 
 class Supervisor (Robot):
-    def simulationReset(self)
+    def simulationReset(self):
     # ...
 ```
 
@@ -1959,8 +1959,7 @@ from controller import Supervisor
 
 class Supervisor (Robot):
     def woldLoad(self, file):
-    def woldSave(self):
-    def woldSave(self, file):
+    def woldSave(self, file=None):
     def woldReload(self):
     # ...
 ```

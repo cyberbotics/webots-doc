@@ -402,8 +402,8 @@ namespace webots {
 from controller import Joystick
 
 class Joystick:
-    def getNumberOfPovs(self)
-    def getPovValue(self, pov)
+    def getNumberOfPovs(self):
+    def getPovValue(self, pov):
     # ...
 ```
 

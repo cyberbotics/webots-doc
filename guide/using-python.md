@@ -9,7 +9,7 @@ The classes are either representations of a node of the scene tree (such as Robo
 A complete description of these functions can be found in the reference guide while the instructions about the common way to program a Python controller can be found in [this chapter](programming-fundamentals.md).
 
 The Python API of Webots supports both Python 3.6 and Python 2.7.
-On Ubuntu 16.04, it also supports Python 3.5 and on Ubuntu 14.04, it also support Python 3.4.
+On Ubuntu 16.04, it also supports Python 3.5.
 
 ### Installation
 
@@ -43,16 +43,11 @@ Using Python *pip*, the *NumPy* package is automatically installed with *opencv-
 
 #### Linux Libraries
 
-On Ubuntu 16.04 or newer, use the `pip` command to install OpenCV:
+Use the `pip` command to install OpenCV:
+
 ```sh
 sudo apt-get install python-pip
 sudo pip install opencv-python
-```
-
-On Ubuntu 14.04 OpenCV doesn't need to be installed because the Python OpenCV library is already included in the Ubuntu 14.04 tarball package.
-*NumPy* can be installed with this command:
-```sh
-sudo apt-get install python-numpy
 ```
 
 #### macOS Libraries

@@ -29,8 +29,8 @@ Please find instructions in [this section](verifying-your-graphics-driver-instal
 
 <!-- -->
 
-> **Note**: Webots needs the *ffmpeg* program to create MPEG-4 movies, that can be installed with *ffmpeg*, *libavcodec-extra*, and *libfdk-aac1* packages and *ubuntu-restricted-extras* for H.264 codec.
-The package names could slightly change on different releases and distributions.
+> **Note**: Webots needs the *ffmpeg* program to create MPEG-4 movies that can be installed with *ffmpeg* and *libfdk-aac1* packages.
+The package names are specific to Ubuntu 18.04 and they could slightly change on different releases and distributions.
 
 #### Using Advanced Packaging Tool (APT)
 

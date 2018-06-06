@@ -714,8 +714,12 @@ body {
   background: transparent;
 }
 
+.blog #content {
+  padding: 0px 30px;
+}
+
 .blog #view {
-  width: 90%;
+  margin: 0 auto;
   background: transparent;
 }
 

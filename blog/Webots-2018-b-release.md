@@ -39,7 +39,7 @@ Boot up Webots R2018b and have an explore of these new GUI features!
 
 ## Simulation Reset
 
-Reloading an entire world just to re-run your simulation can be slow, espeically for large worlds can be slow.
+Reloading an entire world just to re-run your simulation can be slow, espeically for large worlds.
 With this in mind, we have developed an alternative method of resetting a simulation, and our terminology has changed as such.
 "Revert" has become "Reload" and now users can benefit from the new "Reset Simulation" action, also accessible via the Supervisor API.
 

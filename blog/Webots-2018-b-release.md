@@ -11,6 +11,8 @@ As always, for a comprehensive list of changes please refer to the ChangeLog, fo
 
 ## New Look and Feel
 
+### New Themes
+
 %figure "Webots Night, The new default theme for Webots"
 ![dark theme](images/webots_night.png)
 %end
@@ -21,8 +23,19 @@ This new look features clean lines, flat design, and a subdued color palette wit
 We've also kept the previous style, in a theme called "Webots Classic", if you prefer the old look, along with a more vibrant theme named "Webots Dusk".
 Additionally, the splash screen has been re-designed to match our new themes.
 
+### It's All About Context
 
-Boot up Webots R2018b and have an explore these new GUI features!
+We've wanted to streamline actions normally undertaken during normal simulation design workflow. 
+These include editing a robot's controller, seeing a robot's window, deleting an object from the scene, etc.
+So, to improve this, we've added a context menu to the 3D view and Scene Tree!
+
+%figure "A Typical Context Menu for a Selected Robot Node"
+![context menu](images/context_menu.png)
+%end
+
+The menu adapts to the currently selected tree item or object in the 3D view, providing selection-specific actions and options.
+
+Boot up Webots R2018b and have an explore of these new GUI features!
 
 ## Simulation Reset
 

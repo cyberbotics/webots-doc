@@ -312,8 +312,14 @@ function setUpBlogStyleIfNeeded() {
     center.setAttribute('class', 'blog');
 
     // hide index, this doesn't make sense for a blog post
-    document.querySelector("#index").style.display = "none";
-    document.querySelector("#indexTitle").style.display = "none";
+    let index = document.querySelector("#index");
+    let indexTitle = document.querySelector("#indexTitle");
+
+    if (index !== null)
+      index.style.display = "none";
+
+    if (indexTitle !== null)
+      indexTitle.style.display = "none";
 
     setHandleWidth(0);
 

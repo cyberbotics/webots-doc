@@ -6,7 +6,7 @@ In the chart, an arrow between two nodes represents an inheritance relationship.
 The inheritance relationship indicates that a derived node (at the arrow tail) inherits all the fields and API functions of a base node (at the arrow head).
 For example, the [Supervisor](supervisor.md) node inherits from the [Robot](robot.md) node, and therefore all the fields and functions available in the [Robot](robot.md) node are also available in the [Supervisor](supervisor.md) node.
 
-Boxes depicted with a dashed line ([Light](light.md), [Device](device.md) and `Geometry`) represent *abstract* nodes, that is, nodes that cannot be instantiated (either using the SceneTree or in a ".wbt" file).
+Boxes depicted with a dashed line (like [Light](light.md), [Device](device.md) or `Geometry`) represent *abstract* nodes, that is, nodes that cannot be instantiated (either using the SceneTree or in a ".wbt" file).
 Abstract nodes are used to group common fields and functions that are shared by derived nodes.
 
 A box with a green background indicates a node that can be used directly (or composed using [Group](group.md) and [Transform](transform.md) nodes) to build a *boundingObject* used to detect collisions between [Solid](solid.md) objects.

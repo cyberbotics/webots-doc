@@ -120,11 +120,14 @@ Finally, if the sensor's `lookupTable` is filled with correct calibration data, 
 
 ### LightSensor Functions
 
-**Name**
+#### `wb_light_sensor_enable`
+#### `wb_light_sensor_disable`
+#### `wb_light_sensor_get_sampling_period`
+#### `wb_light_sensor_get_value`
 
-**wb\_light\_sensor\_enable**, **wb\_light\_sensor\_disable**, **wb\_light\_sensor\_get\_sampling\_period**, **wb\_light\_sensor\_get\_value** - *enable, disable and read light sensor measurement*
+%tab-component
 
-{[C++](cpp-api.md#cpp_light_sensor)}, {[Java](java-api.md#java_light_sensor)}, {[Python](python-api.md#python_light_sensor)}, {[Matlab](matlab-api.md#matlab_light_sensor)}, {[ROS](ros-api.md)}
+%tab "C"
 
 ```c
 #include <webots/light_sensor.h>
@@ -135,7 +138,80 @@ int wb_light_sensor_get_sampling_period(WbDeviceTag tag);
 double wb_light_sensor_get_value(WbDeviceTag tag);
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/LightSensor.hpp>
+
+namespace webots {
+  class LightSensor : public Device {
+    virtual void enable(int samplingPeriod);
+    virtual void disable();
+    int getSamplingPeriod() const;
+    double getValue() const;
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import LightSensor
+
+class LightSensor (Device):
+  def enable(self, samplingPeriod):
+  def disable(self):
+  def getSamplingPeriod(self):
+  def getValue(self):
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.LightSensor;
+
+public class LightSensor extends Device {
+  public void enable(int samplingPeriod);
+  public void disable();
+  public int getSamplingPeriod();
+  public double getValue();
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+wb_light_sensor_enable(tag, sampling_period)
+wb_light_sensor_disable(tag)
+period = wb_light_sensor_get_sampling_period(tag)
+value = wb_light_sensor_get_value(tag)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/value` | `topic` | [`sensor_msgs::Illuminance`](http://docs.ros.org/api/sensor_msgs/html/msg/Illuminance.html) | [`Header`](http://docs.ros.org/api/std_msgs/html/msg/Header.html) `header`<br/>`float64 illuminance`<br/>`float64 variance` |
+| `/<device_name>/enable` | `service` | [`webots_ros::set_int`](ros-api.md#common-services) | |
+| `/<device_name>/get_sampling_period` | `service` | [`webots_ros::get_int`](ros-api.md#common-services) | |
+
+%tab-end
+
+%end
+
+##### Description
+
+*enable, disable and read light sensor measurement*
 
 The `wb_light_sensor_enable` function enables light sensor measurements.
 The provided `sampling_period` argument specifies the sampling period of the sensor and is expressed in milliseconds.

@@ -146,20 +146,94 @@ It will return `WB_ANGULAR` if the sensor is associated with a [HingeJoint](hing
 
 ---
 
-**Name**
+#### `wb_position_sensor_get_brake`
+#### `wb_position_sensor_get_motor`
 
-**wb\_position\_sensor\_get\_brake**, **wb\_position\_sensor_get\_motor** - *get associated devices*
+%tab-component
 
-{[C++](cpp-api.md#cpp_position_sensor)}, {[Java](java-api.md#java_position_sensor)}, {[Python](python-api.md#python_position_sensor)}, {[Matlab](matlab-api.md#matlab_position_sensor)}, {[ROS](ros-api.md)}
+%tab "C"
 
 ```c
+#include <webots/position_sensor.h>
 #include <webots/brake.h>
+#include <webots/motor.h>
 
-WbDeviceTag wb_position_sensor_get_brake(WbDeviceTag tag);
-WbDeviceTag wb_position_sensor_get_motor(WbDeviceTag tag);
+WbDeviceTag wb_brake_get_brake(WbDeviceTag tag);
+WbDeviceTag wb_brake_get_motor(WbDeviceTag tag);
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/PositionSensor.hpp>
+#include <webots/Brake.hpp>
+#include <webots/Motor.hpp>
+
+namespace webots {
+  class PositionSensor : public Device {
+    Brake *getBrake() const;
+    Motor *getMotor() const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import PositionSensor, Brake, Motor
+
+class PositionSensor (Device):
+    def getBrake(self):
+    def getMotor(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.PositionSensor;
+import com.cyberbotics.webots.controller.Brake;
+import com.cyberbotics.webots.controller.Motor;
+
+public class PositionSensor extends Device {
+  public Brake getBrake();
+  public Motor getMotor();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+tag = wb_brake_get_brake(tag)
+tag = wb_brake_get_motor(tag)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/get_brake_name` | `service` | [`webots_ros::get_string`](ros-api.md#common-services) | |
+| `/<device_name>/get_motor_name` | `service` | [`webots_ros::get_string`](ros-api.md#common-services) | |
+
+%tab-end
+
+%end
+
+##### Description
+
+*get associated devices*
 
 The `wb_position_sensor_get_brake` and `wb_position_sensor_get_motor` functions return the [Brake](brake.md) and [Motor](motor.md) instances defined in the same [Joint](joint.md) or [Track](track.md) `device` field.
 If none is defined they return 0.

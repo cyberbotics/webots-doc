@@ -42,6 +42,9 @@ namespace webots {
     bool left;
     bool middle;
     bool right;
+    // mouse 2D position in the 3D window
+    double u;
+    double v;
     // mouse 3D position
     double x;
     double y;
@@ -61,6 +64,8 @@ class MouseState:
     @property
     left, middle, right  # mouse button state
     @property
+    u, v  # mouse 2D position in the 3D window
+    @property
     x, y, z  # mouse 3D position
 ```
 
@@ -75,6 +80,8 @@ public class MouseState {
   public boolean getLeft();
   public boolean getMiddle();
   public boolean getRight();
+  public double getU();
+  public double getV();
   public double getX();
   public double getY();
   public double getZ();
@@ -90,6 +97,8 @@ structs.WbMouseState.members = struct(
   'left', 'int8',
   'middle', 'int8',
   'right', 'int8',
+  'u', 'double',
+  'v', 'double',
   'x', 'double',
   'y', 'double',
   'z', 'double'
@@ -201,7 +210,7 @@ state = wb_mouse_get_state()
 | --- | --- | --- | --- |
 | `/mouse/enable` | `service` | [`webots_ros::set_int`](ros-api.md#common-services) | |
 | `/mouse/get_sampling_period` | `service` | [`webots_ros::get_int`](ros-api.md#common-services) | |
-| `/mouse/mouse_get_state` | `service` | `webots_ros::mouse_get_state` | `uint8 ask`<br/>`---`<br/>`uint8 x`<br/>`uint8 y`<br/>`uint8 z`<br/>`float64 x`<br/>`float64 y`<br/>`float64 z` |
+| `/mouse/mouse_get_state` | `service` | `webots_ros::mouse_get_state` | `uint8 ask`<br/>`---`<br/>`uint8 left`<br/>`uint8 middle`<br/>`uint8 righz`<br/>`float64 u`<br/>`float64 v`<br/>`float64 x`<br/>`float64 y`<br/>`float64 z` |
 
 %tab-end
 

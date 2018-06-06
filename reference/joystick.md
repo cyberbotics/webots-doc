@@ -436,7 +436,6 @@ pov_value = wb_joystick_get_pov_value(pov)
 
 | name | service/topic | data type | data type definition |
 | --- | --- | --- | --- |
-| `/CLASS_NAME/service` | `service` | [`webots_ros::set_int`](ros-api.md#common-services) | |
 | `/joystick/pov<X>` | `topic` | `webots_ros::Int8Stamped` | [`Header`](http://docs.ros.org/api/std_msgs/html/msg/Header.html) `header`<br/>`int8 data` |
 | `/joystick/get_number_of_povs` | `service` | [`webots_ros::get_int`](ros-api.md#common-services) | |
 

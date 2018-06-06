@@ -1229,7 +1229,7 @@ class Supervisor (Robot):
 %tab "Java"
 
 ```java
-import com.cyberbotics.webots.controller.CLASS_NAME;
+import com.cyberbotics.webots.controller.Supervisor;
 
 public class Supervisor extends Robot {
   public void simulationReset();

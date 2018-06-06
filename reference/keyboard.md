@@ -47,7 +47,7 @@ int wb_keyboard_get_key();
 #include <webots/Keyboard.hpp>
 
 namespace webots {
-  class Keyboard : public Device {
+  class Keyboard {
     enum {
       END, HOME, LEFT, UP, RIGHT, DOWN,
       PAGEUP, PAGEDOWN, NUMPAD_HOME, NUMPAD_LEFT,
@@ -70,7 +70,7 @@ namespace webots {
 ```python
 from controller import Keyboard
 
-class Keyboard (Device):
+class Keyboard:
     END, HOME, LEFT, UP, RIGHT, DOWN, PAGEUP,
     PAGEDOWN, NUMPAD_HOME, NUMPAD_LEFT, NUMPAD_UP,
     NUMPAD_RIGHT, NUMPAD_DOWN, NUMPAD_END, KEY, SHIFT,
@@ -89,7 +89,7 @@ class Keyboard (Device):
 ```java
 import com.cyberbotics.webots.controller.Keyboard;
 
-public class Keyboard extends Device {
+public class Keyboard {
   public final static int END, HOME, LEFT, UP, RIGHT,
     DOWN, PAGEUP, PAGEDOWN, NUMPAD_HOME, NUMPAD_LEFT,
     NUMPAD_UP, NUMPAD_RIGHT, NUMPAD_DOWN, NUMPAD_END,

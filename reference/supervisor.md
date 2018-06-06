@@ -118,11 +118,11 @@ node = wb_supervisor_node_get_selected()
 
 | name | service/topic | data type | data type definition |
 | --- | --- | --- | --- |
-| `/supervisor/get_root` | `service` | [`webots_ros::get_int`](ros-api.md#common-services) | |
-| `/supervisor/get_self` | `service` | [`webots_ros::get_int`](ros-api.md#common-services) | |
+| `/supervisor/get_root` | `service` | [`webots_ros::get_uint64`](ros-api.md#common-services) | |
+| `/supervisor/get_self` | `service` | [`webots_ros::get_uint64`](ros-api.md#common-services) | |
 | `/supervisor/get_from_def` | `service` | `webots_ros::supervisor_get_from_def` | `string name`<br/>`---`<br/>`uint64 node` |
 | `/supervisor/get_from_id` | `service` | `webots_ros::supervisor_get_from_id` | `int32 id`<br/>`---`<br/>`uint64 node` |
-| `/supervisor/get_selected` | `service` | [`webots_ros::get_int`](ros-api.md#common-services) | |
+| `/supervisor/get_selected` | `service` | [`webots_ros::get_uint64`](ros-api.md#common-services) | |
 
 %tab-end
 

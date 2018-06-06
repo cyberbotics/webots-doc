@@ -20,7 +20,7 @@ graph LR
   subgraph ""
     AbstractClass(Abstract Class) --- AbstractClassDefinition[cannot be instantiated]
     BoundingObject[Bounding Object] --- BoundingObjectDefinition[can be used as BoundingObject<br>in a Solid node]
-    VRML[VRML] --- VRMLDefinition[valid VRML node]
+    VRML97[VRML97] --- VRML97Definition[valid VRML97 node]
   end
   PositionSensor --- Appearance
   AbstractClassDefinition --- JointDevice
@@ -124,12 +124,12 @@ graph LR
 
   classDef AbstractClassStyle stroke-width:3px,stroke-dasharray:5,5;
   classDef DefinitionStyle fill:#ddd,stroke-width:0px;
-  style VRML fill:#ddd,stroke:#444444,stroke-width:3px;
+  style VRML97 fill:#ddd,stroke:#444444,stroke-width:3px;
 
   class AbstractClass,Device,Geometry,Joint,JointDevice,Light,Motor,SolidDevice AbstractClassStyle;
   class BoundingObject,Capsule,Plane secondaryNode;
   class Box,Cylinder,EleveationGrid,IndexedFaceSet,Sphere highlightedSecondaryNode;
   class Appearance,BackGround,Color,Cone,DirectionalLight,Fog,Group,ImageTexture,IndexedLineSet,Material,PointLight,SpotLight,TextureCoordinate,TextureTransform,Transform,WorldInfo highlightedNode;
-  class AbstractClassDefinition,BoundingObjectDefinition,VRMLDefinition DefinitionStyle;
+  class AbstractClassDefinition,BoundingObjectDefinition,VRML97Definition DefinitionStyle;
 %end
 %end

@@ -104,20 +104,94 @@ It will return `WB_ANGULAR` if the sensor is associated with a [HingeJoint](hing
 
 ---
 
-**Name**
+#### `wb_brake_get_motor`
+#### `wb_brake_get_position_sensor`
 
-**wb\_brake\_get\_motor**, **wb\_brake\_get\_position\_sensor** - *get associated devices*
+%tab-component
 
-{[C++](cpp-api.md#cpp_brake)}, {[Java](java-api.md#java_brake)}, {[Python](python-api.md#python_brake)}, {[Matlab](matlab-api.md#matlab_brake)}, {[ROS](ros-api.md)}
+%tab "C"
 
 ```c
 #include <webots/brake.h>
+#include <webots/motor.h>
+#include <webots/position_sensor.h>
 
 WbDeviceTag wb_brake_get_motor(WbDeviceTag tag);
 WbDeviceTag wb_brake_get_position_sensor(WbDeviceTag tag);
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Brake.hpp>
+#include <webots/Motor.hpp>
+#include <webots/PositionSensor.hpp>
+
+namespace webots {
+  class Brake : public Device {
+    Motor *getMotor() const;
+    PositionSensor *getPositionSensor() const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Brake, Motor, PositionSensor
+
+class Brake (Device):
+    def getMotor(self):
+    def getPositionSensor(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Brake;
+import com.cyberbotics.webots.controller.Motor;
+import com.cyberbotics.webots.controller.PositionSensor;
+
+public class Brake extends Device {
+  public Motor getMotor();
+  public PositionSensor getPositionSensor();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+tag = wb_brake_get_motor(tag)
+tag = wb_brake_get_position_sensor(tag)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/get_motor_name` | `service` | [`webots_ros::get_string`](ros-api.md#common-services) | |
+| `/<device_name>/get_position_sensor_name` | `service` | [`webots_ros::get_string`](ros-api.md#common-services) | |
+
+%tab-end
+
+%end
+
+##### Description
+
+*get associated devices*
 
 The `wb_brake_get_motor` and `wb_brake_get_position_sensor` functions return the [Motor](motor.md) and [PositionSensor](positionsensor.md) instances defined in the same [Joint](joint.md) or [Track](track.md) `device` field.
 If none is defined they return 0.

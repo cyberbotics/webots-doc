@@ -1958,9 +1958,9 @@ namespace webots {
 from controller import Supervisor
 
 class Supervisor (Robot):
-    def woldLoad(self, file):
-    def woldSave(self, file=None):
-    def woldReload(self):
+    def worldLoad(self, file):
+    def worldSave(self, file=None):
+    def worldReload(self):
     # ...
 ```
 

@@ -15,7 +15,6 @@ As always, for a comprehensive list of changes please refer to the ChangeLog, fo
 
 ## New PROTOs
 
-
 ## Extra Goodies
 
 Movies can now be recorded in slow motion.

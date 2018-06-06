@@ -311,6 +311,10 @@ function setUpBlogStyleIfNeeded() {
     var center = document.querySelector('#center');
     center.setAttribute('class', 'blog');
 
+    // hide index, this doesn't make sense for a blog post
+    document.querySelector("#index").style.display = "none";
+    document.querySelector("#indexTitle").style.display = "none";
+
     setHandleWidth(0);
 
     document.title = 'Webots Blog';
@@ -373,6 +377,7 @@ function createIndex(view) {
   // Create an empty index, and insert it before the second heading.
   var indexTitle = document.createElement('h' + level);
   indexTitle.textContent = 'Index';
+  indexTitle.setAttribute("id", "indexTitle");
   headings[0].parentNode.insertBefore(indexTitle, headings[1]);
   var ul = document.createElement('ul');
   ul.setAttribute('id', 'index');
@@ -464,9 +469,9 @@ function populateViewDiv(mdContent) {
   highlightCode(view);
 
   updateSelection();
-  setUpBlogStyleIfNeeded();
-
   createIndex(view);
+
+  setUpBlogStyleIfNeeded();
 
   var images = view.querySelectorAll('img');
   if (images.length > 0) {

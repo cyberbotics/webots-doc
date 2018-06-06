@@ -544,6 +544,7 @@ On macOS, only the first 12 buttons and first 2 axes of the joystick are taken i
 #### `wb_joystick_set_constant_force_duration`
 #### `wb_joystick_set_auto_centering_gain`
 #### `wb_joystick_set_resistance_gain`
+#### `wb_joystick_set_force_axis`
 
 %tab-component
 

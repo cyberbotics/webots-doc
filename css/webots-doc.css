@@ -710,7 +710,7 @@ body {
  *--------------------*/
 
 #webots-doc .blog {
-  background: #495b61;
+  background: white;
 }
 
 .blog #title {
@@ -721,6 +721,9 @@ body {
 .blog #content {
   padding: 0px 30px;
   max-width: 1080px;
+  box-shadow: none;
+  -webkit-box-shadow:none;
+  -moz-box-shadow:none;
 }
 
 .blog #view {

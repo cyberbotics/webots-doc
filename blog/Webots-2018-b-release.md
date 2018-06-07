@@ -52,7 +52,7 @@ If you prefer the old look, we've also kept the previous style, in a theme calle
 There's also a more vibrant dark theme named "Webots Dusk".
 Additionally, the splash screen has been re-designed to match our new themes.
 
-### It's all about Context
+### It's All about Context
 
 We've wanted to streamline actions normally undertaken during normal simulation design workflow. 
 These include editing a robot's controller, seeing a robot's window, deleting an object from the scene, etc.

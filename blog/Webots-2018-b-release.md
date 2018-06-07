@@ -5,14 +5,16 @@
 ---
 
 It's that time of year again!
-Today marks the release of the all-new Webots R2018b, packed with some great new features.
+Today marks the release of the all-new Webots R2018b, packed with some game-changing features.
 As always, for a comprehensive list of changes please refer to the ChangeLog, found [here](https://www.cyberbotics.com/dvd/common/doc/webots/ChangeLog.html).
 
 ## WREN: Webots Renderer
 
 For the past decade, Webots has used the [Object-Oriented Graphics Rendering Engine](https://www.ogre3d.org/) (OGRE) to handle 3D rendering. 
-We encountered many roadblocks with OGRE and as such decided that it was better for us to implement our own bespoke rendering engine, from scratch.
+We encountered many roadblocks with OGRE, especially in modernizing our worlds and achieving a greater level of realism, and as such decided that it was better for us to implement our own bespoke rendering engine - from scratch!
 This allows us to implement and use only the features we need / desire, giving us a very lightweight and efficient renderer.
+
+
 We've spent the past year doing just this, and are proud to present our own bespoke OpenGL 3.3 based renderering engine, WREN (Webots RENderer).
 Thus, Webots R2018b and all future versions of Webots will make use of WREN for all 3D work.
 

@@ -36,7 +36,7 @@ int wb_joystick_get_sampling_period();
 #include <webots/Joystick.hpp>
 
 namespace webots {
-  class Joystick : public Device {
+  class Joystick {
     virtual void enable(int samplingPeriod);
     virtual void disable();
     int getSamplingPeriod() const;
@@ -52,7 +52,7 @@ namespace webots {
 ```python
 from controller import Joystick
 
-class Joystick (Device):
+class Joystick:
     def enable(self, samplingPeriod):
     def disable(self):
     def getSamplingPeriod(self):
@@ -66,7 +66,7 @@ class Joystick (Device):
 ```java
 import com.cyberbotics.webots.controller.Joystick;
 
-public class Joystick extends Device {
+public class Joystick {
   public void enable(int samplingPeriod);
   public void disable();
   public int getSamplingPeriod();
@@ -133,7 +133,7 @@ bool wb_joystick_is_connected();
 #include <webots/Joystick.hpp>
 
 namespace webots {
-  class Joystick : public Device {
+  class Joystick {
     bool isConnected() const;
     // ...
   }
@@ -147,7 +147,7 @@ namespace webots {
 ```python
 from controller import Joystick
 
-class Joystick (Device):
+class Joystick:
     def isConnected(self):
     # ...
 ```
@@ -159,7 +159,7 @@ class Joystick (Device):
 ```java
 import com.cyberbotics.webots.controller.Joystick;
 
-public class Joystick extends Device {
+public class Joystick {
   public boolean isConnected();
   // ...
 }
@@ -213,7 +213,7 @@ const char *wb_joystick_get_model();
 #include <webots/Joystick.hpp>
 
 namespace webots {
-  class Joystick : public Device {
+  class Joystick {
     std::string getModel() const;
     // ...
   }
@@ -227,7 +227,7 @@ namespace webots {
 ```python
 from controller import Joystick
 
-class Joystick (Device):
+class Joystick:
     def getModel(self):
     # ...
 ```
@@ -239,7 +239,7 @@ class Joystick (Device):
 ```java
 import com.cyberbotics.webots.controller.Joystick;
 
-public class Joystick extends Device {
+public class Joystick {
   public String getModel();
   // ...
 }
@@ -297,7 +297,7 @@ int wb_joystick_get_axis_value(int axis);
 #include <webots/Joystick.hpp>
 
 namespace webots {
-  class Joystick : public Device {
+  class Joystick {
     int getNumberOfAxes() const;
     int getAxisValue(int axis) const;
     // ...
@@ -312,7 +312,7 @@ namespace webots {
 ```python
 from controller import Joystick
 
-class Joystick (Device):
+class Joystick:
     def getNumberOfAxes(self):
     def getAxisValue(self, axis):
     # ...
@@ -325,7 +325,7 @@ class Joystick (Device):
 ```java
 import com.cyberbotics.webots.controller.Joystick;
 
-public class Joystick extends Device {
+public class Joystick {
   public int getNumberOfAxes();
   public int getAxisValue(int axis);
   // ...
@@ -384,7 +384,7 @@ int wb_joystick_get_pressed_button();
 #include <webots/Joystick.hpp>
 
 namespace webots {
-  class Joystick : public Device {
+  class Joystick {
     int getPressedButton() const;
     // ...
   }
@@ -398,7 +398,7 @@ namespace webots {
 ```python
 from controller import Joystick
 
-class Joystick (Device):
+class Joystick:
     def getPressedButton(self):
     # ...
 ```
@@ -410,7 +410,7 @@ class Joystick (Device):
 ```java
 import com.cyberbotics.webots.controller.Joystick;
 
-public class Joystick extends Device {
+public class Joystick {
   public int getPressedButton();
   // ...
 }
@@ -476,7 +476,7 @@ void wb_joystick_set_resistance_gain(double gain);
 #include <webots/Joystick.hpp>
 
 namespace webots {
-  class Joystick : public Device {
+  class Joystick {
     void setConstantForce(int level);
     void setConstantForceDuration(double duration);
     void setAutoCenteringGain(double gain);
@@ -493,7 +493,7 @@ namespace webots {
 ```python
 from controller import Joystick
 
-class Joystick (Device):
+class Joystick:
     def setConstantForce(self, level):
     def setConstantForceDuration(self, duration):
     def setAutoCenteringGain(self, gain):
@@ -508,7 +508,7 @@ class Joystick (Device):
 ```java
 import com.cyberbotics.webots.controller.Joystick;
 
-public class Joystick extends Device {
+public class Joystick {
   public void setConstantForce(int level);
   public void setConstantForceDuration(double duration);
   public void setAutoCenteringGain(double gain);

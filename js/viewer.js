@@ -322,6 +322,8 @@ function setUpBlogStyleIfNeeded() {
     if (indexTitle !== null)
       indexTitle.style.display = "none";
 
+    document.querySelector(".release-tag").style.display = "none";
+
     setHandleWidth(0);
 
     document.title = 'Webots Blog';

@@ -9,6 +9,21 @@ As always, for a comprehensive list of changes please refer to the ChangeLog, fo
 
 ## WREN: Webots Renderer
 
+For the past decade, Webots has used the [Object-Oriented Graphics Rendering Engine](https://www.ogre3d.org/) (OGRE) to handle 3D rendering. 
+We encountered many roadblocks with OGRE and as such decided that it was better for us to implement our own bespoke rendering engine, from scratch.
+This allows us to implement and use only the features we need / desire, giving us a very lightweight and efficient renderer.
+We've spent the past year doing just this, and are proud to present our own bespoke OpenGL 3.3 based renderering engine, WREN (Webots RENderer).
+Thus, Webots R2018b and all future versions of Webots will make use of WREN for all 3D work.
+
+### Lightning Fast
+
+As a result of implementing only what we need, 
+
+### Physically-Based Rendering
+
+%figure "A model of a telephone, from the GLTF sample library."
+![telephone](images/telephone.png)
+%end
 
 ---
 

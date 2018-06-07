@@ -103,7 +103,7 @@ typedef enum {
 } wbu_car_type;
 
 typedef enum {
-  WBU_CAR_COMBUTSION_ENGINE,
+  WBU_CAR_COMBUSTION_ENGINE,
   WBU_CAR_ELECTRIC_ENGINE,
   WBU_CAR_PARALLEL_HYBRID_ENGINE,
   WBU_CAR_POWER_SPLIT_HYBRID_ENGINE
@@ -123,7 +123,7 @@ wbu_car_engine_type wbu_car_get_engine_type();
 namespace webots {
   class Car : public Driver {
     enum {TRACTION, PROPULSION, FOUR_BY_FOUR};
-    enum {COMBUTSION_ENGINE, ELECTRIC_ENGINE, PARALLEL_HYBRID_ENGINE, POWER_SPLIT_HYBRID_ENGINE};
+    enum {COMBUSTION_ENGINE, ELECTRIC_ENGINE, PARALLEL_HYBRID_ENGINE, POWER_SPLIT_HYBRID_ENGINE};
 
     int getType();
     int getEngineType();
@@ -141,7 +141,7 @@ from controller import Car
 
 class Car (Driver):
     TRACTION, PROPULSION, FOUR_BY_FOUR
-    COMBUTSION_ENGINE, ELECTRIC_ENGINE, PARALLEL_HYBRID_ENGINE, POWER_SPLIT_HYBRID_ENGINE
+    COMBUSTION_ENGINE, ELECTRIC_ENGINE, PARALLEL_HYBRID_ENGINE, POWER_SPLIT_HYBRID_ENGINE
 
     def getType(self):
     def getEngineType(self):
@@ -157,7 +157,7 @@ import com.cyberbotics.webots.controller.Car;
 
 public class Car extends Driver {
   public final static int TRACTION, PROPULSION, FOUR_BY_FOUR;
-  public final static int COMBUTSION_ENGINE, ELECTRIC_ENGINE, PARALLEL_HYBRID_ENGINE, POWER_SPLIT_HYBRID_ENGINE;
+  public final static int COMBUSTION_ENGINE, ELECTRIC_ENGINE, PARALLEL_HYBRID_ENGINE, POWER_SPLIT_HYBRID_ENGINE;
 
   public int getType();
   public int getEngineType();
@@ -198,7 +198,7 @@ These two functions return respectively the type of transmission and of engine o
 
 | ENUM                                   | Value |
 | -------------------------------------- | ----- |
-| `WBU_CAR_COMBUTSION_ENGINE`            | 0     |
+| `WBU_CAR_COMBUSTION_ENGINE`            | 0     |
 | `WBU_CAR_ELECTRIC_ENGINE`              | 1     |
 | `WBU_CAR_PARALLEL_HYBRID_ENGINE`       | 2     |
 | `WBU_CAR_POWER_SPLIT_HYBRID_ENGINE`    | 3     |

@@ -32,7 +32,7 @@ The following benchmarks were made on Windows 10, 64-bit with an Intel 6700k pro
 
 ### Physically-Based Rendering
 
-%figure "A model of a telephone, from the GLTF sample library."
+%figure "A model of a telephone, from the GLTF sample library, rendered in Webots."
 ![telephone](images/telephone.png)
 %end
 

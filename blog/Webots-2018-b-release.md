@@ -27,14 +27,25 @@ WREN is extremely CPU-light, and is GPU-bound for rendering.
 This has allowed us to improve world performance considerably.
 
 
-To illustrate this in practical terms, the simulation speedometer in "Run" mode is used as our performance indicator, to show the real-life implications of faster rendering in a Webots Simulation.
-The following benchmarks were made on Windows 10, 64-bit with an Intel 6700k processor @ 3.40GHz and an NVIDIA GTX 970 graphics cards on some familiar webots worlds.
+To illustrate this in practical terms, the simulation speedometer in "Run" mode is used as our performance indicator, to show the real-life implications of faster rendering in a Webots simulation.
+The following benchmarks were performed on Windows 10, 64-bit with an Intel 6700k processor @ 3.40GHz and an NVIDIA GTX 970 graphics cards on some familiar webots worlds.
+
+
+As you can see, [some stuff about performance being better]
 
 ### Physically-Based Rendering
 
 %figure "A model of a telephone, from the GLTF sample library, rendered in Webots."
 ![telephone](images/telephone.png)
 %end
+
+In a bid to make Webots look as realistic as possible, we have implemented a Physically-Based Rendering pipeline into Webots.
+Physically based rendering relies on improved lighting models, and the use of several additional non-colour textures (normal maps, roughness maps and metalness maps) to represent a material's interactions with light to a very high degree of realism.
+This is useable with the new PBRAppearance and Cubemap nodes.
+This is still an experimental feature for now, however.
+We will be rolling it out across our objects and simulations as time goes on, and this will likely change the appearance of your simulation worlds.
+
+We plan to continue developing advanced graphics features for Webots in the coming months, to complement this rollout.
 
 ---
 
@@ -93,6 +104,6 @@ Webots R2018b supports Ubuntu 18.04 LTS out of the box.
 
 The Speaker API can now load and play all major audio formats.
 
-Added the possibility to set an empty string as Robot controller instead of the void controller to speed up simulation of non-controlled Robot nodes.
+If you don't want to run a controller for your Robot node, you can now simply use "" as the controller name, to avoid running the void controller unnecessarily.
 
 Projection mode, rendering mode, optional renderings and disable selection are now saved per world instead of globally.

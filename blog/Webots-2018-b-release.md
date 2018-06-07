@@ -22,6 +22,8 @@ OGRE 1.9 (the version we used) is a CPU-bound renderer, which is bad news for We
 Ideally, a 3D renderer for use with Webots should be GPU bound, and be as CPU-overhead minimal as possible, to provide "room" for the simulation's CPU-sided simulation workload (robot controllers, physics, GUI) as possible.
 WREN is extremely CPU-light, and is GPU-bound for rendering.
 This has allowed us to improve world performance considerably.
+
+
 To illustrate this in practical terms, the simulation speedometer in "Run" mode is used as our performance indicator, to show the real-life implications of faster rendering in a Webots Simulation.
 The following benchmarks were made on Windows 10, 64-bit with an Intel 6700k processor @ 3.40GHz and an NVIDIA GTX 970 graphics cards on some familiar webots worlds.
 

@@ -1804,13 +1804,15 @@ int main(int argc, char *argv[]) {
 ```c
 #include <webots/supervisor.h>
 
-#define WB_SUPERVISOR_SIMULATION_MODE_PAUSE
-#define WB_SUPERVISOR_SIMULATION_MODE_REAL_TIME
-#define WB_SUPERVISOR_SIMULATION_MODE_RUN
-#define WB_SUPERVISOR_SIMULATION_MODE_FAST
+typedef enum {
+  WB_SUPERVISOR_SIMULATION_MODE_PAUSE,
+  WB_SUPERVISOR_SIMULATION_MODE_REAL_TIME,
+  WB_SUPERVISOR_SIMULATION_MODE_RUN,
+  WB_SUPERVISOR_SIMULATION_MODE_FAST
+} WbSimulationMode;
 
-int wb_supervisor_simulation_get_mode();
-void wb_supervisor_simulation_set_mode(int mode);
+WbSimulationMode wb_supervisor_simulation_get_mode();
+void wb_supervisor_simulation_set_mode(WbSimulationMode mode);
 ```
 
 %tab-end
@@ -1822,12 +1824,12 @@ void wb_supervisor_simulation_set_mode(int mode);
 
 namespace webots {
   class Supervisor : public Robot {
-    enum {
+    typedef enum {
       SIMULATION_MODE_PAUSE, SIMULATION_MODE_REAL_TIME, SIMULATION_MODE_RUN, SIMULATION_MODE_FAST
-    };
+    } SimulationMode;
 
-    virtual void simulationSetMode(int mode);
-    int simulationGetMode() const;
+    SimulationMode simulationGetMode() const;
+    virtual void simulationSetMode(SimulationMode mode);
     // ...
   }
 }
@@ -2433,25 +2435,11 @@ Both `wb_supervisor_animation_start_recording` and `wb_supervisor_animation_stop
 ```c
 #include <webots/supervisor.h>
 
-#define WB_SF_BOOL
-#define WB_SF_INT32
-#define WB_SF_FLOAT
-#define WB_SF_VEC2F
-#define WB_SF_VEC3F
-#define WB_SF_ROTATION
-#define WB_SF_COLOR
-#define WB_SF_STRING
-#define WB_SF_NODE
-#define WB_MF
-#define WB_MF_BOOL
-#define WB_MF_INT32
-#define WB_MF_FLOAT
-#define WB_MF_VEC2F
-#define WB_MF_VEC3F
-#define WB_MF_ROTATION
-#define WB_MF_COLOR
-#define WB_MF_STRING
-#define WB_MF_NODE
+typedef enum {
+  WB_NO_FIELD, WB_SF_BOOL, WB_SF_INT32, WB_SF_FLOAT, WB_SF_VEC2F, WB_SF_VEC3F, WB_SF_ROTATION,
+  WB_SF_COLOR, WB_SF_STRING, WB_SF_NODE, WB_MF, WB_MF_BOOL, WB_MF_INT32, WB_MF_FLOAT,
+  WB_MF_VEC2F, WB_MF_VEC3F, WB_MF_ROTATION, WB_MF_COLOR, WB_MF_STRING, WB_MF_NODE
+} WbFieldType;
 
 WbFieldType wb_supervisor_field_get_type(WbFieldRef field);
 const char *wb_supervisor_field_get_type_name(WbFieldRef field);
@@ -2467,12 +2455,12 @@ int wb_supervisor_field_get_count(WbFieldRef field);
 
 namespace webots {
   class Field {
-    enum {
+    typedef enum {
       SF_BOOL, SF_INT32, SF_FLOAT, SF_VEC2F, SF_VEC3F, SF_ROTATION, SF_COLOR, SF_STRING,
       SF_NODE, MF, MF_INT32, MF_FLOAT, MF_VEC2F, MF_VEC3F, MF_COLOR, MF_STRING, MF_NODE
-    };
+    } Type;
 
-    int getType() const;
+    Type getType() const;
     std::string getTypeName() const;
     int getCount() const;
     // ...

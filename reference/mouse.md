@@ -194,7 +194,7 @@ state = wb_mouse_get_state()
 | --- | --- | --- | --- |
 | `/mouse/enable` | `service` | [`webots_ros::set_int`](ros-api.md#common-services) | |
 | `/mouse/get_sampling_period` | `service` | [`webots_ros::get_int`](ros-api.md#common-services) | |
-| `/mouse/mouse_get_state` | `service` | `webots_ros::mouse_get_state` | `uint8 ask`<br/>`---`<br/>`uint8 x`<br/>`uint8 y`<br/>`uint8 z`<br/>`float64 x`<br/>`float64 y`<br/>`float64 z` |
+| `/mouse/mouse_get_state` | `service` | `webots_ros::mouse_get_state` | `uint8 ask`<br/>`---`<br/>`uint8 left`<br/>`uint8 middle`<br/>`uint8 right`<br/>`float64 x`<br/>`float64 y`<br/>`float64 z` |
 
 %tab-end
 

@@ -307,11 +307,8 @@ function addContributionBanner() {
   };
 }
 
-function setUpBlogStyleIfNeeded() {
+function setupBlogFunctionalitiesIfNeeded() {
   if (localSetup.book === 'blog') {
-    var center = document.querySelector('#center');
-    center.setAttribute('class', 'blog');
-
     // hide index, this doesn't make sense for a blog post
     let index = document.querySelector("#index");
     let indexTitle = document.querySelector("#indexTitle");
@@ -322,8 +319,10 @@ function setUpBlogStyleIfNeeded() {
     if (indexTitle !== null)
       indexTitle.style.display = "none";
 
+    // hide the release tag, this is also nonsensical here
     document.querySelector(".release-tag").style.display = "none";
 
+    // hide the handle
     setHandleWidth(0);
 
     document.title = 'Webots Blog';
@@ -480,7 +479,7 @@ function populateViewDiv(mdContent) {
   updateSelection();
   createIndex(view);
 
-  setUpBlogStyleIfNeeded();
+  setupBlogFunctionalitiesIfNeeded();
 
   var images = view.querySelectorAll('img');
   if (images.length > 0) {
@@ -1210,6 +1209,12 @@ document.addEventListener('DOMContentLoaded', function() {
       localSetup.anchor = window.location.hash.substring(1);
     if (!localSetup.branch)
       localSetup.branch = getGETQueryValue('branch', 'master');
+  }
+
+  // prevent FOUC for blog
+  if (localSetup.book == "blog") {
+    var center = document.querySelector('#center');
+    center.setAttribute('class', 'blog');
   }
 
   addContributionBanner();

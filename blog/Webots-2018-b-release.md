@@ -4,7 +4,8 @@
 
 ---
 
-Today we're happy to announce the release of the all-new Webots 2018b, packed with some great new features.
+It's that time of year again!
+Today marks the release of the all-new Webots R2018b, packed with some great new features.
 As always, for a comprehensive list of changes please refer to the ChangeLog, found [here](https://www.cyberbotics.com/dvd/common/doc/webots/ChangeLog.html).
 
 ## WREN: Webots Renderer
@@ -26,8 +27,6 @@ This has allowed us to improve world performance considerably.
 
 To illustrate this in practical terms, the simulation speedometer in "Run" mode is used as our performance indicator, to show the real-life implications of faster rendering in a Webots Simulation.
 The following benchmarks were made on Windows 10, 64-bit with an Intel 6700k processor @ 3.40GHz and an NVIDIA GTX 970 graphics cards on some familiar webots worlds.
-
-
 
 ### Physically-Based Rendering
 

@@ -716,6 +716,11 @@ body {
 
 .blog #content {
   padding: 0px 30px;
+  max-width: 1080px;
+}
+
+.blog #center {
+  background: #495b61;
 }
 
 .blog #view {

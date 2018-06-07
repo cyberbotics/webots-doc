@@ -510,7 +510,7 @@ typedef enum {
   LEFT
 } wbu_indicator_state;
 
-void wbu_driver_set_indicator(int state);
+void wbu_driver_set_indicator(wbu_indicator_state state);
 wbu_indicator_state wbu_driver_get_indicator();
 void wbu_driver_set_hazard_flashers(bool state);
 bool wbu_driver_get_hazard_flashers();
@@ -525,10 +525,10 @@ bool wbu_driver_get_hazard_flashers();
 
 namespace webots {
   class Driver {
-    enum {INDICATOR_OFF, INDICATOR_RIGHT, INDICATOR_LEFT};
+    typedef enum {INDICATOR_OFF, INDICATOR_RIGHT, INDICATOR_LEFT} IndicatorState;
 
-    void setIndicator(int state);
-    int getIndicator();
+    void setIndicator(IndicatorState state);
+    IndicatorState getIndicator();
     void setHazardFlashers(bool state);
     bool getHazardFlashers();
     // ...
@@ -890,9 +890,9 @@ wbu_control_mode wbu_driver_get_control_mode();
 
 namespace webots {
   class Driver {
-    enum {SPEED, TORQUE};
+    typedef enum {SPEED, TORQUE} ControlMode;
 
-    int getControlMode();
+    ControlMode getControlMode();
     // ...
   }
 }
@@ -973,7 +973,7 @@ typedef enum {
   FAST
 } wbu_wipers_mode;
 
-void wbu_driver_set_wipers_mode(int mode);
+void wbu_driver_set_wipers_mode(wbu_wipers_mode mode);
 wbu_wipers_mode wbu_driver_get_wipers_mode();
 ```
 
@@ -986,10 +986,10 @@ wbu_wipers_mode wbu_driver_get_wipers_mode();
 
 namespace webots {
   class Driver {
-    enum {DOWN, SLOW, NORMAL, FAST};
+    typedef enum {DOWN, SLOW, NORMAL, FAST} WhipersMode;
 
-    void setWipersMode(int mode);
-    int getWipersMode();
+    void setWipersMode(WhipersMode mode);
+    WhipersMode getWipersMode();
     // ...
   }
 }

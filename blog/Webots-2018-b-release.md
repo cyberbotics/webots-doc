@@ -9,6 +9,9 @@ As always, for a comprehensive list of changes please refer to the ChangeLog, fo
 
 ## WREN: Webots Renderer
 
+
+---
+
 ## New Look and Feel
 
 ### New Themes
@@ -38,6 +41,8 @@ The menu adapts to the currently selected tree item or object in the 3D view, pr
 
 Boot up Webots R2018b and have an explore of these new GUI features!
 
+---
+
 ## Simulation Reset
 
 Reloading an entire world just to re-run your simulation can be slow, espeically for large worlds.
@@ -50,7 +55,11 @@ With this in mind, we have developed an alternative method of resetting a simula
 
 This feature makes resetting even the most complex simulations instantaneous.
 
+---
+
 ## New PROTOs
+
+---
 
 ## Extra Goodies
 

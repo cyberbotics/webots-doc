@@ -275,7 +275,7 @@ The `wb_supervisor_node_get_parent_node` function retrieves the reference to the
 #include <webots/node.h>
 
 #define WB_NODE_NO_NODE
-// 3D rendering
+/* 3D rendering */
 #define WB_NODE_APPEARANCE
 #define WB_NODE_BACKGROUND
 #define WB_NODE_BOX
@@ -309,11 +309,11 @@ The `wb_supervisor_node_get_parent_node` function retrieves the reference to the
 #define WB_NODE_TRANSFORM
 #define WB_NODE_UNIFORM
 #define WB_NODE_VIEWPOINT
-// robots
+/* robots */
 #define WB_NODE_ROBOT
 #define WB_NODE_SUPERVISOR
 #define WB_NODE_DIFFERENTIAL_WHEELS
-// devices
+/* devices */
 #define WB_NODE_ACCELEROMETER
 #define WB_NODE_BRAKE
 #define WB_NODE_CAMERA
@@ -339,7 +339,7 @@ The `wb_supervisor_node_get_parent_node` function retrieves the reference to the
 #define WB_NODE_RECEIVER
 #define WB_NODE_SPEAKER
 #define WB_NODE_TOUCH_SENSOR
-// misc
+/* misc */
 #define WB_NODE_BALL_JOINT
 #define WB_NODE_BALL_JOINT_PARAMETERS
 #define WB_NODE_CHARGER

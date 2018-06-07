@@ -817,9 +817,10 @@ body {
   width: 90%;
   margin: 15px auto;
   word-wrap: break-word;
+  font-size: 17px;
 }
 
-.blog #view h1, .blog #view h2, .blog #view h3 {
+.blog #view h1, .blog #view h2, .blog #view h3, .blog #view h4 {
   text-align: center;
   word-wrap: break-word;
 }

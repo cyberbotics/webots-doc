@@ -6,12 +6,10 @@ In the chart, an arrow between two nodes represents an inheritance relationship.
 The inheritance relationship indicates that a derived node (at the arrow tail) inherits all the fields and API functions of a base node (at the arrow head).
 For example, the [Supervisor](supervisor.md) node inherits from the [Robot](robot.md) node, and therefore all the fields and functions available in the [Robot](robot.md) node are also available in the [Supervisor](supervisor.md) node.
 
-Boxes depicted with a dashed line ([Light](light.md), `Device` and `Geometry`) represent *abstract* nodes, that is, nodes that cannot be instantiated (either using the SceneTree or in a ".wbt" file).
+Boxes depicted with a dashed line (like [Light](light.md), [Device](device.md) or `Geometry`) represent *abstract* nodes, that is, nodes that cannot be instantiated (either using the SceneTree or in a ".wbt" file).
 Abstract nodes are used to group common fields and functions that are shared by derived nodes.
 
-A box with round corners represents a `Geometry` node; that is, a node that will be graphically depicted when placed in the `geometry` field of a [Shape](shape.md) node.
-
-A box with a gray background indicates a node that can be used directly (or composed using [Group](group.md) and [Transform](transform.md) nodes) to build a *boundingObject* used to detect collisions between [Solid](solid.md) objects.
+A box with a green background indicates a node that can be used directly (or composed using [Group](group.md) and [Transform](transform.md) nodes) to build a *boundingObject* used to detect collisions between [Solid](solid.md) objects.
 Note that not all geometry nodes can be used as boundingObjects, and that although [Group](group.md) and [Transform](transform.md) can be used, not every combination of these will work correctly.
 
 %figure "Webots Nodes Chart"
@@ -20,7 +18,7 @@ graph LR
   subgraph ""
     AbstractClass(Abstract Class) --- AbstractClassDefinition[cannot be instantiated]
     BoundingObject[Bounding Object] --- BoundingObjectDefinition[can be used as BoundingObject<br>in a Solid node]
-    VRML[VRML] --- VRMLDefinition[valid VRML node]
+    VRML97[VRML97] --- VRML97Definition[VRML97 node]
   end
   PositionSensor --- Appearance
   AbstractClassDefinition --- JointDevice
@@ -122,12 +120,12 @@ graph LR
 
   classDef AbstractClassStyle stroke-width:3px,stroke-dasharray:5,5;
   classDef DefinitionStyle fill:#ddd,stroke-width:0px;
-  style VRML fill:#ddd,stroke:#444444,stroke-width:3px;
+  style VRML97 fill:#ddd,stroke:#444444,stroke-width:3px;
 
   class AbstractClass,Device,Geometry,Joint,JointDevice,Light,Motor,SolidDevice AbstractClassStyle;
   class BoundingObject,Capsule,Plane secondaryNode;
   class Box,Cylinder,EleveationGrid,IndexedFaceSet,Sphere highlightedSecondaryNode;
-  class Appearance,Background,Color,Cone,DirectionalLight,Fog,Group,ImageTexture,IndexedLineSet,Material,PointLight,PointSet,SpotLight,TextureCoordinate,TextureTransform,Transform,WorldInfo highlightedNode;
-  class AbstractClassDefinition,BoundingObjectDefinition,VRMLDefinition DefinitionStyle;
+  class Appearance,Background,Color,Cone,Coordinate,DirectionalLight,Fog,Group,ImageTexture,IndexedLineSet,Material,PointLight,Shape,PointSet,SpotLight,TextureCoordinate,TextureTransform,Transform,Viewpoint,WorldInfo highlightedNode;
+  class AbstractClassDefinition,BoundingObjectDefinition,VRML97Definition DefinitionStyle;
 %end
 %end

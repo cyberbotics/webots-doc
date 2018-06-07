@@ -745,10 +745,12 @@ body {
 }
 
 .blog #view img {
+  border: none;
   max-width: 90%;
-  border-radius: 2px;
+  border-radius: 4px;
   cursor: pointer;
   transition: 0.05s;
+  box-shadow: 0px 2px 22px 2px rgba(0, 0, 0, 0.5);
 }
 
 .blog #view img:hover {
@@ -782,13 +784,10 @@ body {
 .blog #view .modal-content {
   margin: 0 auto;
   display: block;
-  border-radius: 2px;
+  border-radius: 4px;
   cursor: pointer;
   transition: 0.05s;
-}
-.blog #view .modal-content img {
-  max-width: 75%;
-  min-width: 0%;
+  box-shadow: 0px 5px 20px 6px rgba(0, 0, 0, 1);
 }
 .blog #caption {
   margin: auto;

@@ -20,7 +20,8 @@ As always, for a comprehensive list of changes please refer to the ChangeLog, fo
 We've done lots of work on user experience with this latest update. 
 Shown above is the new default look for Webots R2018b, Webots Night.
 This new look features clean lines, flat design, and a subdued color palette with highlights in just the right places to make interacting with Webots even more intuitive.
-We've also kept the previous style, in a theme called "Webots Classic", if you prefer the old look, along with a more vibrant theme named "Webots Dusk".
+If you prefer the old look, we've also kept the previous style, in a theme called "Webots Classic".
+There's also a more vibrant dark theme named "Webots Dusk".
 Additionally, the splash screen has been re-designed to match our new themes.
 
 ### It's All About Context

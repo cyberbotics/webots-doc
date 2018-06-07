@@ -30,8 +30,4 @@
     - [Village Winter](village-winter.md)
     - [Realistic Village](realistic-village.md)
 - [Appendix](appendix.md)
-    - [C++ Libraries](cpp-libraries.md)
-    - [Java Libraries](java-libraries.md)
-    - [Python Libraries](python-libraries.md)
-    - ["ros\_automobile" Controller](ros_automobile-controller.md)
     - [A Typical OpenstreetMap Importer Configuration File](a-typical-openstreetmap-importer-configuration-file.md)

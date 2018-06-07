@@ -59,11 +59,12 @@ Then, after closing the window, the overlay will be automatically restored.
 
 ### Display Functions
 
-**Name**
+#### `wb_display_get_width`
+#### `wb_display_get_height`
 
-**wb\_display\_get\_width**, **wb\_display\_get\_height** - *get the size of a display*
+%tab-component
 
-{[C++](cpp-api.md#cpp_display)}, {[Java](java-api.md#java_display)}, {[Python](python-api.md#python_display)}, {[Matlab](matlab-api.md#matlab_display)}, {[ROS](ros-api.md)}
+%tab "C"
 
 ```c
 #include <webots/display.h>
@@ -72,17 +73,86 @@ int wb_display_get_width(WbDeviceTag tag);
 int wb_display_get_height(WbDeviceTag tag);
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Display.hpp>
+
+namespace webots {
+  class Display : public Device {
+    int getWidth() const;
+    int getHeight() const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Display
+
+class Display (Device):
+    def getWidth(self):
+    def getHeight(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Display;
+
+public class Display extends Device {
+  public int getWidth();
+  public int getHeight();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+width = wb_display_get_width(tag)
+height = wb_display_get_height(tag)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/get_info` | `service` | `webots_ros::display_get_info` | `uint8 ask`<br/>`---`<br/>`uint32 width`<br/>`uint32 height` |
+
+%tab-end
+
+%end
+
+##### Description
+
+*get the size of a display*
 
 These functions return respectively the values of the `width` and `height` fields.
 
 ---
 
-**Name**
+#### `wb_display_set_color`
+#### `wb_display_set_alpha`
+#### `wb_display_set_opacity`
+#### `wb_display_set_font`
 
-**wb\_display\_set\_color**, **wb\_display\_set\_alpha**, **wb\_display\_set\_opacity**, **wb\_display\_set\_font** - *set the drawing properties of a display*
+%tab-component
 
-{[C++](cpp-api.md#cpp_display)}, {[Java](java-api.md#java_display)}, {[Python](python-api.md#python_display)}, {[Matlab](matlab-api.md#matlab_display)}, {[ROS](ros-api.md)}
+%tab "C"
 
 ```c
 #include <webots/display.h>
@@ -93,7 +163,84 @@ void wb_display_set_opacity(WbDeviceTag tag, double opacity);
 void wb_display_set_font(WbDeviceTag tag, const char *font, int size, bool anti_aliasing);
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Display.hpp>
+
+namespace webots {
+  class Display : public Device {
+    virtual void setColor(int color);
+    virtual void setAlpha(double alpha);
+    virtual void setOpacity(double opacity);
+    virtual void setFont(const std::string &font, int size, bool antiAliasing);
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Display
+
+class Display (Device):
+    def setColor(self, color):
+    def setAlpha(self, alpha):
+    def setOpacity(self, opacity):
+    def setFont(self, font, size, antiAliasing):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Display;
+
+public class Display extends Device {
+  public void setColor(int color);
+  public void setAlpha(double alpha);
+  public void setOpacity(double opacity);
+  public void setFont(String font, int size, boolean antiAliasing);
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+wb_display_set_color(tag, [r g b])
+wb_display_set_alpha(tag, alpha)
+wb_display_set_opacity(tag, opacity)
+wb_display_set_font(tag, font, size, anti_aliasing)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/set_color` | `service` | [`webots_ros::set_int`](ros-api.md#common-services) | |
+| `/<device_name>/set_alpha` | `service` | [`webots_ros::set_float`](ros-api.md#common-services) | |
+| `/<device_name>/set_opacity` | `service` | [`webots_ros::set_float`](ros-api.md#common-services) | |
+| `/<device_name>/set_font` | `service` | `webots_ros::display_set_font` | `string font`<br/>`int32 size`<br/>`uint8 antiAliasing`<br/>`---`<br/>`int8 success` |
+
+%tab-end
+
+%end
+
+###### Description
+
+*set the drawing properties of a display*
 
 These four functions define the context in which the subsequent drawing commands (see [draw primitive functions](#wb_display_draw_pixel)) will be applied.
 
@@ -139,17 +286,18 @@ The following standard fonts are available:
 In addition to these fonts, it is possible to add other TrueType fonts file in your `PROJECT_HOME/fonts` directory.
 The default font is `Lucida Console, 8 pixels, with anti-aliasing`.
 
-> **Note** [Matlab]: In the Matlab version of the `wb_display_set_color` function, the `color` argument must be a vector containing the three RGB components: `[RED GREEN BLUE]`.
+> **Note** [MATLAB]: In the MATLAB version of the `wb_display_set_color` function, the `color` argument must be a vector containing the three RGB components: `[RED GREEN BLUE]`.
 Each component must be a value between 0.0 and 1.0.
 For example the vector `[1 0 1]` represents the magenta color.
 
 ---
 
-**Name**
+#### `wb_display_attach_camera`
+#### `wb_display_detach_camera`
 
-**wb\_display\_attach\_camera**, **wb\_display\_detach\_camera** - *attach/detach a camera to a display*
+%tab-component
 
-{[C++](cpp-api.md#cpp_display)}, {[Java](java-api.md#java_display)}, {[Python](python-api.md#python_display)}, {[Matlab](matlab-api.md#matlab_display)}, {[ROS](ros-api.md)}
+%tab "C"
 
 ```c
 #include <webots/display.h>
@@ -158,7 +306,74 @@ void wb_display_attach_camera(WbDeviceTag tag, WbDeviceTag camera_tag);
 void wb_display_detach_camera(WbDeviceTag tag);
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Display.hpp>
+
+namespace webots {
+  class Display : public Device {
+    virtual void attachCamera(Camera *camera);
+    virtual void detachCamera();
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Display
+
+class Display (Device):
+    def attachCamera(self, camera):
+    def detachCamera(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Display;
+
+public class Display extends Device {
+  public void attachCamera(Camera camera);
+  public void detachCamera();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+wb_display_attach_camera(tag, camera_tag)
+wb_display_detach_camera(tag)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/attach_camera` | `service` | [`webots_ros::set_string`](ros-api.md#common-services) | |
+| `/<device_name>/detach_camera` | `service` | [`webots_ros::get_bool`](ros-api.md#common-services) | |
+
+%tab-end
+
+%end
+
+##### Description
+
+*attach/detach a camera to a display*
 
 These functions are used to attach/detach a camera to a display.
 When a camera is attached to a display, the camera images are efficiently copied to the background of the display.
@@ -168,11 +383,19 @@ After detaching a camera, the pixels that have not been manually drawn will be t
 
 ---
 
-**Name**
+#### `wb_display_draw_pixel`
+#### `wb_display_draw_line`
+#### `wb_display_draw_rectangle`
+#### `wb_display_draw_oval`
+#### `wb_display_draw_polygon`
+#### `wb_display_draw_text`
+#### `wb_display_fill_rectangle`
+#### `wb_display_fill_oval`
+#### `wb_display_fill_polygon`
 
-**wb\_display\_draw\_pixel**, **wb\_display\_draw\_line**, **wb\_display\_draw\_rectangle**, **wb\_display\_draw\_oval**, **wb\_display\_draw\_polygon**, **wb\_display\_draw\_text**, **wb\_display\_fill\_rectangle**, **wb\_display\_fill\_oval**, **wb\_display\_fill\_polygon** - *draw a graphic primitive on a display*
+%tab-component
 
-{[C++](cpp-api.md#cpp_display)}, {[Java](java-api.md#java_display)}, {[Python](python-api.md#python_display)}, {[Matlab](matlab-api.md#matlab_display)}, {[ROS](ros-api.md)}
+%tab "C"
 
 ```c
 #include <webots/display.h>
@@ -182,13 +405,115 @@ void wb_display_draw_line(WbDeviceTag tag, int x1, int y1, int x2, int y2);
 void wb_display_draw_rectangle(WbDeviceTag tag, int x, int y, int width, int height);
 void wb_display_draw_oval(WbDeviceTag tag, int cx, int cy, int a, int b);
 void wb_display_draw_polygon(WbDeviceTag tag, const int *x, const int *y, int size);
-void wb_display_draw_text(WbDeviceTag tag, const char *txt, int x, int y);
+void wb_display_draw_text(WbDeviceTag tag, const char *text, int x, int y);
 void wb_display_fill_rectangle(WbDeviceTag tag, int x, int y, int width, int height);
 void wb_display_fill_oval(WbDeviceTag tag, int cx, int cy, int a, int b);
 void wb_display_fill_polygon(WbDeviceTag tag, const int *x, const int *y, int size);
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Display.hpp>
+
+namespace webots {
+  class Display : public Device {
+    virtual void drawPixel(int x, int y);
+    virtual void drawLine(int x1, int y1, int x2, int y2);
+    virtual void drawRectangle(int x, int y, int width, int height);
+    virtual void drawOval(int cx, int cy, int a, int b);
+    virtual void drawPolygon(const int *x, const int *y, int size);
+    virtual void drawText(const std::string &text, int x, int y);
+    virtual void fillRectangle(int x, int y, int width, int height);
+    virtual void fillOval(int cx, int cy, int a, int b);
+    virtual void fillPolygon(const int *x, const int *y, int size);
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Display
+
+class Display (Device):
+    def drawPixel(self, x, y):
+    def drawLine(self, x1, y1, x2, y2):
+    def drawRectangle(self, x, y, width, height):
+    def drawOval(self, cx, cy, a, b):
+    def drawPolygon(self, x, y):
+    def drawText(self, text, x, y):
+    def fillRectangle(self, x, y, width, height):
+    def fillOval(self, cx, cy, a, b):
+    def fillPolygon(self, x, y):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Display;
+
+public class Display extends Device {
+  public void drawPixel(int x, int y);
+  public void drawLine(int x1, int y1, int x2, int y2);
+  public void drawRectangle(int x, int y, int width, int height);
+  public void drawOval(int cx, int cy, int a, int b);
+  public void drawPolygon(int[] x, int[] y, int size);
+  public void drawText(String text, int x, int y);
+  public void fillRectangle(int x, int y, int width, int height);
+  public void fillOval(int cx, int cy, int a, int b);
+  public void fillPolygon(int[] x, int[] y, int size);
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+wb_display_draw_pixel(tag, x, y)
+wb_display_draw_line(tag, x1, y1, x2, y2)
+wb_display_draw_rectangle(tag, x, y, width, height)
+wb_display_draw_oval(tag, cx, cy, a, b)
+wb_display_draw_polygon(tag, [x1 x2 ... xn], [y1 y2 ... yn])
+wb_display_draw_text(tag, 'text', x, y)
+wb_display_fill_rectangle(tag, x, y, width, height)
+wb_display_fill_oval(tag, cx, cy, a, b)
+wb_display_fill_polygon(tag, [x1 x2 ... xn], [y1 y2 ... yn])
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/draw_pixel` | `service` | `webots_ros::display_draw_pixel` | `int32 x`<br/>`int32 y`<br/>`---`<br/>`int8 success` |
+| `/<device_name>/draw_line` | `service` | `webots_ros::display_draw_line` | `int32 x1`<br/>`int32 y1`<br/>`int32 x2`<br/>`int32 y2`<br/>`---`<br/>`int8 success` |
+| `/<device_name>/draw_rectangle` | `service` | `webots_ros::display_draw_rectangle` | `int32 x`<br/>`int32 y`<br/>`int32 width`<br/>`int32 height`<br/>`---`<br/>`int8 success` |
+| `/<device_name>/draw_oval` | `service` | `webots_ros::display_draw_oval` | `int32 cx`<br/>`int32 cy`<br/>`int32 a`<br/>`int32 b`<br/>`---`<br/>`int8 success` |
+| `/<device_name>/draw_polygon` | `service` | `webots_ros::display_draw_polygon` | `int32[] x`<br/>`int32[] y`<br/>`int32 size`<br/>`---`<br/>`int8 success` |
+| `/<device_name>/draw_text` | `service` | `webots_ros::display_draw_text` | `string text`<br/>`int32 x`<br/>`int32 y`<br/>`---`<br/>`int8 success` |
+| `/<device_name>/fill_rectangle` | `service` | `webots_ros::display_draw_rectangle` | `int32 x`<br/>`int32 y`<br/>`int32 width`<br/>`int32 height`<br/>`---`<br/>`int8 success` |
+| `/<device_name>/fill_oval` | `service` | `webots_ros::display_draw_oval` | `int32 cx`<br/>`int32 cy`<br/>`int32 a`<br/>`int32 b`<br/>`---`<br/>`int8 success` |
+| `/<device_name>/fill_polygon` | `service` | `webots_ros::display_draw_polygon` | `int32[] x`<br/>`int32[] y`<br/>`int32 size`<br/>`---`<br/>`int8 success` |
+
+%tab-end
+
+%end
+
+##### Description
+
+*draw a graphic primitive on a display*
 
 These functions order the execution of a drawing primitive on a display.
 They depend on the context of the display as defined by the contextual functions (see [set context functions](#wb_display_set_color)).
@@ -225,18 +550,30 @@ The `wb_display_fill_oval` function draws an oval having the same properties as 
 
 The `wb_display_fill_polygon` function draws a polygon having the same properties as the polygon drawn by the `wb_display_draw_polygon` function except that it is filled instead of outlined.
 
-> **Note** [Java, Python, Matlab]: The Java, Python and Matlab equivalent of the `wb_display_draw_polygon` and `wb_display_fill_polygon` functions don't have a `size` argument because in these languages the size is determined directly from the `x` and `y` arguments.
+> **Note** [Java, Python, MATLAB]: The Java, Python and MATLAB equivalent of the `wb_display_draw_polygon` and `wb_display_fill_polygon` functions don't have a `size` argument because in these languages the size is determined directly from the `x` and `y` arguments.
 
 ---
 
-**Name**
+#### `wb_display_image_new`
+#### `wb_display_image_load`
+#### `wb_display_image_copy`
+#### `wb_display_image_paste`
+#### `wb_display_image_save`
+#### `wb_display_image_delete`
 
-**wb\_display\_image\_new**, **wb\_display\_image\_load**, **wb\_display\_image\_copy**, **wb\_display\_image\_paste**, **wb\_display\_image\_save**, **wb\_display\_image\_delete** - *image manipulation functions*
+%tab-component
 
-{[C++](cpp-api.md#cpp_display)}, {[Java](java-api.md#java_display)}, {[Python](python-api.md#python_display)}, {[Matlab](matlab-api.md#matlab_display)}, {[ROS](ros-api.md)}
+%tab "C"
 
 ```c
 #include <webots/display.h>
+
+#define WB_IMAGE_RGB  3
+#define WB_IMAGE_RGBA 4
+#define WB_IMAGE_ARGB 5
+#define WB_IMAGE_BGRA 6
+
+typedef struct WbImageStructPrivate *WbImageRef;
 
 WbImageRef wb_display_image_new(WbDeviceTag tag, int width, int height, const void *data, int format);
 WbImageRef wb_display_image_load(WbDeviceTag tag, const char *filename);
@@ -246,7 +583,115 @@ void wb_display_image_save(WbDeviceTag tag, WbImageRef ir, const char *filename)
 void wb_display_image_delete(WbDeviceTag tag, WbImageRef ir);
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Display.hpp>
+#include <webots/ImageRef.hpp>
+
+namespace webots {
+  class ImageRef {
+    // ...
+  };
+
+  class Display : public Device
+    enum {RGB, RGBA, ARGB, BGRA};
+
+    ImageRef *imageNew(int width, int height, const void *data, int format) const;
+    ImageRef *imageLoad(const std::string &filename) const;
+    ImageRef *imageCopy(int x, int y, int width, int height) const;
+    virtual void imagePaste(ImageRef *ir, int x, int y, blend=false);
+    void imageSave(ImageRef *ir, const std::string &filename) const;
+    void imageDelete(ImageRef *ir) const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Display, ImageRef
+
+class ImageRef:
+    # ...
+
+class Display (Device):
+    RGB, RGBA, ARGB, BGRA
+
+    def imageNew(self, data, format, width=None, height=None):
+    def imageLoad(self, filename):
+    def imageCopy(self, x, y, width, height):
+    def imagePaste(self, ir, x, y, blend=False):
+    def imageSave(self, ir, filename):
+    def imageDelete(self, ir):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Display;
+import com.cyberbotics.webots.controller.ImageRef;
+
+public class ImageRef {
+  // ...
+}
+
+public class Display extends Device {
+  public final static int RGB, RGBA, ARGB, BGRA;
+
+  public ImageRef imageNew(int width, int height, int[] data, int format);
+  public ImageRef imageLoad(String filename);
+  public ImageRef imageCopy(int x, int y, int width, int height);
+  public void imagePaste(ImageRef ir, int x, int y, boolean blend);
+  public void imageSave(ImageRef ir, String filename);
+  public void imageDelete(ImageRef ir);
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+RGB, RGBA, ARGB, BGRA
+
+image = wb_display_image_new(tag, data, format)
+image = wb_display_image_load(tag, 'filename')
+image = wb_display_image_copy(tag, x, y, width, height)
+wb_display_image_paste(tag, image, x, y, blend)
+wb_display_image_save(tag, image, 'filename')
+wb_display_image_delete(tag, image)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/image_new` | `service` | `webots_ros::display_image_new` | `int32 width`<br/>`int32 height`<br/>`char[] data`<br/>`int32 format`<br/>`---`<br/>`uint64 ir` |
+| `/<device_name>/image_load` | `service` | `webots_ros::display_image_load` | `string filename`<br/>`---`<br/>`uint64 ir` |
+| `/<device_name>/image_copy` | `service` | `webots_ros::display_image_copy` | `int32 x`<br/>`int32 y`<br/>`int32 width`<br/>`int32 height`<br/>`---`<br/>`uint64 ir` |
+| `/<device_name>/image_paste` | `service` | `webots_ros::display_image_paste` | `uint64 ir`<br/>`int32 x`<br/>`int32 y`<br/>`uint8 blend`<br/>`---`<br/>`int8 success` |
+| `/<device_name>/image_save` | `service` | `webots_ros::display_image_save` | `string filename`<br/>`uint64 ir`<br/>`---`<br/>`int8 success` |
+| `/<device_name>/image_delete` | `service` | `webots_ros::display_image_delete` | `uint64 ir`<br/>`---`<br/>`int8 success` |
+
+%tab-end
+
+%end
+
+##### Description
+
+*image manipulation functions*
 
 In addition to the main display image, each [Display](#display) node also contains a list of clipboard images used for various image manipulations.
 This list is initially empty.

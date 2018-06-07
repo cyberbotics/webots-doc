@@ -7,6 +7,7 @@
 /* exported resetRobotComponent */
 /* exported toggleDeviceComponent */
 /* exported highlightX3DElement */
+/* exported openTab */
 
 var handle;
 
@@ -457,7 +458,7 @@ function populateViewDiv(mdContent) {
   // markdown to html
   window.mermaidGraphCounter = 0;
   window.mermaidGraphs = {};
-  var converter = new showdown.Converter({tables: 'True', extensions: ['wbRobotComponent', 'wbChart', 'wbVariables', 'wbAPI', 'wbFigure', 'wbAnchors', 'wbIllustratedSection', 'youtube']});
+  var converter = new showdown.Converter({tables: 'True', extensions: ['wbTabComponent', 'wbRobotComponent', 'wbChart', 'wbVariables', 'wbAPI', 'wbFigure', 'wbAnchors', 'wbIllustratedSection', 'youtube']});
   var html = converter.makeHtml(mdContent);
 
   // console.log('HTML content: \n\n')
@@ -798,6 +799,26 @@ function createRobotComponent(view) {
   }
 }
 
+// Open a tab component tab
+function openTab(evt, name) {
+  var tabcomponent = evt.target.parentNode;
+  var tabID = tabcomponent.getAttribute('tabid');
+
+  var tabcontents = tabcomponent.parentNode.querySelectorAll('.tab-content[tabid="' + tabID + '"]');
+  for (var i = 0; i < tabcontents.length; i++)
+    tabcontents[i].style.display = 'none';
+
+  var tablinks = tabcomponent.querySelectorAll('.tab-links');
+  for (var j = 0; j < tablinks.length; j++)
+    tablinks[j].classList.remove('active');
+
+  var tabcontent = tabcomponent.parentNode.querySelectorAll('.tab-content[tabid="' + tabID + '"][name="' + name + '"]')[0];
+  tabcontent.style.display = 'block';
+
+  var tablink = tabcomponent.querySelectorAll('.tab-links[name="' + name + '"]')[0];
+  tablink.classList.add('active');
+}
+
 function renderGraphs() {
   for (var id in window.mermaidGraphs) {
     window.mermaidAPI.render(id, window.mermaidGraphs[id], function(svgCode, bindFunctions) {
@@ -812,7 +833,7 @@ function renderGraphs() {
 
 function applyAnchorIcons(view) {
   var elements = [];
-  var tags = ['figcaption', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
+  var tags = ['figcaption', 'h1', 'h2', 'h3', 'h4'];
   var i;
   for (i = 0; i < tags.length; i++) {
     var array = Array.prototype.slice.call(view.querySelectorAll(tags[i]));

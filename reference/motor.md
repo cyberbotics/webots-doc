@@ -17,7 +17,8 @@ Motor {
 
 ### Description
 
-A [Motor](#motor) node is an abstract node (not instantiated) whose derived classes can be used in a mechanical simulation to power a joint hence producing a motion along, or around, one of its axes.
+A [Motor](#motor) node is an abstract node (not instantiated) whose derived classes are [RotationalMotor](rotationalmotor.md) and [LinearMotor](linearmotor.md).
+These classes can be used in a mechanical simulation to power a joint hence producing a motion along, or around, one of its axes.
 
 A [RotationalMotor](rotationalmotor.md) can power a [HingeJoint](hingejoint.md) (resp. a [Hinge2Joint](hinge2joint.md)) when set inside the `device` (resp. `device` or `device2`) field of these nodes.
 It produces then a rotational motion around the choosen axis.
@@ -26,6 +27,7 @@ Likewise, a [LinearMotor](linearmotor.md) can power a [SliderJoint](hingejoint.m
 ### Field Summary
 
 - The `acceleration` field defines the default acceleration of the P-controller.
+It is expressed in *meter per second squared* (m/s²) for linear motors and in *meter per radian squared* (rad/s²) for rotational motors.
 A value of -1 (infinite) means that the acceleration is not limited by the P-controller.
 The acceleration can be changed at run-time with the `wb_motor_set_acceleration` function.
 
@@ -59,6 +61,7 @@ With a small *P*, more simulation steps are needed to reach the target position,
 These fields are described in more detail in the [Motor Limits section](#motor-limits), see below.
 
 - The `maxVelocity` field specifies both the upper limit and the default value for the motor *velocity*.
+It is expressed in *meter per second* (m/s) for linear motors and in *meter per radian* (rad/s) for rotational motors.
 The *velocity* can be changed at run-time with the `wb_motor_set_velocity` function.
 The value should always be positive (the default is 10).
 
@@ -72,16 +75,16 @@ This functionality is not available for [Hinge2Joint](hinge2joint.md) and [Track
 ### Units
 
 The position of a motor corresponds to joint position as defined in [JointParameters](jointparameters.md).
-The position of a rotational motor is expressed in *radians* while the position of a linear motor is expressed in *meters*.
+The position of a rotational motor is expressed in *radians* (rad) while the position of a linear motor is expressed in *meters* (m).
 See [this table](#motor-units):
 
 %figure "Motor Units"
 
-| &nbsp;       | Rotational                   | Linear                    |
-| ------------ | ---------------------------- | ------------------------- |
-| Position     | rad (radians)                | m (meters)                |
-| Velocity     | rad/s (radians / second)     | m/s (meters / second)     |
-| Acceleration | rad/s^2 (radians / second^2) | m/s^2 (meters / second^2) |
+| &nbsp;       | Rotational                          | Linear                           |
+| ------------ | ------------------------------------| ---------------------------------|
+| Position     | rad (radians)                       | m (meters)                       |
+| Velocity     | rad/s (radians per second)          | m/s (meters per second)          |
+| Acceleration | rad/s² (radians per second squared) | m/s² (meters per second squared) |
 
 %end
 
@@ -159,7 +162,7 @@ wb_motor_set_velocity(motor, 6.28);  // 1 rotation per second
 It is implemented in the C99 specifications as well as in C++.
 In Java, this value is defined as `Double.POSITIVE_INFINITY`.
 In Python, you should use `float('inf')`.
-Finally, in Matlab you should use the `inf` constant.
+Finally, in MATLAB you should use the `inf` constant.
 
 ### Force and Torque Control
 
@@ -219,11 +222,26 @@ If a more specific or accurate model is needed, it can be implemented in the rob
 
 ### Motor Functions
 
-**Name**
+#### `wb_motor_set_position`
+#### `wb_motor_set_velocity`
+#### `wb_motor_set_acceleration`
+#### `wb_motor_set_available_force`
+#### `wb_motor_set_available_torque`
+#### `wb_motor_set_control_pid`
+#### `wb_motor_get_target_position`
+#### `wb_motor_get_min_position`
+#### `wb_motor_get_max_position`
+#### `wb_motor_get_velocity`
+#### `wb_motor_get_max_velocity`
+#### `wb_motor_get_acceleration`
+#### `wb_motor_get_available_force`
+#### `wb_motor_get_max_force`
+#### `wb_motor_get_available_torque`
+#### `wb_motor_get_max_torque`
 
-**wb\_motor\_set\_position**, **wb\_motor\_set\_velocity**, **wb\_motor\_set\_acceleration**, **wb\_motor\_set\_available\_force**, **wb\_motor\_set\_available\_torque**, **wb\_motor\_set\_control\_pid**, **wb\_motor\_get\_target\_position**, **wb\_motor\_get\_min\_position**, **wb\_motor\_get\_max\_position**, **wb\_motor\_get\_velocity**, **wb\_motor\_get\_max\_velocty**, **wb\_motor\_get\_acceleration**, **wb\_motor\_get\_available\_force**, **wb\_motor\_get\_max\_force**, **wb\_motor\_get\_available\_torque**, **wb\_motor\_get\_max\_torque** - *change the parameters of the PID-controller*
+%tab-component
 
-{[C++](cpp-api.md#cpp_motor)}, {[Java](java-api.md#java_motor)}, {[Python](python-api.md#python_motor)}, {[Matlab](matlab-api.md#matlab_motor)}, {[ROS](ros-api.md)}
+%tab "C"
 
 ```c
 #include <webots/motor.h>
@@ -246,9 +264,147 @@ double wb_motor_get_available_torque(WbDeviceTag tag);
 double wb_motor_get_max_torque(WbDeviceTag tag);
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Motor.hpp>
+
+namespace webots {
+  class Motor : public Device {
+    virtual void setPosition(double position);
+    virtual void setVelocity(double velocity);
+    virtual void setAcceleration(double acceleration);
+    virtual void setAvailableForce(double force);
+    virtual void setAvailableTorque(double torque);
+    virtual void setControlPID(double p, double i, double d);
+    double getTargetPosition() const;
+    double getMinPosition() const;
+    double getMaxPosition() const;
+    double getVelocity() const;
+    double getMaxVelocity() const;
+    double getAcceleration() const;
+    double getAvailableForce() const;
+    double getMaxForce() const;
+    double getAvailableTorque() const;
+    double getMaxTorque() const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Motor
+
+class Motor (Device):
+    def setPosition(self, position):
+    def setVelocity(self, velocity):
+    def setAcceleration(self, acceleration):
+    def setAvailableForce(self, force):
+    def setAvailableTorque(self, torque):
+    def setControlPID(self, p, i, d):
+    def getTargetPosition(self):
+    def getMinPosition(self):
+    def getMaxPosition(self):
+    def getVelocity(self):
+    def getMaxVelocity(self):
+    def getAcceleration(self):
+    def getAvailableForce(self):
+    def getMaxForce(self):
+    def getAvailableTorque(self):
+    def getMaxTorque(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Motor;
+
+public class Motor extends Device {
+  public void setPosition(double position);
+  public void setVelocity(double velocity);
+  public void setAcceleration(double acceleration);
+  public void setAvailableForce(double force);
+  public void setAvailableTorque(double torque);
+  public void setControlPID(double p, double i, double d);
+  public double getTargetPosition();
+  public double getMinPosition();
+  public double getMaxPosition();
+  public double getVelocity();
+  public double getMaxVelocity();
+  public double getAcceleration();
+  public double getAvailableForce();
+  public double getMaxForce();
+  public double getAvailableTorque();
+  public double getMaxTorque();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+wb_motor_set_position(tag, position)
+wb_motor_set_velocity(tag, velocity)
+wb_motor_set_acceleration(tag, acceleration)
+wb_motor_set_available_force(tag, force)
+wb_motor_set_available_torque(tag, torque)
+wb_motor_set_control_pid(tag, p, i, d)
+target = wb_motor_get_target_position(tag)
+min = wb_motor_get_min_position(tag)
+max = wb_motor_get_max_position(tag)
+vel = wb_motor_get_velocity(tag)
+vel = wb_motor_get_max_velocity(tag)
+acc = wb_motor_get_acceleration(tag)
+force = wb_motor_get_available_force(tag)
+force = wb_motor_get_max_force(tag)
+torque = wb_motor_get_available_torque(tag)
+torque = wb_motor_get_max_torque(tag)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/set_position` | `service` | [`webots_ros::set_float`](ros-api.md#common-services) | |
+| `/<device_name>/set_velocity` | `service` | [`webots_ros::set_float`](ros-api.md#common-services) | |
+| `/<device_name>/set_acceleration` | `service` | [`webots_ros::set_float`](ros-api.md#common-services) | |
+| `/<device_name>/set_available_force` | `service` | [`webots_ros::set_float`](ros-api.md#common-services) | |
+| `/<device_name>/set_available_torque` | `service` | [`webots_ros::set_float`](ros-api.md#common-services) | |
+| `/<device_name>/set_control_pid` | `service` | `webots_ros::motor_set_control_pid` | `float64 controlp`<br/>`float64 controli`<br/>`float64 controld`<br/>`---`<br/>`int8 success` |
+| `/<device_name>/get_target_position` | `service` | [`webots_ros::get_float`](ros-api.md#common-services) | |
+| `/<device_name>/get_min_position` | `service` | [`webots_ros::get_float`](ros-api.md#common-services) | |
+| `/<device_name>/get_max_position` | `service` | [`webots_ros::get_float`](ros-api.md#common-services) | |
+| `/<device_name>/get_velocity` | `service` | [`webots_ros::get_float`](ros-api.md#common-services) | |
+| `/<device_name>/get_max_velocity` | `service` | [`webots_ros::get_float`](ros-api.md#common-services) | |
+| `/<device_name>/get_acceleration` | `service` | [`webots_ros::get_float`](ros-api.md#common-services) | |
+| `/<device_name>/get_available_force` | `service` | [`webots_ros::get_float`](ros-api.md#common-services) | |
+| `/<device_name>/get_max_force` | `service` | [`webots_ros::get_float`](ros-api.md#common-services) | |
+| `/<device_name>/get_available_torque` | `service` | [`webots_ros::get_float`](ros-api.md#common-services) | |
+| `/<device_name>/get_max_torque` | `service` | [`webots_ros::get_float`](ros-api.md#common-services) | |
+
+%tab-end
+
+%end
+
+##### Description
+
+*change the parameters of the PID-controller*
 
 The `wb_motor_set_position` function specifies a new target position that the PID-controller will attempt to reach using the current velocity, acceleration and motor torque/force parameters.
+The specified position is expressed in *radian* (rad) for rotational motors and in *meter* (m) for linear motors.
 This function returns immediately (asynchronous) while the actual motion is carried out in the background by Webots.
 The target position will be reached only if the physics simulation allows it, that means, if the specified motor force is sufficient and the motion is not blocked by obstacles, external forces or the motor's own spring force, etc.
 It is also possible to wait until the [Motor](#motor) reaches the target position (synchronous) like this:
@@ -291,12 +447,13 @@ wb_motor_set_velocity(tag, desired_speed);  // rad/s
 
 <!-- -->
 
-> **Note** [Matlab]: In MATLAB use `inf` instead of INFINITY.
+> **Note** [MATLAB]: In MATLAB use `inf` instead of INFINITY.
 
 The `wb_motor_get_target_position` function allows the user to get the target position.
 This value matches with the argument given to the last `wb_motor_set_position` function call.
 
-The `wb_motor_set_velocity` function specifies the velocity that motor should reach while moving to the target position.
+The `wb_motor_set_velocity` function specifies the velocity that a motor should reach while moving to the target position.
+The velocity is expressed in *radian per second* (rad/s) for rotational motors and in *meter per second* (m/s) for linear motors.
 In other words, this means that the motor will accelerate (using the specified acceleration, see below) until the target velocity is reached.
 The velocity argument passed to this function cannot exceed the limit specified in the `maxVelocity` field.
 The specified velocity can be retrieved using the `wb_motor_get_velocity` function.
@@ -304,10 +461,13 @@ The `wb_motor_get_max_velocity` function returns the limit specified in the `max
 Note that if the velocity is not explicitly set using the `wb_motor_set_velocity` function, then the `wb_motor_get_velocity` and `wb_motor_get_max_velocity` functions return the same value.
 
 The `wb_motor_set_acceleration` function specifies the acceleration that the PID-controller should use when trying to reach the specified velocity.
+The acceleration is expressed in *radian per second squared* (rad/s²) for rotational motors and in *meter per second squared* (m/s²) for linear motors.
 Note that an infinite acceleration is obtained by passing -1 as the `acc` argument to this function.
 The specified acceleration overwrites the `acceleration` field value and can be retrieved using the `wb_motor_get_acceleration` function.
 
 The `wb_motor_set_available_force` (resp. `wb_motor_set_available_torque`) function specifies the maximum force (resp. torque) that will be available to the motor to carry out the requested motion.
+The force is expressed in *Newton* (N).
+The torque is expressed in *Newton meter* (N\*m).
 The motor force/torque specified with this function cannot exceed the value specified in the `maxForce`/`maxTorque` field.
 The specified force (resp. torque) can be retrieved using the `wb_motor_get_available_force` (resp. `wb_motor_get_available_torque`) function.
 The `wb_motor_get_max_force` (reps. `wb_motor_get_max_torque`) function returns the limit specified in the `maxForce` (resp. `maxTorque`) field.
@@ -319,14 +479,22 @@ With a small *P*, a long time is needed to reach the target position, while too 
 The default value of *P, I* and *D* are specified by the `controlPID` field of the corresponding [Motor](#motor) node.
 
 The `wb_motor_get_[min|max]_position` functions allow to get the values of respectively the `minPosition` and the `maxPosition` fields.
+Positions are expressed in *radian* (rad) for rotational motors and in *meter* (m) for linear motors.
 
 ---
 
-**Name**
+#### `wb_motor_enable_force_feedback`
+#### `wb_motor_disable_force_feedback`
+#### `wb_motor_get_force_feedback`
+#### `wb_motor_get_force_feedback_sampling_period`
+#### `wb_motor_enable_torque_feedback`
+#### `wb_motor_disable_torque_feedback`
+#### `wb_motor_get_torque_feedback`
+#### `wb_motor_get_torque_feedback_sampling_period`
 
-**wb\_motor\_enable\_force\_feedback**, **wb\_motor\_get\_force\_feedback**, **wb\_motor\_get\_force\_feedback\_sampling\_period**, **wb\_motor\_disable\_force\_feedback**, **wb\_motor\_enable\_torque\_feedback**, **wb\_motor\_get\_torque\_feedback**, **wb\_motor\_get\_torque\_feedback\_sampling\_period**, **wb\_motor\_disable\_torque\_feedback** - *get the motor force or torque currently used by a motor*
+%tab-component
 
-{[C++](cpp-api.md#cpp_motor)}, {[Java](java-api.md#java_motor)}, {[Python](python-api.md#python_motor)}, {[Matlab](matlab-api.md#matlab_motor)}, {[ROS](ros-api.md)}
+%tab "C"
 
 ```c
 #include <webots/motor.h>
@@ -341,7 +509,102 @@ int wb_motor_get_torque_feedback_sampling_period(WbDeviceTag tag);
 double wb_motor_get_torque_feedback(WbDeviceTag tag);
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Motor.hpp>
+
+namespace webots {
+  class Motor : public Device {
+    virtual void enableForceFeedback(int samplingPeriod);
+    virtual void disableForceFeedback();
+    int getForceFeedbackSamplingPeriod() const;
+    double getForceFeedback() const;
+    virtual void enableTorqueFeedback(int samplingPeriod);
+    virtual void disableTorqueFeedback();
+    int getTorqueFeedbackSamplingPeriod() const;
+    double getTorqueFeedback() const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Motor
+
+class Motor (Device):
+    def enableForceFeedback(self, samplingPeriod):
+    def disableForceFeedback(self):
+    def getForceFeedbackSamplingPeriod(self):
+    def getForceFeedback(self):
+    def enableTorqueFeedback(self, samplingPeriod):
+    def disableTorqueFeedback(self):
+    def getTorqueFeedbackSamplingPeriod(self):
+    def getTorqueFeedback(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Motor;
+
+public class Motor extends Device {
+  public void enableForceFeedback(int samplingPeriod);
+  public void disableForceFeedback();
+  public int getForceFeedbackSamplingPeriod();
+  public double getForceFeedback();
+  public void enableTorqueFeedback(int samplingPeriod);
+  public void disableTorqueFeedback();
+  public int getTorqueFeedbackSamplingPeriod();
+  public double getTorqueFeedback();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+wb_motor_enable_force_feedback(tag, sampling_period)
+wb_motor_disable_force_feedback(tag)
+period = wb_motor_get_force_feedback_sampling_period(tag)
+force = wb_motor_get_force_feedback(tag)
+wb_motor_enable_torque_feedback(tag, sampling_period)
+wb_motor_disable_torque_feedback(tag)
+period = wb_motor_get_torque_feedback_sampling_period(tag)
+torque = wb_motor_get_torque_feedback(tag)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/force_feedback` | `topic` | webots_ros::Float64Stamped | [`Header`](http://docs.ros.org/api/std_msgs/html/msg/Header.html) `header`<br/>`float64 data` |
+| `/<device_name>/torque_feedback` | `topic` | webots_ros::Float64Stamped | [`Header`](http://docs.ros.org/api/std_msgs/html/msg/Header.html) `header`<br/>`float64 data` |
+| `/<device_name>/force_feedback_sensor/enable` | `service` | [`webots_ros::set_int`](ros-api.md#common-services) | |
+| `/<device_name>/force_feedback_sensor/get_sampling_period` | `service` | [`webots_ros::get_int`](ros-api.md#common-services) | |
+| `/<device_name>/torque_feedback_sensor/enable` | `service` | [`webots_ros::set_int`](ros-api.md#common-services) | |
+| `/<device_name>/torque_feedback_sensor/get_sampling_period` | `service` | [`webots_ros::get_int`](ros-api.md#common-services) | |
+
+%tab-end
+
+%end
+
+##### Description
+
+*get the motor force or torque currently used by a motor*
 
 The `wb_motor_enable_force_feedback` (resp. `wb_motor_enable_torque_feedback`) function activates force (resp. torque) feedback measurements for the specified motor.
 The result must be retrieved with the `wb_motor_get_force_feedback` (resp. `wb_motor_get_torque_feedback`) function.
@@ -350,7 +613,8 @@ Note that the first measurement will be available only after the first sampling 
 
 The `wb_motor_get_force_feedback` (resp. `wb_motor_get_torque_feedback`) function returns the most recent motor force (resp. torque) measurement.
 This function measures the amount of motor force (resp. torque) that is currently being used by the motor in order to achieve the desired motion or hold the current position.
-For a "rotational" motor, the returned value is a torque [N\*m]; for a "linear" motor, the value is a force [N].
+For a rotational motor, the returned value is a torque, expressed in *Newton meter* (N\*m).
+For a linear motor, the returned value is a force, expressed in *Newton* (N).
 The returned value is an approximation computed by the physics engine, and therefore it may be inaccurate.
 The returned value normally does not exceed the available motor force (resp. torque) specified with the `wb_motor_set_force` (resp. `wb_motor_set_torque`) function.
 The default value is provided by the `maxForce` (resp. `maxTorque` field).
@@ -376,11 +640,12 @@ The `wb_motor_get_force_feedback_sampling_period` (resp. `wb_motor_get_torque_fe
 
 ---
 
-**Name**
+#### `wb_motor_set_force`
+#### `wb_motor_set_torque`
 
-**wb\_motor\_set\_force**, **wb\_motor\_set\_torque** - *direct force or torque control*
+%tab-component
 
-{[C++](cpp-api.md#cpp_motor)}, {[Java](java-api.md#java_motor)}, {[Python](python-api.md#python_motor)}, {[Matlab](matlab-api.md#matlab_motor)}, {[ROS](ros-api.md)}
+%tab "C"
 
 ```c
 #include <webots/motor.h>
@@ -389,15 +654,82 @@ void wb_motor_set_force(WbDeviceTag tag, double force);
 void wb_motor_set_torque(WbDeviceTag tag, double torque);
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Motor.hpp>
+
+namespace webots {
+  class Motor : public Device {
+    virtual void setForce(double force);
+    virtual void setTorque(double torque);
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Motor
+
+class Motor (Device):
+    def setForce(self, force):
+    def setTorque(self, torque):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Motor;
+
+public class Motor extends Device {
+  public void setForce(double force);
+  public void setTorque(double torque);
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+wb_motor_set_force(tag, force)
+wb_motor_set_torque(tag, torque)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/set_force` | `service` | [`webots_ros::set_float`](ros-api.md#common-services) | |
+| `/<device_name>/set_torque` | `service` | [`webots_ros::set_float`](ros-api.md#common-services) | |
+
+%tab-end
+
+%end
+
+##### Description
+
+*direct force or torque control*
 
 As an alternative to the PID-controller, the `wb_motor_set_force` (resp. `wb_motor_set_torque`) function allows the user to directly specify the amount of force (resp. torque) that must be applied by a motor.
 This function bypasses the PID-controller and ODE joint motors; it adds the force to the physics simulation directly.
 This allows the user to design a custom controller, for example a PID controller.
 Note that when the `wb_motor_set_force` (resp. `wb_motor_set_torque`) function is invoked, this automatically resets the force previously added by the PID-controller.
 
-In a "rotational" motor, the *torque* parameter specifies the amount of torque [N\*m] that will be applied around the motor rotation axis.
-In a "linear" motor, the *force* parameter specifies the amount of force [N] that will be applied along the sliding axis.
+In a rotational motor, the *torque* parameter specifies the amount of torque expressed in *Newton meter* (N\*m) that will be applied around the motor rotation axis.
+In a linear motor, the *force* parameter specifies the amount of force expressed in *Newton* (N) that will be applied along the sliding axis.
 A positive *force* (resp. *torque*) will move the bodies in the positive direction, which corresponds to the direction of the motor when its position value increases.
 When invoking the `wb_motor_set_force` (resp. `wb_motor_set_torque`) function, the specified *force* (resp. *torque*) parameter cannot exceed the currently available force (resp. torque) of the motor.
 The currently available force (resp. torque) is specified in the `maxForce` (resp. `maxTorque`) field or by calling the `wb_motor_set_available_force` (resp. `wb_motor_set_available_torque`) function.
@@ -410,11 +742,11 @@ The example in "projects/samples/howto/worlds/force\_control.wbt" demonstrates t
 
 ---
 
-**Name**
+#### `wb_motor_get_type`
 
-**wb\_motor\_get\_type** - *get the motor type*
+%tab-component
 
-{[C++](cpp-api.md#cpp_motor)}, {[Java](java-api.md#java_motor)}, {[Python](python-api.md#python_motor)}, {[Matlab](matlab-api.md#matlab_motor)}, {[ROS](ros-api.md)}
+%tab "C"
 
 ```c
 #include <webots/motor.h>
@@ -422,7 +754,77 @@ The example in "projects/samples/howto/worlds/force\_control.wbt" demonstrates t
 int wb_motor_get_type(WbDeviceTag tag);
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Motor.hpp>
+
+namespace webots {
+  enum {ROTATIONAL, LINEAR};
+
+  class Motor : public Device {
+    int getType() const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Motor
+
+class Motor (Device):
+    ROTATIONAL, LINEAR
+
+    def getType(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Motor;
+
+public class Motor extends Device {
+  public final static int ROTATIONAL, LINEAR;
+
+  public int getType();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+WB_MOTOR_ROTATIONAL, WB_MOTOR_LINEAR
+
+type = wb_motor_get_type(tag)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/get_type` | `service` | [`webots_ros::get_int`](ros-api.md#common-services) | |
+
+%tab-end
+
+%end
+
+##### Description
+
+*get the motor type*
 
 This function allows the user to retrieve the motor type defined by the `type` field.
 If the value of the `type` field is "linear", this function returns WB\_LINEAR, and otherwise it returns WB\_ANGULAR.
@@ -438,19 +840,93 @@ If the value of the `type` field is "linear", this function returns WB\_LINEAR, 
 
 ---
 
-**Name**
+#### `wb_motor_get_brake`
+#### `wb_motor_get_position_sensor`
 
-**wb\_motor\_get\_brake**, **wb\_motor\_get\_position\_sensor** - *get associated devices*
+%tab-component
 
-{[C++](cpp-api.md#cpp_motor)}, {[Java](java-api.md#java_motor)}, {[Python](python-api.md#python_motor)}, {[Matlab](matlab-api.md#matlab_motor)}, {[ROS](ros-api.md)}
+%tab "C"
 
 ```c
+#include <webots/motor.h>
 #include <webots/brake.h>
+#include <webots/position_sensor.h>
 
 WbDeviceTag wb_motor_get_brake(WbDeviceTag tag);
 WbDeviceTag wb_motor_get_position_sensor(WbDeviceTag tag);
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Motor.hpp>
+#include <webots/Brake.hpp>
+#include <webots/PositionSensor.hpp>
+
+namespace webots {
+  class Motor : public Device {
+    Brake *getBrake() const;
+    PositionSensor *getPositionSensor() const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Motor, Brake, PositionSensor
+
+class Motor (Device):
+    def getBrake(self):
+    def getPositionSensor(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Motor;
+import com.cyberbotics.webots.controller.Brake;
+import com.cyberbotics.webots.controller.PositionSensor;
+
+public class Motor extends Device {
+  public Brake getBrake();
+  public PositionSensor getPositionSensor();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+tag = wb_brake_get_brake(tag)
+tag = wb_brake_get_position_sensor(tag)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/get_brake_name` | `service` | [`webots_ros::get_string`](ros-api.md#common-services) | |
+| `/<device_name>/get_position_sensor_name` | `service` | [`webots_ros::get_string`](ros-api.md#common-services) | |
+
+%tab-end
+
+%end
+
+##### Description
+
+*get associated devices*
 
 The `wb_motor_get_brake` and `wb_motor_get_position_sensor` functions return the [Brake](brake.md) and [PositionSensor](positionsensor.md) instances defined in the same [Joint](joint.md) or [Track](track.md) `device` field. If none is defined they return 0.

@@ -59,11 +59,11 @@ It is also switchable from the pen API, using the `wb_pen_write` function.
 
 ### Pen Functions
 
-**Name**
+#### `wb_pen_write`
 
-**wb\_pen\_write** - *enable or disable pen writing*
+%tab-component
 
-{[C++](cpp-api.md#cpp_pen)}, {[Java](java-api.md#java_pen)}, {[Python](python-api.md#python_pen)}, {[Matlab](matlab-api.md#matlab_pen)}, {[ROS](ros-api.md)}
+%tab "C"
 
 ```c
 #include <webots/pen.h>
@@ -71,18 +71,80 @@ It is also switchable from the pen API, using the `wb_pen_write` function.
 void wb_pen_write(WbDeviceTag tag, bool write);
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Pen.hpp>
+
+namespace webots {
+  class Pen : public Device {
+    virtual void write(bool write);
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Pen
+
+class Pen (Device):
+    def write(self, write):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Pen;
+
+public class Pen extends Device {
+  public void write(boolean write);
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+wb_pen_write(tag, write)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/write` | `service` | [`webots_ros::set_bool`](ros-api.md#common-services) | |
+
+%tab-end
+
+%end
+
+##### Description
+
+*enable or disable pen writing*
 
 The `wb_pen_write` function allows the user to switch a pen device on or off to disable or enable writing.
 If the `write` parameter is *true*, the specified `tag` device will write; if `write` is *false*, it won't.
 
 ---
 
-**Name**
+#### `wb_pen_set_ink_color`
 
-**wb\_pen\_set\_ink\_color** - *change the color of a pen's ink*
+%tab-component
 
-{[C++](cpp-api.md#cpp_pen)}, {[Java](java-api.md#java_pen)}, {[Python](python-api.md#python_pen)}, {[Matlab](matlab-api.md#matlab_pen)}, {[ROS](ros-api.md)}
+%tab "C"
 
 ```c
 #include <webots/pen.h>
@@ -90,13 +152,75 @@ If the `write` parameter is *true*, the specified `tag` device will write; if `w
 void wb_pen_set_ink_color(WbDeviceTag tag, int color, double density);
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Pen.hpp>
+
+namespace webots {
+  class Pen : public Device {
+    virtual void setInkColor(int color, double density);
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Pen
+
+class Pen (Device):
+    def setInkColor(self, color, density):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Pen;
+
+public class Pen extends Device {
+  public void setInkColor(int color, double density);
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+wb_pen_set_ink_color(tag, [r g b], density)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/set_ink_color` | `service` | `webots_ros::pen_set_ink_color` | `int32 color`<br/>`float64 density`<br/>`---`<br/>`int8 success` |
+
+%tab-end
+
+%end
+
+##### Description
+
+*change the color of a pen's ink*
 
 The `wb_pen_set_ink_color` function changes the current ink color of the specified `tag` device.
 The `color` is a 32 bit integer value which defines the new color of the ink in the 0xRRGGBB hexadecimal format (i.e., 0x000000 is black, 0xFF0000 is red, 0x00FF00 is green, 0x0000FF is blue, 0xFFA500 is orange, 0x808080 is gray 0xFFFFFF is white, etc.).
 The `density` parameter defines the ink density, with 0 meaning transparent ink and 1 meaning completely opaque ink.
 
-**Example**
+##### Example
 
 ```c
 wb_pen_set_ink_color(pen,0xF01010,0.9);
@@ -104,6 +228,6 @@ wb_pen_set_ink_color(pen,0xF01010,0.9);
 
 The above statement will change the ink color of the indicated pen to some red color.
 
-> **Note** [Matlab]: In the Matlab version of the `wb_pen_set_ink_color` function, the `color` argument must be a vector containing the three RGB components: `[RED GREEN BLUE]`.
+> **Note** [MATLAB]: In the MATLAB version of the `wb_pen_set_ink_color` function, the `color` argument must be a vector containing the three RGB components: `[RED GREEN BLUE]`.
 Each component must be a value between 0.0 and 1.0.
 For example the vector `[1 0 1]` represents the magenta color.

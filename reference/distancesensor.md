@@ -168,11 +168,14 @@ The ground texture must be placed in a [Plane](plane.md).
 
 ### DistanceSensor Functions
 
-**Name**
+#### `wb_distance_sensor_enable`
+#### `wb_distance_sensor_disable`
+#### `wb_distance_sensor_get_sampling_period`
+#### `wb_distance_sensor_get_value`
 
-**wb\_distance\_sensor\_enable**, **wb\_distance\_sensor\_disable**, **wb\_distance\_sensor\_get\_sampling\_period**, **wb\_distance\_sensor\_get\_value** - *enable, disable and read distance sensor measurements*
+%tab-component
 
-{[C++](cpp-api.md#cpp_distance_sensor)}, {[Java](java-api.md#java_distance_sensor)}, {[Python](python-api.md#python_distance_sensor)}, {[Matlab](matlab-api.md#matlab_distance_sensor)}, {[ROS](ros-api.md)}
+%tab "C"
 
 ```c
 #include <webots/distance_sensor.h>
@@ -183,7 +186,83 @@ int wb_distance_sensor_get_sampling_period(WbDeviceTag tag);
 double wb_distance_sensor_get_value(WbDeviceTag tag);
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include "<webots/DistanceSensor.hpp>"
+
+namespace webots {
+  class DistanceSensor : public Device {
+    virtual void enable(int samplingPeriod);
+    virtual void disable();
+    int getSamplingPeriod() const;
+    double getValue() const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import DistanceSensor
+
+class DistanceSensor (Device):
+    def enable(self, samplingPeriod):
+    def disable(self):
+    def getSamplingPeriod(self):
+    def getValue(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.DistanceSensor;
+
+public class DistanceSensor extends Device {
+  public void enable(int samplingPeriod);
+  public void disable();
+  public int getSamplingPeriod();
+  public double getValue();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+wb_distance_sensor_enable(tag, sampling_period)
+wb_distance_sensor_disable(tag)
+period = wb_distance_sensor_get_sampling_period(tag)
+value = wb_distance_sensor_get_value(tag)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/value` | `topic` | [`sensor_msgs::Range`](http://docs.ros.org/api/sensor_msgs/html/msg/Range.html) | [`Header`](http://docs.ros.org/api/std_msgs/html/msg/Header.html) `header`<br/>`uint8 ULTRASOUND=0`<br/>`uint8 INFRARED=1`<br/>`uint8 radiation_type`<br/>`float32 field_of_view`<br/>`float32 min_range`<br/>`float32 max_range`<br/>`float32 range` |
+| `/<device_name>/enable` | `service` | [`webots_ros::set_int`](ros-api.md#common-services) | |
+| `/<device_name>/get_sampling_period` | `service` | [`webots_ros::get_int`](ros-api.md#common-services) | |
+
+%tab-end
+
+%end
+
+##### Description
+
+*enable, disable and read distance sensor measurements*
 
 The `wb_distance_sensor_enable` function allows the user to enable distance sensor measurements.
 The `sampling_period` argument specifies the sampling period of the sensor and is expressed in milliseconds.
@@ -199,11 +278,13 @@ Hence, the range of the return value is defined by this lookup table.
 
 ---
 
-**Name**
+#### `wb_distance_sensor_get_max_value`
+#### `wb_distance_sensor_get_min_value`
+#### `wb_distance_sensor_get_aperture`
 
-**wb\_distance\_sensor\_get\_max\_value**, **wb\_distance\_sensor\_get\_min\_value**, **wb\_distance\_sensor\_get\_aperture** - *Get the maximum value, minimum value and aperture*
+%tab-component
 
-{[C++](cpp-api.md#cpp_distance_sensor)}, {[Java](java-api.md#java_distance_sensor)}, {[Python](python-api.md#python_distance_sensor)}, {[Matlab](matlab-api.md#matlab_distance_sensor)}, {[ROS](ros-api.md)}
+%tab "C"
 
 ```c
 #include <webots/distance_sensor.h>
@@ -213,7 +294,79 @@ double wb_distance_sensor_get_min_value(WbDeviceTag tag);
 double wb_distance_sensor_get_aperture(WbDeviceTag tag);
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include "<webots/DistanceSensor.hpp>"
+
+namespace webots {
+  class DistanceSensor : public Device {
+    double getMaxValue() const;
+    double getMinValue() const;
+    double getAperture() const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import DistanceSensor
+
+class DistanceSensor (Device):
+    def getMaxValue(self):
+    def getMinValue(self):
+    def getAperture(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.DistanceSensor;
+
+public class DistanceSensor extends Device {
+  public double getMaxValue();
+  public double getMinValue();
+  public double getAperture();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+max_value = wb_distance_sensor_get_max_value(tag)
+min_value = wb_distance_sensor_get_min_value(tag)
+aperture = wb_distance_sensor_get_aperture(tag)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/get_max_value` | `service` | [`webots_ros::get_float`](ros-api.md#common-services) | |
+| `/<device_name>/get_min_value` | `service` | [`webots_ros::get_float`](ros-api.md#common-services) | |
+| `/<device_name>/get_aperture` | `service` | [`webots_ros::get_float`](ros-api.md#common-services) | |
+
+%tab-end
+
+%end
+
+##### Description
+
+*Get the maximum value, minimum value and aperture*
 
 The `wb_distance_sensor_get_max_value` function returns the maximum value which can be returned by the distance sensor.
 This value is the maximum of the second column of the `DistanceSensor.lookupTable` field.
@@ -225,22 +378,96 @@ The `wb_distance_sensor_get_aperture` function returns the aperture of the dista
 
 ---
 
-**Name**
+#### `wb_distance_sensor_get_type`
 
-**wb\_distance\_sensor\_get\_type** - *Return the sensor type*
+%tab-component
 
-{[C++](cpp-api.md#cpp_distance_sensor)}, {[Java](java-api.md#java_distance_sensor)}, {[Python](python-api.md#python_distance_sensor)}, {[Matlab](matlab-api.md#matlab_distance_sensor)}, {[ROS](ros-api.md)}
+%tab "C"
 
 ```c
 #include <webots/distance_sensor.h>
 
+#define WB_DISTANCE_SENSOR_GENERIC   0
+#define WB_DISTANCE_SENSOR_INFRA_RED 1
+#define WB_DISTANCE_SENSOR_SONAR     2
+#define WB_DISTANCE_SENSOR_LASER     3
+
 int wb_distance_sensor_get_type(WbDeviceTag tag);
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include "<webots/DistanceSensor.hpp>"
+
+namespace webots {
+  class DistanceSensor : public Device {
+    enum {GENERIC, INFRA_RED, SONAR, LASER};
+
+    int getType() const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import DistanceSensor
+
+class DistanceSensor (Device):
+    GENERIC, INFRA_RED, SONAR, LASER
+
+    def getType(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.DistanceSensor;
+
+public class DistanceSensor extends Device {
+  public final static int GENERIC, INFRA_RED, SONAR, LASER;
+  public int getType();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+WB_DISTANCE_SENSOR_GENERIC, WB_DISTANCE_SENSOR_INFRA_RED, WB_DISTANCE_SENSOR_SONAR, WB_DISTANCE_SENSOR_LASER
+
+type = wb_distance_sensor_get_type(tag)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/get_type` | `service` | [`webots_ros::get_int`](ros-api.md#common-services) | |
+
+%tab-end
+
+%end
+
+##### Description
+
+*Return the sensor type*
 
 This function allows the user to retrieve the distance sensor type defined by the `type` field.
-If the value of the `type` field is "laser" then this function returns WB\_DISTANCE\_SENSOR\_LASER, if it is "infra-red" then it returns WB\_DISTANCE\_SENSOR\_INFRA\_RED, if it is "sonar" then it returns WB\_DISTANCE\_SENSOR\_SONAR and otherwise it returns WB\_DISTANCE\_SENSOR\_GENERIC.
+If the value of the `type` field is "laser" then this function returns `WB_DISTANCE_SENSOR_LASER`, if it is "infra-red" then it returns `WB_DISTANCE_SENSOR_INFRA_RED`, if it is "sonar" then it returns `WB_DISTANCE_SENSOR_SONAR` and otherwise it returns `WB_DISTANCE_SENSOR_GENERIC`.
 
 %figure "Return values for the `wb_distance_sensor_get_type_*` functions"
 

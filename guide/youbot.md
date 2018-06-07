@@ -48,7 +48,7 @@ A small C library called "youbot_control" (and located there: "WEBOTS\_HOME/proj
 
 #### youbot\_matlab.wbt
 
-![youbot.wbt.png](images/robots/youbot/youbot.wbt.png) The same simulation as above, but with a controller written in Matlab.
+![youbot.wbt.png](images/robots/youbot/youbot.wbt.png) The same simulation as above, but with a controller written in MATLAB.
 
 #### tower\_of\_hanoi.wbt
 

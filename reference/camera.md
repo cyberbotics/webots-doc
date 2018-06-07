@@ -105,8 +105,8 @@ Each time a camera is refreshed, an OpenGL rendering is performed, and the color
 The format of this buffers is BGRA (32 bits).
 We recommend to use the `wb_camera_image_get_*`-like functions to access the buffer because the internal format could change.
 
-> **Note** [Matlab]: The Matlab API uses a language-specific representation of color images consisting of a 3D array of RGB triplets.
-Please look at the [Matlab example](#wb_camera_get_image) in the `wb_camera_get_image` function's description.
+> **Note** [MATLAB]: The MATLAB API uses a language-specific representation of color images consisting of a 3D array of RGB triplets.
+Please look at the [MATLAB example](#wb_camera_get_image) in the `wb_camera_get_image` function's description.
 
 ### Frustum
 
@@ -172,11 +172,13 @@ Then, after closing the window, the overlay will be automatically restored.
 
 ### Camera Functions
 
-**Name**
+#### `wb_camera_enable`
+#### `wb_camera_disable`
+#### `wb_camera_get_sampling_period`
 
-**wb\_camera\_enable**, **wb\_camera\_disable**, **wb\_camera\_get\_sampling\_period** - *enable and disable camera updates*
+%tab-component
 
-{[C++](cpp-api.md#cpp_camera)}, {[Java](java-api.md#java_camera)}, {[Python](python-api.md#python_camera)}, {[Matlab](matlab-api.md#matlab_camera)}, {[ROS](ros-api.md)}
+%tab "C"
 
 ```c
 #include <webots/camera.h>
@@ -186,7 +188,79 @@ void wb_camera_disable(WbDeviceTag tag);
 int wb_camera_get_sampling_period(WbDeviceTag tag);
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Camera.hpp>
+
+namespace webots {
+  class Camera : public Device {
+    virtual void enable(int samplingPeriod);
+    virtual void disable();
+    int getSamplingPeriod() const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Camera
+
+class Camera (Device):
+    def enable(self, samplingPeriod):
+    def disable(self):
+    def getSamplingPeriod(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Camera;
+
+public class Camera extends Device {
+  public void enable(int samplingPeriod);
+  public void disable();
+  public int getSamplingPeriod();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+wb_camera_enable(tag, sampling_period)
+wb_camera_disable(tag)
+period = wb_camera_get_sampling_period(tag)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/image` | `topic` | [`sensor_msgs::Image`](http://docs.ros.org/api/sensor_msgs/html/msg/Image.html) | [`Header`](http://docs.ros.org/api/std_msgs/html/msg/Header.html) `header`<br/>`uint32 height`<br/>`uint32 width`<br/>`string encoding`<br/>`uint8 is_bigendian`<br/>`uint32 step`<br/>`uint8[] data` |
+| `/<device_name>/enable` | `service` | [`webots_ros::set_int`](ros-api.md#common-services) | |
+| `/<device_name>/get_sampling_period` | `service` | [`webots_ros::get_int`](ros-api.md#common-services) | |
+
+%tab-end
+
+%end
+
+##### Description
+
+*enable and disable camera updates*
 
 The `wb_camera_enable` function allows the user to enable a camera.
 The `sampling_period` argument specifies the sampling period of the sensor and is expressed in milliseconds.
@@ -198,11 +272,14 @@ The `wb_camera_get_sampling_period` function returns the period given to the `wb
 
 ---
 
-**Name**
+#### `wb_camera_get_fov`
+#### `wb_camera_get_min_fov`
+#### `wb_camera_get_max_fov`
+#### `wb_camera_set_fov`
 
-**wb\_camera\_get\_fov**, **wb\_camera\_get\_min\_fov**, **wb\_camera\_get\_max\_fov**, **wb\_camera\_set\_fov** - *get and set field of view for a camera*
+%tab-component
 
-{[C++](cpp-api.md#cpp_camera)}, {[Java](java-api.md#java_camera)}, {[Python](python-api.md#python_camera)}, {[Matlab](matlab-api.md#matlab_camera)}, {[ROS](ros-api.md)}
+%tab "C"
 
 ```c
 #include <webots/camera.h>
@@ -213,7 +290,83 @@ double wb_camera_get_max_fov(WbDeviceTag tag);
 void wb_camera_set_fov(WbDeviceTag tag, double fov);
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Camera.hpp>
+
+namespace webots {
+  class Camera : public Device {
+    double getFov() const;
+    double getMinFov() const;
+    double getMaxFov() const;
+    virtual void setFov(double fov);
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Camera
+
+class Camera (Device):
+    def getFov(self):
+    def getMinFov(self):
+    def getMaxFov(self):
+    def setFov(self, fov):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Camera;
+
+public class Camera extends Device {
+  public double getFov();
+  public double getMinFov();
+  public double getMaxFov();
+  public void setFov(double fov);
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+fov = wb_camera_get_fov(tag)
+fov = wb_camera_get_min_fov(tag)
+fov = wb_camera_get_max_fov(tag)
+wb_camera_set_fov(tag, fov)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/get_info` | `service` | `webots_ros::camera_get_info` | `uint8 ask`<br/>`---`<br/>`uint32 width`<br/>`uint32 height`<br/>`float64 Fov`<br/>`float64 nearRange` |
+| `/<device_name>/set_fov` | `service` | [`webots_ros::set_float`](ros-api.md#common-services) | |
+| `/<device_name>/get_zoom_info` | `service` | `webots_ros::camera_get_zoom_info` | `uint8 ask`<br/>`---`<br/>`float64 minFov`<br/>`float64 maxFov` |
+
+%tab-end
+
+%end
+
+##### Description
+
+*get and set field of view for a camera*
 
 These functions allow the controller to get and set the value for the field of view (fov) of a camera.
 The original value for this field of view is defined in the [Camera](#camera) node, as `fieldOfView`.
@@ -222,11 +375,15 @@ The minimum and maximum values for the field of view are defined in this [Zoom](
 
 ---
 
-**Name**
+#### `wb_camera_get_focal_length`
+#### `wb_camera_get_focal_distance`
+#### `wb_camera_get_max_focal_distance`
+#### `wb_camera_get_min_focal_distance`
+#### `wb_camera_set_focal_distance`
 
-**wb\_camera\_get\_focal\_length**, **wb\_camera\_get\_focal\_distance**, **wb\_camera\_get\_max\_focal\_distance**, **wb\_camera\_get\_min\_focal\_distance**, **wb\_camera\_set\_focal\_distance** - *get and set the focusing parmaters*
+%tab-component
 
-{[C++](cpp-api.md#cpp_camera)}, {[Java](java-api.md#java_camera)}, {[Python](python-api.md#python_camera)}, {[Matlab](matlab-api.md#matlab_camera)}, {[ROS](ros-api.md)}
+%tab "C"
 
 ```c
 #include <webots/camera.h>
@@ -238,18 +395,98 @@ double wb_camera_get_min_focal_distance(WbDeviceTag tag);
 void wb_camera_set_focal_distance(WbDeviceTag tag, double focal_distance);
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Camera.hpp>
+
+namespace webots {
+  class Camera : public Device {
+    double getFocalLength() const;
+    double getFocalDistance() const;
+    double getMaxFocalDistance() const;
+    double getMinFocalDistance() const;
+    virtual void setFocalDistance(double focalDistance);
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Camera
+
+class Camera (Device):
+    def getFocalLength(self):
+    def getFocalDistance(self):
+    def getMaxFocalDistance(self):
+    def getMinFocalDistance(self):
+    def setFocalDistance(self, focalDistance):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Camera;
+
+public class Camera extends Device {
+  public double getFocalLength();
+  public double getFocalDistance();
+  public double getMaxFocalDistance();
+  public double getMinFocalDistance();
+  public void setFocalDistance(double focalDistance);
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+fov = wb_camera_get_focal_length(tag)
+fov = wb_camera_get_focal_distance(tag)
+fov = wb_camera_get_max_focal_distance(tag)
+fov = wb_camera_get_min_focal_distance(tag)
+wb_camera_set_focal_distance(tag, focal_distance)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/get_focus_info` | `service` | `webots_ros::camera_get_focus_info` | `uint8 ask`<br/>---<br/>`float64 focalLength`<br/>`float64 focalDistance`<br/>`float64 maxFocalDistance`<br/>`float64 minFocalDistance` |
+| `/<device_name>/set_focal_distance` | `service` | [`webots_ros::set_float`](ros-api.md#common-services) | |
+
+%tab-end
+
+%end
+
+##### Description
+
+*get and set the focusing parmeters*
 
 These functions allow the controller to get and set the focusing parameters.
 Note that if the camera device has no [Focus](focus.md) node defined in its `focus` field, it is not possible to call the `wb_camera_set_focal_distance` function and the other functions will return 0.
 
 ---
 
-**Name**
+#### `wb_camera_get_width`
+#### `wb_camera_get_height`
 
-**wb\_camera\_get\_width**, **wb\_camera\_get\_height** - *get the size of the camera image*
+%tab-component
 
-{[C++](cpp-api.md#cpp_camera)}, {[Java](java-api.md#java_camera)}, {[Python](python-api.md#python_camera)}, {[Matlab](matlab-api.md#matlab_camera)}, {[ROS](ros-api.md)}
+%tab "C"
 
 ```c
 #include <webots/camera.h>
@@ -258,17 +495,83 @@ int wb_camera_get_width(WbDeviceTag tag);
 int wb_camera_get_height(WbDeviceTag tag);
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Camera.hpp>
+
+namespace webots {
+  class Camera : public Device {
+    int getWidth() const;
+    int getHeight() const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Camera
+
+class Camera (Device):
+    def getWidth(self):
+    def getHeight(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Camera;
+
+public class Camera extends Device {
+  public int getWidth();
+  public int getHeight();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+width = wb_camera_get_width(tag)
+height = wb_camera_get_height(tag)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/get_info` | `service` | `webots_ros::camera_get_info` | `uint8 ask`<br/>`---`<br/>`uint32 width`<br/>`uint32 height`<br/>`float64 Fov`<br/>`float64 nearRange` |
+
+%tab-end
+
+%end
+
+##### Description
+
+*get the size of the camera image*
 
 These functions return the width and height of a camera image as defined in the corresponding [Camera](#camera) node.
 
 ---
 
-**Name**
+#### `wb_camera_get_near`
 
-**wb\_camera\_get\_near** - *get the near parameter of the camera device*
+%tab-component
 
-{[C++](cpp-api.md#cpp_camera)}, {[Java](java-api.md#java_camera)}, {[Python](python-api.md#python_camera)}, {[Matlab](matlab-api.md#matlab_camera)}, {[ROS](ros-api.md)}
+%tab "C"
 
 ```c
 #include <webots/camera.h>
@@ -276,17 +579,83 @@ These functions return the width and height of a camera image as defined in the 
 double wb_camera_get_near(WbDeviceTag tag);
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Camera.hpp>
+
+namespace webots {
+  class Camera : public Device {
+    double getNear() const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Camera
+
+class Camera (Device):
+    def getNear(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Camera;
+
+public class Camera extends Device {
+  public double getNear();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+near = wb_camera_get_near(tag)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/get_info` | `service` | `webots_ros::camera_get_info` | `uint8 ask`<br/>`---`<br/>`uint32 width`<br/>`uint32 height`<br/>`float64 Fov`<br/>`float64 nearRange` |
+
+%tab-end
+
+%end
+
+##### Description
+
+*get the near parameter of the camera device*
 
 This function returns the near parameter of a camera device as defined in the corresponding [Camera](#camera) node.
 
 ---
 
-**Name**
+#### `wb_camera_get_image`
+#### `wb_camera_image_get_red`
+#### `wb_camera_image_get_green`
+#### `wb_camera_image_get_blue`
+#### `wb_camera_image_get_gray`
 
-**wb\_camera\_get\_image**, **wb\_camera\_image\_get\_red**, **wb\_camera\_image\_get\_green**, **wb\_camera\_image\_get\_blue**, **wb\_camera\_image\_get\_gray** - *get the image data from a camera*
+%tab-component
 
-{[C++](cpp-api.md#cpp_camera)}, {[Java](java-api.md#java_camera)}, {[Python](python-api.md#python_camera)}, {[Matlab](matlab-api.md#matlab_camera)}, {[ROS](ros-api.md)}
+%tab "C"
 
 ```c
 #include <webots/camera.h>
@@ -298,7 +667,90 @@ unsigned char wb_camera_image_get_blue(const unsigned char *image, int width, in
 unsigned char wb_camera_image_get_gray(const unsigned char *image, int width, int x, int y);
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Camera.hpp>
+
+namespace webots {
+  class Camera : public Device {
+    const unsigned char *getImage() const;
+    static unsigned char imageGetRed(const unsigned char *image, int width, int x, int y);
+    static unsigned char imageGetGreen(const unsigned char *image, int width, int x, int y);
+    static unsigned char imageGetBlue(const unsigned char *image, int width, int x, int y);
+    static unsigned char imageGetGray(const unsigned char *image, int width, int x, int y);
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Camera
+
+class Camera (Device):
+    def getImage(self):
+    def getImageArray(self):
+    @staticmethod
+    def imageGetRed(image, width, x, y):
+    @staticmethod
+    def imageGetGreen(image, width, x, y):
+    @staticmethod
+    def imageGetBlue(image, width, x, y):
+    @staticmethod
+    def imageGetGray(image, width, x, y):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Camera;
+
+public class Camera extends Device {
+  public int[] getImage();
+  public static int imageGetRed(int[] image, int width, int x, int y);
+  public static int imageGetGreen(int[] image, int width, int x, int y);
+  public static int imageGetBlue(int[] image, int width, int x, int y);
+  public static int imageGetGray(int[] image, int width, int x, int y);
+  public static int pixelGetRed(int pixel);
+  public static int pixelGetGreen(int pixel);
+  public static int pixelGetBlue(int pixel);
+  public static int pixelGetGray(int pixel);
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+image = wb_camera_get_image(tag)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/image` | `topic` | `sensor_msgs::Image` | [`Header`](http://docs.ros.org/api/std_msgs/html/msg/Header.html) `header`<br/>`uint32 height`<br/>`uint32 width`<br/>`string encoding`<br/>`uint8 is_bigendian`<br/>`uint32 step`<br/>`uint8[] data` |
+
+%tab-end
+
+%end
+
+##### Description
+
+*get the image data from a camera*
 
 The `wb_camera_get_image` function reads the last image grabbed by the camera.
 The image is coded as a sequence of three bytes representing the red, green and blue levels of a pixel.
@@ -380,7 +832,7 @@ Here is an example:
 
 <!-- -->
 
-> **Note** [Matlab]: The `wb_camera_get_image` function returns a 3-dimensional array of `uint(8)`.
+> **Note** [MATLAB]: The `wb_camera_get_image` function returns a 3-dimensional array of `uint(8)`.
 The first two dimensions of the array are the width and the height of camera's image, the third being the RGB code: 1 for red, 2 for blue and 3 for green.
 The `wb_camera_get_range_image` function returns a 2-dimensional array of `float('single')`.
 The dimensions of the array are the width and the length of camera's image and the float values are the metric distance values deduced from the OpenGL z-buffer.
@@ -406,11 +858,11 @@ The dimensions of the array are the width and the length of camera's image and t
 
 ---
 
-**Name**
+#### `wb_camera_save_image`
 
-**wb\_camera\_save\_image** - *save a camera image in either PNG or JPEG format*
+%tab-component
 
-{[C++](cpp-api.md#cpp_camera)}, {[Java](java-api.md#java_camera)}, {[Python](python-api.md#python_camera)}, {[Matlab](matlab-api.md#matlab_camera)}, {[ROS](ros-api.md)}
+%tab "C"
 
 ```c
 #include <webots/camera.h>
@@ -418,7 +870,69 @@ The dimensions of the array are the width and the length of camera's image and t
 int wb_camera_save_image(WbDeviceTag tag, const char *filename, int quality);
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Camera.hpp>
+
+namespace webots {
+  class Camera : public Device {
+    int saveImage(const std::string &filename, int quality) const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Camera
+
+class Camera (Device):
+    def saveImage(self, filename, quality):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Camera;
+
+public class Camera extends Device {
+  public int saveImage(String filename, int quality);
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+success = wb_camera_save_image(tag, 'filename', quality)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/save_image` | `service` | `webots_ros::save_image` | `string filename`<br/>`int32 quality`<br/>`---`<br/>`int8 success` |
+
+%tab-end
+
+%end
+
+##### Description
+
+*save a camera image in either PNG or JPEG format*
 
 The `wb_camera_save_image` function allows the user to save a `tag` image which was previously obtained with the `wb_camera_get_image` function.
 The image is saved in a file in either PNG or JPEG format.
@@ -437,11 +951,16 @@ It is -1 in case of failure (unable to open the specified file or unrecognized i
 
 ---
 
-**Name**
+#### `wb_camera_has_recognition`
+#### `wb_camera_recognition_enable`
+#### `wb_camera_recognition_disable`
+#### `wb_camera_recognition_get_sampling_period`
+#### `wb_camera_recognition_get_number_of_objects`
+#### `wb_camera_recognition_get_objects`
 
-**wb\_camera\_has\_recognition**, **wb\_camera\_recognition\_enable**, **wb\_camera\_recognition\_disable**, **wb\_camera\_recognition\_get\_sampling\_period**, **wb\_camera\_recognition\_get\_number\_of\_objects**, **wb\_camera\_recognition\_get\_objects** - *camera recognition functions*
+%tab-component
 
-{[C++](cpp-api.md#cpp_camera)}, {[Java](java-api.md#java_camera)}, {[Python](python-api.md#python_camera)}, {[Matlab](matlab-api.md#matlab_camera)}, {[ROS](ros-api.md)}
+%tab "C"
 
 ```c
 #include <webots/camera.h>
@@ -454,7 +973,92 @@ int wb_camera_recognition_get_number_of_objects(WbDeviceTag tag);
 const WbCameraRecognitionObject *wb_camera_recognition_get_objects(WbDeviceTag tag);
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Camera.hpp>
+
+namespace webots {
+  class Camera : public Device {
+    bool hasRecognition() const;
+    void recognitionEnable(int samplingPeriod);
+    void recognitionDisable();
+    int getRecognitionSamplingPeriod() const;
+    int getRecognitionNumberOfObjects() const;
+    const CameraRecognitionObject *getRecognitionObjects() const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Camera
+
+class Camera (Device):
+    def hasRecognition(self):
+    def recognitionEnable(self, samplingPeriod):
+    def recognitionDisable(self):
+    def getRecognitionSamplingPeriod(self):
+    def getRecognitionNumberOfObjects(self):
+    def getRecognitionObjects(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Camera;
+
+public class Camera extends Device {
+  public boolean hasRecognition();
+  public void recognitionEnable(int samplingPeriod);
+  public void recognitionDisable();
+  public int getRecognitionSamplingPeriod();
+  public int getRecognitionNumberOfObjects();
+  public CameraRecognitionObject[] getRecognitionObjects();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+value = wb_camera_has_recognition(tag)
+wb_camera_recognition_disable(tag)
+wb_camera_recognition_enable(tag, sampling_period)
+number = wb_camera_recognition_get_number_of_objects(tag)
+objects = wb_camera_recognition_get_objects(tag)
+period = wb_camera_recognition_get_sampling_period(tag)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/has_recognition` | `service`| `webots_ros::get_bool` | |
+| `/<device_name>/recognition_enable` | `service`| `webots_ros::set_int` | |
+| `/<device_name>/recognition_get_sampling_period` | `service`| `webots_ros::get_int` | |
+| `/<device_name>/recognition_objects` | `topic`| `webots_ros::RecognitionObject` | [`Header`](http://docs.ros.org/api/std_msgs/html/msg/Header.html) `header`<br/>[`geometry_msgs/Vector3`](http://docs.ros.org/api/geometry_msgs/html/msg/Vector3.html) `relative_position`<br/>[`geometry_msgs/Quaternion`](http://docs.ros.org/api/geometry_msgs/html/msg/Quaternion.html) `relative_orientation`<br/>[`geometry_msgs/Vector3`](http://docs.ros.org/api/geometry_msgs/html/msg/Vector3.html) `position_on_image`<br/>[`geometry_msgs/Vector3`](http://docs.ros.org/api/geometry_msgs/html/msg/Vector3.html) `size_on_image`<br/>`int32 numberofcolors`<br/>`int32[] test`<br/>[`geometry_msgs/Vector3`](http://docs.ros.org/api/geometry_msgs/html/msg/Vector3.html)`[]` `colors`<br/>`String model`<br/><br/>Note: the z value of `position_on_image` and `size_on_image` should be ignored |
+
+%tab-end
+
+%end
+
+##### Description
+
+*camera recognition functions*
 
 If a [Recognition](recognition.md) node is present in the `recognition` field, the camera can recognize objects in its image.
 
@@ -469,13 +1073,17 @@ The `wb_camera_recognition_get_sampling_period` function returns the period give
 
 The `wb_camera_recognition_get_number_of_objects` and `wb_camera_recognition_get_objects` functions allow the user to get the current number of recognized objects and the objects array.
 
----
-
-**Camera recognition object**
+##### Camera Recognition Object
 
 A camera recognition object is defined by the following structure:
 
+%tab-component
+
+%tab "C"
+
 ```c
+#include <webots/camera_recognition_object.h>
+
 typedef struct {
  int      id;
  double   position[3];
@@ -489,13 +1097,98 @@ typedef struct {
 } WbCameraRecognitionObject;
 ```
 
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Camera.hpp>
+
+namespace webots {
+  typedef struct {
+    int      id;
+    double   position[3];
+    double   orientation[4];
+    double   size[2];
+    int      position_on_image[2];
+    int      size_on_image[2];
+    int      number_of_colors;
+    double  *colors;
+    char    *model;
+  } CameraRecognitionObject;
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import CameraRecognitionObject
+
+class CameraRecognitionObject:
+    def get_id(self):
+    def get_position(self):
+    def get_orientation(self):
+    def get_size(self):
+    def get_position_on_image(self):
+    def get_size_on_image(self):
+    def get_number_of_colors(self):
+    def get_colors(self):
+    def get_model(self):
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.CameraRecognitionObject;
+
+public class CameraRecognitionObject {
+  public int getId();
+  public double[] getPosition();
+  public double[] getOrientation();
+  public double[] getSize();
+  public int[] getPositionOnImage();
+  public int[] getSizeOnImage();
+  public int getNumberOfColors();
+  public double[] getColors();
+  public String getModel();
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+structs.WbCameraRecognitionObject.members = struct(
+  'id', 'int32',
+  'position', 'double#3',
+  'orientation', 'double#4',
+  'size', 'double#2',
+  'position_on_image', 'int32#2',
+  'size_on_image', 'int32#2',
+  'number_of_colors', 'int32',
+  'colors', 'doublePtr',
+  'model', 'cstring'
+);
+```
+
+%tab-end
+
+%tab "ROS"
+
+> `CameraRecognitionObject` data is directly accessible from the related [`/<device_name>/recognition_objects`](#wb_camera_recognition_get_objects) topic.
+
+%tab-end
+
+%end
+
 The `id` represents the node id corresponding to the object, and it is possible to use this id directly in the [`wb_supervisor_node_get_from_id`](supervisor.md#wb_supervisor_node_get_from_def) supervisor function.
 The `position` and `orientation` are expressed relatively to the camera (the relative position is the one of the center of the object which can differ from its origin) and the units are meter and radian.
 The `size` represents the X and Y sizes in meters relatively to the camera (it is of course impossible to know the depth of the object).
 The `position_on_image` and `size_on_image` can be used to determine the bounding box of the object in the camera image, the units are pixels.
 The `number_of_colors` and `colors` returns respectively the number of colors of the objects and pointer to the colors array, each color is represented by 3 doubles (R, G and B), therefore the size of the array is equal to 3 * `number_of_colors`.
 Finally `model` returns the `model` field of the [Solid](solid.md) node.
-
-> **Note** [C++]: In C++ the name of the structure is `CameraRecognitionObject`.
-
-> **Note** [Java/Python]: In Java and Python, the structure is replaced by a class called `CameraRecognitionObject`.

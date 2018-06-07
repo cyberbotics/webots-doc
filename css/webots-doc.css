@@ -148,7 +148,7 @@ body {
   padding: 10px;
 }
 .webots-doc #accordion li a.active {
-  background: #333;
+  background: #444;
   color: white;
 }
 .webots-doc #accordion li a:hover {
@@ -242,6 +242,7 @@ body {
   font-family: "Roboto Mono", monospace;
   white-space: pre;
   word-wrap: break-word;
+  color: inherit; /* to bypass the main.css rule. */
 }
 .webots-doc pre > code {
   word-wrap: normal;
@@ -259,13 +260,21 @@ body {
 .webots-doc code > a {
   font-family: "Roboto Mono", monospace;
 }
+.webots-doc a > code {
+  white-space: normal;
+}
 .webots-doc b, .webots-doc strong {
   color: #333;
+}
+.webots-doc hr {
+  margin: 40px 0px;
 }
 .webots-doc h1,
 .webots-doc h2,
 .webots-doc h3,
-.webots-doc h4 {
+.webots-doc h4,
+.webots-doc h5,
+.webots-doc h6 {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: normal;
@@ -287,10 +296,16 @@ body {
 .webots-doc h4 {
   font-size: 18px;
 }
+.webots-doc h5 {
+  font-size: 16px;
+}
+.webots-doc h6 {
+  font-size: 14px;
+}
 .webots-doc .release-tag {
   display: inline;
   font-size: 14px;
-  color: black;
+  color: #ccc;
 }
 .webots-doc .anchor-link-image {
   padding-left: 20px;
@@ -307,6 +322,13 @@ body {
   position: relative;
   left: -20px;
   padding: 9px 0px;
+}
+.webots-doc .api-title {
+  margin: 0px 10px;
+  padding: 0px;
+  color: black;
+  font-size: 15px;
+  font-family: "Roboto Mono", monospace;
 }
 .webots-doc figcaption:hover .anchor-link,
 .webots-doc h1:hover .anchor-link,
@@ -513,6 +535,7 @@ body {
 .robot-component .device-name {
   color: white;
   font-family: roboto;
+  word-wrap: break-word;
 }
 .robot-component .device {
   background-color: #666;
@@ -613,6 +636,64 @@ body {
 }
 .robot-component .motor-slider:focus::-ms-fill-upper {
   background: #ddd;
+}
+
+.tab-component {
+  overflow: hidden;
+  margin-top: 19px;
+  background-color: #444;
+}
+.tab-component button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 6px 18px;
+  margin: 5px 5px;
+  transition: 0.2s;
+  color: white;
+  background: #777;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+.tab-component button:hover {
+  background-color: #999;
+}
+.tab-component button.active {
+  background-color: lightblue;
+  border-color: transparent;
+  color: black;
+}
+.tab-content {
+  display: none;
+  padding: 0;
+  border-top: none;
+  -webkit-animation: fadeEffect 1s;
+  animation: fadeEffect 1s;
+}
+.tab-content > table {
+  width: 100% !important;
+  margin: 0 !important;
+  background-color: #f1f1f1;
+}
+.tab-content > table br {
+  line-height: 28px;
+}
+.tab-content > blockquote {
+  margin: 0;
+  border: 0;
+}
+.tab-content > pre {
+  margin: 0;
+}
+@-webkit-keyframes fadeEffect {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes fadeEffect {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 /*---------------------*

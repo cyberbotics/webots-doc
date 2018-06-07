@@ -3,9 +3,16 @@
 The [driver](#driver-library) library provides all the usual functionalities available to a human driving his own car.
 All the functions included in this library are explained below.
 
-**Name**
+### Driver Library Functions
 
-**wbu\_driver\_init**, **wbu\_driver\_cleanup**, **wbu\_driver\_step** - *Initialise, clean and run a driver step*
+#### `Constructor`
+#### `wbu_driver_init`
+#### `wbu_driver_cleanup`
+#### `wbu_driver_step`
+
+%tab-component
+
+%tab "C"
 
 ```c
 #include <webots/driver.h>
@@ -15,7 +22,62 @@ void wbu_driver_cleanup();
 int wbu_driver_step();
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Driver.hpp>
+
+namespace webots {
+  class Driver {
+    Driver();
+    virtual ~Driver();
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Driver
+
+class Driver:
+    def __init__(self):
+    def __del__(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Driver;
+
+public class Driver {
+  public Driver();
+  protected void finalize();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "ROS"
+
+> In ROS, car library initialization and cleanup are implicit.
+
+%tab-end
+
+%end
+
+##### Description
+
+*Initialise, clean and run a driver step*
 
 These functions are the equivalent of the init, cleanup and step function of any regular robot controller.
 As a reminder, the `init` function should be called at the very beginning of any controller program, the `cleanup` function at the end of the controller program just before exiting and the `step` function should be called in the main loop to run one simulation step.
@@ -23,9 +85,12 @@ Unlike the robot step, the driver step does not have any argument, the default t
 
 ---
 
-**Name**
+#### `wbu_driver_set_steering_angle`
+#### `wbu_driver_get_steering_angle`
 
-**wbu\_driver\_set\_steering\_angle**, **wbu\_driver\_get\_steering\_angle** - *Set and get the stearing angle*
+%tab-component
+
+%tab "C"
 
 ```c
 #include <webots/driver.h>
@@ -34,11 +99,70 @@ void wbu_driver_set_steering_angle(double steering_angle);
 double wbu_driver_get_steering_angle();
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Driver.hpp>
+
+namespace webots {
+  class Driver {
+    void setSteeringAngle(double steeringAngle);
+    double getSteeringAngle();
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Driver
+
+class Driver:
+    def setSteeringAngle(self, steeringAngle):
+    def getSteeringAngle(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Driver;
+
+public class Driver {
+  public void setSteeringAngle(double steeringAngle);
+  public double getSteeringAngle();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/automobile/steering_angle` | `topic` | `webots_ros::Float64Stamped` | [`Header`](http://docs.ros.org/api/std_msgs/html/msg/Header.html) `header`<br/>`float64 data` |
+| `/automobile/set_steering_angle` | `service` | `webots_ros::set_float` | |
+
+%tab-end
+
+%end
+
+##### Description
+
+*Set and get the stearing angle*
 
 The `wbu_driver_set_steering_angle` function is used to steer the car, it steers the front wheels according to the Ackermann geometry (left and right wheels are not steered with the exact same angle).
 The angle is set in radians, a positive angle steers right and a negative angle steers left.
 The formulas used in order to compute the right and left angles are the following (`trackFront` and `wheelbase` are the parameters of the [Car](car.md) PROTO):
+
 
 ```c
 angle_right = atan(1 / cot(steering_angle) - trackFront / (2 * wheelbase));
@@ -49,9 +173,12 @@ The `wbu_driver_get_steering_angle` function returns the current steering angle.
 
 ---
 
-**Name**
+#### `wbu_driver_set_cruising_speed`
+#### `wbu_driver_get_target_cruising_speed`
 
-**wbu\_driver\_set\_cruising\_speed**, **wbu\_driver\_get\_target\_cruising\_speed** - *Set and get the target cruising speed*
+%tab-component
+
+%tab "C"
 
 ```c
 #include <webots/driver.h>
@@ -60,7 +187,65 @@ void wbu_driver_set_cruising_speed(double speed);
 double wbu_driver_get_target_cruising_speed();
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Driver.hpp>
+
+namespace webots {
+  class Driver {
+    void setCruisingSpeed(double speed);
+    double getTargetCruisingSpeed();
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Driver
+
+class Driver:
+    def setCruisingSpeed(self, speed):
+    def getTargetCruisingSpeed(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Driver;
+
+public class Driver {
+  public void setCruisingSpeed(double speed);
+  public double getTargetCruisingSpeed();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/automobile/set_cruising_speed` | `service` | `webots_ros::set_float` | |
+| `/automobile/get_cruising_speed` | `service` | `webots_ros::get_float` | |
+
+%tab-end
+
+%end
+
+##### Description
+
+*Set and get the target cruising speed*
 
 The `wbu_driver_set_cruising_speed` function activates the control in cruising speed of the car, the rotational speed of the wheels is forced (respecting the geometric differential constraint) in order for the car to move at the speed given in argument of the function (in kilometers per hour).
 When the control in cruising speed is activated, the speed is directly applied to the wheel without any engine model simulation, therefore any call to functions like `wbu_driver_get_rpm` will raise an error.
@@ -70,9 +255,11 @@ The `wbu_driver_get_target_cruising_speed` function simply returns the target cr
 
 ---
 
-**Name**
+#### `wbu_driver_get_current_speed`
 
-**wbu\_driver\_get\_current\_speed** - *Get the current speed*
+%tab-component
+
+%tab "C"
 
 ```c
 #include <webots/driver.h>
@@ -80,16 +267,74 @@ The `wbu_driver_get_target_cruising_speed` function simply returns the target cr
 double wbu_driver_get_current_speed();
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Driver.hpp>
+
+namespace webots {
+  class Driver {
+    double getCurrentSpeed();
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Driver
+
+class Driver:
+    def getCurrentSpeed(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Driver;
+
+public class Driver {
+  public double getCurrentSpeed();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/automobile/current_speed` | `topic` | `webots_ros::Float64Stamped` | [`Header`](http://docs.ros.org/api/std_msgs/html/msg/Header.html) `header`<br/>`float64 data` |
+
+%tab-end
+
+%end
+
+##### Description
+
+*Get the current speed*
 
 This function returns the current speed of the car (in kilometers per hour).
 The estimated speed is computed using the rotational speed of the actuated wheels and their respective radius.
 
 ---
 
-**Name**
+#### `wbu_driver_set_throttle`
+#### `wbu_driver_get_throttle`
 
-**wbu\_driver\_set\_throttle**, **wbu\_driver\_get\_throttle** - *Set and get the throttle*
+
+%tab-component
+
+%tab "C"
 
 ```c
 #include <webots/driver.h>
@@ -98,7 +343,65 @@ void wbu_driver_set_throttle(double throttle);
 double wbu_driver_get_throttle();
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Driver.hpp>
+
+namespace webots {
+  class Driver {
+    void setThrottle(double throttle);
+    double getThrottle();
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Driver
+
+class Driver:
+    def setThrottle(self, throttle):
+    def getThrottle(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Driver;
+
+public class Driver {
+  public void setThrottle(double throttle);
+  public double getThrottle();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/automobile/set_throttle` | `service` | `webots_ros::set_float` | |
+| `/automobile/throttle` | `topic` | `webots_ros::Float64Stamped` | [`Header`](http://docs.ros.org/api/std_msgs/html/msg/Header.html) `header`<br/>`float64 data` |
+
+%tab-end
+
+%end
+
+##### Description
+
+*Set and get the throttle*
 
 The `wbu_driver_set_throttle` function is used in order to control the car in torque, it sets the state of the throttle.
 The argument should be between 0.0 and 1.0, 0 means that 0% of the output torque of the engine is sent to the wheels and 1.0 means that 100% of the output torque of the engine is sent to the wheels.
@@ -108,9 +411,12 @@ The `wbu_driver_get_throttle` function simply returns the state of the throttle 
 
 ---
 
-**Name**
+#### `wbu_driver_set_brake_intensity`
+#### `wbu_driver_get_brake_intensity`
 
-**wbu\_driver\_set\_brake\_intensity**, **wbu\_driver\_get\_brake\_intensity** - *Set and get the brake intensity*
+%tab-component
+
+%tab "C"
 
 ```c
 #include <webots/driver.h>
@@ -119,7 +425,65 @@ void wbu_driver_set_brake_intensity(double intensity);
 double wbu_driver_get_brake_intensity();
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Driver.hpp>
+
+namespace webots {
+  class Driver {
+    void setBrakeIntensity(double intensity);
+    double getBrakeIntensity();
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Driver
+
+class Driver:
+    def setBrakeIntensity(self, intensity):
+    def getBrakeIntensity(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Driver;
+
+public class Driver {
+  public void setBrakeIntensity(double intensity);
+  public double getBrakeIntensity();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/automobile/set_brake_intensity` | `service` | `webots_ros::set_float` | |
+| `/automobile/brake_intensity` | `topic` | `webots_ros::Float64Stamped` | [`Header`](http://docs.ros.org/api/std_msgs/html/msg/Header.html) `header`<br/>`float64 data` |
+
+%tab-end
+
+%end
+
+##### Description
+
+*Set and get the brake intensity*
 
 The `wbu_driver_set_brake_intensity` function brakes the car by increasing the `dampingConstant` coefficient of the rotational joints of each of the four wheels.
 The argument should be between 0.0 and 1.0, 0 means that no damping constant is added on the joints (no breaking), 1 means that the parameter `brakeCoefficient` of the [Car](car.md) PROTO is applied on the `dampingConstant` of each joint (the value will be linearly interpolated between 0 and `brakeCoefficient` for any arguments between 0 and 1).
@@ -128,12 +492,23 @@ The `wbu_driver_get_brake_intensity` function simply returns the current brake i
 
 ---
 
-**Name**
+#### `wbu_driver_set_indicator`
+#### `wbu_driver_get_indicator`
+#### `wbu_driver_set_hazard_flashers`
+#### `wbu_driver_get_hazard_flashers`
 
-**wbu\_driver\_set\_indicator**, **wbu\_driver\_get\_indicator**, **wbu\_driver\_set\_hazard\_flashers**, **wbu\_driver\_get\_hazard\_flashers** - *Set and get the indicator state*
+%tab-component
+
+%tab "C"
 
 ```c
 #include <webots/driver.h>
+
+typedef enum {
+  OFF,
+  RIGHT,
+  LEFT
+} wbu_indicator_state;
 
 void wbu_driver_set_indicator(int state);
 wbu_indicator_state wbu_driver_get_indicator();
@@ -141,18 +516,90 @@ void wbu_driver_set_hazard_flashers(bool state);
 bool wbu_driver_get_hazard_flashers();
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Driver.hpp>
+
+namespace webots {
+  class Driver {
+    enum {INDICATOR_OFF, INDICATOR_RIGHT, INDICATOR_LEFT};
+
+    void setIndicator(int state);
+    int getIndicator();
+    void setHazardFlashers(bool state);
+    bool getHazardFlashers();
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Driver
+
+class Driver:
+    INDICATOR_OFF, INDICATOR_RIGHT, INDICATOR_LEFT
+
+    def setIndicator(self, state):
+    def getIndicator(self):
+    def setHazardFlashers(self, state):
+    def getHazardFlashers(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Driver;
+
+public class Driver {
+  public final static int INDICATOR_OFF, INDICATOR_RIGHT, INDICATOR_LEFT;
+
+  public void setIndicator(int state);
+  public int getIndicator();
+  public void setHazardFlashers(boolean state);
+  public boolean getHazardFlashers();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/automobile/set_indicator` | `service` | `webots_ros::set_bool` | |
+| `/automobile/get_indicator` | `service` | `webots_ros::get_bool` | |
+| `/automobile/set_hazard_flashers` | `service` | `webots_ros::set_bool` | |
+| `/automobile/get_hazard_flashers` | `service` | `webots_ros::get_bool` | |
+
+%tab-end
+
+%end
+
+##### Description
+
+*Set and get the indicator state*
 
 The `wbu_driver_set_indicator` function allows the user to set (using the `wbu_indicator_state` enum) if the indicator should be on only for the right side of the car, the left side of the car or should be off.
 The `wbu_driver_get_indicator` function allows the user to get the indicator state.
 
 %figure "wbu_indicator_state enumeration"
 
-| ENUM  | Value |
-| ----- | ----- |
-| OFF   | 0     |
-| RIGHT | 1     |
-| LEFT  | 2     |
+| ENUM    | Value |
+| ------- | ----- |
+| `OFF`   | 0     |
+| `RIGHT` | 1     |
+| `LEFT`  | 2     |
 
 %end
 
@@ -161,9 +608,14 @@ The `wbu_driver_get_hazard_flashers` function allows the user to get the state o
 
 ---
 
-**Name**
+#### `wbu_driver_set_dipped_beams`
+#### `wbu_driver_set_antifog_lights`
+#### `wbu_driver_get_dipped_beams`
+#### `wbu_driver_get_antifog_lights`
 
-**wbu\_driver\_set\_dipped\_beams**, **wbu\_driver\_set\_antifog\_lights**, **wbu\_driver\_get\_dipped\_beams**, **wbu\_driver\_get\_antifog\_lights** - *Set and get the lights*
+%tab-component
+
+%tab "C"
 
 ```c
 #include <webots/driver.h>
@@ -174,7 +626,73 @@ bool wbu_driver_get_dipped_beams();
 bool wbu_driver_get_antifog_lights();
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Driver.hpp>
+
+namespace webots {
+  class Driver {
+    void setDippedBeams(bool state);
+    void setAntifogLights(bool state);
+    bool getDippedBeams();
+    bool getAntifogLights();
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Driver
+
+class Driver:
+    def setDippedBeams(self, state):
+    def setAntifogLights(self, state):
+    def getDippedBeams(self):
+    def getAntifogLights(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Driver;
+
+public class Driver {
+  public void setDippedBeams(boolean state);
+  public void setAntifogLights(boolean state);
+  public boolean getDippedBeams();
+  public boolean getAntifogLights();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/automobile/set_dipped_beam` | `service` | `webots_ros::set_bool` | |
+| `/automobile/set_antifog_light` | `service` | `webots_ros::set_bool` | |
+| `/automobile/get_antifog_light` | `service` | `webots_ros::get_bool` | |
+| `/automobile/get_dipped_beam` | `service` | `webots_ros::get_bool` | |
+
+%tab-end
+
+%end
+
+##### Description
+
+*Set and get the lights*
 
 The `wbu_driver_set_dipped_beams` and `wbu_driver_set_antifog_lights` functions are used to enable or disable the dipped beams and the anti-fog lights.
 
@@ -182,9 +700,11 @@ The `wbu_driver_get_dipped_beams` and `wbu_driver_get_antifog_lights` functions 
 
 ---
 
-**Name**
+#### `wbu_driver_get_rpm`
 
-**wbu\_driver\_get\_rpm** - *Get the motor rpm*
+%tab-component
+
+%tab "C"
 
 ```c
 #include <webots/driver.h>
@@ -192,7 +712,61 @@ The `wbu_driver_get_dipped_beams` and `wbu_driver_get_antifog_lights` functions 
 double wbu_driver_get_rpm();
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Driver.hpp>
+
+namespace webots {
+  class Driver {
+    double getRpm();
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Driver
+
+class Driver:
+    def getRpm(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Driver;
+
+public class Driver {
+  public double getRpm();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/automobile/rpm` | `topic` | `webots_ros::Float64Stamped` | [`Header`](http://docs.ros.org/api/std_msgs/html/msg/Header.html) `header`<br/>`float64 data` |
+
+%tab-end
+
+%end
+
+##### Description
+
+*Get the motor rpm*
 
 This function returns the estimation of the engine rotation speed.
 
@@ -200,9 +774,13 @@ This function returns the estimation of the engine rotation speed.
 
 ---
 
-**Name**
+#### `wbu_driver_set_gear`
+#### `wbu_driver_get_gear`
+#### `wbu_driver_get_gear_number`
 
-**wbu\_driver\_set\_gear**, **wbu\_driver\_get\_gear**, **wbu\_driver\_get\_gear\_number** - *Get and set the gear*
+%tab-component
+
+%tab "C"
 
 ```c
 #include <webots/driver.h>
@@ -212,7 +790,69 @@ int wbu_driver_get_gear();
 int wbu_driver_get_gear_number();
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Driver.hpp>
+
+namespace webots {
+  class Driver {
+    void setGear(int gear);
+    int getGear();
+    int getGearNumber();
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Driver
+
+class Driver:
+    def setGear(self, gear):
+    def getGear(self):
+    def getGearNumber(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Driver;
+
+public class Driver {
+  public void setGear(int gear);
+  public int getGear();
+  public int getGearNumber();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/automobile/set_gear` | `service` | `webots_ros::set_int` | |
+| `/automobile/get_gear` | `service` | `webots_ros::get_int` | |
+| `/automobile/get_gear_number` | `service` | `webots_ros::get_int` | |
+
+%tab-end
+
+%end
+
+##### Description
+
+*Get and set the gear*
 
 The `wbu_driver_set_gear` function sets the engaged gear.
 An argument of `-1` is used in order to engage the reverse gear, an argument of `0` is used in order to disengaged the gearbox.
@@ -224,43 +864,184 @@ The `wbu_driver_get_gear_number` function simply returns the number of available
 
 ---
 
-**Name**
+#### `wbu_driver_get_control_mode`
 
-**wbu\_driver\_get\_control\_mode** - *Get the control mode*
+%tab-component
+
+%tab "C"
 
 ```c
 #include <webots/driver.h>
 
+typedef enum {
+  SPEED,
+  TORQUE
+} wbu_control_mode;
+
 wbu_control_mode wbu_driver_get_control_mode();
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Driver.hpp>
+
+namespace webots {
+  class Driver {
+    enum {SPEED, TORQUE};
+
+    int getControlMode();
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Driver
+
+class Driver:
+    SPEED, TORQUE
+
+    def getControlMode(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Driver;
+
+public class Driver {
+  public final static int SPEED, TORQUE;
+
+  public int getControlMode();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/automobile/get_control_mode` | `service` | `webots_ros::get_int` | |
+
+%tab-end
+
+%end
+
+##### Description
+
+*Get the control mode*
 
 This `wbu_driver_get_control_mode` returns the current control mode of the car.
 
 %figure "wbu_control_mode enumeration"
 
-| ENUM   | Value |
-| ------ | ----- |
-| SPEED  | 0     |
-| TORQUE | 1     |
+| ENUM     | Value |
+| -------- | ----- |
+| `SPEED`  | 0     |
+| `TORQUE` | 1     |
 
 %end
 
 ---
 
-**Name**
+#### `wbu_driver_set_wipers_mode`
+#### `wbu_driver_get_wipers_mode`
 
-**wbu\_driver\_set\_wipers\_mode**, **wbu\_driver\_get\_wipers\_mode** - *Set and get the wipers' mode*
+%tab-component
+
+%tab "C"
 
 ```c
 #include <webots/driver.h>
+
+typedef enum {
+  DOWN,
+  SLOW,
+  NORMAL,
+  FAST
+} wbu_wipers_mode;
 
 void wbu_driver_set_wipers_mode(int mode);
 wbu_wipers_mode wbu_driver_get_wipers_mode();
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Driver.hpp>
+
+namespace webots {
+  class Driver {
+    enum {DOWN, SLOW, NORMAL, FAST};
+
+    void setWipersMode(int mode);
+    int getWipersMode();
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Driver
+
+class Driver:
+    DOWN, SLOW, NORMAL, FAST
+
+    def setWipersMode(self, mode):
+    def getWipersMode(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Driver;
+
+public class Driver {
+  public final static int DOWN, SLOW, NORMAL, FAST;
+
+  public void setWipersMode(int mode);
+  public int getWipersMode();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/automobile/set_wipers_mode` | `service` | `webots_ros::set_int` | |
+| `/automobile/get_wipers_mode` | `service` | `webots_ros::get_int` | |
+
+%tab-end
+
+%end
+
+##### Description
+
+*Set and get the wipers' mode*
 
 The `wbu_driver_set_wipers_mode` function allows the user to set (using the `wbu_wipers_mode` enum) various speeds for the wipers from slow to fast.
 Whilst the slow and normal mode share the same speed, the slow mode activates the wipers once every few seconds.
@@ -268,12 +1049,12 @@ The `wbu_driver_get_wipers_mode` function allows the user to get the wipers' mod
 
 %figure "wbu_wipers_mode enumeration"
 
-| ENUM   | Value |
-| ------ | ----- |
-| DOWN   | 0     |
-| SLOW   | 1     |
-| NORMAL | 2     |
-| FAST   | 3     |
+| ENUM     | Value |
+| -------- | ----- |
+| `DOWN`   | 0     |
+| `SLOW`   | 1     |
+| `NORMAL` | 2     |
+| `FAST`   | 3     |
 
 %end
 

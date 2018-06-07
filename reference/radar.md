@@ -33,7 +33,11 @@ Any [Solid](solid.md) node is a potential radar target if its `radarCrossSection
 
 #### WbRadarTarget
 
-A radar target is defined by the following structure:
+A radar target is defined like this:
+
+%tab-component
+
+%tab "C"
 
 ```c
 typedef struct {
@@ -44,14 +48,77 @@ typedef struct {
 } WbRadarTarget;
 ```
 
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Radar.hpp>
+
+namespace webots {
+  typedef struct {
+    double distance;
+    double received_power;
+    double speed;
+    double azimuth;
+  } RadarTarget;
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import RadarTarget
+
+class RadarTarget:
+    @property
+    distance, received_power, speed, azimuth
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.RadarTarget;
+
+public class RadarTarget {
+  public double getDistance();
+  public double getReceivedPower();
+  public double getSpeed();
+  public double getAzimuth();
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+structs.WbRadarTarget.members = struct(
+  'distance', 'double',
+  'received_power', 'double',
+  'speed', 'double',
+  'azimuth', 'double'
+);
+```
+
+%tab-end
+
+%tab "ROS"
+
+> `RadarTarget` data is directly accessible from the related [`/<device_name>/targets`](#wb_radar_get_targets) topic.
+
+%tab-end
+
+%end
+
 The `distance` is the radial distance between the radar and the target.
 The `received_power` is the power received back by the radar from this target in dBm (see the [returned power](#received-power) formulas).
 The `speed` is the speed of the target relative to the radar sensor.
 The `azimuth` is the horizontal angle of the target relative to the radar.
-
-> **Note** [C++]: In C++ the name of the structure is `RadarTarget`.
-
-> **Note** [Java/Python]: In Java and Python, the structure is replaced by a class called `RadarTarget`.
 
 ### Field Summary
 
@@ -130,11 +197,13 @@ The power returned by the target is computed using the following formulas:
 
 ### Radar Functions
 
-**Name**
+#### `wb_radar_enable`
+#### `wb_radar_disable`
+#### `wb_radar_get_sampling_period`
 
-**wb\_radar\_enable**, **wb\_radar\_disable**, **wb\_radar\_get\_sampling\_period** - *enable and disable radar updates*
+%tab-component
 
-{[C++](cpp-api.md#cpp_radar)}, {[Java](java-api.md#java_radar)}, {[Python](python-api.md#python_radar)}, {[Matlab](matlab-api.md#matlab_radar)}, {[ROS](ros-api.md)}
+%tab "C"
 
 ```c
 #include <webots/radar.h>
@@ -144,7 +213,78 @@ void wb_radar_disable(WbDeviceTag tag);
 int wb_radar_get_sampling_period(WbDeviceTag tag);
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Radar.hpp>
+
+namespace webots {
+  class Radar : public Device {
+    virtual void enable(int samplingPeriod);
+    virtual void disable();
+    int getSamplingPeriod() const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Radar
+
+class Radar (Device):
+    def enable(self, samplingPeriod):
+    def disable(self):
+    def getSamplingPeriod(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Radar;
+
+public class Radar extends Device {
+  public void enable(int samplingPeriod);
+  public void disable();
+  public int getSamplingPeriod();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+wb_radar_enable(tag, sampling_period)
+wb_radar_disable(tag)
+period = wb_radar_get_sampling_period(tag)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/enable` | `service` | [`webots_ros::set_int`](ros-api.md#common-services) | |
+| `/<device_name>/get_sampling_period` | `service` | [`webots_ros::get_int`](ros-api.md#common-services) | |
+
+%tab-end
+
+%end
+
+##### Description
+
+*enable and disable radar updates*
 
 The `wb_radar_enable` function allows the user to enable radar updates.
 The `sampling_period` argument specifies the sampling period of the sensor and is expressed in milliseconds.
@@ -156,11 +296,12 @@ The `wb_radar_get_sampling_period` function returns the period given into the `w
 
 ---
 
-**Name**
+#### `wb_radar_get_min_range`
+#### `wb_radar_get_max_range`
 
-**wb\_radar\_get\_min\_range**, **wb\_radar\_get\_max\_range** - *get the minimum and maximum range of the radar*
+%tab-component
 
-{[C++](cpp-api.md#cpp_radar)}, {[Java](java-api.md#java_radar)}, {[Python](python-api.md#python_radar)}, {[Matlab](matlab-api.md#matlab_radar)}, {[ROS](ros-api.md)}
+%tab "C"
 
 ```c
 #include <webots/radar.h>
@@ -169,17 +310,85 @@ double wb_radar_get_min_range(WbDeviceTag tag);
 double wb_radar_get_max_range(WbDeviceTag tag);
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Radar.hpp>
+
+namespace webots {
+  class Radar : public Device {
+    double getMinRange() const;
+    double getMaxRange() const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Radar
+
+class Radar (Device):
+    def getMinRange(self):
+    def getMaxRange(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Radar;
+
+public class Radar extends Device {
+  public double getMinRange();
+  public double getMaxRange();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+min_range = wb_radar_get_min_range(tag)
+max_range = wb_radar_get_max_range(tag)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/get_min_range` | `service` | [`webots_ros::get_float`](ros-api.md#common-services) | |
+| `/<device_name>/get_max_range` | `service` | [`webots_ros::get_float`](ros-api.md#common-services) | |
+
+%tab-end
+
+%end
+
+##### Description
+
+*get the minimum and maximum range of the radar*
 
 These functions allow the controller to get the value of the minimum and maximum range of the radar.
 
 ---
 
-**Name**
+#### `wb_radar_get_horizontal_fov`
+#### `wb_radar_get_vertical_fov`
 
-**wb\_radar\_get\_horizontal\_fov**, **wb\_radar\_get\_vertical\_fov** - *get the horizontal and vertical field of view of the radar*
+%tab-component
 
-{[C++](cpp-api.md#cpp_radar)}, {[Java](java-api.md#java_radar)}, {[Python](python-api.md#python_radar)}, {[Matlab](matlab-api.md#matlab_radar)}, {[ROS](ros-api.md)}
+%tab "C"
 
 ```c
 #include <webots/radar.h>
@@ -188,17 +397,84 @@ double wb_radar_get_horizontal_fov(WbDeviceTag tag);
 double wb_radar_get_vertical_fov(WbDeviceTag tag);
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Radar.hpp>
+
+namespace webots {
+  class Radar : public Device {
+    double getHorizontalFov() const;
+    double getVerticalFov() const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Radar
+
+class Radar (Device):
+    def getHorizontalFov(self):
+    def getVerticalFov(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Radar;
+
+public class Radar extends Device {
+  public double getHorizontalFov();
+  public double getVerticalFov();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+horizontal_fov = wb_radar_get_horizontal_fov(tag)
+vertical_fov = wb_radar_get_vertical_fov(tag)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/get_vertical_fov` | `service` | [`webots_ros::get_float`](ros-api.md#common-services) | |
+| `/<device_name>/get_horizontal_fov` | `service` | [`webots_ros::get_float`](ros-api.md#common-services) | |
+
+%tab-end
+
+%end
+
+##### Description
+
+*get the horizontal and vertical field of view of the radar*
 
 These functions allow the controller to get the value of the horizontal and vertical field of view of the radar.
 
 ---
 
-**Name**
+#### `wb_radar_get_number_of_targets`
 
-**wb\_radar\_get\_number\_of\_targets** - *get the current number of targets*
+%tab-component
 
-{[C++](cpp-api.md#cpp_radar)}, {[Java](java-api.md#java_radar)}, {[Python](python-api.md#python_radar)}, {[Matlab](matlab-api.md#matlab_radar)}, {[ROS](ros-api.md)}
+%tab "C"
 
 ```c
 #include <webots/radar.h>
@@ -206,25 +482,149 @@ These functions allow the controller to get the value of the horizontal and vert
 int wb_radar_get_number_of_targets(WbDeviceTag tag);
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Radar.hpp>
+
+namespace webots {
+  class Radar : public Device {
+    int getNumberOfTargets() const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Radar
+
+class Radar (Device):
+    def getNumberOfTargets(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Radar;
+
+public class Radar extends Device {
+  public int getNumberOfTargets();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+targets_number = wb_radar_get_number_of_targets(tag)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/number_of_targets` | `topic` | webots_ros::Int8Stamped | [`Header`](http://docs.ros.org/api/std_msgs/html/msg/Header.html) `header`<br/>`int8 data` |
+
+%tab-end
+
+%end
+
+##### Description
+
+*get the current number of targets*
 
 This function allows the controller to get the number of targets currently seen by the radar.
 
 ---
 
-**Name**
+#### `wb_radar_get_targets`
 
-**wb\_radar\_get\_targets** - *get the targets array*
+%tab-component
 
-{[C++](cpp-api.md#cpp_radar)}, {[Java](java-api.md#java_radar)}, {[Python](python-api.md#python_radar)}, {[Matlab](matlab-api.md#matlab_radar)}, {[ROS](ros-api.md)}
+%tab "C"
 
 ```c
 #include <webots/radar.h>
 
-const WbRadarTarget * wb_radar_get_targets(WbDeviceTag tag);
+const WbRadarTarget *wb_radar_get_targets(WbDeviceTag tag);
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Radar.hpp>
+
+namespace webots {
+  class Radar : public Device {
+    const RadarTarget *getTargets() const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Radar
+
+class Radar (Device):
+    def getTargets(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Radar;
+
+public class Radar extends Device {
+  public RadarTarget[] getTargets();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+targets = wb_radar_get_targets(tag)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/targets` | `topic` | `webots_ros::RadarTarget` | [`Header`](http://docs.ros.org/api/std_msgs/html/msg/Header.html) `header`<br/>`float64 distance`<br/>`float64 receivedPower`<br/>`float64 speed`<br/>`float64 azimuth` |
+
+%tab-end
+
+%end
+
+##### Description
+
+*get the targets array*
 
 This function returns the targets array.
 The size of the array can be get using the function `wb_radar_get_number_of_targets`.

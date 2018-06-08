@@ -6,7 +6,7 @@
 
 It's that time of year again!
 Today marks the release of the all-new Webots R2018b, packed with some game-changing features.
-As always, for a comprehensive list of changes please refer to the ChangeLog, found [here](https://www.cyberbotics.com/dvd/common/doc/webots/ChangeLog.html).
+As always, for a comprehensive list of changes please refer to the ChangeLog, found [here](https://cyberbotics.com/change_log).
 
 ## WREN: Webots Renderer
 
@@ -118,8 +118,8 @@ Webots R2018b supports Ubuntu 18.04 LTS out of the box.
 
 The Speaker API can now load and play all major audio formats.
 
-If you don't want to run a controller for your Robot node, you can now simply use "" as the controller name, to avoid running the void controller unnecessarily.
+If you don't want to run a controller for your Robot node, you can now simply use an empty string as the controller name, to avoid running the void controller unnecessarily.
 
 Projection mode, rendering mode, optional renderings and disable selection are now saved per world instead of globally.
 
-**Go and download Webots R2018b, so you don't miss out on all these great new features!**
+**Go and [download](https://cyberbotics.com/#download) Webots R2018b today, so you don't miss out on all these great new features!**

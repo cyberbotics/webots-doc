@@ -322,9 +322,6 @@ function setupBlogFunctionalitiesIfNeeded() {
     // hide the release tag, this is also nonsensical here
     document.querySelector(".release-tag").style.display = "none";
 
-    // hide the handle
-    setHandleWidth(0);
-
     document.title = 'Webots Blog';
 
     var figures = document.querySelectorAll('figure');
@@ -1215,6 +1212,7 @@ document.addEventListener('DOMContentLoaded', function() {
   if (localSetup.book == "blog") {
     var center = document.querySelector('#center');
     center.setAttribute('class', 'blog');
+    setHandleWidth(0);
   }
 
   addContributionBanner();

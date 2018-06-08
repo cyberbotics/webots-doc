@@ -24,7 +24,7 @@ If you experience any problem with NAOqi or Choregraphe in Webots, please report
 
 ### MATLAB and Remote Control Plugins
 
-Matlab controllers produce errors when loading a remote control plugin.
+MATLAB controllers produce errors when loading a remote control plugin.
 This prevent users from performing remote control of real robots from MATLAB.
 This problem arises with both the e-puck and darwin-op remote control plugins.
 

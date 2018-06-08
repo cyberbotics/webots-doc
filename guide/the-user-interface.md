@@ -252,6 +252,9 @@ This rendering option can be activated only for solids with no other solid at th
 - If the **Disable selection** option is enabled, it prevents you from changing the selected solid node when clicking on the 3D window.
 This is particularly useful during the modeling phase, when you want to change the viewpoint without modifying the visible and selected fields in the scene tree.
 
+- If the **Lock Viewpoint** option is enabled, it prevents you from changing the position and orientation of the [Viewpoint](../reference/viewpoint.md) node when dragging the mouse or moving the mouse wheel on the 3D window.
+This is particularly useful when you don't want to change accidently the position and orientation of the viewpoint.
+
 > **Note**:
 The *Follow Object*, *Follow Object and Rotate*, *Projection*, *Rendering*, *Optional Renderings* and *Disable Selection* options are saved per world whereas the other options are global.
 

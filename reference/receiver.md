@@ -53,7 +53,7 @@ Currently, this field is ignored.
 - `bufferSize`: size (in bytes) of the reception buffer.
 The size of the received data should not exceed the buffer size at any time, otherwise data may be lost.
 A `bufferSize` of -1 (the default) is regarded as unlimited buffer size.
-If the previous data have not been read when new data are received, the previous data are lost.
+If the previous data has not been read when new data is received, the previous data is lost.
 
 - `signalStrengthNoise`: standard deviation of the gaussian noise added to the signal strength returned by `wb_receiver_get_signal_strength`.
 The noise is proportionnal to the signal strength, e.g., a `signalStrengthNoise` of 0.1 will add a noise with a standard deviation of 0.1 for a signal strength of 1 and 0.2 for a signal strength of 2.
@@ -63,11 +63,13 @@ The noise is not dependent on the distance between emitter-receiver.
 
 ### Receiver Functions
 
-**Name**
+#### `wb_receiver_enable`
+#### `wb_receiver_disable`
+#### `wb_receiver_get_sampling_period`
 
-**wb\_receiver\_enable**, **wb\_receiver\_disable**, **wb\_receiver\_get\_sampling\_period** - *enable and disable receiver*
+%tab-component
 
-{[C++](cpp-api.md#cpp_receiver)}, {[Java](java-api.md#java_receiver)}, {[Python](python-api.md#python_receiver)}, {[Matlab](matlab-api.md#matlab_receiver)}, {[ROS](ros-api.md)}
+%tab "C"
 
 ```c
 #include <webots/receiver.h>
@@ -77,11 +79,82 @@ void wb_receiver_disable(WbDeviceTag tag);
 int wb_receiver_get_sampling_period(WbDeviceTag tag);
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Receiver.hpp>
+
+namespace webots {
+  class Receiver : public Device {
+    virtual void enable(int samplingPeriod);
+    virtual void disable();
+    int getSamplingPeriod() const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Receiver
+
+class Receiver (Device):
+    def enable(self, samplingPeriod):
+    def disable(self):
+    def getSamplingPeriod(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Receiver;
+
+public class Receiver extends Device {
+  public void enable(int samplingPeriod);
+  public void disable();
+  public int getSamplingPeriod();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+wb_receiver_enable(tag, sampling_period)
+wb_receiver_disable(tag)
+period = wb_receiver_get_sampling_period(tag)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/enable` | `service` | [`webots_ros::set_int`](ros-api.md#common-services) | |
+| `/<device_name>/get_sampling_period` | `service` | [`webots_ros::get_int`](ros-api.md#common-services) | |
+
+%tab-end
+
+%end
+
+##### Description
+
+*enable and disable receiver*
 
 The `wb_receiver_enable` function starts the receiver listening for incoming data packets.
 Data reception is activated in the background of the controller's loop at a rate of once every `sampling_period` (expressed in milliseconds).
-Incoming data packet are appended to the tail of the reception queue (see [this figure](#receivers-packet-queue)).
+Incoming data packets are appended to the tail of the reception queue (see [this figure](#receivers-packet-queue)).
 Incoming data packets will be discarded if the receiver's buffer size (specified in the [Receiver](#receiver) node) is exceeded.
 To avoid buffer overflow, the data packets should be read at a high enough rate by the controller program.
 The `sampling_period` argument specifies the sampling period of the [Receiver](#receiver) and is expressed in milliseconds.
@@ -93,11 +166,12 @@ The `wb_receiver_get_sampling_period` function returns the period given into the
 
 ---
 
-**Name**
+#### `wb_receiver_get_queue_length`
+#### `wb_receiver_next_packet`
 
-**wb\_receiver\_get\_queue\_length**, **wb\_receiver\_next\_packet** - *check for the presence of data packets in the receivers queue*
+%tab-component
 
-{[C++](cpp-api.md#cpp_receiver)}, {[Java](java-api.md#java_receiver)}, {[Python](python-api.md#python_receiver)}, {[Matlab](matlab-api.md#matlab_receiver)}, {[ROS](ros-api.md)}
+%tab "C"
 
 ```c
 #include <webots/receiver.h>
@@ -106,7 +180,74 @@ int wb_receiver_get_queue_length(WbDeviceTag tag);
 void wb_receiver_next_packet(WbDeviceTag tag);
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Receiver.hpp>
+
+namespace webots {
+  class Receiver : public Device {
+    int getQueueLength() const;
+    virtual void nextPacket();
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Receiver
+
+class Receiver (Device):
+    def getQueueLength(self):
+    def nextPacket(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Receiver;
+
+public class Receiver extends Device {
+  public int getQueueLength();
+  public void nextPacket();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+length = wb_receiver_get_queue_length(tag)
+wb_receiver_next_packet(tag)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/get_queue_length` | `service` | [`webots_ros::get_int`](ros-api.md#common-services) | |
+| `/<device_name>/next_packet` | `service` | [`webots_ros::get_bool`](ros-api.md#common-services) | |
+
+%tab-end
+
+%end
+
+##### Description
+
+*check for the presence of data packets in the receivers queue*
 
 The `wb_receiver_get_queue_length` function returns the number of data packets currently present in the receiver's queue (see [this figure](#receivers-packet-queue)).
 
@@ -154,11 +295,12 @@ Making assumptions based on timing will result in code that is not robust.
 
 ---
 
-**Name**
+#### `wb_receiver_get_data`
+#### `wb_receiver_get_data_size`
 
-**wb\_receiver\_get\_data**, **wb\_receiver\_get\_data\_size** - *get data and size of the current packet*
+%tab-component
 
-{[C++](cpp-api.md#cpp_receiver)}, {[Java](java-api.md#java_receiver)}, {[Python](python-api.md#python_receiver)}, {[Matlab](matlab-api.md#matlab_receiver)}, {[ROS](ros-api.md)}
+%tab "C"
 
 ```c
 #include <webots/receiver.h>
@@ -167,7 +309,74 @@ const void *wb_receiver_get_data(WbDeviceTag tag);
 int wb_receiver_get_data_size(WbDeviceTag tag);
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Receiver.hpp>
+
+namespace webots {
+  class Receiver : public Device {
+    const void *getData() const;
+    int getDataSize() const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Receiver
+
+class Receiver (Device):
+    def getData(self):
+    def getDataSize(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Receiver;
+
+public class Receiver extends Device {
+  public byte[] getData();
+  public int getDataSize();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+size = wb_receiver_get_data_size(tag)
+data = wb_receiver_get_data(tag)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/data` | `topic` | `webots_ros::StringStamped` | [`Header`](http://docs.ros.org/api/std_msgs/html/msg/Header.html) `header`<br/>`string data` |
+| `/<device_name>/get_data_size` | `service` | [`webots_ros::get_int`](ros-api.md#common-services) | |
+
+%tab-end
+
+%end
+
+##### Description
+
+*get data and size of the current packet*
 
 The `wb_receiver_get_data` function returns the data of the packet at the head of the reception queue (see [this figure](#receivers-packet-queue)).
 The returned data pointer is only valid until the next call to the `wb_receiver_next_packet` function.
@@ -192,7 +401,7 @@ Here is an example for getting the data:
 
 <!-- -->
 
-> **Note** [Matlab]: The Matlab `wb_receiver_get_data` function returns a MATLAB *libpointer*.
+> **Note** [MATLAB]: The MATLAB `wb_receiver_get_data` function returns a MATLAB *libpointer*.
 The receiving code is responsible for extracting the data from the *libpointer* using MATLAB's `setdatatype` and `get` functions.
 Here is an example on how to send and receive a 2x3 MATLAB matrix.
 
@@ -235,11 +444,12 @@ More sophisticated data typed must be accessed explicitly using `setdatatype` an
 
 ---
 
-**Name**
+#### `wb_receiver_get_signal_strength`
+#### `wb_receiver_get_emitter_direction`
 
-**wb\_receiver\_get\_signal\_strength**, **wb\_receiver\_get\_emitter\_direction** - *get signal strength and emitter direction*
+%tab-component
 
-{[C++](cpp-api.md#cpp_receiver)}, {[Java](java-api.md#java_receiver)}, {[Python](python-api.md#python_receiver)}, {[Matlab](matlab-api.md#matlab_receiver)}, {[ROS](ros-api.md)}
+%tab "C"
 
 ```c
 #include <webots/receiver.h>
@@ -248,7 +458,74 @@ double wb_receiver_get_signal_strength(WbDeviceTag tag);
 const double *wb_receiver_get_emitter_direction(WbDeviceTag tag);
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Receiver.hpp>
+
+namespace webots {
+  class Receiver : public Device {
+    double getSignalStrength() const;
+    const double *getEmitterDirection() const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Receiver
+
+class Receiver (Device):
+    def getSignalStrength(self):
+    def getEmitterDirection(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Receiver;
+
+public class Receiver extends Device {
+  public double getSignalStrength();
+  public double[] getEmitterDirection();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+strength = wb_receiver_get_signal_strength(tag)
+[x y z] = wb_receiver_get_emitter_direction(tag)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/get_signal_strength` | `service` | [`webots_ros::get_float`](ros-api.md#common-services) | |
+| `/<device_name>/get_emitter_direction` | `service` | `webots_ros::receiver_get_emitter_direction` | `uint8 ask`<br/>`---`<br/>`float64[] direction` |
+
+%tab-end
+
+%end
+
+##### Description
+
+*get signal strength and emitter direction*
 
 The `wb_receiver_get_signal_strength` function operates on the head packet in the receiver's queue (see [this figure](#receivers-packet-queue)).
 It returns the simulated signal strength at the time the packet was transmitted.
@@ -270,20 +547,98 @@ It is illegal to call this function if the receiver's queue is empty (i.e. when 
 
 ---
 
-**Name**
+#### `wb_receiver_set_channel`
+#### `wb_receiver_get_channel`
 
-**wb\_receiver\_set\_channel**, **wb\_receiver\_get\_channel** - *set and get the receiver's channel.*
+%tab-component
 
-{[C++](cpp-api.md#cpp_receiver)}, {[Java](java-api.md#java_receiver)}, {[Python](python-api.md#python_receiver)}, {[Matlab](matlab-api.md#matlab_receiver)}, {[ROS](ros-api.md)}
+%tab "C"
 
 ```c
 #include <webots/receiver.h>
+
+#define WB_CHANNEL_BROADCAST
 
 void wb_receiver_set_channel(WbDeviceTag tag, int channel);
 int wb_receiver_get_channel(WbDeviceTag tag);
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Receiver.hpp>
+
+namespace webots {
+  class Receiver : public Device {
+    enum {CHANNEL_BROADCAST};
+
+    virtual void setChannel(int channel);
+    int getChannel() const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Receiver
+
+class Receiver (Device):
+    CHANNEL_BROADCAST
+
+    def setChannel(self, channel):
+    def getChannel(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Receiver;
+
+public class Receiver extends Device {
+  public final static int CHANNEL_BROADCAST;
+
+  public void setChannel(int channel);
+  public int getChannel();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+WB_CHANNEL_BROADCAST
+
+wb_receiver_set_channel(tag, channel)
+channel = wb_receiver_get_channel(tag)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/set_channel` | `service` | [`webots_ros::set_int`](ros-api.md#common-services) | |
+| `/<device_name>/get_channel` | `service` | [`webots_ros::get_int`](ros-api.md#common-services) | |
+
+%tab-end
+
+%end
+
+##### Description
+
+*set and get the receiver's channel.*
 
 The `wb_receiver_set_channel` function allows a receiver to change its reception channel.
 It modifies the `channel` field of the corresponding [Receiver](#receiver) node.
@@ -291,5 +646,3 @@ Normally, a receiver can only receive data packets from emitters that use the sa
 However, the special WB\_CHANNEL\_BROADCAST value can be used to listen simultaneously to all channels.
 
 The `wb_receiver_get_channel` function returns the current channel number of the receiver.
-
-> **Note** [C++, Java, Python]: In the oriented-object APIs, the WB\_CHANNEL\_BROADCAST constant is available as static integer of the [Receiver](#receiver) class (Receiver::CHANNEL\_BROADCAST).

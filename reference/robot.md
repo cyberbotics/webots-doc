@@ -116,11 +116,14 @@ Asynchronous controllers may also be recommended for networked simulations invol
 
 ### Robot Functions
 
-**Name**
+#### `Constructor`
+#### `wb_robot_step`
+#### `wb_robot_init`
+#### `wb_robot_cleanup`
 
-**wb\_robot\_step**, **wb\_robot\_init**, **wb\_robot\_cleanup** - *controller step, initialization and cleanup functions*
+%tab-component
 
-{[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}, {[Matlab](matlab-api.md#matlab_robot)}, {[ROS](ros-api.md)}
+%tab "C"
 
 ```c
 #include <webots/robot.h>
@@ -130,7 +133,75 @@ void wb_robot_init();
 void wb_robot_cleanup();
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Robot.hpp>
+
+namespace webots {
+  class Robot {
+    Robot();
+    virtual ~Robot();
+    virtual int step(int duration);
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Robot
+
+class Robot:
+    def __init__(self):
+    def __del__(self):
+    def step(self, duration):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Robot;
+
+public class Robot {
+  public Robot();
+  protected void finalize();
+  public int step(int duration);
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+period = wb_robot_step(duration)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/robot/time_step` | `service` | [`webots_ros::set_int`](ros-api.md#common-services) | |
+
+%tab-end
+
+%end
+
+##### Description
+
+*controller step, initialization and cleanup functions*
 
 The `wb_robot_step` function is crucial and must be used in every controller.
 This function synchronizes the sensor and actuator data between Webots and the controllers.
@@ -216,11 +287,35 @@ int main() {
 
 ---
 
-**Name**
+#### `wb_robot_get_device`
+#### `getAccelerometer`
+#### `getBrake`
+#### `getCamera`
+#### `getCompass`
+#### `getConnector`
+#### `getDisplay`
+#### `getDistanceSensor`
+#### `getEmitter`
+#### `getGPS`
+#### `getGyro`
+#### `getInertialUnit`
+#### `getJoystick`
+#### `getKeyboard`
+#### `getLED`
+#### `getLidar`
+#### `getLightSensor`
+#### `getMotor`
+#### `getPen`
+#### `getPositionSensor`
+#### `getRadar`
+#### `getRangeFinder`
+#### `getReceiver`
+#### `getSpeaker`
+#### `getTouchSensor`
 
-**wb\_robot\_get\_device** - *get a unique identifier to a device*
+%tab-component
 
-{[Matlab](matlab-api.md#matlab_robot)}
+%tab "C"
 
 ```c
 #include <webots/robot.h>
@@ -228,78 +323,159 @@ int main() {
 WbDeviceTag wb_robot_get_device(const char *name);
 ```
 
-**Description**
+%tab-end
 
-This function returns a unique identifier for a device corresponding to a specified `name`.
+%tab "C++"
+
+```cpp
+#include <webots/Robot.hpp>
+
+namespace webots {
+  class Robot {
+    Accelerometer *getAccelerometer(const std::string &name);
+    Brake *getBrake(const std::string &name);
+    Camera *getCamera(const std::string &name);
+    Compass *getCompass(const std::string &name);
+    Connector *getConnector(const std::string &name);
+    Display *getDisplay(const std::string &name);
+    DistanceSensor *getDistanceSensor(const std::string &name);
+    Emitter *getEmitter(const std::string &name);
+    GPS *getGPS(const std::string &name);
+    Gyro *getGyro(const std::string &name);
+    InertialUnit *getInertialUnit(const std::string &name);
+    Joystick *getJoystick();
+    Keyboard *getKeyboard();
+    LED *getLED(const std::string &name);
+    Lidar *getLidar(const std::string &name);
+    LightSensor *getLightSensor(const std::string &name);
+    Motor *getMotor(const std::string &name);
+    Mouse *getMouse();
+    Pen *getPen(const std::string &name);
+    PositionSensor *getPositionSensor(const std::string &name);
+    Radar *getRadar(const std::string &name);
+    RangeFinder *getRangeFinder(const std::string &name);
+    Receiver *getReceiver(const std::string &name);
+    Speaker *getSpeaker(const std::string &name);
+    TouchSensor *getTouchSensor(const std::string &name);
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Robot
+
+class Robot:
+    def getAccelerometer(self, name):
+    def getBrake(self, name):
+    def getCamera(self, name):
+    def getCompass(self, name):
+    def getConnector(self, name):
+    def getDisplay(self, name):
+    def getDistanceSensor(self, name):
+    def getEmitter(self, name):
+    def getGPS(self, name):
+    def getGyro(self, name):
+    def getInertialUnit(self, name):
+    def getJoystick(self):
+    def getKeyboard(self):
+    def getLED(self, name):
+    def getLidar(self, name):
+    def getLightSensor(self, name):
+    def getMotor(self, name):
+    def getMouse(self):
+    def getPen(self, name):
+    def getPositionSensor(self, name):
+    def getRadar(self, name):
+    def getRangeFinder(self, name):
+    def getReceiver(self, name):
+    def getSpeaker(self, name):
+    def getTouchSensor(self, name):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Robot;
+
+public class Robot {
+  public Accelerometer getAccelerometer(String name);
+  public Brake getBrake(String name);
+  public Camera getCamera(String name);
+  public Compass getCompass(String name);
+  public Connector getConnector(String name);
+  public Display getDisplay(String name);
+  public DistanceSensor getDistanceSensor(String name);
+  public Emitter getEmitter(String name);
+  public GPS getGPS(String name);
+  public Gyro getGyro(String name);
+  public InertialUnit getInertialUnit(String name);
+  public Joystick getJoystick();
+  public Keyboard getKeyboard();
+  public LED getLED(String name);
+  public Lidar getLidar(String name);
+  public LightSensor getLightSensor(String name);
+  public Motor getMotor(String name);
+  public Motor getMouse();
+  public Pen getPen(String name);
+  public PositionSensor getPositionSensor(String name);
+  public Radar getRadar(String name);
+  public RangeFinder getRangeFinder(String name);
+  public Receiver getReceiver(String name);
+  public Speaker getSpeaker(String name);
+  public TouchSensor getTouchSensor(String name);
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+tag = wb_robot_get_device('name')
+```
+
+%tab-end
+
+%tab "ROS"
+
+> Note: this function has no equivalent for ROS.
+Devices are available through their services.
+
+%tab-end
+
+%end
+
+##### Description
+
+*get a unique identifier to a device*
+
+The `wb_robot_get_device` function (available in C and MATLAB) returns a unique identifier for a device corresponding to a specified `name`.
 For example, if a robot contains a [DistanceSensor](distancesensor.md) node whose `name` field is "ds1", the function will return the unique identifier of that device.
 This `WbDeviceTag` identifier will be used subsequently for enabling, sending commands to, or reading data from this device.
 If the specified device is not found, the function returns 0.
 
-> **Note**: This function is not available in the C++, Java and Python APIs.
-Instead, C++, Java and Python users should use device specific typed methods (see below).
-
-**See also**
-
-[`wb_robot_step`](#wb_robot_step).
-
----
-
-**Name**
-
-**Robot::getAccelerometer**, **Robot::getBrake**, **Robot::getCamera**, **Robot::getCompass**, **Robot::getConnector**, **Robot::getDisplay**, **Robot::getDistanceSensor**, **Robot::getEmitter**, **Robot::getGPS**, **Robot::getGyro**, **Robot::getInertialUnit**, **Robot::getJoystick**, **Robot::getKeyboard**, **Robot::getLED**, **Robot::getLidar**, **Robot::getLightSensor**, **Robot::getMotor**, **Robot::getPen**, **Robot::getPositionSensor**, **Robot::getRadar**, **Robot::getRangeFinder**, **Robot::getReceiver**, **Robot::getSpeaker**, **Robot::getTouchSensor** - *get the instance of a robot's device*
-
-{[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}
-
-```c
-#include <webots/Robot.hpp>
-
-Accelerometer *Robot::getAccelerometer(const std::string &name);
-Brake *Robot::getBrake(const std::string &name);
-Camera *Robot::getCamera(const std::string &name);
-Compass *Robot::getCompass(const std::string &name);
-Connector *Robot::getConnector(const std::string &name);
-Display *Robot::getDisplay(const std::string &name);
-DistanceSensor *Robot::getDistanceSensor(const std::string &name);
-Emitter *Robot::getEmitter(const std::string &name);
-GPS *Robot::getGPS(const std::string &name);
-Gyro *Robot::getGyro(const std::string &name);
-InertialUnit *Robot::getInertialUnit(const std::string &name);
-Joystick *Robot::getJoystick();
-Keyboard *Robot::getKeyboard();
-LED *Robot::getLED(const std::string &name);
-Lidar *Robot::getLidar(const std::string &name);
-LightSensor *Robot::getLightSensor(const std::string &name);
-Motor *Robot::getMotor(const std::string &name);
-Pen *Robot::getPen(const std::string &name);
-PositionSensor *Robot::getPositionSensor(const std::string &name);
-Radar *Robot::getRadar(const std::string &name);
-RangeFinder *Robot::getRangeFinder(const std::string &name);
-Receiver *Robot::getReceiver(const std::string &name);
-Speaker *Robot::getSpeaker(const std::string &name);
-TouchSensor *Robot::getTouchSensor(const std::string &name);
-```
-
-**Description**
-
+In C++, Java or Python, users should use the device specific typed methods, for example `getDistanceSensor`.
 These functions return a reference to an object corresponding to a specified `name`.
 Depending on the called function, this object can be an instance of a `Device` subclass.
 For example, if a robot contains a [DistanceSensor](distancesensor.md) node whose `name` field is "ds1", the function `getDistanceSensor` will return a reference to a [DistanceSensor](distancesensor.md) object.
 If the specified device is not found, the function returns `NULL` in C++, `null` in Java or the `none` in Python.
 
-> **Note**: These functions are not available in the C and MATLAB APIs.
-Instead, C and Matlab users should use [`wb_robot_get_device`](#wb_robot_get_device) function.
-
-**See also**
-
-[`wb_robot_get_device`](#wb_robot_get_device), [`wb_robot_step`](#wb_robot_step).
-
 ---
 
-**Name**
+#### `wb_robot_get_device_by_index`
 
-**wb\_robot\_get\_device\_by\_index** - *get the devices by introspection*
+%tab-component
 
-{[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}, {[Matlab](matlab-api.md#matlab_robot)}, {[ROS](ros-api.md)}
+%tab "C"
 
 ```c
 #include <webots/robot.h>
@@ -308,7 +484,74 @@ WbDeviceTag wb_robot_get_device_by_index(int index);
 int wb_robot_get_number_of_devices();
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Robot.hpp>
+
+namespace webots {
+  class Robot {
+    int getNumberOfDevices() const;
+    Device *getDeviceByIndex(int index);
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Robot
+
+class Robot:
+    def getNumberOfDevices(self):
+    def getDeviceByIndex(self, index):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Robot;
+
+public class Robot {
+  public int getNumberOfDevices();
+  public Device getDeviceByIndex(int index);
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+size = wb_robot_get_number_of_devices()
+tag = wb_robot_get_device_by_index(index)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/robot/get_number_of_devices` | `service` | [`webots_ros::get_int`](ros-api.md#common-services) | |
+| `/robot/get_device_list` | `service` | `webots_ros::robot_get_device_list` | `uint8 ask`<br/>`---`<br/>`string[] list` |
+
+%tab-end
+
+%end
+
+##### Description
+
+*get the devices by introspection*
 
 These functions allows to get the robot devices by introspection.
 Indeed they allow to get the devices from an internal flat list storing the devices.
@@ -341,11 +584,11 @@ for(i=0; i<n_devices; i++) {
 
 ---
 
-**Name**
+#### `wb_robot_wait_for_user_input_event`
 
-**wb\_robot\_wait\_for\_user\_input\_event** - *wait for a Joystick, Keyboard or Mouse input event*
+%tab-component
 
-{[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}, {[Matlab](matlab-api.md#matlab_robot)}, {[ROS](ros-api.md)}
+%tab "C"
 
 ```c
 #include <webots/robot.h>
@@ -353,7 +596,82 @@ for(i=0; i<n_devices; i++) {
 WbUserInputEvent wb_robot_wait_for_user_input_event(WbUserInputEvent event_type, int timeout);
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Robot.hpp>
+
+namespace webots {
+  class Robot {
+    typedef enum {
+      EVENT_NO_EVENT, EVENT_MOUSE_CLICK, EVENT_MOUSE_MOVE, EVENT_KEYBOARD,
+      EVENT_JOYSTICK_BUTTON, EVENT_JOYSTICK_AXIS, EVENT_JOYSTICK_POV
+    } UserInputEvent;
+
+    UserInputEvent waitForUserInputEvent(UserInputEvent event_type, int timeout);
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Robot
+
+class Robot:
+    EVENT_NO_EVENT, EVENT_MOUSE_CLICK, EVENT_MOUSE_MOVE, EVENT_KEYBOARD, EVENT_JOYSTICK_BUTTON, EVENT_JOYSTICK_AXIS, EVENT_JOYSTICK_POV
+    
+    def waitForUserInputEvent(self, event_type, timeout):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Robot;
+
+public class Robot {
+  public final static int EVENT_NO_EVENT, EVENT_MOUSE_CLICK,
+     EVENT_MOUSE_MOVE, EVENT_KEYBOARD, EVENT_JOYSTICK_BUTTON,
+     EVENT_JOYSTICK_AXIS, EVENT_JOYSTICK_POV;
+
+  public int waitForUserInputEvent(int event_type, int timeout);
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+WB_EVENT_NO_EVENT, WB_EVENT_MOUSE_CLICK, WB_EVENT_MOUSE_MOVE, WB_EVENT_KEYBOARD, WB_EVENT_JOYSTICK_BUTTON, WB_EVENT_JOYSTICK_AXIS, WB_EVENT_JOYSTICK_POV
+
+event_type = wb_robot_wait_for_user_input_event(event_type, timeout)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/robot/wait_for_user_input_event` | `service` | `webots_ros::robot_wait_for_user_input_event` | `int32 eventType`<br/>`int32 timeout`<br/>`---`<br/>`int32 event` |
+
+%tab-end
+
+%end
+
+##### Description
+
+*wait for a Joystick, Keyboard or Mouse input event*
 
 This function can be used to get [Joystick](joystick.md), [Keyboard](keyboard.md) and [Mouse](mouse.md) input without calling the `wb_robot_step` function, this is useful to prevent the simulation from running until a specific user input event occurs.
 This function blocks the simulation and will return:
@@ -361,6 +679,7 @@ This function blocks the simulation and will return:
   - when the amout of milliseconds specified by the `timeout` argument has passed. This timeout is expressed in real time and not in simulation time.
 
 It is possible to combine event types in order to return as soon as one of the event occurs:
+
 ```
 WbUserInputEvent returned_event = wb_robot_wait_for_user_input_event(WB_EVENT_KEYBOARD | WB_EVENT_JOYSTICK_BUTTON, 1000);
 ```
@@ -373,13 +692,13 @@ In that case, the sampling period is expressed in real time and not in simulatio
 
 | Event                       | Purpose                                                 |
 | --------------------------- | ------------------------------------------------------- |
-| WB\_EVENT\_NO\_EVENT        | no event occurred or no event should cause a return     |
-| WB\_EVENT\_MOUSE\_CLICK     | used to detect a mouse click in the 3D window           |
-| WB\_EVENT\_MOUSE\_MOVE      | used to detect the motion of the mouse in the 3D window |
-| WB\_EVENT\_KEYBOARD         | used to detect a keyboard key press/release             |
-| WB\_EVENT\_JOYSTICK\_BUTTON | used to detect a joystick button press/release          |
-| WB\_EVENT\_JOYSTICK\_AXIS   | used to detect the motion of a joystick axis            |
-| WB\_EVENT\_JOYSTICK\_POV    | used to detect state change of a joystick pov           |
+| `WB_EVENT_NO_EVENT`         | no event occurred or no event should cause a return     |
+| `WB_EVENT_MOUSE_CLICK`      | used to detect a mouse click in the 3D window           |
+| `WB_EVENT_MOUSE_MOVE`       | used to detect the motion of the mouse in the 3D window |
+| `WB_EVENT_KEYBOARD`         | used to detect a keyboard key press/release             |
+| `WB_EVENT_JOYSTICK_BUTTON`  | used to detect a joystick button press/release          |
+| `WB_EVENT_JOYSTICK_AXIS`    | used to detect the motion of a joystick axis            |
+| `WB_EVENT_JOYSTICK_POV`     | used to detect state change of a joystick pov           |
 
 %end
 
@@ -387,11 +706,14 @@ In that case, the sampling period is expressed in real time and not in simulatio
 
 ---
 
-**Name**
+#### `wb_robot_battery_sensor_enable`
+#### `wb_robot_battery_sensor_disable`
+#### `wb_robot_get_battery_sampling_period`
+#### `wb_robot_battery_sensor_get_value`
 
-**wb\_robot\_battery\_sensor\_enable**, **wb\_robot\_battery\_sensor\_disable**, **wb\_robot\_get\_battery\_sampling\_period**, **wb\_robot\_battery\_sensor\_get\_value** - *battery sensor function*
+%tab-component
 
-{[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}, {[Matlab](matlab-api.md#matlab_robot)}, {[ROS](ros-api.md)}
+%tab "C"
 
 ```c
 #include <webots/robot.h>
@@ -402,7 +724,83 @@ double wb_robot_battery_sensor_get_value();
 int wb_robot_get_battery_sampling_period(WbDeviceTag tag);
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Robot.hpp>
+
+namespace webots {
+  class Robot {
+    virtual void batterySensorEnable(int sampling_period);
+    virtual void batterySensorDisable();
+    int batterySensorGetSamplingPeriod() const;
+    double batterySensorGetValue() const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Robot
+
+class Robot:
+    def batterySensorEnable(self, sampling_period):
+    def batterySensorDisable(self):
+    def batterySensorGetSamplingPeriod(self):
+    def batterySensorGetValue(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Robot;
+
+public class Robot {
+  public void batterySensorEnable(int sampling_period);
+  public void batterySensorDisable();
+  public int batterySensorGetSamplingPeriod();
+  public double batterySensorGetValue();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+wb_robot_battery_sensor_enable(sampling_period)
+wb_robot_battery_sensor_disable()
+period = wb_robot_battery_sensor_get_sampling_period()
+value = wb_robot_battery_sensor_get_value()
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/battery_sensor/value` | `topic` | webots_ros::Float64Stamped | [`Header`](http://docs.ros.org/api/std_msgs/html/msg/Header.html) `header`<br/>`float64 data` |
+| `/battery_sensor/enable` | `service` | [`webots_ros::set_int`](ros-api.md#common-services) | |
+| `/battery_sensor/get_sampling_period` | `service` | [`webots_ros::get_int`](ros-api.md#common-services) | |
+
+%tab-end
+
+%end
+
+##### Description
+
+*battery sensor function*
 
 These functions allow you to measure the present energy level of the robot battery.
 First, it is necessary to enable battery sensor measurements by calling the `wb_robot_battery_sensor_enable` function.
@@ -416,11 +814,11 @@ The `wb_robot_get_battery_sampling_period` function returns the period given int
 
 ---
 
-**Name**
+#### `wb_robot_get_basic_time_step`
 
-**wb\_robot\_get\_basic\_time\_step** - *returns the value of the basicTimeStep field of the WorldInfo node*
+%tab-component
 
-{[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}, {[Matlab](matlab-api.md#matlab_robot)}, {[ROS](ros-api.md)}
+%tab "C"
 
 ```c
 #include <webots/robot.h>
@@ -428,26 +826,170 @@ The `wb_robot_get_battery_sampling_period` function returns the period given int
 double wb_robot_get_basic_time_step();
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Robot.hpp>
+
+namespace webots {
+  class Robot {
+    double getBasicTimeStep() const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Robot
+
+class Robot:
+    def getBasicTimeStep(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Robot;
+
+public class Robot {
+  public double getBasicTimeStep();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+step = wb_robot_get_basic_time_step()
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/robot/get_basic_time_step` | `service` | [`webots_ros::get_float`](ros-api.md#common-services) | |
+
+%tab-end
+
+%end
+
+##### Description
+
+*returns the value of the basicTimeStep field of the WorldInfo node*
 
 This function returns the value of the `basicTimeStep` field of the [WorldInfo](worldinfo.md) node.
 
 ---
 
-**Name**
+#### `wb_robot_get_mode`
 
-**wb\_robot\_get\_mode** - *get operating mode, simulation versus real robot*
+%tab-component
 
-{[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}, {[Matlab](matlab-api.md#matlab_robot)}, {[ROS](ros-api.md)}
+%tab "C"
 
 ```c
 #include <webots/robot.h>
+
+typedef enum {
+  WB_MODE_SIMULATION,
+  WB_MODE_CROSS_COMPILATION,
+  WB_MODE_REMOTE_CONTROL
+} WbRobotMode;
 
 WbRobotMode wb_robot_get_mode();
 void wb_robot_set_mode(WbRobotMode mode, void *arg);
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Robot.hpp>
+
+namespace webots {
+  class Robot {
+    enum {
+      MODE_SIMULATION,
+      MODE_CROSS_COMPILATION,
+      MODE_REMOTE_CONTROL
+    } RobotMode;
+
+    RobotMode getMode() const;
+    void setMode(RobotMode mode, void *arg);
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Robot
+
+class Robot:
+    MODE_SIMULATION, MODE_CROSS_COMPILATION, MODE_REMOTE_CONTROL
+
+    def getMode(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Robot;
+
+public class Robot {
+  public final static int MODE_SIMULATION, MODE_CROSS_COMPILATION, MODE_REMOTE_CONTROL;
+
+  public int getMode();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+WB_MODE_SIMULATION, WB_MODE_CROSS_COMPILATION, WB_MODE_REMOTE_CONTROL
+
+mode = wb_robot_get_mode()
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/robot/get_mode` | `service` | [`webots_ros::get_int`](ros-api.md#common-services) | |
+| `/robot/set_mode` | `service` | `webots_ros::robot_set_mode` | `char[] arg`<br/>`int32 mode`<br/>`---`<br/>`int8 success` |
+
+%tab-end
+
+%end
+
+##### Description
+
+*get operating mode, simulation versus real robot*
 
 The `wb_robot_get_mode` function returns an integer value indicating the current operating mode for the controller.
 
@@ -461,19 +1003,19 @@ The WbRobotMode can be compared to the following enumeration items:
 
 | Mode                         | Purpose                |
 | ---------------------------- | ---------------------- |
-| WB\_MODE\_SIMULATION         | simulation mode        |
-| WB\_MODE\_CROSS\_COMPILATION | cross compilation mode |
-| WB\_MODE\_REMOTE\_CONTROL    | remote control mode    |
+| `WB_MODE_SIMULATION`         | simulation mode        |
+| `WB_MODE_CROSS_COMPILATION`  | cross compilation mode |
+| `WB_MODE_REMOTE_CONTROL`     | remote control mode    |
 
 %end
 
 ---
 
-**Name**
+#### `wb_robot_get_name`
 
-**wb\_robot\_get\_name** - *return the name defined in the robot node*
+%tab-component
 
-{[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}, {[Matlab](matlab-api.md#matlab_robot)}, {[ROS](ros-api.md)}
+%tab "C"
 
 ```c
 #include <webots/robot.h>
@@ -481,7 +1023,61 @@ The WbRobotMode can be compared to the following enumeration items:
 const char *wb_robot_get_name();
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Robot.hpp>
+
+namespace webots {
+  class Robot {
+    std::string getName() const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Robot
+
+class Robot:
+    def getName(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Robot;
+
+public class Robot {
+  public String getName();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+name = wb_robot_get_name()
+```
+
+%tab-end
+
+%end
+
+##### Description
+
+*return the name defined in the robot node*
 
 This function returns the name as it is defined in the name field of the robot node (Robot, DifferentialWheels, Supervisor, etc.) in the current world file.
 The string returned should not be deallocated, as it was allocated by the "libController" shared library and will be deallocated when the controller terminates.
@@ -492,11 +1088,11 @@ This sample world is located in the "projects/samples/demos/worlds" directory of
 
 ---
 
-**Name**
+#### `wb_robot_get_model`
 
-**wb\_robot\_get\_model** - *return the model defined in the robot node*
+%tab-component
 
-{[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}, {[Matlab](matlab-api.md#matlab_robot)}, {[ROS](ros-api.md)}
+%tab "C"
 
 ```c
 #include <webots/robot.h>
@@ -504,29 +1100,159 @@ This sample world is located in the "projects/samples/demos/worlds" directory of
 const char *wb_robot_get_model();
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Robot.hpp>
+
+namespace webots {
+  class Robot {
+    std::string getModel() const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Robot
+
+class Robot:
+    def getModel(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Robot;
+
+public class Robot {
+  public String getModel();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+model = wb_robot_get_model()
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/robot/get_model` | `service` | [`webots_ros::get_string`](ros-api.md#common-services) | |
+
+%tab-end
+
+%end
+
+##### Description
+
+*return the model defined in the robot node*
 
 This function returns the model string as it is defined in the model field of the robot node (Robot, DifferentialWheels, Supervisor, etc.) in the current world file.
 The string returned should not be deallocated, as it was allocated by the "libController" shared library and will be deallocated when the controller terminates.
 
 ---
 
-**Name**
-
-**wb\_robot\_get\_custom\_data**, **wb\_robot\_set\_custom\_data** - *return the custom data defined in the robot node*
+#### `wb_robot_get_custom_data`
+#### `wb_robot_set_custom_data`
 
  - *set the data defined in the robot node*
 
-{[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}, {[Matlab](matlab-api.md#matlab_robot)}, {[ROS](ros-api.md)}
+%tab-component
+
+%tab "C"
 
 ```c
 #include <webots/robot.h>
 
-const char * wb_robot_get_custom_data();
+const char *wb_robot_get_custom_data();
 void wb_robot_set_custom_data(const char *data);
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Robot.hpp>
+
+namespace webots {
+  class Robot {
+    std::string getCustomData() const;
+    void setCustomData(const std::string &data);
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Robot
+
+class Robot:
+    def getCustomData(self):
+    def setCustomData(self, data):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Robot;
+
+public class Robot {
+  public String getCustomData();
+  public setCustomData(String data);
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+data = wb_robot_get_custom_data()
+wb_robot_set_custom_data('data')
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/robot/get_custom_data` | `service` | [`webots_ros::get_string`](ros-api.md#common-services) | |
+| `/robot/set_custom_data` | `service` | [`webots_ros::set_string`](ros-api.md#common-services) | |
+
+%tab-end
+
+%end
+
+##### Description
+
+*return the custom data defined in the robot node*
 
 The `wb_robot_get_custom_data` function returns the string contained in the `customData` field of the robot node.
 
@@ -534,11 +1260,11 @@ The `wb_robot_set_custom_data` function set the string contained in the `customD
 
 ---
 
-**Name**
+#### `wb_robot_get_type`
 
-**wb\_robot\_get\_type** - *return the type of the robot node*
+%tab-component
 
-{[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}, {[Matlab](matlab-api.md#matlab_robot)}, {[ROS](ros-api.md)}
+%tab "C"
 
 ```c
 #include <webots/nodes.h>
@@ -547,17 +1273,79 @@ The `wb_robot_set_custom_data` function set the string contained in the `customD
 WbNodeType wb_robot_get_type();
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Robot.hpp>
+
+namespace webots {
+  class Robot {
+    int getType() const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Robot
+
+class Robot:
+    def getType(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Robot;
+
+public class Robot {
+  public int getType();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+type = wb_robot_get_type()
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/robot/get_type` | `service` | [`webots_ros::get_int`](ros-api.md#common-services) | |
+
+%tab-end
+
+%end
+
+##### Description
+
+*return the type of the robot node*
 
 This function returns the type of the current mode (WB\_NODE\_ROBOT, WB\_NODE\_SUPERVISOR or WB\_NODE\_DIFFERENTIAL\_WHEELS).
 
 ---
 
-**Name**
+#### `wb_robot_get_project_path`
 
-**wb\_robot\_get\_project\_path** - *return the full path of the current project*
+%tab-component
 
-{[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}, {[Matlab](matlab-api.md#matlab_robot)}, {[ROS](ros-api.md)}
+%tab "C"
 
 ```c
 #include <webots/robot.h>
@@ -565,7 +1353,69 @@ This function returns the type of the current mode (WB\_NODE\_ROBOT, WB\_NODE\_S
 const char *wb_robot_get_project_path();
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Robot.hpp>
+
+namespace webots {
+  class Robot {
+    std::string getProjectPath() const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Robot
+
+class Robot:
+    def getProjectPath(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Robot;
+
+public class Robot {
+  public String getProjectPath();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+path = wb_robot_get_project_path()
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/robot/get_project_path` | `service` | [`webots_ros::get_string`](ros-api.md#common-services) | |
+
+%tab-end
+
+%end
+
+##### Description
+
+*return the full path of the current project*
 
 This function returns the full path of the current project, that is the directory which contains the worlds and controllers subdirectories (among others) of the current simulation world.
 It doesn't include the final directory separator char (slash or anti-slash).
@@ -574,11 +1424,11 @@ It should not be deallocated.
 
 ---
 
-**Name**
+#### `wb_robot_get_world_path`
 
-**wb\_robot\_get\_world\_path** - *return the full path of the current opened world file*
+%tab-component
 
-{[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}, {[Matlab](matlab-api.md#matlab_robot)}, {[ROS](ros-api.md)}
+%tab "C"
 
 ```c
 #include <webots/robot.h>
@@ -586,7 +1436,69 @@ It should not be deallocated.
 const char *wb_robot_get_world_path();
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Robot.hpp>
+
+namespace webots {
+  class Robot {
+    std::string getWorldPath() const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Robot
+
+class Robot:
+    def getWorldPath(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Robot;
+
+public class Robot {
+  public String getWorldPath();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+path = wb_robot_get_world_path()
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/robot/get_world_path` | `service` | [`webots_ros::get_string`](ros-api.md#common-services) | |
+
+%tab-end
+
+%end
+
+##### Description
+
+*return the full path of the current opened world file*
 
 This function returns the full path of the current opened world.
 The returned pointer is a UTF-8 encoded char string which does include the final ".wbt".
@@ -594,11 +1506,12 @@ It should not be deallocated.
 
 ---
 
-**Name**
+#### `wb_robot_get_controller_name`
+#### `wb_robot_get_controller_arguments`
 
-**wb\_robot\_get\_controller\_name**, **wb\_robot\_get\_controller\_arguments** - *return the content of the Robot::controller and Robot::controllerArgs fields*
+%tab-component
 
-{[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}, {[Matlab](matlab-api.md#matlab_robot)}, {[ROS](ros-api.md)}
+%tab "C"
 
 ```c
 #include <webots/robot.h>
@@ -607,17 +1520,84 @@ const char *wb_robot_get_controller_name();
 const char *wb_robot_get_controller_arguments();
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Robot.hpp>
+
+namespace webots {
+  class Robot {
+    std::string getControllerName() const;
+    std::string getControllerArguments() const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Robot
+
+class Robot:
+    def getControllerName(self):
+    def getControllerArguments(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Robot;
+
+public class Robot {
+  public String getControllerName();
+  public String getControllerArguments();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+name = wb_robot_get_controller_name()
+name = wb_robot_get_controller_arguments()
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/robot/get_controller_name` | `service` | [`webots_ros::get_string`](ros-api.md#common-services) | |
+| `/robot/get_controller_arguments` | `service` | [`webots_ros::get_string`](ros-api.md#common-services) | |
+
+%tab-end
+
+%end
+
+##### Description
+
+*return the content of the `Robot::controller` and `Robot::controllerArgs` fields*
 
 These functions return the content of respectively the Robot::controller and the Robot::controllerArgs fields.
 
 ---
 
-**Name**
+#### `wb_robot_get_synchronization`
 
-**wb\_robot\_get\_synchronization** - *return the value of the synchronization field of the Robot node*
+%tab-component
 
-{[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}, {[Matlab](matlab-api.md#matlab_robot)}, {[ROS](ros-api.md)}
+%tab "C"
 
 ```c
 #include <webots/robot.h>
@@ -625,17 +1605,79 @@ These functions return the content of respectively the Robot::controller and the
 bool wb_robot_get_synchronization();
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Robot.hpp>
+
+namespace webots {
+  class Robot {
+    bool getSynchronization() const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Robot
+
+class Robot:
+    def getSynchronization(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Robot;
+
+public class Robot {
+  public boolean getSynchronization();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+sync = wb_robot_get_synchronization()
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/robot/get_synchronization` | `service` | [`webots_ros::get_bool`](ros-api.md#common-services) | |
+
+%tab-end
+
+%end
+
+##### Description
+
+*return the value of the synchronization field of the Robot node*
 
 This function returns the boolean value corresponding to the synchronization field of the Robot node.
 
 ---
 
-**Name**
+#### `wb_robot_get_time`
 
-**wb\_robot\_get\_time** - *return the current simulation time in seconds*
+%tab-component
 
-{[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}, {[Matlab](matlab-api.md#matlab_robot)}, {[ROS](ros-api.md)}
+%tab "C"
 
 ```c
 #include <webots/robot.h>
@@ -643,7 +1685,69 @@ This function returns the boolean value corresponding to the synchronization fie
 double wb_robot_get_time();
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Robot.hpp>
+
+namespace webots {
+  class Robot {
+    double getTime() const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Robot
+
+class Robot:
+    def getTime(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Robot;
+
+public class Robot {
+  public double getTime();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+time = wb_robot_get_time()
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/robot/get_time` | `service` | [`webots_ros::get_float`](ros-api.md#common-services) | |
+
+%tab-end
+
+%end
+
+##### Description
+
+*return the current simulation time in seconds*
 
 This function returns the current simulation time in seconds.
 This correspond to the simulation time displayed in the speedometer located in the main toolbar.
@@ -651,9 +1755,11 @@ It does not matter whether the controller is synchronized or not.
 
 ---
 
-**Name**
+#### `wb_robot_task_new`
 
-**wb\_robot\_task\_new** - *start a new thread of execution*
+%tab-component
+
+%tab "C"
 
 ```c
 #include <webots/robot.h>
@@ -661,7 +1767,13 @@ It does not matter whether the controller is synchronized or not.
 void wb_robot_task_new(void (*task, void *param);
 ```
 
-**Description**
+%tab-end
+
+%end
+
+##### Description
+
+*start a new thread of execution*
 
 This function creates and starts a new thread of execution for the robot controller.
 The `task` function is immediately called using the `param` parameter.
@@ -669,15 +1781,16 @@ It will end only when the `task` function returns.
 The Webots controller API is thread safe, however, some API functions use or return pointers to data structures which are not protected outside the function against asynchronous access from a different thread.
 Hence you should use mutexes (see below) to ensure that such data is not accessed by a different thread.
 
-**See also**
-
-[`wb_robot_mutex_new`](#wb_robot_mutex_new).
-
 ---
 
-**Name**
+#### `wb_robot_mutex_new`
+#### `wb_robot_mutex_delete`
+#### `wb_robot_mutex_lock`
+#### `wb_robot_mutex_unlock`
 
-**wb\_robot\_mutex\_new**, **wb\_robot\_mutex\_delete**, **wb\_robot\_mutex\_lock**, **wb\_robot\_mutex\_unlock** - *mutex functions*
+%tab-component
+
+%tab "C"
 
 ```c
 #include <webots/robot.h>
@@ -688,7 +1801,13 @@ void wb_robot_mutex_lock(WbMutexRef mutex);
 void wb_robot_mutex_unlock(WBMutexRef mutex);
 ```
 
-**Description**
+%tab-end
+
+%end
+
+##### Description
+
+*mutex functions*
 
 The `wb_robot_mutex_new` function creates a new mutex and returns a reference to that mutex to be used with other mutex functions.
 A newly created mutex is always initially unlocked.
@@ -703,19 +1822,18 @@ This function returns only after it has locked the specified `mutex`.
 
 The `wb_robot_mutex_unlock` function unlocks the specified `mutex`, allowing other threads to lock it.
 
-**See also**
-
-[`wb_robot_task_new`](#wb_robot_task_new).
-
 Users unfamiliar with the mutex concept may wish to consult a reference on multi-threaded programming techniques for further information.
 
 ---
 
-**Name**
+#### `wb_robot_wwi_receive`
+#### `wb_robot_wwi_receive_text`
+#### `wb_robot_wwi_send`
+#### `wb_robot_wwi_send_text`
 
-**wb\_robot\_wwi\_receive**, **wb\_robot\_wwi\_receive\_text**, **wb\_robot\_wwi\_send**, **wb\_robot\_wwi\_send\_text** - *communication with a HTML robot window*
+%tab-component
 
-{[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}, {[Matlab](matlab-api.md#matlab_robot)}, {[ROS](ros-api.md)}
+%tab "C"
 
 ```c
 #include <webots/utils/default_robot_window.h>
@@ -726,7 +1844,76 @@ void wb_robot_wwi_send(const char *data, int size);
 void wb_robot_wwi_send_text(const char *text);
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Robot.hpp>
+
+namespace webots {
+  class Robot {
+    const char *wwiReceive();
+    std::string wwiReceiveText();
+    void wwiSend(const char *data, int size);
+    void wwiSendText(const std::string &text);
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Robot
+
+class Robot:
+    def wwiSendText(self, text):
+    def wwiReceiveText(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Robot;
+
+public class Robot {
+  public void wwiSendText(String text);
+  public String wwiReceiveText();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+wb_robot_wwi_send_text(text)
+text = wb_robot_wwi_receive_text()
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/robot/wwi_receive_text` | `service` | [`webots_ros::get_string`](ros-api.md#common-services) | |
+| `/robot/wwi_send_text` | `service` | [`webots_ros::set_string`](ros-api.md#common-services) | |
+
+%tab-end
+
+%end
+
+##### Description
+
+*communication with a HTML robot window*
 
 These functions allow the robot controller to communicate with a HTML robot window.
 Such a window is embedded as a dockable sub-window in the Webots user interface.
@@ -738,15 +1925,15 @@ The message is sent using the `webots.window("<robot window name>").send` method
 The `wb_robot_window_send` and `wb_robot_wwi_send_text` functions allow a robot controller to send a message to a Javascript function running in the HTML robot window.
 The message is received using the `webots.window("<robot window name>").receive` method of the Webots Javascript API.
 
-> **note** [Java, Python, Matlab, ROS]: `wb_robot_wwi_receive` and `wb_robot_window_send` functions are not available in the Java, Python, Matlab, or ROS API.
+> **note** [Java, Python, MATLAB, ROS]: `wb_robot_wwi_receive` and `wb_robot_window_send` functions are not available in the Java, Python, MATLAB, or ROS API.
 
 ---
 
-**Name**
+#### `wb_robot_window_custom_function`
 
-**wb\_robot\_window\_custom\_function** - *communication with the native C/C++ robot window [deprecated]*
+%tab-component
 
-{[C++](cpp-api.md#cpp_robot)}, {[Java](java-api.md#java_robot)}, {[Python](python-api.md#python_robot)}, {[Matlab](matlab-api.md#matlab_robot)}, {[ROS](ros-api.md)}
+%tab "C"
 
 ```c
 #include <webots/robot_window.h>
@@ -754,7 +1941,28 @@ The message is received using the `webots.window("<robot window name>").receive`
 void *wb_robot_window_custom_function(void *arg);
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Robot.hpp>
+
+namespace webots {
+  class Robot {
+    void *windowCustomFunction(void *arg);
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%end
+
+##### Description
+
+*communication with the native C/C++ robot window [deprecated]*
 
 The `wb_robot_window_custom_function` function allows a robot controller to communicate with the native C/C++ robot window plugin.
 Native robot windows are deprecated and instead it is recommended to use the HTML robot windows and their API functions: [`wb_robot_wwi_receive_text`](#wb_robot_wwi_receive_text) and [`wb_robot_wwi_send_text`](#wb_robot_wwi_send_text).
@@ -790,4 +1998,4 @@ void *wbw_robot_window_custom_function(void *arg) {
 }
 ```
 
-> **Note** [Java, Python, Matlab]: Given that the native robot window can only be implemented for C/C++ controllers, `wb_robot_window_custom_function` is not available in Java, Python or Matlab API.
+> **Note** [Java, Python, MATLAB]: Given that the native robot window can only be implemented for C/C++ controllers, `wb_robot_window_custom_function` is not available in Java, Python or MATLAB API.

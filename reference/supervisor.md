@@ -1208,89 +1208,6 @@ The last three are respectively the angular velocities around the x, y and z axe
 
 ---
 
-#### `wb_supervisor_simulation_reset`
-
-%tab-component
-
-%tab "C"
-
-```c
-#include <webots/supervisor.h>
-
-void wb_supervisor_simulation_reset();
-```
-
-%tab-end
-
-%tab "C++"
-
-```cpp
-#include <webots/Supervisor.hpp>
-
-namespace webots {
-  class Supervisor : public Robot {
-    virtual void simulationReset();
-    // ...
-  }
-}
-```
-
-%tab-end
-
-%tab "Python"
-
-```python
-from controller import Supervisor
-
-class Supervisor (Robot):
-    def simulationReset(self):
-    # ...
-```
-
-%tab-end
-
-%tab "Java"
-
-```java
-import com.cyberbotics.webots.controller.Supervisor;
-
-public class Supervisor extends Robot {
-  public void simulationReset();
-  // ...
-}
-```
-
-%tab-end
-
-%tab "MATLAB"
-
-```matlab
-wb_supervisor_simulation_reset()
-```
-
-%tab-end
-
-%tab "ROS"
-
-| name | service/topic | data type | data type definition |
-| --- | --- | --- | --- |
-| `/supervisor/simulation_reset` | `service` | `webots_ros::get_bool ` | |
-
-%tab-end
-
-%end
-
-##### Description
-
-*reset the simulation*
-
-The `wb_supervisor_simulation_reset` function sends a request to the simulator process, asking it to reset the simulation immediately.
-The reset process is explained in detail in the [User Guide](https://www.cyberbotics.com/doc/guide/the-user-interface#file-menu).
-As a result of the reset, the supervisor process and all the robot processes are terminated and restarted.
-You may wish to save some data in a file from your supervisor program in order to reload it when the supervisor controller restarts.
-
----
-
 #### `wb_supervisor_node_reset_physics`
 
 %tab-component
@@ -1939,6 +1856,173 @@ The current simulation mode can also be modified by the Webots user, when he's c
 
 ---
 
+#### `wb_supervisor_simulation_reset`
+
+%tab-component
+
+%tab "C"
+
+```c
+#include <webots/supervisor.h>
+
+void wb_supervisor_simulation_reset();
+```
+
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Supervisor.hpp>
+
+namespace webots {
+  class Supervisor : public Robot {
+    virtual void simulationReset();
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Supervisor
+
+class Supervisor (Robot):
+    def simulationReset(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Supervisor;
+
+public class Supervisor extends Robot {
+  public void simulationReset();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+wb_supervisor_simulation_reset()
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/supervisor/simulation_reset` | `service` | [`webots_ros::get_bool`](ros-api.md#common-services) | |
+
+%tab-end
+
+%end
+
+##### Description
+
+*reset the simulation*
+
+The `wb_supervisor_simulation_reset` function sends a request to the simulator process, asking it to reset the simulation immediately.
+The reset process is explained in detail in the [User Guide](https://www.cyberbotics.com/doc/guide/the-user-interface#file-menu).
+As a result of the reset, all the supervisor and robot controller processes are terminated and restarted.
+You may wish to save some data in a file from your supervisor and robot controller programs in order to reload it when they restart.
+
+---
+
+#### `wb_supervisor_simulation_reset_physics`
+
+%tab-component
+
+%tab "C"
+
+```c
+#include <webots/supervisor.h>
+
+void wb_supervisor_simulation_reset_physics();
+```
+
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Supervisor.hpp>
+
+namespace webots {
+  class Supervisor : public Robot {
+    virtual void simulationResetPhysics();
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Supervisor
+
+class Supervisor (Robot):
+    def simulationResetPhysics(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Supervisor;
+
+public class Supervisor extends Robot {
+  public void simulationResetPhysics();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+wb_supervisor_simulation_reset_physics()
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/supervisor/simulation_reset_physics` | `service` | [`webots_ros::get_bool`](ros-api.md#common-services) | |
+
+%tab-end
+
+%end
+
+##### Description
+
+*stop the inertia of all solids in the world and reset the random number generator*
+
+The `wb_supervisor_simulation_reset_physics` function sends a request to the simulator process, asking it to stop the movement of all physics-enabled solids in the world.
+It means that for any [Solid](solid.md) node containing a [Physics](physics.md) node, the linear and angular velocities of the corresponding body are reset to 0, hence the inertia is also zeroed.
+This is actually implemented by calling the ODE's `dBodySetLinearVel` and `dBodySetAngularVel` functions for all bodies with a zero velocity parameter.
+This function is especially useful for resetting a robot to its initial position and inertia.
+To stop the inertia of a single [Solid](solid.md) node please refer to [this section](#wb_supervisor_node_reset_physics).
+
+---
+
 #### `wb_supervisor_world_load`
 #### `wb_supervisor_world_save`
 #### `wb_supervisor_world_reload`
@@ -2033,8 +2117,8 @@ wb_supervisor_world_reload()
 *Load, save or reload the current world.*
 
 The `wb_supervisor_world_load` function sends a request to the simulator process, asking it to stop the current simulation and load the world given in argument immediately.
-As a result of changing the current world, the supervisor process and all the robot processes are terminated and the new one are restarted with the new world.
-You may wish to save some data in a file from your supervisor program in order to reload it from the new world.
+As a result of changing the current world, all the supervisor and robot controller processes are terminated and the new one are restarted with the new world.
+You may wish to save some data in a file from your supervisor and robot controller programs in order to reload it from the new world.
 
 The `wb_supervisor_world_save` function saves the current world.
 The `filename` parameter defines the path to the target world file.
@@ -2048,92 +2132,8 @@ Be aware that this function can overwrite silently existing files, so that the c
 In this case, a simple save operation is performed.
 
 The `wb_supervisor_world_reload` function sends a request to the simulator process, asking it to reload the current world immediately.
-As a result of reloading the current world, the supervisor process and all the robot processes are terminated and restarted.
-You may wish to save some data in a file from your supervisor program in order to reload it when the supervisor controller restarts.
-
----
-
-#### `wb_supervisor_simulation_reset_physics`
-
-%tab-component
-
-%tab "C"
-
-```c
-#include <webots/supervisor.h>
-
-void wb_supervisor_simulation_reset_physics();
-```
-
-%tab-end
-
-%tab "C++"
-
-```cpp
-#include <webots/Supervisor.hpp>
-
-namespace webots {
-  class Supervisor : public Robot {
-    virtual void simulationResetPhysics();
-    // ...
-  }
-}
-```
-
-%tab-end
-
-%tab "Python"
-
-```python
-from controller import Supervisor
-
-class Supervisor (Robot):
-    def simulationResetPhysics(self):
-    # ...
-```
-
-%tab-end
-
-%tab "Java"
-
-```java
-import com.cyberbotics.webots.controller.Supervisor;
-
-public class Supervisor extends Robot {
-  public void simulationResetPhysics();
-  // ...
-}
-```
-
-%tab-end
-
-%tab "MATLAB"
-
-```matlab
-wb_supervisor_simulation_reset_physics()
-```
-
-%tab-end
-
-%tab "ROS"
-
-| name | service/topic | data type | data type definition |
-| --- | --- | --- | --- |
-| `/supervisor/simulation_reset_physics` | `service` | [`webots_ros::get_bool`](ros-api.md#common-services) | |
-
-%tab-end
-
-%end
-
-##### Description
-
-*stop the inertia of all solids in the world and reset the random number generator*
-
-The `wb_supervisor_simulation_reset_physics` function sends a request to the simulator process, asking it to stop the movement of all physics-enabled solids in the world.
-It means that for any [Solid](solid.md) node containing a [Physics](physics.md) node, the linear and angular velocities of the corresponding body are reset to 0, hence the inertia is also zeroed.
-This is actually implemented by calling the ODE's `dBodySetLinearVel` and `dBodySetAngularVel` functions for all bodies with a zero velocity parameter.
-This function is especially useful for resetting a robot to its initial position and inertia.
-To stop the inertia of a single [Solid](solid.md) node please refer to [this section](#wb_supervisor_node_reset_physics).
+As a result of reloading the current world, all the supervisor and robot controller processes are terminated and restarted.
+You may wish to save some data in a file from your supervisor and robot controller programs in order to reload it when they restart.
 
 ---
 

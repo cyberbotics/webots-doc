@@ -53,7 +53,7 @@ Currently, this field is ignored.
 - `bufferSize`: size (in bytes) of the reception buffer.
 The size of the received data should not exceed the buffer size at any time, otherwise data may be lost.
 A `bufferSize` of -1 (the default) is regarded as unlimited buffer size.
-If the previous data have not been read when new data are received, the previous data are lost.
+If the previous data has not been read when new data is received, the previous data is lost.
 
 - `signalStrengthNoise`: standard deviation of the gaussian noise added to the signal strength returned by `wb_receiver_get_signal_strength`.
 The noise is proportionnal to the signal strength, e.g., a `signalStrengthNoise` of 0.1 will add a noise with a standard deviation of 0.1 for a signal strength of 1 and 0.2 for a signal strength of 2.
@@ -154,7 +154,7 @@ period = wb_receiver_get_sampling_period(tag)
 
 The `wb_receiver_enable` function starts the receiver listening for incoming data packets.
 Data reception is activated in the background of the controller's loop at a rate of once every `sampling_period` (expressed in milliseconds).
-Incoming data packet are appended to the tail of the reception queue (see [this figure](#receivers-packet-queue)).
+Incoming data packets are appended to the tail of the reception queue (see [this figure](#receivers-packet-queue)).
 Incoming data packets will be discarded if the receiver's buffer size (specified in the [Receiver](#receiver) node) is exceeded.
 To avoid buffer overflow, the data packets should be read at a high enough rate by the controller program.
 The `sampling_period` argument specifies the sampling period of the [Receiver](#receiver) and is expressed in milliseconds.

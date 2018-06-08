@@ -256,7 +256,7 @@ This is particularly useful during the modeling phase, when you want to change t
 This is particularly useful when you don't want to change accidently the position and orientation of the viewpoint.
 
 > **Note**:
-The *Follow Object*, *Follow Object and Rotate*, *Projection*, *Rendering*, *Optional Renderings* and *Disable Selection* options are saved per world whereas the other options are global.
+The *Follow Object*, *Follow Object and Rotate*, *Projection*, *Rendering*, *Optional Renderings*, *Disable Selection* and *Lock Viewpoint* options are saved per world whereas the other options are global.
 
 ### Simulation Menu
 

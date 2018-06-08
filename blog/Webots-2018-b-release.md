@@ -122,6 +122,4 @@ If you don't want to run a controller for your Robot node, you can now simply us
 
 Projection mode, rendering mode, optional renderings and disable selection are now saved per world instead of globally.
 
-
-
-Go and download Webots R2018b, so you don't miss out on all these great new features!
+**Go and download Webots R2018b, so you don't miss out on all these great new features!**

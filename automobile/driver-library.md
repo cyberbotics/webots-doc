@@ -986,10 +986,10 @@ wbu_wiper_mode wbu_driver_get_wiper_mode();
 
 namespace webots {
   class Driver {
-    typedef enum {DOWN, SLOW, NORMAL, FAST} WhiperMode;
+    typedef enum {DOWN, SLOW, NORMAL, FAST} WiperMode;
 
-    void setWiperMode(WhiperMode mode);
-    WhiperMode getWiperMode();
+    void setWiperMode(WiperMode mode);
+    WiperMode getWiperMode();
     // ...
   }
 }

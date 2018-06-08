@@ -123,7 +123,7 @@ You will find some in this folder: "WEBOTS\_HOME/projects/robots/softbank/nao/wo
 
 #### nao\_matlab.wbt
 
-![nao_demo.wbt.png](images/robots/nao/nao_demo.wbt.png) The "nao\_matlab.wbt" world is an example of programming Webots using the Matlab API.
+![nao_demo.wbt.png](images/robots/nao/nao_demo.wbt.png) The "nao\_matlab.wbt" world is an example of programming Webots using the MATLAB API.
 
 #### nao\_indoors.wbt
 

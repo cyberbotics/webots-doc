@@ -77,11 +77,11 @@ In addition it is highly recommended to choose -1 for the baudRate, in order to 
 
 ### Emitter Functions
 
-**Name**
+#### `wb_emitter_send`
 
-**wb\_emitter\_send** - *send a data packet to potential receivers*
+%tab-component
 
-{[C++](cpp-api.md#cpp_emitter)}, {[Java](java-api.md#java_emitter)}, {[Python](python-api.md#python_emitter)}, {[Matlab](matlab-api.md#matlab_emitter)}, {[ROS](ros-api.md)}
+%tab "C"
 
 ```c
 #include <webots/emitter.h>
@@ -89,7 +89,69 @@ In addition it is highly recommended to choose -1 for the baudRate, in order to 
 int wb_emitter_send(WbDeviceTag tag, const void *data, int size);
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include "<webots/Emitter.hpp>"
+
+namespace webots {
+  class Emitter : public Device {
+    virtual int send(const void *data, int size);
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Emitter
+
+class Emitter (Device):
+    def send(self, data):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Emitter;
+
+public class Emitter extends Device {
+  public int send(byte[] data);
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+success = wb_emitter_send(tag, data)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/send` | `service` | [`webots_ros::set_string`](ros-api.md#common-services) |
+
+%tab-end
+
+%end
+
+##### Description
+
+*send a data packet to potential receivers*
 
 The `wb_emitter_send` function adds to the emitter's queue a packet of `size` bytes located at the address indicated by `data`.
 The enqueued data packets will then be sent to potential receivers (and removed from the emitter's queue) at the rate specified by the `baudRate` field of the [Emitter](#emitter) node.
@@ -145,20 +207,98 @@ Here is an example of sending a Java string in a way that is compatible with a C
 
 ---
 
-**Name**
+#### `wb_emitter_set_channel`
+#### `wb_emitter_get_channel`
 
-**wb\_emitter\_set\_channel**, **wb\_emitter\_get\_channel** - *set and get the emitter's channel.*
+%tab-component
 
-{[C++](cpp-api.md#cpp_emitter)}, {[Java](java-api.md#java_emitter)}, {[Python](python-api.md#python_emitter)}, {[Matlab](matlab-api.md#matlab_emitter)}, {[ROS](ros-api.md)}
+%tab "C"
 
 ```c
 #include <webots/emitter.h>
+
+#define WB_CHANNEL_BROADCAST -1
 
 void wb_emitter_set_channel(WbDeviceTag tag, int channel);
 int wb_emitter_get_channel(WbDeviceTag tag);
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include "<webots/Emitter.hpp>"
+
+namespace webots {
+  class Emitter : public Device {
+    enum {CHANNEL_BROADCAST};
+
+    virtual void setChannel(int channel);
+    int getChannel() const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Emitter
+
+class Emitter (Device):
+    CHANNEL_BROADCAST
+
+    def setChannel(self, channel):
+    def getChannel(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Emitter;
+
+public class Emitter extends Device {
+  public final static int CHANNEL_BROADCAST;
+
+  public void setChannel(int channel);
+  public int getChannel();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+WB_CHANNEL_BROADCAST
+
+wb_emitter_set_channel(tag, channel)
+channel = wb_emitter_get_channel(tag)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/set_channel` | `service` | [`webots_ros::set_int`](ros-api.md#common-services) |
+| `/<device_name>/get_channel` | `service` | [`webots_ros::get_int`](ros-api.md#common-services) |
+
+%tab-end
+
+%end
+
+##### Description
+
+*set and get the emitter's channel.*
 
 The `wb_emitter_set_channel` function allows the controller to change the transmission channel.
 This modifies the `channel` field of the corresponding [Emitter](#emitter) node.
@@ -171,11 +311,12 @@ The `wb_emitter_get_channel` function returns the current channel number of the 
 
 ---
 
-**Name**
+#### `wb_emitter_set_range`
+#### `wb_emitter_get_range`
 
-**wb\_emitter\_set\_range**, **wb\_emitter\_get\_range** - *set and get the emitter's range.*
+%tab-component
 
-{[C++](cpp-api.md#cpp_emitter)}, {[Java](java-api.md#java_emitter)}, {[Python](python-api.md#python_emitter)}, {[Matlab](matlab-api.md#matlab_emitter)}, {[ROS](ros-api.md)}
+%tab "C"
 
 ```c
 #include <webots/emitter.h>
@@ -184,7 +325,74 @@ void wb_emitter_set_range(WbDeviceTag tag, double range);
 double wb_emitter_get_range(WbDeviceTag tag);
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include "<webots/Emitter.hpp>"
+
+namespace webots {
+  class Emitter : public Device {
+    virtual void setRange(double range);
+    double getRange() const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Emitter
+
+class Emitter (Device):
+    def setRange(self, range):
+    def getRange(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Emitter;
+
+public class Emitter extends Device {
+  public void setRange(double range);
+  public double getRange();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+wb_emitter_set_range(tag, range)
+range = wb_emitter_get_range(tag)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/set_range` | `service` | [`webots_ros::set_float`](ros-api.md#common-services) |
+| `/<device_name>/get_range` | `service` | [`webots_ros::get_float`](ros-api.md#common-services) |
+
+%tab-end
+
+%end
+
+##### Description
+
+*set and get the emitter's range.*
 
 The `wb_emitter_set_range` function allows the controller to change the transmission range at run-time.
 Data packets can only reach receivers located within the emitter's range.
@@ -195,11 +403,11 @@ For both the `wb_emitter_set_range` and `emitter_get_range` functions, a value o
 
 ---
 
-**Name**
+#### `wb_emitter_get_buffer_size`
 
-**wb\_emitter\_get\_buffer\_size** - *get the transmission buffer size*
+%tab-component
 
-{[C++](cpp-api.md#cpp_emitter)}, {[Java](java-api.md#java_emitter)}, {[Python](python-api.md#python_emitter)}, {[Matlab](matlab-api.md#matlab_emitter)}, {[ROS](ros-api.md)}
+%tab "C"
 
 ```c
 #include <webots/emitter.h>
@@ -207,7 +415,69 @@ For both the `wb_emitter_set_range` and `emitter_get_range` functions, a value o
 int wb_emitter_get_buffer_size(WbDeviceTag tag);
 ```
 
-**Description**
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include "<webots/Emitter.hpp>"
+
+namespace webots {
+  class Emitter : public Device {
+    int getBufferSize() const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Emitter
+
+class Emitter (Device):
+    def getBufferSize(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Emitter;
+
+public class Emitter extends Device {
+  public int getBufferSize();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+size = wb_emitter_get_buffer_size(tag)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/get_buffer_size` | `service` | [`webots_ros::get_int`](ros-api.md#common-services) |
+
+%tab-end
+
+%end
+
+##### Description
+
+*get the transmission buffer size*
 
 The `wb_emitter_get_buffer_size` function returns the size (in bytes) of the transmission buffer.
 This corresponds to the value specified by the `bufferSize` field of the [Emitter](#emitter) node.

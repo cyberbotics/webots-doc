@@ -121,3 +121,7 @@ The Speaker API can now load and play all major audio formats.
 If you don't want to run a controller for your Robot node, you can now simply use "" as the controller name, to avoid running the void controller unnecessarily.
 
 Projection mode, rendering mode, optional renderings and disable selection are now saved per world instead of globally.
+
+
+
+Go and download Webots R2018b, so you don't miss out on all these great new features!

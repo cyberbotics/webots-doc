@@ -28,7 +28,7 @@ This has allowed us to improve world performance considerably.
 
 
 To illustrate this in practical terms, the simulation speedometer in "Run" mode is used as our performance indicator, to show the real-life implications of faster rendering in a Webots simulation.
-The following benchmarks were performed on Windows 10, 64-bit with an Intel 6700k processor @ 3.40GHz and an NVIDIA GTX 970 graphics cards on some familiar webots worlds.
+The following benchmarks were performed on Windows 10, 64-bit with an Intel 6700k processor @ 3.40GHz and an NVIDIA GTX 970 graphics cards on some familiar Webots worlds.
 
 |    World    | R2018a | R2018b | speedup |
 |:-----------:|:------:|:------:|:-------:|
@@ -37,7 +37,7 @@ The following benchmarks were performed on Windows 10, 64-bit with an Intel 6700
 | create.wbt  | 30.4x  |  52.4x |  1.72x  |
 
 
-As you can see from these tables, even with robot controller taking a large part of the timestep in these worlds, all of them run considerably faster than before, with a greater speedup in complex worlds due to higher rendering demand. 
+As you can see from this table, even with robot controller taking a large part of the timestep in these worlds, all of them run considerably faster than before, with a greater speedup in complex worlds due to higher rendering demand. 
 WREN now shines in large worlds, and is still way ahead of OGRE even in simple scenarios.
 
 ### Physically-Based Rendering

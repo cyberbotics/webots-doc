@@ -91,7 +91,7 @@ Boot up Webots R2018b and have an explore of these new GUI features!
 
 Reloading an entire world just to re-run your simulation can be slow, espeically for large worlds.
 With this in mind, we have developed an alternative method of resetting a simulation, and our terminology has changed as such.
-"Revert" has become "Reload" and now users can benefit from the new "Reset Simulation" action, also accessible via the [Supervisor API](https://www.cyberbotics.com/doc/reference/supervisor?version=develop#wb_supervisor_simulation_reset).
+"Revert" has become "Reload" and now users can benefit from the new "Reset Simulation" action, also accessible via the [Supervisor API](../reference/supervisor.md#wb_supervisor_simulation_reset).
 
 %figure "Reset Simulation Action"
 ![reset simulation](images/reset.png)
@@ -116,7 +116,7 @@ Below is a preview of just some of these new assets.
 
 Webots R2018b supports Ubuntu 18.04 LTS out of the box.
 
-The [Speaker API](https://www.cyberbotics.com/doc/reference/speaker?version=develop#speaker-functions) can now load and play all major audio formats.
+The [Speaker API](../reference/speaker.md#speaker-functions) can now load and play all major audio formats.
 
 If you don't want to run a controller for your Robot node, you can now simply use "" as the controller name, to avoid running the void controller unnecessarily.
 

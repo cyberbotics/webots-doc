@@ -15,7 +15,7 @@ We encountered many roadblocks with OGRE, especially in modernizing our worlds a
 This allows us to implement and use only the features we need / desire, giving us a very lightweight and efficient renderer.
 
 
-We've spent the past year doing just this, and are proud to present our own bespoke OpenGL 3.3 based renderering engine, WREN (Webots RENderer).
+We've spent the past year making this idea a reality, and are proud to present our own bespoke OpenGL 3.3 based renderering engine, WREN (Webots RENderer).
 Thus, Webots R2018b and all future versions of Webots will make use of WREN for all 3D work.
 
 ### Lightning Fast

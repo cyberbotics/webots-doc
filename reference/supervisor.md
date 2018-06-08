@@ -1922,7 +1922,7 @@ wb_supervisor_simulation_reset()
 
 | name | service/topic | data type | data type definition |
 | --- | --- | --- | --- |
-| `/supervisor/simulation_reset` | `service` | `webots_ros::get_bool ` | |
+| `/supervisor/simulation_reset` | `service` | [`webots_ros::get_bool`](ros-api.md#common-services) | |
 
 %tab-end
 
@@ -1934,8 +1934,8 @@ wb_supervisor_simulation_reset()
 
 The `wb_supervisor_simulation_reset` function sends a request to the simulator process, asking it to reset the simulation immediately.
 The reset process is explained in detail in the [User Guide](https://www.cyberbotics.com/doc/guide/the-user-interface#file-menu).
-As a result of the reset, the supervisor process and all the robot processes are terminated and restarted.
-You may wish to save some data in a file from your supervisor program in order to reload it when the supervisor controller restarts.
+As a result of the reset, all the supervisor and robot controller processes are terminated and restarted.
+You may wish to save some data in a file from your supervisor and robot controller programs in order to reload them when they restart.
 
 ---
 
@@ -2117,7 +2117,7 @@ wb_supervisor_world_reload()
 *Load, save or reload the current world.*
 
 The `wb_supervisor_world_load` function sends a request to the simulator process, asking it to stop the current simulation and load the world given in argument immediately.
-As a result of changing the current world, the supervisor process and all the robot processes are terminated and the new one are restarted with the new world.
+As a result of changing the current world, all the supervisor and robot controller processes are terminated and the new one are restarted with the new world.
 You may wish to save some data in a file from your supervisor program in order to reload it from the new world.
 
 The `wb_supervisor_world_save` function saves the current world.
@@ -2132,7 +2132,7 @@ Be aware that this function can overwrite silently existing files, so that the c
 In this case, a simple save operation is performed.
 
 The `wb_supervisor_world_reload` function sends a request to the simulator process, asking it to reload the current world immediately.
-As a result of reloading the current world, the supervisor process and all the robot processes are terminated and restarted.
+As a result of reloading the current world, all the supervisor and robot controller processes are terminated and restarted.
 You may wish to save some data in a file from your supervisor program in order to reload it when the supervisor controller restarts.
 
 ---

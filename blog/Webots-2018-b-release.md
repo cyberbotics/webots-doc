@@ -104,7 +104,11 @@ This feature makes resetting even the most complex simulations instantaneous.
 ## New PROTOs
 
 For more realistic and immersive vehicle simulations, we have expanded our available building models and street furniture extensively, with more than 80 new models.
-Below is a preview of just some these new assets
+Below is a preview of just some these new assets.
+
+%figure "New PROTO models of Buildings and Street Furniture"
+![new objects](images/new_objects.png)
+%end
 
 ---
 

@@ -510,7 +510,7 @@ typedef enum {
   LEFT
 } wbu_indicator_state;
 
-void wbu_driver_set_indicator(int state);
+void wbu_driver_set_indicator(wbu_indicator_state state);
 wbu_indicator_state wbu_driver_get_indicator();
 void wbu_driver_set_hazard_flashers(bool state);
 bool wbu_driver_get_hazard_flashers();
@@ -525,10 +525,10 @@ bool wbu_driver_get_hazard_flashers();
 
 namespace webots {
   class Driver {
-    enum {INDICATOR_OFF, INDICATOR_RIGHT, INDICATOR_LEFT};
+    typedef enum {INDICATOR_OFF, INDICATOR_RIGHT, INDICATOR_LEFT} IndicatorState;
 
-    void setIndicator(int state);
-    int getIndicator();
+    void setIndicator(IndicatorState state);
+    IndicatorState getIndicator();
     void setHazardFlashers(bool state);
     bool getHazardFlashers();
     // ...
@@ -890,9 +890,9 @@ wbu_control_mode wbu_driver_get_control_mode();
 
 namespace webots {
   class Driver {
-    enum {SPEED, TORQUE};
+    typedef enum {SPEED, TORQUE} ControlMode;
 
-    int getControlMode();
+    ControlMode getControlMode();
     // ...
   }
 }
@@ -956,8 +956,8 @@ This `wbu_driver_get_control_mode` returns the current control mode of the car.
 
 ---
 
-#### `wbu_driver_set_wipers_mode`
-#### `wbu_driver_get_wipers_mode`
+#### `wbu_driver_set_wiper_mode`
+#### `wbu_driver_get_wiper_mode`
 
 %tab-component
 
@@ -971,10 +971,10 @@ typedef enum {
   SLOW,
   NORMAL,
   FAST
-} wbu_wipers_mode;
+} wbu_wiper_mode;
 
-void wbu_driver_set_wipers_mode(int mode);
-wbu_wipers_mode wbu_driver_get_wipers_mode();
+void wbu_driver_set_wiper_mode(wbu_wiper_mode mode);
+wbu_wiper_mode wbu_driver_get_wiper_mode();
 ```
 
 %tab-end
@@ -986,10 +986,10 @@ wbu_wipers_mode wbu_driver_get_wipers_mode();
 
 namespace webots {
   class Driver {
-    enum {DOWN, SLOW, NORMAL, FAST};
+    typedef enum {DOWN, SLOW, NORMAL, FAST} WiperMode;
 
-    void setWipersMode(int mode);
-    int getWipersMode();
+    void setWiperMode(WiperMode mode);
+    WiperMode getWiperMode();
     // ...
   }
 }
@@ -1005,8 +1005,8 @@ from controller import Driver
 class Driver:
     DOWN, SLOW, NORMAL, FAST
 
-    def setWipersMode(self, mode):
-    def getWipersMode(self):
+    def setWiperMode(self, mode):
+    def getWiperMode(self):
     # ...
 ```
 
@@ -1020,8 +1020,8 @@ import com.cyberbotics.webots.controller.Driver;
 public class Driver {
   public final static int DOWN, SLOW, NORMAL, FAST;
 
-  public void setWipersMode(int mode);
-  public int getWipersMode();
+  public void setWiperMode(int mode);
+  public int getWiperMode();
   // ...
 }
 ```
@@ -1032,8 +1032,8 @@ public class Driver {
 
 | name | service/topic | data type | data type definition |
 | --- | --- | --- | --- |
-| `/automobile/set_wipers_mode` | `service` | `webots_ros::set_int` | |
-| `/automobile/get_wipers_mode` | `service` | `webots_ros::get_int` | |
+| `/automobile/set_wiper_mode` | `service` | `webots_ros::set_int` | |
+| `/automobile/get_wiper_mode` | `service` | `webots_ros::get_int` | |
 
 %tab-end
 
@@ -1043,11 +1043,11 @@ public class Driver {
 
 *Set and get the wipers' mode*
 
-The `wbu_driver_set_wipers_mode` function allows the user to set (using the `wbu_wipers_mode` enum) various speeds for the wipers from slow to fast.
+The `wbu_driver_set_wiper_mode` function allows the user to set (using the `wbu_wiper_mode` enum) various speeds for the wipers from slow to fast.
 Whilst the slow and normal mode share the same speed, the slow mode activates the wipers once every few seconds.
-The `wbu_driver_get_wipers_mode` function allows the user to get the wipers' mode.
+The `wbu_driver_get_wiper_mode` function allows the user to get the wipers' mode.
 
-%figure "wbu_wipers_mode enumeration"
+%figure "wbu_wiper_mode enumeration"
 
 | ENUM     | Value |
 | -------- | ----- |

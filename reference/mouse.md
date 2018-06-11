@@ -317,4 +317,4 @@ enabled = wb_mouse_is_3d_position_enabled()
 
 In order to retrieve the 3D coordinate where the mouse is pointing in the 3D window, a picking is necessary, this picking depending on the scene and the time step can considerably reduce the simulation speed.
 Therefore, to avoid  unnecessary computation due to the picking, it should be explicitly enabled using the `wb_mouse_enable_3d_position` function, otherwise the `x`, `y` and `z` fields of [`WbMouseState`](#wbmousestate) are set to `NaN`.
-Once enabled, it is possible to disable it using the `wb_mouse_disable_3d_position` function and it is at any time possible to check if it is enabled using the `wb_mouse_is_3d_position_enabled` function.
+Once enabled, it is possible to disable it using the `wb_mouse_disable_3d_position` function, furthermore, it is at any time possible to check if it is enabled using the `wb_mouse_is_3d_position_enabled` function.

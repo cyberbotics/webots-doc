@@ -790,13 +790,25 @@ body {
  * Blog specific CSS
  *--------------------*/
 
+#webots-doc .blog {
+  background: white;
+}
+
 .blog #title {
   text-align: center;
   background: transparent;
 }
 
+.blog #content {
+  padding: 0px 30px;
+  max-width: 1080px;
+  box-shadow: none;
+  -webkit-box-shadow:none;
+  -moz-box-shadow:none;
+}
+
 .blog #view {
-  width: 90%;
+  margin: 0 auto;
   background: transparent;
 }
 
@@ -805,9 +817,14 @@ body {
   width: 90%;
   margin: 15px auto;
   word-wrap: break-word;
+  font-size: 17px;
 }
 
-.blog #view h1, .blog #view h2, .blog #view h3 {
+.blog #view a {
+  font-size: 17px;
+}
+
+.blog #view h1, .blog #view h2, .blog #view h3, .blog #view h4 {
   text-align: center;
   word-wrap: break-word;
 }
@@ -822,11 +839,12 @@ body {
 }
 
 .blog #view img {
+  border: none;
   max-width: 90%;
-  min-width: 90%;
-  border-radius: 2px;
   cursor: pointer;
   transition: 0.05s;
+  border-radius: 4px;
+  box-shadow: 0px 2px 22px 2px rgba(0, 0, 0, 0.5);
 }
 
 .blog #view img:hover {
@@ -839,11 +857,13 @@ body {
 
 .blog #view #publish-data {
   font-family: "Roboto";
-  font-size: 0.85em;
+  font-size: 0.92em;
   text-align: right;
   padding-bottom: 2px;
   margin-bottom: 2px;
+  display:block;
 }
+
 .blog .modal {
   display: none;
   position: fixed;
@@ -857,19 +877,16 @@ body {
   background-color: rgb(0,0,0);
   background-color: rgba(0,0,0,0.9);
 }
+
 .blog #view .modal-content {
   margin: 0 auto;
   display: block;
-  max-width: 600px;
-  min-width: 50%;
-  border-radius: 2px;
+  border-radius: 4px;
   cursor: pointer;
   transition: 0.05s;
+  box-shadow: 0px 5px 20px 6px rgba(0, 0, 0, 1);
 }
-.blog #view .modal-content img {
-  max-width: 75%;
-  min-width: 0%;
-}
+
 .blog #caption {
   margin: auto;
   display: block;
@@ -879,25 +896,33 @@ body {
   padding: 10px 0;
   margin-bottom: 150px;
 }
+
 .blog .modal-content, #caption {
   -webkit-animation-name: zoom;
   -webkit-animation-duration: 0.6s;
   animation-name: zoom;
   animation-duration: 0.4s;
 }
+
 .blog .webm {
   display: block;
   max-width: 90%;
   margin: 0 auto;
+  border-radius: 4px;
+  box-shadow: 0px 2px 22px 2px rgba(0, 0, 0, 0.5);
+  pointer-events: none;
 }
+
 @-webkit-keyframes zoom {
   from {-webkit-transform:scale(0)}
   to {-webkit-transform:scale(1)}
 }
+
 @keyframes zoom {
   from {transform:scale(0)}
   to {transform:scale(1)}
 }
+
 .blog .close {
   position: absolute;
   top: 40px;
@@ -924,6 +949,7 @@ body {
   overflow-x: auto;
   font-size: 16px;
 }
+
 .blog code {
   margin: 3px;
   padding: 3px;
@@ -942,4 +968,20 @@ body {
 
 .blog .contribution-banner {
   display: none;
+}
+
+.blog .post-selector {
+  display: block;
+  font-size: 17px;
+  margin-top: 5px;
+}
+
+.blog .left {
+  float: left;
+  margin-left: 15px;
+}
+
+.blog .right {
+  float: right;
+  margin-right: 15px;
 }

@@ -123,7 +123,7 @@ The `u` coordinate goes from 0 on the left border of the 3D window to 1 on the r
 These values may be `NaN` if the mouse is outside of the 3D window.
 
 The `x`, `y` and `z` fields are indicating the 3D coordinate where the mouse is pointing in the 3D window.
-These values may be `NaN` if not applicable, for example when the mouse is pointing to the scene background.
+These values may be `NaN` if not applicable, for example when the mouse is pointing to the scene background or when the 3d position is not enabled (see the [`wb_mouse_enable_3d_position` function](#wb_mouse_enable_3d_position)).
 
 ### Mouse Functions
 

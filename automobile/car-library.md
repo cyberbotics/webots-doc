@@ -122,11 +122,11 @@ wbu_car_engine_type wbu_car_get_engine_type();
 
 namespace webots {
   class Car : public Driver {
-    enum {TRACTION, PROPULSION, FOUR_BY_FOUR};
-    enum {COMBUSTION_ENGINE, ELECTRIC_ENGINE, PARALLEL_HYBRID_ENGINE, POWER_SPLIT_HYBRID_ENGINE};
+    typedef enum {TRACTION, PROPULSION, FOUR_BY_FOUR} Type;
+    typedef enum {COMBUSTION_ENGINE, ELECTRIC_ENGINE, PARALLEL_HYBRID_ENGINE, POWER_SPLIT_HYBRID_ENGINE} EngineType;
 
-    int getType();
-    int getEngineType();
+    Type getType();
+    EngineType getEngineType();
     // ...
   }
 }
@@ -476,8 +476,8 @@ typedef enum {
   WBU_CAR_WHEEL_NB
 } wbu_car_wheel_index;
 
-double wbu_car_get_wheel_encoder(int wheel_index);
-double wbu_car_get_wheel_speed(int wheel_index);
+double wbu_car_get_wheel_encoder(wbu_car_wheel_index wheel_index);
+double wbu_car_get_wheel_speed(wbu_car_wheel_index wheel_index);
 ```
 
 %tab-end
@@ -489,10 +489,10 @@ double wbu_car_get_wheel_speed(int wheel_index);
 
 namespace webots {
   class Car : public Driver {
-    enum {WHEEL_FRONT_RIGHT, WHEEL_FRONT_LEFT, WHEEL_REAR_RIGHT, WHEEL_REAR_LEFT, WHEEL_NB};
+    typedef enum {WHEEL_FRONT_RIGHT, WHEEL_FRONT_LEFT, WHEEL_REAR_RIGHT, WHEEL_REAR_LEFT, WHEEL_NB} WheelIndex;
 
-    double getWheelEncoder(int wheel_index);
-    double getWheelSpeed(int wheel_index);
+    double getWheelEncoder(WheelIndex wheel_index);
+    double getWheelSpeed(WheelIndex wheel_index);
     // ...
   }
 }

@@ -274,95 +274,97 @@ The `wb_supervisor_node_get_parent_node` function retrieves the reference to the
 #include <webots/supervisor.h>
 #include <webots/node.h>
 
-#define WB_NODE_NO_NODE
-/* 3D rendering */
-#define WB_NODE_APPEARANCE
-#define WB_NODE_BACKGROUND
-#define WB_NODE_BOX
-#define WB_NODE_CAPSULE
-#define WB_NODE_COLOR
-#define WB_NODE_CONE
-#define WB_NODE_COORDINATE
-#define WB_NODE_CYLINDER
-#define WB_NODE_DIRECTIONAL_LIGHT
-#define WB_NODE_ELEVATION_GRID
-#define WB_NODE_EXTRUSION
-#define WB_NODE_FOG
-#define WB_NODE_GROUP
-#define WB_NODE_IMAGE_TEXTURE
-#define WB_NODE_INDEXED_FACE_SET
-#define WB_NODE_INDEXED_LINE_SET
-#define WB_NODE_MATERIAL
-#define WB_NODE_MUSCLE
-#define WB_NODE_PBR_APPEARANCE
-#define WB_NODE_PLANE
-#define WB_NODE_POINT_LIGHT
-#define WB_NODE_POINT_SET
-#define WB_NODE_SHAPE
-#define WB_NODE_SPHERE
-#define WB_NODE_SPOT_LIGHT
-#define WB_NODE_TEXTURE_COORDINATE
-#define WB_NODE_TEXTURE_TRANSFORM
-#define WB_NODE_TRANSFORM
-#define WB_NODE_VIEWPOINT
-/* robots */
-#define WB_NODE_ROBOT
-#define WB_NODE_SUPERVISOR
-#define WB_NODE_DIFFERENTIAL_WHEELS
-/* devices */
-#define WB_NODE_ACCELEROMETER
-#define WB_NODE_BRAKE
-#define WB_NODE_CAMERA
-#define WB_NODE_COMPASS
-#define WB_NODE_CONNECTOR
-#define WB_NODE_DISPLAY
-#define WB_NODE_DISTANCE_SENSOR
-#define WB_NODE_EMITTER
-#define WB_NODE_GPS
-#define WB_NODE_GYRO
-#define WB_NODE_INERTIAL_UNIT
-#define WB_NODE_LED
-#define WB_NODE_LIDAR
-#define WB_NODE_LIGHT_SENSOR
-#define WB_NODE_LINEAR_MOTOR
-#define WB_NODE_MICROPHONE
-#define WB_NODE_PEN
-#define WB_NODE_POSITION_SENSOR
-#define WB_NODE_PROPELLER
-#define WB_NODE_RADAR
-#define WB_NODE_RADIO
-#define WB_NODE_RANGE_FINDER
-#define WB_NODE_ROTATIONAL_MOTOR
-#define WB_NODE_RECEIVER
-#define WB_NODE_SPEAKER
-#define WB_NODE_TOUCH_SENSOR
-/* misc */
-#define WB_NODE_BALL_JOINT
-#define WB_NODE_BALL_JOINT_PARAMETERS
-#define WB_NODE_CHARGER
-#define WB_NODE_CONTACT_PROPERTIES
-#define WB_NODE_CUBEMAP
-#define WB_NODE_DAMPING
-#define WB_NODE_FLUID
-#define WB_NODE_FOCUS
-#define WB_NODE_HINGE_JOINT
-#define WB_NODE_HINGE_JOINT_PARAMETERS
-#define WB_NODE_HINGE_2_JOINT
-#define WB_NODE_HINGE_2_JOINT_PARAMETERS
-#define WB_NODE_IMMERSION_PROPERTIES
-#define WB_NODE_JOINT_PARAMETERS
-#define WB_NODE_LENS
-#define WB_NODE_LENS_FLARE
-#define WB_NODE_PHYSICS
-#define WB_NODE_RECOGNITION
-#define WB_NODE_SLIDER_JOINT
-#define WB_NODE_SOLID
-#define WB_NODE_SOLID_REFERENCE
-#define WB_NODE_SLOT
-#define WB_NODE_TRACK
-#define WB_NODE_TRACK_WHEEL
-#define WB_NODE_WORLD_INFO
-#define WB_NODE_ZOOM
+typedef enum {
+  WB_NODE_NO_NODE,
+  /* 3D rendering */
+  WB_NODE_APPEARANCE,
+  WB_NODE_BACKGROUND,
+  WB_NODE_BOX,
+  WB_NODE_CAPSULE,
+  WB_NODE_COLOR,
+  WB_NODE_CONE,
+  WB_NODE_COORDINATE,
+  WB_NODE_CYLINDER,
+  WB_NODE_DIRECTIONAL_LIGHT,
+  WB_NODE_ELEVATION_GRID,
+  WB_NODE_EXTRUSION,
+  WB_NODE_FOG,
+  WB_NODE_GROUP,
+  WB_NODE_IMAGE_TEXTURE,
+  WB_NODE_INDEXED_FACE_SET,
+  WB_NODE_INDEXED_LINE_SET,
+  WB_NODE_MATERIAL,
+  WB_NODE_MUSCLE,
+  WB_NODE_PBR_APPEARANCE,
+  WB_NODE_PLANE,
+  WB_NODE_POINT_LIGHT,
+  WB_NODE_POINT_SET,
+  WB_NODE_SHAPE,
+  WB_NODE_SPHERE,
+  WB_NODE_SPOT_LIGHT,
+  WB_NODE_TEXTURE_COORDINATE,
+  WB_NODE_TEXTURE_TRANSFORM,
+  WB_NODE_TRANSFORM,
+  WB_NODE_VIEWPOINT,
+  /* robots */
+  WB_NODE_ROBOT,
+  WB_NODE_SUPERVISOR,
+  WB_NODE_DIFFERENTIAL_WHEELS,
+  /* devices */
+  WB_NODE_ACCELEROMETER,
+  WB_NODE_BRAKE,
+  WB_NODE_CAMERA,
+  WB_NODE_COMPASS,
+  WB_NODE_CONNECTOR,
+  WB_NODE_DISPLAY,
+  WB_NODE_DISTANCE_SENSOR,
+  WB_NODE_EMITTER,
+  WB_NODE_GPS,
+  WB_NODE_GYRO,
+  WB_NODE_INERTIAL_UNIT,
+  WB_NODE_LED,
+  WB_NODE_LIDAR,
+  WB_NODE_LIGHT_SENSOR,
+  WB_NODE_LINEAR_MOTOR,
+  WB_NODE_MICROPHONE,
+  WB_NODE_PEN,
+  WB_NODE_POSITION_SENSOR,
+  WB_NODE_PROPELLER,
+  WB_NODE_RADAR,
+  WB_NODE_RADIO,
+  WB_NODE_RANGE_FINDER,
+  WB_NODE_ROTATIONAL_MOTOR,
+  WB_NODE_RECEIVER,
+  WB_NODE_SPEAKER,
+  WB_NODE_TOUCH_SENSOR,
+  /* misc */
+  WB_NODE_BALL_JOINT,
+  WB_NODE_BALL_JOINT_PARAMETERS,
+  WB_NODE_CHARGER,
+  WB_NODE_CONTACT_PROPERTIES,
+  WB_NODE_CUBEMAP,
+  WB_NODE_DAMPING,
+  WB_NODE_FLUID,
+  WB_NODE_FOCUS,
+  WB_NODE_HINGE_JOINT,
+  WB_NODE_HINGE_JOINT_PARAMETERS,
+  WB_NODE_HINGE_2_JOINT,
+  WB_NODE_HINGE_2_JOINT_PARAMETERS,
+  WB_NODE_IMMERSION_PROPERTIES,
+  WB_NODE_JOINT_PARAMETERS,
+  WB_NODE_LENS,
+  WB_NODE_LENS_FLARE,
+  WB_NODE_PHYSICS,
+  WB_NODE_RECOGNITION,
+  WB_NODE_SLIDER_JOINT,
+  WB_NODE_SOLID,
+  WB_NODE_SOLID_REFERENCE,
+  WB_NODE_SLOT,
+  WB_NODE_TRACK,
+  WB_NODE_TRACK_WHEEL,
+  WB_NODE_WORLD_INFO,
+  WB_NODE_ZOOM
+} WbNodeType;
 
 WbNodeType wb_supervisor_node_get_type(WbNodeRef node);
 const char *wb_supervisor_node_get_type_name(WbNodeRef node);
@@ -378,7 +380,7 @@ const char *wb_supervisor_node_get_base_type_name(WbNodeRef node);
 
 namespace webots {
   class Node {
-    enum {
+    typedef enum {
       NO_NODE,
       // 3D rendering
       APPEARANCE, BACKGROUND, BOX, CAPSULE, COLOR, CONE, COORDINATE, CYLINDER,
@@ -399,9 +401,9 @@ namespace webots {
       HINGE_2_JOINT_PARAMETERS, IMMERSION_PROPERTIES, JOINT_PARAMETERS, LENS,
       LENS_FLARE, PHYSICS, RECOGNITION, SLIDER_JOINT, SOLID, SOLID_REFERENCE,
       SLOT, TRACK, TRACK_WHEEL, WORLD_INFO, ZOOM
-    };
+    } Type;
 
-    int getType() const;
+    Type getType() const;
     std::string getTypeName() const;
     std::string getBaseTypeName() const;
     // ...
@@ -1744,13 +1746,15 @@ int main(int argc, char *argv[]) {
 ```c
 #include <webots/supervisor.h>
 
-#define WB_SUPERVISOR_SIMULATION_MODE_PAUSE
-#define WB_SUPERVISOR_SIMULATION_MODE_REAL_TIME
-#define WB_SUPERVISOR_SIMULATION_MODE_RUN
-#define WB_SUPERVISOR_SIMULATION_MODE_FAST
+typedef enum {
+  WB_SUPERVISOR_SIMULATION_MODE_PAUSE,
+  WB_SUPERVISOR_SIMULATION_MODE_REAL_TIME,
+  WB_SUPERVISOR_SIMULATION_MODE_RUN,
+  WB_SUPERVISOR_SIMULATION_MODE_FAST
+} WbSimulationMode;
 
-int wb_supervisor_simulation_get_mode();
-void wb_supervisor_simulation_set_mode(int mode);
+WbSimulationMode wb_supervisor_simulation_get_mode();
+void wb_supervisor_simulation_set_mode(WbSimulationMode mode);
 ```
 
 %tab-end
@@ -1762,12 +1766,12 @@ void wb_supervisor_simulation_set_mode(int mode);
 
 namespace webots {
   class Supervisor : public Robot {
-    enum {
+    typedef enum {
       SIMULATION_MODE_PAUSE, SIMULATION_MODE_REAL_TIME, SIMULATION_MODE_RUN, SIMULATION_MODE_FAST
-    };
+    } SimulationMode;
 
-    virtual void simulationSetMode(int mode);
-    int simulationGetMode() const;
+    SimulationMode simulationGetMode() const;
+    virtual void simulationSetMode(SimulationMode mode);
     // ...
   }
 }
@@ -2456,25 +2460,11 @@ Both `wb_supervisor_animation_start_recording` and `wb_supervisor_animation_stop
 ```c
 #include <webots/supervisor.h>
 
-#define WB_SF_BOOL
-#define WB_SF_INT32
-#define WB_SF_FLOAT
-#define WB_SF_VEC2F
-#define WB_SF_VEC3F
-#define WB_SF_ROTATION
-#define WB_SF_COLOR
-#define WB_SF_STRING
-#define WB_SF_NODE
-#define WB_MF
-#define WB_MF_BOOL
-#define WB_MF_INT32
-#define WB_MF_FLOAT
-#define WB_MF_VEC2F
-#define WB_MF_VEC3F
-#define WB_MF_ROTATION
-#define WB_MF_COLOR
-#define WB_MF_STRING
-#define WB_MF_NODE
+typedef enum {
+  WB_NO_FIELD, WB_SF_BOOL, WB_SF_INT32, WB_SF_FLOAT, WB_SF_VEC2F, WB_SF_VEC3F, WB_SF_ROTATION,
+  WB_SF_COLOR, WB_SF_STRING, WB_SF_NODE, WB_MF, WB_MF_BOOL, WB_MF_INT32, WB_MF_FLOAT,
+  WB_MF_VEC2F, WB_MF_VEC3F, WB_MF_ROTATION, WB_MF_COLOR, WB_MF_STRING, WB_MF_NODE
+} WbFieldType;
 
 WbFieldType wb_supervisor_field_get_type(WbFieldRef field);
 const char *wb_supervisor_field_get_type_name(WbFieldRef field);
@@ -2490,12 +2480,12 @@ int wb_supervisor_field_get_count(WbFieldRef field);
 
 namespace webots {
   class Field {
-    enum {
+    typedef enum {
       SF_BOOL, SF_INT32, SF_FLOAT, SF_VEC2F, SF_VEC3F, SF_ROTATION, SF_COLOR, SF_STRING,
       SF_NODE, MF, MF_INT32, MF_FLOAT, MF_VEC2F, MF_VEC3F, MF_COLOR, MF_STRING, MF_NODE
-    };
+    } Type;
 
-    int getType() const;
+    Type getType() const;
     std::string getTypeName() const;
     int getCount() const;
     // ...

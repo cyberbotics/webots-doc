@@ -307,6 +307,46 @@ function addContributionBanner() {
   };
 }
 
+function addNavigationToBlogIfNeeded() {
+  if (!document.querySelector("#next-previous-section") && localSetup.book === "blog") {
+    let menu = document.querySelector("#menu");
+    let lis = menu.querySelectorAll("li");
+    let currentPageIndex = -1
+    for (i = 0; i < lis.length; ++i) {
+      if (lis[i].className === "selected") {
+        currentPageIndex = i;
+        break;
+      }
+    }
+
+    if (currentPageIndex == -1)
+      return;
+
+    // console.log(currentPageIndex, lis.length);
+    // console.log(lis);
+    let div = document.createElement("div");
+    div.setAttribute("id", "next-previous-section");
+    // previous post
+    if (currentPageIndex > 0) {
+      let previous = lis[currentPageIndex - 1]
+      let a = previous.firstChild.cloneNode();
+      a.innerHTML += "<< Previous Post: " + previous.textContent;
+      a.setAttribute("class", "post-selector left");
+      div.appendChild(a);
+    }
+
+    if (currentPageIndex < lis.length - 1) {
+      let next = lis[currentPageIndex + 1];
+      let a = next.firstChild.cloneNode();
+      a.innerHTML += "Next Post: " + next.textContent + " >>";
+      a.setAttribute("class", "post-selector right");
+      div.appendChild(a);
+    }
+
+    document.querySelector("#publish-data").parentNode.insertBefore(div, document.querySelector("#publish-data").nextSibling);
+  }
+}
+
 function setupBlogFunctionalitiesIfNeeded() {
   if (localSetup.book === 'blog') {
     // hide index, this doesn't make sense for a blog post
@@ -322,7 +362,7 @@ function setupBlogFunctionalitiesIfNeeded() {
     // hide the release tag, this is also nonsensical here
     document.querySelector(".release-tag").style.display = "none";
 
-    document.title = 'Webots Blog';
+    document.title = document.title.replace("documentation", "Blog");
 
     var figures = document.querySelectorAll('figure');
     if (figures.length > 0) {
@@ -477,6 +517,7 @@ function populateViewDiv(mdContent) {
   createIndex(view);
 
   setupBlogFunctionalitiesIfNeeded();
+  addNavigationToBlogIfNeeded();
 
   var images = view.querySelectorAll('img');
   if (images.length > 0) {
@@ -884,6 +925,7 @@ function receiveMenuContent(menuContent) {
   populateMenu(menu);
   redirectUrls(menu);
   updateSelection();
+  addNavigationToBlogIfNeeded();
 }
 
 function updateMenuScrollbar() {

@@ -226,3 +226,95 @@ The `sampling_period` parameter is expressed in milliseconds, and defines how fr
 Note that the first state will be available only after the first sampling period elapsed.
 After that, the state can be read by calling the `wb_mouse_get_state` function (for more details, see [`WbMouseState`](#wbmousestate)).
 The `wb_mouse_disable` function should be used to stop the mouse readings.
+
+
+#### `wb_mouse_enable_3d_position`
+#### `wb_mouse_disable_3d_position`
+#### `wb_mouse_is_3d_position_enabled`
+
+%tab-component
+
+%tab "C"
+
+```c
+#include <webots/mouse.h>
+
+void wb_mouse_enable_3d_position();
+void wb_mouse_disable_3d_position();
+bool wb_mouse_is_3d_position_enabled();
+```
+
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Mouse.hpp>
+
+namespace webots {
+  class Mouse {
+    void enable3dPosition();
+    void disable3dPosition();
+    bool is3dPositionEnabled() const;
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Mouse
+
+class Mouse:
+    def enable3dPosition(self):
+    def disable3dPosition(self):
+    def is3dPositionEnabled(self):
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Mouse;
+
+public class Mouse {
+  public void enable3dPosition();
+  public void disable3dPosition();
+  public boolean is3dPositionEnabled();
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+wb_mouse_enable_3d_position()
+wb_mouse_disable_3d_position()
+enabled = wb_mouse_is_3d_position_enabled()
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/mouse/mouse_enable_3d_position` | `service` | [`webots_ros::set_bool`](ros-api.md#common-services) | |
+| `/mouse/mouse_disable_3d_position` | `service` | [`webots_ros::set_bool`](ros-api.md#common-services) | |
+| `/mouse/mouse_is_3d_position_enabled` | `service` | [`webots_ros::get_bool`](ros-api.md#common-services) | |
+
+%tab-end
+
+%end
+
+##### Description
+
+*enable the 3d position*
+
+In order to retrieve the 3D coordinate where the mouse is pointing in the 3D window a picking is necessary, this picking depending on the scene and the time step can considerably reduce the simulation speed.
+Therefore, to avoid unecessayrry computation due to the picking, it should be explicitely enabled using the `wb_mouse_enable_3d_position` function otherwise the `x`, `y` and `z` fields of [`WbMouseState`](#wbmousestate) are set to `NaN`.
+Once enabled it is possible to deisable it using `wb_mouse_disable_3d_position` and it is at any time possible to check if it is enabled using the `wb_mouse_is_3d_position_enabled` function.

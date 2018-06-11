@@ -508,10 +508,10 @@ typedef enum {
   OFF,
   RIGHT,
   LEFT
-} WbDriverIndicatorState;
+} WbuDriverIndicatorState;
 
-void wbu_driver_set_indicator(WbDriverIndicatorState state);
-WbDriverIndicatorState wbu_driver_get_indicator();
+void wbu_driver_set_indicator(WbuDriverIndicatorState state);
+WbuDriverIndicatorState wbu_driver_get_indicator();
 void wbu_driver_set_hazard_flashers(bool state);
 bool wbu_driver_get_hazard_flashers();
 ```
@@ -590,10 +590,10 @@ public class Driver {
 
 *Set and get the indicator state*
 
-The `wbu_driver_set_indicator` function allows the user to set (using the `WbDriverIndicatorState` enum) if the indicator should be on only for the right side of the car, the left side of the car or should be off.
+The `wbu_driver_set_indicator` function allows the user to set (using the `WbuDriverIndicatorState` enum) if the indicator should be on only for the right side of the car, the left side of the car or should be off.
 The `wbu_driver_get_indicator` function allows the user to get the indicator state.
 
-%figure "WbDriverIndicatorState enumeration"
+%figure "WbuDriverIndicatorState enumeration"
 
 | ENUM    | Value |
 | ------- | ----- |
@@ -876,9 +876,9 @@ The `wbu_driver_get_gear_number` function simply returns the number of available
 typedef enum {
   SPEED,
   TORQUE
-} WbDriverControlMode;
+} WbuDriverControlMode;
 
-WbDriverControlMode wbu_driver_get_control_mode();
+WbuDriverControlMode wbu_driver_get_control_mode();
 ```
 
 %tab-end
@@ -945,7 +945,7 @@ public class Driver {
 
 This `wbu_driver_get_control_mode` returns the current control mode of the car.
 
-%figure "WbDriverControlMode enumeration"
+%figure "WbuDriverControlMode enumeration"
 
 | ENUM     | Value |
 | -------- | ----- |
@@ -971,10 +971,10 @@ typedef enum {
   SLOW,
   NORMAL,
   FAST
-} WbDriverWiperMode;
+} WbuDriverWiperMode;
 
-void wbu_driver_set_wiper_mode(WbDriverWiperMode mode);
-WbDriverWiperMode wbu_driver_get_wiper_mode();
+void wbu_driver_set_wiper_mode(WbuDriverWiperMode mode);
+WbuDriverWiperMode wbu_driver_get_wiper_mode();
 ```
 
 %tab-end
@@ -1043,11 +1043,11 @@ public class Driver {
 
 *Set and get the wipers' mode*
 
-The `wbu_driver_set_wiper_mode` function allows the user to set (using the `WbDriverWiperMode` enum) various speeds for the wipers from slow to fast.
+The `wbu_driver_set_wiper_mode` function allows the user to set (using the `WbuDriverWiperMode` enum) various speeds for the wipers from slow to fast.
 Whilst the slow and normal mode share the same speed, the slow mode activates the wipers once every few seconds.
 The `wbu_driver_get_wiper_mode` function allows the user to get the wipers' mode.
 
-%figure "WbDriverWiperMode enumeration"
+%figure "WbuDriverWiperMode enumeration"
 
 | ENUM     | Value |
 | -------- | ----- |

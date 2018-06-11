@@ -100,17 +100,17 @@ typedef enum {
   WBU_CAR_TRACTION,
   WBU_CAR_PROPULSION,
   WBU_CAR_FOUR_BY_FOUR
-} WbCarType;
+} WbuCarType;
 
 typedef enum {
   WBU_CAR_COMBUSTION_ENGINE,
   WBU_CAR_ELECTRIC_ENGINE,
   WBU_CAR_PARALLEL_HYBRID_ENGINE,
   WBU_CAR_POWER_SPLIT_HYBRID_ENGINE
-} WbCarEngineType;
+} WbuCarEngineType;
 
-WbCarType wbu_car_get_type();
-WbCarEngineType wbu_car_get_engine_type();
+WbuCarType wbu_car_get_type();
+WbuCarEngineType wbu_car_get_engine_type();
 ```
 
 %tab-end
@@ -184,7 +184,7 @@ public class Car extends Driver {
 
 These two functions return respectively the type of transmission and of engine of the car.
 
-%figure "WbCarType enumeration"
+%figure "WbuCarType enumeration"
 
 | ENUM                     | Value |
 | ------------------------ | ----- |
@@ -194,7 +194,7 @@ These two functions return respectively the type of transmission and of engine o
 
 %end
 
-%figure "WbCarEngineType enumeration"
+%figure "WbuCarEngineType enumeration"
 
 | ENUM                                   | Value |
 | -------------------------------------- | ----- |
@@ -474,10 +474,10 @@ typedef enum {
   WBU_CAR_WHEEL_REAR_RIGHT,
   WBU_CAR_WHEEL_REAR_LEFT,
   WBU_CAR_WHEEL_NB
-} WbCarWheelIndex;
+} WbuCarWheelIndex;
 
-double wbu_car_get_wheel_encoder(WbCarWheelIndex wheel_index);
-double wbu_car_get_wheel_speed(WbCarWheelIndex wheel_index);
+double wbu_car_get_wheel_encoder(WbuCarWheelIndex wheel_index);
+double wbu_car_get_wheel_speed(WbuCarWheelIndex wheel_index);
 ```
 
 %tab-end
@@ -547,9 +547,9 @@ public class Car extends Driver {
 *Get the wheels speed/encoder*
 
 These two functions return respectively the state of the wheel encoder (in radians) and the instantaneous wheel rotational speed (in radians per second).
-The `wheel_index` argument should match a value of the `WbCarWheelIndex` enum.
+The `wheel_index` argument should match a value of the `WbuCarWheelIndex` enum.
 
-%figure "WbCarWheelIndex enumeration"
+%figure "WbuCarWheelIndex enumeration"
 
 | ENUM                          | Value |
 | ----------------------------- | ----- |

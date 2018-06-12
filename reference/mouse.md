@@ -158,6 +158,7 @@ namespace webots {
     virtual void disable();
     int getSamplingPeriod() const;
     MouseState getState() const;
+    // ...
   }
 }
 ```
@@ -174,6 +175,7 @@ class Mouse:
     def disable(self):
     def getSamplingPeriod(self):
     def getState(self):
+    # ...
 ```
 
 %tab-end
@@ -188,6 +190,7 @@ public class Mouse {
   public void disable();
   public int getSamplingPeriod();
   public MouseState getState();
+  // ...
 }
 ```
 
@@ -256,6 +259,7 @@ namespace webots {
     void enable3dPosition();
     void disable3dPosition();
     bool is3dPositionEnabled() const;
+    // ...
   }
 }
 ```
@@ -271,6 +275,7 @@ class Mouse:
     def enable3dPosition(self):
     def disable3dPosition(self):
     def is3dPositionEnabled(self):
+    # ...
 ```
 
 %tab-end
@@ -284,6 +289,7 @@ public class Mouse {
   public void enable3dPosition();
   public void disable3dPosition();
   public boolean is3dPositionEnabled();
+  // ...
 }
 ```
 

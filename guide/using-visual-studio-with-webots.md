@@ -13,7 +13,7 @@ In principle any C or C++ controller from the Webots distribution can be turned 
 ### Robot Controller Wizard
 
 Since Webots R2018b, a Visual Studio option is offered in the **Wizards / New Robot Controller...** menu after you choose the C or C++ language on Windows.
-This wizard creates a Visual Studio project for your robot controller, so that you won't have to configure it manually as described in the next section.
+This wizard creates a Visual Studio project for your robot controller, so that you don't need to configure it manually as described in the next section.
 
 ### Configuration
 

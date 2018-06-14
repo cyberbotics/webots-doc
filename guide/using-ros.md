@@ -31,45 +31,47 @@ This controller uses the "libCppController" library and proposes the available W
 Using the "roscpp" library, it provides these Webots functions mostly as ROS services and uses standard messages type to avoid dependencies on third-party packages.
 
 During simulation there can be multiple instances of robots or devices and other Webots applications connected to the ROS network.
-Therefore the controller uses a specific syntax to declare its services or topics on the network: "[robot\_unique\_name]/[device\_name]/[service/topic\_name]".
+Therefore the controller uses a specific syntax to declare its services or topics on the network: `[robot_unique_name]/[device_name]/[service/topic_name]`.
 
-"[robot\_unique\_name]": in order to avoid any misunderstanding between different instances of the same robot, the name of the robot is followed by the ID of the process and the IP address of the computer.
+`[robot_unique_name]`: in order to avoid any misunderstanding between different instances of the same robot, the name of the robot is followed by the ID of the process and the IP address of the computer.
 
-"[device\_name]": since the same function can refer to different devices, this field shows you which device it refers to.
+`[device_name]`: since the same function can refer to different devices, this field shows you which device it refers to.
 
-"[service/topic\_name]": this field is identical or very close to the Webots function it corresponds to.
+`[service/topic_name]`: this field is identical or very close to the Webots function it corresponds to.
 For topics, it is followed by the sampling period.
 For services, it is also the name of the corresponding srv file.
 
 #### Using the Standard Controller
 
 The controller, named `ros`, is pre-compiled and you shouldn't edit it.
-All you have to do is to load it on your robot; you will find it in the default list of controller.
-In order to use it, you will have to build a ROS node that will communicates with the robot using the different services available.
-Good examples of such ROS node can be found inside Webots at "WEBOTS\_HOME/projects/languages/ros/webots\_ros".
+All you have to do is to load it in the `controller` field of your robot; you will find it in the default list of controller.
+In order to use it, you will have to build a ROS node that will communicate with the robot using the different services available.
+Good examples of such ROS node can be found inside Webots at `WEBOTS_HOME/projects/languages/ros/webots_ros`.
 
 In the [Tutorial 7](tutorial-7-using-ros.md) chapter, you will find the instructions to setup your workspace and run a sample simulation using ROS.
 
-> **Note**: If you want to access the controller from another machine and the roscore isn't running on the same machine as Webots, you will need to edit the ROS\_MASTER\_URI variable.
-This can be done by editing your environment variables, setting '--ROS\_MASTER\_URI=address' in the controller arguments or with a runtime.ini file in the controller directory.
-You must also be able to connect to each of the computer in ssh in both ways.
+In the following table you can find the list of `ros` controller arguments.
+
+%figure "`ros` controller arguments"
+
+| Argument | Description |
+| -------- | ----------- |
+| `--ROS_MASTER_URI=<address>` | Specify the URI address of the machine where `roscore` is running. |
+| `--name=<robot_unique_name>` | Specify a predefined [robot\_unique\_name] to be used for services and topics. Note that you are then responsible for avoiding any name clashes between the different robot controllers. |
+| `--synchronize`   | By default the `ros` controller is not blocking the simulation even if no ROS node is connected to it. In order to synchronize the simulation with the ROS node, the `--synchronize` argument can be specified, so that the simulation will not run as long as the robot `time_step` service is not called. |
+| `--clock`   | Publish the Webots time using the `clock` topic. |
+| `--use-sim-time` | Specify that the Webots time should be used as ROS time. To work correctly you should also define the `--clock` argument and set the ROS parameter `use_sim_time` to true. |
+
+%end
+
+If you want to access the controller from another machine and `roscore` isn't running on the same machine as Webots, you will need to edit the ROS\_MASTER\_URI variable.
+This can be done by editing your environment variables, setting `--ROS\_MASTER\_URI=<address>` in the controller arguments (see [table](#ros_controller_arguments)) or with a `runtime.ini` file in the controller directory.
+You must also be able to connect to each of the computer with  `ssh` in both ways.
 As ROS uses the hostname to find other computers on the network, you must add other computers' hostname and the associated IP address to the known hosts of each computer.
 You can find this list in a file named *hosts*.
-On Linux distribution, you can find it directly at /etc/hosts; on macOS, it is located at /private/etc/hosts; on Windows, it is located at C:\Windows\System32\drivers\etc\hosts.
+On Linux distribution, you can find it directly at `/etc/hosts`; on macOS, it is located at `/private/etc/hosts`; on Windows, it is located at `C:\Windows\System32\drivers\etc\hosts`.
 On Windows and macOS, this a hidden path and you will need to search directly for this path.
 The hosts file is usually protected and you will need administrator or root privileges to edit it.
-
-<!-- -->
-
-> **Note**: If you want to have a predefined [robot\_unique\_name] you can do it by adding '--name=predefined\_name' in the controller arguments.
-Note that you are then responsible for avoiding any name clashes between the different robot controllers.
-
-<!-- -->
-
-> **Note**: By default the ROS controller is not blocking the simulation even if no ROS node is connected to it.
-In order to synchronize the simulation with the ROS node, the '--synchronize' argument can be used, so that the simulation will not run as long as the robot time\_step service is not called.
-
-> Furthermore, adding the '--clock' argument will make the ROS controller publish Webots time using the `clock` topic (which you may use as the ROS time if the ROS parameter `use_sim_time` is set to true).
 
 ### Custom Controller
 

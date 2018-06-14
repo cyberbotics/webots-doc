@@ -51,13 +51,14 @@ int wb_position_sensor_get_type(WbDeviceTag tag);
 
 namespace webots {
   class PositionSensor : public Device {
-    enum {ANGULAR, LINEAR};
+    enum {ROTATIONAL, LINEAR};
 
     virtual void enable(int samplingPeriod);
     virtual void disable();
     int getSamplingPeriod() const;
     double getValue() const;
     int getType() const;
+    // ...
   }
 }
 ```
@@ -70,13 +71,14 @@ namespace webots {
 from controller import PositionSensor
 
 class PositionSensor (Device):
-    ANGULAR, LINEAR
+    ROTATIONAL, LINEAR
 
     def enable(self, samplingPeriod):
     def disable(self):
     def getSamplingPeriod(self):
     def getValue(self):
     def getType(self):
+    # ...
 ```
 
 %tab-end
@@ -87,13 +89,14 @@ class PositionSensor (Device):
 import com.cyberbotics.webots.controller.PositionSensor;
 
 public class PositionSensor extends Device {
-  public final static int ANGULAR, LINEAR;
+  public final static int ROTATIONAL, LINEAR;
 
   public void enable(int samplingPeriod);
   public void disable();
   public int getSamplingPeriod();
   public double getValue();
   public int getType();
+  // ...
 }
 ```
 
@@ -102,7 +105,7 @@ public class PositionSensor extends Device {
 %tab "MATLAB"
 
 ```matlab
-WB_ANGULAR, WB_LINEAR
+WB_ROTATIONAL, WB_LINEAR
 
 wb_position_sensor_enable(tag, sampling_period)
 wb_position_sensor_disable(tag)
@@ -142,7 +145,7 @@ The `wb_position_sensor_get_value` function returns the most recent value measur
 Depending on the type, it will return a value in radians (angular position sensor) or in meters (linear position sensor).
 
 The `wb_position_sensor_get_type` function returns the type of the position sensor.
-It will return `WB_ANGULAR` if the sensor is associated with a [HingeJoint](hingejoint.md) or a [Hinge2Joint](hinge2joint.md) node, and `WB_LINEAR` if it is associated with a [SliderJoint](sliderjoint.md) or a [Track](track.md) node.
+It will return `WB_ROTATIONAL` if the sensor is associated with a [HingeJoint](hingejoint.md) or a [Hinge2Joint](hinge2joint.md) node, and `WB_LINEAR` if it is associated with a [SliderJoint](sliderjoint.md) or a [Track](track.md) node.
 
 ---
 

@@ -36,6 +36,8 @@ int wb_brake_get_type(WbDeviceTag tag);
 
 namespace webots {
   class Brake : public Device {
+    enum {ROTATIONAL, LINEAR};
+
     void setDampingConstant(double dampingConstant) const;
     int getType() const;
     // ...
@@ -51,6 +53,8 @@ namespace webots {
 from controller import Brake
 
 class Brake (Device):
+    ROTATIONAL, LINEAR
+
     def setDampingConstant(self, dampingConstant):
     def getType(self):
     # ...
@@ -64,6 +68,8 @@ class Brake (Device):
 import com.cyberbotics.webots.controller.Brake;
 
 public class Brake extends Device {
+  public final static int ROTATIONAL, LINEAR;
+
   public void setDampingConstant(double dampingConstant);
   public int getType();
   // ...
@@ -75,6 +81,8 @@ public class Brake extends Device {
 %tab "MATLAB"
 
 ```matlab
+WB_ROTATIONAL, WB_LINEAR
+
 wb_brake_set_damping_constant(tag, damping_constant)
 type = wb_brake_get_type(tag)
 ```
@@ -100,7 +108,7 @@ The `wb_brake_set_damping_constant` function sets the value of the dampingConsta
 If any dampingConstant is already set using [JointParameters](jointparameters.md) the resulting dampingConstant coefficient is the sum of the one in the [JointParameters](jointparameters.md) and the one set using the `wb_brake_set_damping_constant` function.
 
 The `wb_brake_get_type` function returns the type of the brake.
-It will return `WB_ANGULAR` if the sensor is associated with a [HingeJoint](hingejoint.md) or a [Hinge2Joint](hinge2joint.md) node, and `WB_LINEAR` if it is associated with a [SliderJoint](sliderjoint.md) or a [Track](track.md) node.
+It will return `WB_ROTATIONAL` if the sensor is associated with a [HingeJoint](hingejoint.md) or a [Hinge2Joint](hinge2joint.md) node, and `WB_LINEAR` if it is associated with a [SliderJoint](sliderjoint.md) or a [Track](track.md) node.
 
 ---
 

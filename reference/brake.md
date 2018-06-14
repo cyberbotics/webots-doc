@@ -137,6 +137,8 @@ WbDeviceTag wb_brake_get_position_sensor(WbDeviceTag tag);
 
 namespace webots {
   class Brake : public Device {
+    enum {ROTATIONAL, LINEAR};
+
     Motor *getMotor() const;
     PositionSensor *getPositionSensor() const;
     // ...

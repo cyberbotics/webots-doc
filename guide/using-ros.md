@@ -65,7 +65,7 @@ In the following table you can find the list of `ros` controller arguments.
 %end
 
 If you want to access the controller from another machine and `roscore` isn't running on the same machine as Webots, you will need to edit the ROS\_MASTER\_URI variable.
-This can be done by editing your environment variables, setting `--ROS\_MASTER\_URI=<address>` in the controller arguments (see [table](#ros_controller_arguments)) or with a `runtime.ini` file in the controller directory.
+This can be done by editing your environment variables, setting `--ROS\_MASTER\_URI=<address>` in the controller arguments (see [table](#ros-controller-arguments)) or with a `runtime.ini` file in the controller directory.
 You must also be able to connect to each of the computer with  `ssh` in both ways.
 As ROS uses the hostname to find other computers on the network, you must add other computers' hostname and the associated IP address to the known hosts of each computer.
 You can find this list in a file named *hosts*.

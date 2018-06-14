@@ -57,6 +57,7 @@ graph LR
         SolidDevice --> InertialUnit[[InertialUnit](inertialunit.md)]
         SolidDevice --> LED[[LED](led.md)]
         SolidDevice --> Lidar[[Lidar](lidar.md)]
+        SolidDevice --> LightSensor[[LightSensor](lightsensor.md)]
         SolidDevice --> Pen[[Pen](pen.md)]
         SolidDevice --> Propeller[[Propeller](propeller.md)]
         SolidDevice --> Radar[[Radar](radar.md)]
@@ -64,12 +65,12 @@ graph LR
         SolidDevice --> Receiver[[Receiver](receiver.md)]
         SolidDevice --> Speaker[[Speaker](speaker.md)]
         SolidDevice --> TouchSensor[[TouchSensor](touchsensor.md)]
-        SolidDevice --> Track[[Track](track.md)]
+      Solid --> Track[[Track](track.md)]
       Solid --> Charger[[Charger](charger.md)]
       Solid --> Robot[[Robot](robot.md)]
         Robot --> Supervisor[[Supervisor](supervisor.md)]
     Transform --> Fluid[[Fluid](fluid.md)]
-  Group --> TrackWheel[[TrackWheel](trackwheel.md)]
+    Transform --> TrackWheel[[TrackWheel](trackwheel.md)]
 
   JointDevice -.-> Motor([Motor](motor.md))
     Motor -.-> LinearMotor[[LinearMotor](linearmotor.md)]

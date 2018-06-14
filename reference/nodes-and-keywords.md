@@ -7,7 +7,7 @@ In the other hand, Webots also adds many nodes, which are not part of the VRML97
 
 The following VRML97 nodes are supported by Webots:
 
-`Appearance, Background, Box, Color, Cone, Coordinate, Cylinder, DirectionalLight, ElevationGrid, Fog, Group, ImageTexture, IndexedFaceSet, IndexedLineSet, Material, PointLight, Shape, Sphere, SpotLight, TextureCoordinate, TextureTransform, Transform, Viewpoint` and `WorldInfo`.
+`Appearance, Background, Box, Color, Cone, Coordinate, Cylinder, DirectionalLight, ElevationGrid, Fog, Group, ImageTexture, IndexedFaceSet, IndexedLineSet, Material, PointLight, PointSet, Shape, Sphere, SpotLight, TextureCoordinate, TextureTransform, Transform, Viewpoint` and `WorldInfo`.
 
 Please refer to [this chapter](nodes-and-api-functions.md) for a detailed description of Webots nodes and fields.
 It specifies which fields are actually used.
@@ -22,7 +22,7 @@ In order to describe more precisely robotic simulations, Webots supports additio
 These nodes are principally used to model commonly used robot devices.
 Here are Webots additional nodes:
 
-`Accelerometer, BallJoint, BallJointParameters, Camera, CameraZoom, Capsule, Charger, Compass, Connector, ContactProperties, Damping, DifferentialWheels, DistanceSensor, Display, Emitter, GPS, Gyro, HingeJoint, HingeJointParameters, Hinge2Joint, Hinge2JointParameters, InertialUnit, JointParameters, LED, LightSensor, LinearMotor, Pen, Physics, Plane, PositionSensor, Receiver, Robot, RotationalMotor, SliderJoint, Solid, SolidReference, Supervisor` and `TouchSensor`.
+`Accelerometer, BallJoint, BallJointParameters, Brake, Camera, Capsule, Charger, Compass, Connector, ContactProperties, Cubemap, Damping, DifferentialWheels, Display, DistanceSensor, Emitter, Fluid, Focus, GPS, Gyro, HingeJoint, HingeJointParameters, Hinge2Joint, ImmersionProperties, InertialUnit, JointParameters, LED, Lens, LensFlare, Lidar, LightSensor, LinearMotor, Muscle, PBRAppearance, Pen, Physics, Plane, PositionSensor, Propeller, Radar, RangeFinder, Receiver, Recognition, Robot, RotationalMotor, SliderJoint, Slot, Solid, SolidReference, Speaker, Supervisor, TouchSensor, Track, TrackWheel ` and `Zoom`.
 
 Please refer to [this chapter](nodes-and-api-functions.md) for a detailed description of Webots nodes and fields.
 

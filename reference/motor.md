@@ -827,14 +827,14 @@ type = wb_motor_get_type(tag)
 *get the motor type*
 
 This function allows the user to retrieve the motor type defined by the `type` field.
-If the value of the `type` field is "linear", this function returns WB\_LINEAR, and otherwise it returns WB\_ANGULAR.
+If the value of the `type` field is "linear", this function returns WB\_LINEAR, and otherwise it returns WB\ROTATIONAL.
 
 %figure "Return values for the `wb_motor_get_type` function"
 
-| Motor.type   | return value |
-| ------------ | ------------ |
-| "rotational" | WB\_ANGULAR  |
-| "linear"     | WB\_LINEAR   |
+| Motor.type   | return value  |
+| ------------ | ------------- |
+| "rotational" | WB\ROTATIONAL |
+| "linear"     | WB\_LINEAR    |
 
 %end
 

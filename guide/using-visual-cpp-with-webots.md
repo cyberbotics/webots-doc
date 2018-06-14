@@ -129,7 +129,7 @@ Now the controller should pause when it reaches one of your breakpoints.
 
 ### Link with the Webots Libraries
 
-Webots contains several `C` or `C++` libraries based on the `libController` or `libCppController` libraries (e.g. the `automobile library`, `DARwIn-OP library`, `youBot library`, etc.).
+Webots contains several `C` or `C++` libraries based on the `libController` or `libCppController` libraries (e.g. the `vehicle libraries`, `DARwIn-OP library`, `youBot library`, etc.).
 
 The precompiled `C` libraries are released with their corresponding Visual Studio `.lib` file (the linker to the `.dll` file) to facilitate their integration into a Visual Studio project.
 They are located in the same directory as the library source, where the `.dll` file is generated.
@@ -139,14 +139,7 @@ They are located in the same directory as the library source, where the `.dll` f
 However there is no precompiled `C++` libraries for Visual Studio, because the `gcc` compiler tool chain embedded in Webots is incompatible with Visual C++.
 To use the `C++` libraries with your project, their source files should be compiled directly in your project, exactly as for the `libCppController` library (cf. instructions above).
 
-For example, to add the `C++ automobile libraries`:
-
-- Add the following include files to your project (`C/C++ > General > Additional Include Directories`):
-
-    - `$(WEBOTS_HOME)/projects/automobile/libraries/car/include`
-    - `$(WEBOTS_HOME)/projects/automobile/libraries/driver/include`
-    - `$(WEBOTS_HOME)/projects/automobile/libraries/CppCar/include`
-    - `$(WEBOTS_HOME)/projects/automobile/libraries/CppDriver/include`
+For example, to add the `C++ vehicle libraries`:
 
 - Add the `C`, `car` and `driver` precompiled libraries (`Linker > Input > Additional Dependencies`):
 
@@ -155,5 +148,7 @@ For example, to add the `C++ automobile libraries`:
 
 - Add the following `C++` source files to your project (`Add / New Filter` and `Add / Existing Item...`):
 
-    - `$(WEBOTS_HOME)/projects/automobile/libraries/CppCar/src/*.cpp`
-    - `$(WEBOTS_HOME)/projects/automobile/libraries/CppDriver/src/*.cpp`
+    - `$(WEBOTS_HOME)/projects/default/libraries/vehicle/cpp/car/src/*.cpp`
+    - `$(WEBOTS_HOME)/projects/default/libraries/vehicle/cpp/driver/src/*.cpp`
+
+- If the include files are not located in `$(WEBOTS_HOME)/include/controller/c` or `$(WEBOTS_HOME)/include/controller/cpp` (which is the case for the vehicle libraries), they should be added to your project (`C/C++ > General > Additional Include Directories`).

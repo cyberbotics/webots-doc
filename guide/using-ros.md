@@ -70,7 +70,7 @@ You must also be able to connect to each of the computer with  `ssh` in both way
 As ROS uses the hostname to find other computers on the network, you must add other computers' hostname and the associated IP address to the known hosts of each computer.
 You can find this list in a file named *hosts*.
 On Linux distribution, you can find it directly at `/etc/hosts`; on macOS, it is located at `/private/etc/hosts`; on Windows, it is located at `C:\Windows\System32\drivers\etc\hosts`.
-On Windows and macOS, this a hidden path and you will need to search directly for this path.
+On Windows and macOS, this is a hidden path and you will need to search directly for this path.
 The hosts file is usually protected and you will need administrator or root privileges to edit it.
 
 ### Custom Controller

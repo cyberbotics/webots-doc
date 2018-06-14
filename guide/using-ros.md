@@ -52,7 +52,7 @@ In the [Tutorial 7](tutorial-7-using-ros.md) chapter, you will find the instruct
 
 In the following table you can find the list of `ros` controller arguments.
 
-%figure "`ros` controller arguments"
+%figure "ros controller arguments"
 
 | Argument | Description |
 | -------- | ----------- |

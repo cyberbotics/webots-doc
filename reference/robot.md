@@ -24,7 +24,7 @@ Direct derived nodes: [DifferentialWheels](differentialwheels.md), [Supervisor](
 The [Robot](#robot) node can be used as basis for building a robot, e.g., an articulated robot, a humanoid robot, a wheeled robot.
 If you would like to build a robot with supervisor capabilities use the [Supervisor](supervisor.md) node instead (Webots PRO license required).
 
-> **Note**: Logically, if the Robot node has one or more Solid (or derived) ancestor nodes, then the physical properties of the ancestor nodes will affect the Robot node physical behavior.
+> **Note**: Logically, if the Robot node has one or more Solid (or derived) ancestor nodes, then the physical properties of the ancestor nodes will affect the Robot node's physical behavior.
 
 ### Field Summary
 

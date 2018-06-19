@@ -16,6 +16,7 @@ It can model an embedded screen or it can display any graphical information such
 
 If the first child of the [Display](#display) node is or contains (recursive search if the first node is a [Group](group.md)) a [Shape](shape.md) node having a [ImageTexture](imagetexture.md), then the internal texture of the(se) [ImageTexture](imagetexture.md) node(s) is replaced by the texture of the [Display](#display).
 In this case, the `Shape.appearance` field should contain an [Appearance](appearance.md) node (rather than a [PBRAppearance](pbrappearance.md) node).
+It is necessary to set the `filtering` field of the(se) [ImageTexture](imagetexture.md) node(s) to 0 in order to prevent issues when distancing oneself from the display.
 
 ### Field Summary
 

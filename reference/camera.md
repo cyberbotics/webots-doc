@@ -170,6 +170,15 @@ It is also possible to show the camera image in an external window by double-cli
 After doing it, the overlay disappears and a new window pops up.
 Then, after closing the window, the overlay will be automatically restored.
 
+When the [recognition mode](#wb_camera_has_recognition) is enabled, rectangles surround the recognized objects.
+If the mouse cursor is over one of these rectangles and the simulator is paused, then a complete description of the recognized object is displayed in red, as shown in [the following figure](#display-of-a-recognized-object).
+
+%figure "Display of a recognized object."
+
+![camera_recognition.png](images/camera_recognition.png)
+
+%end
+
 ### Camera Functions
 
 #### `wb_camera_enable`

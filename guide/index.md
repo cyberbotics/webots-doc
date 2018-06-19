@@ -38,6 +38,6 @@ In no event shall the EPFL be liable for incidental or consequential damages of 
 
 *Ubuntu*<sup>TM</sup> is a registered trademark of Canonical Ltd.
 
-*Visual C++*<sup>TM</sup>, *Windows*<sup>TM</sup>, *Windows XP*<sup>TM</sup>, *Windows Vista*<sup>TM</sup>, *Windows 7*<sup>TM</sup>, *Windows 8*<sup>TM</sup> and *Windows 10*<sup>TM</sup> are registered trademarks of Microsoft Corp.
+*Visual Studio*<sup>TM</sup>, *Windows*<sup>TM</sup>, *Windows XP*<sup>TM</sup>, *Windows Vista*<sup>TM</sup>, *Windows 7*<sup>TM</sup>, *Windows 8*<sup>TM</sup> and *Windows 10*<sup>TM</sup> are registered trademarks of Microsoft Corp.
 
 *UNIX*<sup>TM</sup> is a registered trademark licensed exclusively by X/Open Company, Ltd.

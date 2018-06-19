@@ -6,7 +6,7 @@ The compilation of Webots C/C++ and Java controllers can be configured in the pr
 A controller's Makefile is a configuration file used by the `make` utility and that optionally specifies a list of source files and how they will be compiled and linked to create the executable program.
 
 Note that Python and *MATLAB*<sup>TM</sup> are interpreted languages and therefore they don't need Makefiles.
-So if you are using any of these programming languages or Visual C++ then you can ignore this section.
+So if you are using any of these programming languages or Visual Studio then you can ignore this section.
 
 When using C/C++ or Java, the presence of a Makefile in the controller directory is necessary.
 If the Makefile is missing Webots will automatically propose to create one.

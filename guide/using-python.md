@@ -43,7 +43,7 @@ Using Python *pip*, the *NumPy* package is automatically installed with *opencv-
 
 #### Linux Libraries
 
-On Ubuntu 16.04, use the `pip` command to install OpenCV:
+On Ubuntu 16.04 or newer, use the `pip` command to install OpenCV:
 ```sh
 sudo apt-get install python-pip
 sudo pip install opencv-python

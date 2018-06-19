@@ -9,6 +9,6 @@ This chapter indicates how to use the built-in development environment or third-
 - [Compiling Controllers in a Terminal](compiling-controllers-in-a-terminal.md)
 - [Using Webots Makefiles](using-webots-makefiles.md)
 - [Debugging C/C++ Controllers](debugging-c-cpp-controllers.md)
-- [Using Visual C++ with Webots](using-visual-cpp-with-webots.md)
+- [Using Visual Studio with Webots](using-visual-studio-with-webots.md)
 - [Starting Webots Remotely (ssh)](starting-webots-remotely-ssh.md)
 - [Transfer to your own robot](transfer-to-your-own-robot.md)

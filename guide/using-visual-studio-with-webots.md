@@ -1,27 +1,32 @@
-## Using Visual C++ with Webots
+## Using Visual Studio with Webots
 
 ### Introduction
 
-Microsoft Visual C++ is an integrated development environment (IDE) for C/C++ available on the Windows platform.
-On Windows, Visual C++ is a possible alternative to using Webots built-in gcc (MinGW) compiler.
-Visual C++ can be used to develop controllers using Webots C or C++ API.
+Microsoft Visual Studio is an integrated development environment (IDE) for C/C++ available on the Windows platform.
+On Windows, Visual Studio is a possible alternative to using Webots built-in Makefile and gcc (MinGW) compiler.
+Visual Studio can be used to develop controllers using Webots C or C++ API.
 The developer must choose one of these two APIs as they cannot be used together in controller code.
 The C API is composed of ".h" files that contains flat C functions that can be used in C or C++ controllers.
 The C++ API is composed of ".hpp" files that contain C++ classes and methods that can be used in C++ controllers only.
-In principle any C or C++ controller from the Webots distribution can be turned into a Visual C++ project.
+In principle any C or C++ controller from the Webots distribution can be turned into a Visual Studio project.
+
+### Robot Controller Wizard
+
+Since Webots R2018b, a Visual Studio option is offered in the **Wizards / New Robot Controller...** menu after you choose the C or C++ language on Windows.
+This wizard creates a Visual Studio project for your robot controller, so that you don't need to configure it manually as described in the next section.
 
 ### Configuration
 
-When creating a Webots controller with Visual C++, it is necessary to specify the path to Webots ".h" and/or ".hpp" files.
+When creating a Webots controller with Visual Studio, it is necessary to specify the path to Webots ".h" and/or ".hpp" files.
 It is also necessary to configure the linker to use the "Controller.lib" import library from Webots distribution.
 The "Controller.lib" files is needed to link with the "Controller.dll" file that must be used by the controller in order to communicate with Webots.
 
-The following procedure (Visual C++ 2008 Express) explains how to create a Visual C++ controller for Webots.
-Note that the resulting ".exe" file must be launched by Webots; it cannot be run from Visual C++.
+The following procedure (Visual Studio 2008 Express) explains how to create a Visual Studio project for a Webots controller.
+Note that the resulting ".exe" file must be launched by Webots; it cannot be run from Visual Studio.
 
 1. Copy a Webots project from Webots distribution to your "Documents" folder, or create an empty project directory using Webots menu: `Wizard / New Project Directory...` Either way, the project directory must contain the "controllers" and "worlds" subdirectories.
 
-2. Start Visual C++ and select: `File / New / Project...`.
+2. Start Visual Studio and select: `File / New / Project...`.
 Then choose these settings:
 
         Project type: General
@@ -36,11 +41,11 @@ Then choose these settings:
 3. Then you can add a C or C++ source file to your project: Choose either: `Project / Add Existing Item` or `Project / Add New Item / C++ File (.cpp)`.
 In the second case you can copy the content of one of the C/C++ examples of Webots distribution.
 
-    Note that if you copied C code from Webots examples to Visual C++, it is highly
+    Note that if you copied C code from Webots examples to Visual Studio, it is highly
     recommended to change the source file extension from .c to .cpp. The reason is
     that Webots examples are written for the gcc compiler which uses a more modern
-    version of the C language than Visual C++. By changing the file extension to
-    .cpp you will instruct Visual C++ to compile the file in C++ mode (/TP) which is
+    version of the C language than Visual Studio. By changing the file extension to
+    .cpp you will instruct Visual Studio to compile the file in C++ mode (/TP) which is
     more tolerant with gcc code. If you don't do it, you may run into error messages
     like these:
 
@@ -57,9 +62,9 @@ In the `Property Pages`, in the `Configuration Properties`, enter following conf
         C/C++ > General > Additional Include Directories:
           C:\Program Files\Webots\include\controller\c
 
-    This will tell Visual C++ where to find Webots C API (.h files).
+    This will tell Visual Studio where to find Webots C API (.h files).
 
-    By default Visual C++ places the .exe file in a "Debug" or "Release"
+    By default Visual Studio places the .exe file in a "Debug" or "Release"
     subdirectory. However, in order to be executed by Webots, the .exe file must be
     placed directly at the root of the "MyController" directory. So, in this example
     the .exe should be there: "MyProject\controllers\MyController\MyController.exe".
@@ -67,14 +72,14 @@ In the `Property Pages`, in the `Configuration Properties`, enter following conf
 
         Linker > General > Output File: $(ProjectName).exe
 
-    Now we need to tell Visual C++ to use the "Controller.lib" import library:
+    Now we need to tell Visual Studio to use the "Controller.lib" import library:
 
         Linker > Input > Additional Dependencies:
           Controller.lib
         Linker > General > Additional Library Directories:
           C:\Program Files\Webots\msys64\mingw64\lib\
 
-    Note that with old versions of Visual C++, the default target is a 32-bit binary.
+    Note that with old versions of Visual Studio, the default target is a 32-bit binary.
     In case you are compiling the controller as a 32-bit binary, you will need to link it with the 32-bit version of the Controller library instead:
 
         Linker > General > Additional Library Directories:
@@ -96,7 +101,7 @@ If you want to use the C++ API follow these instructions:
     .cpp files that implement the interface between the C++ API and the C API. You
     can proceed like this:
 
-    In Visual C++, in the `Solution Explorer`: right-mouse-click on the `Sources
+    In Visual Studio, in the `Solution Explorer`: right-mouse-click on the `Sources
     Files` folder, then select `Add / New Filter`. This should create a `NewFilter1`
     subfolder in your `Sources Files` folder. Then select the `NewFilter1` and with
     the right-mouse-button: choose the `Add / Existing Item...` menu. In the file
@@ -115,13 +120,13 @@ Otherwise you should change it: hit the `...` (ellipsis) button, this opens a se
 In the selection dialog choose "MyController".
 Then hit the `Save` button in Webots' main window.
 Finally you can hit the `Run` button to start the simulation.
-At this point the simulation should be using your Visual C++ controller.
+At this point the simulation should be using your Visual Studio controller.
 
-8. If you want to debug your controller with Visual C++ you can *attach* the debugger to the running controller process.
+8. If you want to debug your controller with Visual Studio you can *attach* the debugger to the running controller process.
 Proceed like this: In Webots, hit the `Pause` button then the `Reload` button.
-Then, in Visual C++, use the `Debug / Attach to Process...` menu.
+Then, in Visual Studio, use the `Debug / Attach to Process...` menu.
 In the dialog choose the `MyController.exe_webots` process.
-Still in Visual C++, you can now add breakpoints and watches in the controller code.
+Still in Visual Studio, you can now add breakpoints and watches in the controller code.
 Then, in Webots, hit the `Run` button to resume the simulation.
 Now the controller should pause when it reaches one of your breakpoints.
 
@@ -134,7 +139,7 @@ They are located in the same directory as the library source, where the `.dll` f
 
 **Note**: The chosen architecture (32 or 64-bit) should match with Visual Studio solution platform and the path to the `Controller.lib` library.
 
-However there is no precompiled `C++` libraries for Visual Studio, because the `gcc` compiler tool chain embedded in Webots is incompatible with Visual C++.
+However there is no precompiled `C++` libraries for Visual Studio, because the `gcc` compiler tool chain embedded in Webots is incompatible with Visual Studio.
 To use the `C++` libraries with your project, their source files should be compiled directly in your project, exactly as for the `libCppController` library (cf. instructions above).
 
 For example, to add the `C++ automobile libraries`:

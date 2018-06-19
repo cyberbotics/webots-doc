@@ -22,9 +22,9 @@ This situation can be identified by these couple of symptoms:
 1. Webots GUI is visible and responsive, but the simulation is blocked (simulation time stopped).
 2. The controller process has vanished from the *Task Manager* (Windows) or is shown as *&lt;defunct&gt;* when using `ps -e` (Linux/Mac).
 
-### Is It Possible to Use Visual C++ to Compile My Controllers?
+### Is It Possible to Use Microsoft Visual Studio to Compile My Controllers?
 
 Yes.
 However, you will need to create your own project with all the necessary options.
-You will find more detailed instructions on how to do that in [this section](using-visual-cpp-with-webots.md).
-To create the import libraries (the "*.lib" files in Visual C++) from the "*.dll" files of the lib directory of Webots, please follow the instructions provided with the documentation of your compiler.
+You will find more detailed instructions on how to do that in [this section](using-visual-studio-with-webots.md).
+To create the import libraries (the "\*.lib" files in Visual Studio) from the "\*.dll" files of the lib directory of Webots, please follow the instructions provided with the documentation of your compiler.

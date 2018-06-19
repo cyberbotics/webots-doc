@@ -21,8 +21,10 @@ Direct derived nodes: [DifferentialWheels](differentialwheels.md), [Supervisor](
 
 ### Description
 
-The [Robot](#robot) node can be used as basis for building a robot, e.g., an articulated robot, a humanoid robot, a wheeled robot...
+The [Robot](#robot) node can be used as basis for building a robot, e.g., an articulated robot, a humanoid robot, a wheeled robot.
 If you would like to build a robot with supervisor capabilities use the [Supervisor](supervisor.md) node instead (Webots PRO license required).
+
+> **Note**: Logically, if the Robot node has one or more Solid (or derived) ancestor nodes, then the physical properties of the ancestor nodes will affect the Robot node's physical behavior.
 
 ### Field Summary
 
@@ -625,7 +627,7 @@ from controller import Robot
 
 class Robot:
     EVENT_NO_EVENT, EVENT_MOUSE_CLICK, EVENT_MOUSE_MOVE, EVENT_KEYBOARD, EVENT_JOYSTICK_BUTTON, EVENT_JOYSTICK_AXIS, EVENT_JOYSTICK_POV
-    
+
     def waitForUserInputEvent(self, event_type, timeout):
     # ...
 ```

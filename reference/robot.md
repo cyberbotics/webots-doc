@@ -595,6 +595,17 @@ for(i=0; i<n_devices; i++) {
 ```c
 #include <webots/robot.h>
 
+typedef enum {
+  WB_EVENT_QUIT,
+  WB_EVENT_NO_EVENT,
+  WB_EVENT_MOUSE_CLICK,
+  WB_EVENT_MOUSE_MOVE,
+  WB_EVENT_KEYBOARD,
+  WB_EVENT_JOYSTICK_BUTTON,
+  WB_EVENT_JOYSTICK_AXIS,
+  WB_EVENT_JOYSTICK_POV
+} WbUserInputEvent;
+
 WbUserInputEvent wb_robot_wait_for_user_input_event(WbUserInputEvent event_type, int timeout);
 ```
 
@@ -608,7 +619,7 @@ WbUserInputEvent wb_robot_wait_for_user_input_event(WbUserInputEvent event_type,
 namespace webots {
   class Robot {
     typedef enum {
-      EVENT_NO_EVENT, EVENT_MOUSE_CLICK, EVENT_MOUSE_MOVE, EVENT_KEYBOARD,
+      EVENT_QUIT, EVENT_NO_EVENT, EVENT_MOUSE_CLICK, EVENT_MOUSE_MOVE, EVENT_KEYBOARD,
       EVENT_JOYSTICK_BUTTON, EVENT_JOYSTICK_AXIS, EVENT_JOYSTICK_POV
     } UserInputEvent;
 
@@ -626,7 +637,7 @@ namespace webots {
 from controller import Robot
 
 class Robot:
-    EVENT_NO_EVENT, EVENT_MOUSE_CLICK, EVENT_MOUSE_MOVE, EVENT_KEYBOARD, EVENT_JOYSTICK_BUTTON, EVENT_JOYSTICK_AXIS, EVENT_JOYSTICK_POV
+    EVENT_QUIT, EVENT_NO_EVENT, EVENT_MOUSE_CLICK, EVENT_MOUSE_MOVE, EVENT_KEYBOARD, EVENT_JOYSTICK_BUTTON, EVENT_JOYSTICK_AXIS, EVENT_JOYSTICK_POV
 
     def waitForUserInputEvent(self, event_type, timeout):
     # ...
@@ -640,7 +651,7 @@ class Robot:
 import com.cyberbotics.webots.controller.Robot;
 
 public class Robot {
-  public final static int EVENT_NO_EVENT, EVENT_MOUSE_CLICK,
+  public final static int EVENT_QUIT, EVENT_NO_EVENT, EVENT_MOUSE_CLICK,
      EVENT_MOUSE_MOVE, EVENT_KEYBOARD, EVENT_JOYSTICK_BUTTON,
      EVENT_JOYSTICK_AXIS, EVENT_JOYSTICK_POV;
 
@@ -654,7 +665,7 @@ public class Robot {
 %tab "MATLAB"
 
 ```matlab
-WB_EVENT_NO_EVENT, WB_EVENT_MOUSE_CLICK, WB_EVENT_MOUSE_MOVE, WB_EVENT_KEYBOARD, WB_EVENT_JOYSTICK_BUTTON, WB_EVENT_JOYSTICK_AXIS, WB_EVENT_JOYSTICK_POV
+WB_EVENT_QUIT, WB_EVENT_NO_EVENT, WB_EVENT_MOUSE_CLICK, WB_EVENT_MOUSE_MOVE, WB_EVENT_KEYBOARD, WB_EVENT_JOYSTICK_BUTTON, WB_EVENT_JOYSTICK_AXIS, WB_EVENT_JOYSTICK_POV
 
 event_type = wb_robot_wait_for_user_input_event(event_type, timeout)
 ```
@@ -678,7 +689,8 @@ event_type = wb_robot_wait_for_user_input_event(event_type, timeout)
 This function can be used to get [Joystick](joystick.md), [Keyboard](keyboard.md) and [Mouse](mouse.md) input without calling the `wb_robot_step` function, this is useful to prevent the simulation from running until a specific user input event occurs.
 This function blocks the simulation and will return:
   - as soon as an event which type is defined by the `event_type` argument occurs (the list of available types is defined in [this table](#helper-enumeration-to-interpret-the-event_type-argument-and-return-value-of-the-wb_robot_wait_for_user_input_event-function)).
-  - when the amout of milliseconds specified by the `timeout` argument has passed. This timeout is expressed in real time and not in simulation time.
+  - when the amount of milliseconds specified by the `timeout` argument has passed. This timeout is expressed in real time and not in simulation time.
+  - when Webots wishes to terminate the controller (in that case `WB_EVENT_QUIT` is returned).
 
 It is possible to combine event types in order to return as soon as one of the event occurs:
 
@@ -694,6 +706,7 @@ In that case, the sampling period is expressed in real time and not in simulatio
 
 | Event                       | Purpose                                                 |
 | --------------------------- | ------------------------------------------------------- |
+| `WB_EVENT_QUIT`             | returned when Webots wishes to terminate the controller |
 | `WB_EVENT_NO_EVENT`         | no event occurred or no event should cause a return     |
 | `WB_EVENT_MOUSE_CLICK`      | used to detect a mouse click in the 3D window           |
 | `WB_EVENT_MOUSE_MOVE`       | used to detect the motion of the mouse in the 3D window |

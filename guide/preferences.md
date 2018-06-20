@@ -46,10 +46,6 @@ Globally speaking, performance can be improved by disabling this feature, but on
 - The **Disable camera anti-aliasing** option allows you to bypass all the *Camera.antialiasing* fields and to disable this feature.
 We observed that some hardware doesn't support the OpenGL feature about anti-aliasing when rendering into a texture (RTT).
 
-- The **Width of rasterized lines** value specifies the width of all the lines drawn in the 3D scene.
-In particular this affects the visual representations of bounding objects, coordinate systems, optional renderings, axes of translation and rotation handles, apply force and torque arrows, and IndexedLineSet nodes.
-The default value is 1.0.
-
 ### Network
 
 The **Network** tab allows you to manually configure a HTTP proxy that Webots will use to access its license server over the Internet.

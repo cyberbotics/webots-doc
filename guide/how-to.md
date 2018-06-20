@@ -102,10 +102,12 @@ This is known as the "Inverted Pendulum Problem", and it is solved in our exampl
 
 ### mouse\_events.wbt
 
-**Keywords**: Mouse events
+**Keywords**: Mouse events, user input
 
 ![mouse_events.png](images/samples/mouse_events.png) This example shows the use of the Supervisor mouse events.
-When the simulation is running, the `Supervisor` controller called `mouse_events.c` gets the last mouse event and displays in the `Console` the 3D coordinate and the name of the hit object.
+When the simulation is running, the `Supervisor` controller called `mouse_events.c` waits for a mouse event and displays in the `Console` the 3D and 2D coordinates of the mouse and the name of the hit object.
+The controller of this simulation is blocking, which means it will block until a mouse click is detected and it will not advance the simulation time.
+An alternative non blocking controller called `mouse_events_non_blocking.c` is also available for this example.
 
 ### omni\_wheels.wbt
 

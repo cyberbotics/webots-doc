@@ -26,7 +26,7 @@ The default `RectangleArena` PROTO defines a simple floor pinned on the statical
 Other pre-built floors are available in the Webots objects library.
 We will now delete the default arena and add a simple floor that we will manually surround the walls later in this tutorial.
 
-> **Hands on**: To remove the `RectangleArena`, select it in the scene tree view and press the `Delete` button located in the toolbar.
+> **Hands on**: To remove the `RectangleArena`, right click on it in the 3D view and press on `Delete` in the context menu (you can also use the context menu directly in the scene tree view).
 
 <!-- -->
 

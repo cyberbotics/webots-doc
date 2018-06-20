@@ -216,7 +216,7 @@ When it returns, the requested duration of simulation time is elapsed.
 In other words the physics runs for the specified duration: objects may move, the motors may run, the sensor values may change, etc.
 Note that the `duration` parameter must be a multiple of the `WorldInfo.basicTimeStep`.
 
-If this function returns -1, this indicates that Webots wishes to terminate the controller.
+If this function returns -1, this indicates that Webots is about to terminate the controller.
 This happens when the user hits the `Reload` button or quits Webots.
 So if your code needs to do some cleanup, e.g., flushing or closing data files, etc., it is necessary to test this return value and take proper action.
 The controller termination cannot be vetoed: one second later the controller is killed by Webots.
@@ -690,7 +690,7 @@ This function can be used to get [Joystick](joystick.md), [Keyboard](keyboard.md
 This function blocks the simulation and will return:
   - as soon as an event which type is defined by the `event_type` argument occurs (the list of available types is defined in [this table](#helper-enumeration-to-interpret-the-event_type-argument-and-return-value-of-the-wb_robot_wait_for_user_input_event-function)).
   - when the amount of milliseconds specified by the `timeout` argument has passed. This timeout is expressed in real time and not in simulation time.
-  - when Webots wishes to terminate the controller (in that case `WB_EVENT_QUIT` is returned).
+  - when Webots is about to terminate the controller (in that case `WB_EVENT_QUIT` is returned).
 
 It is possible to combine event types in order to return as soon as one of the event occurs:
 
@@ -704,16 +704,16 @@ In that case, the sampling period is expressed in real time and not in simulatio
 
 %figure "Helper enumeration to interpret the event_type argument and return value of the `wb_robot_wait_for_user_input_event` function"
 
-| Event                       | Purpose                                                 |
-| --------------------------- | ------------------------------------------------------- |
-| `WB_EVENT_QUIT`             | returned when Webots wishes to terminate the controller |
-| `WB_EVENT_NO_EVENT`         | no event occurred or no event should cause a return     |
-| `WB_EVENT_MOUSE_CLICK`      | used to detect a mouse click in the 3D window           |
-| `WB_EVENT_MOUSE_MOVE`       | used to detect the motion of the mouse in the 3D window |
-| `WB_EVENT_KEYBOARD`         | used to detect a keyboard key press/release             |
-| `WB_EVENT_JOYSTICK_BUTTON`  | used to detect a joystick button press/release          |
-| `WB_EVENT_JOYSTICK_AXIS`    | used to detect the motion of a joystick axis            |
-| `WB_EVENT_JOYSTICK_POV`     | used to detect state change of a joystick pov           |
+| Event                       | Purpose                                                   |
+| --------------------------- | --------------------------------------------------------- |
+| `WB_EVENT_QUIT`             | returned when Webots is about to terminate the controller |
+| `WB_EVENT_NO_EVENT`         | no event occurred or no event should cause a return       |
+| `WB_EVENT_MOUSE_CLICK`      | used to detect a mouse click in the 3D window             |
+| `WB_EVENT_MOUSE_MOVE`       | used to detect the motion of the mouse in the 3D window   |
+| `WB_EVENT_KEYBOARD`         | used to detect a keyboard key press/release               |
+| `WB_EVENT_JOYSTICK_BUTTON`  | used to detect a joystick button press/release            |
+| `WB_EVENT_JOYSTICK_AXIS`    | used to detect the motion of a joystick axis              |
+| `WB_EVENT_JOYSTICK_POV`     | used to detect state change of a joystick pov             |
 
 %end
 

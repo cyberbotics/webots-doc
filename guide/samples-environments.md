@@ -1,4 +1,4 @@
-## Environments Directory
+## Environments
 
 This section shows some of the possible environments and objects available in Webots inside composed scenes.
 Webots objects are modular and parametrizable, so other environments can be created simply, starting from these examples.
@@ -6,7 +6,7 @@ The world files for these examples are located in the "projects/sample/environme
 
 Outdoor and urban environments located in the "projects/vehicles/worlds" and are not shown here.
 
-In this directory, you will find the following world files :
+In this directory, you will find the following world files:
 
 ### apartment.wbt
 

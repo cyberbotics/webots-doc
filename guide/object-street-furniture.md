@@ -44,7 +44,7 @@ Bench {
   SFString   name                 "bench"
   SFColor    metalColor           0.17 0.17 0.17
   SFColor    woodColor            0.25 0.17 0.12
-  MFColor    recognitionColors    [0.17 0.17 0.17, 0.25 0.17 0.12]
+  MFColor    recognitionColors    [0.25 0.17 0.12, 0.17 0.17 0.17]
 }
 ```
 
@@ -605,11 +605,12 @@ PublicToilet {
   SFBool      backDisplayLight    FALSE
   MFNode      frontDisplay        [
     AdvertisingBoard {
+      translation 0 0.1 0
       frontTexture ["textures/webots_billboard.jpg"]
       backTexture []
       displayBackLight FALSE
-      displayWidth 0.90
-      displayHeight 1.35
+      displayWidth 0.9
+      displayHeight 0.9
       frameThickness 0.1
     }
   ]
@@ -798,7 +799,7 @@ TrashBin {
   SFString   name                 "trash bin"
   SFColor    coverColor           0.1 0.1 0.1
   SFColor    binColor             0.08 0.46 0
-  MFColor    recognitionColors    [0.1 0.1 0.1, 0.08 0.46 0]
+  MFColor    recognitionColors    [0.08 0.46 0, 0.1 0.1 0.1]
 }
 ```
 

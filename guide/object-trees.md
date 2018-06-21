@@ -95,6 +95,7 @@ Forest {
   MFVec2f    shape                [ -20 -10, 20 -10, 0 25]
   SFFloat    density              0.2
   SFString   type                 "random"
+  SFInt32    randomSeed           0
   MFString   groundTexture        ["textures/dry_leaf.jpg"]
   SFBool     withSnow             FALSE
   SFFloat    maxHeight            6
@@ -118,6 +119,8 @@ Forest {
 - `density`: If the forest is defined using the `shape` field, this field defines the density of three to be generated (in trees per meter square).
 
 - `type`: Defines the type of threes, in case of `random` type, the forest will be mixed.
+
+- `randomSeed`: Defines the seed of the random number generator. A value of 0 sets the seed to the node id and a value smaller than 0 sets a time based random seed.
 
 - `groundTexture`: Defines the texture of the forest ground. If this field is empty the forest ground is not displayed.
 

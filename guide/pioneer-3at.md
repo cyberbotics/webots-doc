@@ -28,7 +28,7 @@ More information on the specifications and optional devices is available on the 
 
 The standard model of the Pioneer 3-AT is provided in the "pioneer3AT.wbt" file which is located in the "WEBOTS\_HOME/projects/robots/adept/pioneer3/worlds" directory of the Webots distribution.
 
-The Pioneer 3-AT motors are `RotationalMotor` nodes named according to [this figure](#pioneer-3-at-motor-names).
+The Pioneer 3-AT motors are [RotationalMotor](../reference/rotationalmotor.md) nodes named according to [this figure](#pioneer-3-at-motor-names).
 The `wb_set_motor_position` and `wb_set_motor_velocity` functions allow the user to control the rotation of the wheels.
 
 %figure "Pioneer 3-AT motor names"
@@ -58,7 +58,7 @@ Pioneer3at {
   SFString   name            "Pioneer 3-AT"
   SFString   controller      "void"
   SFString   controllerArgs  ""
-  SFString   customData      ""
+  SFString   customData      ""f
   SFBool     synchronization TRUE
   MFNode     extensionSlot   []
 }
@@ -74,6 +74,6 @@ Pioneer3at {
 
 #### pioneer3at.wbt
 
-![pioneer3at_avoidance.png](images/robots/pioneer-3at/pioneer3at_avoidance.wbt.png) The "pioneer3at.wbt" world file is a simulation example of a simple obstacle avoidance behavior based on the use of a SICK LMS 291 Lidar (see the "obstacle\_avoidance\_with\_lidar.c" controller file in the "WEBOTS\_HOME/projects/robots/adept/pioneer3/controller" directory).
-The Lidar depth output is used to compute two stimuli in front of the robot.
+![pioneer3at_avoidance.png](images/robots/pioneer-3at/pioneer3at_avoidance.wbt.png) The "pioneer3at.wbt" world file is a simulation example of a simple obstacle avoidance behavior based on the use of a SICK LMS 291 [Lidar](../reference/lidar.md) (see the "obstacle\_avoidance\_with\_lidar.c" controller file in the "WEBOTS\_HOME/projects/robots/adept/pioneer3/controller" directory).
+The [Lidar](../reference/lidar.md) depth output is used to compute two stimuli in front of the robot.
 These two stimuli are computed by a [Gaussian function](https://en.wikipedia.org/wiki/Gaussian_function) applied slightly on the front left, and respectively on the front right of the robot.

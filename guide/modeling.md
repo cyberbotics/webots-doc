@@ -17,7 +17,7 @@ This will make the system numerically more robust and less susceptible to stabil
 This will also make the system look more *spongy* so a tradeoff has to be found.
 5. Avoid making robots (or other objects) move faster than reasonably for the time step (`WorldInfo.basicTimeStep`).
 Since contact forces are computed and applied only at every time step, too fast moving bodies can penetrate each other in unrealistic ways.
-6. Avoid building mechanical loops by using `Connector` nodes.
+6. Avoid building mechanical loops by using [Connector](../reference/connector.md) nodes.
 The mechanical loops may cause constraints to fight each other and generate strange forces in the system that can swamp the normal forces.
 For example, an affected body might fly around as though it has life on its own, with complete disregard for gravity.
 
@@ -118,28 +118,28 @@ You will find the description about the ODE functions on [this page](http://ode-
 
 It is more accurate to specify the mass if it is known.
 If you are modeling a real robot it is sometimes possible to find the mass values in the robot's specifications.
-If you specify the densities, Webots will use the volume of each `boundingObject` multiplied by the density of the corresponding `Physics` node to compute each mass.
+If you specify the densities, Webots will use the volume of each `boundingObject` multiplied by the density of the corresponding [Physics](../reference/physics.md) node to compute each mass.
 This may be less accurate because `boundingObject`s are often rough approximations.
 
 ### How to Get a Realisitc and Efficient Rendering?
 
-The quality of the rendering depends on the `Shapes` resolution, on the setup of the `Materials` and on the setup of the `Lights`.
+The quality of the rendering depends on the [Shapes](../reference/shape.md)` resolution, on the setup of the `Materials` and on the setup of the `Lights`.
 
 The bigger the number of vertices is, the slower the simulation is (except obviously in `fast` mode).
 A tradeoff has to be found between these two components.
-To be efficient, `Shapes` should have a reasonable resolution.
-If a rule should be given, a `Shape` shouldn't exceed 1000 vertices.
-Exporting a `Shape` from a CAD software generates often meshes having a huge resolution.
+To be efficient, [Shapes](../reference/shape.md)` should have a reasonable resolution.
+If a rule should be given, a [Shape](../reference/shape.md) shouldn't exceed 1000 vertices.
+Exporting a [Shape](../reference/shape.md) from a CAD software generates often meshes having a huge resolution.
 Reducing them to low poly meshes is recommended.
 
 The rendering is also closely related to the `Materials`.
-To set a `Material` without texture, set only its `Appearance` node.
+To set a [Material](../reference/material.md) without texture, set only its `Appearance` node.
 Then you can play with the `diffuseColor` field to set its color (avoid to use pure colors, balancing the RGB components gives better results).
-To set a `Material` with texture, set only its `ImageTexture` node.
+To set a [Material](../reference/material.md) with texture, set only its [ImageTexture](../reference/imagetexture.md) node.
 Eventually, the `specularColor` field can be set to a gray value to set a reflection on the object.
 The other fields (especially the `ambientIntensity` and the `emissiveColor` fields) shouldn't be modified except in specific situations.
 
-The `color` field of the `ElevationGrid` shouldn't be used for a realistic rendering because it is not affected by the ambient light with the same way as the other `Shapes`.
+The `color` field of the [ElevationGrid](../reference/elevationgrid.md) shouldn't be used for a realistic rendering because it is not affected by the ambient light with the same way as the other [Shapes](../reference/shape.md)`.
 
 Here is a methodology to set up the lights:
 
@@ -149,5 +149,5 @@ Often, a single directional light pointing down is sufficient.
 3. Increase the `ambientIntensity` of the main light.
 The result will be the appearance of the objects when they are in shadows.
 4. Switch on the shadows if required.
-The shadows are particularily costly, and are strongly related to the `Shapes` resolution.
+The shadows are particularily costly, and are strongly related to the [Shapes](../reference/shape.md)` resolution.
 5. Increase the `intensity` of each lamp.

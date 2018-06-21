@@ -28,10 +28,10 @@ More information on the specifications and optional devices is available on the 
 
 %end
 
-This model includes support for two motors, the caster wheel, 7 LEDs on the control panel and 16 sonar sensors (8 forward-facing, 8 rear-facing) for proximity measurements.
+This model includes support for two motors, the caster wheel, 7 [LEDs](../reference/led .md) on the control panel and 16 sonar sensors (8 forward-facing, 8 rear-facing) for proximity measurements.
 The standard model of the Pioneer 3-DX is provided in the "pioneer3dx.wbt" file which is located in the "WEBOTS\_HOME/projects/robots/adept/pioneer3/worlds" directory of the Webots distribution.
 
-The Pioneer 3-DX motors are `RotationalMotor` nodes named according to [this figure](#pioneer-3-dx-motor-names).
+The Pioneer 3-DX motors are [RotationalMotor](../reference/rotationalmotor.md) nodes named according to [this figure](#pioneer-3-dx-motor-names).
 The `wb_set_motor_position` and `wb_set_motor_velocity` functions allow the user to control the rotation of the wheels.
 
 %figure "Pioneer 3-DX motor names"
@@ -50,7 +50,7 @@ The sonar sensors are numbered according to [this figure](#sonar-sensors-positio
 
 The angle between two consecutive sensor directions is 20 degrees except for the four side sensors (so0, so7, so8 and so15) for which the angle is 40 degrees.
 
-The 7 LEDs are named according to [this table](#pioneer-3-dx-led-names), where the numbers are shown on [this figure](#leds-positions).
+The 7 [LEDs](../reference/led .md) are named according to [this table](#pioneer-3-dx-led-names), where the numbers are shown on [this figure](#leds-positions).
 
 %figure "Pioneer 3-DX LED names"
 
@@ -103,7 +103,7 @@ The worlds and controllers can be accessed in the "WEBOTS\_HOME/projects/robots/
 #### pioneer3dx.wbt
 
 ![pioneer3dx_example.png](images/robots/pioneer-3dx/pioneer3dx.wbt.png) The "pioneer3dx.wbt" world file shows a simulation example of an avoidance algorithm based on the use of the 16 sonar sensors (see the "pioneer3dx\_collision\_avoidance.c" controller file).
-The three LEDs are switched on and off periodically.
+The three [LEDs](../reference/led .md) are switched on and off periodically.
 
 #### pioneer3dx\_collision\_avoidance.wbt
 

@@ -57,7 +57,7 @@ The source code for this controller is in the "khepera\_gripper" directory.
 
 ### khepera\_gripper\_camera.wbt
 
-![khepera_gripper_camera.wbt.png](images/robots/khepera1/khepera_gripper_camera.wbt.png) In this example, you can see a Khepera robot equipped with a gripper and a `Camera` device.
+![khepera_gripper_camera.wbt.png](images/robots/khepera1/khepera_gripper_camera.wbt.png) In this example, you can see a Khepera robot equipped with a gripper and a [Camera](../reference/camera.md) device.
 The robot uses its gripper to grab a stick, move a bit with it and drop it on the floor.
 This behavior is repeated endlessly.
 In this world, the robot does not analyse the images it takes with its camera.
@@ -65,7 +65,7 @@ The source code for this controller is in the "khepera\_gripper" directory.
 
 ### khepera\_k213.wbt
 
-![khepera_k213.wbt.png](images/robots/khepera1/khepera_k213.wbt.png) In this example, you can see a Khepera robot equipped with a K213 `Camera` device.
+![khepera_k213.wbt.png](images/robots/khepera1/khepera_k213.wbt.png) In this example, you can see a Khepera robot equipped with a K213 [Camera](../reference/camera.md) device.
 This camera is a linear vision turret with grayscale images.
 Using this device, the robot is able to translate the information contained in the image into text and print this result in the Webots console.
 When you load this world, the robot will not begin to move immediately.

@@ -80,11 +80,11 @@ Camera rotation can be useful when checking wether your force / torque vector ha
 
 ### Moving and Resizing Overlays
 
-By default for each Camera, Display and RangeFinder device, an overlay showing the recorded or displayed image is visible in the 3D view.
-The device type is indicated by the border color: magenta for Camera devices, cyan for Display devices and yellow for RangeFinder devices, see [this figure](#camera-display-and-rangefinder-overlays).
+By default for each [Camera](../reference/camera.md), [Display](../reference/display.md) and [RangeFinder](../reference/rangefinder.md) device, an overlay showing the recorded or displayed image is visible in the 3D view.
+The device type is indicated by the border color: magenta for [Camera](../reference/camera.md) devices, cyan for [Display](../reference/display.md) devices and yellow for [RangeFinder](../reference/rangefinder.md) devices, see [this figure](#camera-display-and-rangefinder-overlays).
 This overlay can be moved to the desired position on the view by clicking on it and dragging the mouse.
 In order to resize the overlay the user has to click on the icon located at the bottom right corner and drag the mouse, during this action the original not scaled image size will be indicated using darker areas, as depicted in [this figure](#camera-overlay-resizing) Additionally a close button is available on the top right corner to hide the overlay.
-Once the robot is selected, it is also possible to show or hide the overlay images from the `Camera Devices`, `Display Devices` and `RangeFinder Devices` items in `Robot` menu.
+Once the robot is selected, it is also possible to show or hide the overlay images from the `Camera Devices`, `Display Devices` and `RangeFinder Devices` items in [Robot](../reference/robot.md) menu.
 
 %figure "Camera, Display and RangeFinder overlays"
 

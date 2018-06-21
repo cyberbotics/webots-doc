@@ -19,7 +19,7 @@ In this example, physics laws are applied on these primitives.
 **Keywords**: Extrusion
 
 ![extrusion.png](images/samples/extrusion.png) This example demonstrates the use of the `Extrusion` PROTO.
-The `Extrusion` PROTO is a procedural PROTO which generates an `IndexedFaceSet` node.
+The `Extrusion` PROTO is a procedural PROTO which generates an [IndexedFaceSet](../reference/indexedfaceset.md) node.
 The `Extrusion` PROTO fields allow to define a 2D cross-section, and to extrude it along a path.
 In this example, the cross-section is a triangle extruded along a spiral path.
 
@@ -36,7 +36,7 @@ The small `Solids` are affected by the fluids' viscosity and by forces generated
 **Keywords**: Box, Capsule, Cone, Cylinder, ElevationGrid, IndexedLineSet, IndexedFaceSet, Plane, Sphere
 
 ![geometric_primitives.png](images/geometric_primitives.png) This example demonstrates the geometric primitives natively supported in Webots.
-The primitives are inserted into `Transform` and `Shape` nodes.
+The primitives are inserted into [Transform](../reference/transform.md) and [Shape](../reference/shape.md) nodes.
 Therefore they are static, i.e. physics is not applied on them.
 
 ### high\_resolution\_indexedfaceset.wbt
@@ -57,16 +57,16 @@ The `Muscle` nodes complete the joints by visualizing colored capsule-like shape
 
 Two scenarios are shown:
 
-1. Two muscles are applied on a `HingeJoint` node.
+1. Two muscles are applied on a [HingeJoint](../reference/hingejoint.md) node.
 Depending on the joint motion, one muscle is contracted, and the other one is released.
-2. A muscle is applied on a `SliderJoint` node.
+2. A muscle is applied on a [SliderJoint](../reference/sliderjoint.md) node.
 
 ### physics\_primitives.wbt
 
 **Keywords**: Collisions, physics primitives
 
 ![physics_primitives.png](images/samples/physics_primitives.png) This example demonstrates a large set of the possible collisions between the basic physics primitives.
-Three identical sets of primitives composed of `Box`, a `Capsule`, a `Cylinder`, a `Sphere` and an `IndexedFaceSet` nodes fall onto three surfaces respectively; a `Box`, a `Plane` and an `ElevationGrid` node.
+Three identical sets of primitives composed of [Box](../reference/box.md), a `Capsule`, a [Cylinder](../reference/cylinder.md), a [Sphere](../reference/sphere.md) and an [IndexedFaceSet](../reference/indexedfaceset.md) nodes fall onto three surfaces respectively; a [Box](../reference/box.md), a [Plane](../reference/plane.md) and an [ElevationGrid](../reference/elevationgrid.md) node.
 
 ### polygons.wbt
 
@@ -101,4 +101,4 @@ The same `Appearance` node is applied on all the basic primitives following VRML
 
 **Keywords**: IndexedFaceSet, UV mapping
 
-![webots_box.png](images/samples/webots_box.png) This example shows how the Webots box can be modeled using an `IndexedFaceSet` node and texture mapping.
+![webots_box.png](images/samples/webots_box.png) This example shows how the Webots box can be modeled using an [IndexedFaceSet](../reference/indexedfaceset.md) node and texture mapping.

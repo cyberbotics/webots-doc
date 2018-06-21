@@ -143,23 +143,23 @@ For the position sensors, the name is the same than the one of the motors, with 
 
 #### LEDs
 
-The two RGB LEDs are placed on the robot head.
+The two RGB [LEDs](../reference/led .md) are placed on the robot head.
 They are called `HeadLed` and `EyeLed`.
 The two eyes will have same color.
-Note that these LEDs are replicated on the robot back panel.
+Note that these [LEDs](../reference/led .md) are replicated on the robot back panel.
 
-The three other LEDs are unicolor and placed on the robot back.
+The three other [LEDs](../reference/led .md) are unicolor and placed on the robot back.
 They are called `BackLedGreen`, `BackLedBlue` and `BackLedRed`.
 
 #### Accelerometer
 
 The accelerometer returns values between 0 and 1024 corresponding to values between -3 [g] to +3 [g] like on the real robot.
-The Webots device simulating it is called `Accelerometer`.
+The Webots device simulating it is called [Accelerometer](../reference/accelerometer.md).
 
 #### Gyroscope
 
 The gyroscope returns values between 0 and 1024, corresponding to values between -1600 [deg/sec] and +1600 [deg/sec], similarly to the values returned by the real robot.
-The Webots device simulating it is called `Gyro`.
+The Webots device simulating it is called [Gyro](../reference/gyro.md).
 
 #### Camera
 
@@ -169,7 +169,7 @@ The horizontal field of view is 1.0123 [rad].
 
 #### Speaker
 
-The Webots device simulating a speaker is named `Speaker`.
+The Webots device simulating a speaker is named [Speaker](../reference/speaker.md).
 It can be used to play sound files or perform text-to-speech.
 
 To be able to use text-to-speech feature, it is **required** to install the program `espeak` on the robot.
@@ -282,7 +282,7 @@ The *start* and *stop* functions are used to start and stop the algorithm.
 The *step* function is used to run the algorithm for a specified *duration*, expressed in milliseconds.
 
 > **Note**: In order to run, the gait manager needs to know the position of each motor and the values of the gyroscope.
-It is therefore essential to enable the `Gyro` device and the `PositionSensor` device of each motor before using it.
+It is therefore essential to enable the [Gyro](../reference/gyro.md) device and the [PositionSensor](../reference/positionsensor.md) device of each motor before using it.
 If it is not the case, a warning will appear and they will automatically be enabled.
 
 #### Motion Manager
@@ -615,7 +615,7 @@ Webots will also stop the auto start of the demo program at the startup of the r
 Then the controller code itself is sent to the robot.
 The whole controller directory is sent to the robot, so please put all the files needed by your controller in the same directory.
 The controller itself is then compiled for the robot and you can see the compilation in the `Robot console`.
-If the compilation succeeds and the robot is close to the [start position](#start-position-of-the-robot-the-robot-is-sit-down-same-start-position-as-in-simulation) the controller will be initialized (head and eyes LED in red) and then started (head and eyes LED in green).
+If the compilation succeeds and the robot is close to the [start position](#start-position-of-the-robot-the-robot-is-sit-down-same-start-position-as-in-simulation) the controller will be initialized (head and eyes [LED](../reference/led.md) in red) and then started (head and eyes [LED](../reference/led.md) in green).
 
 %figure "Start position of the robot. The robot is sit down (same start position as in simulation)"
 
@@ -760,7 +760,7 @@ Especially when P is small.
 
 #### Text-To-Speech Warning Message
 
-When using one of the two functions of text to speech from the `Speaker` module in cross-compilation, you might see the following message:
+When using one of the two functions of text to speech from the [Speaker](../reference/speaker.md) module in cross-compilation, you might see the following message:
 
 ```
 bt_audio_service_open : connect() failed : Connection refused (111)
@@ -816,14 +816,14 @@ A simple workaround to fix the issue is to replace the `MATLAB_HOME\MATLAB_VERSI
 
 #### visual\_tracking.wbt
 
-![visual_tracking.wbt.png](images/robots/robotis-op2/visual_tracking.wbt.png) This example illustrates the use of the camera (including the [Vision Manager](#vision-manager)) and the use of the RGB LEDs.
+![visual_tracking.wbt.png](images/robots/robotis-op2/visual_tracking.wbt.png) This example illustrates the use of the camera (including the [Vision Manager](#vision-manager)) and the use of the RGB [LEDs](../reference/led .md).
 
 In the infinite loop the [Vision Manager](#vision-manager) is used to find the red ball.
 Then, if the ball has been found the head led is set to green and otherwise to red.
 Then, again, if the ball has been found the position of the two motors of the head is corrected to watch in the direction of the ball.
 To move the ball in simulation, press Ctrl+Shift and move the ball with the left button of the mouse pressed on it.
 
-Try to change the color of the LED by changing this line:
+Try to change the color of the [LED](../reference/led.md) by changing this line:
 
 ```cpp
 mHeadLED->set(0xFF0000);

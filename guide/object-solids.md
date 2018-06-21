@@ -175,4 +175,3 @@ SolidTorus {
 - `subdivision`: Defines the number of polygons used to represent the torus and so its resolution.
 
 - `appearance`: Defines the appearance of the torus.
-

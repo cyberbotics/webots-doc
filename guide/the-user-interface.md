@@ -14,7 +14,7 @@ The GUI has nine menus: `File, Edit, View, Simulation, Build, Overlays, Tools, W
 
 The **File** menu allows you to perform usual file operations: loading, saving, etc.
 
-- The **New World** menu item (and button) opens a new world in the simulation window containing only an `ElevationGrid`, displayed as a chessboard of 10 x 10 squares on a surface of 1 m x 1 m.
+- The **New World** menu item (and button) opens a new world in the simulation window containing only an [ElevationGrid](../reference/elevationgrid.md), displayed as a chessboard of 10 x 10 squares on a surface of 1 m x 1 m.
 
 - ![](images/open-button.png =26x26) The **Open World...** menu item (and button) opens a file selection dialog that allows you to choose a ".wbt" file to load.
 
@@ -47,18 +47,18 @@ In order to reset the simulation, the following steps are performed:
   - The random seeds used by Webots internally are reset.
   - All the nodes are reset. This has the following implication depending on the node type:
     - **Brake**: The brake is released.
-    - **Charger**: The `battery` field and the `emissiveColor` field of the Material node of the first Shape child node are restored.
+    - **Charger**: The `battery` field and the `emissiveColor` field of the [Material](../reference/material.md) node of the first [Shape](../reference/shape.md) child node are restored.
     - **Connector**: If attached, the connector is detached and the value of the `isLocked` field is restored.
     - **Emitter-Receiver**: The message queue is cleared.
     - **Joint/Motor**: The position, velocity, acceleration, available torque and available force are restored.
-    - **LED**: If the first child is a Light node, it's `color` field is restored and it is switched off. If the first child is a Shape node, the `emissiveColor` field of its Material node is restored.
+    - **LED**: If the first child is a Light node, it's `color` field is restored and it is switched off. If the first child is a [Shape](../reference/shape.md) node, the `emissiveColor` field of its [Material](../reference/material.md) node is restored.
     - **Lidar**: The position of the rotating head is restored.
     - **Pen**: All the painted textures are cleaned.
     - **Propeller**: The slow helix and it's initial position are restored.
     - **Robot**: The `battery` field is restored and the controller is restarted.
     - **Solid**: The `translation` and `rotation` fields are restored and the physics is reset.
     - **Supervisor**: All the labels are removed and the nodes visibility is restored.
-    - **Track**: The motor position is restored and the `translation` field of the textureTransform node of the Appearance node of the first Shape children node is restored.
+    - **Track**: The motor position is restored and the `translation` field of the textureTransform node of the [Appearance](../reference/appearance.md) node of the first [Shape](../reference/shape.md) children node is restored.
     - **Viewpoint**: The `orientation` and `position` fields are restored.
 
 - ![](images/new-button.png =26x26) The **New Text File** menu item (and button) opens an empty text file in the text editor.
@@ -82,8 +82,8 @@ These objects come from a VRML97 file you must specify.
 This feature is useful for importing complex shapes that were modeled in a 3D modelling program, then exported to VRML97 (previously called VRML 2.0).
 Most 3D modelling software, like 3D Studio Max, Maya, AutoCAD, Pro Engineer, AC3D, or Art Of Illusion, include the VRML97 (or VRML 2.0) export feature.
 Be aware that Webots cannot import files in VRML 1.0 format.
-Once imported, these objects appear as `Group`, `Transform` or `Shape` nodes at the bottom of the scene tree.
-You can then either turn these objects into Webots nodes (like `Solid`, `Robot`, etc.) or cut and paste them into the `children` list of existing Webots nodes.
+Once imported, these objects appear as [Group](../reference/group.md), [Transform](../reference/transform.md) or [Shape](../reference/shape.md) nodes at the bottom of the scene tree.
+You can then either turn these objects into Webots nodes (like [Solid](../reference/solid.md), [Robot](../reference/robot.md), etc.) or cut and paste them into the `children` list of existing Webots nodes.
 
 - The **Export VRML97...** item allows you to save the currently loaded world as a ".wrl" file, conforming to the VRML97 standard.
 Such a file can, in turn, be opened with any VRML97 viewer and most 3D modeling software.
@@ -134,11 +134,11 @@ The **View** menu allows you to control the viewing in the simulation window.
 If you want the viewpoint to follow an object, first you need to select the object with the mouse and then check the `Follow Object` menu item.
 Note that the `Follow Object` state is saved in the ".wbt" file.
 By default, the viewpoint will follow the object smoothly, mitigating shaking or jerky movements of the object.
-You can change this behavior by changing the `followSmoothness` field of the Viewpoint node in the scene tree.
+You can change this behavior by changing the `followSmoothness` field of the [Viewpoint](../reference/viewpoint.md) node in the scene tree.
 
 - The **Follow Object and Rotate** menu item is similar to the `Follow Object` but it makes the viewpoint follow also the orientation of an object (in addition to its position).
 
-- ![](images/restore_viewpoint.png =26x26) The **Restore Viewpoint** item restores the viewpoint's position and orientation to their initial settings when the file was loaded or reverted.
+- ![](images/restore_viewpoint.png =26x26) The **Restore [Viewpoint](../reference/viewpoint.md)** item restores the viewpoint's position and orientation to their initial settings when the file was loaded or reverted.
 This feature is handy when you get lost while navigating in the scene, and want to return to the original viewpoint.
 
 - ![](images/move_viewpoint_to_object_button.png =26x26) **Move viewpoint to object** moves the viewpoint to center and zoom on the selected node.
@@ -188,7 +188,7 @@ These lines turn rose when a collision occurs and blue when the solid is idle, i
 
   - The **Show Contact Points** allows you to display, or to hide, the contact points generated by the collision detection engine.
 Contact points that do not generate a corresponding contact force are not shown.
-A contact force is generated only for objects simulated with physics (`Physics` node required).
+A contact force is generated only for objects simulated with physics ([Physics](../reference/physics.md) node required).
 A step is required for taking this operation into account.
 
   - The **Show Connector Axes** allows you to display, or to hide, the connector axes.
@@ -227,9 +227,9 @@ If the distance sensor device is disabled or the first measurement is not availa
 These rays are drawn as yellow lines.
 If the light sensor device is disabled or the first measurement is not available yet, the rays will be drawn in gray.
 
-  - The **Show Light Positions** allows you to display, or to hide, the position of PointLight and SpotLight lights.
-DirectionalLight nodes aren't represented.
-PointLight and SpotLight nodes are represented by a colored circle surrounded by a flare.
+  - The **Show Light Positions** allows you to display, or to hide, the position of [PointLight](../reference/pointlight.md) and [SpotLight](../reference/spotlight.md) lights.
+[DirectionalLight](../reference/directionallight.md) nodes aren't represented.
+[PointLight](../reference/pointlight.md) and [SpotLight](../reference/spotlight.md) nodes are represented by a colored circle surrounded by a flare.
 
   - The **Show Pen Painting Rays** allows you to display, or to hide, the rays in which the pen devices paint.
 These rays are drawn as violet lines if painting is enabled, otherwise as gray lines.
@@ -238,13 +238,13 @@ These rays are drawn as violet lines if painting is enabled, otherwise as gray l
 If the radar device is enabled the frustum is drawn in blue, otherwise if the radar is disabled or the first measurement is not available yet, the frustum is drawn in gray.
 The radar frustum represents the volume in which a target can be detected by the radar.
 
-  - The **Show Center Of Mass** allows you to display, or to hide, the global center of mass of a selected solid with non NULL `Physics` node.
+  - The **Show Center Of Mass** allows you to display, or to hide, the global center of mass of a selected solid with non NULL [Physics](../reference/physics.md) node.
 The center of mass is rendered in dark blue.
 
-  - The **Show Center Of Buoyancy** allows you to display, or to hide, the global center of buoyancy of a selected solid with non NULL `Physics` node.
+  - The **Show Center Of Buoyancy** allows you to display, or to hide, the global center of buoyancy of a selected solid with non NULL [Physics](../reference/physics.md) node.
 The center of buoyancy is rendered in purple.
 
-  - The **Show Support Polygon** allows you to display, or to hide, the support polygon of a selected solid with non NULL `Physics` node.
+  - The **Show Support Polygon** allows you to display, or to hide, the support polygon of a selected solid with non NULL [Physics](../reference/physics.md) node.
 By support polygon we mean the projection of the convex hull of the solid's contact points on the horizontal plane which contains the lowest one.
 In addition, the projection of the center of mass in the latter plane is rendered in green if it lies inside the support polygon (static equilibrium), red otherwise.
 This rendering option can be activated only for solids with no other solid at their top.
@@ -265,10 +265,10 @@ The **Simulation** menu is used to control the simulation mode.
 - ![](images/pause-button.png =26x26) The **Pause** menu item (and button) pauses the simulation.
 
 - ![](images/step-button.png =26x26) The **Step** menu item (and button) executes one basic time step of simulation.
-The duration of this step is defined in the **basicTimeStep** field of the `WorldInfo` node, and can be adjusted in the scene tree window to suit your needs.
+The duration of this step is defined in the **basicTimeStep** field of the [WorldInfo](../reference/worldinfo.md) node, and can be adjusted in the scene tree window to suit your needs.
 
 - ![](images/realtime-button.png =26x26) The **Real-time** menu item (and button) runs the simulation at real-time until it is interrupted by `Pause` or `Step`.
-In run mode, the 3D display of the scene is refreshed every *n* basic time steps, where *n* is defined in the `displayRefresh` field of the `WorldInfo` node.
+In run mode, the 3D display of the scene is refreshed every *n* basic time steps, where *n* is defined in the `displayRefresh` field of the [WorldInfo](../reference/worldinfo.md) node.
 
 - ![](images/run-button.png =26x26) The **Run** menu item (and button) is like `Real-time`, except that it runs as fast as possible (Webots PRO only).
 
@@ -282,7 +282,7 @@ The build menu is described in more details [here](webots-built-in-editor.md).
 
 ### Overlays Menu
 
-The **Overlays** menu provides actions specific to rendering device overlays (`Camera`, `Display`, `Rangefinder`).
+The **Overlays** menu provides actions specific to rendering device overlays ([Camera](../reference/camera.md), [Display](../reference/display.md), `Rangefinder`).
 Some actions of this menu are active only when a robot is selected in the 3D window or when there is only one robot in the simulation:
 
 - The **Camera Devices** submenu contains the list of all the camera devices of the selected robot and its descendant robots and lets the user show or hide single camera overlay images by checking or unchecking the corresponding item.
@@ -405,7 +405,7 @@ H:MM:SS:MMM
 Where *H* is the number of hours (may be several digits), *MM* is the number of minutes, *SS* is the number of seconds, and *MMM* is the number of milliseconds (see [this figure](#speedometer)).
 If the speedometer value is greater than one, the virtual time is progressing faster than real time.
 
-The basic time step for simulation can be set in the `basicTimeStep` field of the `WorldInfo` node in the scene tree window.
+The basic time step for simulation can be set in the `basicTimeStep` field of the [WorldInfo](../reference/worldinfo.md) node in the scene tree window.
 It is expressed in virtual time milliseconds.
 The value of this time step defines the length of the time step executed during the `Step` mode.
-This step is multiplied by the `displayRefresh` field of the same `WorldInfo` node to define how frequently the display is refreshed.
+This step is multiplied by the `displayRefresh` field of the same [WorldInfo](../reference/worldinfo.md) node to define how frequently the display is refreshed.

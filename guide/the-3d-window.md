@@ -95,8 +95,8 @@ By default for each Camera, Display and RangeFinder device, an overlay showing t
 The device type is indicated by the border color: magenta for Camera devices, cyan for Display devices and yellow for RangeFinder devices, see [this figure](#camera-display-and-rangefinder-overlays).
 This overlay can be moved to the desired position on the view by clicking on it and dragging the mouse.
 In order to resize the overlay the user has to click on the icon located at the bottom right corner and drag the mouse, during this action the original not scaled image size will be indicated using darker areas, as depicted in [this figure](#camera-overlay-resizing).
-Additionally a close button is available on the top right corner to hide the overlay.
-Once the robot is selected, it is also possible to show or hide the overlay images from the `Camera Devices`, `Display Devices` and `RangeFinder Devices` items in `Overlays` menu or from the [context menu](#context-menu).
+Additionally, a close button is available on the top right corner to hide the overlay.
+Once the [Robot](../reference/robot.md) is selected, it is also possible to show or hide the overlay images from the `Camera Devices`, `Display Devices` and `RangeFinder Devices` items in the `Overlays` menu or from the [context menu](#context-menu).
 
 %figure "Camera, Display and RangeFinder overlays"
 

@@ -1,4 +1,4 @@
-## Webots Devices
+## Devices
 
 The "WEBOTS\_HOME/projects/samples/devices" directory contains Webots worlds that individually demonstrate the Webots devices and their API.
 

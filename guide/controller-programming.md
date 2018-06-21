@@ -347,7 +347,7 @@ int main() {
 ### Using Controller Arguments
 
 In the ".wbt" file, it is possible to specify arguments that are passed to a controller when it starts.
-They are specified in the `controllerArgs` field of the [Robot](../reference/robot.md), [Supervisor](../reference/supervisor.md) or [DifferentialWheels](../reference/differentialwheels.md) node, and they are passed as parameters of the `main` function.
+They are specified in the `controllerArgs` field of the [Robot](../reference/robot.md) or [Supervisor](../reference/supervisor.md) node, and they are passed as parameters of the `main` function.
 For example, this can be used to specify parameters that vary for each robot's controller.
 
 For example if we have:

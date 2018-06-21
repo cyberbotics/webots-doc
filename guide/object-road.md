@@ -873,7 +873,7 @@ RoadIntersection {
   SFFloat    roadsWidth                     7
   SFFloat    speedLimit                     -1.0
   SFBool     startRoads                     TRUE
-  SFFloat    startRoadsLength               5
+  MFFloat    startRoadsLength               [5]
   SFInt32    startRoadsNumberOfLanes        2
   MFString   startRoadsStartLine            [ "textures/road_line_dashed.png",
                                                     "textures/road_line_triangle.png" ]
@@ -890,6 +890,7 @@ RoadIntersection {
   SFBool     locked                         TRUE
   MFString   texture                        "textures/asphalt.jpg"
   MFString   startRoadsTexture              "textures/road.jpg"
+  SFFloat    startRoadsTextureScale         2
 
 }
 ```
@@ -915,7 +916,7 @@ RoadIntersection {
 
 - `startRoads`: Defines if the beginning of each roads should be included or not.
 
-- `startRoadsLength`: Defines the length of the intersectiong roads.
+- `startRoadsLength`: Defines the length of the intersecting roads. The same length is used for all the roads if this field has only one item.
 
 - `startRoadsNumberOfLanes`: Defines the number of lanes of the roads(used for the texture mapping).
 
@@ -942,6 +943,8 @@ RoadIntersection {
 - `texture`: Defines the texture to be used for the intersection.
 
 - `startRoadsTexture`: Defines the texture to be used for the intersecting roads.
+
+- `startRoadsTextureScale`: Defines the length (in meter) of the texture used for the intersecting roads.
 
 - `roadsWith`: Deprecated in Webots R2018b
 
@@ -1032,8 +1035,8 @@ Roundabout {
   SFBool     center                   TRUE
   SFVec2f    centerTextureScale       4 4
   SFInt32    roadNumber               4
-  SFFloat    startRoadsLength         5
-  SFFloat    startRoadsWidth           7
+  MFFloat    startRoadsLength         [5]
+  SFFloat    startRoadsWidth          7
   SFInt32    startRoadsNumberOfLanes  2
   MFString   startRoadsStartLine      [ "textures/road_line_dashed.png",
                                               "textures/road_line_triangle.png" ]
@@ -1089,7 +1092,7 @@ Roundabout {
 
 - `roadNumber`: Defines the number of roads connected to the roundabout.
 
-- `startRoadsLength`: Defines the length of the roads connected to the roundabout.
+- `startRoadsLength`: Defines the length of the roads connected to the roundabout. The same length is used for all the roads if this field has only one item.
 
 - `startRoadsWidth`: Defines the width of the roads connected to the roundabout.
 

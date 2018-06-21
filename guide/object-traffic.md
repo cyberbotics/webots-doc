@@ -573,6 +573,7 @@ ParkingLines {
   SFInt32    numberOfCarParks 5
   SFFloat    carParkLength    4.8
   SFFloat    carParkWidth     2.4
+  MFString   texture          "textures/parking_lines.png"
 }
 ```
 
@@ -588,6 +589,8 @@ ParkingLines {
 - `carParkLength`: Defines the length of one park.
 
 - `carParkWidth`: Defines the width of one park.
+
+- `texture`: Defines the texture used for the lines.
 
 ## ParkingMeter
 
@@ -628,11 +631,12 @@ Derived from [Solid](../reference/solid.md).
 
 ```
 PedestrianCrossing {
-  SFVec3f    translation      0 0 0
-  SFRotation rotation         0 1 0 0
-  SFString   name             "pedestrian crossing"
-  SFVec2f    size             20 8
-  SFInt32    textureFiltering 4
+  SFVec3f    translation          0 0 0
+  SFRotation rotation             0 1 0 0
+  SFString   name                 "pedestrian crossing"
+  SFVec2f    size                 20 8
+  SFInt32    textureFiltering     4
+  SFBool     enableBoundingObject TRUE
 }
 ```
 
@@ -646,6 +650,8 @@ PedestrianCrossing {
 - `size`: Defines the size of the pedestrian crossing.
 
 - `textureFiltering`: Defines the filtering level for the texture used for the pedestrian crossing.
+
+- `enableBoundingObject`: Defines whether the pedestrian crossing should have a bounding object.
 
 ## Pole
 

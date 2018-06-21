@@ -6,7 +6,6 @@ We will tackle several concepts related to the nodes: what is their meaning, how
 Moreover we will see how to set up physics.
 
 Several kinds of nodes will be introduced.
-We won't define each of them precisely.
 Their detailed definition can be found in chapter 3 of the `Reference Manual`.
 Having the nodes chart diagram (chapter 2 of the `Reference Manual`) in front of you, will also help understanding the nodes inheritance relationship.
 
@@ -26,7 +25,7 @@ The default `RectangleArena` PROTO defines a simple floor pinned on the statical
 Other pre-built floors are available in the Webots objects library.
 We will now delete the default arena and add a simple floor that we will manually surround the walls later in this tutorial.
 
-> **Hands on**: To remove the `RectangleArena`, select it in the scene tree view and press the `Delete` button located in the toolbar.
+> **Hands on**: To remove the `RectangleArena`, select it either in the 3D view or in the scene tree view with a left click and press the `Delete` key on your keyboard. Alternatively, you can right click on it in the 3D view and select `Delete` in the context menu (you can also use the context menu directly in the scene tree view).
 
 <!-- -->
 

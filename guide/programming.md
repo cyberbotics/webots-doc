@@ -45,7 +45,7 @@ You will find more information about the [Gyro](../reference/gyro.md) node and f
 #### Get Velocity in Supervisor:
 
 Using the `wb_supervisor_node_get_velocity` function it is possible to retrieve both the linear and angular velocity of any [Solid](../reference/solid.md) node.
-You will find more information about this function in the [Reference Manual](../reference/solid.md).
+You will find more information about this function in the [Reference Manual](../reference/supervisor.md).
 
 #### Get Velocity in Physics Plugin Code:
 

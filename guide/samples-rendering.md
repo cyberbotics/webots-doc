@@ -6,7 +6,7 @@ The world files for these examples are located in the "projects/sample/rendering
 
 In this directory, you will find the following world file:
 
-### physically_based_rendering.wbt
+### physically\_based\_rendering.wbt
 
 **Keywords**: PBRAppearance, physically based rendering, shadows, ambient occlusion, normal map, bump map, metalness, roughness.
 

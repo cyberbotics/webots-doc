@@ -8,8 +8,9 @@ More detailed explanations can be found in the source code.
 
 ## Sections
 
-- [Demo Directory](demo-directory.md)
-- [Webots Devices](webots-devices.md)
-- [How To](how-to.md)
-- [Geometries](geometries.md)
-- [Environments Directory](environments-directory.md)
+- [Demos](samples-demos.md)
+- [Devices](samples-devices.md)
+- [How To](samples-howto.md)
+- [Geometries](samples-geometries.md)
+- [Environments](sample-environments.md)
+- [Rendering](samples-rendering.md)

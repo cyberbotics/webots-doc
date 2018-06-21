@@ -82,14 +82,14 @@ In fact, it can be substituted by a [Sphere](../reference/sphere.md), a [Box](..
 
 We will now add a ball to the simulation.
 That ball will be modeled as a rigid body as shown in this [figure](#the-simplest-model-of-a-rigid-body-in-webots-having-a-graphical-representation-shape-a-physical-bound-boundingobject-and-being-in-the-dynamical-environment-physics).
-As Geometry nodes we will use [Sphere](../reference/sphere.md)s.
+As Geometry nodes we will use [Spheres](../reference/sphere.md).
 
 > **Hands on**: In the scene tree view, select the last node and add a [Solid](../reference/solid.md) node using the `Add` button.
-Similarly select the `children` field of the [Solid](../reference/solid.md) node, and add a[Shape](../reference/shape.md) node to it.
+Similarly select the `children` field of the [Solid](../reference/solid.md) node, and add a [Shape](../reference/shape.md) node to it.
 In order to get a shaded object as shown in the figure, it is necessary to specify an appearance.
-To do this, select the `appearance` field of the[Shape](../reference/shape.md) node and use the `Add` button.
+To do this, select the `appearance` field of the [Shape](../reference/shape.md) node and use the `Add` button.
 Then, you can add a default [Material](../reference/material.md) to the `material` field in a similar way.
-Add a [Sphere](../reference/sphere.md) node as the `geometry` field of the newly created[Shape](../reference/shape.md) node.
+Add a [Sphere](../reference/sphere.md) node as the `geometry` field of the newly created [Shape](../reference/shape.md) node.
 Add another [Sphere](../reference/sphere.md) node to the `boundingObject` field of the [Solid](../reference/solid.md).
 Finally add a [Physics](../reference/physics.md) node to the `physics` field of the [Solid](../reference/solid.md).
 By modifying the `translation` field of the [Solid](../reference/solid.md) node, place the ball in front of the robot (at *{0, 0.1, -0.2}* for example).
@@ -129,9 +129,9 @@ Only the fields of the DEF node can be edited, the fields of the USE nodes assum
 This mechanism is dependent on the apparition order of the nodes in the world file, because the DEF node should appear first.
 
 The two [Sphere](../reference/sphere.md) definitions that we have used earlier to define the ball, are redundant.
-We will now merge these two [Sphere](../reference/sphere.md)s into only once using the DEF-USE mechanism.
+We will now merge these two [Spheres](../reference/sphere.md) into only once using the DEF-USE mechanism.
 
-> **Hands on**: Select the first [Sphere](../reference/sphere.md) node (the child of the[Shape](../reference/shape.md)) in the scene tree view.
+> **Hands on**: Select the first [Sphere](../reference/sphere.md) node (the child of the [Shape](../reference/shape.md)) in the scene tree view.
 The field editor of the scene tree view allows you to enter the DEF string.
 Enter *"BALL\_GEOMETRY"*.
 Select the boundingObject field (containing the second [Sphere](../reference/sphere.md) node), and delete it by using the `Reset to default` button in the field editor (represented by an asterisk).
@@ -164,19 +164,19 @@ graph TD
 
 ### Add Walls
 
-> **Theory**: For convenience, the `boundingObject` field accepts also the[Shape](../reference/shape.md) node (rather than the [Sphere](../reference/sphere.md) node directly).
-It would be also possible to use the same DEF-USE mechanism at the[Shape](../reference/shape.md) level as shown in [this figure](#def-use-mechanism-applied-on-the-shape-node-of-a-solid).
-For now the greatest benefit is being able to also use this[Shape](../reference/shape.md) directly for graphical purposes.
+> **Theory**: For convenience, the `boundingObject` field accepts also the [Shape](../reference/shape.md) node (rather than the [Sphere](../reference/sphere.md) node directly).
+It would be also possible to use the same DEF-USE mechanism at the [Shape](../reference/shape.md) level as shown in [this figure](#def-use-mechanism-applied-on-the-shape-node-of-a-solid).
+For now the greatest benefit is being able to also use this [Shape](../reference/shape.md) directly for graphical purposes.
 Later this mechanism will turn out to be very useful for some sensors.
 
 In order to verify your progression, implement by yourself four walls to surround the environment.
-The walls have to be defined statically to the environment, and use as much as possible the DEF-USE mechanism at the[Shape](../reference/shape.md) level rather than at the Geometry level.
+The walls have to be defined statically to the environment, and use as much as possible the DEF-USE mechanism at the [Shape](../reference/shape.md) level rather than at the Geometry level.
 Indeed it's more convenient to add an intermediate[Shape](../reference/shape.md) node in the `boundingObject` field of the [Solid](../reference/solid.md) node.
 The best Geometry primitive to implement the walls is the Box node.
-Only one[Shape](../reference/shape.md) has to be defined for all the walls.
+Only one [Shape](../reference/shape.md) has to be defined for all the walls.
 The expected result is shown in [this figure](#the-simulation-state-at-the-end-of-this-second-tutorial).
 
-> **Hands on**: Add four walls without physics and using only one definition of the[Shape](../reference/shape.md) node.
+> **Hands on**: Add four walls without physics and using only one definition of the [Shape](../reference/shape.md) node.
 
 The solution is located in the solution directory under the "obstacle.wbt".
 
@@ -196,5 +196,5 @@ On each simulation, a **trade-off** has to be found between simulation speed and
 
 At the end of this tutorial, you are able to create simple environments based on rigid bodies.
 You are able to add nodes from the scene tree view and to modify their fields.
-You have become acquainted with the [Solid](../reference/solid.md), [Physics](../reference/physics.md),[Shape](../reference/shape.md), [Sphere](../reference/sphere.md) and [Box](../reference/box.md) nodes.
+You have become acquainted with the [Solid](../reference/solid.md), [Physics](../reference/physics.md), [Shape](../reference/shape.md), [Sphere](../reference/sphere.md) and [Box](../reference/box.md) nodes.
 You also saw the DEF-USE mechanism that allows to reduce node redundancy of the scene tree.

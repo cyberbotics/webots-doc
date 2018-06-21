@@ -23,20 +23,20 @@ graph BT
 %end
 
 The naming convention of the C++/Java/Python classes and methods directly matches the C API function names.
-For example, for this C function: `double wb_distance_sensor_get_value(WbDeviceTag tag)` there will be a matching C++/Java/Python method called `getValue` located in a class called [DistanceSensor](../reference/distancesensor.md).
+For example, for this C function: `double wb_distance_sensor_get_value(WbDeviceTag tag)` there will be a matching C++/Java/Python method called `getValue` located in a class called `DistanceSensor`.
 Usually the C++/Java/Python methods have the same parameters as their C API counterparts, but without the `WbDeviceTag` parameter.
 
 ### Controller Class
 
-The C++/Java/Python controller implementation should be placed in a user-defined class derived from one of the Webots classes: [Robot](../reference/robot.md), [DifferentialWheels](../reference/differentialwheels.md) or [Supervisor](../reference/supervisor.md).
+The C++/Java/Python controller implementation should be placed in a user-defined class derived from one of the Webots classes: `Robot, DifferentialWheels` or `Supervisor`.
 It is important that the controller class is derived from the same class as that used in Scene Tree, otherwise some methods may not be available or may not work.
-For example, if in the Scene Tree a robot is of type [DifferentialWheels](../reference/differentialwheels.md), then the corresponding C++/Java/Python controller class must extend the [DifferentialWheels](../reference/differentialwheels.md) class.
-If in the Scene Tree a robot is of type [Supervisor](../reference/supervisor.md), then the C++/Java/Python controller class must be derived from the [Supervisor](../reference/supervisor.md) class, etc.
+For example, if in the Scene Tree a robot is of type [DifferentialWheels](../reference/differentialwheels.md), then the corresponding C++/Java/Python controller class must extend the `DifferentialWheels` class.
+If in the Scene Tree a robot is of type [Supervisor](../reference/supervisor.md), then the C++/Java/Python controller class must be derived from the `Supervisor` class, etc.
 
-As you can see in [this figure](#a-small-subset-of-webots-oriented-object-apis), both [DifferentialWheels](../reference/differentialwheels.md) and [Supervisor](../reference/supervisor.md) are subclasses of the [Robot](../reference/robot.md) class.
-Hence it is possible to call the [Robot](../reference/robot.md)'s methods, such as, e.g., the `step` or `getLED` functions, from the [DifferentialWheels](../reference/differentialwheels.md) and [Supervisor](../reference/supervisor.md) controllers.
-But it is not possible to call the [Supervisor](../reference/supervisor.md) methods from a [DifferentialWheels](../reference/differentialwheels.md) controller, and vice versa.
-For example it won't be possible to call the `worldReload` function from a [DifferentialWheels](../reference/differentialwheels.md) controller.
+As you can see in [this figure](#a-small-subset-of-webots-oriented-object-apis), both `DifferentialWheels` and `Supervisor` are subclasses of the `Robot` class.
+Hence it is possible to call the `Robot`'s methods, such as, e.g., the `step` or `getLED` functions, from the `DifferentialWheels` and `Supervisor` controllers.
+But it is not possible to call the `Supervisor` methods from a `DifferentialWheels` controller, and vice versa.
+For example it won't be possible to call the `worldReload` function from a `DifferentialWheels` controller.
 
 %figure "A small subset of Webots oriented-object APIs"
 
@@ -45,15 +45,15 @@ For example it won't be possible to call the `worldReload` function from a [Diff
 %end
 
 Generally, the user-defined controller class should have a `run` function that implements the main controller loop.
-That loop should contain a call to the [Robot](../reference/robot.md)'s `step` method.
+That loop should contain a call to the `Robot`'s `step` method.
 Then, the only responsibility of the controller's `main` function is to create an instance of the user-defined controller class, call its `run` method and finally delete (C++ only) the instance: see examples below.
 Note that the controller should never create more than one instance of a derived class, otherwise the results are undefined.
 
 Note that unlike the C API, the C++/Java/Python APIs don't have (and don't need) functions like the `wb_robot_init` and `wb_robot_cleanup` functions.
 The necessary initialization and cleanup routines are automatically invoked from the constructor and destructor of the base class.
 
-In C++/Java/Python, each Webots device is implemented as a separate class, there is a [DistanceSensor](../reference/distancesensor.md) class, a [TouchSensor](../reference/touchsensor.md) class, a [RotationalMotor](../reference/rotationalmotor.md) class, etc.
-The various devices instances can be obtained with dedicated methods of the [Robot](../reference/robot.md) class, like the `getDistanceSensor` or the `getTouchSensor` functions.
+In C++/Java/Python, each Webots device is implemented as a separate class, there is a `DistanceSensor` class, a `TouchSensor` class, a `RotationalMotor` class, etc.
+The various devices instances can be obtained with dedicated methods of the `Robot` class, like the `getDistanceSensor` or the `getTouchSensor` functions.
 There is no `WbDeviceTag` in C++/Java/Python.
 
 ### C++ Example

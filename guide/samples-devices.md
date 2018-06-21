@@ -8,7 +8,7 @@ The world files and the corresponding controllers are named according to the dev
 Most of the devices below use a simple two-wheeled blue robot called MyBot moving in a closed square arena containing obstacles (see [figure below](#mybot-in-a-squared-arena)).
 
 The studied devices are attached on this robot.
-`MyBot` moves and avoid obstacles using two [DistanceSensor](../reference/distancesensor.md)s and a technique based on Braitenberg vehicles.
+`MyBot` moves and avoid obstacles using two [DistanceSensors](../reference/distancesensor.md) and a technique based on Braitenberg vehicles.
 
 %figure "MyBot in a squared arena."
 
@@ -106,7 +106,7 @@ The [Supervisor](../reference/supervisor.md) get the position of `MyBot` and dra
 
 **Keywords**: DistanceSensor, Braitenberg
 
-![distance_sensor.png](images/samples/distance_sensor.png) In this example, eight [DistanceSensor](../reference/distancesensor.md)s are mounted at regular intervals around the `MyBot` body.
+![distance_sensor.png](images/samples/distance_sensor.png) In this example, eight [DistanceSensors](../reference/distancesensor.md) are mounted at regular intervals around the `MyBot` body.
 The robot avoids obstacles using a technique based on Braitenberg vehicles.
 
 ### emitter\_receiver.wbt
@@ -118,7 +118,7 @@ Both robots move among the obstacles while the *emitter* robot sends messages to
 The range of the [Emitter](../reference/emitter.md) device is indicated by the radius of the transparent gray sphere around the emitter robot.
 The state of the communication between the two robots is displayed in the Console.
 You can observe this when the *receiver* robot enters the *emitter*'s sphere while no direct obstacle is present on the route, then the communication is established, otherwise the communication is interrupted.
-Note that the communication between "infra-red" [Emitter](../reference/emitter.md)s and [Receiver](../reference/receiver.md)s can be blocked by an obstacle, this is not the case with "radio" [Emitter](../reference/emitter.md)s and [Receiver](../reference/receiver.md)s.
+Note that the communication between "infra-red" [Emitters](../reference/emitter.md) and [Receivers](../reference/receiver.md) can be blocked by an obstacle, this is not the case with "radio" [Emitters](../reference/emitter.md) and [Receivers](../reference/receiver.md).
 
 ### encoders.wbt
 
@@ -182,9 +182,9 @@ The resulting angular velocity measured by the gyro is displayed in the `Console
 
 **Keywords**: Hokuyo, Lidar, Display plot
 
-![hokuyo.png](images/samples/hokuyo.png) This example shows how to use [Lidar](../reference/lidar.md)s and plot their depth output on a [Display](../reference/display.md) device.
-Two `Hokuyo` [Lidar](../reference/lidar.md)s are mounted on the `MyBot`.
-At each step, the lidars are updated, and their depth output are displayed in distinct [Display](../reference/display.md)s.
+![hokuyo.png](images/samples/hokuyo.png) This example shows how to use [Lidars](../reference/lidar.md) and plot their depth output on a [Display](../reference/display.md) device.
+Two `Hokuyo` [Lidars](../reference/lidar.md) are mounted on the `MyBot`.
+At each step, the lidars are updated, and their depth output are displayed in distinct [Displays](../reference/display.md).
 
 ### inertial\_unit.wbt
 
@@ -222,7 +222,7 @@ The [Lidar](../reference/lidar.md) point cloud can be shown by enabling the `Vie
 
 **Keywords**: LightSensor
 
-![light_sensor.png](images/samples/light_sensor.png) In this example, `MyBot` uses two [LightSensor](../reference/lightsensor.md)s to follow a light source.
+![light_sensor.png](images/samples/light_sensor.png) In this example, `MyBot` uses two [LightSensors](../reference/lightsensor.md) to follow a light source.
 The light source can be moved with the mouse; the robot will follow it.
 
 ### linear\_motor.wbt
@@ -270,7 +270,7 @@ Use the `Y` and `X` keys to switch the [Pen](../reference/pen.md) on and off.
 **Keywords**: Radar
 
 ![radar.png](images/samples/radar.png) In this example, the `MyBot` with the black box detects the `MyBot`s with red boxes.
-The black box is a [Radar](../reference/radar.md) device, while the red boxes are [Solid](../reference/solid.md)s with a positive `radarCrossSection` (this is required to be detected by the [Radar](../reference/radar.md)).
+The black box is a [Radar](../reference/radar.md) device, while the red boxes are [Solids](../reference/solid.md) with a positive `radarCrossSection` (this is required to be detected by the [Radar](../reference/radar.md)).
 
 ### range\_finder.wbt
 

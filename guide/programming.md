@@ -2,34 +2,34 @@
 
 ### How Can I Get the 3D Position of a Robot/Object?
 
-There are different functions depending whether this information must be accessed in the controller, in the [Supervisor](../reference/supervisor.md) or in the physics plugin.
-Note that Webots PRO is required to use [Supervisor](../reference/supervisor.md) and the physics plugin functions.
+There are different functions depending whether this information must be accessed in the controller, in the Supervisor or in the physics plugin.
+Note that Webots PRO is required to use `Supervisor` and the physics plugin functions.
 All the functions described below will return the 3D position in meters and expressed in the global (world) coordinate system.
 
 Clearly, the position of a robot can also be approximated by using *odometry* or *SLAM* techniques.
-This is usually more realistic because most robots don't have a [GPS](../reference/gps.md) and therefore have no mean of precisely determining their position.
+This is usually more realistic because most robots don't have a GPS and therefore have no mean of precisely determining their position.
 You will find more info about *odometry* and *SLAM* techniques in `Cyberbotics' Robot Curriculum`.
 
 #### Get Position in Controller Code:
 
-To get the position of a robot in the robot's controller code: add a [GPS](../reference/gps.md) node to the robot, then use the `wb_robot_get_device`, `wb_gps_enable` and `wb_gps_get_values` functions.
-Note that the [GPS](../reference/gps.md)'s resolution field must be 0 (the default), otherwise the results will be noisy.
-You will find more info about the [GPS](../reference/gps.md) node and functions in the [Reference Manual](../reference/index.md).
-Note that the [GPS](../reference/gps.md) can also be placed on a robot's part (arm, foot, etc.) to get the world/global coordinates of that particular part.
+To get the position of a robot in the robot's controller code: add a `GPS` node to the robot, then use the `wb_robot_get_device`, `wb_gps_enable` and `wb_gps_get_values` functions.
+Note that the `GPS`'s resolution field must be 0 (the default), otherwise the results will be noisy.
+You will find more info about the `GPS` node and functions in the [Reference Manual](../reference/index.md).
+Note that the `GPS` can also be placed on a robot's part (arm, foot, etc.) to get the world/global coordinates of that particular part.
 
 #### Get Position in Supervisor Code:
 
-1. To get the 3D position of any [Transform](../reference/transform.md) (or derived) node in the [Supervisor](../reference/supervisor.md) code: you can use the `wb_supervisor_node_get_position` function.
+1. To get the 3D position of any `Transform` (or derived) node in the `Supervisor` code: you can use the `wb_supervisor_node_get_position` function.
 Please check this function's description in the `Reference Manual`.
-2. To get the 3D position of any [Transform](../reference/transform.md) (or derived) node placed at the root of the Scene Tree (the nodes visible when the Scene Tree is completely collapsed), you can use the `wb_supervisor_field_get_sf_vec3f` function.
+2. To get the 3D position of any `Transform` (or derived) node placed at the root of the Scene Tree (the nodes visible when the Scene Tree is completely collapsed), you can use the `wb_supervisor_field_get_sf_vec3f` function.
 Here is an [example](supervisor-programming.md#tracking-the-position-of-robots).
 
-A simulation example that shows both the [GPS](../reference/gps.md) and the [Supervisor](../reference/supervisor.md) techniques is included in the Webots installation, you just need to open this world: "WEBOTS\_HOME/projects/samples/devices/worlds/gps.wbt".
+A simulation example that shows both the `GPS` and the `Supervisor` techniques is included in the Webots installation, you just need to open this world: "WEBOTS\_HOME/projects/samples/devices/worlds/gps.wbt".
 
 #### Get Position in Physics Plugin Code:
 
 In the physics plugin you can use ODE's `dBodyGetPosition` function.
-Note that this function returns the position of the center of mass of the body: this may be different from the center of the [Solid](../reference/solid.md).
+Note that this function returns the position of the center of mass of the body: this may be different from the center of the `Solid`.
 Please find a description of ODE functions [here](http://ode-wiki.org/wiki/index.php?title=Manual).
 
 ### How Can I Get the Linear/Angular Speed/Velocity of a Robot/Object?
@@ -39,12 +39,12 @@ There are also some functions (see below) that can be used to get the velocity d
 
 #### Get Velocity in Controller Code:
 
-To get the angular velocity of a robot (or robot part) in the robot's controller code: add a [Gyro](../reference/gyro.md) node to the robot (or robot part), then use the `wb_robot_get_device`, `wb_gyro_enable` and `wb_gyro_get_values` functions.
-You will find more information about the [Gyro](../reference/gyro.md) node and functions in the `Reference Manual`.
+To get the angular velocity of a robot (or robot part) in the robot's controller code: add a `Gyro` node to the robot (or robot part), then use the `wb_robot_get_device`, `wb_gyro_enable` and `wb_gyro_get_values` functions.
+You will find more information about the `Gyro` node and functions in the `Reference Manual`.
 
 #### Get Velocity in Supervisor:
 
-Using the `wb_supervisor_node_get_velocity` function it is possible to retrieve both the linear and angular velocity of any [Solid](../reference/solid.md) node.
+Using the `wb_supervisor_node_get_velocity` function it is possible to retrieve both the linear and angular velocity of any `Solid` node.
 You will find more information about this function in the `Reference Manual`.
 
 #### Get Velocity in Physics Plugin Code:
@@ -62,8 +62,8 @@ Please see [this section](using-numerical-optimization-methods.md#resetting-the-
 This message means that Webots could neither find an executable file (e.g. `.exe`), nor an interpreted language file (e.g. `.class`, `.py`, `.m`) to run as controller program for a robot.
 In fact, Webots needs each controller file to be stored at specific location in order to be able to executed it.
 The requested location is in the "controllers" subdirectory of the current Webots project directory, e.g. "my\_project".
-Inside the "controllers" directory, each controller project must be stored in its own directory which must be named precisely like the `controller` field of the [Robot](../reference/robot.md).
-Inside that directory, the executable/interpretable file must also be named after the `controller` field of the [Robot](../reference/robot.md) (plus a possible extension).
+Inside the "controllers" directory, each controller project must be stored in its own directory which must be named precisely like the `controller` field of the Robot.
+Inside that directory, the executable/interpretable file must also be named after the `controller` field of the Robot (plus a possible extension).
 For example if the controller field of the robot looks like this, in the Scene Tree:
 
 ```
@@ -87,7 +87,7 @@ So this problem often happens when you:
 
 - Have moved the project or source files to a location that does not correspond to the above description.
 - Use an external build system, e.g. Visual Studio, that is not configured to generate the executable file at the right location.
-- Have changed the [Robot](../reference/robot.md)'s controller field to a location where no executable/interpretable file can be found.
+- Have changed the Robot's controller field to a location where no executable/interpretable file can be found.
 - Have "reloaded" the world after "cleaning" of the controller project.
 
 ### What Does This Mean: "Warning: invalid WbDeviceTag in API function call" ?
@@ -101,7 +101,7 @@ This can happen mainly for three reasons:
 1. The `WbDeviceTag` is 0 and thus invalid because it was not found by the `wb_robot_get_device` function call.
 Indeed, the `wb_robot_get_device` function returns 0, if it cannot not find a device with the specified name in the robot.
 Note that the name specified in the argument of the `wb_robot_get_device` function must correspond to the `name` field of the device, not to the VRML97 DEF name! 2.
-Your controller code is mixing up two types of `WbDeviceTag`s, for example because it uses the `WbDeviceTag` of a [Camera](../reference/camera.md) in a `wb_distance_sensor_*` function.
+Your controller code is mixing up two types of `WbDeviceTag`s, for example because it uses the `WbDeviceTag` of a `Camera` in a `wb_distance_sensor_*` function.
 Here is an example of what is wrong:
 
 > ```c
@@ -193,13 +193,13 @@ There are different techniques depending on what you want to draw:
 
 1. If you just want to add some 2d text, you can do this by using the function: `wb_supervisor_set_label`.
 This will allow you to put 2d overlay text in front of the 3d simulation.
-Please lookup for the [Supervisor](../reference/supervisor.md) node in the `Reference Manual`.
-2. If you want to add a small sub-window in front of the 3d graphics, you should consider using the [Display](../reference/display.md) node.
+Please lookup for the `Supervisor` node in the `Reference Manual`.
+2. If you want to add a small sub-window in front of the 3d graphics, you should consider using the `Display` node.
 This will allow you to do 2d vector graphics and text.
 This is also useful for example to display processed camera images.
-Please lookup for the [Display](../reference/display.md) node in the `Reference Manual`.
-3. If you want add 3d graphics to the main window, this can be done by using the [Supervisor](../reference/supervisor.md) API.
-The [Supervisor](../reference/supervisor.md) API can be used to create new nodes - meaning that you can create an [IndexedFaceSet](../reference/indexedfaceset.md) or IndexedLineSet and adjust vertex positions or indexing accordingly to create and update the shape you wish to draw in the 3D scene.
+Please lookup for the `Display` node in the `Reference Manual`.
+3. If you want add 3d graphics to the main window, this can be done by using the `Supervisor` API.
+The `Supervisor` API can be used to create new nodes - meaning that you can create an [IndexedFaceSet](../reference/indexedfaceset.md) or [IndexedLineSet](../reference/indexedlineset.md) and adjust vertex positions or indexing accordingly to create and update the shape you wish to draw in the 3D scene.
 
 ### What Does This Mean: "The time step used by controller {...} is not a multiple of WorldInfo.basicTimeStep!"?
 
@@ -218,9 +218,9 @@ Webots does automatically detect collisions and apply the contact forces wheneve
 The collision detection mechanism is based on the shapes specified in the `boundingObject`s.
 Now if you want to programmatically detect collision, there are several methods:
 
-- In controller code: you can detect collision by using [TouchSensor](../reference/touchsensor.md)s placed around your robot body or where the collision is expected.
-You can use [TouchSensor](../reference/touchsensor.md)s of type "bumper" that return a boolean status 1 or 0, whether there is a collision or not.
-In fact a "bumper" [TouchSensor](../reference/touchsensor.md) will return 1 when its `boundingObject` intersects another `boundingObject` and 0 otherwise.
+- In controller code: you can detect collision by using `TouchSensor`s placed around your robot body or where the collision is expected.
+You can use `TouchSensor`s of type "bumper" that return a boolean status 1 or 0, whether there is a collision or not.
+In fact a "bumper" `TouchSensor` will return 1 when its `boundingObject` intersects another `boundingObject` and 0 otherwise.
 - In supervisor code (Webots PRO required): you can detect collisions by tracking the position of robots using the `wb_supervisor_field_get_*` functions.
 Here is a naive example assuming that the robots are cylindrical and moving in the xz-plane.
 
@@ -257,8 +257,8 @@ This function is described in the Physics Plugin chapter of the `Reference Manua
 
 The content of the camera window will appear only after all the following steps have been completed:
 
-1. The [Camera](../reference/camera.md)'s `name` field was specified.
-2. The `WbDeviceTag` for the [Camera](../reference/camera.md) node was found using the `wb_robot_get_device` function called with the corresponding [Camera](../reference/camera.md)'s `name`.
-3. The [Camera](../reference/camera.md) was enabled using the `wb_camera_enable` function and a refresh rate of `r` milliseconds.
+1. The `Camera`'s `name` field was specified.
+2. The `WbDeviceTag` for the `Camera` node was found using the `wb_robot_get_device` function called with the corresponding `Camera`'s `name`.
+3. The `Camera` was enabled using the `wb_camera_enable` function and a refresh rate of `r` milliseconds.
 4. One or several `wb_robot_step` function (or equivalent function) calls have been called covering a time span of at least `r` milliseconds.
 5. The `wb_camera_get_image` function was called.

@@ -40,4 +40,4 @@ Various [Transform](../reference/transform.md) and [IndexedFaceSet](../reference
 A *physics plugin* is used to add thrust and other forces to the simulation.
 
 > **Note**:
-[Fluid](../reference/fluid.md) and `Propeller` nodes are now recommended to create flying robots.
+[Fluid](../reference/fluid.md) and [Propeller](../reference/propeller.md) nodes are now recommended to create flying robots.

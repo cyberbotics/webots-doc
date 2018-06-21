@@ -61,15 +61,15 @@ The optimization algorithm should go in a [Supervisor](../reference/supervisor.m
 
 Because these controllers will run in separate system processes, they will not be able to access each other's variables.
 Though, they will have to communicate by some other means in order to specify the sets of parameters that need to be evaluated.
-It is possible, and recommended, to use Webots [Emitter](../reference/emitter.md)s and [Receiver](../reference/receiver.md)s to exchange information between the [Supervisor](../reference/supervisor.md) and the other controllers.
+It is possible, and recommended, to use Webots [Emitters](../reference/emitter.md) and [Receivers](../reference/receiver.md) to exchange information between the [Supervisor](../reference/supervisor.md) and the other controllers.
 For example, in a typical scenario, the [Supervisor](../reference/supervisor.md) will send evaluation parameters (e.g., genotype) to the robot controllers.
-The robot controllers listen to their [Receiver](../reference/receiver.md)s, waiting for a new set of parameters.
+The robot controllers listen to their [Receivers](../reference/receiver.md), waiting for a new set of parameters.
 Upon receipt, a robot controller starts executing the behavior specified by the set of parameters.
 In this scenario, the [Supervisor](../reference/supervisor.md) needs an [Emitter](../reference/emitter.md) and each individual robot needs a [Receiver](../reference/receiver.md).
 
 Depending on the algorithms needs, the fitness could be evaluated either in the [Supervisor](../reference/supervisor.md) or in the individual robot controllers.
 In the case it is evaluated in the robot controller then the fitness result needs to be sent back to the [Supervisor](../reference/supervisor.md).
-This bidirectional type of communication requires the usage of additional [Emitter](../reference/emitter.md)s and [Receiver](../reference/receiver.md)s.
+This bidirectional type of communication requires the usage of additional [Emitters](../reference/emitter.md) and [Receivers](../reference/receiver.md).
 
 ### Resetting the Robot
 

@@ -3,7 +3,7 @@
 %robot aibo-ers7 images/robots/aibo-ers7/model.png
 
 Aibo ERS7 is a four-legged dog-like robot designed by Sony Corp.
-The model includes 26[LEDs](../reference/led .md), 3 infra-red distance sensors and a total of 20 motors controlling different parts of the robot such as the neck, the tail and the head tilt.
+The model includes 26[LEDs](../reference/led.md), 3 infra-red distance sensors and a total of 20 motors controlling different parts of the robot such as the neck, the tail and the head tilt.
 
 More information on the Aibo robot can be found [here](https://en.wikipedia.org/wiki/AIBO).
 

@@ -106,7 +106,7 @@ Now click on the blue sky to unselect the floor.
 
 ### Add an e-puck Robot
 
-The e-puck is a small robot having differential wheels, 10 [LEDs](../reference/led .md), and several sensors including 8 distance sensors and a camera.
+The e-puck is a small robot having differential wheels, 10 [LEDs](../reference/led.md), and several sensors including 8 [DistanceSensors](../reference/distancsensors.md) and a [Camera](../reference/camera.md).
 In this tutorial we are only interested in using its wheels.
 We will learn how to use some other e-puck features in the other tutorials.
 

@@ -5,7 +5,7 @@ The programming examples provided here are in C, but same concepts apply to C++,
 ### Introduction
 
 The [Supervisor](../reference/supervisor.md) is a special kind of [Robot](../reference/robot.md).
-In object-oriented jargon we would say that the [Supervisor](../reference/supervisor.md) class *inherits* from the [Robot](../reference/robot.md) class or that the [Supervisor](../reference/supervisor.md) class *extends* the [Robot](../reference/robot.md) class.
+In object-oriented jargon we would say that the `Supervisor` class *inherits* from the `Robot` class or that the `Supervisor` class *extends* the `Robot` class.
 The important point is that the [Supervisor](../reference/supervisor.md) node offers the `wb_supervisor_*` functions in addition to the regular `wb_robot_*` functions.
 These extra functions can only be invoked from a controller program associated with a [Supervisor](../reference/supervisor.md) node, not with a [Robot](../reference/robot.md) or a [DifferentialWheels](../reference/differentialwheels.md) node.
 Note that Webots PRO is required to create [Supervisor](../reference/supervisor.md) nodes or use the `wb_supervisor_*` functions.

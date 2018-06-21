@@ -58,7 +58,7 @@ Pioneer3at {
   SFString   name            "Pioneer 3-AT"
   SFString   controller      "void"
   SFString   controllerArgs  ""
-  SFString   customData      ""f
+  SFString   customData      ""
   SFBool     synchronization TRUE
   MFNode     extensionSlot   []
 }

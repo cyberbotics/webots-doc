@@ -58,7 +58,7 @@ graph LR
 ### Robot Window
 
 A robot window allows the programmer to efficiently create custom user interfaces for his robots.
-Robot windows can be opened by double-clicking on the virtual robot, or by selecting the `Robot | Show Robot Window` menu item.
+Robot windows can be opened by double-clicking on the virtual robot, or using the [context menu](the-3d-window.md#context-menu).
 The *window* field of the [Robot](../reference/robot.md) node specifies a robot window (cf. documentation in the reference manual).
 
 Robot windows are implemented in HTML and provide the following features:

@@ -53,7 +53,7 @@ graph TD
 ### Physics Attributes
 
 The aim of this subsection is to learn how to set some simple physics properties for a [Solid](../reference/solid.md) node.
-The [Physics](../reference/physics.md) node contains fields related to the physics of the current rigid body (Solid).
+The [Physics](../reference/physics.md) node contains fields related to the physics of the current rigid body ([Solid](../reference/solid.md)).
 
 > **Theory**: The **mass** of a [Solid](../reference/solid.md) node is given by its `density` or `mass` field.
 Only one of these two fields can be specified at a time (the other should be set to *-1*).
@@ -119,7 +119,7 @@ ContactProperties nodes can be used to specify the desired behavior of the conta
 
 > Each solid belongs to a material category referenced by their `contactMaterial` field (*"default"* by default).
 The [WorldInfo](../reference/worldinfo.md) node has a `contactProperties` field that stores a list of [ContactProperties](../reference/contactproperties.md) nodes.
-These nodes allow to define the contact properties between two categories of [Solid](../reference/solid.md)s.
+These nodes allow to define the contact properties between two categories of [Solids](../reference/solid.md).
 
 We want now to modify the friction model between the dumbbell and the other solids of the environment.
 

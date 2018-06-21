@@ -31,7 +31,7 @@ The ground, the walls and the lighting are kept.
 Some definitions are required before giving rules to create a robot model.
 
 The set containing the [Solid](../reference/solid.md) node and all its derived nodes is called the *solid nodes*.
-A similar definition is applied for the Device, [Robot](../reference/robot.md), Joint and Motor nodes.
+A similar definition is applied for the [Device](../reference/device.md), [Robot](../reference/robot.md), [Joint](../reference/joint.md) and [Motor](../reference/motor.md) nodes.
 You can get more information about the node hierarchy in the `Reference Manual`.
 Note that the solid nodes and device nodes are close but don't match perfectly.
 
@@ -74,9 +74,9 @@ Please refer to [this figure](#high-level-representation-of-the-4-wheels-robot).
 
 <!-- -->
 
-> **Hands on**: Add a[Shape](../reference/shape.md) node containing a Box geometry to the [Robot](../reference/robot.md) node.
-Set the color of the[Shape](../reference/shape.md) to red.
-Use the[Shape](../reference/shape.md) to define also the `boundingObject` field of the [Robot](../reference/robot.md) node.
+> **Hands on**: Add a [Shape](../reference/shape.md) node containing a Box geometry to the [Robot](../reference/robot.md) node.
+Set the color of the [Shape](../reference/shape.md) to red.
+Use the [Shape](../reference/shape.md) to define also the `boundingObject` field of the [Robot](../reference/robot.md) node.
 The dimension of the box is *(0.1, 0.05, 0.2)*.
 Add a [Physics](../reference/physics.md) node to the [Robot](../reference/robot.md).
 The [figure](#low-level-representation-of-the-4-wheels-robot) represents all the nodes defining the robot.
@@ -139,7 +139,7 @@ In our case it's along the x-axis (so *(1, 0, 0)*).
 Some signs obviously have to be updated for other wheels.
 
 We want now to implement the cylinder shape of the wheels.
-As the [Cylinder](../reference/cylinder.md) node is defined along the *y*-axis, a [Transform](../reference/transform.md) node should encapsulate the[Shape](../reference/shape.md) to rotate the [Cylinder](../reference/cylinder.md) along the along the *x*-axis.
+As the [Cylinder](../reference/cylinder.md) node is defined along the *y*-axis, a [Transform](../reference/transform.md) node should encapsulate the [Shape](../reference/shape.md) to rotate the [Cylinder](../reference/cylinder.md) along the along the *x*-axis.
 
 > **Hands on**: Complete the missing nodes to get the same structure as the one depicted in [this figure](#low-level-representation-of-the-4-wheels-robot).
 Don't forget the [Physics](../reference/physics.md) nodes.
@@ -149,7 +149,7 @@ Set the color of the wheels to green.
 
 <!-- -->
 
-> **Hands on**: In order to be able to actuate the wheels, add a[RotationalMotor](../reference/rotationalmotor.md) to each HingeJoint, and set their `name` fields from *"wheel1"* to *"wheel4"*.
+> **Hands on**: In order to be able to actuate the wheels, add a [RotationalMotor](../reference/rotationalmotor.md) to each HingeJoint, and set their `name` fields from *"wheel1"* to *"wheel4"*.
 These labels will be used to reference the wheels from the controller.
 
 ### Sensors
@@ -168,16 +168,16 @@ Set their `name` field according to the labels of [this figure](#top-view-of-the
 ### Controller
 
 In the previous tutorials, you have learnt how to setup a feedback loop and how to read the distance sensor values.
-However, actuating the[RotationalMotor](../reference/rotationalmotor.md) nodes is new.
+However, actuating the [RotationalMotor](../reference/rotationalmotor.md) nodes is new.
 The following note explain how to proceed.
 
-> **Note**: To program the rotational motors, the first step is to include the API module corresponding to the[RotationalMotor](../reference/rotationalmotor.md) node:
+> **Note**: To program the rotational motors, the first step is to include the API module corresponding to the [RotationalMotor](../reference/rotationalmotor.md) node:
 
 > ```c
 >  #include <webots/motor.h>
 > ```
 
-> Then to get the references of the[RotationalMotor](../reference/rotationalmotor.md) nodes:
+> Then to get the references of the [RotationalMotor](../reference/rotationalmotor.md) nodes:
 
 > ```c
 >  // initialize motors

@@ -143,12 +143,12 @@ For the position sensors, the name is the same than the one of the motors, with 
 
 #### LEDs
 
-The two RGB [LEDs](../reference/led .md) are placed on the robot head.
+The two RGB [LEDs](../reference/led.md) are placed on the robot head.
 They are called `HeadLed` and `EyeLed`.
 The two eyes will have same color.
-Note that these [LEDs](../reference/led .md) are replicated on the robot back panel.
+Note that these [LEDs](../reference/led.md) are replicated on the robot back panel.
 
-The three other [LEDs](../reference/led .md) are unicolor and placed on the robot back.
+The three other [LEDs](../reference/led.md) are unicolor and placed on the robot back.
 They are called `BackLedGreen`, `BackLedBlue` and `BackLedRed`.
 
 #### Accelerometer
@@ -816,7 +816,7 @@ A simple workaround to fix the issue is to replace the `MATLAB_HOME\MATLAB_VERSI
 
 #### visual\_tracking.wbt
 
-![visual_tracking.wbt.png](images/robots/robotis-op2/visual_tracking.wbt.png) This example illustrates the use of the camera (including the [Vision Manager](#vision-manager)) and the use of the RGB [LEDs](../reference/led .md).
+![visual_tracking.wbt.png](images/robots/robotis-op2/visual_tracking.wbt.png) This example illustrates the use of the camera (including the [Vision Manager](#vision-manager)) and the use of the RGB [LEDs](../reference/led.md).
 
 In the infinite loop the [Vision Manager](#vision-manager) is used to find the red ball.
 Then, if the ball has been found the head led is set to green and otherwise to red.

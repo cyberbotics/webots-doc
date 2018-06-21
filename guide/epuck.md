@@ -5,7 +5,7 @@
 E-puck is a miniature mobile robot originally developed at EPFL for teaching purposes by the designers of the successful Khepera robot.
 The hardware and software of e-puck is fully open source, providing low level access to every electronic device and offering unlimited extension possibilities.
 
-The model includes support for the differential wheel motors (encoders are also simulated, as position sensors), the infra-red sensors for proximity and light measurements, the accelerometer, the camera, the 8 surrounding [LEDs](../reference/led .md), the body and front [LEDs](../reference/led .md), bluetooth communication (modeled using [Emitter](../reference/emitter.md) / [Receiver](../reference/receiver.md) devices) and ground sensors extension.
+The model includes support for the differential wheel motors (encoders are also simulated, as position sensors), the infra-red sensors for proximity and light measurements, the accelerometer, the camera, the 8 surrounding [LEDs](../reference/led.md), the body and front [LEDs](../reference/led.md), bluetooth communication (modeled using [Emitter](../reference/emitter.md) / [Receiver](../reference/receiver.md) devices) and ground sensors extension.
 The other e-puck devices are not yet simulated in the current model.
 
 The official [e-puck website](http://www.e-puck.org) provides the most up-to-date information about this robot.
@@ -112,7 +112,7 @@ The `wb_motor_set_velocity` and `wb_position_sensor_get_value` functions allow y
 The forward direction of the e-puck is given by the negative *z*-axis of the world coordinates.
 This is also the direction in which the camera eye is looking; the direction vector of the camera is pointing in the opposite direction, namely the direction of the positive *z*-axis.
 The axle's direction is given by the positive *x*-axis.
-Proximity sensors, light sensors and [LEDs](../reference/led .md) are numbered clockwise; their location and orientation are shown in [this figure](#sensors-leds-and-camera).
+Proximity sensors, light sensors and [LEDs](../reference/led.md) are numbered clockwise; their location and orientation are shown in [this figure](#sensors-leds-and-camera).
 The last column of the latter lists the angles between the negative *x*-axis and the direction of the devices, the plane *zOx* being oriented counter-clockwise.
 Note that the proximity sensors and the light sensors are actually the same devices of the real robot used in a different mode, so their direction coincides.
 Proximity sensor responses are simulated in accordance to the lookup table in [this figure](#proximity-sensor-response-against-distance); this table is the outcome of calibrations performed on the real robot.
@@ -261,10 +261,10 @@ An automaton state of BotStudio corresponds to a state of the e-puck actuators w
 A transition is fired when all of its conditions are fulfilled (logical AND).
 A logical OR can be performed by several transitions between two states.
 
-The actuators available in BotStudio are the [LEDs](../reference/led .md) and the motors.
+The actuators available in BotStudio are the [LEDs](../reference/led.md) and the motors.
 Each automaton state have two sliders for setting the motor speed value.
 Note that these values can be unset by clicking on the cursor of the slider.
-Each state also have 10 square buttons to set the [LEDs](../reference/led .md) states.
+Each state also have 10 square buttons to set the [LEDs](../reference/led.md) states.
 A red button means the LED is turned on, a black one means it is turned off and a gray one means there is no modification.
 
 The sensor available in BotStudio are the distance sensors and the camera.

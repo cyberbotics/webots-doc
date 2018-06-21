@@ -123,23 +123,23 @@ This may be less accurate because `boundingObject`s are often rough approximatio
 
 ### How to Get a Realisitc and Efficient Rendering?
 
-The quality of the rendering depends on the [Shapes](../reference/shape.md)` resolution, on the setup of the `Materials` and on the setup of the `Lights`.
+The quality of the rendering depends on the [Shapes](../reference/shape.md) resolution, on the setup of the `Materials` and on the setup of the `Lights`.
 
 The bigger the number of vertices is, the slower the simulation is (except obviously in `fast` mode).
 A tradeoff has to be found between these two components.
-To be efficient, [Shapes](../reference/shape.md)` should have a reasonable resolution.
+To be efficient, [Shapes](../reference/shape.md) should have a reasonable resolution.
 If a rule should be given, a [Shape](../reference/shape.md) shouldn't exceed 1000 vertices.
 Exporting a [Shape](../reference/shape.md) from a CAD software generates often meshes having a huge resolution.
 Reducing them to low poly meshes is recommended.
 
 The rendering is also closely related to the `Materials`.
-To set a [Material](../reference/material.md) without texture, set only its `Appearance` node.
+To set a [Material](../reference/material.md) without texture, set only its [Appearance](../reference/appearance.md) node.
 Then you can play with the `diffuseColor` field to set its color (avoid to use pure colors, balancing the RGB components gives better results).
 To set a [Material](../reference/material.md) with texture, set only its [ImageTexture](../reference/imagetexture.md) node.
 Eventually, the `specularColor` field can be set to a gray value to set a reflection on the object.
 The other fields (especially the `ambientIntensity` and the `emissiveColor` fields) shouldn't be modified except in specific situations.
 
-The `color` field of the [ElevationGrid](../reference/elevationgrid.md) shouldn't be used for a realistic rendering because it is not affected by the ambient light with the same way as the other [Shapes](../reference/shape.md)`.
+The `color` field of the [ElevationGrid](../reference/elevationgrid.md) shouldn't be used for a realistic rendering because it is not affected by the ambient light with the same way as the other [Shapes](../reference/shape.md).
 
 Here is a methodology to set up the lights:
 
@@ -149,5 +149,5 @@ Often, a single directional light pointing down is sufficient.
 3. Increase the `ambientIntensity` of the main light.
 The result will be the appearance of the objects when they are in shadows.
 4. Switch on the shadows if required.
-The shadows are particularily costly, and are strongly related to the [Shapes](../reference/shape.md)` resolution.
+The shadows are particularily costly, and are strongly related to the [Shapes](../reference/shape.md) resolution.
 5. Increase the `intensity` of each lamp.

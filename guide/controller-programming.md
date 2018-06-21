@@ -193,8 +193,8 @@ If a longer duration or a higher velocity is specified, then the motor may have 
 Note that the `wb_motor_set_position` function only specifies the *desired* target position.
 Just like with real robots, it is possible (in physics-based simulations only), that the [RotationalMotor](../reference/rotationalmotor.md) is not able to reach this position, because it is blocked by obstacles or because the motor's torque (`maxForce`) is insufficient to oppose gravity, etc.
 
-If you want to control the motion of several [RotationalMotor](../reference/rotationalmotor.md)s simultaneously, then you need to specify the desired position for each [RotationalMotor](../reference/rotationalmotor.md) separately, using the `wb_motor_set_position` function.
-Then you need to call the `wb_robot_step` function once to actuate all the [RotationalMotor](../reference/rotationalmotor.md)s simultaneously.
+If you want to control the motion of several [RotationalMotors](../reference/rotationalmotor.md) simultaneously, then you need to specify the desired position for each [RotationalMotor](../reference/rotationalmotor.md) separately, using the `wb_motor_set_position` function.
+Then you need to call the `wb_robot_step` function once to actuate all the [RotationalMotors](../reference/rotationalmotor.md) simultaneously.
 
 ### The "step" and "wb\_robot\_step" Functions
 

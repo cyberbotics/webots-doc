@@ -95,7 +95,7 @@ The triangles can be shown using the `View / Wireframe Rendering` menu item.
 **Keywords**: Texture mapping
 
 ![textured_shapes.png](images/samples/textured_shapes.png) This example shows how textures are applied on basic primitives.
-The same `Appearance` node is applied on all the basic primitives following VRML rules about texture mapping.
+The same [Appearance](../reference/appearance.md) node is applied on all the basic primitives following VRML rules about texture mapping.
 
 ### webots\_box.wbt
 

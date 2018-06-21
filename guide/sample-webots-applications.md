@@ -12,5 +12,5 @@ More detailed explanations can be found in the source code.
 - [Devices](samples-devices.md)
 - [How To](samples-howto.md)
 - [Geometries](samples-geometries.md)
-- [Environments](sample-environments.md)
+- [Environments](samples-environments.md)
 - [Rendering](samples-rendering.md)

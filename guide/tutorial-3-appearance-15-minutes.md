@@ -16,7 +16,7 @@ The result at the end of this tutorial is shown in [this figure](#simulation-aft
 There are three types of light nodes: the DirectionalLight, the [PointLight](../reference/pointlight.md) and the [SpotLight](../reference/spotlight.md).
 A [DirectionalLight](../reference/directionallight.md) simulates a light which is infinitely far (ex: the sun), a [PointLight](../reference/pointlight.md) simulates light emitted from a single point (ex: a light bulb), and a [SpotLight](../reference/spotlight.md) simulates a conical light (ex: a flashlight).
 Each type of light node can cast shadows.
-You can find their complete documentation in the `Reference Manual`.
+You can find their complete documentation in the [Reference Manual](../reference/nodes-and-api-functions.md).
 
 <!-- -->
 
@@ -64,7 +64,7 @@ In the default project directory you will find textures that are available for e
 
 <!-- -->
 
-> **Theory**: Textures are mapped onto Geometry nodes according to predefined **UV mapping** functions described in the `Reference Manual`.
+> **Theory**: Textures are mapped onto Geometry nodes according to predefined **UV mapping** functions described in the [Reference Manual](../reference/imagetexture.md).
 A UV mapping function maps a 2D image representation to a 3D model.
 
 %figure "Simulation after having setup the Light and the Appearance nodes."

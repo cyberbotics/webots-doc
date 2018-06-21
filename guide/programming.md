@@ -14,13 +14,13 @@ You will find more info about *odometry* and *SLAM* techniques in `Cyberbotics' 
 
 To get the position of a robot in the robot's controller code: add a [GPS](../reference/gps.md) node to the robot, then use the `wb_robot_get_device`, `wb_gps_enable` and `wb_gps_get_values` functions.
 Note that the [GPS](../reference/gps.md)'s resolution field must be 0 (the default), otherwise the results will be noisy.
-You will find more info about the [GPS](../reference/gps.md) node and functions in the [Reference Manual](../reference/index.md).
+You will find more info about the [GPS](../reference/gps.md) node and functions in the [Reference Manual](../reference/gps.md).
 Note that the [GPS](../reference/gps.md) can also be placed on a robot's part (arm, foot, etc.) to get the world/global coordinates of that particular part.
 
 #### Get Position in Supervisor Code:
 
 1. To get the 3D position of any [Transform](../reference/transform.md) (or derived) node in the [Supervisor](../reference/supervisor.md) code: you can use the `wb_supervisor_node_get_position` function.
-Please check this function's description in the `Reference Manual`.
+Please check this function's description in the [Reference Manual](../reference/supervisor.md).
 2. To get the 3D position of any [Transform](../reference/transform.md) (or derived) node placed at the root of the Scene Tree (the nodes visible when the Scene Tree is completely collapsed), you can use the `wb_supervisor_field_get_sf_vec3f` function.
 Here is an [example](supervisor-programming.md#tracking-the-position-of-robots).
 
@@ -40,12 +40,12 @@ There are also some functions (see below) that can be used to get the velocity d
 #### Get Velocity in Controller Code:
 
 To get the angular velocity of a robot (or robot part) in the robot's controller code: add a [Gyro](../reference/gyro.md) node to the robot (or robot part), then use the `wb_robot_get_device`, `wb_gyro_enable` and `wb_gyro_get_values` functions.
-You will find more information about the [Gyro](../reference/gyro.md) node and functions in the `Reference Manual`.
+You will find more information about the [Gyro](../reference/gyro.md) node and functions in the [Reference Manual](../reference/gyro.md).
 
 #### Get Velocity in Supervisor:
 
 Using the `wb_supervisor_node_get_velocity` function it is possible to retrieve both the linear and angular velocity of any [Solid](../reference/solid.md) node.
-You will find more information about this function in the `Reference Manual`.
+You will find more information about this function in the [Reference Manual](../reference/solid.md).
 
 #### Get Velocity in Physics Plugin Code:
 
@@ -177,7 +177,7 @@ void webots_physics_step() {
 }
 ```
 
-There is more info on the plugin functions in the `Reference Manual` in the chapter about Physics Plugins.
+There is more info on the plugin functions in the [Reference Manual](../reference/physics-plugin.md).
 Additional information about the ODE functions can be found [here](http://ode-wiki.org/wiki/index.php?title=Manual).
 You may also want to study this example distributed with Webots:
 
@@ -193,11 +193,11 @@ There are different techniques depending on what you want to draw:
 
 1. If you just want to add some 2d text, you can do this by using the function: `wb_supervisor_set_label`.
 This will allow you to put 2d overlay text in front of the 3d simulation.
-Please lookup for the [Supervisor](../reference/supervisor.md) node in the `Reference Manual`.
+Please lookup for the [Supervisor](../reference/supervisor.md) node documentation.
 2. If you want to add a small sub-window in front of the 3d graphics, you should consider using the [Display](../reference/display.md) node.
 This will allow you to do 2d vector graphics and text.
 This is also useful for example to display processed camera images.
-Please lookup for the [Display](../reference/display.md) node in the `Reference Manual`.
+Please lookup for the [Display](../reference/display.md) node documentation.
 3. If you want add 3d graphics to the main window, this can be done by using the [Supervisor](../reference/supervisor.md) API.
 The [Supervisor](../reference/supervisor.md) API can be used to create new nodes - meaning that you can create an [IndexedFaceSet](../reference/indexedfaceset.md) or IndexedLineSet and adjust vertex positions or indexing accordingly to create and update the shape you wish to draw in the 3D scene.
 
@@ -251,7 +251,7 @@ Here is a naive example assuming that the robots are cylindrical and moving in t
 - In the physics plugin (Webots PRO required): you can replace or extend Webots collision detection mechanism.
 This is an advanced technique that requires knowledge of the [ODE (Open Dynamics Engine) API](http://ode-wiki.org/wiki/index.php?title=Manual).
 Your collision detection mechanism must be implemented in the `webots_physics_collide` function.
-This function is described in the Physics Plugin chapter of the `Reference Manual`.
+This function is described in the [Physics Plugin](../reference/physics-plugin.md) chapter of the [Reference Manual](../reference/physics-plugin.md).
 
 ### Why Does My Camera Window Stay Black?
 

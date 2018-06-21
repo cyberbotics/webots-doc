@@ -9,11 +9,11 @@ The root directory of a project contains at least a directory called "worlds" co
 But several other directories are often required:
 
 - "controllers": this directory contains the controllers available in each world files of the current project.
-The link between the world files and this directory is done through the *controller* field of the *Robot* node (explained in the reference manual).
+The link between the world files and this directory is done through the *controller* field of the [Robot](../reference/robot.md) node.
 More information about this directory in the following subsections.
 - "protos": this directory contains the PROTO files available for all the world files of the current project.
 - "plugins": this directory contains the plugins available in the current project.
-The link between the world files and this directory is done through the *physics* field of the *WordInfo* node (explained in the reference manual).
+The link between the world files and this directory is done through the *physics* field of the [WordInfo](../reference/worldinfo.md) node.
 - "worlds": this directory contains the world files, the project files (see below) and the textures (typically in a subdirectory called "textures").
 
 > **Note**: Note that the directories can be created by using the wizard [New Project Directory](the-user-interface.md) described in [this chapter](getting-started-with-webots.md).

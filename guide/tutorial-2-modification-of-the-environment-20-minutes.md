@@ -6,8 +6,8 @@ We will tackle several concepts related to the nodes: what is their meaning, how
 Moreover we will see how to set up physics.
 
 Several kinds of nodes will be introduced.
-Their detailed definition can be found in chapter 3 of the `Reference Manual`.
-Having the nodes chart diagram (chapter 2 of the `Reference Manual`) in front of you, will also help understanding the nodes inheritance relationship.
+Their detailed definition can be found in [Reference Manual](../reference/nodes-and-api-functions.md).
+Having the [nodes chart diagram](../reference/node-chart.md) in front of you, will also help understanding the nodes inheritance relationship.
 
 ### A New Simulation
 
@@ -111,12 +111,12 @@ The contact points between the ball and the floor can be displayed as cyan lines
 To define the ball, we used the [Sphere](../reference/sphere.md) node in two different contexts: for the graphical representation (`children`) and to define the physical bounds (`boundingObject`).
 All Geometry node (such as the [Sphere](../reference/sphere.md) node) can be used in a graphical context.
 However, only a subset of them can be used in a physical context.
-Take a look at the scheme of chapter 2 of the `Reference Manual` to know which primitive you can use.
+Take a look at the [nodes chart diagram](../reference/node-chart.md) to know which primitive you can use.
 
 We now want to reduce the size of the [Sphere](../reference/sphere.md) and to increase its graphical quality by increasing the number of triangles used to represent it.
 
 > **Hands on**: For each [Sphere](../reference/sphere.md) node defining the ball, set its `radius` field to *0.05* and its `subdivision` field to *2*.
-Refer to the `Reference Manual` to understand what the `subdivision` field stands for.
+Refer to the [Reference Manual](../reference/sphere.md) to understand what the `subdivision` field stands for.
 
 ### DEF-USE Mechanism
 

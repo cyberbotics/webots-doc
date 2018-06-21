@@ -32,7 +32,7 @@ Some definitions are required before giving rules to create a robot model.
 
 The set containing the [Solid](../reference/solid.md) node and all its derived nodes is called the *solid nodes*.
 A similar definition is applied for the [Device](../reference/device.md), [Robot](../reference/robot.md), [Joint](../reference/joint.md) and [Motor](../reference/motor.md) nodes.
-You can get more information about the node hierarchy in the `Reference Manual`.
+You can get more information about the node hierarchy in the [nodes chart diagram](../reference/node-chart.md).
 Note that the solid nodes and device nodes are close but don't match perfectly.
 
 > **Theory**: The main structure of a robot model is a tree of solid nodes linked together.
@@ -190,7 +190,7 @@ The following note explain how to proceed.
 >    wheels[i] = wb_robot_get_device(wheels_names[i]);
 > ```
 
-> A motor can be actuated by setting its position, its velocity, its acceleration or its force (cf. `Reference Manual`).
+> A [Motor](../reference/motor.md) can be actuated by setting its position, its velocity, its acceleration or its force.
 Here we are interested in setting its velocity.
 This can be achieved by setting its position at infinity, and by bounding its velocity:
 
@@ -204,7 +204,7 @@ This can be achieved by setting its position at infinity, and by bounding its ve
 
 > **Hands on**: Implement a controller called "4\_wheels\_collision\_avoidance" moving the robot and avoiding obstacles by detecting them by the distance sensors.
 
-> Note that the `lookupTable` field of the [DistanceSensor](../reference/distancesensor.md) nodes indicates which values are returned by the sensor (cf. `Reference Manual`).
+> Note that the `lookupTable` field of the [DistanceSensor](../reference/distancesensor.md) nodes indicates which values are returned by the sensor.
 
 > Don't forget to set the `controller` field of the [Robot](../reference/robot.md) node to indicate your new controller.
 

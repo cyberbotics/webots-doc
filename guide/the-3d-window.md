@@ -2,14 +2,24 @@
 
 ### Selecting an Object
 
-A single mouse click allows you to select a solid object.
+A single mouse left click allows you to select a [Solid](../reference/solid.md) object.
 The bounding object of a selected solid is represented by white lines.
 These lines turn pink if the solid is colliding with another one and blue when the solid is idle, i.e., it comes to rest and it does not interact with any other active solid.
-Selecting a robot enables the `Show Robot Window` item in the `Tools` menu.
-Double-clicking on a solid object opens the Robot Window and if it was closed, the Scene Tree.
+Double-clicking on a [Robot](../reference/robot.md) opens the Robot Window.
 
 If an object has a solid subpart, then it is also possible to select only this subpart by clicking on it once the whole object is already selected, or by clicking on it while holding down the Alt key.
 Linux users should also hold down the Control key (Ctrl) together with the Alt key.
+
+#### Context Menu
+
+%figure "The context menu allows you to perform various actions depending on the current selected object"
+
+![context_menu.png](images/context_menu.png)
+
+%end
+
+It is possible to right click on an object in the 3D window to select it and open the context menu.
+This menu allows you to perform various actions such as copy the object, delete the object, move the viewpoint to the object and show the robot window (if the object is a [Robot](../reference/robot.md)).
 
 ### Navigation in the Scene
 
@@ -53,8 +63,9 @@ These resize handles can also be enabled from the Field Editor.
 
 #### Translation Using Keyboard Shortcuts
 
-- **Translation**: To move an object parallel to the ground: hold down the shift key, press the left mouse button and drag.
-- **Lift**: To raise or lower and object: hold down the Shift key, press both left and right mouse buttons (or the middle button) and drag.
+- **Translation**: To move an object parallel to the ground: hold down the Shift key, press the left mouse button and drag.
+- **Rotation**: To rotate an object around the world's vertical axis: hold down the Shift key, press the right mouse button and drag.
+- **Lift**: To raise or lower an object: hold down the Shift key, press both left and right mouse buttons (or the middle button) and drag.
 Alternatively, the mouse wheel combined with the Shift key can also be used.
 
 > **Note**: If you are a Mac user with a single button mouse, hold the Shift key and the Control key (Ctrl) down and press the mouse button to rotate the selected object according to mouse motion.
@@ -80,11 +91,12 @@ Camera rotation can be useful when checking wether your force / torque vector ha
 
 ### Moving and Resizing Overlays
 
-By default for each [Camera](../reference/camera.md), [Display](../reference/display.md) and [RangeFinder](../reference/rangefinder.md) device, an overlay showing the recorded or displayed image is visible in the 3D view.
-The device type is indicated by the border color: magenta for [Camera](../reference/camera.md) devices, cyan for [Display](../reference/display.md) devices and yellow for [RangeFinder](../reference/rangefinder.md) devices, see [this figure](#camera-display-and-rangefinder-overlays).
+By default for each Camera, Display and RangeFinder device, an overlay showing the recorded or displayed image is visible in the 3D view.
+The device type is indicated by the border color: magenta for Camera devices, cyan for Display devices and yellow for RangeFinder devices, see [this figure](#camera-display-and-rangefinder-overlays).
 This overlay can be moved to the desired position on the view by clicking on it and dragging the mouse.
-In order to resize the overlay the user has to click on the icon located at the bottom right corner and drag the mouse, during this action the original not scaled image size will be indicated using darker areas, as depicted in [this figure](#camera-overlay-resizing) Additionally a close button is available on the top right corner to hide the overlay.
-Once the robot is selected, it is also possible to show or hide the overlay images from the `Camera Devices`, `Display Devices` and `RangeFinder Devices` items in [Robot](../reference/robot.md) menu.
+In order to resize the overlay the user has to click on the icon located at the bottom right corner and drag the mouse, during this action the original not scaled image size will be indicated using darker areas, as depicted in [this figure](#camera-overlay-resizing).
+Additionally, a close button is available on the top right corner to hide the overlay.
+Once the [Robot](../reference/robot.md) is selected, it is also possible to show or hide the overlay images from the `Camera Devices`, `Display Devices` and `RangeFinder Devices` items in the `Overlays` menu or from the [context menu](#context-menu).
 
 %figure "Camera, Display and RangeFinder overlays"
 

@@ -2,13 +2,24 @@
 
 ### Selecting an Object
 
-A single mouse click allows you to select a solid object.
+A single mouse left click allows you to select a [Solid](../reference/solid.md) object.
 The bounding object of a selected solid is represented by white lines.
 These lines turn pink if the solid is colliding with another one and blue when the solid is idle, i.e., it comes to rest and it does not interact with any other active solid.
 Double-clicking on a [Robot](../reference/robot.md) opens the Robot Window.
 
 If an object has a solid subpart, then it is also possible to select only this subpart by clicking on it once the whole object is already selected, or by clicking on it while holding down the Alt key.
 Linux users should also hold down the Control key (Ctrl) together with the Alt key.
+
+#### Context Menu
+
+%figure "TODO: image required"
+
+![overlay.png](images/overlay.png)
+
+%end
+
+When an object is selected in the 3D Window is is possible to right click on it to open the context menu.
+This menu allows you to perform various actions such as: copy the object, delete the object, move the viewpoint to the object and show the robot window (if the object is a [Robot](../reference/robot.md).
 
 ### Navigation in the Scene
 

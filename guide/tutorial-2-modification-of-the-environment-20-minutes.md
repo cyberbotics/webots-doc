@@ -142,7 +142,7 @@ The result is shown in [this figure](#def-use-mechanism-on-the-sphere-node-calle
 
 > **Note**: Now, changing the `radius` field of the first [Sphere](../reference/sphere.md) node does also modify the `boundingObject`.
 
-%figure "DEF-USE mechanism on the [Sphere](../reference/sphere.md) node called BALL_GEOMETRY."
+%figure "DEF-USE mechanism on the Sphere node called BALL_GEOMETRY."
 
 ![tutorial_def_use.png](images/tutorial_def_use.png)
 

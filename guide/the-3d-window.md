@@ -18,8 +18,8 @@ Linux users should also hold down the Control key (Ctrl) together with the Alt k
 
 %end
 
-When an object is selected in the 3D Window is is possible to right click on it to open the context menu.
-This menu allows you to perform various actions such as: copy the object, delete the object, move the viewpoint to the object and show the robot window (if the object is a [Robot](../reference/robot.md)).
+It is possible to right click on an object in the 3D window to select it and open the context menu.
+This menu allows you to perform various actions such as copy the object, delete the object, move the viewpoint to the object and show the robot window (if the object is a [Robot](../reference/robot.md)).
 
 ### Navigation in the Scene
 

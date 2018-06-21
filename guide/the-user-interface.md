@@ -369,7 +369,7 @@ The remaining menu items bring up various information as indicated, in the form 
 
 ### Main Toolbar
 
-The main toolbar contains items for adding new nodes to the world, the speedometer (see this [subsection](#speedometer-and-virtual-time)) and shortcuts to items of the `File`, `Simulation` and `View` menus.
+The main toolbar contains a button for adding new nodes to the world, the speedometer (see this [subsection](#speedometer-and-virtual-time)) and shortcuts to items of the `File`, `Simulation` and `View` menus.
 
 - ![](images/show_scene_tree-button.png =26x26) **Hide/Show Scene Tree**: shows or hides the Scene Tree and resizes the 3D window consequently.
 

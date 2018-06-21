@@ -337,12 +337,7 @@ CyberboticsTower {
 
 ## FastFoodRestaurant
 
-Fast food restaurant that comes in 4 versions:
-- `KFC`
-- `FFC`
-- `subway`
-- `momo`
-The building can be changed to a two sided restaurant using the 'numberOfSides' parameter.
+A customizable fast food restaurant.
 
 %figure
 
@@ -378,7 +373,7 @@ FastFoodRestaurant {
 
 - `width`: Defines the width of the building.
 
-- `brand`: Defines the brand of the restaurant.
+- `brand`: Defines the brand of the restaurant: `KFC`, `FFC`, `subway` or `momo`.
 
 - `numberOfSides`: Defines whether it is a two sided restaurant.
 
@@ -978,7 +973,7 @@ Derived from [Solid](../reference/solid.md).
 SimpleTwoFloorsHouse {
   SFVec3f    translation           0 0 0
   SFRotation rotation              0 1 0 0
-  SFString   name                  "simple two floors house"
+  SFString   name                  "simple two-storey house"
   SFBool     enableBoundingObject  TRUE
   SFNode     appearance            Appearance { material Material { diffuseColor 0.63 0.71 0.63 } }
 }

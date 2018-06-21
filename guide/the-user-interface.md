@@ -47,19 +47,19 @@ In order to reset the simulation, the following steps are performed:
   - The random seeds used by Webots internally are reset.
   - All the nodes are reset. This has the following implication depending on the node type:
     - **[Brake](../reference/brake.md)**: The brake is released.
-    - **Charger**: The `battery` field and the `emissiveColor` field of the [Material](../reference/material.md) node of the first [Shape](../reference/shape.md) child node are restored.
-    - **Connector**: If attached, the connector is detached and the value of the `isLocked` field is restored.
-    - **Emitter-Receiver**: The message queue is cleared.
-    - **Joint/Motor**: The position, velocity, acceleration, available torque and available force are restored.
-    - **LED**: If the first child is a Light node, it's `color` field is restored and it is switched off. If the first child is a [Shape](../reference/shape.md) node, the `emissiveColor` field of its [Material](../reference/material.md) node is restored.
-    - **Lidar**: The position of the rotating head is restored.
-    - **Pen**: All the painted textures are cleaned.
-    - **Propeller**: The slow helix and it's initial position are restored.
-    - **Robot**: The `battery` field is restored and the controller is restarted.
-    - **Solid**: The `translation` and `rotation` fields are restored and the physics is reset.
-    - **Supervisor**: All the labels are removed and the nodes visibility is restored.
-    - **Track**: The motor position is restored and the `translation` field of the textureTransform node of the [Appearance](../reference/appearance.md) node of the first [Shape](../reference/shape.md) children node is restored.
-    - **Viewpoint**: The `orientation` and `position` fields are restored.
+    - **[Charger](../reference/charger.md)**: The `battery` field and the `emissiveColor` field of the [Material](../reference/material.md) node of the first [Shape](../reference/shape.md) child node are restored.
+    - **[Connector](../reference/connector.md)**: If attached, the connector is detached and the value of the `isLocked` field is restored.
+    - **[Emitter](../reference/emitter.md)/[Receiver](../reference/receiver.md)**: The message queue is cleared.
+    - **[Joint](../reference/joint.md)/[Motor](../reference/motor.md)**: The position, velocity, acceleration, available torque and available force are restored.
+    - **[LED](../reference/led.md)**: If the first child is a Light node, it's `color` field is restored and it is switched off. If the first child is a [Shape](../reference/shape.md) node, the `emissiveColor` field of its [Material](../reference/material.md) node is restored.
+    - **[Lidar](../reference/lidar.md)**: The position of the rotating head is restored.
+    - **[Pen](../reference/pen.md)**: All the painted textures are cleaned.
+    - **[Propeller](../reference/propeller.md)**: The slow helix and it's initial position are restored.
+    - **[Robot](../reference/robot.md)**: The `battery` field is restored and the controller is restarted.
+    - **[Solid](../reference/solid.md)**: The `translation` and `rotation` fields are restored and the physics is reset.
+    - **[Supervisor](../reference/supervisor.md)**: All the labels are removed and the nodes visibility is restored.
+    - **[Track](../reference/track.md)**: The motor position is restored and the `translation` field of the textureTransform node of the [Appearance](../reference/appearance.md) node of the first [Shape](../reference/shape.md) children node is restored.
+    - **[Viewpoint](../reference/viewpoint.md)**: The `orientation` and `position` fields are restored.
 
 - ![](images/new-button.png =26x26) The **New Text File** menu item (and button) opens an empty text file in the text editor.
 

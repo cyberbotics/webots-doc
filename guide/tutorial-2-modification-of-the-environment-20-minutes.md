@@ -51,7 +51,7 @@ For example a table, a robot finger phalanx or a wheel are indivisible rigid bod
 The physics engine of Webots is designed for simulating rigid bodies.
 An important step, when designing a simulation, is to break up the various entities into indivisible rigid bodies.
 
-> **Theory**: In Webots there is a direct match between a rigid body and a **Solid** node.
+> **Theory**: In Webots there is a direct match between a rigid body and a [Solid](../reference/solid.md) node.
 A [Solid](../reference/solid.md) node (or a node which inherits the [Solid](../reference/solid.md) node) will be created for each rigid body.
 
 To define a rigid body, you will have to create a [Solid](../reference/solid.md) node.

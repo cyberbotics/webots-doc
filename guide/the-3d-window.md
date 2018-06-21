@@ -5,8 +5,7 @@
 A single mouse click allows you to select a solid object.
 The bounding object of a selected solid is represented by white lines.
 These lines turn pink if the solid is colliding with another one and blue when the solid is idle, i.e., it comes to rest and it does not interact with any other active solid.
-Selecting a robot enables the `Show Robot Window` item in the `Tools` menu.
-Double-clicking on a solid object opens the Robot Window and if it was closed, the Scene Tree.
+Double-clicking on a [Robot](../reference/robot.md) opens the Robot Window.
 
 If an object has a solid subpart, then it is also possible to select only this subpart by clicking on it once the whole object is already selected, or by clicking on it while holding down the Alt key.
 Linux users should also hold down the Control key (Ctrl) together with the Alt key.

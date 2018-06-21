@@ -41,4 +41,4 @@ You will find the following sample in this folder: "WEBOTS\_HOME/projects/robots
 The robot moves straight ahead.
 When hitting an obstacle or detecting a virtual wall, the robot turns randomly.
 The dust on the ground is a texture of a [Display](../reference/display.md) device managed by a [Supervisor](../reference/supervisor.md) controller.
-The [Supervisor](../reference/supervisor.md) removes draws transparent circles into this texture at the robot's location to simulate cleaning dust.
+The [Supervisor](../reference/supervisor.md) draws transparent circles into this texture at the robot's location to simulate cleaning dust.

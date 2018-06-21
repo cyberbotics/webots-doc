@@ -123,7 +123,7 @@ This may be less accurate because `boundingObject`s are often rough approximatio
 
 ### How to Get a Realisitc and Efficient Rendering?
 
-The quality of the rendering depends on the [Shapes](../reference/shape.md) resolution, on the setup of the `Materials` and on the setup of the `Lights`.
+The quality of the rendering depends on the [Shapes](../reference/shape.md) resolution, on the setup of the [Materials](../reference/material.md) and on the setup of the [Lights](../reference/light.md).
 
 The bigger the number of vertices is, the slower the simulation is (except obviously in `fast` mode).
 A tradeoff has to be found between these two components.

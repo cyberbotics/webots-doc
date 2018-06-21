@@ -5,7 +5,7 @@
 E-puck is a miniature mobile robot originally developed at EPFL for teaching purposes by the designers of the successful Khepera robot.
 The hardware and software of e-puck is fully open source, providing low level access to every electronic device and offering unlimited extension possibilities.
 
-The model includes support for the differential wheel motors (encoders are also simulated, as position sensors), the infra-red sensors for proximity and light measurements, the accelerometer, the camera, the 8 surrounding [LEDs](../reference/led.md), the body and front [LEDs](../reference/led.md), bluetooth communication (modeled using [Emitter](../reference/emitter.md) / [Receiver](../reference/receiver.md) devices) and ground sensors extension.
+The model includes support for the differential wheel motors (encoders are also simulated, as position sensors), the infra-red sensors for proximity and light measurements, the [Accelerometer](../reference/accelerometer.md), the [Camera](../reference/camera.md), the 8 surrounding [LEDs](../reference/led.md), the body and front [LEDs](../reference/led.md), bluetooth communication (modeled using [Emitter](../reference/emitter.md) / [Receiver](../reference/receiver.md) devices) and ground sensors extension.
 The other e-puck devices are not yet simulated in the current model.
 
 The official [e-puck website](http://www.e-puck.org) provides the most up-to-date information about this robot.

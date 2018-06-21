@@ -14,7 +14,7 @@ The result at the end of this tutorial is shown in [this figure](#simulation-aft
 
 > **Theory**: The lighting of a world is determined by light nodes.
 There are three types of light nodes: the DirectionalLight, the [PointLight](../reference/pointlight.md) and the [SpotLight](../reference/spotlight.md).
-A [DirectionalLight](../reference/directionalLight.md) simulates a light which is infinitely far (ex: the sun), a [PointLight](../reference/pointlight.md) simulates light emitted from a single point (ex: a light bulb), and a [SpotLight](../reference/spotlight.md) simulates a conical light (ex: a flashlight).
+A [DirectionalLight](../reference/directionallight.md) simulates a light which is infinitely far (ex: the sun), a [PointLight](../reference/pointlight.md) simulates light emitted from a single point (ex: a light bulb), and a [SpotLight](../reference/spotlight.md) simulates a conical light (ex: a flashlight).
 Each type of light node can cast shadows.
 You can find their complete documentation in the `Reference Manual`.
 

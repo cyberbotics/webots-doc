@@ -63,8 +63,9 @@ These resize handles can also be enabled from the Field Editor.
 
 #### Translation Using Keyboard Shortcuts
 
-- **Translation**: To move an object parallel to the ground: hold down the shift key, press the left mouse button and drag.
-- **Lift**: To raise or lower and object: hold down the Shift key, press both left and right mouse buttons (or the middle button) and drag.
+- **Translation**: To move an object parallel to the ground: hold down the Shift key, press the left mouse button and drag.
+- **Rotation**: To rotate an object around the world's vertical axis: hold down the Shift key, press the right mouse button and drag.
+- **Lift**: To raise or lower an object: hold down the Shift key, press both left and right mouse buttons (or the middle button) and drag.
 Alternatively, the mouse wheel combined with the Shift key can also be used.
 
 > **Note**: If you are a Mac user with a single button mouse, hold the Shift key and the Control key (Ctrl) down and press the mouse button to rotate the selected object according to mouse motion.

@@ -95,7 +95,6 @@ The export line should however be included in a configuration script like "/etc/
 
 Some additional libraries are needed in order to properly run Webots.
 In particular *make*, *g++*, *libjpeg8-dev*, *ffpmeg*, and *libpci3* have to be installed on the system.
-If you need to compile [controller plugins](controller-plugin.md) or [physics plugins](webots-plugin.md#physics-plugin), then you also have to install *mesa-common-dev* and *libgl1-mesa-dev* packages.
 Other particular libraries could also be required to recompile some of the distributed binary files.
 In this case an error message will be printed in the Webots console mentioning the missing dependency.
 

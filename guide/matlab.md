@@ -2,7 +2,7 @@
 
 The *MATLAB*<sup>TM</sup> API for Webots is very similar to the C API.
 The functions names are identical, only the type and number of parameters differs slightly in some cases.
-The MATLAB functions and prototypes are described in Webots Reference Manual.
+The MATLAB functions and prototypes are described in Webots [Reference Manual](../reference/index.md).
 Note that unlike with the C API, there are no `wb_robot_init` and `wb_robot_cleanup` functions in the MATLAB API.
 The necessary initialization and cleanup are automatically carried out respectively before entering and after leaving the controller code.
 

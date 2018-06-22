@@ -70,7 +70,7 @@ A controller directory is placed in the "controllers" subdirectory of each Webot
 
 ### What Is a Supervisor?
 
-The Supervisor is a privileged type of Robot that can execute operations that can normally only be carried out by a human operator and not by a real robot.
-The Supervisor is normally associated with a controller program that can also be written in any of the above mentioned programming languages.
-However, in contrast with a regular Robot controller, the Supervisor controller will have access to privileged operations.
+The [Supervisor](../reference/supervisor.md) is a privileged type of [Robot](../reference/robot.md) that can execute operations that can normally only be carried out by a human operator and not by a real robot.
+The [Supervisor](../reference/supervisor.md) is normally associated with a controller program that can also be written in any of the above mentioned programming languages.
+However, in contrast with a regular [Robot](../reference/robot.md) controller, the [Supervisor](../reference/supervisor.md) controller will have access to privileged operations.
 The privileged operations include simulation control, for example, moving the robots to a random position, making a video capture of the simulation, etc.

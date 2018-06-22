@@ -3,9 +3,9 @@
 The `AckermannVehicle` PROTO allows the user to easily create any vehicle that complies with the ackermann model.
 Position and orientation of the wheels are automatically computed using the fields of the PROTO.
 These wheels are automatically connected to the appropriate joints in order to rotate along the correct axis.
-Actuators (`Motor` nodes called `right_steer` and `left_steer`) are connected to the front joints to be able to steer the vehicle.
+Actuators ([Motor](../reference/motor.md) nodes called `right_steer` and `left_steer`) are connected to the front joints to be able to steer the vehicle.
 
-The base node of the `AckermannVehicle` PROTO is a `Robot` from which it inherits its first seven fields.
+The base node of the `AckermannVehicle` PROTO is a [Robot](../reference/robot.md) from which it inherits its first seven fields.
 The rest of the vehicle (Shape, Sensors, other actuators) can be added using the `extensionSlot` field.
 
 ```
@@ -60,8 +60,8 @@ AckermannVehicle {
 It measures the vehicle's ability to reflect radar signals in the direction of the radar receiver.
 - `recognitionColors`: If not empty, this vehicle may be recognized by any Camera device with recognition capability (i.e. with a Recognition node).
 - `wheelX`: Slot to insert a `VehicleWheel` (or any `VehicleWheel` descendant PROTO nodes).
-- `axisDevicesX`: Slot to add devices in the wheels joints (such as `Brake`, `PositionSensor` and `Motor`).
-- `data`: Defines a user `data` string of the `Robot` node.
+- `axisDevicesX`: Slot to add devices in the wheels joints (such as [Brake](../reference/brake.md), [PositionSensor](../reference/positionsensor.md) and [Motor](../reference/motor.md)).
+- `data`: Defines a user `data` string of the [Robot](../reference/robot.md) node.
 
 The center of the vehicle (position 0 0 0) is at the center of the rear wheels axis.
 Any node added in the `extensionSlot` is added relatively to this position.

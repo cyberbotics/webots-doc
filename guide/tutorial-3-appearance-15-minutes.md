@@ -13,17 +13,17 @@ The result at the end of this tutorial is shown in [this figure](#simulation-aft
 ### Lights
 
 > **Theory**: The lighting of a world is determined by light nodes.
-There are three types of light nodes: the DirectionalLight, the PointLight and the SpotLight.
-A DirectionalLight simulates a light which is infinitely far (ex: the sun), a PointLight simulates light emitted from a single point (ex: a light bulb), and a SpotLight simulates a conical light (ex: a flashlight).
+There are three types of light nodes: the DirectionalLight, the [PointLight](../reference/pointlight.md) and the [SpotLight](../reference/spotlight.md).
+A [DirectionalLight](../reference/directionallight.md) simulates a light which is infinitely far (ex: the sun), a [PointLight](../reference/pointlight.md) simulates light emitted from a single point (ex: a light bulb), and a [SpotLight](../reference/spotlight.md) simulates a conical light (ex: a flashlight).
 Each type of light node can cast shadows.
-You can find their complete documentation in the `Reference Manual`.
+You can find their complete documentation in the [Reference Manual](../reference/nodes-and-api-functions.md).
 
 <!-- -->
 
 > **Note**: Lights are costly in term of performance.
 Minimizing the number of lights increases the rendering speed.
 A maximum of 8 lights is allowed if the shaders are disabled in the Webots preferences.
-A PointLight is more efficient than a SpotLight, but less than a DirectionalLight.
+A [PointLight](../reference/pointlight.md) is more efficient than a [SpotLight](../reference/spotlight.md), but less than a DirectionalLight.
 Note finally that casting shadows can reduce the simulation speed drastically.
 
 > **Hands on**: Adjust your DirectionalLight node.
@@ -33,13 +33,13 @@ Set its `ambientIntensity` field to *0.5*, its `castShadows` field to *TRUE*, an
 
 The aim of this subsection is to color the walls in blue.
 
-> **Theory**: The **Appearance** node of the Shape node determines the graphical appearance of the object.
+> **Theory**: The [Appearance](../reference/appearance.md) node of the [Shape](../reference/shape.md) node determines the graphical appearance of the object.
 Among other things, this node is responsible for the color and texture of objects.
 
 <!-- -->
 
-> **Hands on**: In the Shape node representing graphically the first wall, add an Appearance node to the `appearance` field.
-Then add a Material node to the `material` field of the freshly created Appearance node.
+> **Hands on**: In the [Shape](../reference/shape.md) node representing graphically the first wall, add an [Appearance](../reference/appearance.md) node to the `appearance` field.
+Then add a [Material](../reference/material.md) node to the `material` field of the freshly created [Appearance](../reference/appearance.md) node.
 Set its `diffuseColor` field to blue using the color selector.
 If the DEF-USE mechanism of the previous tutorial has been correctly implemented, all the walls should turn blue.
 
@@ -48,9 +48,9 @@ If the DEF-USE mechanism of the previous tutorial has been correctly implemented
 The aim of this subsection is to apply a texture on the ball.
 A texture on a rolling object can help to appreciate its movement.
 
-> **Hands on**: Similarly add an Appearance node to the ball.
-Add a Material node to the `material` field as well as an ImageTexture node to the `texture` field of the Appearance node.
-Add an item to the ImageTexture's `url` field using the `Add` button.
+> **Hands on**: Similarly add an [Appearance](../reference/appearance.md) node to the ball.
+Add a [Material](../reference/material.md) node to the `material` field as well as an [ImageTexture](../reference/imagetexture.md) node to the `texture` field of the [Appearance](../reference/appearance.md) node.
+Add an item to the [ImageTexture](../reference/imagetexture.md)'s `url` field using the `Add` button.
 Then set the value of the newly added `url` item to "WEBOTS\_HOME/projects/default/worlds/textures/red\_brick\_wall.jpg" using the file selection dialog.
 
 <!-- -->
@@ -60,11 +60,11 @@ In the default project directory you will find textures that are available for e
 
 <!-- -->
 
-> **Note**: Open the "red\_brick\_wall.jpg" texture in an image viewer while you observe how it is mapped onto the Sphere node in Webots.
+> **Note**: Open the "red\_brick\_wall.jpg" texture in an image viewer while you observe how it is mapped onto the [Sphere](../reference/sphere.md) node in Webots.
 
 <!-- -->
 
-> **Theory**: Textures are mapped onto Geometry nodes according to predefined **UV mapping** functions described in the `Reference Manual`.
+> **Theory**: Textures are mapped onto Geometry nodes according to predefined **UV mapping** functions described in the [Reference Manual](../reference/imagetexture.md).
 A UV mapping function maps a 2D image representation to a 3D model.
 
 %figure "Simulation after having setup the Light and the Appearance nodes."
@@ -82,7 +82,7 @@ Then restore the plain rendering mode: `View / Plain Rendering`.
 
 ### Conclusion
 
-In this tutorial, you have learnt how to set up a good looking environment using the Appearance node and the light nodes.
+In this tutorial, you have learnt how to set up a good looking environment using the [Appearance](../reference/appearance.md) node and the light nodes.
 
 You can go further on this topic by reading the detailed description of these nodes in the `Reference Manual`.
 This [section](modeling.md#how-to-get-a-realisitc-and-efficient-rendering) will give you a method to efficiently setup these nodes.

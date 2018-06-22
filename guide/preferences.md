@@ -18,7 +18,7 @@ The default value of this preference is "Consolas,10" on Windows, "Courier,14" o
 The recommended value matches with the number of logical cores of the computer processor.
 It may be interesting to reduce this value in some specific cases, for example when another process requires intensively other cores.
 For now this value affects only the physical engine speed, and the controller compilation speed.
-Note that this is the maximum number of threads allowed, but the actual number of threads used is the one defined in the `optimalThreadCount` field of the `WorldInfo` node.
+Note that this is the maximum number of threads allowed, but the actual number of threads used is the one defined in the `optimalThreadCount` field of the [WorldInfo](../reference/worldinfo.md) node.
 - The **Python command** defines which Python command is invoked by Webots when starting a Python controller.
 The default value is `python`.
 It should work on most systems assuming that `python` is installed and available from the command line.
@@ -39,7 +39,7 @@ This option can lead to marginally reduced performance, but it improves graphica
 
 > **Note** This option does not apply to any [Camera](../reference/camera.md) rendering, this is managed by the `Disable camera anti-aliasing` setting in the same tab of the preferences dialog.
 
-- The **Disable shadows** option allows you to disable completely the shadows in the 3D view and in the Camera rendering, whatever the values of the *Light.castShadows* fields.
+- The **Disable shadows** option allows you to disable completely the shadows in the 3D view and in the [Camera](../reference/camera.md) rendering, whatever the values of the *Light.castShadows* fields.
 
 Globally speaking, performance can be improved by disabling this feature, but on the other hand the rendering is more difficult to understand, and less pretty.
 

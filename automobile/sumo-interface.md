@@ -1,8 +1,8 @@
 ## SUMO Interface
 
-An interface with a microscopic traffic simulator called `SUMO` (Simulation of Urban MObility) has been developed using a `Supervisor` node.
+An interface with a microscopic traffic simulator called `SUMO` (Simulation of Urban MObility) has been developed using a [Supervisor](../reference/supervisor.md) node.
 The advantage of interfacing SUMO with Webots is that it allows to easily generate traffic using a large number of vehicles in real-time.
-This interface is written in Python in a supervisor controller and uses [TraCI](http://sumo.dlr.de/wiki/TraCI) to communicate with SUMO.
+This interface is written in Python in a [Supervisor](../reference/supervisor.md) controller and uses [TraCI](http://sumo.dlr.de/wiki/TraCI) to communicate with SUMO.
 
 ### Movie Presentation
 
@@ -63,7 +63,7 @@ In the traffic lights mode you can simply select a traffic light and right click
 
 ### The SumoInterface PROTO
 
-Here are the parameters of the `SumoInterface` PROTO (which inherits from the `Supervisor` node):
+Here are the parameters of the `SumoInterface` PROTO (which inherits from the [Supervisor](../reference/supervisor.md) node):
 
 ```
 PROTO SumoInterface [
@@ -132,11 +132,11 @@ PROTO SumoDisplay [
 
 #### SumoDisplay Fields Summary
 
-- `width`: Defines the width of the `Display`.
-- `height`: Defines the height of the `Display`.
+- `width`: Defines the width of the [Display](../reference/display.md).
+- `height`: Defines the height of the [Display](../reference/display.md).
 - `zoom`: Defines the zooming factor that will make SUMO automatically zoom in/out at startup.
 - `refreshRate`: Defines the refresh rate of the display in milliseconds.
-- `fitSize`: If the current size of the SUMO window is bigger than the resolution defined by the `width` and `height` fields, only the center of the view will be visible in the `Display`.
+- `fitSize`: If the current size of the SUMO window is bigger than the resolution defined by the `width` and `height` fields, only the center of the view will be visible in the [Display](../reference/display.md).
 On the contrary, if the SUMO window is smaller than the resolution, the image will not entirely fill it.
 If `fitSize` is set to `TRUE`, the image will be automatically rescaled, in that case the width / height aspect ratio may not be respected depending on the SUMO window size.
 
@@ -154,7 +154,7 @@ class SumoSupervisorPlugin:
     # TODO
 ```
 
-The first function is called at initialization of the interface, the arguments are: the `Supervisor` itself, the traci class in order to get information regarding the traci context and the net class to get information regarding the network.
+The first function is called at initialization of the interface, the arguments are: the [Supervisor](../reference/supervisor.md) itself, the traci class in order to get information regarding the traci context and the net class to get information regarding the network.
 The second one is called at each SUMO step and the argument is the time step.
 
 Such a plugin can be used for example to change traffic light state in SUMO.

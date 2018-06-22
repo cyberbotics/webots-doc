@@ -32,7 +32,7 @@ See section [Engine models](driver-library.md#engine-models) for more informatio
 - `engineSound`: Defines the sound used to simulate the engine sound, if the string is empty the engine sound is not simulated.
 - `engineSoundRpmReference`: Defines the reference rotation per minutes of the engine sound.
 See the [Engine sound](#engine-sound) paragraph for more information about the engine sound simulation.
-- `brakeCoefficient`: Defines the maximum `dampingConstant` applied by the brake on the wheels joint.
+- `brakeCoefficient`: Defines the maximum `dampingConstant` applied by the [Brake](../reference/brake.md) on the wheels joint.
 - `time0To100`: Defines the time to accelerate from 0 to 100 km/h in seconds, this value is used to compute the wheels acceleration when controlling the car in cruising speed thanks to the [driver](driver-library.md)
 - `engineMaxTorque`: Defines the maximum torque of the motor in `Nm` used to compute the electric engine torque.
 - `engineMaxPower`: Defines the maximum power of the motor in `W` used to compute the electric engine torque.
@@ -56,7 +56,7 @@ The amplitude and frequency of the sound is modulated in function of the rpm and
 
 ### VehicleLights
 
-The `VehicleLights` PROTO is used to add all the models of the regular lights present in a car (based on `LED` nodes).
+The `VehicleLights` PROTO is used to add all the models of the regular lights present in a car (based on [LED](../reference/led.md) nodes).
 For each light you can specify its shape and the color emitted when the light is switched on.
 Of course if you don't need to have lights you can safely remove the `VehicleLights` PROTO from `extensionSlot`.
 
@@ -114,7 +114,7 @@ For the three other sensor slots, the positions are different for each model (be
 
 Just like the car models presented above, two generic heavy-weights PROTO inherit from the `Car` PROTO: a bus and a truck.
 In the case of the truck, a trailer can be present or not.
-The latter is the `endPoint` of a `HingeJoint` allowing the trailer to freely rotate around its attachment point.
+The latter is the `endPoint` of a [HingeJoint](../reference/hingejoint.md) allowing the trailer to freely rotate around its attachment point.
 There are currently two trailers to be used: a regular one and a tank shaped model.
 
 %figure "Models of the bus and truck created using the `Car` PROTO"
@@ -188,7 +188,7 @@ The different simple versions of the car PROTO nodes represent the different mod
 
 #### TwoWheelerSimple
 
-Due to the presence of driver, the TwoWheelerSimple PROTO nodes have a slightly different organisation.
+Due to the presence of driver, the TwoWheelerSimple PROTO nodes have a slightly different organization.
 Similar to CarSimple, the TwoWheelerSimple PROTO displayed bellow is just a common structure for the different versions of the two wheelers.
 
 ```

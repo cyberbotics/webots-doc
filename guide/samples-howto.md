@@ -26,7 +26,7 @@ Rotate the solid to modify its speed.
 
 **Keywords**: Camera, stereovision, stereoscopic cameras
 
-![binocular.png](images/samples/binocular.png) This example simply shows the use of two `Camera`s for stereovision.
+![binocular.png](images/samples/binocular.png) This example simply shows the use of two [Cameras](../reference/camera.md) for stereovision.
 The example does not actually perform stereovision or any form of computer vision.
 
 ### biped.wbt
@@ -60,14 +60,14 @@ The Javascript and C files deal with the interactions between the page and the r
 **Keywords**: Supervisor, contact points, cylinder collisions
 
 ![cylinder_stack.png](images/samples/cylinder_stack.png) In this example, a stack of cylinders collapses.
-A Supervisor gets information on the contact points and displays the reaction forces in the `Console`.
+A [Supervisor](../reference/supervisor.md) gets information on the contact points and displays the reaction forces in the `Console`.
 
 ### force\_control.wbt
 
 **Keywords**: Force control, linear motor, spring and damper
 
-![force_control.png](images/samples/force_control.png) This world shows two boxes connected by a `LinearMotor`.
-Here, the purpose is to demonstrate the usage of the `wb_motor_set_force` function to control a `LinearMotor` with a user specified force.
+![force_control.png](images/samples/force_control.png) This world shows two boxes connected by a [LinearMotor](../reference/linearmotor.md).
+Here, the purpose is to demonstrate the usage of the `wb_motor_set_force` function to control a [LinearMotor](../reference/linearmotor.md) with a user specified force.
 In this example, the `wb_motor_set_force` function is used to simulate the effect of a spring and a damper between the two boxes.
 When the simulation starts, the motor force is used to move the boxes apart.
 Then, the motor force is turned off and the boxes oscillate for a while, according to the spring and damping equations programmed in the controller.
@@ -87,7 +87,7 @@ Note that more completed Ackermann steering geometry can be achieved using the [
 **Keywords**: GUI, custom Qt-based robot window
 
 ![gui_tracker.png](images/samples/gui_tracker.png) This example shows the use of the deprecated Qt-based system to create custom windows.
-A Supervisor is getting the position of five e-pucks moving randomly, and this information is sent to the custom robot window plugin called `tracking window`.
+A [Supervisor](../reference/supervisor.md) is getting the position of five e-pucks moving randomly, and this information is sent to the custom robot window plugin called `tracking window`.
 This window is based on Qt (embedded in Webots) and the `Qt utils` helper library.
 
 > **Note**:
@@ -104,8 +104,8 @@ This is known as the "Inverted Pendulum Problem", and it is solved in our exampl
 
 **Keywords**: Mouse events, user input
 
-![mouse_events.png](images/samples/mouse_events.png) This example shows the use of the Supervisor mouse events.
-When the simulation is running, the `Supervisor` controller called `mouse_events.c` waits for a mouse event and displays in the `Console` the 3D and 2D coordinates of the mouse and the name of the hit object.
+![mouse_events.png](images/samples/mouse_events.png) This example shows the use of the [Supervisor](../reference/supervisor.md) mouse events.
+When the simulation is running, the [Supervisor](../reference/supervisor.md) controller called `mouse_events.c` waits for a mouse event and displays in the `Console` the 3D and 2D coordinates of the mouse and the name of the hit object.
 The controller of this simulation is blocking, which means it will block until a mouse click is detected and it will not advance the simulation time.
 An alternative non blocking controller called `mouse_events_non_blocking.c` is also available for this example.
 
@@ -157,8 +157,8 @@ The rope is composed of several discrete rigid cylinders attached using ball joi
 **Keywords**: Lidar, Sick, scanning
 
 ![sick_terrain_scanning.png](images/samples/sick_terrain_scanning.png) In this example, a Pioneer 3AT mounted with a Sick LMS 291 is scanning its environment.
-Each lidar scan is displayed in a `Display` device.
-A Supervisor applies the scan depth output by removing pixels on a black texture which is applied on the ground.
+Each lidar scan is displayed in a [Display](../reference/display.md) device.
+A [Supervisor](../reference/supervisor.md) applies the scan depth output by removing pixels on a black texture which is applied on the ground.
 
 ### spinning\_top.wbt
 
@@ -171,9 +171,9 @@ To apply a torque on the spinner, use the `Alt + mouse right click` sequence.
 
 **Keywords**: Supervisor, IndexedLineSet, draw trail
 
-![supervisor_draw_trail.png](images/samples/supervisor_draw_trail.png) In this example, a Supervisor draws a green path behind a target node.
-The target node is a `Transform` node mounted in the `turretSlot` of a moving e-puck robot.
-At the beginning of the simulation, the `Supervisor` creates programmatically an `IndexedLineSet` node.
+![supervisor_draw_trail.png](images/samples/supervisor_draw_trail.png) In this example, a [Supervisor](../reference/supervisor.md) draws a green path behind a target node.
+The target node is a [Transform](../reference/transform.md) node mounted in the `turretSlot` of a moving e-puck robot.
+At the beginning of the simulation, the [Supervisor](../reference/supervisor.md) creates programmatically an `IndexedLineSet` node.
 Then at each simulation step, it uses the target node position to update the `IndexedLineSet` node fields.
 
 ### texture\_change.wbt
@@ -181,8 +181,8 @@ Then at each simulation step, it uses the target node position to update the `In
 **Keywords**: Supervisor, texture, `wb_supervisor_field_set_*` functions, Camera
 
 ![texture_change.png](images/samples/texture_change.png) In this example, a robot moves forward and backward in front of a large textured panel.
-The robot watches the panel with its `Camera`.
-Meanwhile a `Supervisor` switches the image displayed on the panel.
+The robot watches the panel with its [Camera](../reference/camera.md).
+Meanwhile a [Supervisor](../reference/supervisor.md) switches the image displayed on the panel.
 
 ### vision.wbt
 
@@ -191,7 +191,7 @@ Meanwhile a `Supervisor` switches the image displayed on the panel.
 ![vision.png](images/samples/vision.png) This example demonstrates the use of [OpenCV](https://opencv.org/) to process the camera image.
 The robot acquires images from a colored scene.
 The controller is linked with OpenCV (embedded in Webots).
-The `Camera` image is given to OpenCV, OpenCV filters are applied on the image, and the result is displayed in a `Display` overlay.
+The [Camera](../reference/camera.md) image is given to OpenCV, OpenCV filters are applied on the image, and the result is displayed in a [Display](../reference/display.md) overlay.
 
 ### ziegler\_nichols.wbt
 
@@ -203,4 +203,4 @@ Each P-controller is tested during a period of 400 time steps, i.e. 12.8 seconds
 A P-controller 'succeeds' if a constant error amplitude repeats at least 10 times during the test period.
 Otherwise the proportional gain P is incremented by 10 and the experiment restarts.
 The tuned Ziegler-Nichols "ultimate" gains will be computed for the first successful controller.
-The result is plot in a `Display` overlay.
+The result is plot in a [Display](../reference/display.md) overlay.

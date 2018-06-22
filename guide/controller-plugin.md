@@ -31,13 +31,13 @@ After its loading, some controller plugin functions (entry points) are called by
 A set of entry points have to be defined to let the controller plugin work smoothly.
 Some of these entry points are required and some are optional.
 
-The [Robot](../reference/robot.md) node defines the location of the controller plugin through its *window* and its *remoteControl* fields (cf. [Reference Manual](../reference/index.md)).
+The [Robot](../reference/robot.md) node defines the location of the controller plugin through its *window* and its *remoteControl* fields.
 
 The controller plugin runs in the main thread of the process (also known as GUI thread): the same as the controller executable.
 This implies that if an entry point of a plugin is blocked, the controller will also be blocked.
 And if the plugin crashes, the controller is also crashed.
 
-The search algorithm to convert the *window* and the *remoteControl* to an existing path is explained in the [Reference Manual](../reference/index.md).
+The search algorithm to convert the *window* and the *remoteControl* to an existing path is explained in the [Reference Manual](../reference/robot.md).
 
 Each distributed shared library is built thanks to the main Makefile (the same as the one used to build the controllers):
 
@@ -59,7 +59,7 @@ graph LR
 
 A robot window allows the programmer to efficiently create custom user interfaces for his robots.
 Robot windows can be opened by double-clicking on the virtual robot, or using the [context menu](the-3d-window.md#context-menu).
-The *window* field of the [Robot](../reference/robot.md) node specifies a robot window (cf. documentation in the [Reference Manual](../reference/index.md)).
+The *window* field of the [Robot](../reference/robot.md) node specifies a robot window.
 
 Robot windows are implemented in HTML and provide the following features:
 
@@ -188,7 +188,7 @@ A pose is defined by a set of commands (in position) of the robot motors.
 
 The motion is stored in a motion file in a user-readable format.
 The controller API allows to play easily the motion files on your robot.
-You can get the complete motion API in the [Reference Manual](../reference/index.md).
+You can get the complete motion API in the [Reference Manual](../reference/motion.md).
 
 The motion editor (cf. the [figure](#motion-editor-view)) is a GUI which helps to create motions which can be played by a robot.
 This editor is implemented as a Qt widget of the legacy generic window (deprecated).

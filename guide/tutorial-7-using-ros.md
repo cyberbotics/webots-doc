@@ -106,4 +106,4 @@ The `robot_information_parser` node is the most basic one and is a good base to 
 The `complete_test` node doesn't show any particular application but contains an almost exhaustive list of the Webots API functions.
 
 All the functions from the Webots API have their corresponding services or topics.
-You can find in the [Reference Manual](../reference/index.md) the definitions of all the services and topics associated to each device.
+You can find in the [Reference Manual](../reference/nodes-and-api-functions.md) the definitions of all the services and topics associated to each device.

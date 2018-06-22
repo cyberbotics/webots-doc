@@ -9,9 +9,9 @@ For each demo, the world file and its corresponding controller have the same nam
 
 **Keywords**: Stereoscopic camera, anachrome red/cyan filters
 
-![anaglyph.png](images/samples/anaglyph.png) This example demonstrates the merge of two `Camera` images into one, in order to create an [anaglyph image](https://en.wikipedia.org/wiki/Anaglyph_3D).
+![anaglyph.png](images/samples/anaglyph.png) This example demonstrates the merge of two [Camera](../reference/camera.md) images into one, in order to create an [anaglyph image](https://en.wikipedia.org/wiki/Anaglyph_3D).
 A stereoscopic camera is mounted on a `iRobot Create` robot.
-At each step, both `Camera` images are merged into a `Display` device, one is filtered in red, and the other one is filtered in cyan.
+At each step, both [Camera](../reference/camera.md) images are merged into a [Display](../reference/display.md) device, one is filtered in red, and the other one is filtered in cyan.
 This produces an anaglyph 3D image that can be seen with low cost red/cyan 3D glassed.
 
 ### gantry.wbt
@@ -19,14 +19,14 @@ This produces an anaglyph 3D image that can be seen with low cost red/cyan 3D gl
 **Keywords**: Gantry robot, gripper, Hanoi towers, linear motors, recursive algorithm
 
 ![gantry.png](images/samples/gantry.png) In this example, a gantry robot plays "Towers of Hanoi" by stacking three colored boxes.
-The gantry robot is modeled using a combination of `LinearMotor` and `RotationalMotor` devices.
+The gantry robot is modeled using a combination of [LinearMotor](../reference/linearmotor.md) and [RotationalMotor](../reference/rotationalmotor.md) devices.
 A recursive algorithm is used to solve the Hanoi Towers problem.
 
 ### hexapod.wbt
 
 **Keywords**: Legged robot, alternating tripod gait, linear motor
 
-![hexapod.png](images/samples/hexapod.png) In this example, an insect-shaped robot is made of a combination of `LinearMotor` and `RotationalMotor` devices.
+![hexapod.png](images/samples/hexapod.png) In this example, an insect-shaped robot is made of a combination of [LinearMotor](../reference/linearmotor.md) and [RotationalMotor](../reference/rotationalmotor.md) devices.
 The robot moves using an alternating tripod gait.
 
 ### moon.wbt
@@ -35,7 +35,7 @@ The robot moves using an alternating tripod gait.
 
 ![moon.png](images/samples/moon.png) In this example, two Koala robots (K-Team) circle on a moon-like surface.
 You can modify their trajectories with the arrow keys on your keyboard.
-The moon-like scenery is made of `IndexedFaceSet` nodes.
+The moon-like scenery is made of [IndexedFaceSet](../reference/indexedfaceset.md) nodes.
 Both robots use the same controller code.
 
 ### soccer.wbt
@@ -43,8 +43,8 @@ Both robots use the same controller code.
 **Keywords**: Soccer, Supervisor, differential wheels, label
 
 ![soccer.png](images/samples/soccer.png) In this example, two teams of simple robots play soccer.
-A `Supervisor` is used as the referee; it counts the goals and displays the current score and the remaining time in the 3D view.
-This example shows how a `Supervisor` can be used to read and change the position of objects.
+A [Supervisor](../reference/supervisor.md) is used as the referee; it counts the goals and displays the current score and the remaining time in the 3D view.
+This example shows how a [Supervisor](../reference/supervisor.md) can be used to read and change the position of objects.
 
 ### stewart\_platform.wbt
 
@@ -60,6 +60,6 @@ This simulation attaches both ends of the linear actuators (hydraulic pistons) t
 
 **Keywords**: ElevationGrid, uneven terrain
 
-![uneven_terrain.png](images/samples/uneven_terrain.png) This example demonstrates the creation of an uneven terrain based on the `ElevationGrid` primitive.
-In this world, a six-wheeled robots with rotational suspensions is moving along a predefined path (composed of a list of `GPS` coordinates).
-To do so, it uses its `GPS` and `Compass` sensors.
+![uneven_terrain.png](images/samples/uneven_terrain.png) This example demonstrates the creation of an uneven terrain based on the [ElevationGrid](../reference/elevationgrid.md) primitive.
+In this world, a six-wheeled robots with rotational suspensions is moving along a predefined path (composed of a list of [GPS](../reference/gps.md) coordinates).
+To do so, it uses its [GPS](../reference/gps.md) and [Compass](../reference/compass.md) sensors.

@@ -36,12 +36,12 @@ Depending on the world you can get a better performance by reducing or increasin
 In general it is better to have a low number of threads for simple worlds and a bigger number of threads for complex worlds that include several robots physically independent from each other.
 6. Disable unnecessary shadows.
 Webots uses a lot of CPU/GPU power to compute how and where the objects shadows are cast.
-But shadows are irrelevant for most simulation unless they should explicitly be seen by Cameras.
-Unnecessary shadows can be disabled by unchecking the `castShadows` field of light nodes: `PointLight, SpotLight`, or `DirectionalLight`.
+But shadows are irrelevant for most simulation unless they should explicitly be seen by [Cameras](../reference/camera.md).
+Unnecessary shadows can be disabled by unchecking the `castShadows` field of light nodes: [PointLight](../reference/pointlight.md), [SpotLight](../reference/spotlight.md), or [DirectionalLight](../reference/directionallight.md).
 7. Simplify your simulation by removing unnecessary objects.
-In particular, try to minimize the number of `Physics` nodes.
-Avoid using a `Solid` nodes when a `Transform` or a `Shape` would do the trick.
+In particular, try to minimize the number of [Physics](../reference/physics.md) nodes.
+Avoid using a [Solid](../reference/solid.md) nodes when a [Transform](../reference/transform.md) or a [Shape](../reference/shape.md) would do the trick.
 8. Simplify the `boundingObject`s to increase the speed of the collision detection.
-Replace complex primitives, like `Cylinder, IndexedFaceSet` and `ElevationGrid` by simpler primitives, like `Sphere, Capsule, Box` and `Plane`.
-Avoid using a composition of primitives (in a `Group` or a `Transform`) when a single primitive would do the trick.
-9. Set an empty string in the `controller` field for any `Robot` nodes that don't need to be controlled, instead of using the `void` controller.
+Replace complex primitives, like [Cylinder](../reference/cylinder.md), [IndexedFaceSet](../reference/indexedfaceset.md) and [ElevationGrid](../reference/elevationgrid.md) by simpler primitives, like [Sphere](../reference/sphere.md), [Capsule](../reference/capsule.md), [Box](../reference/box.md) and [Plane](../reference/plane.md).
+Avoid using a composition of primitives (in a [Group](../reference/group.md) or a [Transform](../reference/transform.md)) when a single primitive would do the trick.
+9. Set an empty string in the `controller` field for any [Robot](../reference/robot.md) nodes that don't need to be controlled, instead of using the `void` controller.

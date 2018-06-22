@@ -79,7 +79,7 @@ public class Driver {
 
 *Initialise, clean and run a driver step*
 
-These functions are the equivalent of the init, cleanup and step function of any regular robot controller.
+These functions are the equivalent of the init, cleanup and step function of any regular [Robot](../reference/robot.md) controller.
 As a reminder, the `init` function should be called at the very beginning of any controller program, the `cleanup` function at the end of the controller program just before exiting and the `step` function should be called in the main loop to run one simulation step.
 Unlike the robot step, the driver step does not have any argument, the default time step of the world being used.
 

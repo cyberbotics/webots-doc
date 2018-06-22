@@ -49,7 +49,7 @@ When the loop exists, no further communication with Webots is possible and the o
 ### Reading Sensors
 
 Now that we have seen how to print a message to the console, we shall see how to read the sensors of a robot.
-The next example does continuously update and print the value returned by a `DistanceSensor`:
+The next example does continuously update and print the value returned by a [DistanceSensor](../reference/distancesensor.md):
 
 ```c
 #include <webots/robot.h>
@@ -88,7 +88,7 @@ The update delay specifies the desired interval between two updates of the senso
 
 In the usual case, the update delay is chosen to be similar to the control step (`TIME_STEP`) and hence the sensor will be updated at every `wb_robot_step` function call.
 If, for example, the update delay is chosen to be twice the control step then the sensor data will be updated every two `wb_robot_step` function calls: this can be used to simulate a slow device.
-Note that a larger update delay can also speed up the simulation, especially for CPU intensive devices like the `Camera`.
+Note that a larger update delay can also speed up the simulation, especially for CPU intensive devices like the [Camera](../reference/camera.md).
 On the contrary, it would be pointless to choose an update delay smaller than the control step, because it will not be possible for the controller to process the device's data at a higher frequency than that imposed by the control step.
 It is possible to disable a device at any time using the corresponding `wb_*_disable` function.
 This may increase the simulation speed.
@@ -156,7 +156,7 @@ As before, an infinite loop is used here: at each iteration a new target positio
 The `wb_motor_set_position` function stores a new position request for the corresponding rotational motor.
 Note that the `wb_motor_set_position` function stores the new position, but it does not immediately actuate the motor.
 The effective actuation starts on the next line, in the call to the `wb_robot_step` function.
-The `wb_robot_step` function sends the actuation command to the `RotationalMotor` but it does not wait for the `RotationalMotor` to complete the motion (i.e. reach the specified target position); it just simulates the motor's motion for the specified number of milliseconds.
+The `wb_robot_step` function sends the actuation command to the [RotationalMotor](../reference/rotationalmotor.md) but it does not wait for the [RotationalMotor](../reference/rotationalmotor.md) to complete the motion (i.e. reach the specified target position); it just simulates the motor's motion for the specified number of milliseconds.
 
 ```c
 #include <webots/robot.h>
@@ -187,14 +187,14 @@ int main() {
 
 When the `wb_robot_step` function returns, the motor has moved by a certain (linear or rotational) amount which depends on the target position, the duration of the control step (specified with the `wb_robot_step` function argument), the velocity, acceleration, force, and other parameters specified in the ".wbt" description of the `Motor`.
 For example, if a very small control step or a low motor velocity is specified, the motor will not have moved much when the `wb_robot_step` function returns.
-In this case several control steps are required for the `RotationalMotor` to reach the target position.
+In this case several control steps are required for the [RotationalMotor](../reference/rotationalmotor.md) to reach the target position.
 If a longer duration or a higher velocity is specified, then the motor may have fully completed the motion when the `wb_robot_step` function returns.
 
 Note that the `wb_motor_set_position` function only specifies the *desired* target position.
-Just like with real robots, it is possible (in physics-based simulations only), that the `RotationalMotor` is not able to reach this position, because it is blocked by obstacles or because the motor's torque (`maxForce`) is insufficient to oppose gravity, etc.
+Just like with real robots, it is possible (in physics-based simulations only), that the [RotationalMotor](../reference/rotationalmotor.md) is not able to reach this position, because it is blocked by obstacles or because the motor's torque (`maxForce`) is insufficient to oppose gravity, etc.
 
-If you want to control the motion of several `RotationalMotor`s simultaneously, then you need to specify the desired position for each `RotationalMotor` separately, using the `wb_motor_set_position` function.
-Then you need to call the `wb_robot_step` function once to actuate all the `RotationalMotor`s simultaneously.
+If you want to control the motion of several [RotationalMotors](../reference/rotationalmotor.md) simultaneously, then you need to specify the desired position for each [RotationalMotor](../reference/rotationalmotor.md) separately, using the `wb_motor_set_position` function.
+Then you need to call the `wb_robot_step` function once to actuate all the [RotationalMotors](../reference/rotationalmotor.md) simultaneously.
 
 ### The "step" and "wb\_robot\_step" Functions
 
@@ -299,7 +299,7 @@ do {
 
 Here is a complete example of using sensors and actuators together.
 The robot used here is using differential steering.
-It uses two proximity sensors (`DistanceSensor`) to detect obstacles.
+It uses two proximity sensors ([DistanceSensor](../reference/distancesensor.md)) to detect obstacles.
 
 ```c
 #include <webots/robot.h>
@@ -347,7 +347,7 @@ int main() {
 ### Using Controller Arguments
 
 In the ".wbt" file, it is possible to specify arguments that are passed to a controller when it starts.
-They are specified in the `controllerArgs` field of the `Robot, Supervisor` or `DifferentialWheels` node, and they are passed as parameters of the `main` function.
+They are specified in the `controllerArgs` field of the [Robot](../reference/robot.md) or [Supervisor](../reference/supervisor.md) node, and they are passed as parameters of the `main` function.
 For example, this can be used to specify parameters that vary for each robot's controller.
 
 For example if we have:
@@ -554,7 +554,7 @@ COMMAND = /opt/local/bin/python2.7
 OPTIONS = -m package.name.given
 ```
 
-In the example above, the resulting command issued by Webots will be: `/opt/local/bin/python2.7 -m package.name.given my_controller.py` possibly followed by the value of the `controllerArgs` field of the corresponding `Robot` node.
+In the example above, the resulting command issued by Webots will be: `/opt/local/bin/python2.7 -m package.name.given my_controller.py` possibly followed by the value of the `controllerArgs` field of the corresponding [Robot](../reference/robot.md) node.
 
 ```ini
 ; runtime.ini for a Java controller on Windows

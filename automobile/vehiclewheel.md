@@ -2,7 +2,7 @@
 
 The `VehicleWheel` allows the user to easily create vehicle wheels.
 It is designed to be generic and customizable to cover a wide range of wheel configurations.
-The base node of the `VehicleWheel` PROTO is a `Slot` of type `vehicle wheel` so that it can only be inserted as a wheel of a vehicle PROTO featuring the corresponding `vehicleWheel` slots.
+The base node of the `VehicleWheel` PROTO is a [Slot](../reference/slot.md) of type `vehicle wheel` so that it can only be inserted as a wheel of a vehicle PROTO featuring the corresponding `vehicleWheel` slots.
 
 %figure "A VehicleWheel PROTO with the default field value"
 
@@ -51,7 +51,7 @@ VehicleWheel {
 - `tireAppearance`: Specifies the appearance of the tire.
 - `rimAppearance`: Specifies the appearance of the rim.
 - `physics`: `Physics` node of the wheel defining all the physical characteristics.
-- `logoSlot`: extension slot allowing the user to add a `Shape` node for a brand logo.
+- `logoSlot`: extension slot allowing the user to add a [Shape](../reference/shape.md) node for a brand logo.
 
 Some sample instances of wheels are provided (see for example `BmwX5Wheel.proto`) which inherit from `VehicleWheel`.
 

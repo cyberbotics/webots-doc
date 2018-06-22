@@ -137,7 +137,7 @@ The entry points of a native robot window controller plugin are:
     the controller program. It is called directly by the user from the controller
     when executing the `wb_robot_window_custom_function` C function or
     `Robot::windowCustomFunction` C++ function. You can find more information
-    in the [Reference Manual](../reference/index.md).
+    in the [Reference Manual](../reference/robot.md#wb_robot_window_custom_function).
 
 The internal behavior of the `wb_robot_step` function call is the key point to understanding how the different entry points of the robot window plugin are called (pseudo-code):
 

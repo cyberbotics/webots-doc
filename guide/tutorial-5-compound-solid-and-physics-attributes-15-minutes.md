@@ -145,7 +145,7 @@ We recommend to read the [Reference Manual](../reference/worldinfo.md) and the d
 There are also other physics parameters which are less useful in a regular use of Webots.
 For example some of the fields of the [Physics](../reference/physics.md), [WorldInfo](../reference/worldinfo.md) and [ContactProperties](../reference/contactproperties.md) nodes.
 
-> **Hands on**: Search in the [Reference Manual](../reference/index.md) how to add a linear damping on all the objects, how to use the inertia matrix and how to use the physicsDisableTime property.
+> **Hands on**: Search how to add a linear damping on all the objects, how to use the inertia matrix and how to use the physicsDisableTime property.
 
 ### Conclusion
 

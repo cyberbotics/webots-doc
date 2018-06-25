@@ -7,6 +7,4 @@ If it does not appear automatically, then you can always use the menu: `Tools / 
 A simple example is the "WEBOTS\_HOME/projects/samples/howto/worlds/physics.wbt" world.
 In this example, the plugin is used to add forces to make the robot fly, to communicate with the Webots model, to detect objects using a `Ray` object, to communicate with a `Robot` to visualize the `Ray` and to define a frictionless collision between the robot and the floor.
 
-The "WEBOTS\_HOME/projects/samples/demos/worlds/blimp\_lis.wbt" shows how to suppress gravity, and apply a thrust force (propeller) for a blimp model.
-
-The "WEBOTS\_HOME/projects/samples/demos/worlds/salamander.wbt" shows how to simulate Archimedes'buoyant force and hydrodynamic drag forces.
+The "WEBOTS\_HOME/projects/robots/epfl/lis/worlds/blimp\_lis.wbt" shows how to suppress gravity, and apply a thrust force (propeller) for a blimp model.

@@ -18,11 +18,11 @@ Skin {
 ### Description
 
 The [Skin](#skin) node can be used to simulate soft mesh animation for example of a human or an animal.
-The skin mesh is imported from an Ogre mesh file specified by the `model` name,
+The skin mesh is imported from a mesh file specified by the `model` name (either Ogre or FBX format),
 but in order to be animated it has to be attached to a skeleton so that the rotation of the skeleton joints results in appropriate deformation of the skin mesh.
 
 This node provides two alternative ways to define a skeleton.
-The first method consists in providing an Ogre XML skeleton file having the same file name as the Ogre mesh file.
+The first method consists in providing the skeleton in the mesh file (in the case of Ogre, it stands in a separate skeleton file that must have the same name as the Ogre mesh file).
 The second method consists in listing the [Solid](#solid.md) nodes corresponding to the mesh bones using the `bones` field.
 If in the first case the resulting object animation will be purely graphical, when linking the [Skin](#skin) to an existing Webots skeleton made of [Solid](#solid.md) and [Joint](#joint.md) nodes it is possible to animate an dynamic object.
 
@@ -38,12 +38,12 @@ If you want that the skin is animated based on the movements of a dynamic object
 Each listed [Solid](#solid.md) bone have to be a child node of a [Joint](#joint.md).
 Moreover the mesh bone structure and the [Solid](#solid.md)/[Joint](#joint.md) have to match.
 In particular, this means that the number of mesh bones have to match with the number of joints and
-that the [Solid](#solid.md) nodes have to be listed in the same order as the specified in the mesh file.
+that the [Solid](#solid.md) node names must be the same as the bone names specified in the mesh file.
 
 #### Pure graphical skin animation
 
 For a purely graphical skin animation the `bones` field doesn't have to be specified.
-In this case the skeleton needed to animate the skin is loaded from a file named "<modelName>.skeleton.xml", where <modelName> corresponds to the `model` field value, and located in the same folder as the mesh file.
+In this case the skeleton needed to animate the skin is loaded either from the file named "<modelName>.skeleton", where <modelName> corresponds to the `model` field value, and located in the same folder as the mesh file, or from the mesh FBX file, depending on what is provided.
 
 ### Field Summary
 
@@ -57,7 +57,7 @@ Please refer to [Transform](#transform.md) `rotation` field description for more
 - `name`: name of the skin device and used by wb_robot_get_device().
 
 - `model`: name of the model to be imported.
-For example, if the model name is "test_model", it import the binary mesh file "test_model.mesh" placed in the "skins/test_model/" subdirectory, inside the current project directory. If the `bones` field is not defined it will also import "test_model.skeleton.xml".
+For example, when using Ogre format, if the model name is "test_model", it import the binary mesh files "test_model.mesh" and "test_model.skeleton" placed in the "skins/test_model/" subdirectory, inside the current project directory.
 The materials used by the imported mesh have to be defined in the `appearance` field.
 
 - `appearance`: list of [Appearance](#appearance.md) nodes defining the materials used by the mesh defined in the `model` field.
@@ -65,8 +65,7 @@ In order to be correctly used, the `name` field of the child [Appearance](#appea
 If multiple [Appearance](#appearance.md) nodes have the same `name` field value, the first one is used.
 
 - The `bones` fields contains a list of [SolidReference](#solidreference.md) nodes that provide the information to attach a Webots skeleton made of [Solid](#solid.md) and [Joint](#joint.md) nodes.
-In order to setup correctly the skeleton, the solid have to be listed in the same order as specified in the mesh file.
-This means that if in the mesh file the thigh bone is referenced using the index number 3, then the [SolidReference](#solidreference.md) linking to the tigh [Solid](#solid.md) has to inserted in the `bones` field at index 3 as well.
+In order to setup correctly the skeleton, the solids have to have the same names as specified in the skeleton.
 
 - The `castShadows` field allows the user to turn on (TRUE) or off (FALSE) shadows casted by this shape. Note that if the mesh triangle count is very big, the casted shadows will be automatically disabled.
 

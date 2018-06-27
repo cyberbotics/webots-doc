@@ -17,10 +17,10 @@ Indeed, their IDs should be unique, and the `Road.startJunction`, the `Road.endJ
 
 ## How to Use the Exporter
 
-On Linux, the path to the SUMO binaries directory should be added in your LD\_LIBRARY\_PATH environment variable in order to run the SUMO binaries:
+On Linux, the path to the SUMO binaries and to the Webots libraries directories should be added in your LD\_LIBRARY\_PATH environment variable in order to run the SUMO binaries:
 
 ```sh
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$WEBOTS_HOME/projects/default/resources/sumo/bin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$WEBOTS_HOME/projects/default/resources/sumo/bin:$WEBOTS_HOME/lib
 ```
 
 You should use the `exporter.py` Python script to generate the `sumo.nod.xml`, `sumo.edg.xml` and `sumo.sumocfg` SUMO files.

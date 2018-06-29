@@ -110,7 +110,7 @@ Once the [Robot](../reference/robot.md) is selected, it is also possible to show
 
 %end
 
-### Show Camera and Display Images in a Separate Window
+### Show Camera, Display and RangeFinder Images in a Separate Window
 
 Overlay images can also be displayed outside the 3D window, see [this figure](#camera-and-display-image-window).
 When double-clicking with the left mouse button on the overlay, a new external window displaying the device image is created and the overlay in the 3D window is disabled.

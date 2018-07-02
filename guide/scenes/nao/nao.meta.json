@@ -31,10 +31,10 @@
     {
       "transformID": "n10285",
       "name": "LAnkleRoll",
-      "maxPosition": 0.768992,
+      "maxPosition": 0.769001,
       "position": 0,
       "type": "RotationalMotor",
-      "minPosition": -0.397761,
+      "minPosition": -0.397880,
       "axis": "1 0 0"
     },
     {
@@ -202,10 +202,10 @@
     {
       "transformID": "n10153",
       "name": "RAnkleRoll",
-      "maxPosition": 0.388685,
+      "maxPosition": 0.397935,
       "position": 0,
       "type": "RotationalMotor",
-      "minPosition": -0.785922,
+      "minPosition": -0.768992,
       "axis": "1 0 0"
     },
     {

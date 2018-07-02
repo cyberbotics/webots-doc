@@ -127,7 +127,7 @@ It goes down the slope with a smooth motion simply because of its shape and its 
 
 ### pedal\_racer.wbt
 
-**Keywords**: Pedal racer, apply a force
+**Keywords**: Pedal racer, apply a force, mechanical loop, SolidReference
 
 ![pedal_racer.png](images/samples/pedal_racer.png) This example shows the mouse interaction with a complex model.
 You can apply a force to the pedals using `Alt + mouse left click.`.

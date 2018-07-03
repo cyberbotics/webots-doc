@@ -1,6 +1,6 @@
 # Version R2018b Released
 
-<p id="publish-data">By Tom Norton - xxth June 2018</p>
+<p id="publish-data">By Tom Norton - 3rd July 2018</p>
 
 ---
 
@@ -10,7 +10,7 @@ As always, for a comprehensive list of changes please refer to the ChangeLog, fo
 
 ## WREN: Webots Renderer
 
-For the past decade, Webots has used the [Object-Oriented Graphics Rendering Engine](https://www.ogre3d.org/) (OGRE) to handle 3D rendering. 
+For the past decade, Webots has used the [Object-Oriented Graphics Rendering Engine](https://www.ogre3d.org/) (OGRE) to handle 3D rendering.
 We encountered many roadblocks with OGRE, especially in modernizing our worlds and achieving a greater level of realism, and as such decided that it was better for us to implement our own bespoke rendering engine - from scratch!
 This allows us to implement and use only the features we need / desire, giving us a very lightweight and efficient renderer.
 
@@ -37,7 +37,7 @@ The following benchmarks were performed on Windows 10, 64-bit with an Intel 6700
 | create.wbt  | 30.4x  |  52.4x |  1.72x  |
 
 
-As you can see from this table, even with robot controller taking a large part of the timestep in these worlds, all of them run considerably faster than before, with a greater speedup in complex worlds due to higher rendering demand. 
+As you can see from this table, even with robot controller taking a large part of the timestep in these worlds, all of them run considerably faster than before, with a greater speedup in complex worlds due to higher rendering demand.
 WREN now shines in large worlds, and is still way ahead of OGRE even in simple scenarios.
 
 ### Physically-Based Rendering
@@ -64,7 +64,7 @@ We plan to continue developing advanced graphics features for Webots in the comi
 ![dark theme](images/webots_night.png)
 %end
 
-We've done lots of work on user experience with this latest update. 
+We've done lots of work on user experience with this latest update.
 Shown above is the new default look for Webots R2018b, Webots Night.
 This new look features clean lines, flat design, and a subdued color palette with highlights in just the right places to make interacting with Webots even more intuitive.
 If you prefer the old look, we've also kept the previous style, in a theme called "Webots Classic".
@@ -73,7 +73,7 @@ Additionally, the splash screen has been re-designed to match our new themes.
 
 ### It's All about Context
 
-We've wanted to streamline actions normally undertaken during normal simulation design workflow. 
+We've wanted to streamline actions normally undertaken during normal simulation design workflow.
 These include editing a robot's controller, seeing a robot's window, deleting an object from the scene, etc.
 So, to improve this, we've added a context menu to the 3D view and Scene Tree!
 

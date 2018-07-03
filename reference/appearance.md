@@ -15,9 +15,6 @@ The [Appearance](#appearance) node specifies the visual properties of a geometri
 The value for each of the fields in this node may be NULL.
 However, if the field is non-NULL, it shall contain one node of the appropriate type.
 
->**note** The *WEBOTS_HOME/bin/ogre/OgreMaterialConverter.py* Python script is provided to automatically generate the [Appearance](#appearance) nodes from an Ogre material file.
-The generated [Appearance](#appearance) nodes are saved in `.wbo` format.
-
 ### Field Summary
 
 - The `material` field, if specified, shall contain a [Material](material.md) node.

@@ -44,6 +44,7 @@ Indeed, the importer may generate some bugs, depending on the OSM complexity.
 A good workflow is to fix the OSM data using the `JOSM` editor by adding/removing OSM nodes.
 We recommend to push the modifications on the OSM data server.
 You can also enable the spline subdivision on some of the roads in Webots in order to smooth them if needed.
+Finally, you may add a [Fog](../reference/fog.md) node to make your world look nicer.
 
 ### Generate the SUMO Network Files
 

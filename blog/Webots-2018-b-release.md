@@ -1,6 +1,6 @@
 # Version R2018b Released
 
-<p id="publish-data">By Tom Norton - 3rd July 2018</p>
+<p id="publish-data">By Tom Norton - 4rd July 2018</p>
 
 ---
 
@@ -65,9 +65,9 @@ We plan to continue developing advanced graphics features for Webots in the comi
 %end
 
 We've done lots of work on user experience with this latest update.
-Shown above is the new default look for Webots R2018b, Webots Night.
+Shown above is one of the new looks for Webots R2018b, Webots Night.
 This new look features clean lines, flat design, and a subdued color palette with highlights in just the right places to make interacting with Webots even more intuitive.
-If you prefer the old look, we've also kept the previous style, in a theme called "Webots Classic".
+If you prefer the old look, we've also kept the previous style, in a theme called "Webots Classic", enabled by default.
 There's also a more vibrant dark theme named "Webots Dusk".
 Additionally, the splash screen has been re-designed to match our new themes.
 

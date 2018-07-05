@@ -239,11 +239,13 @@ This function can be used with a sensor of type "force-3d" exclusively.
 ```c
 #include <webots/touch_sensor.h>
 
-#define WB_TOUCH_SENSOR_BUMPER
-#define WB_TOUCH_SENSOR_FORCE
-#define WB_TOUCH_SENSOR_FORCE3D
+typedef enum {
+  WB_TOUCH_SENSOR_BUMPER,
+  WB_TOUCH_SENSOR_FORCE,
+  WB_TOUCH_SENSOR_FORCE3D
+} WbTouchSensorType;
 
-int wb_touch_sensor_get_type(WbDeviceTag tag);
+WbTouchSensorType wb_touch_sensor_get_type(WbDeviceTag tag);
 ```
 
 %tab-end
@@ -255,8 +257,8 @@ int wb_touch_sensor_get_type(WbDeviceTag tag);
 
 namespace webots {
   class TouchSensor : public Device {
-    enum {BUMPER, FORCE, FORCE3D};
-    int getType() const;
+    typedef enum {BUMPER, FORCE, FORCE3D} Type;
+    Type getType() const;
     // ...
   }
 }

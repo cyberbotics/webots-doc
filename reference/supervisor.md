@@ -16,7 +16,7 @@ If a [Supervisor](#supervisor) contains devices then the [Supervisor](#superviso
 Webots PRO is required to use the [Supervisor](#supervisor) node.
 
 > **Note**: Note that in some special cases the [Supervisor](#supervisor) functions might return wrong values and it might not be possible to retrieve fields and nodes.
-This occurs when closing a world and quitting its controllers, i.e. reverting the current world, opening a new world, or closing Webots.
+This occurs when closing a world and quitting its controllers, i.e. reloading the current world, opening a new world, or closing Webots.
 In this case the output will be a NULL pointer or a default value.
 For functions returning a string, an empty string is returned instead of a NULL pointer.
 
@@ -118,11 +118,11 @@ node = wb_supervisor_node_get_selected()
 
 | name | service/topic | data type | data type definition |
 | --- | --- | --- | --- |
-| `/supervisor/get_root` | `service` | [`webots_ros::get_int`](ros-api.md#common-services) | |
-| `/supervisor/get_self` | `service` | [`webots_ros::get_int`](ros-api.md#common-services) | |
+| `/supervisor/get_root` | `service` | [`webots_ros::get_uint64`](ros-api.md#common-services) | |
+| `/supervisor/get_self` | `service` | [`webots_ros::get_uint64`](ros-api.md#common-services) | |
 | `/supervisor/get_from_def` | `service` | `webots_ros::supervisor_get_from_def` | `string name`<br/>`---`<br/>`uint64 node` |
 | `/supervisor/get_from_id` | `service` | `webots_ros::supervisor_get_from_id` | `int32 id`<br/>`---`<br/>`uint64 node` |
-| `/supervisor/get_selected` | `service` | [`webots_ros::get_int`](ros-api.md#common-services) | |
+| `/supervisor/get_selected` | `service` | [`webots_ros::get_uint64`](ros-api.md#common-services) | |
 
 %tab-end
 
@@ -274,97 +274,93 @@ The `wb_supervisor_node_get_parent_node` function retrieves the reference to the
 #include <webots/supervisor.h>
 #include <webots/node.h>
 
-#define WB_NODE_NO_NODE
-/* 3D rendering */
-#define WB_NODE_APPEARANCE
-#define WB_NODE_BACKGROUND
-#define WB_NODE_BOX
-#define WB_NODE_CAPSULE
-#define WB_NODE_COLOR
-#define WB_NODE_COMPOSED_CUBE_MAP_TEXTURE
-#define WB_NODE_COMPOSED_SHADER
-#define WB_NODE_CONE
-#define WB_NODE_COORDINATE
-#define WB_NODE_CYLINDER
-#define WB_NODE_DIRECTIONAL_LIGHT
-#define WB_NODE_ELEVATION_GRID
-#define WB_NODE_EXTRUSION
-#define WB_NODE_FOG
-#define WB_NODE_GROUP
-#define WB_NODE_IMAGE_TEXTURE
-#define WB_NODE_INDEXED_FACE_SET
-#define WB_NODE_INDEXED_LINE_SET
-#define WB_NODE_MATERIAL
-#define WB_NODE_MULTI_TEXTURE
-#define WB_NODE_MUSCLE
-#define WB_NODE_PLANE
-#define WB_NODE_POINT_LIGHT
-#define WB_NODE_SHADER_PART
-#define WB_NODE_SHAPE
-#define WB_NODE_SPHERE
-#define WB_NODE_SPOT_LIGHT
-#define WB_NODE_TEXTURE_COORDINATE
-#define WB_NODE_TEXTURE_TRANSFORM
-#define WB_NODE_TRANSFORM
-#define WB_NODE_UNIFORM
-#define WB_NODE_VIEWPOINT
-/* robots */
-#define WB_NODE_ROBOT
-#define WB_NODE_SUPERVISOR
-#define WB_NODE_DIFFERENTIAL_WHEELS
-/* devices */
-#define WB_NODE_ACCELEROMETER
-#define WB_NODE_BRAKE
-#define WB_NODE_CAMERA
-#define WB_NODE_COMPASS
-#define WB_NODE_CONNECTOR
-#define WB_NODE_DISPLAY
-#define WB_NODE_DISTANCE_SENSOR
-#define WB_NODE_EMITTER
-#define WB_NODE_GPS
-#define WB_NODE_GYRO
-#define WB_NODE_INERTIAL_UNIT
-#define WB_NODE_LED
-#define WB_NODE_LIDAR
-#define WB_NODE_LIGHT_SENSOR
-#define WB_NODE_LINEAR_MOTOR
-#define WB_NODE_MICROPHONE
-#define WB_NODE_PEN
-#define WB_NODE_POSITION_SENSOR
-#define WB_NODE_PROPELLER
-#define WB_NODE_RADAR
-#define WB_NODE_RADIO
-#define WB_NODE_RANGE_FINDER
-#define WB_NODE_ROTATIONAL_MOTOR
-#define WB_NODE_RECEIVER
-#define WB_NODE_SPEAKER
-#define WB_NODE_TOUCH_SENSOR
-/* misc */
-#define WB_NODE_BALL_JOINT
-#define WB_NODE_BALL_JOINT_PARAMETERS
-#define WB_NODE_CHARGER
-#define WB_NODE_CONTACT_PROPERTIES
-#define WB_NODE_DAMPING
-#define WB_NODE_FLUID
-#define WB_NODE_FOCUS
-#define WB_NODE_HINGE_JOINT
-#define WB_NODE_HINGE_JOINT_PARAMETERS
-#define WB_NODE_HINGE_2_JOINT
-#define WB_NODE_HINGE_2_JOINT_PARAMETERS
-#define WB_NODE_IMMERSION_PROPERTIES
-#define WB_NODE_JOINT_PARAMETERS
-#define WB_NODE_LENS
-#define WB_NODE_LENS_FLARE
-#define WB_NODE_PHYSICS
-#define WB_NODE_RECOGNITION
-#define WB_NODE_SLIDER_JOINT
-#define WB_NODE_SOLID
-#define WB_NODE_SOLID_REFERENCE
-#define WB_NODE_SLOT
-#define WB_NODE_TRACK
-#define WB_NODE_TRACK_WHEEL
-#define WB_NODE_WORLD_INFO
-#define WB_NODE_ZOOM
+typedef enum {
+  WB_NODE_NO_NODE,
+  /* 3D rendering */
+  WB_NODE_APPEARANCE,
+  WB_NODE_BACKGROUND,
+  WB_NODE_BOX,
+  WB_NODE_CAPSULE,
+  WB_NODE_COLOR,
+  WB_NODE_CONE,
+  WB_NODE_COORDINATE,
+  WB_NODE_CUBEMAP,
+  WB_NODE_CYLINDER,
+  WB_NODE_DIRECTIONAL_LIGHT,
+  WB_NODE_ELEVATION_GRID,
+  WB_NODE_FOG,
+  WB_NODE_GROUP,
+  WB_NODE_IMAGE_TEXTURE,
+  WB_NODE_INDEXED_FACE_SET,
+  WB_NODE_INDEXED_LINE_SET,
+  WB_NODE_MATERIAL,
+  WB_NODE_MUSCLE,
+  WB_NODE_PBR_APPEARANCE,
+  WB_NODE_PLANE,
+  WB_NODE_POINT_LIGHT,
+  WB_NODE_POINT_SET,
+  WB_NODE_SHAPE,
+  WB_NODE_SPHERE,
+  WB_NODE_SPOT_LIGHT,
+  WB_NODE_TEXTURE_COORDINATE,
+  WB_NODE_TEXTURE_TRANSFORM,
+  WB_NODE_TRANSFORM,
+  WB_NODE_VIEWPOINT,
+  /* robots */
+  WB_NODE_ROBOT,
+  WB_NODE_SUPERVISOR,
+  WB_NODE_DIFFERENTIAL_WHEELS,
+  /* devices */
+  WB_NODE_ACCELEROMETER,
+  WB_NODE_BRAKE,
+  WB_NODE_CAMERA,
+  WB_NODE_COMPASS,
+  WB_NODE_CONNECTOR,
+  WB_NODE_DISPLAY,
+  WB_NODE_DISTANCE_SENSOR,
+  WB_NODE_EMITTER,
+  WB_NODE_GPS,
+  WB_NODE_GYRO,
+  WB_NODE_INERTIAL_UNIT,
+  WB_NODE_LED,
+  WB_NODE_LIDAR,
+  WB_NODE_LIGHT_SENSOR,
+  WB_NODE_LINEAR_MOTOR,
+  WB_NODE_PEN,
+  WB_NODE_POSITION_SENSOR,
+  WB_NODE_PROPELLER,
+  WB_NODE_RADAR,
+  WB_NODE_RANGE_FINDER,
+  WB_NODE_RECEIVER,
+  WB_NODE_ROTATIONAL_MOTOR,
+  WB_NODE_SPEAKER,
+  WB_NODE_TOUCH_SENSOR,
+  /* misc */
+  WB_NODE_BALL_JOINT,
+  WB_NODE_BALL_JOINT_PARAMETERS,
+  WB_NODE_CHARGER,
+  WB_NODE_CONTACT_PROPERTIES,
+  WB_NODE_DAMPING,
+  WB_NODE_FLUID,
+  WB_NODE_FOCUS,
+  WB_NODE_HINGE_JOINT,
+  WB_NODE_HINGE_JOINT_PARAMETERS,
+  WB_NODE_HINGE_2_JOINT,
+  WB_NODE_IMMERSION_PROPERTIES,
+  WB_NODE_JOINT_PARAMETERS,
+  WB_NODE_LENS,
+  WB_NODE_LENS_FLARE,
+  WB_NODE_PHYSICS,
+  WB_NODE_RECOGNITION,
+  WB_NODE_SLIDER_JOINT,
+  WB_NODE_SLOT,
+  WB_NODE_SOLID,
+  WB_NODE_SOLID_REFERENCE,
+  WB_NODE_TRACK,
+  WB_NODE_TRACK_WHEEL,
+  WB_NODE_WORLD_INFO,
+  WB_NODE_ZOOM
+} WbNodeType;
 
 WbNodeType wb_supervisor_node_get_type(WbNodeRef node);
 const char *wb_supervisor_node_get_type_name(WbNodeRef node);
@@ -380,31 +376,29 @@ const char *wb_supervisor_node_get_base_type_name(WbNodeRef node);
 
 namespace webots {
   class Node {
-    enum {
+    typedef enum {
       NO_NODE,
       // 3D rendering
-      APPEARANCE, BACKGROUND, BOX, CAPSULE, COLOR, COMPOSED_CUBE_MAP_TEXTURE,
-      COMPOSED_SHADER, CONE, COORDINATE, CYLINDER, DIRECTIONAL_LIGHT,
-      ELEVATION_GRID, EXTRUSION, FOG, GROUP, IMAGE_TEXTURE, INDEXED_FACE_SET,
-      INDEXED_LINE_SET, MATERIAL, MULTI_TEXTURE, MUSCLE, PLANE, POINT_LIGHT,
-      SHADER_PART, SHAPE, SPHERE, SPOT_LIGHT, TEXTURE_COORDINATE,
-      TEXTURE_TRANSFORM, TRANSFORM, UNIFORM, VIEWPOINT, 
+      APPEARANCE, BACKGROUND, BOX, CAPSULE, COLOR, CONE, COORDINATE, CUBEMAP,
+      CYLINDER, DIRECTIONAL_LIGHT, ELEVATION_GRID, FOG, GROUP, IMAGE_TEXTURE,
+      INDEXED_FACE_SET, INDEXED_LINE_SET, MATERIAL, MUSCLE, PBR_APPEARANCE,
+      PLANE, POINT_LIGHT, POINT_SET, SHAPE, SPHERE, SPOT_LIGHT, TEXTURE_COORDINATE,
+      TEXTURE_TRANSFORM, TRANSFORM, VIEWPOINT,
       // robots
       ROBOT, SUPERVISOR, DIFFERENTIAL_WHEELS,
       // devices
       ACCELEROMETER, BRAKE, CAMERA, COMPASS, CONNECTOR, DISPLAY,
-      DISTANCE_SENSOR, EMITTER, GPS, GYRO, INERTIAL_UNIT, LIDAR, LED,
-      LIGHT_SENSOR, LINEAR_MOTOR, MICROPHONE, PEN, POSITION_SENSOR, PROPELLER,
-      RADAR, RADIO, RANGE_FINDER, ROTATIONAL_MOTOR, RECEIVER, SPEAKER, TOUCH_SENSOR,
+      DISTANCE_SENSOR, EMITTER, GPS, GYRO, INERTIAL_UNIT, LED, LIDAR,
+      LIGHT_SENSOR, LINEAR_MOTOR, PEN, POSITION_SENSOR, PROPELLER,
+      RADAR, RANGE_FINDER, RECEIVER, ROTATIONAL_MOTOR, SPEAKER, TOUCH_SENSOR,
       // misc
-      BALL_JOINT, BALL_JOINT_PARAMETERS, CHARGER, CONTACT_PROPERTIES, DAMPING,
-      FLUID, FOCUS, HINGE_JOINT, HINGE_JOINT_PARAMETERS, HINGE_2_JOINT,
-      HINGE_2_JOINT_PARAMETERS, IMMERSION_PROPERTIES, JOINT_PARAMETERS, LENS,
-      LENS_FLARE, PHYSICS, RECOGNITION, SLIDER_JOINT, SOLID, SOLID_REFERENCE,
-      SLOT, TRACK, TRACK_WHEEL, WORLD_INFO, ZOOM
-    };
+      BALL_JOINT, BALL_JOINT_PARAMETERS, CHARGER, CONTACT_PROPERTIES,
+      DAMPING, FLUID, FOCUS, HINGE_JOINT, HINGE_JOINT_PARAMETERS, HINGE_2_JOINT,
+      IMMERSION_PROPERTIES, JOINT_PARAMETERS, LENS, LENS_FLARE, PHYSICS, RECOGNITION,
+      SLIDER_JOINT, SLOT, SOLID, SOLID_REFERENCE, TRACK, TRACK_WHEEL, WORLD_INFO, ZOOM
+    } Type;
 
-    int getType() const;
+    Type getType() const;
     std::string getTypeName() const;
     std::string getBaseTypeName() const;
     // ...
@@ -422,25 +416,23 @@ from controller import Node
 class Node:
     NO_NODE,
     # 3D rendering
-    APPEARANCE, BACKGROUND, BOX, CAPSULE, COLOR, COMPOSED_CUBE_MAP_TEXTURE,
-    COMPOSED_SHADER, CONE, COORDINATE, CYLINDER, DIRECTIONAL_LIGHT,
-    ELEVATION_GRID, EXTRUSION, FOG, GROUP, IMAGE_TEXTURE, INDEXED_FACE_SET,
-    INDEXED_LINE_SET, MATERIAL, MULTI_TEXTURE, MUSCLE, PLANE, POINT_LIGHT,
-    SHADER_PART, SHAPE, SPHERE, SPOT_LIGHT, TEXTURE_COORDINATE,
-    TEXTURE_TRANSFORM, TRANSFORM, UNIFORM, VIEWPOINT, 
+    APPEARANCE, BACKGROUND, BOX, CAPSULE, COLOR, CONE, COORDINATE, CUBEMAP,
+    CYLINDER, DIRECTIONAL_LIGHT, ELEVATION_GRID, FOG, GROUP, IMAGE_TEXTURE,
+    INDEXED_FACE_SET, INDEXED_LINE_SET, MATERIAL, MUSCLE, PBR_APPEARANCE,
+    PLANE, POINT_LIGHT, POINT_SET, SHAPE, SPHERE, SPOT_LIGHT, TEXTURE_COORDINATE,
+    TEXTURE_TRANSFORM, TRANSFORM, VIEWPOINT,
     # robots
     ROBOT, SUPERVISOR, DIFFERENTIAL_WHEELS,
     # devices
     ACCELEROMETER, BRAKE, CAMERA, COMPASS, CONNECTOR, DISPLAY,
-    DISTANCE_SENSOR, EMITTER, GPS, GYRO, INERTIAL_UNIT, LIDAR, LED, LIGHT_SENSOR,
-    LINEAR_MOTOR, MICROPHONE, PEN, POSITION_SENSOR, PROPELLER, RADAR, RADIO,
-    RANGE_FINDER, ROTATIONAL_MOTOR, RECEIVER, SPEAKER, TOUCH_SENSOR,
+    DISTANCE_SENSOR, EMITTER, GPS, GYRO, INERTIAL_UNIT, LED, LIDAR,
+    LIGHT_SENSOR, LINEAR_MOTOR, PEN, POSITION_SENSOR, PROPELLER,
+    RADAR, RANGE_FINDER, RECEIVER, ROTATIONAL_MOTOR, SPEAKER, TOUCH_SENSOR,
     # misc
-    BALL_JOINT, BALL_JOINT_PARAMETERS, CHARGER, CONTACT_PROPERTIES, DAMPING,
-    FLUID, FOCUS, HINGE_JOINT, HINGE_JOINT_PARAMETERS, HINGE_2_JOINT,
-    HINGE_2_JOINT_PARAMETERS, IMMERSION_PROPERTIES, JOINT_PARAMETERS, LENS,
-    LENS_FLARE, PHYSICS, RECOGNITION, SLIDER_JOINT, SOLID, SOLID_REFERENCE,
-    SLOT, TRACK, TRACK_WHEEL, WORLD_INFO, ZOOM
+    BALL_JOINT, BALL_JOINT_PARAMETERS, CHARGER, CONTACT_PROPERTIES,
+    DAMPING, FLUID, FOCUS, HINGE_JOINT, HINGE_JOINT_PARAMETERS, HINGE_2_JOINT,
+    IMMERSION_PROPERTIES, JOINT_PARAMETERS, LENS, LENS_FLARE, PHYSICS, RECOGNITION,
+    SLIDER_JOINT, SLOT, SOLID, SOLID_REFERENCE, TRACK, TRACK_WHEEL, WORLD_INFO, ZOOM
 
     def getType(self):
     def getTypeName(self):
@@ -459,26 +451,23 @@ public class Node {
   public final static int
     NO_NODE,
     // 3D rendering
-    APPEARANCE, BACKGROUND, BOX, CAPSULE, COLOR, COMPOSED_CUBE_MAP_TEXTURE,
-    COMPOSED_SHADER, CONE, COORDINATE, CYLINDER, DIRECTIONAL_LIGHT,
-    ELEVATION_GRID, EXTRUSION, FOG, GROUP, IMAGE_TEXTURE, INDEXED_FACE_SET,
-    INDEXED_LINE_SET, MATERIAL, MULTI_TEXTURE, MUSCLE, PLANE,
-    POINT_LIGHT, SHADER_PART, SHAPE, SPHERE, SPOT_LIGHT, TEXTURE_COORDINATE,
-    TEXTURE_TRANSFORM, TRANSFORM, UNIFORM, VIEWPOINT, 
+    APPEARANCE, BACKGROUND, BOX, CAPSULE, COLOR, CONE, COORDINATE, CUBEMAP,
+    CYLINDER, DIRECTIONAL_LIGHT, ELEVATION_GRID, FOG, GROUP, IMAGE_TEXTURE,
+    INDEXED_FACE_SET, INDEXED_LINE_SET, MATERIAL, MUSCLE, PBR_APPEARANCE,
+    PLANE, POINT_LIGHT, POINT_SET, SHAPE, SPHERE, SPOT_LIGHT, TEXTURE_COORDINATE,
+    TEXTURE_TRANSFORM, TRANSFORM, VIEWPOINT,
     // robots
     ROBOT, SUPERVISOR, DIFFERENTIAL_WHEELS,
     // devices
     ACCELEROMETER, BRAKE, CAMERA, COMPASS, CONNECTOR, DISPLAY,
-    DISTANCE_SENSOR, EMITTER, GPS, GYRO, INERTIAL_UNIT, LIDAR, LED,
-    LIGHT_SENSOR, LINEAR_MOTOR, MICROPHONE, PEN, POSITION_SENSOR, PROPELLER,
-    RADAR, RADIO, RANGE_FINDER, ROTATIONAL_MOTOR, RECEIVER, SPEAKER,
-    TOUCH_SENSOR,
+    DISTANCE_SENSOR, EMITTER, GPS, GYRO, INERTIAL_UNIT, LED, LIDAR,
+    LIGHT_SENSOR, LINEAR_MOTOR, PEN, POSITION_SENSOR, PROPELLER,
+    RADAR, RANGE_FINDER, RECEIVER, ROTATIONAL_MOTOR, SPEAKER, TOUCH_SENSOR,
     // misc
-    BALL_JOINT, BALL_JOINT_PARAMETERS, CHARGER, CONTACT_PROPERTIES, DAMPING,
-    FLUID, FOCUS, HINGE_JOINT, HINGE_JOINT_PARAMETERS, HINGE_2_JOINT,
-    HINGE_2_JOINT_PARAMETERS, IMMERSION_PROPERTIES, JOINT_PARAMETERS, LENS,
-    LENS_FLARE, PHYSICS, RECOGNITION, SLIDER_JOINT, SOLID, SOLID_REFERENCE,
-    SLOT, TRACK, TRACK_WHEEL, WORLD_INFO, ZOOM;
+    BALL_JOINT, BALL_JOINT_PARAMETERS, CHARGER, CONTACT_PROPERTIES,
+    DAMPING, FLUID, FOCUS, HINGE_JOINT, HINGE_JOINT_PARAMETERS, HINGE_2_JOINT,
+    IMMERSION_PROPERTIES, JOINT_PARAMETERS, LENS, LENS_FLARE, PHYSICS, RECOGNITION,
+    SLIDER_JOINT, SLOT, SOLID, SOLID_REFERENCE, TRACK, TRACK_WHEEL, WORLD_INFO, ZOOM;
 
   public int getType();
   public String getTypeName();
@@ -492,36 +481,34 @@ public class Node {
 %tab "MATLAB"
 
 ```matlab
-WB_NODE_NO_NODE
+WB_NODE_NO_NODE,
 % 3D rendering
 WB_NODE_APPEARANCE, WB_NODE_BACKGROUND, WB_NODE_BOX, WB_NODE_CAPSULE,
-WB_NODE_COLOR, WB_NODE_COMPOSED_CUBE_MAP_TEXTURE, WB_NODE_COMPOSED_SHADER,
-WB_NODE_CONE, WB_NODE_COORDINATE, WB_NODE_CYLINDER, WB_NODE_DIRECTIONAL_LIGHT,
-WB_NODE_ELEVATION_GRID, WB_NODE_EXTRUSION, WB_NODE_FOG, WB_NODE_GROUP,
-WB_NODE_IMAGE_TEXTURE, WB_NODE_INDEXED_FACE_SET, WB_NODE_INDEXED_LINE_SET,
-WB_NODE_LIDAR, WB_NODE_MATERIAL, WB_NODE_MULTI_TEXTURE, WB_NODE_MUSCLE,
-WB_NODE_PLANE, WB_NODE_POINT_LIGHT, WB_NODE_SHADER_PART, WB_NODE_SHAPE,
+WB_NODE_COLOR, WB_NODE_CONE, WB_NODE_COORDINATE, WB_NODE_CUBEMAP,
+WB_NODE_CYLINDER, WB_NODE_DIRECTIONAL_LIGHT, WB_NODE_ELEVATION_GRID,
+WB_NODE_FOG, WB_NODE_GROUP, WB_NODE_IMAGE_TEXTURE, WB_NODE_INDEXED_FACE_SET,
+WB_NODE_INDEXED_LINE_SET, WB_NODE_MATERIAL, WB_NODE_MUSCLE, WB_NODE_PBR_APPEARANCE,
+WB_NODE_PLANE, WB_NODE_POINT_LIGHT, WB_NODE_POINT_SET, WB_NODE_SHAPE,
 WB_NODE_SPHERE, WB_NODE_SPOT_LIGHT, WB_NODE_TEXTURE_COORDINATE,
-WB_NODE_TEXTURE_TRANSFORM, WB_NODE_TRANSFORM, WB_NODE_UNIFORM, WB_NODE_VIEWPOINT
+WB_NODE_TEXTURE_TRANSFORM, WB_NODE_TRANSFORM, WB_NODE_VIEWPOINT,
 % robots
-WB_NODE_ROBOT, WB_NODE_SUPERVISOR, WB_NODE_DIFFERENTIAL_WHEELS
+WB_NODE_ROBOT, WB_NODE_SUPERVISOR, WB_NODE_DIFFERENTIAL_WHEELS,
 % devices
 WB_NODE_ACCELEROMETER, WB_NODE_BRAKE, WB_NODE_CAMERA, WB_NODE_COMPASS,
 WB_NODE_CONNECTOR, WB_NODE_DISPLAY, WB_NODE_DISTANCE_SENSOR, WB_NODE_EMITTER,
-WB_NODE_GPS, WB_NODE_GYRO, WB_NODE_INERTIAL_UNIT, WB_NODE_LED,
-WB_NODE_LIGHT_SENSOR, WB_NODE_LINEAR_MOTOR, WB_NODE_MICROPHONE, WB_NODE_PEN,
-WB_NODE_POSITION_SENSOR, WB_NODE_PROPELLER, WB_NODE_RADAR, WB_NODE_RADIO,
-WB_NODE_RANGE_FINDER, WB_NODE_ROTATIONAL_MOTOR, WB_NODE_RECEIVER,
-WB_NODE_SPEAKER, WB_NODE_TOUCH_SENSOR
+WB_NODE_GPS, WB_NODE_GYRO, WB_NODE_INERTIAL_UNIT, WB_NODE_LED, WB_NODE_LIDAR,
+WB_NODE_LIGHT_SENSOR, WB_NODE_LINEAR_MOTOR, WB_NODE_PEN,
+WB_NODE_POSITION_SENSOR, WB_NODE_PROPELLER, WB_NODE_RADAR,
+WB_NODE_RANGE_FINDER, WB_NODE_RECEIVER, WB_NODE_ROTATIONAL_MOTOR,
+WB_NODE_SPEAKER, WB_NODE_TOUCH_SENSOR,
 % misc
 WB_NODE_BALL_JOINT, WB_NODE_BALL_JOINT_PARAMETERS, WB_NODE_CHARGER,
-WB_NODE_CONTACT_PROPERTIES, WB_NODE_DAMPING, WB_NODE_FLUID, WB_NODE_FOCUS,
-WB_NODE_HINGE_JOINT, WB_NODE_HINGE_JOINT_PARAMETERS, WB_NODE_HINGE_2_JOINT,
-WB_NODE_HINGE_2_JOINT_PARAMETERS, WB_NODE_IMMERSION_PROPERTIES,
-WB_NODE_JOINT_PARAMETERS, WB_NODE_LENS, WB_NODE_LENS_FLARE, WB_NODE_PHYSICS,
-WB_NODE_RECOGNITION, WB_NODE_SLIDER_JOINT, WB_NODE_SOLID,
-WB_NODE_SOLID_REFERENCE, WB_NODE_SLOT, WB_NODE_TRACK, WB_NODE_TRACK_WHEEL,
-WB_NODE_WORLD_INFO, WB_NODE_ZOOM
+WB_NODE_CONTACT_PROPERTIES, WB_NODE_DAMPING, WB_NODE_FLUID,
+WB_NODE_FOCUS, WB_NODE_HINGE_JOINT, WB_NODE_HINGE_JOINT_PARAMETERS,
+WB_NODE_HINGE_2_JOINT, WB_NODE_IMMERSION_PROPERTIES, WB_NODE_JOINT_PARAMETERS,
+WB_NODE_LENS, WB_NODE_LENS_FLARE, WB_NODE_PHYSICS, WB_NODE_RECOGNITION,
+WB_NODE_SLIDER_JOINT, WB_NODE_SLOT, WB_NODE_SOLID, WB_NODE_SOLID_REFERENCE,
+WB_NODE_TRACK, WB_NODE_TRACK_WHEEL, WB_NODE_WORLD_INFO, WB_NODE_ZOOM
 
 type = wb_supervisor_node_get_type(node)
 name = wb_supervisor_node_get_type_name(node)
@@ -1741,88 +1728,6 @@ int main(int argc, char *argv[]) {
 
 ---
 
-#### `wb_supervisor_simulation_revert`
-
-%tab-component
-
-%tab "C"
-
-```c
-#include <webots/supervisor.h>
-
-void wb_supervisor_simulation_revert();
-```
-
-%tab-end
-
-%tab "C++"
-
-```cpp
-#include <webots/Supervisor.hpp>
-
-namespace webots {
-  class Supervisor : public Robot {
-    virtual void simulationRevert();
-    // ...
-  }
-}
-```
-
-%tab-end
-
-%tab "Python"
-
-```python
-from controller import Supervisor
-
-class Supervisor (Robot):
-    def simulationRevert(self):
-    # ...
-```
-
-%tab-end
-
-%tab "Java"
-
-```java
-import com.cyberbotics.webots.controller.Supervisor;
-
-public class Supervisor extends Robot {
-  public void simulationRevert();
-  // ...
-}
-```
-
-%tab-end
-
-%tab "MATLAB"
-
-```matlab
-wb_supervisor_simulation_revert()
-```
-
-%tab-end
-
-%tab "ROS"
-
-| name | service/topic | data type | data type definition |
-| --- | --- | --- | --- |
-| `/supervisor/simulation_revert` | `service` | [`webots_ros::get_bool`](ros-api.md#common-services) | |
-
-%tab-end
-
-%end
-
-##### Description
-
-*reload the current world*
-
-The `wb_supervisor_simulator_revert` function sends a request to the simulator process, asking it to reload the current world immediately.
-As a result of reloading the current world, the supervisor process and all the robot processes are terminated and restarted.
-You may wish to save some data in a file from your supervisor program in order to reload it when the supervisor controller restarts.
-
----
-
 #### `wb_supervisor_simulation_get_mode`
 #### `wb_supervisor_simulation_set_mode`
 
@@ -1833,13 +1738,15 @@ You may wish to save some data in a file from your supervisor program in order t
 ```c
 #include <webots/supervisor.h>
 
-#define WB_SUPERVISOR_SIMULATION_MODE_PAUSE
-#define WB_SUPERVISOR_SIMULATION_MODE_REAL_TIME
-#define WB_SUPERVISOR_SIMULATION_MODE_RUN
-#define WB_SUPERVISOR_SIMULATION_MODE_FAST
+typedef enum {
+  WB_SUPERVISOR_SIMULATION_MODE_PAUSE,
+  WB_SUPERVISOR_SIMULATION_MODE_REAL_TIME,
+  WB_SUPERVISOR_SIMULATION_MODE_RUN,
+  WB_SUPERVISOR_SIMULATION_MODE_FAST
+} WbSimulationMode;
 
-int wb_supervisor_simulation_get_mode();
-void wb_supervisor_simulation_set_mode(int mode);
+WbSimulationMode wb_supervisor_simulation_get_mode();
+void wb_supervisor_simulation_set_mode(WbSimulationMode mode);
 ```
 
 %tab-end
@@ -1851,12 +1758,12 @@ void wb_supervisor_simulation_set_mode(int mode);
 
 namespace webots {
   class Supervisor : public Robot {
-    enum {
+    typedef enum {
       SIMULATION_MODE_PAUSE, SIMULATION_MODE_REAL_TIME, SIMULATION_MODE_RUN, SIMULATION_MODE_FAST
-    };
+    } SimulationMode;
 
-    virtual void simulationSetMode(int mode);
-    int simulationGetMode() const;
+    SimulationMode simulationGetMode() const;
+    virtual void simulationSetMode(SimulationMode mode);
     // ...
   }
 }
@@ -1945,8 +1852,7 @@ The current simulation mode can also be modified by the Webots user, when he's c
 
 ---
 
-#### `wb_supervisor_load_world`
-#### `wb_supervisor_save_world`
+#### `wb_supervisor_simulation_reset`
 
 %tab-component
 
@@ -1955,8 +1861,7 @@ The current simulation mode can also be modified by the Webots user, when he's c
 ```c
 #include <webots/supervisor.h>
 
-void wb_supervisor_load_world(const char *filename);
-bool wb_supervisor_save_world(const char *filename);
+void wb_supervisor_simulation_reset();
 ```
 
 %tab-end
@@ -1968,9 +1873,7 @@ bool wb_supervisor_save_world(const char *filename);
 
 namespace webots {
   class Supervisor : public Robot {
-    virtual void loadWorld(const std::string &file);
-    virtual void saveWorld();
-    virtual void saveWorld(const std::string &file);
+    virtual void simulationReset();
     // ...
   }
 }
@@ -1984,9 +1887,7 @@ namespace webots {
 from controller import Supervisor
 
 class Supervisor (Robot):
-    def loadWorld(self, file):
-    def saveWorld(self):
-    def saveWorld(self, file):
+    def simulationReset(self):
     # ...
 ```
 
@@ -1998,9 +1899,7 @@ class Supervisor (Robot):
 import com.cyberbotics.webots.controller.Supervisor;
 
 public class Supervisor extends Robot {
-  public void loadWorld(String file);
-  public void saveWorld();
-  public void saveWorld(String file);
+  public void simulationReset();
   // ...
 }
 ```
@@ -2010,9 +1909,7 @@ public class Supervisor extends Robot {
 %tab "MATLAB"
 
 ```matlab
-wb_supervisor_load_world('filename')
-wb_supervisor_save_world()
-wb_supervisor_save_world('filename')
+wb_supervisor_simulation_reset()
 ```
 
 %tab-end
@@ -2021,8 +1918,7 @@ wb_supervisor_save_world('filename')
 
 | name | service/topic | data type | data type definition |
 | --- | --- | --- | --- |
-| `/supervisor/load_world` | `service` | [`webots_ros::set_string`](ros-api.md#common-services) | |
-| `/supervisor/save_world` | `service` | [`webots_ros::set_string`](ros-api.md#common-services) | |
+| `/supervisor/simulation_reset` | `service` | [`webots_ros::get_bool`](ros-api.md#common-services) | |
 
 %tab-end
 
@@ -2030,22 +1926,12 @@ wb_supervisor_save_world('filename')
 
 ##### Description
 
-*Load or save the current world.*
+*reset the simulation*
 
-The `wb_supervisor_load_world` function sends a request to the simulator process, asking it to stop the current simulation and load the world given in argument immediately.
-As a result of changing the current world, the supervisor process and all the robot processes are terminated and the new one are restarted with the new world.
-You may wish to save some data in a file from your supervisor program in order to reload it from the new world.
-
-The `wb_supervisor_save_world` function saves the current world.
-The `filename` parameter defines the path to the target world file.
-It should end with the `.wbt` extension.
-It can be defined either as an absolute path, or as a path relative to the current supervisor controller.
-If NULL, the current world path is used instead (e.g., a simple save operation).
-The boolean return value indicates the success of the save operation.
-Be aware that this function can overwrite silently existing files, so that the corresponding data may be lost.
-
-> **Note** [C++, Java, Python, MATLAB]: In the other APIs, the `Robot.saveWorld` function can be called without argument.
-In this case, a simple save operation is performed.
+The `wb_supervisor_simulation_reset` function sends a request to the simulator process, asking it to reset the simulation immediately.
+The reset process is explained in detail in the [User Guide](https://www.cyberbotics.com/doc/guide/the-user-interface#file-menu).
+As a result of the reset, all the supervisor and robot controller processes are terminated and restarted.
+You may wish to save some data in a file from your supervisor and robot controller programs in order to reload it when they restart.
 
 ---
 
@@ -2130,6 +2016,120 @@ It means that for any [Solid](solid.md) node containing a [Physics](physics.md) 
 This is actually implemented by calling the ODE's `dBodySetLinearVel` and `dBodySetAngularVel` functions for all bodies with a zero velocity parameter.
 This function is especially useful for resetting a robot to its initial position and inertia.
 To stop the inertia of a single [Solid](solid.md) node please refer to [this section](#wb_supervisor_node_reset_physics).
+
+---
+
+#### `wb_supervisor_world_load`
+#### `wb_supervisor_world_save`
+#### `wb_supervisor_world_reload`
+
+%tab-component
+
+%tab "C"
+
+```c
+#include <webots/supervisor.h>
+
+void wb_supervisor_world_load(const char *filename);
+bool wb_supervisor_world_save(const char *filename);
+void wb_supervisor_world_reload();
+```
+
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Supervisor.hpp>
+
+namespace webots {
+  class Supervisor : public Robot {
+    virtual void worldLoad(const std::string &file);
+    virtual bool worldSave();
+    virtual bool worldSave(const std::string &file);
+    virtual void worldReload();
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Supervisor
+
+class Supervisor (Robot):
+    def worldLoad(self, file):
+    def worldSave(self, file=None):
+    def worldReload(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Supervisor;
+
+public class Supervisor extends Robot {
+  public void worldLoad(String file);
+  public boolean worldSave();
+  public boolean worldSave(String file);
+  public void worldReload();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+wb_supervisor_world_load('filename')
+success = wb_supervisor_world_save()
+success = wb_supervisor_world_save('filename')
+wb_supervisor_world_reload()
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/supervisor/world_load` | `service` | [`webots_ros::set_string`](ros-api.md#common-services) | |
+| `/supervisor/world_save` | `service` | [`webots_ros::set_string`](ros-api.md#common-services) | |
+| `/supervisor/world_reload` | `service` | [`webots_ros::get_bool`](ros-api.md#common-services) | |
+
+%tab-end
+
+%end
+
+##### Description
+
+*Load, save or reload the current world.*
+
+The `wb_supervisor_world_load` function sends a request to the simulator process, asking it to stop the current simulation and load the world given in argument immediately.
+As a result of changing the current world, all the supervisor and robot controller processes are terminated and the new one are restarted with the new world.
+You may wish to save some data in a file from your supervisor and robot controller programs in order to reload it from the new world.
+
+The `wb_supervisor_world_save` function saves the current world.
+The `filename` parameter defines the path to the target world file.
+It should end with the `.wbt` extension.
+It can be defined either as an absolute path, or as a path relative to the current supervisor controller.
+If NULL, the current world path is used instead (e.g., a simple save operation).
+The boolean return value indicates the success of the save operation.
+Be aware that this function can overwrite silently existing files, so that the corresponding data may be lost.
+
+> **Note** [C++, Java, Python, MATLAB]: In the other APIs, the `Robot.worldSave` function can be called without argument.
+In this case, a simple save operation is performed.
+
+The `wb_supervisor_world_reload` function sends a request to the simulator process, asking it to reload the current world immediately.
+As a result of reloading the current world, all the supervisor and robot controller processes are terminated and restarted.
+You may wish to save some data in a file from your supervisor and robot controller programs in order to reload it when they restart.
 
 ---
 
@@ -2452,25 +2452,11 @@ Both `wb_supervisor_animation_start_recording` and `wb_supervisor_animation_stop
 ```c
 #include <webots/supervisor.h>
 
-#define WB_SF_BOOL
-#define WB_SF_INT32
-#define WB_SF_FLOAT
-#define WB_SF_VEC2F
-#define WB_SF_VEC3F
-#define WB_SF_ROTATION
-#define WB_SF_COLOR
-#define WB_SF_STRING
-#define WB_SF_NODE
-#define WB_MF
-#define WB_MF_BOOL
-#define WB_MF_INT32
-#define WB_MF_FLOAT
-#define WB_MF_VEC2F
-#define WB_MF_VEC3F
-#define WB_MF_ROTATION
-#define WB_MF_COLOR
-#define WB_MF_STRING
-#define WB_MF_NODE
+typedef enum {
+  WB_NO_FIELD, WB_SF_BOOL, WB_SF_INT32, WB_SF_FLOAT, WB_SF_VEC2F, WB_SF_VEC3F, WB_SF_ROTATION,
+  WB_SF_COLOR, WB_SF_STRING, WB_SF_NODE, WB_MF, WB_MF_BOOL, WB_MF_INT32, WB_MF_FLOAT,
+  WB_MF_VEC2F, WB_MF_VEC3F, WB_MF_ROTATION, WB_MF_COLOR, WB_MF_STRING, WB_MF_NODE
+} WbFieldType;
 
 WbFieldType wb_supervisor_field_get_type(WbFieldRef field);
 const char *wb_supervisor_field_get_type_name(WbFieldRef field);
@@ -2486,12 +2472,12 @@ int wb_supervisor_field_get_count(WbFieldRef field);
 
 namespace webots {
   class Field {
-    enum {
+    typedef enum {
       SF_BOOL, SF_INT32, SF_FLOAT, SF_VEC2F, SF_VEC3F, SF_ROTATION, SF_COLOR, SF_STRING,
       SF_NODE, MF, MF_INT32, MF_FLOAT, MF_VEC2F, MF_VEC3F, MF_COLOR, MF_STRING, MF_NODE
-    };
+    } Type;
 
-    int getType() const;
+    Type getType() const;
     std::string getTypeName() const;
     int getCount() const;
     // ...

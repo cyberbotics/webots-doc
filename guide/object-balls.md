@@ -30,6 +30,9 @@ Ball {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/balls/protos/Ball.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 ### Ball Field Summary
 
 - `color`: Defines the color of the ball.
@@ -68,6 +71,9 @@ PingPongBall {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/balls/protos/PingPongBall.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 ### PingPongBall Field Summary
 
 - `textureUrl`: Defines the texture used for the ball.
@@ -96,6 +102,9 @@ SoccerBall {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/balls/protos/SoccerBall.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 
 ### SoccerBall Field Summary
 

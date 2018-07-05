@@ -184,7 +184,12 @@ If these values are needed for a longer period they must be copied.
 ```c
 #include <webots/gps.h>
 
-int wb_gps_get_coordinate_system(WbDeviceTag tag);
+typedef enum {
+  WB_GPS_LOCAL_COORDINATE,
+  WB_GPS_WGS84_COORDINATE
+} WbGpsCoordinateSystem;
+
+WbGpsCoordinateSystem wb_gps_get_coordinate_system(WbDeviceTag tag);
 ```
 
 %tab-end
@@ -196,7 +201,9 @@ int wb_gps_get_coordinate_system(WbDeviceTag tag);
 
 namespace webots {
   class GPS : public Device {
-    const int getCoordinateSystem() const;
+    typedef enum {LOCAL, WGS84} CoordinateSystem;
+
+    const CoordinateSystem getCoordinateSystem() const;
     // ...
   }
 }
@@ -210,6 +217,8 @@ namespace webots {
 from controller import GPS
 
 class GPS (Device):
+    LOCAL, WGS84
+
     def getCoordinateSystem(self):
     # ...
 ```
@@ -222,6 +231,8 @@ class GPS (Device):
 import com.cyberbotics.webots.controller.GPS;
 
 public class GPS extends Device {
+  public final static int LOCAL, WGS84;
+
   public int getCoordinateSystem();
   // ...
 }
@@ -232,6 +243,8 @@ public class GPS extends Device {
 %tab "MATLAB"
 
 ```matlab
+WB_GPS_LOCAL_COORDINATE, WB_GPS_WGS84_COORDINATE
+
 coordinate_system = wb_gps_get_coordinate_system(tag)
 ```
 

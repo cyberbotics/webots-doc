@@ -29,7 +29,7 @@ Please find instructions in [this section](verifying-your-graphics-driver-instal
 
 <!-- -->
 
-> **Note**: Webots needs the *ffmpeg* program to create MPEG-4 movies, that can be installed with *ffmpeg*, *libavcodec-extra*, and *libfdk-aac1* packages and *ubuntu-restricted-extras* for H.264 codec.
+> **Note**: Webots needs the *ffmpeg* program to create MPEG-4 movies that can be installed with *ffmpeg* and *libfdk-aac1* packages and *ubuntu-restricted-extras* for H.264 codec.
 The package names could slightly change on different releases and distributions.
 
 #### Using Advanced Packaging Tool (APT)
@@ -94,8 +94,7 @@ export WEBOTS_HOME=/home/username/webots
 The export line should however be included in a configuration script like "/etc/profile", so that it is set properly for every session.
 
 Some additional libraries are needed in order to properly run Webots.
-In particular *libjpeg8-dev*, *ffpmeg*, *libpci3* and *libavcodec-extra* have to be installed on the system.
-If you need to compile [controller plugins](controller-plugin.md) or [physics plugins](webots-plugin.md#physics-plugin), then you also have to install *mesa-common-dev* and *libgl1-mesa-dev* packages.
+In particular *make*, *g++*, *libjpeg8-dev*, *ffmpeg*, and *libpci3* have to be installed on the system.
 Other particular libraries could also be required to recompile some of the distributed binary files.
 In this case an error message will be printed in the Webots console mentioning the missing dependency.
 

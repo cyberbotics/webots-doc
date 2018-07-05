@@ -37,6 +37,9 @@ AdvertisingBoard {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/advertising_board/protos/AdvertisingBoard.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 ### AdvertisingBoard Field Summary
 
 - `name`: Defines the name of the advertising board.

@@ -36,6 +36,7 @@ graph LR
   Geometry -.-> IndexedFaceSet[[IndexedFaceSet](indexedfaceset.md)]
   Geometry -.-> IndexedLineSet[[IndexedLineSet](indexedlineset.md)]
   Geometry -.-> Plane[[Plane](plane.md)]
+  Geometry -.-> PointSet[[PointSet](pointset.md)]
   Geometry -.-> Sphere[[Sphere](sphere.md)]
 
   Device([Device](device.md)) -.-> JointDevice(Joint Device)
@@ -56,6 +57,7 @@ graph LR
         SolidDevice --> InertialUnit[[InertialUnit](inertialunit.md)]
         SolidDevice --> LED[[LED](led.md)]
         SolidDevice --> Lidar[[Lidar](lidar.md)]
+        SolidDevice --> LightSensor[[LightSensor](lightsensor.md)]
         SolidDevice --> Pen[[Pen](pen.md)]
         SolidDevice --> Propeller[[Propeller](propeller.md)]
         SolidDevice --> Radar[[Radar](radar.md)]
@@ -63,12 +65,12 @@ graph LR
         SolidDevice --> Receiver[[Receiver](receiver.md)]
         SolidDevice --> Speaker[[Speaker](speaker.md)]
         SolidDevice --> TouchSensor[[TouchSensor](touchsensor.md)]
-        SolidDevice --> Track[[Track](track.md)]
+      Solid --> Track[[Track](track.md)]
       Solid --> Charger[[Charger](charger.md)]
       Solid --> Robot[[Robot](robot.md)]
         Robot --> Supervisor[[Supervisor](supervisor.md)]
     Transform --> Fluid[[Fluid](fluid.md)]
-  Group --> TrackWheel[[TrackWheel](trackwheel.md)]
+    Transform --> TrackWheel[[TrackWheel](trackwheel.md)]
 
   JointDevice -.-> Motor([Motor](motor.md))
     Motor -.-> LinearMotor[[LinearMotor](linearmotor.md)]
@@ -90,12 +92,11 @@ graph LR
 
   subgraph other Nodes
     Appearance[[Appearance](appearance.md)]
-    BackGround[[Background](background.md)]
+    Background[[Background](background.md)]
     Color[[Color](color.md)]
-    ComposedCubeMapTexture[[ComposedCubeMapTexture](composedcubemaptexture.md)]
-    ComposedShader[[ComposedShader](composedshader.md)]
     ContactProperties[[ContactProperties](contactproperties.md)]
     Coordinate[[Coordinate](coordinate.md)]
+    Cubemap[[Cubemap](cubemap.md)]
     Damping[[Damping](damping.md)]
     Focus[[Focus](focus.md)]
     Fog[[Fog](fog.md)]
@@ -104,17 +105,15 @@ graph LR
     Lens[[Lens](lens.md)]
     LensFlare[[LensFlare](lensflare.md)]
     Material[[Material](material.md)]
-    MultiTexture[[MultiTexture](multitexture.md)]
     Muscle[[Muscle](muscle.md)]
+    PBRAppearance[[PBRAppearance](pbrappearance.md)]
     Physics[[Physics](physics.md)]
     Recognition[[Recognition](recognition.md)]
-    ShaderPart[[ShaderPart](shaderpart.md)]
     Shape[[Shape](shape.md)]
     Slot[[Slot](slot.md)]
     SolidReference[[SolidReference](solidreference.md)]
     TextureCoordinate[[TextureCoordinate](texturecoordinate.md)]
     TextureTransform[[TextureTransform](texturetransform.md)]
-    Uniform[[Uniform](uniform.md)]
     Viewpoint[[Viewpoint](viewpoint.md)]
     WorldInfo[[WorldInfo](worldinfo.md)]
     Zoom[[Zoom](zoom.md)]
@@ -127,7 +126,7 @@ graph LR
   class AbstractClass,Device,Geometry,Joint,JointDevice,Light,Motor,SolidDevice AbstractClassStyle;
   class BoundingObject,Capsule,Plane secondaryNode;
   class Box,Cylinder,EleveationGrid,IndexedFaceSet,Sphere highlightedSecondaryNode;
-  class Appearance,BackGround,Color,Cone,Coordinate,DirectionalLight,Fog,Group,ImageTexture,IndexedLineSet,Material,PointLight,Shape,SpotLight,TextureCoordinate,TextureTransform,Transform,Viewpoint,WorldInfo highlightedNode;
+  class Appearance,Background,Color,Cone,Coordinate,DirectionalLight,Fog,Group,ImageTexture,IndexedLineSet,Material,PointLight,PointSet,Shape,SpotLight,TextureCoordinate,TextureTransform,Transform,Viewpoint,WorldInfo highlightedNode;
   class AbstractClassDefinition,BoundingObjectDefinition,VRML97Definition DefinitionStyle;
 %end
 %end

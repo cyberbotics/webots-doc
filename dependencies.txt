@@ -49,6 +49,7 @@ ace/1.2.0/ace.js
 
 # wwi
 
-wwi/R2018a/request_methods.js
-wwi/R2018a/wwi.css
-wwi/R2018a/webots.js
+wwi/R2018b/request_methods.js
+wwi/R2018b/wwi.css
+wwi/R2018b/webots.js
+

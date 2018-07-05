@@ -33,8 +33,6 @@ def download(url, target_file_path):
             if platform.system() == 'Linux' and \
                hasattr(ssl, 'create_default_context'):
                 # On Ubuntu 16.04 there are issues with the certificates.
-                # But 'create_default_context' has been introduced in python
-                # 2.7.9 and it is not available on Ubuntu 14.04.
                 ctx = ssl.create_default_context()
                 ctx.check_hostname = False
                 ctx.verify_mode = ssl.CERT_NONE
@@ -82,8 +80,6 @@ if __name__ == "__main__":
 
     content = content.replace('%{ JS }%', jsString)
     content = content.replace('%{ CSS }%', cssString)
-    if platform.system() == 'Darwin':
-        content = content.replace('"css/main.css"', '"css/main.macos.css"')
 
     html_file_path = script_directory + 'index.html'
     with open(html_file_path, 'w') as file:

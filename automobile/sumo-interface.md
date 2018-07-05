@@ -1,16 +1,22 @@
 ## SUMO Interface
 
-An interface with a microscopic traffic simulator called `SUMO` (Simulation of Urban MObility) has been developed using a `Supervisor` node.
+An interface with a microscopic traffic simulator called `SUMO` (Simulation of Urban MObility) has been developed using a [Supervisor](../reference/supervisor.md) node.
 The advantage of interfacing SUMO with Webots is that it allows to easily generate traffic using a large number of vehicles in real-time.
-This interface is written in Python in a supervisor controller and uses [TraCI](http://sumo.dlr.de/wiki/TraCI) to communicate with SUMO.
+This interface is written in Python in a [Supervisor](../reference/supervisor.md) controller and uses [TraCI](http://sumo.dlr.de/wiki/TraCI) to communicate with SUMO.
 
-> **Note**: Currently version 0.30 of SUMO is distributed with Webots.
+### Movie Presentation
+
+![youtube video](https://www.youtube.com/watch?v=Mnwmo5ivGL0)
+
+### How to Include the Interface
 
 In order to use this interface, a `SumoInterface` PROTO node should to be added to the world.
 And a folder called `worldName_net` should be present at the same level as the world file.
 This folder should contain the usual files defining a network in SUMO (.edg.xml, .nod.xml, .rou.xml, etc.) and the configuration files (.netccfg and .sumocfg), for more information please refer to the [SUMO documentation](http://sumo.dlr.de/wiki/Networks/SUMO_Road_Networks).
 The configuration files called `sumo.netccfg` and `sumo.sumocfg` will be loaded by default.
 If those configuration files do not exist, the interface will look for a configuration file with any other name (it is not recommended to have several configuration files for SUMO or NETCONVERT in the same folder as you don't know which one is going to be used).
+
+> **Note**: Currently version 0.30 of SUMO is distributed with Webots.
 
 The interface will automatically start SUMO and run it in synchronization with Webots time.
 Each time a new vehicle enters the SUMO simulation, it will be created in Webots too and its position and orientation will be continually updated.
@@ -19,14 +25,18 @@ The vehicle DEF name is set to `SUMO_VEHICLEX`, with `X` being the vehicle numbe
 > **Note** [macOS]: On macOS, SUMO relies on X11.
 You need therefore to install [XQuartz](https://www.xquartz.org) (version 2.7.8 or later) for the interface to work.
 
-### Movie Presentation
-
-![youtube video](https://www.youtube.com/watch?v=Mnwmo5ivGL0)
-
 ### Use Vehicles Already Present in the World
 
 If some vehicles whose DEF name is `SUMO_VEHICLEX` are already present in the world at the simulation start, then the interface will automatically use them before creating new vehicles, this can be useful to avoid real-time addition of vehicles (which can make the simulation speed drop for a very short time).
 Furthermore, when a vehicle enters the SUMO network, if a vehicle whose DEF name is identical to the ID of the vehicle in SUMO is present in the simulation, this vehicle is then associated to the one in SUMO.
+
+#### Collect Sensor Data
+
+It is very convenient to use the vehicles controlled by SUMO to collect sensor data in realistic traffic conditions.
+You simply need to add your vehicle in the simulation and set an appropriate DEF name as explained previously.
+Then, you can add sensors in its sensor slots and assign a controller to the vehicle.
+The controller can in turn enable the sensors and record the output of the sensors in a file (or send them to an external process).
+The [SUMO Interface](sumo-interface-example.md) example simulation showcases this possibility in a very simple manner.
 
 ### Automatic Injection of Webots Vehicles in SUMO
 
@@ -53,7 +63,7 @@ In the traffic lights mode you can simply select a traffic light and right click
 
 ### The SumoInterface PROTO
 
-Here are the parameters of the `SumoInterface` PROTO (which inherits from the `Supervisor` node):
+Here are the parameters of the `SumoInterface` PROTO (which inherits from the [Supervisor](../reference/supervisor.md) node):
 
 ```
 PROTO SumoInterface [
@@ -122,11 +132,11 @@ PROTO SumoDisplay [
 
 #### SumoDisplay Fields Summary
 
-- `width`: Defines the width of the `Display`.
-- `height`: Defines the height of the `Display`.
+- `width`: Defines the width of the [Display](../reference/display.md).
+- `height`: Defines the height of the [Display](../reference/display.md).
 - `zoom`: Defines the zooming factor that will make SUMO automatically zoom in/out at startup.
 - `refreshRate`: Defines the refresh rate of the display in milliseconds.
-- `fitSize`: If the current size of the SUMO window is bigger than the resolution defined by the `width` and `height` fields, only the center of the view will be visible in the `Display`.
+- `fitSize`: If the current size of the SUMO window is bigger than the resolution defined by the `width` and `height` fields, only the center of the view will be visible in the [Display](../reference/display.md).
 On the contrary, if the SUMO window is smaller than the resolution, the image will not entirely fill it.
 If `fitSize` is set to `TRUE`, the image will be automatically rescaled, in that case the width / height aspect ratio may not be respected depending on the SUMO window size.
 
@@ -144,7 +154,7 @@ class SumoSupervisorPlugin:
     # TODO
 ```
 
-The first function is called at initialization of the interface, the arguments are: the `Supervisor` itself, the traci class in order to get information regarding the traci context and the net class to get information regarding the network.
+The first function is called at initialization of the interface, the arguments are: the [Supervisor](../reference/supervisor.md) itself, the traci class in order to get information regarding the traci context and the net class to get information regarding the network.
 The second one is called at each SUMO step and the argument is the time step.
 
 Such a plugin can be used for example to change traffic light state in SUMO.

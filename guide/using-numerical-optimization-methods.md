@@ -3,7 +3,7 @@
 ### Choosing the Correct Supervisor Approach
 
 There are several approaches to using optimization algorithms in Webots.
-Most approaches need a `Supervisor` and hence Webots PRO is usually required.
+Most approaches need a [Supervisor](../reference/supervisor.md) and hence Webots PRO is usually required.
 
 A numerical optimization can usually be decomposed in two separate tasks:
 
@@ -51,25 +51,25 @@ my_exit:
 ```
 
 In this example the robot runs for 30 simulated seconds and then the fitness is evaluated and the robot is moved back to it initial position.
-Note that this controller needs to be executed in a `Supervisor` in order to access the `wb_supervisor_field_*` functions that are necessary to read and reset the robot's position.
-So when using this approach, the robot must be based on a `Supervisor` node in the Scene Tree.
+Note that this controller needs to be executed in a [Supervisor](../reference/supervisor.md) in order to access the `wb_supervisor_field_*` functions that are necessary to read and reset the robot's position.
+So when using this approach, the robot must be based on a [Supervisor](../reference/supervisor.md) node in the Scene Tree.
 
 #### Using Two Distinct Types of Controllers
 
 If, on the contrary, your simulation requires the simultaneous execution of several robots, e.g. swarm robotics, it is advised to use two distinct types of controller: one for the optimization algorithm and one for the robot's behavior.
-The optimization algorithm should go in a `Supervisor` controller while the robots' behavior can go in a regular (non-Supervisor) controller.
+The optimization algorithm should go in a [Supervisor](../reference/supervisor.md) controller while the robots' behavior can go in a regular (non-Supervisor) controller.
 
 Because these controllers will run in separate system processes, they will not be able to access each other's variables.
 Though, they will have to communicate by some other means in order to specify the sets of parameters that need to be evaluated.
-It is possible, and recommended, to use Webots `Emitter`s and `Receiver`s to exchange information between the `Supervisor` and the other controllers.
-For example, in a typical scenario, the `Supervisor` will send evaluation parameters (e.g., genotype) to the robot controllers.
-The robot controllers listen to their `Receiver`s, waiting for a new set of parameters.
+It is possible, and recommended, to use Webots [Emitters](../reference/emitter.md) and [Receivers](../reference/receiver.md) to exchange information between the [Supervisor](../reference/supervisor.md) and the other controllers.
+For example, in a typical scenario, the [Supervisor](../reference/supervisor.md) will send evaluation parameters (e.g., genotype) to the robot controllers.
+The robot controllers listen to their [Receivers](../reference/receiver.md), waiting for a new set of parameters.
 Upon receipt, a robot controller starts executing the behavior specified by the set of parameters.
-In this scenario, the `Supervisor` needs an `Emitter` and each individual robot needs a `Receiver`.
+In this scenario, the [Supervisor](../reference/supervisor.md) needs an [Emitter](../reference/emitter.md) and each individual robot needs a [Receiver](../reference/receiver.md).
 
-Depending on the algorithms needs, the fitness could be evaluated either in the `Supervisor` or in the individual robot controllers.
-In the case it is evaluated in the robot controller then the fitness result needs to be sent back to the `Supervisor`.
-This bidirectional type of communication requires the usage of additional `Emitter`s and `Receiver`s.
+Depending on the algorithms needs, the fitness could be evaluated either in the [Supervisor](../reference/supervisor.md) or in the individual robot controllers.
+In the case it is evaluated in the robot controller then the fitness result needs to be sent back to the [Supervisor](../reference/supervisor.md).
+This bidirectional type of communication requires the usage of additional [Emitters](../reference/emitter.md) and [Receivers](../reference/receiver.md).
 
 ### Resetting the Robot
 
@@ -98,16 +98,16 @@ The drawback with the above method is that it only resets the robot's main posit
 This may be fine for some types of optimization, but insufficient for others.
 Although it is possible to add more parameters to the set of data to be reset, it is sometimes difficult to reset everything.
 Neither motor positions, nor the robot controller(s) are reset this way.
-The motor positions should be reset using the `wb_motor_set_position` function and the robot controller should be reset by sending a message from the supervisor process to the robot controller process (using Webots `Emitter` / `Receiver` communication system).
+The motor positions should be reset using the `wb_motor_set_position` function and the robot controller should be reset by sending a message from the supervisor process to the robot controller process (using Webots [Emitter](../reference/emitter.md) / [Receiver](../reference/receiver.md) communication system).
 The robot controller program should be able to handle such a message and reset its state accordingly.
 
-#### Using the wb\_supervisor\_simulation\_revert Function
+#### Using the wb\_supervisor\_world\_reload Function
 
 This function restarts the physics simulation and all controllers from the very beginning.
 With this method, everything is reset, including the physics and the motor positions and the controllers.
-But this function does also restart the controller that called the `wb_supervisor_simulation_revert` function, this is usually the controller that runs the optimization algorithm, and as a consequence the optimization state is lost.
+But this function does also restart the controller that called the `wb_supervisor_world_reload` function, this is usually the controller that runs the optimization algorithm, and as a consequence the optimization state is lost.
 Hence for using this technique, it is necessary to develop functions that can save and restore the complete state of the optimization algorithm.
-The optimization state should be saved before calling the `wb_supervisor_simulation_revert` function and reloaded when the `Supervisor` controller restarts.
+The optimization state should be saved before calling the `wb_supervisor_world_reload` function and reloaded when the [Supervisor](../reference/supervisor.md) controller restarts.
 Here is a pseudo-code example:
 
 ```c
@@ -139,7 +139,7 @@ void evaluate_next_robot() {
   optimizer_save_state("my_state_file.txt");
   ...
   // start next evaluation
-  wb_supervisor_simulation_revert();
+  wb_supervisor_world_reload();
   wb_robot_step(TIME_STEP);
   exit(0);
 }
@@ -167,7 +167,7 @@ Finally, the last method is to start and quit the Webots program for each parame
 This may sound like an overhead, but in fact Webots startup time is usually very short compared to the time necessary to evaluate a controller, so this approach makes perfectly sense.
 
 For example, Webots can be called from a shell script or from any type of program suitable for running the optimization algorithm.
-Starting Webots each time does clearly revert the simulation completely, so each robot will start from the same initial state.
+Starting Webots each time does clearly reload the world completely, so each robot will start from the same initial state.
 The drawback of this method is that the optimization algorithm has to be programmed outside of Webots.
 This external program can be written in any programming language, e.g. shell script, C, PHP, perl, etc., provided that there is a way to call Webots and wait for its termination, e.g. like the C standard `system` function does.
 On the contrary, the parameter evaluation must be implemented in a Webots controller.

@@ -5,7 +5,7 @@
 The C++ API is a wrapper of the C API described in the previous section.
 The major part of the C functions have been wrapped in a function of a specific class.
 It is currently composed of a set of about 25 classes having about 200 public functions.
-The classes are either representations of a node of the scene tree (such as Robot, LED, etc.) or utility classes (such as Motion, ImageRef, etc.).
+The classes are either representations of a node of the scene tree (such as [Robot](../reference/robot.md), [LED](../reference/led.md), etc.) or utility classes (such as Motion, ImageRef, etc.).
 A complete description of these functions can be found in the reference guide while the instructions about the common way to program a C++ controller can be found in this [chapter](programming-fundamentals.md).
 
 ### C++ Compiler Installation

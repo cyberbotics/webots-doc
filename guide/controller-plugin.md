@@ -31,13 +31,13 @@ After its loading, some controller plugin functions (entry points) are called by
 A set of entry points have to be defined to let the controller plugin work smoothly.
 Some of these entry points are required and some are optional.
 
-The `Robot` node defines the location of the controller plugin through its *window* and its *remoteControl* fields (cf. reference manual).
+The [Robot](../reference/robot.md) node defines the location of the controller plugin through its *window* and its *remoteControl* fields.
 
 The controller plugin runs in the main thread of the process (also known as GUI thread): the same as the controller executable.
 This implies that if an entry point of a plugin is blocked, the controller will also be blocked.
 And if the plugin crashes, the controller is also crashed.
 
-The search algorithm to convert the *window* and the *remoteControl* to an existing path is explained in the reference manual.
+The search algorithm to convert the *window* and the *remoteControl* to an existing path is explained in the [Reference Manual](../reference/robot.md).
 
 Each distributed shared library is built thanks to the main Makefile (the same as the one used to build the controllers):
 
@@ -58,8 +58,8 @@ graph LR
 ### Robot Window
 
 A robot window allows the programmer to efficiently create custom user interfaces for his robots.
-Robot windows can be opened by double-clicking on the virtual robot, or by selecting the `Robot | Show Robot Window` menu item.
-The *window* field of the `Robot` node specifies a robot window (cf. documentation in the reference manual).
+Robot windows can be opened by double-clicking on the virtual robot, or using the [context menu](the-3d-window.md#context-menu).
+The *window* field of the [Robot](../reference/robot.md) node specifies a robot window.
 
 Robot windows are implemented in HTML and provide the following features:
 
@@ -75,7 +75,7 @@ A simple example of an HTML robot window is provided in the `robots/thymio/thymi
 - How to change the title of the robot window from the controller program.
 
 The HTML robot windows can communicate with controller programs written using any of the supported programming languages, i.e. C, C++, Python, Java, MATLAB and ROS.
-If a Robot's controller is changed or restarted during the simulation run, the robot window associated to the same Robot node will be restarted as well.
+If a [Robot](../reference/robot.md)'s controller is changed or restarted during the simulation run, the robot window associated to the same [Robot](../reference/robot.md) node will be restarted as well.
 
 The vehicle, Darwin-OP robot windows and BotStudio still use the native robot window (see below).
 However, they will soon be ported to the HTML robot window.
@@ -129,7 +129,7 @@ The entry points of a native robot window controller plugin are:
     This function is called when the GUI should be shown. This can occur either when
     the user double-clicks on the virtual robot, or when he selects the `Robot |
     Show Robot Window` menu item, or at controller startup if the
-    *showWindow* field of the `Robot` node is enabled.
+    *showWindow* field of the [Robot](../reference/robot.md) node is enabled.
 
 - `void *wbw_robot_window_custom_function(void *)`
 
@@ -137,7 +137,7 @@ The entry points of a native robot window controller plugin are:
     the controller program. It is called directly by the user from the controller
     when executing the `wb_robot_window_custom_function` C function or
     `Robot::windowCustomFunction` C++ function. You can find more information
-    in the reference manual.
+    in the [Reference Manual](../reference/robot.md#wb_robot_window_custom_function).
 
 The internal behavior of the `wb_robot_step` function call is the key point to understanding how the different entry points of the robot window plugin are called (pseudo-code):
 
@@ -188,7 +188,7 @@ A pose is defined by a set of commands (in position) of the robot motors.
 
 The motion is stored in a motion file in a user-readable format.
 The controller API allows to play easily the motion files on your robot.
-You can get the complete motion API in the reference manual.
+You can get the complete motion API in the [Reference Manual](../reference/motion.md).
 
 The motion editor (cf. the [figure](#motion-editor-view)) is a GUI which helps to create motions which can be played by a robot.
 This editor is implemented as a Qt widget of the legacy generic window (deprecated).

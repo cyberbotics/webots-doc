@@ -29,6 +29,9 @@ BunchOfSunFlowers {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/plants/protos/BunchOfSunFlowers.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 ### BunchOfSunFlowers Field Summary
 
 - `potAndSteamsColor`: Defines the color of the pot and the steams.
@@ -69,6 +72,9 @@ PottedTree {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/plants/protos/PottedTree.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 
 ### PottedTree Field Summary
 

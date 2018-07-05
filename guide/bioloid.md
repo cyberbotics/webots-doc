@@ -21,7 +21,7 @@ The physical dimensions, friction coefficients and mass distribution have been e
 
 ### BioloidDog PROTO
 
-Derived from [Supervisor](../reference/supervisor.md).
+Derived from [Robot](../reference/robot.md).
 
 ```
 BioloidDog {

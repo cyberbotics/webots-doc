@@ -26,16 +26,16 @@ Controller programming requires some information related to the e-puck model.
 In order to create the collision avoidance algorithm, we need to read the values of its 8 infra-red distance sensors located around its turret, and we need to actuate its two wheels.
 The way that the distance sensors are distributed around the turret and the e-puck direction are depicted in [this figure](#top-view-of-the-e-puck-model-the-green-arrow-indicates-the-front-of-the-robot-the-red-lines-represent-the-directions-of-the-infrared-distance-sensors-the-string-labels-corresponds-to-the-distance-sensor-names).
 
-The distance sensors are modeled by 8 DistanceSensor nodes in the hierarchy of the robot.
+The distance sensors are modeled by 8 [DistanceSensor](../reference/distancesensor.md) nodes in the hierarchy of the robot.
 These nodes are referenced by their `name` fields (from "ps0" to "ps7").
 We will explain later how these nodes are defined.
-For now, simply note that a DistanceSensor node can be accessed through the related module of the Webots API (through the "webots/distance\_sensor.h" include file).
+For now, simply note that a [DistanceSensor](../reference/distancesensor.md) node can be accessed through the related module of the Webots API (through the "webots/distance\_sensor.h" include file).
 The values returned by the distance sensors are scaled between 0 and 4096 (piecewise linearly to the distance).
 While 4096 means that a big amount of light is measured (an obstacle is close) and 0 means that no light is measured (no obstacle).
 
 > **Theory**: The **controller API** is the programming interface that gives you access to the simulated sensors and actuators of the robot.
-For example, including the "webots/distance\_sensor.h" file allows to use the `wb_distance_sensor_*` functions and with these functions you can query the values of the DistanceSensor nodes.
-The documentation on the API functions can be found in Chapter 3 of the `Reference Manual` together with the description of each node.
+For example, including the "webots/distance\_sensor.h" file allows to use the `wb_distance_sensor_*` functions and with these functions you can query the values of the [DistanceSensor](../reference/distancesensor.md) nodes.
+The documentation on the API functions can be found in [Reference Manual](../reference/nodes-and-api-functions.md) together with the description of each node.
 
 %figure "Top view of the e-puck model. The green arrow indicates the front of the robot. The red lines represent the directions of the infrared distance sensors. The string labels corresponds to the distance sensor names."
 
@@ -65,7 +65,7 @@ In order to do that, we will use the simple feedback loop depicted in the UML st
 
 The complete code of this controller is given in the next subsection.
 
-> **Hands on**: At the beginning of the controller file, add the include directives corresponding to the Robot, the DistanceSensor and the Motor nodes in order to be able to use the corresponding API (documented in chapter 3 of the `Reference Manual`):
+> **Hands on**: At the beginning of the controller file, add the include directives corresponding to the [Robot](../reference/robot.md), the [DistanceSensor](../reference/distancesensor.md) and the [Motor](../reference/motor.md) nodes in order to be able to use the corresponding API:
 
 > ```c
 > #include <webots/robot.h>
@@ -77,7 +77,7 @@ The complete code of this controller is given in the next subsection.
 
 > **Hands on**: Just after the include statements add a macro that defines the duration of each physics step.
 This macro will be used as argument to the `wb_robot_step` function, and it will also be used to enable the devices.
-This duration is specified in milliseconds and it must be a multiple of the value in the `basicTimeStep` field of the WorldInfo node.
+This duration is specified in milliseconds and it must be a multiple of the value in the `basicTimeStep` field of the [WorldInfo](../reference/worldinfo.md) node.
 
 > ```c
 > #define TIME_STEP 64
@@ -86,7 +86,7 @@ This duration is specified in milliseconds and it must be a multiple of the valu
 <!-- -->
 
 > **Theory**: The `main` function is where the controller program starts execution.
-The arguments passed to the `main` function are given by the `controllerArgs` field of the Robot node.
+The arguments passed to the `main` function are given by the `controllerArgs` field of the [Robot](../reference/robot.md) node.
 The Webots API has to be initialized using the `wb_robot_init` function and it has to be cleaned up using the `wb_robot_cleanup` function.
 
 <!-- -->
@@ -118,7 +118,7 @@ The Webots API has to be initialized using the `wb_robot_init` function and it h
 The `WbDeviceTag` is retrieved by the `wb_robot_get_device` function.
 Then it is used as first argument in every function call concerning this device.
 
-> A sensor such as the DistanceSensor has to be enabled before use.
+> A sensor such as the [DistanceSensor](../reference/distancesensor.md) has to be enabled before use.
 The second argument of the enable function defines at which rate the sensor will be refreshed.
 
 <!-- -->
@@ -211,7 +211,7 @@ The second argument of the enable function defines at which rate the sensor will
 > **Hands on**: Compile your code by selecting the `Build / Build` menu item.
 Compilation errors are displayed in red in the console.
 If there are any, fix them and retry to compile.
-Revert the simulation.
+Reload the world.
 
 ### The Controller Code
 

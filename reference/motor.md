@@ -827,13 +827,106 @@ type = wb_motor_get_type(tag)
 *get the motor type*
 
 This function allows the user to retrieve the motor type defined by the `type` field.
-If the value of the `type` field is "linear", this function returns WB\_LINEAR, and otherwise it returns WB\_ANGULAR.
+If the value of the `type` field is "linear", this function returns WB\_LINEAR, and otherwise it returns WB\_ROTATIONAL.
 
 %figure "Return values for the `wb_motor_get_type` function"
 
-| Motor.type   | return value |
-| ------------ | ------------ |
-| "rotational" | WB\_ANGULAR  |
-| "linear"     | WB\_LINEAR   |
+| Motor.type   | return value   |
+| ------------ | -------------- |
+| "rotational" | WB\_ROTATIONAL |
+| "linear"     | WB\_LINEAR     |
 
 %end
+
+---
+
+#### `wb_motor_get_brake`
+#### `wb_motor_get_position_sensor`
+
+%tab-component
+
+%tab "C"
+
+```c
+#include <webots/motor.h>
+#include <webots/brake.h>
+#include <webots/position_sensor.h>
+
+WbDeviceTag wb_motor_get_brake(WbDeviceTag tag);
+WbDeviceTag wb_motor_get_position_sensor(WbDeviceTag tag);
+```
+
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Motor.hpp>
+#include <webots/Brake.hpp>
+#include <webots/PositionSensor.hpp>
+
+namespace webots {
+  class Motor : public Device {
+    Brake *getBrake() const;
+    PositionSensor *getPositionSensor() const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Motor, Brake, PositionSensor
+
+class Motor (Device):
+    def getBrake(self):
+    def getPositionSensor(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Motor;
+import com.cyberbotics.webots.controller.Brake;
+import com.cyberbotics.webots.controller.PositionSensor;
+
+public class Motor extends Device {
+  public Brake getBrake();
+  public PositionSensor getPositionSensor();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+tag = wb_brake_get_brake(tag)
+tag = wb_brake_get_position_sensor(tag)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/get_brake_name` | `service` | [`webots_ros::get_string`](ros-api.md#common-services) | |
+| `/<device_name>/get_position_sensor_name` | `service` | [`webots_ros::get_string`](ros-api.md#common-services) | |
+
+%tab-end
+
+%end
+
+##### Description
+
+*get associated devices*
+
+The `wb_motor_get_brake` and `wb_motor_get_position_sensor` functions return the [Brake](brake.md) and [PositionSensor](positionsensor.md) instances defined in the same [Joint](joint.md) or [Track](track.md) `device` field. If none is defined they return 0.

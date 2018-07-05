@@ -65,6 +65,9 @@ Road {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/road/protos/Road.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 ### Road Field Summary
 
 - `name`: Optionally defines the street name
@@ -197,6 +200,9 @@ AddLaneRoadSegment {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/road/protos/AddLaneRoadSegment.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 ### AddLaneRoadSegment Field Summary
 
 - `name`: Defines the junction name.
@@ -312,6 +318,9 @@ AddLanesRoadSegment {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/road/protos/AddLanesRoadSegment.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 ### AddLanesRoadSegment Field Summary
 
 - `name`: Defines the junction name.
@@ -402,6 +411,9 @@ CrashBarrier {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/road/protos/CrashBarrier.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 ### CrashBarrier Field Summary
 
 - `poleGap`: Defines the gap between two consecutive poles.
@@ -447,6 +459,9 @@ Crossroad {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/road/protos/Crossroad.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 
 ### Crossroad Field Summary
 
@@ -523,6 +538,9 @@ CurvedRoadSegment {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/road/protos/CurvedRoadSegment.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 
 ### CurvedRoadSegment Field Summary
 
@@ -644,6 +662,9 @@ HelicoidalRoadSegment {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/road/protos/HelicoidalRoadSegment.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 ### HelicoidalRoadSegment Field Summary
 
 - `name`: Defines the road name.
@@ -762,6 +783,9 @@ LaneSeparation {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/road/protos/LaneSeparation.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 ### LaneSeparation Field Summary
 
 - `name`: Defines the junction name.
@@ -846,10 +870,10 @@ RoadIntersection {
   SFString   id                             ""
   MFString   connectedRoadIDs               []
   SFInt32    roadNumber                     4
-  SFFloat    roadsWith                      7
+  SFFloat    roadsWidth                     7
   SFFloat    speedLimit                     -1.0
   SFBool     startRoads                     TRUE
-  SFFloat    startRoadsLength               5
+  MFFloat    startRoadsLength               [5]
   SFInt32    startRoadsNumberOfLanes        2
   MFString   startRoadsStartLine            [ "textures/road_line_dashed.png",
                                                     "textures/road_line_triangle.png" ]
@@ -866,10 +890,15 @@ RoadIntersection {
   SFBool     locked                         TRUE
   MFString   texture                        "textures/asphalt.jpg"
   MFString   startRoadsTexture              "textures/road.jpg"
+  SFFloat    startRoadsTextureScale         2
+
 }
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/road/protos/RoadIntersection.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 
 ### RoadIntersection Field Summary
 
@@ -881,13 +910,13 @@ RoadIntersection {
 
 - `roadNumber`: Defines the number of intersecting roads.
 
-- `roadsWith`: Defines the width of the intersecting roads.
+- `roadsWidth`: Defines the width of the intersecting roads.
 
 - `speedLimit`: Optionally defines the speed limit. The recommended unit is meter per seconds.
 
 - `startRoads`: Defines if the beginning of each roads should be included or not.
 
-- `startRoadsLength`: Defines the length of the intersectiong roads.
+- `startRoadsLength`: Defines the length of the intersecting roads. The same length is used for all the roads if this field has only one item.
 
 - `startRoadsNumberOfLanes`: Defines the number of lanes of the roads(used for the texture mapping).
 
@@ -914,6 +943,10 @@ RoadIntersection {
 - `texture`: Defines the texture to be used for the intersection.
 
 - `startRoadsTexture`: Defines the texture to be used for the intersecting roads.
+
+- `startRoadsTextureScale`: Defines the length (in meter) of the texture used for the intersecting roads.
+
+- `roadsWith`: Deprecated in Webots R2018b
 
 ## RoadPillars
 
@@ -947,6 +980,9 @@ RoadPillars {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/road/protos/RoadPillars.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 
 ### RoadPillars Field Summary
 
@@ -999,8 +1035,8 @@ Roundabout {
   SFBool     center                   TRUE
   SFVec2f    centerTextureScale       4 4
   SFInt32    roadNumber               4
-  SFFloat    startRoadsLength         5
-  SFFloat    startRoadsWith           7
+  MFFloat    startRoadsLength         [5]
+  SFFloat    startRoadsWidth          7
   SFInt32    startRoadsNumberOfLanes  2
   MFString   startRoadsStartLine      [ "textures/road_line_dashed.png",
                                               "textures/road_line_triangle.png" ]
@@ -1017,10 +1053,14 @@ Roundabout {
   SFFloat    textureScale              2
   MFString   junctionTexture          "textures/asphalt.jpg"
   MFString   startRoadsTexture        "textures/road.jpg"
+
 }
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/road/protos/Roundabout.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 
 ### Roundabout Field Summary
 
@@ -1052,9 +1092,9 @@ Roundabout {
 
 - `roadNumber`: Defines the number of roads connected to the roundabout.
 
-- `startRoadsLength`: Defines the length of the roads connected to the roundabout.
+- `startRoadsLength`: Defines the length of the roads connected to the roundabout. The same length is used for all the roads if this field has only one item.
 
-- `startRoadsWith`: Defines the width of the roads connected to the roundabout.
+- `startRoadsWidth`: Defines the width of the roads connected to the roundabout.
 
 - `startRoadsNumberOfLanes`: Defines the number of lanes of the roads (used for the texture mapping).
 
@@ -1081,6 +1121,8 @@ Roundabout {
 - `junctionTexture`: Defines the texture to be used for the roundabout.
 
 - `startRoadsTexture`: Defines the texture to be used for the roads connected to the roundabout.
+
+- `startRoadsWith`: Deprecated in Webots R2018b
 
 ## StraightRoadSegment
 
@@ -1140,6 +1182,9 @@ StraightRoadSegment {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/road/protos/StraightRoadSegment.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 
 ### StraightRoadSegment Field Summary
 

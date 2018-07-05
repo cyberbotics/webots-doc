@@ -364,6 +364,95 @@ The `wb_joystick_get_axis_value` function returns the current value of the axis 
 
 ---
 
+#### `wb_joystick_get_number_of_povs`
+#### `wb_joystick_get_pov_value`
+
+%tab-component
+
+%tab "C"
+
+```c
+#include <webots/joystick.h>
+
+int  wb_joystick_get_number_of_povs();
+int  wb_joystick_get_pov_value(int pov);
+```
+
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Joystick.hpp>
+
+namespace webots {
+  class Joystick {
+    int getNumberOfPovs() const;
+    int getPovValue(int pov) const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Joystick
+
+class Joystick:
+    def getNumberOfPovs(self):
+    def getPovValue(self, pov):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Joystick;
+
+public class Joystick {
+  public int getNumberOfPovs();
+  public int getPovValue(int pov);
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+povs_number = wb_joystick_get_number_of_povs()
+pov_value = wb_joystick_get_pov_value(pov)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/joystick/pov<X>` | `topic` | `webots_ros::Int8Stamped` | [`Header`](http://docs.ros.org/api/std_msgs/html/msg/Header.html) `header`<br/>`int8 data` |
+| `/joystick/get_number_of_povs` | `service` | [`webots_ros::get_int`](ros-api.md#common-services) | |
+
+%tab-end
+
+%end
+
+##### Description
+
+*get number of povs and pov value*
+
+The `wb_joystick_get_number_of_povs` function returns the number of point of views (POV) of the joystick.
+
+The `wb_joystick_get_pov_value` function returns the current value of the point of views (POV) passed as an argument.
+
+---
+
 #### `wb_joystick_get_pressed_button`
 
 %tab-component
@@ -454,6 +543,7 @@ On macOS, only the first 12 buttons and first 2 axes of the joystick are taken i
 #### `wb_joystick_set_constant_force_duration`
 #### `wb_joystick_set_auto_centering_gain`
 #### `wb_joystick_set_resistance_gain`
+#### `wb_joystick_set_force_axis`
 
 %tab-component
 
@@ -466,6 +556,7 @@ void wb_joystick_set_constant_force(int level);
 void wb_joystick_set_constant_force_duration(double duration);
 void wb_joystick_set_auto_centering_gain(double gain);
 void wb_joystick_set_resistance_gain(double gain);
+void wb_joystick_set_force_axis(int axis);
 ```
 
 %tab-end
@@ -481,6 +572,7 @@ namespace webots {
     void setConstantForceDuration(double duration);
     void setAutoCenteringGain(double gain);
     void setResistanceGain(double gain);
+    void setForceAxis(int axis);
     // ...
   }
 }
@@ -498,6 +590,7 @@ class Joystick:
     def setConstantForceDuration(self, duration):
     def setAutoCenteringGain(self, gain):
     def setResistanceGain(self, gain):
+    def setForceAxis(self, axis):
     # ...
 ```
 
@@ -513,6 +606,7 @@ public class Joystick {
   public void setConstantForceDuration(double duration);
   public void setAutoCenteringGain(double gain);
   public void setResistanceGain(double gain);
+  public void setForceAxis(int axis);
   // ...
 }
 ```
@@ -526,6 +620,7 @@ wb_joystick_set_constant_force(level)
 wb_joystick_set_constant_force_duration(duration)
 wb_joystick_set_auto_centering_gain(gain)
 wb_joystick_set_resistance_gain(gain)
+wb_joystick_set_force_axis(axis)
 ```
 
 %tab-end
@@ -538,6 +633,7 @@ wb_joystick_set_resistance_gain(gain)
 | `/joystick/set_constant_force_duration` | `service` | [`webots_ros::set_float`](ros-api.md#common-services) | |
 | `/joystick/set_auto_centering_gain` | `service` | [`webots_ros::set_float`](ros-api.md#common-services) | |
 | `/joystick/set_resistance_gain` | `service` | [`webots_ros::set_float`](ros-api.md#common-services) | |
+| `/joystick/set_force_axis` | `service` | [`webots_ros::set_int`](ros-api.md#common-services) | |
 
 %tab-end
 
@@ -563,4 +659,7 @@ The `wb_joystick_set_resistance_gain` function sets the resistance gain of the f
 Resistance is an effect that tend to prevent the axis from moving.
 The joystick must support force feedback and the unit of `gain` is hardware specific.
 
-> **Note**: The units of the force feedback (both the level and gain) are hardware specific, it is therefore recommended to try first with a small value in order to avoid instabilities.
+The `wb_joystick_set_force_axis` function defines which axis is associated to the force feedback. This is useful for the auto centering (where the force is proportional to the difference between the axis position and it's center) and for the resistance (where the force is proportional to the axis velocity).
+
+> **Note**:
+The units of the force feedback (both the level and gain) are hardware specific, it is therefore recommended to try first with a small value in order to avoid instabilities.

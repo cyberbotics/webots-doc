@@ -26,6 +26,9 @@ OilBarrel {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/obstacles/protos/OilBarrel.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 ### OilBarrel Field Summary
 
 - `height`: Defines the height of the barrel.
@@ -56,6 +59,9 @@ Ramp30deg {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/obstacles/protos/Ramp30deg.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 ### Ramp30deg Field Summary
 
 - `color`: Defines the color of the ramp.
@@ -84,6 +90,9 @@ ThreeSteps {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/obstacles/protos/ThreeSteps.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 
 ### ThreeSteps Field Summary
 

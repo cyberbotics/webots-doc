@@ -21,8 +21,10 @@ Direct derived nodes: [DifferentialWheels](differentialwheels.md), [Supervisor](
 
 ### Description
 
-The [Robot](#robot) node can be used as basis for building a robot, e.g., an articulated robot, a humanoid robot, a wheeled robot...
+The [Robot](#robot) node can be used as basis for building a robot, e.g., an articulated robot, a humanoid robot, a wheeled robot.
 If you would like to build a robot with supervisor capabilities use the [Supervisor](supervisor.md) node instead (Webots PRO license required).
+
+> **Note**: Logically, if the Robot node has one or more Solid (or derived) ancestor nodes, then the physical properties of the ancestor nodes will affect the Robot node's physical behavior.
 
 ### Field Summary
 
@@ -31,6 +33,10 @@ This program is located in a directory whose name is equal to the field's value.
 This directory is in turn located in the "controllers" subdirectory of the current project directory.
 For example, if the field value is "my\_controller" then the controller program should be located in "my\_project/controllers/my\_controller/my\_controller[.exe]".
 The ".exe" extension is added on the Windows platforms only.
+Setting this field's value to the empty string runs no controller at all. Doing so may lead to better performance than using the `void` controller.
+
+> **Note**: If the controller is not started the robot window will not work.
+If the robot window is required it is recommended to assign the `void` controller instead of an empty string.
 
 - `controllerArgs`: string containing the arguments (separated by space characters) to be passed to the `main` function of the C/C++ controller program or the `main` method of the Java controller program.
 
@@ -210,8 +216,8 @@ When it returns, the requested duration of simulation time is elapsed.
 In other words the physics runs for the specified duration: objects may move, the motors may run, the sensor values may change, etc.
 Note that the `duration` parameter must be a multiple of the `WorldInfo.basicTimeStep`.
 
-If this function returns -1, this indicates that Webots wishes to terminate the controller.
-This happens when the user hits the `Revert` button or quits Webots.
+If this function returns -1, this indicates that Webots is about to terminate the controller.
+This happens when the user hits the `Reload` button or quits Webots.
 So if your code needs to do some cleanup, e.g., flushing or closing data files, etc., it is necessary to test this return value and take proper action.
 The controller termination cannot be vetoed: one second later the controller is killed by Webots.
 So only one second is available to do the cleanup.
@@ -580,6 +586,141 @@ for(i=0; i<n_devices; i++) {
 
 ---
 
+#### `wb_robot_wait_for_user_input_event`
+
+%tab-component
+
+%tab "C"
+
+```c
+#include <webots/robot.h>
+
+typedef enum {
+  WB_EVENT_QUIT,
+  WB_EVENT_NO_EVENT,
+  WB_EVENT_MOUSE_CLICK,
+  WB_EVENT_MOUSE_MOVE,
+  WB_EVENT_KEYBOARD,
+  WB_EVENT_JOYSTICK_BUTTON,
+  WB_EVENT_JOYSTICK_AXIS,
+  WB_EVENT_JOYSTICK_POV
+} WbUserInputEvent;
+
+WbUserInputEvent wb_robot_wait_for_user_input_event(WbUserInputEvent event_type, int timeout);
+```
+
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Robot.hpp>
+
+namespace webots {
+  class Robot {
+    typedef enum {
+      EVENT_QUIT, EVENT_NO_EVENT, EVENT_MOUSE_CLICK, EVENT_MOUSE_MOVE, EVENT_KEYBOARD,
+      EVENT_JOYSTICK_BUTTON, EVENT_JOYSTICK_AXIS, EVENT_JOYSTICK_POV
+    } UserInputEvent;
+
+    UserInputEvent waitForUserInputEvent(UserInputEvent event_type, int timeout);
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Robot
+
+class Robot:
+    EVENT_QUIT, EVENT_NO_EVENT, EVENT_MOUSE_CLICK, EVENT_MOUSE_MOVE, EVENT_KEYBOARD, EVENT_JOYSTICK_BUTTON, EVENT_JOYSTICK_AXIS, EVENT_JOYSTICK_POV
+
+    def waitForUserInputEvent(self, event_type, timeout):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Robot;
+
+public class Robot {
+  public final static int EVENT_QUIT, EVENT_NO_EVENT, EVENT_MOUSE_CLICK,
+     EVENT_MOUSE_MOVE, EVENT_KEYBOARD, EVENT_JOYSTICK_BUTTON,
+     EVENT_JOYSTICK_AXIS, EVENT_JOYSTICK_POV;
+
+  public int waitForUserInputEvent(int event_type, int timeout);
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+WB_EVENT_QUIT, WB_EVENT_NO_EVENT, WB_EVENT_MOUSE_CLICK, WB_EVENT_MOUSE_MOVE, WB_EVENT_KEYBOARD, WB_EVENT_JOYSTICK_BUTTON, WB_EVENT_JOYSTICK_AXIS, WB_EVENT_JOYSTICK_POV
+
+event_type = wb_robot_wait_for_user_input_event(event_type, timeout)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/robot/wait_for_user_input_event` | `service` | `webots_ros::robot_wait_for_user_input_event` | `int32 eventType`<br/>`int32 timeout`<br/>`---`<br/>`int32 event` |
+
+%tab-end
+
+%end
+
+##### Description
+
+*wait for a Joystick, Keyboard or Mouse input event*
+
+This function can be used to get [Joystick](joystick.md), [Keyboard](keyboard.md) and [Mouse](mouse.md) input without calling the `wb_robot_step` function, this is useful to prevent the simulation from running until a specific user input event occurs.
+This function blocks the simulation and will return:
+  - as soon as an event which type is defined by the `event_type` argument occurs (the list of available types is defined in [this table](#helper-enumeration-to-interpret-the-event_type-argument-and-return-value-of-the-wb_robot_wait_for_user_input_event-function)).
+  - when the amount of milliseconds specified by the `timeout` argument has passed. This timeout is expressed in real time and not in simulation time.
+  - when Webots is about to terminate the controller (in that case `WB_EVENT_QUIT` is returned).
+
+It is possible to combine event types in order to return as soon as one of the event occurs:
+
+```
+WbUserInputEvent returned_event = wb_robot_wait_for_user_input_event(WB_EVENT_KEYBOARD | WB_EVENT_JOYSTICK_BUTTON, 1000);
+```
+
+> **note**: The corresponding input devices should be enabled before calling the `wb_robot_wait_for_user_input_event` function.
+In case of mouse move and joystick axis events, the sampling period is used to avoid producing too many events (at least one sampling period is required before returning).
+In that case, the sampling period is expressed in real time and not in simulation time.
+
+%figure "Helper enumeration to interpret the event_type argument and return value of the `wb_robot_wait_for_user_input_event` function"
+
+| Event                       | Purpose                                                   |
+| --------------------------- | --------------------------------------------------------- |
+| `WB_EVENT_QUIT`             | returned when Webots is about to terminate the controller |
+| `WB_EVENT_NO_EVENT`         | no event occurred or no event should cause a return       |
+| `WB_EVENT_MOUSE_CLICK`      | used to detect a mouse click in the 3D window             |
+| `WB_EVENT_MOUSE_MOVE`       | used to detect the motion of the mouse in the 3D window   |
+| `WB_EVENT_KEYBOARD`         | used to detect a keyboard key press/release               |
+| `WB_EVENT_JOYSTICK_BUTTON`  | used to detect a joystick button press/release            |
+| `WB_EVENT_JOYSTICK_AXIS`    | used to detect the motion of a joystick axis              |
+| `WB_EVENT_JOYSTICK_POV`     | used to detect state change of a joystick pov             |
+
+%end
+
+> **note**: Calling the `wb_robot_wait_for_user_input_event` function with `WB_EVENT_NO_EVENT` as the `event_type` argument causes the controller process to sleep for the specified `timeout` duration. If the controller is synchronous, this will also pause the simulation for the same duration.
+
+---
+
 #### `wb_robot_battery_sensor_enable`
 #### `wb_robot_battery_sensor_disable`
 #### `wb_robot_get_battery_sampling_period`
@@ -783,8 +924,8 @@ typedef enum {
   WB_MODE_REMOTE_CONTROL
 } WbRobotMode;
 
-int wb_robot_get_mode();
-void wb_robot_set_mode(int mode, void *arg);
+WbRobotMode wb_robot_get_mode();
+void wb_robot_set_mode(WbRobotMode mode, void *arg);
 ```
 
 %tab-end
@@ -800,10 +941,10 @@ namespace webots {
       MODE_SIMULATION,
       MODE_CROSS_COMPILATION,
       MODE_REMOTE_CONTROL
-    };
+    } RobotMode;
 
-    int getMode() const;
-    void setMode(int, void *);
+    RobotMode getMode() const;
+    void setMode(RobotMode mode, void *arg);
     // ...
   }
 }
@@ -871,9 +1012,9 @@ The `wb_robot_set_mode` function allows the user to switch between the simulatio
 When switching to the remote-control mode, the `wbr_start` function of the remote control plugin is called.
 The argument `arg` is passed directly to the `wbr_start` function (more information in the user guide).
 
-The integers can be compared to the following enumeration items:
+The WbRobotMode can be compared to the following enumeration items:
 
-%figure "Helper enumeration to interpret the integer argument and return value of the `wb_robot_[gs]et_mode` functions"
+%figure "Helper enumeration to interpret the WbRobotMode argument and return value of the `wb_robot_[gs]et_mode` functions"
 
 | Mode                         | Purpose                |
 | ---------------------------- | ---------------------- |

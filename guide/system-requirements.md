@@ -14,7 +14,7 @@ It is strongly advised to try the 30 day trial version of Webots on your compute
 
 The following operating systems are supported:
 
-- Linux: Webots is ensured to run on the latest Ubuntu Long Term Support (LTS) release, currently version 16.04.
+- Linux: Webots is ensured to run on the latest Ubuntu Long Term Support (LTS) release, currently version 18.04.
 But it is also known to run on most recent major Linux distributions, including RedHat, Mandrake, Debian, Gentoo, SuSE, and Slackware.
 We recommend using a recent version of Linux.
 Webots is provided for Linux 64 (x86-64) systems.

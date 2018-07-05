@@ -19,7 +19,6 @@ Camera {
   SFNode   zoom         NULL    # {Zoom, PROTO}
   SFNode   recognition  NULL    # {Recognition, PROTO}
   SFNode   lensFlare    NULL    # {LensFlare, PROTO}
-  SFString compositor   ""      # compositor name
 }
 ```
 
@@ -54,10 +53,8 @@ More information on frustums in the corresponding subsection below.
 - The `far` field defines the distance from the camera to the far clipping plane.
 
 - The `antiAliasing` field switches on or off (the default) anti-aliasing effect on the camera images.
-Anti-aliasing is a technique that assigns pixel colors based on the fraction of the pixel's area that's covered by the primitives being rendered.
-Anti-aliasing makes graphics more smooth and pleasing to the eye by reducing aliasing artifacts.
 Aliasing artifacts can appear as jagged edges (or moiré patterns, strobing, etc.).
-Anti-aliasing will not be applied if it is not supported by the hardware.
+Anti-aliasing is a technique that selectively blurs these jagged edges (and thus makes them look more smooth) in the rendered camera image, similar to an anti-aliasing filter in real camera sensors.
 
 - If the `motionBlur` field is greater than 0.0, the image is blurred by the motion of the camera or objects in the field of view.
 It means the image returned is a mix between the current view and the previous images returned by the camera.
@@ -97,19 +94,6 @@ Note that the returned size is an estimation and can be in some cases overestima
 In case the [Solid](solid.md) and its children don't have any bounding object, the dimension is estimated using the shape, this estimation is usually widely overestimated.
 
 - The `lensFlare` field may contain a [LensFlare](lensflare.md) node to add a lens flare effect to the camera image (if any light casts flares).
-
-- The `compositor` field specifies the name of a compositor to apply on the camera image.
-A compositor can be used to apply a shader in order to alter the original image returned by the camera, it runs on the graphic card and can therefore be very fast.
-Compositor is a technique provided by Ogre3d, you should respect the syntax defined by Ogre3d.
-Have a look at the [Ogre3d documentation](http://www.ogre3d.org/docs/manual/manual_29.html) for more information about compositors.
-Such a compositor can for example be used to simulate camera imperfections (e.g., lens distorion) or to run image processing directly on the graphic card (e.g., edge detection).
-Note that the compositor is applied at the end (i.e., after the addition of noise, etc.).
-The compositor resource files (compositor, material, shader, texture, etc.) should be located in a directory called `compositors` close to the world file.
-If the camera is contained in a PROTO file then the compositor files should be located in a directory called `compositors` close to the PROTO file.
-The internal compositor resource files of Webots can be used in any compositor, they are located in "WEBOTS\_HOME/resources/ogre".
-Compositors can be added/removed at any time, even while the simulation is running.
-However, the compositor resource files are loaded at the same time as the world file.
-Therefore any modification to the compositor files will need a revert of the simulation to be taken into account.
 
 ### Camera Image
 

@@ -30,6 +30,9 @@ SolidBox {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/solids/protos/SolidBox.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 ### SolidBox Field Summary
 
 - `size`: Defines the size of the box.
@@ -70,6 +73,9 @@ SolidPipe {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/solids/protos/SolidPipe.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 
 ### SolidPipe Field Summary
 
@@ -114,6 +120,9 @@ SolidRoundedBox {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/solids/protos/SolidRoundedBox.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 ### SolidRoundedBox Field Summary
 
 - `size`: Defines the size of the box.
@@ -154,6 +163,9 @@ SolidTorus {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/solids/protos/SolidTorus.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 ### SolidTorus Field Summary
 
 - `majorRadius`: Defines the major radius of the torus.
@@ -163,4 +175,3 @@ SolidTorus {
 - `subdivision`: Defines the number of polygons used to represent the torus and so its resolution.
 
 - `appearance`: Defines the appearance of the torus.
-

@@ -3,9 +3,8 @@
 ```
 Appearance {
   SFNode   material         NULL           # {Material, PROTO}
-  SFNode   texture          NULL           # {ImageTexture, MultiTexture, ComposedCubeMapTexture, PROTO}
+  SFNode   texture          NULL           # {ImageTexture, PROTO}
   SFNode   textureTransform NULL           # {TextureTransform, PROTO}
-  MFNode   shaders          NULL           # {ComposedShader, PROTO}
   SFString name             "appearance"   # any string
 }
 ```
@@ -16,24 +15,17 @@ The [Appearance](#appearance) node specifies the visual properties of a geometri
 The value for each of the fields in this node may be NULL.
 However, if the field is non-NULL, it shall contain one node of the appropriate type.
 
->**note** The *WEBOTS_HOME/bin/ogre/OgreMaterialConverter.py* Python script is provided to automatically generate the [Appearance](#appearance) nodes from an Ogre material file.
-The generated [Appearance](#appearance) nodes are saved in `.wbo` format.
-
 ### Field Summary
 
 - The `material` field, if specified, shall contain a [Material](material.md) node.
 If the `material` field is NULL, lighting is off (all lights are ignored during the rendering of the object that references this [Appearance](#appearance)) and the unlit object color is (1,1,1).
 
-- The `texture` field, if specified, shall contain an [ImageTexture](imagetexture.md) node, a [MultiTexture](multitexture.md) node or a [ComposedCubeMapTexture](composedcubemaptexture.md).
+- The `texture` field, if specified, shall contain an [ImageTexture](imagetexture.md) node.
 If the `texture` node is NULL, the object that references this [Appearance](#appearance) is not textured.
 
 - The `textureTransform` field, if specified, shall contain a [TextureTransform](texturetransform.md) node.
 If the `textureTransform` is NULL, the `textureTransform` field has no effect.
+Otherwise, the [TextureTransform](texturetransform.md) is applied to the [ImageTexture](imagetexture.md) in the `texture` field when shading the object.
 
-- The `shaders` field, if specified, shall contain a [ComposedShader](composedshader.md) node.
-If the `shaders` is NULL, the `shaders` field has no effect.
-Only the first item of the `shaders` field is affecting the appearance.
-
-- The `name` field specifies the appearance name.
-This is especially needed to uniquely identify the appearance definition in MFNode fields supporting multiple [Appearance](#appearance) nodes.
-In case of SFNode fields containing a single [Appearance](#appearance) node it is not necessary to define a unique name.
+- The `name` field is used to give a unique identifier to an [Appearance](#appearance) node such that if it is included in an MFNode field it can be retrieved by this name.
+This name is not required to be unique if the [Appearance](#appearance) node is inserted into an SFNode field.

@@ -27,6 +27,9 @@ CardboardBox {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/containers/protos/CardboardBox.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 #### CardboardBox Field Summary
 
 - `size`: Defines the size of the cardboard box.
@@ -58,6 +61,9 @@ WoodenBox {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/containers/protos/WoodenBox.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 
 #### WoodenBox Field Summary
 
@@ -94,6 +100,9 @@ WoodenPallet {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/pallet/protos/WoodenPallet.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 
 #### WoodenPallet Field Summary
 
@@ -138,6 +147,9 @@ WoodenPalletStack {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/pallet/protos/WoodenPalletStack.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 #### WoodenPalletStack Field Summary
 
 - `palletNumber`: Defines the number of pallet in the stack (vertically).
@@ -181,6 +193,9 @@ LJoint {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/pipes/protos/LJoint.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 ### PipeSection
 
 A section of pipe.
@@ -205,6 +220,9 @@ PipeSection {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/pipes/protos/PipeSection.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 
 #### PipeSection Field Summary
 
@@ -237,6 +255,9 @@ TJoint {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/pipes/protos/TJoint.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 ## Tools
 
 ### Bolt
@@ -262,6 +283,9 @@ Bolt {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/tools/protos/Bolt.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 ### Hammer
 
 A 25cm asymmetric club hammer.
@@ -284,6 +308,9 @@ Hammer {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/tools/protos/Hammer.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 
 ### Nut
 
@@ -308,6 +335,9 @@ Nut {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/tools/protos/Nut.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 ### PaintBucket
 
 A 4kg bucket of paint, with HingeJoint-based handle.
@@ -330,6 +360,9 @@ PaintBucket {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/tools/protos/PaintBucket.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 
 ### PlatformCart
 
@@ -354,6 +387,9 @@ PlatformCart {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/tools/protos/PlatformCart.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 
 #### PlatformCart Field Summary
 
@@ -382,6 +418,9 @@ Screwdriver {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/tools/protos/Screwdriver.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 ### Wrench
 
 A 15cm Open-End wrench.
@@ -404,6 +443,9 @@ Wrench {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/tools/protos/Wrench.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 
 ## Valves
 
@@ -432,6 +474,9 @@ LargeValve {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/valves/protos/LargeValve.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 
 #### LargeValve Field Summary
 
@@ -465,6 +510,9 @@ LeverValve {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/valves/protos/LeverValve.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 #### LeverValve Field Summary
 
 - `jointFriction`: Defines the static friction of the valve joint.
@@ -493,6 +541,9 @@ SmallValve {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/factory/valves/protos/SmallValve.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 
 #### SmallValve Field Summary
 

@@ -37,23 +37,23 @@ A new world is now open.
 For now, the 3D window displays nothing.
 The Scene Tree view (on the left hand side) currently lists the fundamental nodes:
 
-- `WorldInfo`: containing misc global parameters.
-- `Viewpoint`: defining the main camera parameters.
+- [WorldInfo](../reference/worldinfo.md): containing misc global parameters.
+- [Viewpoint](../reference/viewpoint.md): defining the main camera parameters.
 
 As no light and no 3D object are defined, the entire scene is empty, and thus nothing is displayed.
 
 Each node has some customizable properties called **fields**.
 The first step is about modifying the background color.
 
-> **Hands on**: Create a `Background` node by clicking on the plus icon above the Scene Tree view, and select "Background" from the "New Node" option.
-Modify the background color, by setting up the `skyColor` field of the `Background` node.
+> **Hands on**: Create a [Background](../reference/background.md) node by clicking on the plus icon above the Scene Tree view, and select "Background" from the "New Node" option.
+Modify the background color, by setting up the `skyColor` field of the [Background](../reference/background.md) node.
 Choose a blue color (e.g. red = 0.4, green = 0.7 and blue = 1.0) using the color picker at the bottom of the Scene Tree view.
 The background of the 3D view should be modified accordingly.
 
 Now, we would like to add some environment object (a floor and some walls).
 A predefined node called `RectangleArena` is designed to accomplish this task quickly.
 
-> **Hands on**: Select the last node of the Scene Tree view (`Background`).
+> **Hands on**: Select the last node of the Scene Tree view ([Background](../reference/background.md)).
 Click on the `Add` button at the top of the Scene Tree view.
 In the open dialog box, choose `PROTO (Webots) / objects / floors / RectangleArena`.
 The new node has been added and is appearing far away.
@@ -86,7 +86,7 @@ Using the dialog box save the world into the "my\_webots\_projects/tutorials/wor
 
 <!-- -->
 
-> **Hands on**: Revert the simulation by selecting the `File / Revert World` menu item.
+> **Hands on**: Reload the simulation by selecting the `File / Reload World` menu item.
 
 <!-- -->
 
@@ -106,16 +106,16 @@ Now click on the blue sky to unselect the floor.
 
 ### Add an e-puck Robot
 
-The e-puck is a small robot having differential wheels, 10 LEDs, and several sensors including 8 distance sensors and a camera.
+The e-puck is a small robot having differential wheels, 10 [LEDs](../reference/led.md), and several sensors including 8 [DistanceSensors](../reference/distancesensor.md) and a [Camera](../reference/camera.md).
 In this tutorial we are only interested in using its wheels.
 We will learn how to use some other e-puck features in the other tutorials.
 
 Now, we are going to add an e-puck model to the world.
 Make sure that the simulation is paused and that the virtual time elapsed is 0.
 
-> **Theory**: When a Webots world is modified with the intention of being saved, it is fundamental that the simulation is first paused and reverted to its initial state, i.e. the virtual time counter on the main toolbar should show 0:00:00:000.
+> **Theory**: When a Webots world is modified with the intention of being saved, it is fundamental that the simulation is first paused and reloaded to its initial state, i.e. the virtual time counter on the main toolbar should show 0:00:00:000.
 Otherwise at each save, the position of each 3D objects can accumulate errors.
-Therefore, any modification of the world should be performed in that order: **pause, revert, modify and save the simulation**.
+Therefore, any modification of the world should be performed in that order: **pause, reload, modify and save the simulation**.
 
 As we don't need to create the e-puck robot from scratch, we will just have to import a special E-puck node (in fact: a PROTO node as the `RectangleArena` we introduced before).
 A PROTO is an abstract assemblage of several nodes.
@@ -130,7 +130,7 @@ Then save the simulation.
 <!-- -->
 
 > **Note**: Now if you run the simulation, the robot moves: that's because the robot uses a default controller with that behavior.
-Please pause and revert the simulation before going on.
+Please pause and reload the world before going on.
 
 <!-- -->
 
@@ -153,17 +153,17 @@ In order to obtain a real-time simulation speed, the `Real-Time` button needs to
 
 Now we are going to modify the world and decrease the step of the physics simulation: this will increase the accuracy of the simulation.
 
-> **Hands on**: In the Scene Tree view, expand the WorldInfo node (the first node).
+> **Hands on**: In the Scene Tree view, expand the [WorldInfo](../reference/worldinfo.md) node (the first node).
 Set its `basicTimeStep` field to *16*.
 Then save the simulation.
 
 Just after you add the E-puck node, a black window appears in the upper-left corner of the 3D view.
-It shows the content of Camera nodes, but it will stay black until not explicitly used during a simulation.
+It shows the content of [Camera](../reference/camera.md) nodes, but it will stay black until not explicitly used during a simulation.
 The camera can be resized by dragging the marked corner or hidden by clicking the "x" in the top-right of the camera window.
 
-> **Hands on**: In this tutorial we will not use the Camera devices of the E-puck.
+> **Hands on**: In this tutorial we will not use the [Camera](../reference/camera.md) devices of the E-puck.
 So we can hide the window by clicking the "x" on the camera window.
-Don't forget to revert the simulation before hiding the camera and to save it after the modifications.
+Don't forget to reload the world before hiding the camera and to save it after the modifications.
 
 ### Create a New Controller
 
@@ -237,7 +237,7 @@ Once the controller is linked, save the world.
 
 > **Hands on**: Save the modified source code (`File / Save Text File`), and compile it (`Build / Build`).
 Fix any compilation errors if necessary.
-When Webots proposes to revert the simulation, choose `Yes`.
+When Webots proposes to reload the world, choose `Yes`.
 
 If everything is ok, your robot should move forwards.
 The robot will move using it's maximum speed for a while and then stop once the wheels have rotated of 10 radians.
@@ -264,7 +264,7 @@ In order to control the motors of the wheels in speed you need to set the target
 > int main(int argc, char **argv)
 > {
 >   wb_robot_init();
-> 
+>
 >   // get a handler to the motors and set target position to infinity (speed control)
 >   WbDeviceTag left_motor = wb_robot_get_device("left wheel motor");
 >   WbDeviceTag right_motor = wb_robot_get_device("right wheel motor");
@@ -284,7 +284,7 @@ In order to control the motors of the wheels in speed you need to set the target
 > }
 > ```
 
-Try to change your previous controller by this one, and then recompile and revert the simulation.
+Try to change your previous controller by this one, and then recompile and reload the world.
 The robot will now move (the wheels will rotate at a speed of 1 radian per second) and never stop.
 
 ### Conclusion

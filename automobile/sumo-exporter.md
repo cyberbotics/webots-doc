@@ -12,15 +12,15 @@ Please refer to [these instructions](openstreetmap-importer.md#dependencies) to 
 
 If the Webots simulation has been created from the OpenStreetMap importer, then the export should be straight forward.
 
-If it's not the case, you should pay attention on the use of the `Road` and the `Crossroad` PROTO nodes.
+If it's not the case, you should pay attention on the use of the [Road](../guide/object-road.md#road-proto) and the [Crossroad](../guide/object-road.md#crossroad) PROTO nodes.
 Indeed, their IDs should be unique, and the `Road.startJunction`, the `Road.endJunction` and the `Crossroad.connectedRoadIDs` fields should be filled correctly.
 
 ## How to Use the Exporter
 
-On Linux, the path to the SUMO binaries directory should be added in your LD\_LIBRARY\_PATH environment variable in order to run the SUMO binaries:
+On Linux, the path to the SUMO binaries and to the Webots libraries directories should be added in your LD\_LIBRARY\_PATH environment variable in order to run the SUMO binaries:
 
 ```sh
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$WEBOTS_HOME/projects/default/resources/sumo/bin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$WEBOTS_HOME/projects/default/resources/sumo/bin:$WEBOTS_HOME/lib
 ```
 
 You should use the `exporter.py` Python script to generate the `sumo.nod.xml`, `sumo.edg.xml` and `sumo.sumocfg` SUMO files.

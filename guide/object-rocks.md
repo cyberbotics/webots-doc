@@ -27,6 +27,9 @@ Rock10cm {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/rocks/protos/Rock10cm.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 ### Rock10cm Field Summary
 
 - `texture`: Defines the texture used for the rock.
@@ -61,6 +64,9 @@ Rock17cm {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/rocks/protos/Rock17cm.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 
 ### Rock17cm Field Summary
 

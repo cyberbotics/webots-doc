@@ -24,7 +24,7 @@ The same applies for reading sensor values from the real robot.
 #### Developing a Remote Control Plugin
 
 Webots already provides some facilities to implement a remote control library and in particular it is possible to develop it as a controller plugin.
-Once set in the corresponding field of the Robot node, this remote control plugin will be executed automatically when running the controller.
+Once set in the corresponding field of the [Robot](../reference/robot.md) node, this remote control plugin will be executed automatically when running the controller.
 Implementation details are described in [this section](controller-plugin.md#remote-control-plugin).
 
 #### Special Functions

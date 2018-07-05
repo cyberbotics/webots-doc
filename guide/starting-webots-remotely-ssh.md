@@ -44,5 +44,5 @@ $ exit
 The &> sign redirects into a text file the output that would otherwise appear in the `ssh` terminal.
 The & sign starts Webots as a background job: so the user can safely exit the `ssh` session, while Webots keeps running.
 
-In this case the decision to terminate the job is usually made in the Supervisor code according to simulation specific criteria.
+In this case the decision to terminate the job is usually made in the [Supervisor](../reference/supervisor.md) code according to simulation specific criteria.
 The `wb_supervisor_simulation_quit` function can be used to automatically terminate Webots when the job is over.

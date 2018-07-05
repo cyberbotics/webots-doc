@@ -6,9 +6,8 @@ We will tackle several concepts related to the nodes: what is their meaning, how
 Moreover we will see how to set up physics.
 
 Several kinds of nodes will be introduced.
-We won't define each of them precisely.
-Their detailed definition can be found in chapter 3 of the `Reference Manual`.
-Having the nodes chart diagram (chapter 2 of the `Reference Manual`) in front of you, will also help understanding the nodes inheritance relationship.
+Their detailed definition can be found in [Reference Manual](../reference/nodes-and-api-functions.md).
+Having the [nodes chart diagram](../reference/node-chart.md) in front of you, will also help understanding the nodes inheritance relationship.
 
 ### A New Simulation
 
@@ -19,14 +18,14 @@ Using the `File / Save World As...` menu, save the simulation as "obstacles.wbt"
 
 ### Modification of the Floor
 
-The default `RectangleArena` PROTO defines a simple floor pinned on the statical environment, i.e. without Physics node, and surrounded by walls.
+The default `RectangleArena` PROTO defines a simple floor pinned on the statical environment, i.e. without [Physics](../reference/physics.md) node, and surrounded by walls.
 
 > **Note**: In order to define an object as static, its physics node has not to be set (NULL).
 
 Other pre-built floors are available in the Webots objects library.
 We will now delete the default arena and add a simple floor that we will manually surround the walls later in this tutorial.
 
-> **Hands on**: To remove the `RectangleArena`, select it in the scene tree view and press the `Delete` button located in the toolbar.
+> **Hands on**: To remove the `RectangleArena`, select it either in the 3D view or in the scene tree view with a left click and press the `Delete` key on your keyboard. Alternatively, you can right click on it in the 3D view and select `Delete` in the context menu (you can also use the context menu directly in the scene tree view).
 
 <!-- -->
 
@@ -40,7 +39,7 @@ Modify the `size` fields and set it to *{1, 1}* to resize it to 1mx1m.
 
 ### The Solid Node
 
-This subsection introduces the most important node in Webots: the `Solid` node.
+This subsection introduces the most important node in Webots: the [Solid](../reference/solid.md) node.
 But let's start with a definition.
 
 > **Theory**: A **rigid body** is a body in which deformation can be neglected.
@@ -52,13 +51,13 @@ For example a table, a robot finger phalanx or a wheel are indivisible rigid bod
 The physics engine of Webots is designed for simulating rigid bodies.
 An important step, when designing a simulation, is to break up the various entities into indivisible rigid bodies.
 
-> **Theory**: In Webots there is a direct match between a rigid body and a **Solid** node.
-A Solid node (or a node which inherits the Solid node) will be created for each rigid body.
+> **Theory**: In Webots there is a direct match between a rigid body and a [Solid](../reference/solid.md) node.
+A [Solid](../reference/solid.md) node (or a node which inherits the [Solid](../reference/solid.md) node) will be created for each rigid body.
 
-To define a rigid body, you will have to create a Solid node.
+To define a rigid body, you will have to create a [Solid](../reference/solid.md) node.
 Inside this node you will find different subnodes corresponding to the characteristics of the rigid body.
 The [figure](#the-simplest-model-of-a-rigid-body-in-webots-having-a-graphical-representation-shape-a-physical-bound-boundingobject-and-being-in-the-dynamical-environment-physics) depicts a rigid body and its subnodes.
-The graphical representation of the Solid is defined by the Shape nodes populating its `children` list.
+The graphical representation of the [Solid](../reference/solid.md) is defined by the[Shape](../reference/shape.md) nodes populating its `children` list.
 The collision bounds are defined by its `boundingObject` field.
 The graphical representation and the collision shape are often but not necessarily identical.
 Finally, the `physics` field defines if the object belongs to the dynamical or to the statical environment.
@@ -77,23 +76,23 @@ graph TD
 %end
 
 The Geometry box (in [this figure](#the-simplest-model-of-a-rigid-body-in-webots-having-a-graphical-representation-shape-a-physical-bound-boundingobject-and-being-in-the-dynamical-environment-physics)) stands for any kind of geometrical primitive.
-In fact, it can be substituted by a Sphere, a Box, a Cylinder, etc.
+In fact, it can be substituted by a [Sphere](../reference/sphere.md), a [Box](../reference/box.md), a [Cylinder](../reference/cylinder.md), etc.
 
 ### Create a Ball
 
 We will now add a ball to the simulation.
 That ball will be modeled as a rigid body as shown in this [figure](#the-simplest-model-of-a-rigid-body-in-webots-having-a-graphical-representation-shape-a-physical-bound-boundingobject-and-being-in-the-dynamical-environment-physics).
-As Geometry nodes we will use Spheres.
+As Geometry nodes we will use [Spheres](../reference/sphere.md).
 
-> **Hands on**: In the scene tree view, select the last node and add a Solid node using the `Add` button.
-Similarly select the `children` field of the Solid node, and add a Shape node to it.
+> **Hands on**: In the scene tree view, select the last node and add a [Solid](../reference/solid.md) node using the `Add` button.
+Similarly select the `children` field of the [Solid](../reference/solid.md) node, and add a [Shape](../reference/shape.md) node to it.
 In order to get a shaded object as shown in the figure, it is necessary to specify an appearance.
-To do this, select the `appearance` field of the Shape node and use the `Add` button.
-Then, you can add a default `Material` to the `material` field in a similar way.
-Add a Sphere node as the `geometry` field of the newly created Shape node.
-Add another Sphere node to the `boundingObject` field of the Solid.
-Finally add a Physics node to the `physics` field of the Solid.
-By modifying the `translation` field of the Solid node, place the ball in front of the robot (at *{0, 0.1, -0.2}* for example).
+To do this, select the `appearance` field of the [Shape](../reference/shape.md) node and use the `Add` button.
+Then, you can add a default [Material](../reference/material.md) to the `material` field in a similar way.
+Add a [Sphere](../reference/sphere.md) node as the `geometry` field of the newly created [Shape](../reference/shape.md) node.
+Add another [Sphere](../reference/sphere.md) node to the `boundingObject` field of the [Solid](../reference/solid.md).
+Finally add a [Physics](../reference/physics.md) node to the `physics` field of the [Solid](../reference/solid.md).
+By modifying the `translation` field of the [Solid](../reference/solid.md) node, place the ball in front of the robot (at *{0, 0.1, -0.2}* for example).
 Save the simulation.
 The result is depicted in [this figure](#your-first-rigid-body-in-webots).
 
@@ -109,15 +108,15 @@ The contact points between the ball and the floor can be displayed as cyan lines
 
 ### Geometries
 
-To define the ball, we used the Sphere node in two different contexts: for the graphical representation (`children`) and to define the physical bounds (`boundingObject`).
-All Geometry node (such as the Sphere node) can be used in a graphical context.
+To define the ball, we used the [Sphere](../reference/sphere.md) node in two different contexts: for the graphical representation (`children`) and to define the physical bounds (`boundingObject`).
+All Geometry node (such as the [Sphere](../reference/sphere.md) node) can be used in a graphical context.
 However, only a subset of them can be used in a physical context.
-Take a look at the scheme of chapter 2 of the `Reference Manual` to know which primitive you can use.
+Take a look at the [nodes chart diagram](../reference/node-chart.md) to know which primitive you can use.
 
-We now want to reduce the size of the Sphere and to increase its graphical quality by increasing the number of triangles used to represent it.
+We now want to reduce the size of the [Sphere](../reference/sphere.md) and to increase its graphical quality by increasing the number of triangles used to represent it.
 
-> **Hands on**: For each Sphere node defining the ball, set its `radius` field to *0.05* and its `subdivision` field to *2*.
-Refer to the `Reference Manual` to understand what the `subdivision` field stands for.
+> **Hands on**: For each [Sphere](../reference/sphere.md) node defining the ball, set its `radius` field to *0.05* and its `subdivision` field to *2*.
+Refer to the [Reference Manual](../reference/sphere.md) to understand what the `subdivision` field stands for.
 
 ### DEF-USE Mechanism
 
@@ -129,19 +128,19 @@ Here is how it works: first a node is labeled with a DEF string, and then copies
 Only the fields of the DEF node can be edited, the fields of the USE nodes assume similar values.
 This mechanism is dependent on the apparition order of the nodes in the world file, because the DEF node should appear first.
 
-The two Sphere definitions that we have used earlier to define the ball, are redundant.
-We will now merge these two Spheres into only once using the DEF-USE mechanism.
+The two [Sphere](../reference/sphere.md) definitions that we have used earlier to define the ball, are redundant.
+We will now merge these two [Spheres](../reference/sphere.md) into only once using the DEF-USE mechanism.
 
-> **Hands on**: Select the first Sphere node (the child of the Shape) in the scene tree view.
+> **Hands on**: Select the first [Sphere](../reference/sphere.md) node (the child of the [Shape](../reference/shape.md)) in the scene tree view.
 The field editor of the scene tree view allows you to enter the DEF string.
 Enter *"BALL\_GEOMETRY"*.
-Select the boundingObject field (containing the second Sphere node), and delete it by using the `Reset to default` button in the field editor (represented by an asterisk).
+Select the boundingObject field (containing the second [Sphere](../reference/sphere.md) node), and delete it by using the `Reset to default` button in the field editor (represented by an asterisk).
 Then, click on the `Add` button, and select the `USE / BALL_GEOMETRY` in the dialog box.
 The result is shown in [this figure](#def-use-mechanism-on-the-sphere-node-called-ball_geometry).
 
 <!-- -->
 
-> **Note**: Now, changing the `radius` field of the first Sphere node does also modify the `boundingObject`.
+> **Note**: Now, changing the `radius` field of the first [Sphere](../reference/sphere.md) node does also modify the `boundingObject`.
 
 %figure "DEF-USE mechanism on the Sphere node called BALL_GEOMETRY."
 
@@ -165,19 +164,19 @@ graph TD
 
 ### Add Walls
 
-> **Theory**: For convenience, the `boundingObject` field accepts also the Shape node (rather than the Sphere node directly).
-It would be also possible to use the same DEF-USE mechanism at the Shape level as shown in [this figure](#def-use-mechanism-applied-on-the-shape-node-of-a-solid).
-For now the greatest benefit is being able to also use this Shape directly for graphical purposes.
+> **Theory**: For convenience, the `boundingObject` field accepts also the [Shape](../reference/shape.md) node (rather than the [Sphere](../reference/sphere.md) node directly).
+It would be also possible to use the same DEF-USE mechanism at the [Shape](../reference/shape.md) level as shown in [this figure](#def-use-mechanism-applied-on-the-shape-node-of-a-solid).
+For now the greatest benefit is being able to also use this [Shape](../reference/shape.md) directly for graphical purposes.
 Later this mechanism will turn out to be very useful for some sensors.
 
 In order to verify your progression, implement by yourself four walls to surround the environment.
-The walls have to be defined statically to the environment, and use as much as possible the DEF-USE mechanism at the Shape level rather than at the Geometry level.
-Indeed it's more convenient to add an intermediate Shape node in the `boundingObject` field of the Solid node.
+The walls have to be defined statically to the environment, and use as much as possible the DEF-USE mechanism at the [Shape](../reference/shape.md) level rather than at the Geometry level.
+Indeed it's more convenient to add an intermediate[Shape](../reference/shape.md) node in the `boundingObject` field of the [Solid](../reference/solid.md) node.
 The best Geometry primitive to implement the walls is the Box node.
-Only one Shape has to be defined for all the walls.
+Only one [Shape](../reference/shape.md) has to be defined for all the walls.
 The expected result is shown in [this figure](#the-simulation-state-at-the-end-of-this-second-tutorial).
 
-> **Hands on**: Add four walls without physics and using only one definition of the Shape node.
+> **Hands on**: Add four walls without physics and using only one definition of the [Shape](../reference/shape.md) node.
 
 The solution is located in the solution directory under the "obstacle.wbt".
 
@@ -197,5 +196,5 @@ On each simulation, a **trade-off** has to be found between simulation speed and
 
 At the end of this tutorial, you are able to create simple environments based on rigid bodies.
 You are able to add nodes from the scene tree view and to modify their fields.
-You have become acquainted with the Solid, Physics, Shape, Sphere and Box nodes.
+You have become acquainted with the [Solid](../reference/solid.md), [Physics](../reference/physics.md), [Shape](../reference/shape.md), [Sphere](../reference/sphere.md) and [Box](../reference/box.md) nodes.
 You also saw the DEF-USE mechanism that allows to reduce node redundancy of the scene tree.

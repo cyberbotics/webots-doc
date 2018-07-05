@@ -51,13 +51,14 @@ int wb_position_sensor_get_type(WbDeviceTag tag);
 
 namespace webots {
   class PositionSensor : public Device {
-    enum {ANGULAR, LINEAR};
+    enum {ROTATIONAL, LINEAR};
 
     virtual void enable(int samplingPeriod);
     virtual void disable();
     int getSamplingPeriod() const;
     double getValue() const;
     int getType() const;
+    // ...
   }
 }
 ```
@@ -70,13 +71,14 @@ namespace webots {
 from controller import PositionSensor
 
 class PositionSensor (Device):
-    ANGULAR, LINEAR
+    ROTATIONAL, LINEAR
 
     def enable(self, samplingPeriod):
     def disable(self):
     def getSamplingPeriod(self):
     def getValue(self):
     def getType(self):
+    # ...
 ```
 
 %tab-end
@@ -87,13 +89,14 @@ class PositionSensor (Device):
 import com.cyberbotics.webots.controller.PositionSensor;
 
 public class PositionSensor extends Device {
-  public final static int ANGULAR, LINEAR;
+  public final static int ROTATIONAL, LINEAR;
 
   public void enable(int samplingPeriod);
   public void disable();
   public int getSamplingPeriod();
   public double getValue();
   public int getType();
+  // ...
 }
 ```
 
@@ -102,7 +105,7 @@ public class PositionSensor extends Device {
 %tab "MATLAB"
 
 ```matlab
-WB_ANGULAR, WB_LINEAR
+WB_ROTATIONAL, WB_LINEAR
 
 wb_position_sensor_enable(tag, sampling_period)
 wb_position_sensor_disable(tag)
@@ -142,4 +145,98 @@ The `wb_position_sensor_get_value` function returns the most recent value measur
 Depending on the type, it will return a value in radians (angular position sensor) or in meters (linear position sensor).
 
 The `wb_position_sensor_get_type` function returns the type of the position sensor.
-It will return `WB_ANGULAR` if the sensor is associated with a [HingeJoint](hingejoint.md) or a [Hinge2Joint](hinge2joint.md) node, and `WB_LINEAR` if it is associated with a [SliderJoint](sliderjoint.md) or a [Track](track.md) node.
+It will return `WB_ROTATIONAL` if the sensor is associated with a [HingeJoint](hingejoint.md) or a [Hinge2Joint](hinge2joint.md) node, and `WB_LINEAR` if it is associated with a [SliderJoint](sliderjoint.md) or a [Track](track.md) node.
+
+---
+
+#### `wb_position_sensor_get_brake`
+#### `wb_position_sensor_get_motor`
+
+%tab-component
+
+%tab "C"
+
+```c
+#include <webots/position_sensor.h>
+#include <webots/brake.h>
+#include <webots/motor.h>
+
+WbDeviceTag wb_brake_get_brake(WbDeviceTag tag);
+WbDeviceTag wb_brake_get_motor(WbDeviceTag tag);
+```
+
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/PositionSensor.hpp>
+#include <webots/Brake.hpp>
+#include <webots/Motor.hpp>
+
+namespace webots {
+  class PositionSensor : public Device {
+    Brake *getBrake() const;
+    Motor *getMotor() const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import PositionSensor, Brake, Motor
+
+class PositionSensor (Device):
+    def getBrake(self):
+    def getMotor(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.PositionSensor;
+import com.cyberbotics.webots.controller.Brake;
+import com.cyberbotics.webots.controller.Motor;
+
+public class PositionSensor extends Device {
+  public Brake getBrake();
+  public Motor getMotor();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+tag = wb_brake_get_brake(tag)
+tag = wb_brake_get_motor(tag)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/<device_name>/get_brake_name` | `service` | [`webots_ros::get_string`](ros-api.md#common-services) | |
+| `/<device_name>/get_motor_name` | `service` | [`webots_ros::get_string`](ros-api.md#common-services) | |
+
+%tab-end
+
+%end
+
+##### Description
+
+*get associated devices*
+
+The `wb_position_sensor_get_brake` and `wb_position_sensor_get_motor` functions return the [Brake](brake.md) and [Motor](motor.md) instances defined in the same [Joint](joint.md) or [Track](track.md) `device` field.
+If none is defined they return 0.

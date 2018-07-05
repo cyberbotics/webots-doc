@@ -1,5 +1,65 @@
 # Trees
 
+## BigSassafras
+
+A big sassafras tree with optional boundingObject.
+
+%figure
+
+![BigSassafras](images/objects/trees/BigSassafras/model.png)
+
+%end
+
+Derived from [Solid](../reference/solid.md).
+
+```
+BigSassafras {
+  SFVec3f    translation           0 0 0
+  SFRotation rotation              0 1 0 0
+  SFString   name                  "sassafras tree"
+  SFBool     enableBoundingObject  TRUE
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/objects/trees/protos/BigSassafras.proto"
+
+> **License**: Creative Commons Attribution 4.0 International License.
+[More information.](https://creativecommons.org/licenses/by/4.0/legalcode)
+
+### BigSassafras Field Summary
+
+- `enableBoundingObject`: Defines whether the tree should have a bounding object.
+
+## Cypress
+
+A cypress tree with optional boundingObject.
+
+%figure
+
+![Cypress](images/objects/trees/Cypress/model.png)
+
+%end
+
+Derived from [Solid](../reference/solid.md).
+
+```
+Cypress {
+  SFVec3f    translation           0 0 0
+  SFRotation rotation              0 1 0 0
+  SFString   name                  "cypress tree"
+  SFBool     enableBoundingObject  TRUE
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/objects/trees/protos/Cypress.proto"
+
+> **License**: Creative Commons Attribution 4.0 International License.
+[More information.](https://creativecommons.org/licenses/by/4.0/legalcode)
+
+### Cypress Field Summary
+
+- `enableBoundingObject`: Defines whether the tree should have a bounding object.
+
 ## Forest
 
 Efficient and customizable forest.
@@ -35,6 +95,7 @@ Forest {
   MFVec2f    shape                [ -20 -10, 20 -10, 0 25]
   SFFloat    density              0.2
   SFString   type                 "random"
+  SFInt32    randomSeed           0
   MFString   groundTexture        ["textures/dry_leaf.jpg"]
   SFBool     withSnow             FALSE
   SFFloat    maxHeight            6
@@ -46,6 +107,9 @@ Forest {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/trees/protos/Forest.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 ### Forest Field Summary
 
 - `treesFiles`: Can be used to define the paths to several files in which are defined the positions of the trees (one tree per line, using the format 'X Y Z').
@@ -55,6 +119,8 @@ Forest {
 - `density`: If the forest is defined using the `shape` field, this field defines the density of three to be generated (in trees per meter square).
 
 - `type`: Defines the type of threes, in case of `random` type, the forest will be mixed.
+
+- `randomSeed`: Defines the seed of the random number generator. A value of 0 sets the seed to the node id and a value smaller than 0 sets a time based random seed.
 
 - `groundTexture`: Defines the texture of the forest ground. If this field is empty the forest ground is not displayed.
 
@@ -68,26 +134,125 @@ Forest {
 
 - `minRadius`: Defines the minimum radius of the trees.
 
-## RoundTree
+## Oak
 
-A tree.
+A oak tree with optional boundingObject.
 
 %figure
 
-![RoundTree](images/objects/trees/RoundTree/model.png)
+![Oak](images/objects/trees/Oak/model.png)
 
 %end
 
 Derived from [Solid](../reference/solid.md).
 
 ```
-RoundTree {
-  SFVec3f  translation 0 3 0
-  SFString name        "round tree"
+Oak {
+  SFVec3f    translation           0 0 0
+  SFRotation rotation              0 1 0 0
+  SFString   name                  "oak tree"
+  SFBool     enableBoundingObject  TRUE
 }
 ```
 
-> **File location**: "WEBOTS\_HOME/projects/objects/trees/protos/RoundTree.proto"
+> **File location**: "WEBOTS\_HOME/projects/objects/trees/protos/Oak.proto"
+
+> **License**: Creative Commons Attribution 4.0 International License.
+[More information.](https://creativecommons.org/licenses/by/4.0/legalcode)
+
+### Oak Field Summary
+
+- `enableBoundingObject`: Defines whether the tree should have a bounding object.
+
+## PalmTree
+
+A palm tree with optional boundingObject.
+
+%figure
+
+![PalmTree](images/objects/trees/PalmTree/model.png)
+
+%end
+
+Derived from [Solid](../reference/solid.md).
+
+```
+PalmTree {
+  SFVec3f    translation           0 0 0
+  SFRotation rotation              0 1 0 0
+  SFString   name                  "palm tree"
+  SFBool     enableBoundingObject  TRUE
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/objects/trees/protos/PalmTree.proto"
+
+> **License**: Creative Commons Attribution 4.0 International License.
+[More information.](https://creativecommons.org/licenses/by/4.0/legalcode)
+
+### PalmTree Field Summary
+
+- `enableBoundingObject`: Defines whether the tree should have a bounding object.
+
+## Pine
+
+A pine tree with optional boundingObject.
+
+%figure
+
+![Pine](images/objects/trees/Pine/model.png)
+
+%end
+
+Derived from [Solid](../reference/solid.md).
+
+```
+Pine {
+  SFVec3f    translation           0 0 0
+  SFRotation rotation              0 1 0 0
+  SFString   name                  "pine tree"
+  SFBool     enableBoundingObject  TRUE
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/objects/trees/protos/Pine.proto"
+
+> **License**: Creative Commons Attribution 4.0 International License.
+[More information.](https://creativecommons.org/licenses/by/4.0/legalcode)
+
+### Pine Field Summary
+
+- `enableBoundingObject`: Defines whether the tree should have a bounding object.
+
+## Sassafras
+
+A sassafras tree with optional boundingObject.
+
+%figure
+
+![Sassafras](images/objects/trees/Sassafras/model.png)
+
+%end
+
+Derived from [Solid](../reference/solid.md).
+
+```
+Sassafras {
+  SFVec3f    translation           0 0 0
+  SFRotation rotation              0 1 0 0
+  SFString   name                  "sassafras tree"
+  SFBool     enableBoundingObject  TRUE
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/objects/trees/protos/Sassafras.proto"
+
+> **License**: Creative Commons Attribution 4.0 International License.
+[More information.](https://creativecommons.org/licenses/by/4.0/legalcode)
+
+### Sassafras Field Summary
+
+- `enableBoundingObject`: Defines whether the tree should have a bounding object.
 
 ## SimpleTree
 
@@ -130,6 +295,9 @@ SimpleTree {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/trees/protos/SimpleTree.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 
 ### SimpleTree Field Summary
 
@@ -174,6 +342,9 @@ Tree {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/trees/protos/Tree.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 
 ### Tree Field Summary
 

@@ -25,6 +25,9 @@ Desk {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/tables/protos/Desk.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 ### Desk Field Summary
 
 - `color`: Defines the color of the desk.
@@ -55,6 +58,9 @@ RoundTable {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/tables/protos/RoundTable.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 
 ### RoundTable Field Summary
 
@@ -92,6 +98,9 @@ Table {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/tables/protos/Table.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 
 ### Table Field Summary
 

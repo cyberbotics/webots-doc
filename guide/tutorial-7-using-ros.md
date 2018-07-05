@@ -2,7 +2,7 @@
 
 This tutorial explains how to use the nodes from the `webots_ros` package provided with Webots.
 
-These examples were tested with ROS `kinetic` and `lunar` on Linux.
+These examples were tested with ROS `melodic` and `kinetic` on Linux.
 There is no warranty they will work if you use a different platform or an ancient distribution of ROS.
 
 ### Installing ROS
@@ -14,14 +14,14 @@ To install the latest version of ROS on Ubuntu use the following commands:
 sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
 sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
 sudo apt-get update
-sudo apt-get install ros-kinetic-desktop-full
-sudo apt-get install ros-kinetic-sensor-msgs
+sudo apt-get install ros-melodic-desktop-full
+sudo apt-get install ros-melodic-sensor-msgs
 sudo rosdep init
 rosdep update
 ```
 
 For more information or to install it on another platform please read [http://wiki.ros.org/ROS/Installation](http://wiki.ros.org/ROS/Installation).
-Unless you need older version for some other application, you should choose the latest distribution (Kinetic Kame or Lunar Loggerhead).
+Unless you need older version for some other application, you should choose the latest distribution (Melodic Morenia or Kinetic Kame).
 
 > **Note**: If you never used the ROS framework before, it is strongly recommended to follow some tutorials from: [http://wiki.ros.org/ROS/Tutorials](http://wiki.ros.org/ROS/Tutorials).
 These tutorials will also help you set up your ROS environment and initialize your catkin workspace.
@@ -106,4 +106,4 @@ The `robot_information_parser` node is the most basic one and is a good base to 
 The `complete_test` node doesn't show any particular application but contains an almost exhaustive list of the Webots API functions.
 
 All the functions from the Webots API have their corresponding services or topics.
-You can find in the `Reference Manual` the definitions of all the services and topics associated to each device.
+You can find in the [Reference Manual](../reference/nodes-and-api-functions.md) the definitions of all the services and topics associated to each device.

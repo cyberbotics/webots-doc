@@ -17,7 +17,7 @@ This will make the system numerically more robust and less susceptible to stabil
 This will also make the system look more *spongy* so a tradeoff has to be found.
 5. Avoid making robots (or other objects) move faster than reasonably for the time step (`WorldInfo.basicTimeStep`).
 Since contact forces are computed and applied only at every time step, too fast moving bodies can penetrate each other in unrealistic ways.
-6. Avoid building mechanical loops by using `Connector` nodes.
+6. Avoid building mechanical loops by using [Connector](../reference/connector.md) nodes.
 The mechanical loops may cause constraints to fight each other and generate strange forces in the system that can swamp the normal forces.
 For example, an affected body might fly around as though it has life on its own, with complete disregard for gravity.
 
@@ -25,8 +25,7 @@ For example, an affected body might fly around as though it has life on its own,
 
 In order for Webots simulation results to be reproducible, the following conditions must be fulfilled:
 
-1. Each simulation must be restarted either by pushing the `Revert` button, or by using the `wb_supervisor_simulation_revert` function, or by restarting Webots.
-Any other method for resetting the simulation will not reset the physics (velocity, inertia, etc.) and other simulation data, hence the simulation state will be reset only partly.
+1. Each simulation must be restarted either by pushing the `Reload` button, or by using the `wb_supervisor_world_reload` function, or by restarting Webots.
 The random seeds used by Webots internally are reset for each simulation restarted with one of the above methods.
 2. The `synchronization` flag of every robot and supervisor must be TRUE.
 Otherwise the number of physics steps per control step may vary with the current CPU load and hence the robot's behavior may also vary.
@@ -39,8 +38,10 @@ Different OS platforms and different Webots versions may result small numerical 
 5. Webots physics must run in single thread mode.
 The number of threads used by the physics engine (ODE) can be changed either globally in the [preferences](preferences.md) or using the `WorldInfo.basicTimeStep` field.
 It should be set to 1.
+6. The Webots random number generator should have a fixed seed.
+The seed is defined in the `WorldInfo.randomSeed` field, it should be non-negative to avoid non-replicable time based seed.
 
-If the five above conditions are met, Webots simulations become replicable.
+If the six above conditions are met, Webots simulations become replicable.
 This means that after the same number of steps two simulations will have exactly the same internal state.
 Hence if both simulation are saved using the `Save as...` button, the resulting files will be identical.
 This is true independently of the simulation mode used to execute the simulation: `Step`, `Real-Time`, `Run` or `Fast`.
@@ -51,12 +52,13 @@ This is also true whether or not sensor noise is used (see below).
 There are two sources of noise in Webots: the *sensor/actuator noise* and the *physics engine noise*.
 The amount of sensor/actuator noise can be changed (or removed) by the user (see below).
 The physics engine's noise cannot be changed because it is necessary for the realism of the simulation.
-To completely remove the sensor/actuator noise the following field values must be reset:
+To completely remove the sensor/actuator noise the following field values must be set to 0:
 
-1. In the `lookupTable`s: the third column of each `lookupTable` in the .wbt and .proto files must be reset to 0.
-2. In the `GPS` nodes: the `resolution` field must be reset to 0.
-3. In the `Camera` nodes: the `colorNoise` and the `rangeNoise` fields must be reset to 0.
-4. In the `DifferentialWheels` nodes: the value of `slipNoise` must be reset to 0 and the value of `encoderNoise` must be reset to -1.
+1. `lookupTable` fields: the third column of each `lookupTable` field be set to 0.
+2. [GPS](../reference/gps.md) nodes: the `accuracy` field must be set to 0.
+3. [Camera](../reference/camera.md), [Lidar](../reference/lidar.md) and [RangeFinder](../reference/rangefinder.md) nodes: the `noise` field must be set to 0.
+4. [Radar](../reference/radar.md) nodes: the `rangeNoise`, `speedNoise` and `angularNoise` fields must be set to 0.
+5. [Receiver](../reference/receiver.md) nodes: the `signalStrengthNoise` and `directionNoise` fields must be set to 0.
 
 ### How Can I Create a Passive Joint?
 
@@ -116,28 +118,28 @@ You will find the description about the ODE functions on [this page](http://ode-
 
 It is more accurate to specify the mass if it is known.
 If you are modeling a real robot it is sometimes possible to find the mass values in the robot's specifications.
-If you specify the densities, Webots will use the volume of each `boundingObject` multiplied by the density of the corresponding `Physics` node to compute each mass.
+If you specify the densities, Webots will use the volume of each `boundingObject` multiplied by the density of the corresponding [Physics](../reference/physics.md) node to compute each mass.
 This may be less accurate because `boundingObject`s are often rough approximations.
 
 ### How to Get a Realisitc and Efficient Rendering?
 
-The quality of the rendering depends on the `Shapes` resolution, on the setup of the `Materials` and on the setup of the `Lights`.
+The quality of the rendering depends on the [Shapes](../reference/shape.md) resolution, on the setup of the [Materials](../reference/material.md) and on the setup of the [Lights](../reference/light.md).
 
 The bigger the number of vertices is, the slower the simulation is (except obviously in `fast` mode).
 A tradeoff has to be found between these two components.
-To be efficient, `Shapes` should have a reasonable resolution.
-If a rule should be given, a `Shape` shouldn't exceed 1000 vertices.
-Exporting a `Shape` from a CAD software generates often meshes having a huge resolution.
+To be efficient, [Shapes](../reference/shape.md) should have a reasonable resolution.
+If a rule should be given, a [Shape](../reference/shape.md) shouldn't exceed 1000 vertices.
+Exporting a [Shape](../reference/shape.md) from a CAD software generates often meshes having a huge resolution.
 Reducing them to low poly meshes is recommended.
 
 The rendering is also closely related to the `Materials`.
-To set a `Material` without texture, set only its `Appearance` node.
+To set a [Material](../reference/material.md) without texture, set only its [Appearance](../reference/appearance.md) node.
 Then you can play with the `diffuseColor` field to set its color (avoid to use pure colors, balancing the RGB components gives better results).
-To set a `Material` with texture, set only its `ImageTexture` node.
+To set a [Material](../reference/material.md) with texture, set only its [ImageTexture](../reference/imagetexture.md) node.
 Eventually, the `specularColor` field can be set to a gray value to set a reflection on the object.
 The other fields (especially the `ambientIntensity` and the `emissiveColor` fields) shouldn't be modified except in specific situations.
 
-The `color` field of the `ElevationGrid` shouldn't be used for a realistic rendering because it is not affected by the ambient light with the same way as the other `Shapes`.
+The `color` field of the [ElevationGrid](../reference/elevationgrid.md) shouldn't be used for a realistic rendering because it is not affected by the ambient light with the same way as the other [Shapes](../reference/shape.md).
 
 Here is a methodology to set up the lights:
 
@@ -147,5 +149,5 @@ Often, a single directional light pointing down is sufficient.
 3. Increase the `ambientIntensity` of the main light.
 The result will be the appearance of the objects when they are in shadows.
 4. Switch on the shadows if required.
-The shadows are particularily costly, and are strongly related to the `Shapes` resolution.
+The shadows are particularily costly, and are strongly related to the [Shapes](../reference/shape.md) resolution.
 5. Increase the `intensity` of each lamp.

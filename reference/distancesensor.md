@@ -387,12 +387,14 @@ The `wb_distance_sensor_get_aperture` function returns the aperture of the dista
 ```c
 #include <webots/distance_sensor.h>
 
-#define WB_DISTANCE_SENSOR_GENERIC   0
-#define WB_DISTANCE_SENSOR_INFRA_RED 1
-#define WB_DISTANCE_SENSOR_SONAR     2
-#define WB_DISTANCE_SENSOR_LASER     3
+typedef enum {
+  WB_DISTANCE_SENSOR_GENERIC,
+  WB_DISTANCE_SENSOR_INFRA_RED,
+  WB_DISTANCE_SENSOR_SONAR,
+  WB_DISTANCE_SENSOR_LASER
+} WbDistanceSensorType;
 
-int wb_distance_sensor_get_type(WbDeviceTag tag);
+WbDistanceSensorType wb_distance_sensor_get_type(WbDeviceTag tag);
 ```
 
 %tab-end
@@ -404,9 +406,9 @@ int wb_distance_sensor_get_type(WbDeviceTag tag);
 
 namespace webots {
   class DistanceSensor : public Device {
-    enum {GENERIC, INFRA_RED, SONAR, LASER};
+    typedef enum {GENERIC, INFRA_RED, SONAR, LASER} Type;
 
-    int getType() const;
+    Type getType() const;
     // ...
   }
 }

@@ -25,6 +25,9 @@ RobotstadiumGoal {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/robotstadium/protos/RobotstadiumGoal.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 ### RobotstadiumGoal Field Summary
 
 - `postRadius`: Defines the radius of the goal posts.
@@ -58,6 +61,9 @@ RobotstadiumSoccerField {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/robotstadium/protos/RobotstadiumSoccerField.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 
 ### RobotstadiumSoccerField Field Summary
 

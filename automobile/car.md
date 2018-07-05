@@ -32,7 +32,7 @@ See section [Engine models](driver-library.md#engine-models) for more informatio
 - `engineSound`: Defines the sound used to simulate the engine sound, if the string is empty the engine sound is not simulated.
 - `engineSoundRpmReference`: Defines the reference rotation per minutes of the engine sound.
 See the [Engine sound](#engine-sound) paragraph for more information about the engine sound simulation.
-- `brakeCoefficient`: Defines the maximum `dampingConstant` applied by the brake on the wheels joint.
+- `brakeCoefficient`: Defines the maximum `dampingConstant` applied by the [Brake](../reference/brake.md) on the wheels joint.
 - `time0To100`: Defines the time to accelerate from 0 to 100 km/h in seconds, this value is used to compute the wheels acceleration when controlling the car in cruising speed thanks to the [driver](driver-library.md)
 - `engineMaxTorque`: Defines the maximum torque of the motor in `Nm` used to compute the electric engine torque.
 - `engineMaxPower`: Defines the maximum power of the motor in `W` used to compute the electric engine torque.
@@ -56,7 +56,7 @@ The amplitude and frequency of the sound is modulated in function of the rpm and
 
 ### VehicleLights
 
-The `VehicleLights` PROTO is used to add all the models of the regular lights present in a car (based on `LED` nodes).
+The `VehicleLights` PROTO is used to add all the models of the regular lights present in a car (based on [LED](../reference/led.md) nodes).
 For each light you can specify its shape and the color emitted when the light is switched on.
 Of course if you don't need to have lights you can safely remove the `VehicleLights` PROTO from `extensionSlot`.
 
@@ -114,7 +114,7 @@ For the three other sensor slots, the positions are different for each model (be
 
 Just like the car models presented above, two generic heavy-weights PROTO inherit from the `Car` PROTO: a bus and a truck.
 In the case of the truck, a trailer can be present or not.
-The latter is the `endPoint` of a `HingeJoint` allowing the trailer to freely rotate around its attachment point.
+The latter is the `endPoint` of a [HingeJoint](../reference/hingejoint.md) allowing the trailer to freely rotate around its attachment point.
 There are currently two trailers to be used: a regular one and a tank shaped model.
 
 %figure "Models of the bus and truck created using the `Car` PROTO"
@@ -138,31 +138,37 @@ The rest of the positions can be seen in the [following table](#positions-of-the
 
 ### Simple Vehicles
 
-In adition to those controlable models of vehicle, several non-controlable vehicles (called 'simple') based on the `Solid` node are available.
+In addition to the controllable models of vehicle, several kinematic vehicles (called 'simple') are available.
 
-> **Note**: These vehicles can be moved kinematically using a Supervisor. These are for example the vehicles used by the SUMO interface.
+> **Note**: These vehicles can be moved kinematically using a [Supervisor](../reference/supervisor.md). These are for example the vehicles used by the [SUMO interface](sumo-interface.md).
 
 #### CarSimple
 
 For each model of [Car](#car), a 'simple' PROTO is present too.
-These simplified kinematic PROTO models are not based on a `Robot` node but on a `Solid` node, it is therefore not possible to add sensors or control them.
-They are made to represent non-moving parked vehicles or to be moved using a Supervisor because they are much faster to simulate than the normal PROTO models.
+They should be used to model parked vehicles (non-moving) or vehicles moved by a [Supervisor](../reference/supervisor.md) changing their position and orientation. They are much faster to simulate than the normal PROTO models.
 
 ```
  PROTO CarSimple {
-   field       SFVec3f    translation             0 0.4 0
-   field       SFRotation rotation                0 1 0 0
-   field       SFColor    color                   0.0 0.25 0.65
-   field       MFColor    recognitionColors       [ 0.0 0.25 0.65, 0.1 0.1 0.1 ]
-   field       MFString   plate                   "textures/plate.jpg"
-   field       SFString   name                    "vehicle"
-   field       SFBool     wheelBoundingObject     FALSE
+  SFVec3f    translation             0 0.4 0
+  SFRotation rotation                0 1 0 0
+  SFColor    color                   0.0 0.25 0.65
+  MFColor    recognitionColors       [ 0.0 0.25 0.65, 0.1 0.1 0.1 ]
+  MFString   plate                   "textures/plate.jpg"
+  SFString   name                    "vehicle"
+  SFString   controller              ""
+  SFString   controllerArgs          ""
+  MFNode     sensorsSlot...          [ ]
+  SFBool     wheelBoundingObject     FALSE
  }
 ```
 
 ##### CarSimple Field Summary
 
-- `recognitionColors`: If not empty, this vehicle may be recognized by any Camera device with recognition capability (i.e. with a Recognition node).
+- `controller`: Defines the controller of the vehicle.
+The controller can be used for example to collect sensors data while the vehicle is moved by the [SUMO interface](sumo-interface.md).
+If no controller is needed, you should leave the `controller` field empty.
+It is not recommended to use the `void` controller for efficiency reasons.
+- `sensorsSlot...`: These slots can be used to add sensor capabilities to the vehicle.
 - `wheelBoundingObject`: Allows the physical geometry of the wheels to be enabled.
 
 CarSimple is not an actual PROTO but defines the common structure of all the 'simple' versions of the cars.
@@ -182,7 +188,7 @@ The different simple versions of the car PROTO nodes represent the different mod
 
 #### TwoWheelerSimple
 
-Due to the presence of driver, the TwoWheelerSimple PROTO nodes have a slightly different organisation.
+Due to the presence of driver, the TwoWheelerSimple PROTO nodes have a slightly different organization.
 Similar to CarSimple, the TwoWheelerSimple PROTO displayed bellow is just a common structure for the different versions of the two wheelers.
 
 ```

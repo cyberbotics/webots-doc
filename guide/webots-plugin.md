@@ -11,4 +11,4 @@ For example, a wind can be simulated as a constant unidirectional force applied 
 The reactor of an airplane can be simulated by adding a force of varying intensity, etc.
 
 Webots distribution comes with some implementations and usage examples for these plugins.
-You will find more info on this topic in Webots Reference Manual.
+You will find more info on this topic in [Webots Reference Manual](../reference/physics-plugin.md).

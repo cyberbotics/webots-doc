@@ -2,7 +2,7 @@
 
 The *MATLAB*<sup>TM</sup> API for Webots is very similar to the C API.
 The functions names are identical, only the type and number of parameters differs slightly in some cases.
-The MATLAB functions and prototypes are described in Webots Reference Manual.
+The MATLAB functions and prototypes are described in Webots [Reference Manual](../reference/index.md).
 Note that unlike with the C API, there are no `wb_robot_init` and `wb_robot_cleanup` functions in the MATLAB API.
 The necessary initialization and cleanup are automatically carried out respectively before entering and after leaving the controller code.
 
@@ -73,4 +73,4 @@ So each time MATLAB will run into a `keyboard` statement, it will return control
 
 At this point, it is also possible to restart the controller by calling its m-file from MATLAB prompt.
 Note that this will restart the controller only, not the whole simulation, so the current robot and motor positions will be preserved.
-If you want to restart the whole simulation you need to use the `Revert` button as usual.
+If you want to restart the whole simulation you need to use the `Reload` button as usual.

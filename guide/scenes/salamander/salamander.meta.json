@@ -2,16 +2,16 @@
   "name": "salamander", 
   "devices": [
     {
-      "transformID": "n13768", 
+      "transformID": "n13861", 
       "name": "motor_1", 
-      "maxPosition": 0.0001, 
+      "maxPosition": 1.13446, 
       "position": 0, 
       "type": "RotationalMotor", 
-      "minPosition": -0.0001, 
+      "minPosition": -1.13446, 
       "axis": "0 1 0"
     }, 
     {
-      "transformID": "n13889", 
+      "transformID": "n13876", 
       "name": "motor_2", 
       "maxPosition": 1.13446, 
       "position": 0, 
@@ -20,7 +20,7 @@
       "axis": "0 1 0"
     }, 
     {
-      "transformID": "n13904", 
+      "transformID": "n13891", 
       "name": "motor_3", 
       "maxPosition": 1.13446, 
       "position": 0, 
@@ -29,7 +29,7 @@
       "axis": "0 1 0"
     }, 
     {
-      "transformID": "n13919", 
+      "transformID": "n14026", 
       "name": "motor_4", 
       "maxPosition": 1.13446, 
       "position": 0, 
@@ -38,16 +38,16 @@
       "axis": "0 1 0"
     }, 
     {
-      "transformID": "n13934", 
+      "transformID": "n14041", 
       "name": "motor_5", 
-      "maxPosition": 0.0001, 
+      "maxPosition": 1.13446, 
       "position": 0, 
       "type": "RotationalMotor", 
-      "minPosition": -0.0001, 
+      "minPosition": -1.13446, 
       "axis": "0 1 0"
     }, 
     {
-      "transformID": "n14055", 
+      "transformID": "n14056", 
       "name": "motor_6", 
       "maxPosition": 1.13446, 
       "position": 0, 
@@ -56,25 +56,7 @@
       "axis": "0 1 0"
     }, 
     {
-      "transformID": "n14070", 
-      "name": "motor_7", 
-      "maxPosition": 1.13446, 
-      "position": 0, 
-      "type": "RotationalMotor", 
-      "minPosition": -1.13446, 
-      "axis": "0 1 0"
-    }, 
-    {
-      "transformID": "n14085", 
-      "name": "motor_8", 
-      "maxPosition": 1.13446, 
-      "position": 0, 
-      "type": "RotationalMotor", 
-      "minPosition": -1.13446, 
-      "axis": "0 1 0"
-    }, 
-    {
-      "transformID": "n13783", 
+      "transformID": "n13755", 
       "name": "motor_leg_1", 
       "maxPosition": 0, 
       "position": 0, 
@@ -83,7 +65,7 @@
       "axis": "1 0 0"
     }, 
     {
-      "transformID": "n13836", 
+      "transformID": "n13808", 
       "name": "motor_leg_2", 
       "maxPosition": 0, 
       "position": 0, 
@@ -92,7 +74,7 @@
       "axis": "1 0 0"
     }, 
     {
-      "transformID": "n13949", 
+      "transformID": "n13920", 
       "name": "motor_leg_3", 
       "maxPosition": 0, 
       "position": 0, 
@@ -101,7 +83,7 @@
       "axis": "1 0 0"
     }, 
     {
-      "transformID": "n14002", 
+      "transformID": "n13973", 
       "name": "motor_leg_4", 
       "maxPosition": 0, 
       "position": 0, 
@@ -110,17 +92,17 @@
       "axis": "1 0 0"
     }, 
     {
-      "transformID": "n13755", 
+      "transformID": "n13728", 
       "type": "DistanceSensor", 
       "name": "ds_left"
     }, 
     {
-      "transformID": "n13760", 
+      "transformID": "n13733", 
       "type": "DistanceSensor", 
       "name": "ds_right"
     }, 
     {
-      "transformID": "n13741", 
+      "transformID": "n13714", 
       "type": "GPS", 
       "name": "gps"
     }

@@ -25,6 +25,9 @@ CautionPanel {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/CautionPanel.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 ### CautionPanel Field Summary
 
 - `signImage`: Defines the texture used for the sign.
@@ -56,6 +59,9 @@ CautionSign {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/CautionSign.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 
 ### CautionSign Field Summary
 
@@ -96,7 +102,8 @@ ControlledStreetLight {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/ControlledStreetLight.proto"
 
-> **License**: Creative Commons Attribution 3.0 United States License (original model by Andrew Kator & Jennifer Legaz)
+> **License**: Creative Commons Attribution 3.0 United States License (original model by Andrew Kator & Jennifer Legaz).
+[More information.](https://creativecommons.org/licenses/by/3.0/legalcode)
 
 ### ControlledStreetLight Field Summary
 
@@ -137,6 +144,9 @@ CrossRoadsTrafficLight {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/CrossRoadsTrafficLight.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 
 ### CrossRoadsTrafficLight Field Summary
 
@@ -191,6 +201,9 @@ DirectionPanel {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/DirectionPanel.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 ### DirectionPanel Field Summary
 
 - `width`: Defines the width of the panel.
@@ -241,6 +254,9 @@ DivergentIndicator {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/DivergentIndicator.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 ### DivergentIndicator Field Summary
 
 - `texture`: Defines the texture used by the divergent indicator.
@@ -276,6 +292,9 @@ ExitPanel {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/ExitPanel.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 ### ExitPanel Field Summary
 
 - `signImage`: Defines the texture used for the sign.
@@ -307,6 +326,9 @@ ExitSign {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/ExitSign.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 
 ### ExitSign Field Summary
 
@@ -343,6 +365,9 @@ GenericTrafficLight {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/GenericTrafficLight.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 
 ### GenericTrafficLight Field Summary
 
@@ -387,6 +412,9 @@ HighwayPole {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/HighwayPole.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 
 ### HighwayPole Field Summary
 
@@ -438,6 +466,9 @@ HighwaySign {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/HighwaySign.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 ### HighwaySign Field Summary
 
 - `height`: Defines the height of the sign.
@@ -475,6 +506,9 @@ OrderPanel {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/OrderPanel.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 ### OrderPanel Field Summary
 
 - `signImage`: Defines the texture used for the sign.
@@ -507,6 +541,9 @@ OrderSign {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/OrderSign.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 ### OrderSign Field Summary
 
 - `height`: Defines the height of the sign.
@@ -536,10 +573,14 @@ ParkingLines {
   SFInt32    numberOfCarParks 5
   SFFloat    carParkLength    4.8
   SFFloat    carParkWidth     2.4
+  MFString   texture          "textures/parking_lines.png"
 }
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/ParkingLines.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 
 ### ParkingLines Field Summary
 
@@ -548,6 +589,33 @@ ParkingLines {
 - `carParkLength`: Defines the length of one park.
 
 - `carParkWidth`: Defines the width of one park.
+
+- `texture`: Defines the texture used for the lines.
+
+## ParkingMeter
+
+A parking meter.
+
+%figure
+
+![ParkingMeter](images/objects/traffic/ParkingMeter/model.png)
+
+%end
+
+Derived from [Solid](../reference/solid.md).
+
+```
+ParkingMeter {
+  SFVec3f    translation 0 0 0
+  SFRotation rotation    0 1 0 0
+  SFString   name        "parking meter"
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/ParkingMeter.proto"
+
+> **License**: Creative Commons Attribution 4.0 International License.
+[More information.](https://creativecommons.org/licenses/by/4.0/legalcode)
 
 ## PedestrianCrossing
 
@@ -563,21 +631,27 @@ Derived from [Solid](../reference/solid.md).
 
 ```
 PedestrianCrossing {
-  SFVec3f    translation      0 0 0
-  SFRotation rotation         0 1 0 0
-  SFString   name             "pedestrian crossing"
-  SFVec2f    size             20 8
-  SFInt32    textureFiltering 4
+  SFVec3f    translation          0 0 0
+  SFRotation rotation             0 1 0 0
+  SFString   name                 "pedestrian crossing"
+  SFVec2f    size                 20 8
+  SFInt32    textureFiltering     4
+  SFBool     enableBoundingObject TRUE
 }
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/PedestrianCrossing.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 
 ### PedestrianCrossing Field Summary
 
 - `size`: Defines the size of the pedestrian crossing.
 
 - `textureFiltering`: Defines the filtering level for the texture used for the pedestrian crossing.
+
+- `enableBoundingObject`: Defines whether the pedestrian crossing should have a bounding object.
 
 ## Pole
 
@@ -601,6 +675,9 @@ Pole {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/Pole.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 
 ### Pole Field Summary
 
@@ -631,6 +708,9 @@ RectangularPanel {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/RectangularPanel.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 
 ### RectangularPanel Field Summary
 
@@ -665,6 +745,9 @@ SignPole {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/SignPole.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 
 ### SignPole Field Summary
 
@@ -701,6 +784,9 @@ SpeedLimitPanel {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/SpeedLimitPanel.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 ### SpeedLimitPanel Field Summary
 
 - `signImage`: Defines the texture used for the sign.
@@ -732,6 +818,9 @@ SpeedLimitSign {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/SpeedLimitSign.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 
 ### SpeedLimitSign Field Summary
 
@@ -768,6 +857,9 @@ StopPanel {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/StopPanel.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 ### StopPanel Field Summary
 
 - `signImage`: Defines the texture used for the sign.
@@ -799,6 +891,9 @@ StopSign {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/StopSign.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 
 ### StopSign Field Summary
 
@@ -841,7 +936,8 @@ StreetLight {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/StreetLight.proto"
 
-> **License**: Creative Commons Attribution 3.0 United States License (original model by Andrew Kator & Jennifer Legaz)
+> **License**: Creative Commons Attribution 3.0 United States License (original model by Andrew Kator & Jennifer Legaz).
+[More information.](https://creativecommons.org/licenses/by/3.0/legalcode)
 
 ### StreetLight Field Summary
 
@@ -882,6 +978,9 @@ TrafficCone {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/TrafficCone.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 ## TrafficLight
 
 Basic traffic light without lamp.
@@ -909,6 +1008,9 @@ TrafficLight {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/TrafficLight.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 
 ### TrafficLight Field Summary
 
@@ -941,6 +1043,9 @@ TrafficLightArrowLampGeometry {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/TrafficLightArrowLampGeometry.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 ## TrafficLightBigPole
 
 A big metallic pole above the road for traffic lights.
@@ -965,6 +1070,9 @@ TrafficLightBigPole {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/TrafficLightBigPole.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 
 ### TrafficLightBigPole Field Summary
 
@@ -1002,6 +1110,9 @@ TrafficLightHorizontal {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/TrafficLightHorizontal.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 ### TrafficLightHorizontal Field Summary
 
 - `red_light`: Defines the name of the red LED device.
@@ -1033,6 +1144,39 @@ TrafficLightStandardLampGeometry {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/TrafficLightStandardLampGeometry.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
+## WorkBarrier
+
+A work barrier with optional physics.
+
+%figure
+
+![WorkBarrier](images/objects/traffic/WorkBarrier/model.png)
+
+%end
+
+Derived from [Solid](../reference/solid.md).
+
+```
+WorkBarrier {
+  SFVec3f    translation   0 0 0
+  SFRotation rotation      0 1 0 0
+  SFString   name          "work barrier"
+  SFBool     enablePhysics FALSE
+}
+```
+
+> **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/WorkBarrier.proto"
+
+> **License**: Creative Commons Attribution 4.0 International License.
+[More information.](https://creativecommons.org/licenses/by/4.0/legalcode)
+
+### WorkBarrier Field Summary
+
+- `enablePhysics`: Defines whether the barrier should have physics.
+
 ## YieldPanel
 
 Traffic panel: Yield panel.
@@ -1058,6 +1202,9 @@ YieldPanel {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/YieldPanel.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 
 ### YieldPanel Field Summary
 
@@ -1092,6 +1239,9 @@ YieldSign {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/traffic/protos/YieldSign.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 
 ### YieldSign Field Summary
 

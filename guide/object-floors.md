@@ -31,6 +31,9 @@ CircleArena {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/floors/protos/CircleArena.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 ### CircleArena Field Summary
 
 - `radius`: Defines the radius of the arena.
@@ -77,6 +80,9 @@ Floor {
 
 > **File location**: "WEBOTS\_HOME/projects/objects/floors/protos/Floor.proto"
 
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
+
 ### Floor Field Summary
 
 - `size`: Defines the size of the floor.
@@ -120,6 +126,9 @@ RectangleArena {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/floors/protos/RectangleArena.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 
 ### RectangleArena Field Summary
 
@@ -171,6 +180,9 @@ UnevenTerrain {
 ```
 
 > **File location**: "WEBOTS\_HOME/projects/objects/floors/protos/UnevenTerrain.proto"
+
+> **License**: Copyright Cyberbotics Ltd. Licensed for use only with Webots.
+[More information.](https://cyberbotics.com/webots_assets_license)
 
 ### UnevenTerrain Field Summary
 

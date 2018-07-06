@@ -160,7 +160,7 @@ It may be possible that Windows Defender SmartScreen will display a warning when
 %end
 
 This is likely caused by the fact that the release of Webots is recent and was not yet approved by Microsoft.
-If the Webots installer was downloaded from the official Cyberbotics web site using the secure HTTPS protocol, then it is safe to install it.
+If the Webots installer was downloaded from the [official Cyberbotics web site](https://www.cyberbotics.com/download) using the secure HTTPS protocol, then it is safe to install it.
 You can pass this warning and install Webots by clicking on the "More info" link and the "Run anyway" button depicted below:
 
 %figure "Windows SmartScreen pass"

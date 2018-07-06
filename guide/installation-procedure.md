@@ -165,6 +165,7 @@ You can pass this warning and install Webots by clicking on the "More info" link
 
 %figure "Windows SmartScreen pass"
 ![windows_smartscreen_2.png](images/windows_smartscreen_2.png)
+%end
 
 ### Installation on macOS
 

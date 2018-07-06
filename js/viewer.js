@@ -227,6 +227,7 @@ function aClick(el) {
   setupUrl(el.getAttribute('href'));
   getMDFile();
   updateBrowserUrl();
+  updateContributionBanner();
 }
 
 function redirectImages(node) {
@@ -290,7 +291,7 @@ function addContributionBanner() {
   // if we're on the website we need to move the banner down by the height of the navbar
   var displacement = isCyberboticsUrl ? '44px' : '0px';
 
-  var url = 'https://github.com/omichel/webots-doc/edit/master/' + localSetup.book + '/' + localSetup.page + '.md'
+  var url = 'https://github.com/omichel/webots-doc/edit/master/' + localSetup.book + '/' + localSetup.page + '.md';
   // append contribution sticker to primary doc element
   document.querySelector('#center').innerHTML += '<div style="top:' + displacement + '" class="contribution-banner">' +
                                                  'Found an error?' +
@@ -306,6 +307,19 @@ function addContributionBanner() {
   document.querySelector('#contribution-close').onclick = function() {
     contributionBanner.parentNode.removeChild(contributionBanner);
   };
+}
+
+function updateContributionBanner() {
+  var contributionBanner = document.querySelector('.contribution-banner');
+  if (contributionBanner) {
+    var url = 'https://github.com/omichel/webots-doc/edit/master/' + localSetup.book + '/' + localSetup.page + '.md';
+    contributionBanner.innerHTML = 'Found an error?' +
+                                   '<a target="_blank" href="' + url + '"> ' +
+                                   'Contribute on GitHub!' +
+                                   '<span class=github-logo />' +
+                                   '</a>' +
+                                   '<p id="contribution-close">X</p>';
+  }
 }
 
 function addNavigationToBlogIfNeeded() {

@@ -293,14 +293,8 @@ function addContributionBanner() {
 
   var url = 'https://github.com/omichel/webots-doc/edit/master/' + localSetup.book + '/' + localSetup.page + '.md';
   // append contribution sticker to primary doc element
-  document.querySelector('#center').innerHTML += '<div style="top:' + displacement + '" class="contribution-banner">' +
-                                                 'Found an error?' +
-                                                 '<a target="_blank" href="' + url + '"> ' +
-                                                 'Contribute on GitHub!' +
-                                                 '<span class=github-logo />' +
-                                                 '</a>' +
-                                                 '<p id="contribution-close">X</p>' +
-                                                 '</div>';
+  document.querySelector('#center').innerHTML += '<div style="top:' + displacement + '" class="contribution-banner"></div>';
+  updateContributionBanner();
 
   var contributionBanner = document.querySelector('.contribution-banner');
 

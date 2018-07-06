@@ -313,7 +313,7 @@ function addContributionBanner() {
 function updateContributionBannerUrl() {
   var contributionBanner = document.querySelector('.contribution-banner-url');
   if (contributionBanner)
-    contributionBanner.href = '"https://github.com/omichel/webots-doc/edit/master/' + localSetup.book + '/' + localSetup.page + '.md"';
+    contributionBanner.href = 'https://github.com/omichel/webots-doc/edit/master/' + localSetup.book + '/' + localSetup.page + '.md';
 }
 
 function addNavigationToBlogIfNeeded() {

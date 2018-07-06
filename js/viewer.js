@@ -227,7 +227,7 @@ function aClick(el) {
   setupUrl(el.getAttribute('href'));
   getMDFile();
   updateBrowserUrl();
-  updateContributionBanner();
+  updateContributionBannerUrl();
 }
 
 function redirectImages(node) {
@@ -293,8 +293,15 @@ function addContributionBanner() {
 
   var url = 'https://github.com/omichel/webots-doc/edit/master/' + localSetup.book + '/' + localSetup.page + '.md';
   // append contribution sticker to primary doc element
-  document.querySelector('#center').innerHTML += '<div style="top:' + displacement + '" class="contribution-banner"></div>';
-  updateContributionBanner();
+  document.querySelector('#center').innerHTML += '<div style="top:' + displacement + '" class="contribution-banner">' +
+                                                 'Found an error?' +
+                                                 '<a target="_blank" class="contribution-banner-url" href="https://github.com/omichel/webots-doc"> ' +
+                                                 'Contribute on GitHub!' +
+                                                 '<span class=github-logo />' +
+                                                 '</a>' +
+                                                 '<p id="contribution-close">X</p>' +
+                                                 '</div>';
+  updateContributionBannerUrl();
 
   var contributionBanner = document.querySelector('.contribution-banner');
 
@@ -303,17 +310,10 @@ function addContributionBanner() {
   };
 }
 
-function updateContributionBanner() {
-  var contributionBanner = document.querySelector('.contribution-banner');
-  if (contributionBanner) {
-    var url = 'https://github.com/omichel/webots-doc/edit/master/' + localSetup.book + '/' + localSetup.page + '.md';
-    contributionBanner.innerHTML = 'Found an error?' +
-                                   '<a target="_blank" href="' + url + '"> ' +
-                                   'Contribute on GitHub!' +
-                                   '<span class=github-logo />' +
-                                   '</a>' +
-                                   '<p id="contribution-close">X</p>';
-  }
+function updateContributionBannerUrl() {
+  var contributionBanner = document.querySelector('.contribution-banner-url');
+  if (contributionBanner)
+    contributionBanner.href = '"https://github.com/omichel/webots-doc/edit/master/' + localSetup.book + '/' + localSetup.page + '.md"';
 }
 
 function addNavigationToBlogIfNeeded() {

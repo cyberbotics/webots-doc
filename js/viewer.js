@@ -291,7 +291,6 @@ function addContributionBanner() {
   // if we're on the website we need to move the banner down by the height of the navbar
   var displacement = isCyberboticsUrl ? '44px' : '0px';
 
-  var url = 'https://github.com/omichel/webots-doc/edit/master/' + localSetup.book + '/' + localSetup.page + '.md';
   // append contribution sticker to primary doc element
   document.querySelector('#center').innerHTML += '<div style="top:' + displacement + '" class="contribution-banner">' +
                                                  'Found an error?' +

@@ -2,7 +2,7 @@
   "name": "salamander", 
   "devices": [
     {
-      "transformID": "n13861", 
+      "transformID": "n160", 
       "name": "motor_1", 
       "maxPosition": 1.13446, 
       "position": 0, 
@@ -11,7 +11,7 @@
       "axis": "0 1 0"
     }, 
     {
-      "transformID": "n13876", 
+      "transformID": "n175", 
       "name": "motor_2", 
       "maxPosition": 1.13446, 
       "position": 0, 
@@ -20,7 +20,7 @@
       "axis": "0 1 0"
     }, 
     {
-      "transformID": "n13891", 
+      "transformID": "n190", 
       "name": "motor_3", 
       "maxPosition": 1.13446, 
       "position": 0, 
@@ -29,7 +29,7 @@
       "axis": "0 1 0"
     }, 
     {
-      "transformID": "n14026", 
+      "transformID": "n325", 
       "name": "motor_4", 
       "maxPosition": 1.13446, 
       "position": 0, 
@@ -38,7 +38,7 @@
       "axis": "0 1 0"
     }, 
     {
-      "transformID": "n14041", 
+      "transformID": "n340", 
       "name": "motor_5", 
       "maxPosition": 1.13446, 
       "position": 0, 
@@ -47,7 +47,7 @@
       "axis": "0 1 0"
     }, 
     {
-      "transformID": "n14056", 
+      "transformID": "n355", 
       "name": "motor_6", 
       "maxPosition": 1.13446, 
       "position": 0, 
@@ -56,7 +56,7 @@
       "axis": "0 1 0"
     }, 
     {
-      "transformID": "n13755", 
+      "transformID": "n54", 
       "name": "motor_leg_1", 
       "maxPosition": 0, 
       "position": 0, 
@@ -65,7 +65,7 @@
       "axis": "1 0 0"
     }, 
     {
-      "transformID": "n13808", 
+      "transformID": "n107", 
       "name": "motor_leg_2", 
       "maxPosition": 0, 
       "position": 0, 
@@ -74,7 +74,7 @@
       "axis": "1 0 0"
     }, 
     {
-      "transformID": "n13920", 
+      "transformID": "n219", 
       "name": "motor_leg_3", 
       "maxPosition": 0, 
       "position": 0, 
@@ -83,7 +83,7 @@
       "axis": "1 0 0"
     }, 
     {
-      "transformID": "n13973", 
+      "transformID": "n272", 
       "name": "motor_leg_4", 
       "maxPosition": 0, 
       "position": 0, 
@@ -92,17 +92,17 @@
       "axis": "1 0 0"
     }, 
     {
-      "transformID": "n13728", 
+      "transformID": "n27", 
       "type": "DistanceSensor", 
       "name": "ds_left"
     }, 
     {
-      "transformID": "n13733", 
+      "transformID": "n32", 
       "type": "DistanceSensor", 
       "name": "ds_right"
     }, 
     {
-      "transformID": "n13714", 
+      "transformID": "n13", 
       "type": "GPS", 
       "name": "gps"
     }

@@ -2,7 +2,7 @@
   "name": "hoap2", 
   "devices": [
     {
-      "transformID": "n5188", 
+      "transformID": "n19", 
       "name": "body_joint_1", 
       "maxPosition": 1.5708, 
       "position": 0, 
@@ -11,7 +11,7 @@
       "axis": "-1 0 0"
     }, 
     {
-      "transformID": "n5659", 
+      "transformID": "n490", 
       "name": "head_joint_1", 
       "maxPosition": 1.0472, 
       "position": 0, 
@@ -20,7 +20,7 @@
       "axis": "0 1 0"
     }, 
     {
-      "transformID": "n5669", 
+      "transformID": "n500", 
       "name": "head_joint_2", 
       "maxPosition": 1.0472, 
       "position": 0, 
@@ -29,7 +29,7 @@
       "axis": "1 0 0"
     }, 
     {
-      "transformID": "n5386", 
+      "transformID": "n217", 
       "name": "larm_joint_1", 
       "maxPosition": 2.6354, 
       "position": 0, 
@@ -38,7 +38,7 @@
       "axis": "1 0 0"
     }, 
     {
-      "transformID": "n5401", 
+      "transformID": "n232", 
       "name": "larm_joint_2", 
       "maxPosition": 1.6755, 
       "position": 0, 
@@ -47,7 +47,7 @@
       "axis": "0 1 0"
     }, 
     {
-      "transformID": "n5418", 
+      "transformID": "n249", 
       "name": "larm_joint_3", 
       "maxPosition": 1.5882, 
       "position": 0, 
@@ -56,7 +56,7 @@
       "axis": "0 0 1"
     }, 
     {
-      "transformID": "n5434", 
+      "transformID": "n265", 
       "name": "larm_joint_4", 
       "maxPosition": 0.01745, 
       "position": 0, 
@@ -65,7 +65,7 @@
       "axis": "1 0 0"
     }, 
     {
-      "transformID": "n5459", 
+      "transformID": "n290", 
       "name": "larm_joint_5", 
       "maxPosition": 1.0472, 
       "position": 0, 
@@ -74,7 +74,7 @@
       "axis": "0 0 1"
     }, 
     {
-      "transformID": "n5208", 
+      "transformID": "n39", 
       "name": "lleg_joint_1", 
       "maxPosition": 1.58825, 
       "position": 0, 
@@ -83,7 +83,7 @@
       "axis": "0 1 0"
     }, 
     {
-      "transformID": "n5218", 
+      "transformID": "n49", 
       "name": "lleg_joint_2", 
       "maxPosition": 0.541052, 
       "position": 0, 
@@ -92,7 +92,7 @@
       "axis": "0 0 1"
     }, 
     {
-      "transformID": "n5213", 
+      "transformID": "n44", 
       "name": "lleg_joint_3", 
       "maxPosition": 1.23918, 
       "position": 0, 
@@ -101,7 +101,7 @@
       "axis": "1 0 0"
     }, 
     {
-      "transformID": "n5234", 
+      "transformID": "n65", 
       "name": "lleg_joint_4", 
       "maxPosition": 2.26893, 
       "position": 0, 
@@ -110,7 +110,7 @@
       "axis": "1 0 0"
     }, 
     {
-      "transformID": "n5250", 
+      "transformID": "n81", 
       "name": "lleg_joint_5", 
       "maxPosition": 1.06465, 
       "position": 0, 
@@ -119,7 +119,7 @@
       "axis": "1 0 0"
     }, 
     {
-      "transformID": "n5255", 
+      "transformID": "n86", 
       "name": "lleg_joint_6", 
       "maxPosition": 0.43633, 
       "position": 0, 
@@ -128,7 +128,7 @@
       "axis": "0 0 1"
     }, 
     {
-      "transformID": "n5520", 
+      "transformID": "n351", 
       "name": "rarm_joint_1", 
       "maxPosition": 2.6354, 
       "position": 0, 
@@ -137,7 +137,7 @@
       "axis": "1 0 0"
     }, 
     {
-      "transformID": "n5535", 
+      "transformID": "n366", 
       "name": "rarm_joint_2", 
       "maxPosition": 0.0175, 
       "position": 0, 
@@ -146,7 +146,7 @@
       "axis": "0 1 0"
     }, 
     {
-      "transformID": "n5552", 
+      "transformID": "n383", 
       "name": "rarm_joint_3", 
       "maxPosition": 1.5882, 
       "position": 0, 
@@ -155,7 +155,7 @@
       "axis": "0 0 1"
     }, 
     {
-      "transformID": "n5568", 
+      "transformID": "n399", 
       "name": "rarm_joint_4", 
       "maxPosition": 0.01745, 
       "position": 0, 
@@ -164,7 +164,7 @@
       "axis": "1 0 0"
     }, 
     {
-      "transformID": "n5593", 
+      "transformID": "n424", 
       "name": "rarm_joint_5", 
       "maxPosition": 1.0472, 
       "position": 0, 
@@ -173,7 +173,7 @@
       "axis": "0 0 1"
     }, 
     {
-      "transformID": "n5296", 
+      "transformID": "n127", 
       "name": "rleg_joint_1", 
       "maxPosition": 0.541052, 
       "position": 0, 
@@ -182,7 +182,7 @@
       "axis": "0 1 0"
     }, 
     {
-      "transformID": "n5306", 
+      "transformID": "n137", 
       "name": "rleg_joint_2", 
       "maxPosition": 0.36652, 
       "position": 0, 
@@ -191,7 +191,7 @@
       "axis": "0 0 1"
     }, 
     {
-      "transformID": "n5301", 
+      "transformID": "n132", 
       "name": "rleg_joint_3", 
       "maxPosition": 1.23918, 
       "position": 0, 
@@ -200,7 +200,7 @@
       "axis": "1 0 0"
     }, 
     {
-      "transformID": "n5322", 
+      "transformID": "n153", 
       "name": "rleg_joint_4", 
       "maxPosition": 2.26893, 
       "position": 0, 
@@ -209,7 +209,7 @@
       "axis": "1 0 0"
     }, 
     {
-      "transformID": "n5338", 
+      "transformID": "n169", 
       "name": "rleg_joint_5", 
       "maxPosition": 1.06465, 
       "position": 0, 
@@ -218,7 +218,7 @@
       "axis": "1 0 0"
     }, 
     {
-      "transformID": "n5343", 
+      "transformID": "n174", 
       "name": "rleg_joint_6", 
       "maxPosition": 0.43633, 
       "position": 0, 
@@ -227,147 +227,147 @@
       "axis": "0 0 1"
     }, 
     {
-      "transformID": "n5188", 
+      "transformID": "n19", 
       "type": "PositionSensor", 
       "name": "body_joint_1_sensor"
     }, 
     {
-      "transformID": "n5182", 
+      "transformID": "n13", 
       "type": "Emitter", 
       "name": "emitter"
     }, 
     {
-      "transformID": "n5182", 
+      "transformID": "n13", 
       "type": "GPS", 
       "name": "gps"
     }, 
     {
-      "transformID": "n5659", 
+      "transformID": "n490", 
       "type": "PositionSensor", 
       "name": "head_joint_1_sensor"
     }, 
     {
-      "transformID": "n5669", 
+      "transformID": "n500", 
       "type": "PositionSensor", 
       "name": "head_joint_2_sensor"
     }, 
     {
-      "transformID": "n5386", 
+      "transformID": "n217", 
       "type": "PositionSensor", 
       "name": "larm_joint_1_sensor"
     }, 
     {
-      "transformID": "n5401", 
+      "transformID": "n232", 
       "type": "PositionSensor", 
       "name": "larm_joint_2_sensor"
     }, 
     {
-      "transformID": "n5418", 
+      "transformID": "n249", 
       "type": "PositionSensor", 
       "name": "larm_joint_3_sensor"
     }, 
     {
-      "transformID": "n5434", 
+      "transformID": "n265", 
       "type": "PositionSensor", 
       "name": "larm_joint_4_sensor"
     }, 
     {
-      "transformID": "n5459", 
+      "transformID": "n290", 
       "type": "PositionSensor", 
       "name": "larm_joint_5_sensor"
     }, 
     {
-      "transformID": "n5256", 
+      "transformID": "n87", 
       "type": "TouchSensor", 
       "name": "left touch"
     }, 
     {
-      "transformID": "n5208", 
+      "transformID": "n39", 
       "type": "PositionSensor", 
       "name": "lleg_joint_1_sensor"
     }, 
     {
-      "transformID": "n5218", 
+      "transformID": "n49", 
       "type": "PositionSensor", 
       "name": "lleg_joint_2_sensor"
     }, 
     {
-      "transformID": "n5213", 
+      "transformID": "n44", 
       "type": "PositionSensor", 
       "name": "lleg_joint_3_sensor"
     }, 
     {
-      "transformID": "n5234", 
+      "transformID": "n65", 
       "type": "PositionSensor", 
       "name": "lleg_joint_4_sensor"
     }, 
     {
-      "transformID": "n5250", 
+      "transformID": "n81", 
       "type": "PositionSensor", 
       "name": "lleg_joint_5_sensor"
     }, 
     {
-      "transformID": "n5255", 
+      "transformID": "n86", 
       "type": "PositionSensor", 
       "name": "lleg_joint_6_sensor"
     }, 
     {
-      "transformID": "n5520", 
+      "transformID": "n351", 
       "type": "PositionSensor", 
       "name": "rarm_joint_1_sensor"
     }, 
     {
-      "transformID": "n5535", 
+      "transformID": "n366", 
       "type": "PositionSensor", 
       "name": "rarm_joint_2_sensor"
     }, 
     {
-      "transformID": "n5552", 
+      "transformID": "n383", 
       "type": "PositionSensor", 
       "name": "rarm_joint_3_sensor"
     }, 
     {
-      "transformID": "n5568", 
+      "transformID": "n399", 
       "type": "PositionSensor", 
       "name": "rarm_joint_4_sensor"
     }, 
     {
-      "transformID": "n5593", 
+      "transformID": "n424", 
       "type": "PositionSensor", 
       "name": "rarm_joint_5_sensor"
     }, 
     {
-      "transformID": "n5344", 
+      "transformID": "n175", 
       "type": "TouchSensor", 
       "name": "right touch"
     }, 
     {
-      "transformID": "n5296", 
+      "transformID": "n127", 
       "type": "PositionSensor", 
       "name": "rleg_joint_1_sensor"
     }, 
     {
-      "transformID": "n5306", 
+      "transformID": "n137", 
       "type": "PositionSensor", 
       "name": "rleg_joint_2_sensor"
     }, 
     {
-      "transformID": "n5301", 
+      "transformID": "n132", 
       "type": "PositionSensor", 
       "name": "rleg_joint_3_sensor"
     }, 
     {
-      "transformID": "n5322", 
+      "transformID": "n153", 
       "type": "PositionSensor", 
       "name": "rleg_joint_4_sensor"
     }, 
     {
-      "transformID": "n5338", 
+      "transformID": "n169", 
       "type": "PositionSensor", 
       "name": "rleg_joint_5_sensor"
     }, 
     {
-      "transformID": "n5343", 
+      "transformID": "n174", 
       "type": "PositionSensor", 
       "name": "rleg_joint_6_sensor"
     }

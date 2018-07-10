@@ -15,6 +15,9 @@ PBRAppearance {
   SFFloat  normalMapFactor      1                 # [0, inf)
   SFNode   occlusionMap         NULL              # {ImageTexture, PROTO}
   SFFloat  occlusionMapStrength 1                 # [0, inf)
+  SFColor  emissiveColor        0 0 0             # any color
+  SFNode   emissiveColorMap     NULL              # {ImageTexture, PROTO}
+  SFFloat  emissiveIntensity    1                 # [0, inf)
   SFNode   textureTransform     NULL              # {TextureTransform, PROTO}
   SFString name                 "PBRAppearance"   # any string
 }
@@ -57,6 +60,9 @@ If this field is empty, the [Cubemap](cubemap.md) belonging to the world's [Back
 - The `normalMapFactor` field is used to scale the effect of the normal map on the object.
 - The `occlusionMap` field specifies an [ImageTexture](imagetexture.md) which contains pre-baked information about how parts of the model occlude each other (ambient occlusion). This can be used for more realistic-looking lighting.
 - The `occlusionMapStrength` field is used to scale the effect of the occlusion map on the object.
+- The `emissiveColor` field specifies the emissive color of the material's surface  (as if the surface emits light), analogous to the `emissiveColor` field of the [Material](material.md) node.
+- The `emissiveColorMap` field specifies an [ImageTexture](imagetexture.md) for the material's emissive color which overrides `emissiveColor`.
+- The `emissiveIntensity` field is used as an intensity multiplier on the emissive color, to express different emissive brightness levels.
 - The `textureTransform` field contains a [TextureTransform](texturetransform.md) node.
 If `textureTransform` is NULL, the `textureTransform` field has no effect.
 Otherwise, the [TextureTransform](texturetransform.md) is applied to all textures in the [PBRAppearance](#pbrappearance) node when shading the object.

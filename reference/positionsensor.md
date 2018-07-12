@@ -4,6 +4,7 @@ Derived from [Device](device.md).
 
 ```
 PositionSensor {
+  SFFloat noise       0   # [0, inf)
   SFFloat resolution -1   # {-1, [0, inf)}
 }
 ```
@@ -15,6 +16,8 @@ The position sensor can be inserted in the `device` field of a [HingeJoint](hing
 Depending on the [Joint](joint.md) type, it will measure the angular position in radians or the linear position in meters.
 
 ### Field Summary
+
+- `resolution`: This field allows to define the standard deviation of the Gaussian noise added to the sensor output.
 
 - `resolution`: This field allows to define the resolution of the sensor, the resolution is the smallest change that it is able to measure.
 Setting this field to -1 (default) means that the sensor has an 'infinite' resolution (it can measure any infinitesimal change).

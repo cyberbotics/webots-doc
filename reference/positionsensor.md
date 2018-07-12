@@ -17,7 +17,7 @@ Depending on the [Joint](joint.md) type, it will measure the angular position in
 
 ### Field Summary
 
-- `resolution`: This field allows to define the standard deviation of the Gaussian noise added to the sensor output.
+- `noise`: This field allows to define the standard deviation of the Gaussian noise added to the sensor output.
 
 - `resolution`: This field allows to define the resolution of the sensor, the resolution is the smallest change that it is able to measure.
 Setting this field to -1 (default) means that the sensor has an 'infinite' resolution (it can measure any infinitesimal change).

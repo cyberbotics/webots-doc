@@ -77,7 +77,9 @@ for proto in prioritaryProtoList + fileList:
             break  # only first match is interesting
         matches = re.finditer(r'.*ield\s+([^ ]*)(\{(?:.*\,?\s?)\})\s+([^ ]*)\s+([^#]*)\s+#(.*)', fieldsDefinition, re.MULTILINE)
         for i, match in enumerate(matches):
-            pass #TODO: we should handle this special case
+            fieldsDefinition = fieldsDefinition.replace(match.group(2) + '\n', '')
+            fieldsDefinition = fieldsDefinition.replace(match.group(2), '')
+            # we can evetually use the list of possibility in the future
         matches = re.finditer(r'.*ield\s+([^ \{]*)\s+([^ ]*)\s+([^#]*)\s+#(.*)', fieldsDefinition, re.MULTILINE)
         for i, match in enumerate(matches):
             if match.group(1) != 'hiddenField':

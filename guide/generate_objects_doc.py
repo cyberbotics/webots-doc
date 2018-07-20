@@ -46,49 +46,52 @@ for proto in prioritaryProtoList + fileList:
     fields = ''
     state = 0
     describedField = []
+    skipProto = False
     # parse the PROTO file
     with open(proto, 'r') as file:
-        skipProto = False
-        closingAccolades = 0
-        for line in file.readlines():
-            closingAccolades += line.count(']') - line.count('[')
-            if state == DESCRIPTION_STATE:
-                if line.startswith('#'):
-                    if line.startswith('#VRML_SIM'):
-                        continue
-                    elif line.startswith('# license:'):
-                        license = line.replace('# license:', '').strip()
-                    elif line.startswith('# license url:'):
-                        licenseUrl = line.replace('# license url:', '').strip()
-                    elif line.startswith('# tags:'):
-                        if 'deprecated' in line or 'hidden' in line:
-                            skipProto = True
-                            break
-                    else:
-                        newLine = line.replace('#', '').replace('_', '\_').strip()
-                        urls = re.findall(WEB_URL_REGEX, newLine)
-                        for url in urls:
-                            newLine = newLine.replace(url, '[%s](%s)' % (url, url))
-                        description += newLine + '\n'
-                elif line.startswith('PROTO '):
-                    state = FIELDS_STATE
-            elif state == FIELDS_STATE:
-                if closingAccolades >= 0:
-                    state = BODY_STATE
-                else:
-                    match = re.match(r'.*ield\s+([^ ]*)\s+([^ ]*)\s+([^#]*)\s+#(.*)', line)
-                    if match and match.group(1) != 'hiddenField':
-                        fieldType = match.group(1)
-                        fieldName = match.group(2)
-                        fieldDefaultValue = match.group(3)
-                        fieldComment = match.group(4).strip()
-                        # skype 'Is `NodeType.fieldName`.' descriptions
-                        match = re.match(r'Is\s`([a-zA-Z]*).([a-zA-Z]*)`.', fieldComment)
-                        if not match:
-                            describedField.append((fieldName, fieldComment))
-                    fieldLine = line.replace('field ', '').split('#')[0].rstrip()
-                    if 'hiddenField' not in fieldLine:
-                        fields += fieldLine + '\n'
+        content = file.read()
+        # header
+        matches = re.finditer(r'^#.*\n', content, re.MULTILINE)
+        for i, match in enumerate(matches):
+            line = match.group()
+            if line.startswith('#VRML_SIM'):
+                continue
+            elif line.startswith('# license:'):
+                license = line.replace('# license:', '').strip()
+            elif line.startswith('# license url:'):
+                licenseUrl = line.replace('# license url:', '').strip()
+            elif line.startswith('# tags:'):
+                if 'deprecated' in line or 'hidden' in line:
+                    skipProto = True
+                    break
+            else:
+                newLine = line.replace('#', '').replace('_', '\_').strip()
+                urls = re.findall(WEB_URL_REGEX, newLine)
+                for url in urls:
+                    newLine = newLine.replace(url, '[%s](%s)' % (url, url))
+                description += newLine + '\n'
+        # fields
+        matches = re.finditer(r'\[\n((.*\n)*)\]', content, re.MULTILINE)
+        for i, match in enumerate(matches):
+            fieldsDefinition = match.group(1)
+            break  # only first match is interesting
+        matches = re.finditer(r'.*ield\s+([^ ]*)(\{(?:.*\,?\s?)\})\s+([^ ]*)\s+([^#]*)\s+#(.*)', fieldsDefinition, re.MULTILINE)
+        for i, match in enumerate(matches):
+            pass #TODO: we should handle this special case
+        matches = re.finditer(r'.*ield\s+([^ \{]*)\s+([^ ]*)\s+([^#]*)\s+#(.*)', fieldsDefinition, re.MULTILINE)
+        for i, match in enumerate(matches):
+            if match.group(1) != 'hiddenField':
+                fieldType = match.group(1)
+                fieldName = match.group(2)
+                fieldDefaultValue = match.group(3)
+                fieldComment = match.group(4).strip()
+                # skip 'Is `NodeType.fieldName`.' descriptions
+                match = re.match(r'Is\s`([a-zA-Z]*).([a-zA-Z]*)`.', fieldComment)
+                if not match:
+                    describedField.append((fieldName, fieldComment))
+            fieldLine = line.replace('field ', '').split('#')[0].rstrip()
+            if 'hiddenField' not in fieldLine:
+                fields += fieldLine + '\n'
 
     if skipProto:
         continue

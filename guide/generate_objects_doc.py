@@ -86,7 +86,7 @@ for proto in prioritaryProtoList + fileList:
             else:
                 fieldsDefinition = fieldsDefinition.replace(match.group(2), '')
             # we can evetually use the list of possibility in the future
-        matches = re.finditer(r'^\s*([^#]*ield)\s+([^ \{]*)\s+([^ ]*)\s+([^#\n]*)(#?)(.*)', fieldsDefinition, re.MULTILINE)
+        matches = re.finditer(r'^\s*([^#]*ield)\s+([^ \{]*)\s+([^ ]*)\s+([^#\n]*)(#?)(.*)((\n*(    |  \]).*)*)', fieldsDefinition, re.MULTILINE)
         for i, match in enumerate(matches):
             if match.group(1) != 'hiddenField':
                 fieldType = match.group(2)
@@ -158,8 +158,8 @@ for proto in prioritaryProtoList + fileList:
             if licenseUrl:
                 file.write('[More information.](%s)\n' % licenseUrl)
             file.write('\n')
-        # else:  TODO: uncomment on develop
-        #     sys.stderr.write('Please add a license to "%s"\n' % proto)
+        else:
+            sys.stderr.write('Please add a license to "%s"\n' % proto)
 
         if describedField:
             file.write(headerPrefix + '## %s Field Summary\n\n' % protoName)

@@ -77,22 +77,23 @@ for proto in prioritaryProtoList + fileList:
             break  # only first match is interesting
         matches = re.finditer(r'.*ield\s+([^ ]*)(\{(?:.*\,?\s?)\})\s+([^ ]*)\s+([^#]*)\s+#(.*)', fieldsDefinition, re.MULTILINE)
         for i, match in enumerate(matches):
-            string = ''
-            for i in range(match.group().index(match.group(2))):
-                string += ' '
-            fieldsDefinition = fieldsDefinition.replace(string + match.group(3), match.group(3))
-            fieldsDefinition = fieldsDefinition.replace(match.group(2) + '\n', '')
+            if '\n' in match.group():
+                string = ''
+                for i in range(match.group().index(match.group(2))):
+                    string += ' '
+                fieldsDefinition = fieldsDefinition.replace(string + match.group(3), match.group(3))
+                fieldsDefinition = fieldsDefinition.replace(match.group(2) + '\n', '')
             fieldsDefinition = fieldsDefinition.replace(match.group(2), '')
             # we can evetually use the list of possibility in the future
-        matches = re.finditer(r'.*ield\s+([^ \{]*)\s+([^ ]*)\s+([^#]*)\s+#(.*)', fieldsDefinition, re.MULTILINE)
+        matches = re.finditer(r'^\s*([^#]*ield)\s+([^ \{]*)\s+([^ ]*)\s+([^#\n]*)(#?)(.*)', fieldsDefinition, re.MULTILINE)
         for i, match in enumerate(matches):
             if match.group(1) != 'hiddenField':
-                fieldType = match.group(1)
-                fieldName = match.group(2)
-                fieldDefaultValue = match.group(3)
-                fieldComment = match.group(4).strip()
+                fieldType = match.group(2)
+                fieldName = match.group(3)
+                fieldDefaultValue = match.group(4)
+                fieldComment = match.group(6).strip()
                 # skip 'Is `NodeType.fieldName`.' descriptions
-                if not re.match(r'Is\s`([a-zA-Z]*).([a-zA-Z]*)`.', fieldComment):
+                if fieldComment and not re.match(r'Is\s`([a-zA-Z]*).([a-zA-Z]*)`.', fieldComment):
                     describedField.append((fieldName, fieldComment))
                 fields += re.sub(r'^\s*.*field', ' ', re.sub(r'\s*(#.*)', '', match.group(), 0, re.MULTILINE), 0, re.MULTILINE) + '\n'
 

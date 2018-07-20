@@ -96,7 +96,7 @@ for proto in prioritaryProtoList + fileList:
                 # skip 'Is `NodeType.fieldName`.' descriptions
                 if fieldComment and not re.match(r'Is\s`([a-zA-Z]*).([a-zA-Z]*)`.', fieldComment):
                     describedField.append((fieldName, fieldComment))
-                fields += re.sub(r'^\s*.*field', ' ', re.sub(r'\s*(#.*)', '', match.group(), 0, re.MULTILINE), 0, re.MULTILINE) + '\n'
+                fields += re.sub(r'^\s*.*field\s', '  ', re.sub(r'\s*(#.*)', '', match.group(), 0, re.MULTILINE), 0, re.MULTILINE) + '\n'
 
     if skipProto:
         continue

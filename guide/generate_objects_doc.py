@@ -77,6 +77,10 @@ for proto in prioritaryProtoList + fileList:
             break  # only first match is interesting
         matches = re.finditer(r'.*ield\s+([^ ]*)(\{(?:.*\,?\s?)\})\s+([^ ]*)\s+([^#]*)\s+#(.*)', fieldsDefinition, re.MULTILINE)
         for i, match in enumerate(matches):
+            string = ''
+            for i in range(match.group().index(match.group(2))):
+                string += ' '
+            fieldsDefinition = fieldsDefinition.replace(string + match.group(3), match.group(3))
             fieldsDefinition = fieldsDefinition.replace(match.group(2) + '\n', '')
             fieldsDefinition = fieldsDefinition.replace(match.group(2), '')
             # we can evetually use the list of possibility in the future
@@ -90,7 +94,7 @@ for proto in prioritaryProtoList + fileList:
                 # skip 'Is `NodeType.fieldName`.' descriptions
                 if not re.match(r'Is\s`([a-zA-Z]*).([a-zA-Z]*)`.', fieldComment):
                     describedField.append((fieldName, fieldComment))
-                fields += match.group().replace('field ', '').split('#')[0].rstrip() + '\n'
+                fields += re.sub(r'^\s*.*field', ' ', re.sub(r'\s*(#.*)', '', match.group(), 0, re.MULTILINE), 0, re.MULTILINE) + '\n'
 
     if skipProto:
         continue

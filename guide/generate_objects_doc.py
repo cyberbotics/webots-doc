@@ -75,15 +75,16 @@ for proto in prioritaryProtoList + fileList:
         for i, match in enumerate(matches):
             fieldsDefinition = match.group(1)
             break  # only first match is interesting
-        matches = re.finditer(r'.*ield\s+([^ ]*)(\{(?:.*\,?\s?)\})\s+([^ ]*)\s+([^#]*)\s+#(.*)', fieldsDefinition, re.MULTILINE)
+        matches = re.finditer(r'.*ield\s+([^ ]*?)(\{(?:.*\,?\s?)(?<!\{)\})\s+([^ ]*)\s+([^#\n]*)(#?)(.*)', fieldsDefinition, re.MULTILINE)
         for i, match in enumerate(matches):
             if '\n' in match.group():
-                string = ''
-                for i in range(match.group().index(match.group(2))):
-                    string += ' '
+                string = ' ' * match.group().index(match.group(2))
                 fieldsDefinition = fieldsDefinition.replace(string + match.group(3), match.group(3))
                 fieldsDefinition = fieldsDefinition.replace(match.group(2) + '\n', '')
-            fieldsDefinition = fieldsDefinition.replace(match.group(2), '')
+            if len(match.group(2)) < 40:
+                fieldsDefinition = fieldsDefinition.replace(match.group(2), ' ' * len(match.group(2)))
+            else:
+                fieldsDefinition = fieldsDefinition.replace(match.group(2), '')
             # we can evetually use the list of possibility in the future
         matches = re.finditer(r'^\s*([^#]*ield)\s+([^ \{]*)\s+([^ ]*)\s+([^#\n]*)(#?)(.*)', fieldsDefinition, re.MULTILINE)
         for i, match in enumerate(matches):

@@ -86,12 +86,9 @@ for proto in prioritaryProtoList + fileList:
                 fieldDefaultValue = match.group(3)
                 fieldComment = match.group(4).strip()
                 # skip 'Is `NodeType.fieldName`.' descriptions
-                match = re.match(r'Is\s`([a-zA-Z]*).([a-zA-Z]*)`.', fieldComment)
-                if not match:
+                if not re.match(r'Is\s`([a-zA-Z]*).([a-zA-Z]*)`.', fieldComment):
                     describedField.append((fieldName, fieldComment))
-            fieldLine = line.replace('field ', '').split('#')[0].rstrip()
-            if 'hiddenField' not in fieldLine:
-                fields += fieldLine + '\n'
+                fields += match.group().replace('field ', '').split('#')[0].rstrip() + '\n'
 
     if skipProto:
         continue

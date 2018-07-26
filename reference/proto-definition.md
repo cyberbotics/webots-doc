@@ -42,6 +42,22 @@ The base type determines where instantiations of the PROTO can be placed in the 
 For example, if the base type of a PROTO is [Material](material.md), then instantiations of the PROTO can be used wherever a [Material](material.md) mode can be used.
 A PROTO whose base node is another PROTO is called *derived PROTO*.
 
+### Field Value Restriction
+
+If a field should have only a limited set of possible values, it is possible to specify them directly in the PROTO definition just after the field type like this:
+```
+PROTO MyProto [
+  field SFVec3f                             translation   0 0 0
+  field SFRotation                          rotation      0 1 0 0
+  field SFString                            name          "my proto"
+  field SFColor{0 0 0, 0.5 0.5 0.5, 1 1 1}  color         0.5 0.5 0.5
+  field SFNode                              physics       NULL
+  field MFNode{Solid{}, Transform{}}        extensionSlot []
+]
+```
+
+In this example, the `color` field value can only be `0 0 0`, `0.5 0.5 0.5` or `1 1 1` and the `extensionSlot` field can only accept [Solid](../reference/solid.md) and [Transform](../reference/transform.md) nodes.
+
 ### IS Statements
 
 Nodes in the PROTO definition may have their fields associated with the fields of the PROTO interface.

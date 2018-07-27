@@ -23,7 +23,7 @@ The [Cubemap](#cubemap) node can support six-texture cubemap sets with 8-bit .jp
 
 In order to be easy and practical to use, URLs are forged using the two fields of the node.
 
-#### Loading an Equirectangular Map
+### Loading an Equirectangular Map
 
 The [Cubemap](#cubemap) node will first search a directory for an equirectangular map using the `textureBaseName` and `directory` fields to locate the map, like this:
 
@@ -33,7 +33,7 @@ textureUrl = directory + "/" + textureBaseName + ".hdr";
 Then, this texture is loaded according to the same image loading rules as the `url` field of the [ImageTexture](imagetexture.md#search-rule-of-the-texture-path) node.
 If the equirectangular map is not found, the [Cubemap](#cubemap) node assumes that the texture is expressed as a six-texture set and will fall back to this method, described next.
 
-#### Loading Six Textures
+### Loading Six Textures
 
 There is a strict pattern to follow for naming textures for each face.
 The algorithm for loading all six faces can be described with the following pseudocode:

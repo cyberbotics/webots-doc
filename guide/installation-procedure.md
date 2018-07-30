@@ -149,7 +149,23 @@ Or:
 webots-{{ webots.version.package }}\_setup.exe /VERYSILENT
 ```
 
-If you observe 3D rendering anomalies or if Webots crashes, it is strongly recommend to upgrade your graphics driver.
+Once installed, if you observe 3D rendering anomalies or if Webots crashes, it is strongly recommend to upgrade your graphics driver.
+
+### Windows SmartScreen
+
+It may be possible that Windows Defender SmartScreen will display a warning when starting the Webots installer:
+
+%figure "Windows SmartScreen warning"
+![windows_smartscreen_1.png](images/windows_smartscreen_1.png)
+%end
+
+This is likely caused by the fact that the release of Webots is recent and was not yet approved by Microsoft.
+If the Webots installer was downloaded from the [official Cyberbotics web site](https://www.cyberbotics.com/download) using the secure HTTPS protocol, then it is safe to install it.
+You can pass this warning and install Webots by clicking on the "More info" link and the "Run anyway" button depicted below:
+
+%figure "Windows SmartScreen pass"
+![windows_smartscreen_2.png](images/windows_smartscreen_2.png)
+%end
 
 ### Installation on macOS
 

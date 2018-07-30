@@ -227,6 +227,7 @@ function aClick(el) {
   setupUrl(el.getAttribute('href'));
   getMDFile();
   updateBrowserUrl();
+  updateContributionBannerUrl();
 }
 
 function redirectImages(node) {
@@ -293,18 +294,25 @@ function addContributionBanner() {
   // append contribution sticker to primary doc element
   document.querySelector('#center').innerHTML += '<div style="top:' + displacement + '" class="contribution-banner">' +
                                                  'Found an error?' +
-                                                 '<a target="_blank" href="https://github.com/omichel/webots-doc"> ' +
+                                                 '<a target="_blank" class="contribution-banner-url" href="https://github.com/omichel/webots-doc"> ' +
                                                  'Contribute on GitHub!' +
                                                  '<span class=github-logo />' +
                                                  '</a>' +
                                                  '<p id="contribution-close">X</p>' +
                                                  '</div>';
+  updateContributionBannerUrl();
 
   var contributionBanner = document.querySelector('.contribution-banner');
 
   document.querySelector('#contribution-close').onclick = function() {
     contributionBanner.parentNode.removeChild(contributionBanner);
   };
+}
+
+function updateContributionBannerUrl() {
+  var contributionBanner = document.querySelector('.contribution-banner-url');
+  if (contributionBanner)
+    contributionBanner.href = 'https://github.com/omichel/webots-doc/edit/master/' + localSetup.book + '/' + localSetup.page + '.md';
 }
 
 function addNavigationToBlogIfNeeded() {

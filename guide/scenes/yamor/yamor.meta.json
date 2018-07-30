@@ -2,7 +2,7 @@
   "name": "yamor", 
   "devices": [
     {
-      "transformID": "n16177", 
+      "transformID": "n34", 
       "name": "motor", 
       "maxPosition": 1.5708, 
       "position": 0, 
@@ -11,12 +11,12 @@
       "axis": "0 1 0"
     }, 
     {
-      "transformID": "n16183", 
+      "transformID": "n40", 
       "type": "Connector", 
       "name": "front_connector"
     }, 
     {
-      "transformID": "n16168", 
+      "transformID": "n25", 
       "type": "Connector", 
       "name": "rear_connector"
     }

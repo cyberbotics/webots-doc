@@ -14,7 +14,7 @@ LED {
 The [LED](#led) node is used to model a light emitting diode (LED).
 The light produced by an LED can be used for debugging or informational purposes.
 The resulting color is applied only on the first child of the [LED](#led) node.
-If the first child is a [Shape](shape.md) node, the `emissiveColor` field of its [Material](material.md) node is altered.
+If the first child is a [Shape](shape.md) node, the `emissiveColor` field of its [Material](material.md) or [PBRAppearance](pbrappearance.md) node is altered.
 If the first child is a [Light](light.md) node, its `color` field is altered.
 Otherwise, if the first child is a [Group](group.md) node, a recursive search is applied on this node in order to find which color field must be modified, so every [Light](light.md), [Shape](shape.md) and [Group](group.md) node is altered according to the previous rules.
 In terms of [Light](light.md) nodes, [LED](#led) nodes can only accept [PointLight](pointlight.md) and [SpotLight](spotlight.md) nodes as children.

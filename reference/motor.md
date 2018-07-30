@@ -29,6 +29,7 @@ Likewise, a [LinearMotor](linearmotor.md) can power a [SliderJoint](hingejoint.m
 - The `acceleration` field defines the default acceleration of the P-controller.
 It is expressed in *meter per second squared* (m/s²) for linear motors and in *meter per radian squared* (rad/s²) for rotational motors.
 A value of -1 (infinite) means that the acceleration is not limited by the P-controller.
+Given that the `acceleration` value only specifies the maximum `acceleration` that can be achieved by the motor, other negative values than -1 are not supported.
 The acceleration can be changed at run-time with the `wb_motor_set_acceleration` function.
 
 - The `consumptionFactor` field defines how much energy is consumed by the motor if battery simulation is enabled in the ancestor [Robot](robot.md) node.
@@ -460,9 +461,10 @@ The specified velocity can be retrieved using the `wb_motor_get_velocity` functi
 The `wb_motor_get_max_velocity` function returns the limit specified in the `maxVelocity` field.
 Note that if the velocity is not explicitly set using the `wb_motor_set_velocity` function, then the `wb_motor_get_velocity` and `wb_motor_get_max_velocity` functions return the same value.
 
-The `wb_motor_set_acceleration` function specifies the acceleration that the PID-controller should use when trying to reach the specified velocity.
+The `wb_motor_set_acceleration` function specifies the maximum acceleration that the PID-controller should use when trying to reach the specified velocity.
 The acceleration is expressed in *radian per second squared* (rad/s²) for rotational motors and in *meter per second squared* (m/s²) for linear motors.
-Note that an infinite acceleration is obtained by passing -1 as the `acc` argument to this function.
+Note that an infinite acceleration is obtained by passing -1 as the `acceleration` argument to this function.
+Given that the `acceleration` value only specifies the maximum `acceleration` that can be achieved by the motor, other negative values than -1 are not supported.
 The specified acceleration overwrites the `acceleration` field value and can be retrieved using the `wb_motor_get_acceleration` function.
 
 The `wb_motor_set_available_force` (resp. `wb_motor_set_available_torque`) function specifies the maximum force (resp. torque) that will be available to the motor to carry out the requested motion.

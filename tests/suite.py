@@ -15,7 +15,8 @@ if __name__ == "__main__":
         logfile = open(sys.argv[1], "w")
         testRunner = unittest.runner.TextTestRunner(logfile)
     else:
-        testRunner = unittest.runner.TextTestRunner()
-    testRunner.run(tests)
+        testRunner = unittest.runner.TextTestRunner(verbosity=2, resultclass=unittest.TextTestResult)
+    result = testRunner.run(tests)
     if logfile is not None:
         logfile.close()
+    sys.exit(not result.wasSuccessful())

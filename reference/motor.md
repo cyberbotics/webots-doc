@@ -29,7 +29,8 @@ Likewise, a [LinearMotor](linearmotor.md) can power a [SliderJoint](hingejoint.m
 - The `acceleration` field defines the default acceleration of the P-controller.
 It is expressed in *meter per second squared* (m/s²) for linear motors and in *meter per radian squared* (rad/s²) for rotational motors.
 A value of -1 (infinite) means that the acceleration is not limited by the P-controller.
-The acceleration can be changed at run-time with the `wb_motor_set_acceleration` function.
+Given that the `acceleration` value only specifies the maximum `acceleration` that can be achieved by the motor, negative values other than -1 are not supported.
+The acceleration can be changed at run-time with the [`wb_motor_set_acceleration`](#wb_motor_set_acceleration) function.
 
 - The `consumptionFactor` field defines how much energy is consumed by the motor if battery simulation is enabled in the ancestor [Robot](robot.md) node.
 The details on motor energy consumption are provided [below](#energy-consumption).
@@ -55,14 +56,14 @@ With a small *P*, more simulation steps are needed to reach the target position,
     thus improves settling time and stability of the system.
 
     The value of *P, I* and *D* can be changed at run-time with the
-    `wb_motor_set_control_pid` function.
+    [`wb_motor_set_control_pid`](#wb_motor_set_control_pid) function.
 
 - The `minPosition` and `maxPosition` fields specify *soft limits* for the target position.
 These fields are described in more detail in the [Motor Limits section](#motor-limits), see below.
 
 - The `maxVelocity` field specifies both the upper limit and the default value for the motor *velocity*.
 It is expressed in *meter per second* (m/s) for linear motors and in *meter per radian* (rad/s) for rotational motors.
-The *velocity* can be changed at run-time with the `wb_motor_set_velocity` function.
+The *velocity* can be changed at run-time with the [`wb_motor_set_velocity`](#wb_motor_set_velocity) function.
 The value should always be positive (the default is 10).
 
 - The `sound` field specifies the URL of a WAVE sound file, relatively to the location of the world file or PROTO file which contains the `Motor` node.
@@ -107,7 +108,7 @@ The `minPosition` and `maxPosition` are defined with respect to joint's zero pos
 ### Position Control
 
 The standard way of operating a [Motor](#motor) is to control the position directly (*position control*).
-The user specifies a target position using the `wb_motor_set_position` function, then the P-controller takes into account the desired velocity, acceleration and motor force in order to move the motor to the target position.
+The user specifies a target position using the [`wb_motor_set_position`](#wb_motor_set_position) function, then the P-controller takes into account the desired velocity, acceleration and motor force in order to move the motor to the target position.
 See [this table](#motor-control-summary).
 
 In Webots, position control is carried out in three stages, as depicted in [this figure](#motor-control).
@@ -142,14 +143,14 @@ if (A != -1) {
 }
 ```
 
-Where *V<sub>c</sub>* is the current motor velocity in rad/s or m/s, *P, I* and *D* are the PID-control gains specified in the `controlPID` field, or set with the `wb_motor_set_control_pid` function, *P<sub>t</sub>* is the *target position* of the motor set by the `wb_motor_set_position` function, *P<sub>c</sub>* is the current motor position, *V<sub>d</sub>* is the desired velocity as specified by the `maxVelocity` field (default) or set with the `wb_motor_set_velocity` function, *a* is the acceleration required to reach *Vc* in one time step, *V<sub>p</sub>* is the motor velocity of the previous time step, *t<sub>s</sub>* is the duration of the simulation time step as specified by the `basicTimeStep` field of the [WorldInfo](worldinfo.md) node (converted in seconds), and *A* is the acceleration of the motor as specified by the `acceleration` field (default) or set with the `wb_motor_set_acceleration` function.
+Where *V<sub>c</sub>* is the current motor velocity in rad/s or m/s, *P, I* and *D* are the PID-control gains specified in the `controlPID` field, or set with the [`wb_motor_set_control_pid`](#wb_motor_set_control_pid) function, *P<sub>t</sub>* is the *target position* of the motor set by the [`wb_motor_set_position`](#wb_motor_set_position) function, *P<sub>c</sub>* is the current motor position, *V<sub>d</sub>* is the desired velocity as specified by the `maxVelocity` field (default) or set with the [`wb_motor_set_velocity`](#wb_motor_set_velocity) function, *a* is the acceleration required to reach *Vc* in one time step, *V<sub>p</sub>* is the motor velocity of the previous time step, *t<sub>s</sub>* is the duration of the simulation time step as specified by the `basicTimeStep` field of the [WorldInfo](worldinfo.md) node (converted in seconds), and *A* is the acceleration of the motor as specified by the `acceleration` field (default) or set with the [`wb_motor_set_acceleration`](#wb_motor_set_acceleration) function.
 
 > **Note**: *error_integral* and *previous_error* are both reset to *0* after every call of the `wb_motor_set_control_pid` function.
 
 ### Velocity Control
 
 The motors can also be used with *velocity control* instead of *position control*.
-This is obtained with two function calls: first the `wb_motor_set_position` function must be called with `INFINITY` as a position parameter, then the desired velocity, which may be positive or negative, must be specified by calling the `wb_motor_set_velocity` function.
+This is obtained with two function calls: first the [`wb_motor_set_position`](#wb_motor_set_position) function must be called with `INFINITY` as a position parameter, then the desired velocity, which may be positive or negative, must be specified by calling the [`wb_motor_set_velocity`](#wb_motor_set_velocity) function.
 This will initiate a continuous motor motion at the desired speed, while taking into account the specified acceleration and motor force.
 Example:
 
@@ -168,10 +169,10 @@ Finally, in MATLAB you should use the `inf` constant.
 
 The position (resp. velocity) control described above are performed by the Webots PID-controller and ODE's joint motor implementation (see ODE documentation).
 As an alternative, Webots does also allow the user to directly specify the amount of force (resp. torque) that must be applied by a [Motor](#motor).
-This is achieved with the `wb_motor_set_force` (resp. `wb_motor_set_torque`) function which specifies the desired amount of forces (resp. torques) and switches off the PID-controller and motor force (resp. motor torque).
-A subsequent call to the `wb_motor_set_position` function restores the original *position control*.
+This is achieved with the [`wb_motor_set_force`](#wb_motor_set_force) (resp. [`wb_motor_set_torque`](#wb_motor_set_torque)) function which specifies the desired amount of forces (resp. torques) and switches off the PID-controller and motor force (resp. motor torque).
+A subsequent call to the [`wb_motor_set_position`](#wb_motor_set_position) function restores the original *position control*.
 Some care must be taken when using *force control*.
-Indeed the force (resp. torque) specified with the `wb_motor_set_force` (resp. `wb_motor_set_torque`) function is applied to the [Motor](#motor) continuously.
+Indeed the force (resp. torque) specified with the [`wb_motor_set_force`](#wb_motor_set_force) (resp. [`wb_motor_set_torque`](#wb_motor_set_torque)) function is applied to the [Motor](#motor) continuously.
 Hence the [Motor](#motor) will infinitely accelerate its rotational or linear motion and eventually *explode* unless a functional force control (resp. torque control) algorithm is used.
 
 %figure "Motor Control Summary"
@@ -192,7 +193,7 @@ Hence the [Motor](#motor) will infinitely accelerate its rotational or linear mo
 The `minPosition` and `maxPosition` fields define the *soft limits* of the motor.
 Motor zero position and joint zero position coincide (see description of the `position` field in [JointParameters](jointparameters.md)).
 Soft limits specify the *software* boundaries beyond which the PID-controller will not attempt to move.
-If the controller calls the `wb_motor_set_position` function with a target position that exceeds the soft limits, the desired target position will be clipped in order to fit into the soft limit range.
+If the controller calls the [`wb_motor_set_position`](#wb_motor_set_position) function with a target position that exceeds the soft limits, the desired target position will be clipped in order to fit into the soft limit range.
 Valid limits values depends on the motor position, i.e. `minPosition` must always be less than or equal to the motor position and `maxPosition` must always be greater than or equal to the motor position.
 When both `minPosition` and `maxPosition` are zero (the default), the soft limits are deactivated.
 Note that the soft limits can be overstepped when an external force which exceeds the motor force is applied to the motor.
@@ -460,9 +461,10 @@ The specified velocity can be retrieved using the `wb_motor_get_velocity` functi
 The `wb_motor_get_max_velocity` function returns the limit specified in the `maxVelocity` field.
 Note that if the velocity is not explicitly set using the `wb_motor_set_velocity` function, then the `wb_motor_get_velocity` and `wb_motor_get_max_velocity` functions return the same value.
 
-The `wb_motor_set_acceleration` function specifies the acceleration that the PID-controller should use when trying to reach the specified velocity.
+The `wb_motor_set_acceleration` function specifies the maximum acceleration that the PID-controller should use when trying to reach the specified velocity.
 The acceleration is expressed in *radian per second squared* (rad/s²) for rotational motors and in *meter per second squared* (m/s²) for linear motors.
-Note that an infinite acceleration is obtained by passing -1 as the `acc` argument to this function.
+Note that an infinite acceleration is obtained by passing -1 as the `acceleration` argument to this function.
+Given that the `acceleration` value only specifies the maximum `acceleration` that can be achieved by the motor, negative values other than -1 are not supported.
 The specified acceleration overwrites the `acceleration` field value and can be retrieved using the `wb_motor_get_acceleration` function.
 
 The `wb_motor_set_available_force` (resp. `wb_motor_set_available_torque`) function specifies the maximum force (resp. torque) that will be available to the motor to carry out the requested motion.
@@ -616,14 +618,14 @@ This function measures the amount of motor force (resp. torque) that is currentl
 For a rotational motor, the returned value is a torque, expressed in *Newton meter* (N\*m).
 For a linear motor, the returned value is a force, expressed in *Newton* (N).
 The returned value is an approximation computed by the physics engine, and therefore it may be inaccurate.
-The returned value normally does not exceed the available motor force (resp. torque) specified with the `wb_motor_set_force` (resp. `wb_motor_set_torque`) function.
+The returned value normally does not exceed the available motor force (resp. torque) specified with the [`wb_motor_set_force`](#wb_motor_set_force) (resp. [`wb_motor_set_torque`](#wb_motor_set_torque)) function.
 The default value is provided by the `maxForce` (resp. `maxTorque` field).
 Note that this function measures the *current motor force* (resp. *torque*) exclusively, all other external or internal forces (resp. torques) that may apply to the motor are ignored.
 In particular, the `wb_motor_get_force_feedback` (resp. `wb_motor_get_torque_feedback`) function does not measure:
 
 - The spring and damping forces that apply when the `springConstant` or `dampingConstant` fields are non-zero.
-- The force specified with the `wb_motor_set_force` (resp.
-`wb_motor_set_torque`) function.
+- The force specified with the [`wb_motor_set_force`](#wb_motor_set_force) (resp.
+[`wb_motor_set_torque`](#wb_motor_set_torque)) function.
 - The *constraint forces or torques* that restrict the motor motion to one degree of freedom (DOF).
 In other words, the forces or torques applied outside of the motor DOF are ignored.
 Only the forces or torques applied in the DOF are considered.
@@ -732,7 +734,7 @@ In a rotational motor, the *torque* parameter specifies the amount of torque exp
 In a linear motor, the *force* parameter specifies the amount of force expressed in *Newton* (N) that will be applied along the sliding axis.
 A positive *force* (resp. *torque*) will move the bodies in the positive direction, which corresponds to the direction of the motor when its position value increases.
 When invoking the `wb_motor_set_force` (resp. `wb_motor_set_torque`) function, the specified *force* (resp. *torque*) parameter cannot exceed the currently available force (resp. torque) of the motor.
-The currently available force (resp. torque) is specified in the `maxForce` (resp. `maxTorque`) field or by calling the `wb_motor_set_available_force` (resp. `wb_motor_set_available_torque`) function.
+The currently available force (resp. torque) is specified in the `maxForce` (resp. `maxTorque`) field or by calling the [`wb_motor_set_available_force`](#wb_motor_set_available_force) (resp. [`wb_motor_set_available_torque`](#wb_motor_set_available_torque)) function.
 
 Note that this function applies only to *physics-based* simulation.
 Therefore, the `physics` and `boundingObject` fields of the [Motor](#motor) node must be defined for this function to work properly.

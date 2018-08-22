@@ -17,6 +17,7 @@ Elisa3 {
   SFString   controller       "elisa3"
   SFString   controllerArgs   ""
   SFString   customData       ""
+  SFBool     supervisor       FALSE
   SFBool     synchronization  TRUE
   SFInt32    emitter_channel  1
   SFInt32    receiver_channel 1

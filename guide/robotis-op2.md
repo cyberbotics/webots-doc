@@ -47,6 +47,7 @@ RobotisOp2 {
   SFString   controller      "motion_player"
   SFString   controllerArgs  ""
   SFString   customData      ""
+  SFBool     supervisor      FALSE
   SFBool     synchronization TRUE
   SFBool     selfCollision   FALSE
   SFColor    plasticColor    0.8 0.8 0.8

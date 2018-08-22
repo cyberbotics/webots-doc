@@ -68,9 +68,9 @@ Java controller need to be compiled to byte code (".class" files or ".jar") and 
 The source files and binary files of each controller are stored together in a controller directory.
 A controller directory is placed in the "controllers" subdirectory of each Webots project.
 
-### What Is a Supervisor?
+### What Is a Supervisor Controller?
 
-The [Supervisor](../reference/supervisor.md) is a privileged type of [Robot](../reference/robot.md) that can execute operations that can normally only be carried out by a human operator and not by a real robot.
-The [Supervisor](../reference/supervisor.md) is normally associated with a controller program that can also be written in any of the above mentioned programming languages.
+The [Supervisor](../reference/supervisor.md) controller is the controller of a [Robot](../reference/robot.md) whose `supervisor` field is set to `TRUE`, it can execute operations that can normally only be carried out by a human operator and not by a real robot.
+The [Supervisor](../reference/supervisor.md) controller can be written in any of the above mentioned programming languages.
 However, in contrast with a regular [Robot](../reference/robot.md) controller, the [Supervisor](../reference/supervisor.md) controller will have access to privileged operations.
 The privileged operations include simulation control, for example, moving the robots to a random position, making a video capture of the simulation, etc.

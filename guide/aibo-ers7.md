@@ -80,6 +80,7 @@ AiboErs7 {
   SFString   controller          "ers7"
   SFString   controllerArgs      ""
   SFString   customData          ""
+  SFBool     supervisor          FALSE
   SFBool     synchronization     TRUE
   SFFloat    camera_fieldOfView  0.993092
   SFInt32    camera_width        208

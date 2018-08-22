@@ -16,6 +16,7 @@ Pioneer2 {
   SFString   controller      "braitenberg"
   SFString   controllerArgs  ""
   SFString   customData      ""
+  SFBool     supervisor      FALSE
   SFBool     synchronization TRUE
   MFNode     extensionSlot   []
 }

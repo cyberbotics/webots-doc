@@ -24,6 +24,7 @@ BB-8 {
   SFString   controller      "bb-8"
   SFString   controllerArgs  ""
   SFString   customData      ""
+  SFBool     supervisor      FALSE
   SFBool     synchronization TRUE
   SFString   contactMaterial "bb-8"
   MFNode     bodySlot        []

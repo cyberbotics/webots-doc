@@ -16,6 +16,7 @@ Blimp {
   SFString   controller      "blimp"
   SFString   controllerArgs  ""
   SFString   customData      ""
+  SFBool     supervisor      FALSE
   SFBool     synchronization TRUE
   MFNode     extensionSlot   []
 }

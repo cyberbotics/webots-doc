@@ -4,7 +4,7 @@ The Webots Node Chart outlines all the nodes available to build Webots worlds.
 
 In the chart, an arrow between two nodes represents an inheritance relationship.
 The inheritance relationship indicates that a derived node (at the arrow tail) inherits all the fields and API functions of a base node (at the arrow head).
-For example, the [Supervisor](supervisor.md) node inherits from the [Robot](robot.md) node, and therefore all the fields and functions available in the [Robot](robot.md) node are also available in the [Supervisor](supervisor.md) node.
+For example, the [Solid](solid.md) node inherits from the [Transform](transform.md) node, and therefore all the fields and functions available in the [Transform](transform.md) node are also available in the [Solid](solid.md) node.
 
 Boxes depicted with a dashed line (like [Light](light.md), [Device](device.md) or `Geometry`) represent *abstract* nodes, that is, nodes that cannot be instantiated (either using the SceneTree or in a ".wbt" file).
 Abstract nodes are used to group common fields and functions that are shared by derived nodes.
@@ -68,7 +68,6 @@ graph LR
       Solid --> Track[[Track](track.md)]
       Solid --> Charger[[Charger](charger.md)]
       Solid --> Robot[[Robot](robot.md)]
-        Robot --> Supervisor[[Supervisor](supervisor.md)]
     Transform --> Fluid[[Fluid](fluid.md)]
     Transform --> TrackWheel[[TrackWheel](trackwheel.md)]
 

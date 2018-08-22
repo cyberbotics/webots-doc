@@ -18,6 +18,7 @@ Altino {
   SFString   name            "vehicle"
   SFString   controller      "vehicle_driver_altino"
   SFString   controllerArgs  ""
+  SFBool     supervisor      FALSE
   SFBool     synchronization TRUE
   SFColor    color           0.3 0.3 0.7
 }

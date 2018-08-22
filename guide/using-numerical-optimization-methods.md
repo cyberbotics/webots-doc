@@ -3,7 +3,7 @@
 ### Choosing the Correct Supervisor Approach
 
 There are several approaches to using optimization algorithms in Webots.
-Most approaches need a [Supervisor](../reference/supervisor.md) and hence Webots PRO is usually required.
+Most approaches need a [Supervisor](../reference/supervisor.md) controller and hence Webots PRO is usually required.
 
 A numerical optimization can usually be decomposed in two separate tasks:
 
@@ -51,8 +51,7 @@ my_exit:
 ```
 
 In this example the robot runs for 30 simulated seconds and then the fitness is evaluated and the robot is moved back to it initial position.
-Note that this controller needs to be executed in a [Supervisor](../reference/supervisor.md) in order to access the `wb_supervisor_field_*` functions that are necessary to read and reset the robot's position.
-So when using this approach, the robot must be based on a [Supervisor](../reference/supervisor.md) node in the Scene Tree.
+Note that this controller needs to be executed in a [Robot](../reference/robot.md) node whose `supervisor` field is set to `TRUE` in order to access the `wb_supervisor_field_*` functions that are necessary to read and reset the robot's position.
 
 #### Using Two Distinct Types of Controllers
 
@@ -61,14 +60,14 @@ The optimization algorithm should go in a [Supervisor](../reference/supervisor.m
 
 Because these controllers will run in separate system processes, they will not be able to access each other's variables.
 Though, they will have to communicate by some other means in order to specify the sets of parameters that need to be evaluated.
-It is possible, and recommended, to use Webots [Emitters](../reference/emitter.md) and [Receivers](../reference/receiver.md) to exchange information between the [Supervisor](../reference/supervisor.md) and the other controllers.
-For example, in a typical scenario, the [Supervisor](../reference/supervisor.md) will send evaluation parameters (e.g., genotype) to the robot controllers.
+It is possible, and recommended, to use Webots [Emitters](../reference/emitter.md) and [Receivers](../reference/receiver.md) to exchange information between the [Supervisor](../reference/supervisor.md) controller and the other controllers.
+For example, in a typical scenario, the [Supervisor](../reference/supervisor.md) controller will send evaluation parameters (e.g., genotype) to the robot controllers.
 The robot controllers listen to their [Receivers](../reference/receiver.md), waiting for a new set of parameters.
 Upon receipt, a robot controller starts executing the behavior specified by the set of parameters.
-In this scenario, the [Supervisor](../reference/supervisor.md) needs an [Emitter](../reference/emitter.md) and each individual robot needs a [Receiver](../reference/receiver.md).
+In this scenario, the [Supervisor](../reference/supervisor.md) controller needs an [Emitter](../reference/emitter.md) and each individual robot needs a [Receiver](../reference/receiver.md).
 
-Depending on the algorithms needs, the fitness could be evaluated either in the [Supervisor](../reference/supervisor.md) or in the individual robot controllers.
-In the case it is evaluated in the robot controller then the fitness result needs to be sent back to the [Supervisor](../reference/supervisor.md).
+Depending on the algorithms needs, the fitness could be evaluated either in the [Supervisor](../reference/supervisor.md) controller or in the individual robot controllers.
+In the case it is evaluated in the robot controller then the fitness result needs to be sent back to the [Supervisor](../reference/supervisor.md) controller.
 This bidirectional type of communication requires the usage of additional [Emitters](../reference/emitter.md) and [Receivers](../reference/receiver.md).
 
 ### Resetting the Robot

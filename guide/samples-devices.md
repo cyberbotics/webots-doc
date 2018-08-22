@@ -99,8 +99,8 @@ All the robots in this simulation use the same controller; the different behavio
 It loads the `emoticons.png` image contains a grid of emoticons (as a sprite sheet), and randomly selects an emoticon from this image every 30 steps.
 - The `MyBot` [Display](../reference/display.md) called "camera_display" is displayed as a 2D overlay on top of the 3D window.
 It copies the [Camera](../reference/camera.md) image, and draws a yellow rectangle and text over it where yellow pixels are detected.
-- The [Supervisor](../reference/supervisor.md) [Display](../reference/display.md) called "ground display" is displayed as a texture on the floor.
-The [Supervisor](../reference/supervisor.md) get the position of `MyBot` and draws a green dot at this location.
+- The [Robot](../reference/robot.md) [Display](../reference/display.md) called "ground display" is displayed as a texture on the floor.
+The [Supervisor](../reference/supervisor.md) controller get the position of `MyBot` and draws a green dot at this location.
 
 ### distance\_sensor.wbt
 
@@ -156,10 +156,10 @@ Moving and rotating the box will change the displayed force.
 ![gps.png](images/samples/gps.png) This example shows two different techniques to find the current position of `MyBot`.
 The first technique consists in using an on-board [GPS](../reference/gps.md) device.
 The second method uses a [Supervisor](../reference/supervisor.md) controller that reads and transmits the position info to the robot.
-Note that a [Supervisor](../reference/supervisor.md) can read (or change) the position of any object in the simulation at any time.
+Note that a [Supervisor](../reference/supervisor.md) controller can read (or change) the position of any object in the simulation at any time.
 This example implements both techniques, and you can choose either one or the other with the keyboard.
 The `G` key prints the robot's [GPS](../reference/gps.md) device position.
-The `S` key prints the position read by the [Supervisor](../reference/supervisor.md).
+The `S` key prints the position read by the [Supervisor](../reference/supervisor.md) controller.
 
 ### gps\_lat\_long.wbt
 
@@ -323,8 +323,8 @@ The resulting projection is shown in a 2D camera overlay.
 
 **Keywords**: Supervisor, queries on scene tree
 
-![supervisor.png](images/samples/supervisor.png) This example shows basic operations of a [Supervisor](../reference/supervisor.md) node.
-The [Supervisor](../reference/supervisor.md) starts with displaying the names of the scene tree root nodes.
+![supervisor.png](images/samples/supervisor.png) This example shows basic operations of a [Supervisor](../reference/supervisor.md) controller.
+The [Supervisor](../reference/supervisor.md) controller starts with displaying the names of the scene tree root nodes.
 Then it displays the content of the `WorldInfo.gravity` field.
 Finally, after eight seconds, it moves the [PointLight](../reference/pointlight.md).
 

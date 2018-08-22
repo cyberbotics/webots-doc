@@ -16,6 +16,7 @@ Yamor {
   SFString   controller      "yamor"
   SFString   controllerArgs  ""
   SFString   customData      ""
+  SFBool     supervisor      FALSE
   SFBool     synchronization TRUE
   MFNode     extensionSlot   []
 }
@@ -38,4 +39,4 @@ Connector devices are used to simulate the mechanical connections of docking sys
 Each module is controlled by an instance of the same robot controller, which can only connect or disconnect from another module and move its rotational motor.
 From these simple behaviors, a global behavior emerges.
 The resulting robot (composed of all the modules) moves forward as a worm.
-From times to times, a module is dropped, showing the robustness of the locomotion behavior of such a system. 
+From times to times, a module is dropped, showing the robustness of the locomotion behavior of such a system.

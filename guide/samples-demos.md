@@ -43,8 +43,8 @@ Both robots use the same controller code.
 **Keywords**: Soccer, Supervisor, differential wheels, label
 
 ![soccer.png](images/samples/soccer.png) In this example, two teams of simple robots play soccer.
-A [Supervisor](../reference/supervisor.md) is used as the referee; it counts the goals and displays the current score and the remaining time in the 3D view.
-This example shows how a [Supervisor](../reference/supervisor.md) can be used to read and change the position of objects.
+A [Supervisor](../reference/supervisor.md) controller is used as the referee; it counts the goals and displays the current score and the remaining time in the 3D view.
+This example shows how a [Supervisor](../reference/supervisor.md) controller can be used to read and change the position of objects.
 
 ### stewart\_platform.wbt
 

@@ -21,6 +21,7 @@ Khr2hv {
   SFString   controllerArgs  ""
   SFString   contactMaterial "default"
   SFString   customData      ""
+  SFBool     supervisor      FALSE
   SFBool     synchronization TRUE
   MFNode     bodySlot        []
 }

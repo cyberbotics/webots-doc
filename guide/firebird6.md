@@ -17,6 +17,7 @@ FireBird6 {
   SFString   controller      "fire_bird_6_obstacle_avoidance"
   SFString   controllerArgs  ""
   SFString   customData      ""
+  SFBool     supervisor      FALSE
   SFBool     synchronization TRUE
   SFString   window          "fire_bird_6_window"
   SFString   remoteControl   ""

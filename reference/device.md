@@ -253,6 +253,6 @@ type = wb_device_get_node_type(tag)
 
 *convert WbDeviceTag to its corresponding WbNodeType*
 
-The `wb_device_get_node_type` function converts the WbDeviceTag given as parameter (`tag`) to its corresponding WbNodeType (cf. the [Supervisor](supervisor.md) API).
+The `wb_device_get_node_type` function converts the WbDeviceTag given as parameter (`tag`) to its corresponding WbNodeType (cf. the [Supervisor API](supervisor.md)).
 
 This function returns NULL if the WbDeviceTag does not match a valid device.

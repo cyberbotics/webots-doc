@@ -16,6 +16,7 @@ AckermannVehicle {
   SFString   model                          "AckermannVehicle"
   SFString   controller                     "void"
   SFString   controllerArgs                 ""
+  SFBool     supervisor                     FALSE
   SFBool     synchronization                TRUE
   SFFloat    trackFront                     1.7
   SFFloat    trackRear                      1.7

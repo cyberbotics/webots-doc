@@ -84,6 +84,7 @@ Pioneer3dx {
   SFString   controller      "pioneer3dx_collision_avoidance"
   SFString   controllerArgs  ""
   SFString   customData      ""
+  SFBool     supervisor      FALSE
   SFBool     synchronization TRUE
   MFNode     extensionSlot   []
 }

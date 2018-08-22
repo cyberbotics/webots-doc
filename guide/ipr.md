@@ -29,6 +29,7 @@ IprHd6* {
   SFString   controller       "void"
   SFString   controllerArgs   ""
   SFString   customData       ""
+  SFBool     supervisor       FALSE
   SFBool     synchronization  TRUE
   MFNode     sensorsSlot      []
   MFNode     tableSlot        []

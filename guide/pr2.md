@@ -22,6 +22,7 @@ Pr2 {
   SFString   controller      "pr2_demo"
   SFString   controllerArgs  ""
   SFString   customData      ""
+  SFBool     supervisor      FALSE
   SFBool     synchronization TRUE
   SFBool     selfCollision   FALSE
   MFNode     baseSlot        []

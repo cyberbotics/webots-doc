@@ -119,7 +119,7 @@ This may impact the way you design a [physics plugin](physics-plugin.md)s.
 
 When designing the robot tree structure, there is one important rule to remember about the [Physics](#physics) nodes: *If a Solid node has a parent and a child with a Physics node then it must also have a Physics node* (1).
 A consequence of this rule is that, in a robot tree structure, only leaf nodes and nodes included in the *static basis* (see first [note](physics.md) above) can have a NULL `physics` field.
-In addition top nodes ([Robot](robot.md), [DifferentialWheels](differentialwheels.md) or [Supervisor](supervisor.md)) do usually have [Physics](#physics) because this is required to allow any of their children to use the *physics* simulation.
+In addition, top [Robot](robot.md) nodes do usually have [Physics](#physics) because this is required to allow any of their children to use the *physics* simulation.
 
 Note that each [Physics](#physics) node adds a significant complexity to the world: as a consequence the simulation speed decreases.
 Therefore the number of [Physics](#physics) nodes should be kept as low as possible.

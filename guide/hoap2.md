@@ -20,6 +20,7 @@ Hoap2 {
   SFString   controller          "hoap2"
   SFString   controllerArgs      ""
   SFString   customData          ""
+  SFBool     supervisor          FALSE
   SFBool     synchronization     TRUE
   SFColor    diffuseColor        0.65 0.65 0.65
   SFFloat    shininess           0.8

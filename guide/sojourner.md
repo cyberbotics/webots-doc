@@ -20,6 +20,7 @@ Sojourner {
   SFString   controller      "sojourner"
   SFString   controllerArgs  ""
   SFString   customData      ""
+  SFBool     supervisor      FALSE
   SFBool     synchronization TRUE
   MFNode     extensionSlot   []
 }

@@ -7,6 +7,7 @@ Robot {
   SFString controller      "void"   # any string
   SFString controllerArgs  ""       # any string
   SFString customData      ""       # any string
+  SFBool   supervisor      FALSE    # {TRUE, FALSE}
   SFBool   synchronization TRUE     # {TRUE, FALSE}
   MFFloat  battery         [ ]      # see below
   SFFloat  cpuConsumption  10       # [0, inf)
@@ -17,12 +18,9 @@ Robot {
 }
 ```
 
-Direct derived nodes: [DifferentialWheels](differentialwheels.md), [Supervisor](supervisor.md).
-
 ### Description
 
 The [Robot](#robot) node can be used as basis for building a robot, e.g., an articulated robot, a humanoid robot, a wheeled robot.
-If you would like to build a robot with supervisor capabilities use the [Supervisor](supervisor.md) node instead (Webots PRO license required).
 
 > **Note**: Logically, if the Robot node has one or more Solid (or derived) ancestor nodes, then the physical properties of the ancestor nodes will affect the Robot node's physical behavior.
 
@@ -43,6 +41,8 @@ If the robot window is required it is recommended to assign the `void` controlle
 - `customData`: this field may contain any user data, for example parameters corresponding to the configuration of the robot.
 It can be read from the robot controller using the `wb_robot_get_custom_data` function and can be written using the `wb_robot_set_custom_data` function.
 It may also be used as a convenience for communicating between a robot and a supervisor without implementing a Receiver / Emitter system: The supervisor can read and write in this field using the generic supervisor functions for accessing fields.
+
+- `supervisor`: if the value is `TRUE` the robot will have [supervisor capabilities](supervisor.md) (Webots PRO license required).
 
 - `synchronization`: if the value is `TRUE` (default value), the simulator is synchronized with the controller; if the value is `FALSE`, the simulator runs as fast as possible, without waiting for the controller.
 The `wb_robot_get_synchronization` function can be used to read the value of this field from a controller program.
@@ -1605,6 +1605,87 @@ name = wb_robot_get_controller_arguments()
 *return the content of the `Robot::controller` and `Robot::controllerArgs` fields*
 
 These functions return the content of respectively the Robot::controller and the Robot::controllerArgs fields.
+
+---
+
+#### `wb_robot_get_supervisor`
+
+%tab-component
+
+%tab "C"
+
+```c
+#include <webots/robot.h>
+
+bool wb_robot_get_supervisor();
+```
+
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Robot.hpp>
+
+namespace webots {
+  class Robot {
+    bool getSupervisor() const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Robot
+
+class Robot:
+    def getSupervisor(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Robot;
+
+public class Robot {
+  public boolean getSupervisor();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+sync = wb_robot_get_supervisor()
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/robot/get_supervisor` | `service` | [`webots_ros::get_bool`](ros-api.md#common-services) | |
+
+%tab-end
+
+%end
+
+##### Description
+
+*return the value of the supervisor field of the Robot node*
+
+This function returns the boolean value corresponding to the supervisor field of the Robot node.
+This function can be used to determine whether it is allowed to use the [Supervisor API](supervisor.md) or not.
 
 ---
 

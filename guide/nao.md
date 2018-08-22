@@ -49,6 +49,7 @@ Nao {
   SFString   controller            "nao_demo"
   SFString   controllerArgs        ""
   SFString   customData            ""
+  SFBool     supervisor            FALSE
   SFBool     synchronization       TRUE
   SFBool     selfCollision         FALSE
   SFFloat    gpsAccuracy           0.0

@@ -2,8 +2,8 @@
 
 ### How Can I Get the 3D Position of a Robot/Object?
 
-There are different functions depending whether this information must be accessed in the controller, in the [Supervisor](../reference/supervisor.md) or in the physics plugin.
-Note that Webots PRO is required to use [Supervisor](../reference/supervisor.md) and the physics plugin functions.
+There are different functions depending whether this information must be accessed in a normal controller, in a [Supervisor](../reference/supervisor.md) controller or in a physics plugin.
+Note that Webots PRO is required to use [Supervisor](../reference/supervisor.md) controller and the physics plugin functions.
 All the functions described below will return the 3D position in meters and expressed in the global (world) coordinate system.
 
 Clearly, the position of a robot can also be approximated by using *odometry* or *SLAM* techniques.
@@ -19,12 +19,12 @@ Note that the [GPS](../reference/gps.md) can also be placed on a robot's part (a
 
 #### Get Position in Supervisor Code:
 
-1. To get the 3D position of any [Transform](../reference/transform.md) (or derived) node in the [Supervisor](../reference/supervisor.md) code: you can use the `wb_supervisor_node_get_position` function.
+1. To get the 3D position of any [Transform](../reference/transform.md) (or derived) node using the  [Supervisor API](../reference/supervisor.md): you can use the `wb_supervisor_node_get_position` function.
 Please check this function's description in the [Reference Manual](../reference/supervisor.md).
 2. To get the 3D position of any [Transform](../reference/transform.md) (or derived) node placed at the root of the Scene Tree (the nodes visible when the Scene Tree is completely collapsed), you can use the `wb_supervisor_field_get_sf_vec3f` function.
 Here is an [example](supervisor-programming.md#tracking-the-position-of-robots).
 
-A simulation example that shows both the [GPS](../reference/gps.md) and the [Supervisor](../reference/supervisor.md) techniques is included in the Webots installation, you just need to open this world: "WEBOTS\_HOME/projects/samples/devices/worlds/gps.wbt".
+A simulation example that shows both the [GPS](../reference/gps.md) and the [Supervisor](../reference/supervisor.md) APIs techniques is included in the Webots installation, you just need to open this world: "WEBOTS\_HOME/projects/samples/devices/worlds/gps.wbt".
 
 #### Get Position in Physics Plugin Code:
 
@@ -193,13 +193,13 @@ There are different techniques depending on what you want to draw:
 
 1. If you just want to add some 2d text, you can do this by using the function: `wb_supervisor_set_label`.
 This will allow you to put 2d overlay text in front of the 3d simulation.
-Please lookup for the [Supervisor](../reference/supervisor.md) node documentation.
+Please lookup for the [Supervisor API](../reference/supervisor.md) documentation.
 2. If you want to add a small sub-window in front of the 3d graphics, you should consider using the [Display](../reference/display.md) node.
 This will allow you to do 2d vector graphics and text.
 This is also useful for example to display processed camera images.
 Please lookup for the [Display](../reference/display.md) node documentation.
-3. If you want add 3d graphics to the main window, this can be done by using the [Supervisor](../reference/supervisor.md) API.
-The [Supervisor](../reference/supervisor.md) API can be used to create new nodes - meaning that you can create an [IndexedFaceSet](../reference/indexedfaceset.md) or IndexedLineSet and adjust vertex positions or indexing accordingly to create and update the shape you wish to draw in the 3D scene.
+3. If you want add 3d graphics to the main window, this can be done by using the [Supervisor API](../reference/supervisor.md).
+The [Supervisor API](../reference/supervisor.md) can be used to create new nodes - meaning that you can create an [IndexedFaceSet](../reference/indexedfaceset.md) or [IndexedLineSet](../reference/indexedlineset.md) and adjust vertex positions or indexing accordingly to create and update the shape you wish to draw in the 3D scene.
 
 ### What Does This Mean: "The time step used by controller {...} is not a multiple of WorldInfo.basicTimeStep!"?
 

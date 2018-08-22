@@ -29,8 +29,7 @@ Usually the C++/Java/Python methods have the same parameters as their C API coun
 ### Controller Class
 
 The C++/Java/Python controller implementation should be placed in a user-defined class derived from one of the Webots classes: `Robot` or `Supervisor`.
-It is important that the controller class is derived from the same class as that used in Scene Tree, otherwise some methods may not be available or may not work.
-For example, if in the Scene Tree a robot is of type [Supervisor](../reference/supervisor.md), then the corresponding C++/Java/Python controller class must extend the `Supervisor` class.
+The controller class should derive from the `Robot` class if the `supervisor` field of the [Robot](../reference/robot.md) node is `FALSE` and from the `Supervisor` class if it is `TRUE`.
 
 As you can see in [this figure](#a-small-subset-of-webots-oriented-object-apis), `Supervisor` is a subclass of the `Robot` class.
 Hence it is possible to call the `Robot`'s methods, such as, e.g., the `step` or `getLED` functions, from the `Supervisor` controllers.

@@ -169,6 +169,7 @@ E-puck {
   SFString   controller          "e-puck_avoid_obstacles"
   SFString   controllerArgs      ""
   SFString   customData          ""
+  SFBool     supervisor          FALSE
   SFBool     synchronization     TRUE
   SFString   version             "1"
   SFFloat    camera_fieldOfView  0.84

@@ -20,6 +20,7 @@ Create {
   SFString   controller      "create_avoid_obstacles"
   SFString   controllerArgs  ""
   SFString   customData      ""
+  SFBool     supervisor      FALSE
   SFBool     synchronization TRUE
   MFNode     bodySlot        []
 }

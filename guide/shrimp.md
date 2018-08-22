@@ -22,6 +22,7 @@ Shrimp {
   SFString   controller      "shrimp"
   SFString   controllerArgs  ""
   SFString   customData      ""
+  SFBool     supervisor      FALSE
   SFBool     synchronization TRUE
   MFNode     extensionSlot   []
 }

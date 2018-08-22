@@ -17,6 +17,7 @@ Atlas {
   SFString   controller      "hello_world_demo"
   SFString   controllerArgs  ""
   SFString   customData      ""
+  SFBool     supervisor      FALSE
   SFBool     synchronization TRUE
   MFNode     pelvisSlot      []
 }

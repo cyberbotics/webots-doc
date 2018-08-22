@@ -10,7 +10,7 @@ They are not callback functions, but functions that you can call from your callb
 %tab "C"
 
 ```c
-dBodyID dWebotsGetBodyFromDEF(const char *defName);
+dBodyID dWebotsGetBodyFromDEF(const char *DEF);
 ```
 
 %tab-end
@@ -22,9 +22,9 @@ The returned dBodyID is an ODE object that represent a rigid body with propertie
 The dBodyID object can then be used with all the available ODE's `dBody*` functions (see ODE documentation).
 For example it is possible to add a force to the body with the `dBodyAddForce` function, etc.
 
-`defName` is the DEF name of the requested [Solid](solid.md) node.
+DEF is the DEF name of the requested [Solid](solid.md) node.
 
-It is possible to use dots (.) as scoping operator in the `defName` parameter.
+It is possible to use dots (.) as scoping operator in the DEF parameter.
 Dots can be used when looking for a specific node path in the node hierarchy.
 For example:
 
@@ -51,7 +51,7 @@ Solid merging happens between rigidly linked solids with non NULL `physics` fiel
 %tab "C"
 
 ```c
-dGeomID dWebotsGetGeomFromDEF(const char *defName);
+dGeomID dWebotsGetGeomFromDEF(const char *DEF);
 ```
 
 %tab-end
@@ -63,9 +63,9 @@ A dGeomID is an ODE object that represents a geometrical shape such as a sphere,
 The dGeomID returned by Webots corresponds to the boundingObject of the [Solid](solid.md).
 The dGeomID object can then be used with all the available ODE's `dGeom*` functions (see ODE documentation).
 
-`defName` is the DEF name of the requested [Solid](solid.md) node.
+DEF is the DEF name of the requested [Solid](solid.md) node.
 
-It is possible to use dots (.) as scoping operator in the `defName` parameter, see above.
+It is possible to use dots (.) as scoping operator in the DEF parameter, see above.
 This function returns NULL if there is no [Solid](solid.md) (or derived) node with the specified DEF name.
 It will also return NULL if the `boundingObject` field of the [Solid](solid.md) node is undefined (NULL).
 This function searches the Scene Tree recursively therefore it is recommended to store the result rather than calling it at each step.

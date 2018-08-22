@@ -67,7 +67,7 @@ Reinitializing the generator with a constant seed allows Webots to run reproduci
 If you don't need deterministic behavior you should initialize the `srand` function with the current time: `srand(time(NULL))`.
 Webots itself does not invoke the `srand` function; however, it uses the `rand` function, for example to add noise to sensor measurements.
 In order to have reproducible simulations, it is also required that all controllers run in *synchronous* mode.
-That means that the `synchronization` field of every [Robot](robot.md), [DifferentialWheels](differentialwheels.md) or [Supervisor](supervisor.md) must be set to TRUE.
+That means that the `synchronization` field of every [Robot](robot.md) must be set to TRUE.
 Finally, note that ODE uses its own random number generator that you might also want to reinitialize separately via the `dRandSetSeed` function.
 
 ### "int webots\_physics\_collide(dGeomID, dGeomID)"

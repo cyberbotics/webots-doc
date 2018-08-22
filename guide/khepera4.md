@@ -21,6 +21,7 @@ Khepera4 {
   SFString   controller          "khepera4"
   SFString   controllerArgs      ""
   SFString   customData          ""
+  SFBool     supervisor          FALSE
   SFBool     synchronization     TRUE
   SFString   bodyMaterial        "default"
   SFString   wheelMaterial       "default"

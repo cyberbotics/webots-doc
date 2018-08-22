@@ -56,9 +56,8 @@ In order to reset the simulation, the following steps are performed:
     - **[Lidar](../reference/lidar.md)**: The position of the rotating head is restored.
     - **[Pen](../reference/pen.md)**: All the painted textures are cleaned.
     - **[Propeller](../reference/propeller.md)**: The slow helix and it's initial position are restored.
-    - **[Robot](../reference/robot.md)**: The `battery` field is restored and the controller is restarted.
+    - **[Robot](../reference/robot.md)**: The `battery` field is restored, all the supervisor labels are removed, the nodes visibility is restored and the controller is restarted.
     - **[Solid](../reference/solid.md)**: The `translation` and `rotation` fields are restored and the physics is reset.
-    - **[Supervisor](../reference/supervisor.md)**: All the labels are removed and the nodes visibility is restored.
     - **[Track](../reference/track.md)**: The motor position is restored and the `translation` field of the textureTransform node of the [Appearance](../reference/appearance.md) node of the first [Shape](../reference/shape.md) children node is restored.
     - **[Viewpoint](../reference/viewpoint.md)**: The `orientation` and `position` fields are restored.
 

@@ -20,6 +20,7 @@ Khr3hv {
   SFString   controller      "void"
   SFString   controllerArgs  ""
   SFString   customData      ""
+  SFBool     supervisor      FALSE
   SFBool     synchronization TRUE
   SFBool     selfCollision   FALSE
   MFNode     bodySlot        []

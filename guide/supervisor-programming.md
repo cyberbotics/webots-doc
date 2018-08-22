@@ -4,27 +4,23 @@ The programming examples provided here are in C, but same concepts apply to C++,
 
 ### Introduction
 
-The [Supervisor](../reference/supervisor.md) is a special kind of [Robot](../reference/robot.md).
-In object-oriented jargon we would say that the `Supervisor` class *inherits* from the `Robot` class or that the `Supervisor` class *extends* the `Robot` class.
-The important point is that the [Supervisor](../reference/supervisor.md) node offers the `wb_supervisor_*` functions in addition to the regular `wb_robot_*` functions.
-These extra functions can only be invoked from a controller program associated with a [Supervisor](../reference/supervisor.md) node, not with a [Robot](../reference/robot.md) node.
-Note that Webots PRO is required to create [Supervisor](../reference/supervisor.md) nodes or use the `wb_supervisor_*` functions.
+If the `supervisor` field of the [Robot](../reference/robot.md) node is set to `TRUE` the `wb_supervisor_*` functions are available in addition to the regular `wb_robot_*` functions.
+Note that Webots PRO is required to use the [Supervisor API](../reference/supervisor.md).
 
-In the Scene Tree, a [Supervisor](../reference/supervisor.md) node can be used in the same context where a [Robot](../reference/robot.md) node is used, hence it can be used as a base node to model a robot.
-But in addition, the `wb_supervisor_*` functions can also be used to control the simulation process and modify the Scene Tree.
-For example the [Supervisor](../reference/supervisor.md) can replace human actions such as measuring the distance travelled by a robot or moving it back to its initial position, etc.
-The [Supervisor](../reference/supervisor.md) can also take a screen shot or a video of the simulation, restart or terminate the simulation, etc.
+A [Robot](../reference/robot.md) node whose `supervisor` field is set to `TRUE` can be used as any regular [Robot](../reference/robot.md) node, but in addition, the `wb_supervisor_*` functions can also be used to control the simulation process and modify the Scene Tree.
+For example the [Supervisor AP](../reference/supervisor.md) can replace human actions such as measuring the distance travelled by a robot or moving it back to its initial position, etc.
+The [Supervisor API](../reference/supervisor.md) can also be used to take a screen shot or a video of the simulation, restart or terminate the simulation, etc.
 It can read or modify the value of every fields in the Scene Tree, e.g. read or change the position of robots, the color of objects, or switch on or off the light sources, and do many other useful things.
 
-One important thing to keep in mind is that the [Supervisor](../reference/supervisor.md) functions correspond to functionalities that are usually not available on real robots; they rather correspond to a human intervention on the experimental setup.
-Hence, the [Robot](../reference/robot.md) vs. [Supervisor](../reference/supervisor.md) distinction is intentional and aims at reminding the user that [Supervisor](../reference/supervisor.md) code may not be easily transposed to real robots.
+One important thing to keep in mind is that the [Supervisor API](../reference/supervisor.md) corresponds to functionalities that are usually not available on real robots; it rather corresponds to a human intervention on the experimental setup.
+Hence, the `wb_robot_*` vs. `wb_supervisor_*` distinction is intentional and aims at reminding the user that [Supervisor API](../reference/supervisor.md) functions may not be easily transposed to real robots.
 
 Now let's examine a few examples of [Supervisor](../reference/supervisor.md) code.
 
 ### Tracking the Position of Robots
 
-The [Supervisor](../reference/supervisor.md) is frequently used to record robots trajectories.
-Of course, a robot can find its position using a [GPS](../reference/gps.md), but when it is necessary to keep track of several robots simultaneously and in a centralized way, it is much simpler to use a [Supervisor](../reference/supervisor.md).
+The [Supervisor API](../reference/supervisor.md) is frequently used to record robots trajectories.
+Of course, a robot can find its position using a [GPS](../reference/gps.md), but when it is necessary to keep track of several robots simultaneously and in a centralized way, it is much simpler to use the [Supervisor API](../reference/supervisor.md).
 
 The following [Supervisor](../reference/supervisor.md) code shows how to keep track of a single robot, but this can easily be transposed to an arbitrary number of robots.
 This example code finds a `WbNodeRef` that corresponds to the robot node and then a `WbFieldRef` that corresponds to the robot's `translation` field.
@@ -54,8 +50,8 @@ int main() {
 }
 ```
 
-Note that a [Supervisor](../reference/supervisor.md) controller must include the `supervisor.h` header file in addition to the `robot.h` header file.
-Otherwise the [Supervisor](../reference/supervisor.md) works like a regular [Robot](../reference/robot.md) controller and everything that was explained in the "Controller Programming" section does also apply to "Supervisor Programming".
+Note that the [Supervisor API](../reference/supervisor.md) is defined in the `supervisor.h` header file which should be included in addition to the `robot.h` header file.
+Otherwise a [Supervisor](../reference/supervisor.md) controller works like a regular [Robot](../reference/robot.md) controller and everything that was explained in the "Controller Programming" section does also apply to "Supervisor Programming".
 
 As illustrated by the example, it is better to get the `WbNodeRef`s and `WbFieldRef`s only once, at the beginning of the simulation (keeping the invariants out of the loop).
 The `wb_supervisor_node_get_from_def` function searches for an object named "MY\_ROBOT" in the Scene Tree.
@@ -77,7 +73,7 @@ In the code, the evaluation of the a and b parameters is carried out in the `whi
 The `actuateMotors` function here is assumed to call the `wb_motor_set_postion` function for each motor involved in the locomotion.
 After each evaluation the distance travelled by the robot is measured and logged.
 Then the robot is moved (translation) back to its initial position (0, 0.5, 0) for the next evaluation.
-To move the robot we need the `wb_supervisor_*` functions and hence the base node of this robot in the Scene Tree must be a [Supervisor](../reference/supervisor.md) and not a [Robot](../reference/robot.md).
+To move the robot we need the `wb_supervisor_*` functions and hence the `supervisor` field of the [Robot](../reference/robot.md) node should be `TRUE`.
 
 ```c
 #include <webots/robot.h>

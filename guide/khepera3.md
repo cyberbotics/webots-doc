@@ -17,6 +17,7 @@ Khepera3 {
   SFString   controller      "braitenberg"
   SFString   controllerArgs  ""
   SFString   customData      ""
+  SFBool     supervisor      FALSE
   SFBool     synchronization TRUE
   SFString   wheelMaterial   "default"
   SFString   bodyMaterial    "default"

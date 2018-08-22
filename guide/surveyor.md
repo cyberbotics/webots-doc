@@ -17,6 +17,7 @@ SurveyorSrv1 {
   SFString   controller      "surveyor"
   SFString   controllerArgs  ""
   SFString   customData      ""
+  SFBool     supervisor      FALSE
   SFBool     synchronization TRUE
   MFNode     extensionSlot   []
 }

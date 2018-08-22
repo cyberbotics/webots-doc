@@ -1,19 +1,8 @@
 ## Supervisor
 
-Derived from [Robot](robot.md).
-
-```
-Supervisor {
-  # no additional fields
-}
-```
-
-### Description
-
-A [Supervisor](#supervisor) is a special kind of [Robot](robot.md) which is specially designed to control the simulation.
-A [Supervisor](#supervisor) has access to extra functions that are not available to a regular [Robot](robot.md).
-If a [Supervisor](#supervisor) contains devices then the [Supervisor](#supervisor) controller can use them.
-Webots PRO is required to use the [Supervisor](#supervisor) node.
+The [Supervisor](#supervisor) is not a node, it is a set of functions available for each [Robot](robot.md) node whose `supervisor` field is set to `TRUE`.
+The [Supervisor API](#supervisor) can be used to access to extra functions that are not available to a regular [Robot](robot.md).
+Webots PRO is required to use the [Supervisor API](#supervisor).
 
 > **Note**: Note that in some special cases the [Supervisor](#supervisor) functions might return wrong values and it might not be possible to retrieve fields and nodes.
 This occurs when closing a world and quitting its controllers, i.e. reloading the current world, opening a new world, or closing Webots.
@@ -155,7 +144,7 @@ The `wb_supervisor_node_get_root` function returns a handle to the root node whi
 Like any [Group](group.md) node, the root node has a MFNode field called "children" which can be parsed to read each node in the scene tree.
 An example of such a usage is provided in the "supervisor.wbt" sample worlds (located in the "projects/samples/devices/worlds" directory of Webots.
 
-The `wb_supervisor_node_get_self` function returns a handle to the [Supervisor](#supervisor) node itself on which the controller is run.
+The `wb_supervisor_node_get_self` function returns a handle to the [Robot](robot.md) node itself on which the controller is run.
 This is a utility function that simplifies the task of retrieving the base node without having to define a DEF name for it.
 
 The `wb_supervisor_node_get_selected` function returns a handle to the currently selected node in the scene tree.
@@ -308,7 +297,6 @@ typedef enum {
   WB_NODE_VIEWPOINT,
   /* robots */
   WB_NODE_ROBOT,
-  WB_NODE_SUPERVISOR,
   WB_NODE_DIFFERENTIAL_WHEELS,
   /* devices */
   WB_NODE_ACCELEROMETER,
@@ -385,7 +373,7 @@ namespace webots {
       PLANE, POINT_LIGHT, POINT_SET, SHAPE, SPHERE, SPOT_LIGHT, TEXTURE_COORDINATE,
       TEXTURE_TRANSFORM, TRANSFORM, VIEWPOINT,
       // robots
-      ROBOT, SUPERVISOR, DIFFERENTIAL_WHEELS,
+      ROBOT, DIFFERENTIAL_WHEELS,
       // devices
       ACCELEROMETER, BRAKE, CAMERA, COMPASS, CONNECTOR, DISPLAY,
       DISTANCE_SENSOR, EMITTER, GPS, GYRO, INERTIAL_UNIT, LED, LIDAR,
@@ -422,7 +410,7 @@ class Node:
     PLANE, POINT_LIGHT, POINT_SET, SHAPE, SPHERE, SPOT_LIGHT, TEXTURE_COORDINATE,
     TEXTURE_TRANSFORM, TRANSFORM, VIEWPOINT,
     # robots
-    ROBOT, SUPERVISOR, DIFFERENTIAL_WHEELS,
+    ROBOT, DIFFERENTIAL_WHEELS,
     # devices
     ACCELEROMETER, BRAKE, CAMERA, COMPASS, CONNECTOR, DISPLAY,
     DISTANCE_SENSOR, EMITTER, GPS, GYRO, INERTIAL_UNIT, LED, LIDAR,
@@ -457,7 +445,7 @@ public class Node {
     PLANE, POINT_LIGHT, POINT_SET, SHAPE, SPHERE, SPOT_LIGHT, TEXTURE_COORDINATE,
     TEXTURE_TRANSFORM, TRANSFORM, VIEWPOINT,
     // robots
-    ROBOT, SUPERVISOR, DIFFERENTIAL_WHEELS,
+    ROBOT, DIFFERENTIAL_WHEELS,
     // devices
     ACCELEROMETER, BRAKE, CAMERA, COMPASS, CONNECTOR, DISPLAY,
     DISTANCE_SENSOR, EMITTER, GPS, GYRO, INERTIAL_UNIT, LED, LIDAR,
@@ -492,7 +480,7 @@ WB_NODE_PLANE, WB_NODE_POINT_LIGHT, WB_NODE_POINT_SET, WB_NODE_SHAPE,
 WB_NODE_SPHERE, WB_NODE_SPOT_LIGHT, WB_NODE_TEXTURE_COORDINATE,
 WB_NODE_TEXTURE_TRANSFORM, WB_NODE_TRANSFORM, WB_NODE_VIEWPOINT,
 % robots
-WB_NODE_ROBOT, WB_NODE_SUPERVISOR, WB_NODE_DIFFERENTIAL_WHEELS,
+WB_NODE_ROBOT, WB_NODE_DIFFERENTIAL_WHEELS,
 % devices
 WB_NODE_ACCELEROMETER, WB_NODE_BRAKE, WB_NODE_CAMERA, WB_NODE_COMPASS,
 WB_NODE_CONNECTOR, WB_NODE_DISPLAY, WB_NODE_DISTANCE_SENSOR, WB_NODE_EMITTER,
@@ -1365,6 +1353,87 @@ wb_supervisor_node_restart_controller(node)
 The `wb_supervisor_node_restart_controller` function restarts the controller of the Robot passed to it.
 If a node other than a [Robot](robot.md) is passed to this function, no change is effected, and a warning message is printed to the console.
 Note that if a robot window is specified for the [Robot](robot.md) node, the robot window will be restarted as well.
+
+---
+
+#### `wb_supervisor_node_move_viewpoint_to_object`
+
+%tab-component
+
+%tab "C"
+
+```c
+#include <webots/supervisor.h>
+
+void wb_supervisor_node_move_viewpoint_to_object(WbNodeRef node);
+```
+
+%tab-end
+
+%tab "C++"
+
+```cpp
+#include <webots/Node.hpp>
+
+namespace webots {
+  class Node {
+    void moveViewpointToObject() const;
+    // ...
+  }
+}
+```
+
+%tab-end
+
+%tab "Python"
+
+```python
+from controller import Node
+
+class Node:
+    def moveViewpointToObject(self):
+    # ...
+```
+
+%tab-end
+
+%tab "Java"
+
+```java
+import com.cyberbotics.webots.controller.Node;
+
+public class Node {
+  public void moveViewpointToObject();
+  // ...
+}
+```
+
+%tab-end
+
+%tab "MATLAB"
+
+```matlab
+wb_supervisor_node_move_viewpoint_to_object(node)
+```
+
+%tab-end
+
+%tab "ROS"
+
+| name | service/topic | data type | data type definition |
+| --- | --- | --- | --- |
+| `/supervisor/node/move_viewpoint_to_object` | `service` | `webots_ros::node_move_viewpoint_to_object` | `uint64 node`<br/>---`<br/>`int8 success` |
+
+%tab-end
+
+%end
+
+##### Description
+
+*move the viewpoint to the node*
+
+The `wb_supervisor_node_move_viewpoint_to_object` function moves the [Viewpoint](viewpoint.md) to the node given in argument.
+Calling this function is equivalent to using the 'Move Viewpoint to Object' menu from the GUI.
 
 ---
 
@@ -2953,7 +3022,7 @@ Index -1 represents the last item and the first item is represented by index 0 o
 
 The set operations are received by Webots from possibly several supervisors running concurrently.
 In order to ensure reproducible simulation results, they are executed only once all set operations are received, just before advancing the simulation time.
-The order of execution of the set operations is defined by the order of the Supervisor nodes in the scene tree.
+The order of execution of the set operations is defined by the order of the [Robot](robot.md) nodes in the scene tree.
 As a consequence, if a supervisor sets the translation field of a node and immediately retrieves the absolute position of the same node using the `wb_supervisor_node_get_position` function, it will actually get the previous position of the node.
 This is because the execution of the set operation is postponed to the beginning of the next simulation step.
 In order to retrieve the new position of the node, a `wb_robot_step` function call with a non-zero argument should be executed before calling the `wb_supervisor_node_get_position` function.

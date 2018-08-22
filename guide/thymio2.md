@@ -74,6 +74,7 @@ Thymio2 {
   SFString   controller      "thymio2_aseba"
   SFString   controllerArgs  "port=33333"
   SFString   customData      ""
+  SFBool     supervisor      FALSE
   SFBool     synchronization TRUE
   SFString   window          ""
   SFString   contactMaterial "thymio body"

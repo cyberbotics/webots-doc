@@ -54,6 +54,12 @@ function setupCyberboticsUrl(url) {
         localSetup.branch = version.substr(n + 1);
     }
 
+    m = url.match(/tab=([^&#]*)/);
+    if (m)
+      localSetup.tab = m[1];
+    else
+      localSetup.tab = '';
+
     m = args.match(/#([^&#]*)/);
     if (m)
       localSetup.anchor = m[1];

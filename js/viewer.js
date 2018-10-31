@@ -39,6 +39,7 @@ function setupCyberboticsUrl(url) {
   localSetup.tab = '';
 
   var m = url.match(new RegExp('/([^/]+)/([^/\\?#]+)([^/]*)$'));
+  console.log('A')
   if (m) {
     localSetup.book = m[1];
     localSetup.page = m[2];
@@ -59,6 +60,7 @@ function setupCyberboticsUrl(url) {
       localSetup.tab = m[1];
     else
       localSetup.tab = '';
+    console.log('B ' + localSetup.tab)
 
     m = args.match(/#([^&#]*)/);
     if (m)
@@ -184,6 +186,7 @@ function forgeUrl(book, page, tab, anchor) {
     if (localSetup.tab != '')
       url += '?tab=' + localSetup.tab;
     url += anchorString;
+    console.log('C ' + url)
   } else {
     var isFirstArgument;
 

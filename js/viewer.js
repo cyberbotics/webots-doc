@@ -7,7 +7,7 @@
 /* exported resetRobotComponent */
 /* exported toggleDeviceComponent */
 /* exported highlightX3DElement */
-/* exported openTab */
+/* exported openTabFromEvent */
 
 var handle;
 
@@ -36,6 +36,7 @@ function setupCyberboticsUrl(url) {
   localSetup.book = 'guide';
   localSetup.page = 'index';
   localSetup.anchor = '';
+  localSetup.tab = '';
 
   var m = url.match(new RegExp('/([^/]+)/([^/\\?#]+)([^/]*)$'));
   if (m) {
@@ -76,6 +77,12 @@ function setupDefaultUrl(url) {
   else if (!localSetup.book)
     localSetup.book = 'guide';
 
+  m = url.match(/tab=([^&#]*)/);
+  if (m)
+    localSetup.tab = m[1].toLowerCase();
+  else if (!localSetup.tab)
+    localSetup.tab = '';
+
   m = url.match(/#([^&#]*)/);
   if (m)
     localSetup.anchor = m[1];
@@ -88,7 +95,7 @@ function setupUrl(url) {
     setupCyberboticsUrl(url);
   else
     setupDefaultUrl(url);
-  console.log('book=' + localSetup.book + ' page=' + localSetup.page + ' branch=' + localSetup.branch + ' anchor=' + localSetup.anchor);
+  console.log('book=' + localSetup.book + ' page=' + localSetup.page + ' branch=' + localSetup.branch + ' tab=' + localSetup.tab + ' anchor=' + localSetup.anchor);
 }
 
 function computeTargetPath() {
@@ -124,7 +131,7 @@ function redirectUrls(node) {
           anchor = match[3];
           if (anchor)
             anchor = anchor.substring(1); // remove the '#' character
-          a.setAttribute('href', forgeUrl(book, newPage, anchor));
+          a.setAttribute('href', forgeUrl(book, newPage, localSetup.tab, anchor));
         }
       } else { // Cross-page hyperlink case.
         addDynamicLoadEvent(a);
@@ -134,7 +141,7 @@ function redirectUrls(node) {
           anchor = match[2];
           if (anchor)
             anchor = anchor.substring(1); // remove the '#' character
-          a.setAttribute('href', forgeUrl(localSetup.book, newPage, anchor));
+          a.setAttribute('href', forgeUrl(localSetup.book, newPage, localSetup.tab, anchor));
         }
       }
     }
@@ -158,7 +165,7 @@ function collapseMovies(node) {
   }
 }
 
-function forgeUrl(book, page, anchor) {
+function forgeUrl(book, page, tab, anchor) {
   var anchorString = (anchor && anchor.length > 0) ? ('#' + anchor) : '';
   var url = location.href;
   if (isCyberboticsUrl) {
@@ -168,6 +175,8 @@ function forgeUrl(book, page, anchor) {
       url += '?version=' + localSetup.repository + ':' + localSetup.branch;
     else if (localSetup.branch !== '')
       url += '?version=' + localSetup.branch;
+    if (!isEmpty(localSetup.tab))
+      url += '?tab=' + localSetup.tab;
     url += anchorString;
   } else {
     var isFirstArgument;
@@ -182,10 +191,18 @@ function forgeUrl(book, page, anchor) {
 
     // Add or replace the page argument.
     if (url.indexOf('page=') > -1)
-      url = url.replace(/page=([\w-]+)(#[\w-]+)?/, 'page=' + page + anchorString);
+      url = url.replace(/page=([\w-]+)(#[\w-]+)?/, 'page=' + page);
     else {
       isFirstArgument = (url.indexOf('?') < 0);
-      url = url + (isFirstArgument ? '?' : '&') + 'page=' + page + anchorString;
+      url = url + (isFirstArgument ? '?' : '&') + 'page=' + page;
+    }
+
+    // Add or replace the tab argument.
+    if (url.indexOf('tab=') > -1)
+      url = url.replace(/tab=([^&]+)?/, 'tab=' + tab + anchorString);
+    else {
+      isFirstArgument = (url.indexOf('?') < 0);
+      url = url + (isFirstArgument ? '?' : '&') + 'tab=' + tab + anchorString;
     }
   }
   return url;
@@ -535,11 +552,12 @@ function populateViewDiv(mdContent) {
     $(lastImage).load(applyAnchor);
   } else
     applyAnchor();
+  applyTabs();
 }
 
 // replace the browser URL after a dynamic load
 function updateBrowserUrl() {
-  var url = forgeUrl(localSetup.book, localSetup.page, localSetup.anchor);
+  var url = forgeUrl(localSetup.book, localSetup.page, localSetup.tab, localSetup.anchor);
   if (history.pushState) {
     try {
       history.pushState({state: 'new'}, null, url);
@@ -758,6 +776,8 @@ function createRobotComponent(view) {
         var deviceComponent = view.querySelector('#' + robotName + '-device-component');
         var data = JSON.parse(content);
         var categories = {};
+        if (data['devices'].length === 0)
+          toggleDeviceComponent(robotName);
         for (var d = 0; d < data['devices'].length; d++) {
           var device = data['devices'][d];
           var deviceName = device['name'];
@@ -847,9 +867,19 @@ function createRobotComponent(view) {
 }
 
 // Open a tab component tab
-function openTab(evt, name) {
-  var tabcomponent = evt.target.parentNode;
+function openTabFromEvent(evt, name) {
+  localSetup.tab = name.toLowerCase();
+  updateBrowserUrl();
+  openTab(evt.target.parentNode, localSetup.tab);
+}
+
+// Open a tab component tab
+function openTab(tabcomponent, name) {
   var tabID = tabcomponent.getAttribute('tabid');
+
+  var tabcontent = tabcomponent.parentNode.querySelectorAll('.tab-content[tabid="' + tabID + '"][name="' + name + '"]')[0];
+  if (typeof tabcontent === 'undefined')
+    return;
 
   var tabcontents = tabcomponent.parentNode.querySelectorAll('.tab-content[tabid="' + tabID + '"]');
   for (var i = 0; i < tabcontents.length; i++)
@@ -864,6 +894,12 @@ function openTab(evt, name) {
 
   var tablink = tabcomponent.querySelectorAll('.tab-links[name="' + name + '"]')[0];
   tablink.classList.add('active');
+}
+
+function applyTabs() {
+  var tabComponents = document.querySelectorAll('.tab-component');
+  for (var k = 0; k < tabComponents.length; k++)
+    openTab(tabComponents[k], localSetup.tab)
 }
 
 function renderGraphs() {
@@ -1256,6 +1292,8 @@ document.addEventListener('DOMContentLoaded', function() {
       localSetup.anchor = window.location.hash.substring(1);
     if (!localSetup.branch)
       localSetup.branch = getGETQueryValue('branch', 'master');
+    if (!localSetup.tab)
+      localSetup.tab = getGETQueryValue('tab', '').toLowerCase();
   }
 
   // prevent FOUC for blog

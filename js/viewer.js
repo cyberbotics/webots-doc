@@ -183,8 +183,10 @@ function forgeUrl(book, page, tab, anchor) {
       url += '?version=' + localSetup.repository + ':' + localSetup.branch;
     else if (localSetup.branch !== '')
       url += '?version=' + localSetup.branch;
-    if (localSetup.tab != '')
+    if (localSetup.tab != '' && localSetup.branch == '')
       url += '?tab=' + localSetup.tab;
+    else if (localSetup.tab != '')
+       url += '&tab=' + localSetup.tab;
     url += anchorString;
     console.log('C ' + url)
   } else {

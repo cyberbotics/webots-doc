@@ -175,7 +175,7 @@ function forgeUrl(book, page, tab, anchor) {
       url += '?version=' + localSetup.repository + ':' + localSetup.branch;
     else if (localSetup.branch !== '')
       url += '?version=' + localSetup.branch;
-    if (!isEmpty(localSetup.tab))
+    if (isEmpty(localSetup.tab) != '')
       url += '?tab=' + localSetup.tab;
     url += anchorString;
   } else {

@@ -15,19 +15,28 @@
     header("Location: $request_uri");
     exit();
   }
-  # the URL follow this format https://www.cyberbotics.com/doc/book/page?version=tagOrBranch#anchor where version and anchor are optional
+  # the URL follow this format https://www.cyberbotics.com/doc/book/page?version=tagOrBranch&tab=C#anchor where version, tab and anchor are optional
   $uri = substr($request_uri, 5); // we remove the "/doc/" prefix
   $i = strpos($uri, '/');
   unset($repository);
+  $branch = '';
+  $tab = '';
   if ($i !== FALSE) {
     $book = substr($uri, 0, $i);
-    $j = strpos($uri, '?version=');
+    $j = strpos($uri, 'version=');
     if ($j === FALSE) {
       $page = substr($uri, $i + 1);
-      $branch = '';
+      $n = strpos($uri, 'tab=');
+      if ($n !== FALSE)
+        $tab = substr($uri, $n + 4);
     } else {
-      $page = substr($uri, $i + 1, $j - $i - 1);
-      $version = substr($uri, $j + 9);
+      $page = substr($uri, $i + 1, $j - $i - 2);
+      $version = substr($uri, $j + 8);
+      $n = strpos($version, 'tab=');
+      if ($n !== FALSE) {
+        $version = substr($version, 0, $n - 5);
+        $tab = substr($version, $n + 4);
+      }
       $n = strpos($version, ':');
       if ($n === FALSE)
         $branch = $version;
@@ -40,7 +49,6 @@
     # default values:
     $book = $uri;
     $page = 'index';
-    $branch = '';
     # anchor is not sent to the server, so it has to be computed by the javascript
   }
   if (!isset($repository))
@@ -66,6 +74,7 @@
       setup = {
         'book':       '$book',
         'page':       '$page',
+        'tab':        '$tab',
         'anchor':     window.location.hash.substring(1),
         'branch':     '$branch',
         'repository': '$repository',

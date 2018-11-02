@@ -271,8 +271,8 @@ showdown.extension('wbTabComponent', function() {
           var buttons = '';
           var first = true;
           var subText = content.replace(/%tab\s+"([^]+?)"([^]+?)%tab-end/gi, function(subMatch, title, subContent) {
-            buttons += '<button name="' + title + '" class="tab-links' + (first ? ' active' : '') + '" onclick="openTab(event, \'' + title + '\')">' + title + '</button>';
-            var result = '<div class="tab-content" name="' + title + '"' + (first ? ' style="display:block"' : '') + ' tabid="' + tabComponentCounter + '">' + converter.makeHtml(subContent) + '</div>';
+            buttons += '<button name="' + title.toLowerCase() + '" class="tab-links' + (first ? ' active' : '') + '" onclick="openTabFromEvent(event, \'' + title + '\')">' + title + '</button>';
+            var result = '<div class="tab-content" name="' + title.toLowerCase() + '"' + (first ? ' style="display:block"' : '') + ' tabid="' + tabComponentCounter + '">' + converter.makeHtml(subContent) + '</div>';
             first = false;
             return result;
           });

@@ -19,14 +19,16 @@
   $uri = substr($request_uri, 5); // we remove the "/doc/" prefix
   $i = strpos($uri, '/');
   unset($repository);
+  $branch = '';
+  $tab = '';
   if ($i !== FALSE) {
     $book = substr($uri, 0, $i);
     $j = strpos($uri, 'version=');
     if ($j === FALSE) {
       $page = substr($uri, $i + 1);
-      $branch = '';
       $n = strpos($uri, 'tab=');
-      $tab = substr($uri, $j + 4);
+      if ($n !== FALSE)
+        $tab = substr($uri, $j + 4);
     } else {
       $page = substr($uri, $i + 1, $j - $i);
       $version = substr($uri, $j + 8);
@@ -47,8 +49,6 @@
     # default values:
     $book = $uri;
     $page = 'index';
-    $branch = '';
-    $tab = ''
     # anchor is not sent to the server, so it has to be computed by the javascript
   }
   if (!isset($repository))

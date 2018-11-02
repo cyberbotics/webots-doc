@@ -210,7 +210,7 @@ function forgeUrl(book, page, tab, anchor) {
       url = url.replace(/tab=([^&]+)(#[\w-]+)?/, 'tab=' + tab + anchorString);
     else {
       isFirstArgument = (url.indexOf('?') < 0);
-      url = url + (isFirstArgument ? '?' : '&') + 'tab=' + tab + anchorString;
+      url = url + (tab != '' ? (isFirstArgument ? '?' : '&') + 'tab=' + tab : '') + anchorString;
     }
   }
   return url;

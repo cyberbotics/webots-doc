@@ -28,13 +28,13 @@
       $page = substr($uri, $i + 1);
       $n = strpos($uri, 'tab=');
       if ($n !== FALSE)
-        $tab = substr($uri, $j + 4);
+        $tab = substr($uri, $n + 4);
     } else {
-      $page = substr($uri, $i + 1, $j - $i);
+      $page = substr($uri, $i + 1, $j - $i - 2);
       $version = substr($uri, $j + 8);
       $n = strpos($version, 'tab=');
       if ($n !== FALSE) {
-        $version = substr($version, 0, $n - 1);
+        $version = substr($version, 0, $n - 5);
         $tab = substr($version, $n + 4);
       }
       $n = strpos($version, ':');

@@ -199,16 +199,18 @@ function forgeUrl(book, page, tab, anchor) {
 
     // Add or replace the page argument.
     if (url.indexOf('page=') > -1)
-      url = url.replace(/page=([\w-]+)(#[\w-]+)?/, 'page=' + page);
+      url = url.replace(/page=([\w-]+)?/, 'page=' + page);
     else {
       isFirstArgument = (url.indexOf('?') < 0);
       url = url + (isFirstArgument ? '?' : '&') + 'page=' + page;
     }
 
     // Add or replace the tab argument.
-    if (url.indexOf('tab=') > -1)
-      url = url.replace(/tab=([^&]+)?/, 'tab=' + tab + anchorString);
-    else {
+    if (url.indexOf('tab=') > -1) {
+      url = url.replace(/tab=([^&]+)(#[\w-]+)?/, 'tab=' + tab + anchorString);
+      console.log(url.indexOf('tab=') + ' BBBB ' + tab)
+    } else {
+      console.log(url.indexOf('tab=') + 'AAAA')
       isFirstArgument = (url.indexOf('?') < 0);
       url = url + (isFirstArgument ? '?' : '&') + 'tab=' + tab + anchorString;
     }

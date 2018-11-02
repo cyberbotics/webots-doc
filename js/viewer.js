@@ -880,9 +880,12 @@ function openTabFromEvent(evt, name) {
   var a = document.querySelectorAll('a');
   for (var i = 0; i < a.length; i++) {
     var href = a[i].getAttribute('href');
-    if (!href || !href.includes('tab=' + localSetup.tab))
+    if (!href)
       continue;
-    a[i].setAttribute('href', href.replace('tab=' + localSetup.tab, 'tab=' + name.toLowerCase()));
+    if (href.includes('tab=' + localSetup.tab))
+      a[i].setAttribute('href', href.replace('tab=' + localSetup.tab, 'tab=' + name.toLowerCase()));
+    else
+      a[i].setAttribute('href', href + (href.indexOf('?') > -1 ? '&' : '?') + 'tab=' + name.toLowerCase());
   }
   // open tab
   localSetup.tab = name.toLowerCase();

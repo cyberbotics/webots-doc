@@ -206,11 +206,9 @@ function forgeUrl(book, page, tab, anchor) {
     }
 
     // Add or replace the tab argument.
-    if (url.indexOf('tab=') > -1) {
+    if (url.indexOf('tab=') > -1)
       url = url.replace(/tab=([^&]+)(#[\w-]+)?/, 'tab=' + tab + anchorString);
-      console.log(url.indexOf('tab=') + ' BBBB ' + tab)
-    } else {
-      console.log(url.indexOf('tab=') + 'AAAA')
+    else {
       isFirstArgument = (url.indexOf('?') < 0);
       url = url + (isFirstArgument ? '?' : '&') + 'tab=' + tab + anchorString;
     }
@@ -878,6 +876,15 @@ function createRobotComponent(view) {
 
 // Open a tab component tab
 function openTabFromEvent(evt, name) {
+  // update links
+  var a = document.querySelectorAll('a');
+  for (var i = 0; i < a.length; i++) {
+    var href = a[i].getAttribute('href');
+    if (!href || !href.includes('tab=' + localSetup.tab))
+      continue;
+    a[i].setAttribute('href', href.replace('tab=' + localSetup.tab, 'tab=' + name.toLowerCase()));
+  }
+  // open tab
   localSetup.tab = name.toLowerCase();
   updateBrowserUrl();
   openTab(evt.target.parentNode, localSetup.tab);

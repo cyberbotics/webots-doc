@@ -7,6 +7,7 @@ import platform
 import shutil
 import ssl
 import sys
+import urlparse
 
 try:
     # For Python 3.0 and later
@@ -90,7 +91,5 @@ if __name__ == "__main__":
     if os.path.exists(dependencyDirectory):
         shutil.rmtree(dependencyDirectory)
     for dependency in dependencies:
-        download(
-            'https://www.cyberbotics.com/' + dependency,
-            dependencyDirectory + os.sep + dependency.replace("/", os.sep)
-        )
+        path = dependencyDirectory + os.sep + urlparse.urlparse(dependency).replace("/", os.sep)
+        download(dependency, path)

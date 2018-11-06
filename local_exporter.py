@@ -91,5 +91,5 @@ if __name__ == "__main__":
     if os.path.exists(dependencyDirectory):
         shutil.rmtree(dependencyDirectory)
     for dependency in dependencies:
-        path = dependencyDirectory + os.sep + urlparse.urlparse(dependency).replace("/", os.sep)
+        path = dependencyDirectory + os.sep + urlparse.urlparse(dependency).path.eplace("/", os.sep)
         download(dependency, path)

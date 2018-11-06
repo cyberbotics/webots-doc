@@ -572,6 +572,8 @@ function updateBrowserUrl() {
     } catch (err) {
     }
   }
+  var canonicalUrl = 'https://cyberbotics.com/doc/' + localSetup.book + '/' + localSetup.page;
+  $('link[rel="canonical"]').attr('href', canonicalUrl);
 }
 
 // Make in order that the back button is working correctly

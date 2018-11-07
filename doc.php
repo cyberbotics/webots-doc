@@ -25,10 +25,12 @@
     $book = substr($uri, 0, $i);
     $j = strpos($uri, 'version=');
     if ($j === FALSE) {
-      $page = substr($uri, $i + 1);
       $n = strpos($uri, 'tab=');
-      if ($n !== FALSE)
+      if ($n !== FALSE) {
+        $page = substr($uri, $i + 1, $n - $i - 2);
         $tab = substr($uri, $n + 4);
+      } else
+        $page = substr($uri, $i + 1);
     } else {
       $page = substr($uri, $i + 1, $j - $i - 2);
       $version = substr($uri, $j + 8);
@@ -91,10 +93,17 @@
     $dependencies = file_get_contents("https://www.cyberbotics.com/files/repository/www/wwi/R2018a/dependencies_fallback.txt");
   foreach (explode(PHP_EOL, $dependencies) as $dependency) {
     if (!startsWith($dependency, "#")) {
-      if (endsWith($dependency, ".css"))
-        $scripts .= "<link type='text/css' rel='stylesheet' href='https://www.cyberbotics.com/" . $dependency . "'/>";
-      if (endsWith($dependency, ".js"))
-        $scripts .= "<script src='https://www.cyberbotics.com/" . $dependency . "'></script>";
+      if (startsWith($dependency, "https://")) {
+        if (endsWith($dependency, ".css"))
+          $scripts .= "<link type='text/css' rel='stylesheet' href='$dependency'/>\n";
+        if (endsWith($dependency, ".js"))
+          $scripts .= "<script src='$dependency'></script>\n";
+      } else {
+        if (endsWith($dependency, ".css"))
+          $scripts .= "<link type='text/css' rel='stylesheet' href='https://www.cyberbotics.com/" . $dependency . "'/>\n";
+        if (endsWith($dependency, ".js"))
+          $scripts .= "<script src='https://www.cyberbotics.com/" . $dependency . "'></script>\n";
+      }
     }
   }
 

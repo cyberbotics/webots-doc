@@ -65,18 +65,26 @@ if __name__ == "__main__":
         content = file.read()
 
     dependencies = []
-    with open(script_directory + 'dependencies.txt', 'r') as f:
-        for line in f:
-            line = line.replace('\n', '')
-            if line and not line.startswith('#'):
-                dependencies.append(line)
+    for dependencies_file in ['local_dependencies.txt', 'dependencies.txt']:
+        with open(script_directory + dependencies_file, 'r') as f:
+            for line in f:
+                line = line.replace('\n', '')
+                if line and not line.startswith('#'):
+                    dependencies.append(line)
     jsString = ''
     cssString = ''
+    repositories = ['https://cyberbotics.com/', 'https://cdnjs.cloudflare.com/ajax/libs/']
     for dependency in dependencies:
         if dependency.endswith('.css'):
-            cssString += '<link type="text/css" rel="stylesheet" href="dependencies/%s"/>' % dependency
+            d = dependency
+            for repo in repositories:
+                d = d.replace(repo, '')
+            cssString += '<link type="text/css" rel="stylesheet" href="dependencies/%s"/>' % (d)
         if dependency.endswith('.js'):
-            jsString += '<script src="dependencies/%s"></script>' % dependency
+            d = dependency
+            for repo in repositories:
+                d = d.replace(repo, '')
+            jsString += '<script src="dependencies/%s"></script>' % (d)
 
     content = content.replace('%{ JS }%', jsString)
     content = content.replace('%{ CSS }%', cssString)
@@ -90,7 +98,8 @@ if __name__ == "__main__":
     if os.path.exists(dependencyDirectory):
         shutil.rmtree(dependencyDirectory)
     for dependency in dependencies:
-        download(
-            'https://www.cyberbotics.com/' + dependency,
-            dependencyDirectory + os.sep + dependency.replace("/", os.sep)
-        )
+        for repository in repositories:
+            if dependency.startswith(repository):
+                local_path = dependency[len(repository):]
+        path = dependencyDirectory + os.sep + local_path.replace("/", os.sep)
+        download(dependency, path)

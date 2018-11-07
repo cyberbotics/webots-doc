@@ -73,11 +73,18 @@ if __name__ == "__main__":
                     dependencies.append(line)
     jsString = ''
     cssString = ''
+    repositories = ['https://cyberbotics.com/', 'https://cdnjs.cloudflare.com/ajax/libs/']
     for dependency in dependencies:
         if dependency.endswith('.css'):
-            cssString += '<link type="text/css" rel="stylesheet" href="dependencies/%s"/>' % dependency
+            d = dependency
+            for repo in repositories:
+                d = d.replace(repo, '')
+            cssString += '<link type="text/css" rel="stylesheet" href="dependencies/%s"/>' % (d)
         if dependency.endswith('.js'):
-            jsString += '<script src="dependencies/%s"></script>' % dependency
+            d = dependency
+            for repo in repositories:
+                d = d.replace(repo, '')
+            jsString += '<script src="dependencies/%s"></script>' % (d)
 
     content = content.replace('%{ JS }%', jsString)
     content = content.replace('%{ CSS }%', cssString)
@@ -90,7 +97,6 @@ if __name__ == "__main__":
     dependencyDirectory = script_directory + 'dependencies'
     if os.path.exists(dependencyDirectory):
         shutil.rmtree(dependencyDirectory)
-    repositories = ['https://cyberbotics.com/', 'https://cdnjs.cloudflare.com/ajax/libs/']
     for dependency in dependencies:
         for repository in repositories:
             if dependency.startswith(repository):

@@ -90,8 +90,10 @@ if __name__ == "__main__":
     dependencyDirectory = script_directory + 'dependencies'
     if os.path.exists(dependencyDirectory):
         shutil.rmtree(dependencyDirectory)
-
+    repositories = ['https://cyberbotics.com/', 'https://cdnjs.cloudflare.com/ajax/libs/']
     for dependency in dependencies:
-        local_path = dependency[dependency.find('/', 8):]  # skip https://
+        for repository in repositories:
+            if dependency.startswith(repository):
+                local_path = dependency[len(repository):]
         path = dependencyDirectory + os.sep + local_path.replace("/", os.sep)
         download(dependency, path)

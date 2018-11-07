@@ -7,7 +7,6 @@ import platform
 import shutil
 import ssl
 import sys
-import urlparse
 
 try:
     # For Python 3.0 and later
@@ -66,11 +65,12 @@ if __name__ == "__main__":
         content = file.read()
 
     dependencies = []
-    with open(script_directory + 'dependencies.txt', 'r') as f:
-        for line in f:
-            line = line.replace('\n', '')
-            if line and not line.startswith('#'):
-                dependencies.append(line)
+    for dependencies_file in ['local_dependencies.txt', 'dependencies.txt']:
+        with open(script_directory + dependencies_file, 'r') as f:
+            for line in f:
+                line = line.replace('\n', '')
+                if line and not line.startswith('#'):
+                    dependencies.append(line)
     jsString = ''
     cssString = ''
     for dependency in dependencies:
@@ -90,6 +90,8 @@ if __name__ == "__main__":
     dependencyDirectory = script_directory + 'dependencies'
     if os.path.exists(dependencyDirectory):
         shutil.rmtree(dependencyDirectory)
+
     for dependency in dependencies:
-        path = dependencyDirectory + os.sep + urlparse.urlparse(dependency).path.replace("/", os.sep)
+        local_path = dependency[dependency.find('/', 8):]  # skip https://
+        path = dependencyDirectory + os.sep + local_path.replace("/", os.sep)
         download(dependency, path)

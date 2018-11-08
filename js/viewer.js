@@ -9,6 +9,8 @@
 /* exported highlightX3DElement */
 /* exported openTabFromEvent */
 
+"use strict";
+
 var handle;
 
 if (typeof String.prototype.startsWith !== 'function') {

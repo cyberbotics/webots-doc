@@ -342,9 +342,9 @@ function updateContributionBannerUrl() {
 
 function addNavigationToBlogIfNeeded() {
   if (!document.querySelector("#next-previous-section") && localSetup.book === "blog") {
-    let menu = document.querySelector("#menu");
-    let lis = menu.querySelectorAll("li");
-    let currentPageIndex = -1
+    var menu = document.querySelector("#menu");
+    var lis = menu.querySelectorAll("li");
+    var currentPageIndex = -1
     for (i = 0; i < lis.length; ++i) {
       if (lis[i].className === "selected") {
         currentPageIndex = i;
@@ -357,20 +357,20 @@ function addNavigationToBlogIfNeeded() {
 
     // console.log(currentPageIndex, lis.length);
     // console.log(lis);
-    let div = document.createElement("div");
+    var div = document.createElement("div");
     div.setAttribute("id", "next-previous-section");
     // previous post
     if (currentPageIndex > 0) {
-      let previous = lis[currentPageIndex - 1]
-      let a = previous.firstChild.cloneNode();
+      var previous = lis[currentPageIndex - 1]
+      var a = previous.firstChild.cloneNode();
       a.innerHTML += "<< Previous Post: " + previous.textContent;
       a.setAttribute("class", "post-selector left");
       div.appendChild(a);
     }
 
     if (currentPageIndex < lis.length - 1) {
-      let next = lis[currentPageIndex + 1];
-      let a = next.firstChild.cloneNode();
+      var next = lis[currentPageIndex + 1];
+      var a = next.firstChild.cloneNode();
       a.innerHTML += "Next Post: " + next.textContent + " >>";
       a.setAttribute("class", "post-selector right");
       div.appendChild(a);
@@ -383,8 +383,8 @@ function addNavigationToBlogIfNeeded() {
 function setupBlogFunctionalitiesIfNeeded() {
   if (localSetup.book === 'blog') {
     // hide index, this doesn't make sense for a blog post
-    let index = document.querySelector("#index");
-    let indexTitle = document.querySelector("#indexTitle");
+    var index = document.querySelector("#index");
+    var indexTitle = document.querySelector("#indexTitle");
 
     if (index !== null)
       index.style.display = "none";

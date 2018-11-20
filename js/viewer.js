@@ -888,7 +888,7 @@ function openTabFromEvent(evt, name) {
       continue;
     if (href.includes('tab=' + localSetup.tab))
       a[i].setAttribute('href', href.replace('tab=' + localSetup.tab, 'tab=' + name.toLowerCase()));
-    else
+    else if (!href.startsWith('#'))
       a[i].setAttribute('href', href + (href.indexOf('?') > -1 ? '&' : '?') + 'tab=' + name.toLowerCase());
   }
   // open tab
